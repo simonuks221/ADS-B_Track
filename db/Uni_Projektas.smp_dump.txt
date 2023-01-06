@@ -1,0 +1,6 @@
+
+State Machine - |UNI_Projektas|StateMachineWizard:state_machine|fstate
+Name fstate.readSignalState fstate.readMemoryState fstate.idleState 
+fstate.idleState 0 0 0 
+fstate.readMemoryState 0 1 1 
+fstate.readSignalState 1 0 1 

@@ -1,0 +1,723 @@
+TimeQuest Timing Analyzer report for Uni_Projektas
+Fri Jan 06 20:03:13 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLK'
+ 12. Slow Model Hold: 'CLK'
+ 13. Slow Model Minimum Pulse Width: 'CLK'
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Fast Model Setup Summary
+ 17. Fast Model Hold Summary
+ 18. Fast Model Recovery Summary
+ 19. Fast Model Removal Summary
+ 20. Fast Model Minimum Pulse Width Summary
+ 21. Fast Model Setup: 'CLK'
+ 22. Fast Model Hold: 'CLK'
+ 23. Fast Model Minimum Pulse Width: 'CLK'
+ 24. Clock to Output Times
+ 25. Minimum Clock to Output Times
+ 26. Multicorner Timing Analysis Summary
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Setup Transfers
+ 30. Hold Transfers
+ 31. Report TCCS
+ 32. Report RSKM
+ 33. Unconstrained Paths
+ 34. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Uni_Projektas                                                     ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5T144C8                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 363.11 MHz ; 340.02 MHz      ; CLK        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -1.754 ; -12.152       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.759 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; -1.941 ; -16.781               ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                                                                             ;
++--------+--------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                  ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.754 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.794      ;
+; -1.732 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.772      ;
+; -1.536 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.576      ;
+; -1.514 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.554      ;
+; -1.487 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.527      ;
+; -1.487 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.527      ;
+; -1.450 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.490      ;
+; -1.441 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.481      ;
+; -1.428 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.468      ;
+; -1.355 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.395      ;
+; -1.338 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.378      ;
+; -1.276 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.316      ;
+; -1.275 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.315      ;
+; -1.260 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.300      ;
+; -1.253 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.293      ;
+; -1.252 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.292      ;
+; -1.238 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.278      ;
+; -1.190 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.230      ;
+; -1.174 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.214      ;
+; -1.167 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.207      ;
+; -1.165 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.205      ;
+; -1.152 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.192      ;
+; -1.117 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.157      ;
+; -1.088 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.128      ;
+; -1.079 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.119      ;
+; -1.066 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.106      ;
+; -1.062 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.102      ;
+; -1.032 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.072      ;
+; -1.031 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.071      ;
+; -1.031 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.071      ;
+; -1.031 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.071      ;
+; -0.993 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.033      ;
+; -0.985 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.025      ;
+; -0.977 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.017      ;
+; -0.976 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.016      ;
+; -0.976 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.016      ;
+; -0.976 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.016      ;
+; -0.975 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.015      ;
+; -0.940 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.980      ;
+; -0.940 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.980      ;
+; -0.939 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.979      ;
+; -0.916 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.956      ;
+; -0.798 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.838      ;
+; -0.798 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.838      ;
+; -0.797 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.837      ;
+; -0.611 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.651      ;
+; -0.611 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.651      ;
+; -0.610 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.650      ;
+; -0.515 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.555      ;
+; -0.505 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.545      ;
+; -0.500 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.540      ;
+; -0.497 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.537      ;
+; -0.496 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.536      ;
+; -0.442 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.482      ;
+; -0.387 ; Clock_divider:clock_divider1|half_clock[1] ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.427      ;
+; -0.025 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.065      ;
++--------+--------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                                                                             ;
++-------+--------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                  ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.759 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.065      ;
+; 1.121 ; Clock_divider:clock_divider1|half_clock[1] ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.427      ;
+; 1.176 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.230 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.536      ;
+; 1.231 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.537      ;
+; 1.234 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.540      ;
+; 1.239 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.545      ;
+; 1.249 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.555      ;
+; 1.344 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.650      ;
+; 1.345 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.651      ;
+; 1.345 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.651      ;
+; 1.531 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.837      ;
+; 1.532 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.838      ;
+; 1.532 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.838      ;
+; 1.650 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.956      ;
+; 1.673 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.979      ;
+; 1.674 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.980      ;
+; 1.674 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.980      ;
+; 1.709 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.015      ;
+; 1.710 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.016      ;
+; 1.710 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.016      ;
+; 1.710 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.016      ;
+; 1.711 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.017      ;
+; 1.719 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.025      ;
+; 1.727 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.033      ;
+; 1.765 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.071      ;
+; 1.765 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.071      ;
+; 1.765 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.071      ;
+; 1.766 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.072      ;
+; 1.796 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.102      ;
+; 1.800 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.106      ;
+; 1.812 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.118      ;
+; 1.813 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.119      ;
+; 1.813 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.119      ;
+; 1.822 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.128      ;
+; 1.851 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.157      ;
+; 1.886 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.192      ;
+; 1.899 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.205      ;
+; 1.901 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.207      ;
+; 1.908 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.214      ;
+; 1.972 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.278      ;
+; 1.986 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.292      ;
+; 1.987 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.293      ;
+; 1.994 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.300      ;
+; 1.999 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.305      ;
+; 2.010 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.316      ;
+; 2.072 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.378      ;
+; 2.089 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.395      ;
+; 2.162 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.468      ;
+; 2.175 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.481      ;
+; 2.184 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.490      ;
+; 2.221 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.527      ;
+; 2.221 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.527      ;
+; 2.222 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.528      ;
+; 2.248 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.554      ;
+; 2.270 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.576      ;
++-------+--------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                     ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; CLK   ; Rise       ; CLK                                        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|clock_out     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|clock_out     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[0]    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[0]    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[1]    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[1]    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[2]    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[2]    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[3]    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[3]    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[4]    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[4]    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[5]    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[5]    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[6]    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[6]    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[7]    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[7]    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|half_clock[1] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|half_clock[1] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|outclk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|outclk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|clock_out|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|clock_out|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[5]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[5]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[6]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[6]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[7]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[7]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|half_clock[1]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|half_clock[1]|clk           ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SYNC      ; CLK        ; 6.810 ; 6.810 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SYNC      ; CLK        ; 6.810 ; 6.810 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.101 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.246 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; -1.380 ; -11.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                                                                                            ;
++-------+--------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                  ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.101 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.931      ;
+; 0.113 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.919      ;
+; 0.119 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.913      ;
+; 0.131 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.901      ;
+; 0.148 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.884      ;
+; 0.153 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.879      ;
+; 0.166 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.866      ;
+; 0.188 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.844      ;
+; 0.200 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.832      ;
+; 0.218 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.814      ;
+; 0.218 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.814      ;
+; 0.235 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.797      ;
+; 0.235 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.797      ;
+; 0.242 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.790      ;
+; 0.246 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.786      ;
+; 0.260 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.772      ;
+; 0.270 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.762      ;
+; 0.270 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.762      ;
+; 0.274 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.758      ;
+; 0.277 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.755      ;
+; 0.282 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.750      ;
+; 0.290 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.742      ;
+; 0.295 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.737      ;
+; 0.300 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.732      ;
+; 0.312 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.720      ;
+; 0.316 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.716      ;
+; 0.317 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.715      ;
+; 0.320 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.712      ;
+; 0.321 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.711      ;
+; 0.325 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.707      ;
+; 0.329 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.703      ;
+; 0.330 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.702      ;
+; 0.336 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.696      ;
+; 0.337 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.695      ;
+; 0.337 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.695      ;
+; 0.338 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.694      ;
+; 0.338 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.694      ;
+; 0.352 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.680      ;
+; 0.360 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.672      ;
+; 0.364 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.668      ;
+; 0.364 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.668      ;
+; 0.379 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.653      ;
+; 0.382 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.650      ;
+; 0.399 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.633      ;
+; 0.400 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.632      ;
+; 0.436 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.596      ;
+; 0.456 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.576      ;
+; 0.457 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.575      ;
+; 0.494 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.538      ;
+; 0.500 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.532      ;
+; 0.504 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.528      ;
+; 0.504 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.528      ;
+; 0.505 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.527      ;
+; 0.518 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.514      ;
+; 0.525 ; Clock_divider:clock_divider1|half_clock[1] ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.507      ;
+; 0.634 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.398      ;
++-------+--------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                                                                             ;
++-------+--------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                  ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.246 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.398      ;
+; 0.355 ; Clock_divider:clock_divider1|half_clock[1] ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.362 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.514      ;
+; 0.375 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.380 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.532      ;
+; 0.386 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.538      ;
+; 0.423 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.575      ;
+; 0.424 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.576      ;
+; 0.444 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.596      ;
+; 0.480 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.632      ;
+; 0.481 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.633      ;
+; 0.498 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.501 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.653      ;
+; 0.516 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.516 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.520 ; Clock_divider:clock_divider1|counter[6]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.672      ;
+; 0.528 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.680      ;
+; 0.542 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.694      ;
+; 0.542 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.694      ;
+; 0.543 ; Clock_divider:clock_divider1|counter[7]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.695      ;
+; 0.543 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.695      ;
+; 0.544 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.696      ;
+; 0.545 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.697      ;
+; 0.546 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.698      ;
+; 0.550 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.702      ;
+; 0.551 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.703      ;
+; 0.555 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.707      ;
+; 0.559 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.711      ;
+; 0.560 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.712      ;
+; 0.563 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.715      ;
+; 0.564 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.716      ;
+; 0.568 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[3] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.580 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.732      ;
+; 0.585 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.737      ;
+; 0.590 ; Clock_divider:clock_divider1|counter[5]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.742      ;
+; 0.598 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.750      ;
+; 0.603 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[4] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.755      ;
+; 0.609 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.761      ;
+; 0.610 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.762      ;
+; 0.610 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.762      ;
+; 0.620 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.772      ;
+; 0.638 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[5] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.790      ;
+; 0.645 ; Clock_divider:clock_divider1|counter[4]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.645 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.662 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|clock_out  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.814      ;
+; 0.662 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.814      ;
+; 0.663 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.815      ;
+; 0.680 ; Clock_divider:clock_divider1|counter[3]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.832      ;
+; 0.692 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.844      ;
+; 0.714 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.866      ;
+; 0.727 ; Clock_divider:clock_divider1|counter[2]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.879      ;
+; 0.732 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[6] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.884      ;
+; 0.749 ; Clock_divider:clock_divider1|counter[1]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.901      ;
+; 0.767 ; Clock_divider:clock_divider1|counter[0]    ; Clock_divider:clock_divider1|counter[7] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.919      ;
++-------+--------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                     ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|clock_out     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|clock_out     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|counter[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; Clock_divider:clock_divider1|half_clock[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; Clock_divider:clock_divider1|half_clock[1] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|outclk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|outclk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|clock_out|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|clock_out|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[5]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[5]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[6]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[6]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|counter[7]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|counter[7]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; clock_divider1|half_clock[1]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; clock_divider1|half_clock[1]|clk           ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SYNC      ; CLK        ; 3.252 ; 3.252 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SYNC      ; CLK        ; 3.252 ; 3.252 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.754  ; 0.246 ; N/A      ; N/A     ; -1.941              ;
+;  CLK             ; -1.754  ; 0.246 ; N/A      ; N/A     ; -1.941              ;
+; Design-wide TNS  ; -12.152 ; 0.0   ; 0.0      ; 0.0     ; -16.781             ;
+;  CLK             ; -12.152 ; 0.000 ; N/A      ; N/A     ; -16.781             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SYNC      ; CLK        ; 6.810 ; 6.810 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SYNC      ; CLK        ; 3.252 ; 3.252 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 60       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 60       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Jan 06 20:03:11 2023
+Info: Command: quartus_sta Uni_Projektas -c Uni_Projektas
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Uni_Projektas.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.754
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.754       -12.152 CLK 
+Info (332146): Worst-case hold slack is 0.759
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.759         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.941
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.941       -16.781 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.101
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.101         0.000 CLK 
+Info (332146): Worst-case hold slack is 0.246
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.246         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -11.380 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4533 megabytes
+    Info: Processing ended: Fri Jan 06 20:03:13 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
+
+

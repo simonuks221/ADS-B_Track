@@ -1,0 +1,87 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\simulation\modelsim
+Eadc_manager
+Z1 w1672912200
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
+Z8 dC:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\simulation\modelsim
+Z9 8Uni_Projektas.vho
+Z10 FUni_Projektas.vho
+l0
+L34
+VF@QRDfD[67S`9RBzV<FeE0
+Z11 OV;C;10.1d;51
+31
+Z12 !s108 1672912406.075000
+Z13 !s90 -reportprogress|300|-93|-work|work|Uni_Projektas.vho|
+Z14 !s107 Uni_Projektas.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+!s100 ?cKQaJ0ejAHPAXJR11k8=2
+!i10b 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 11 adc_manager 0 22 F@QRDfD[67S`9RBzV<FeE0
+l154
+L129
+Vo8YZETJSGMX8d6^GgNbmZ1
+R11
+31
+R12
+R13
+R14
+R15
+R16
+!s100 i[Gbm[@iM=dKOk@_oGIaJ1
+!i10b 1
+Euni_projektas
+Z17 w1672828183
+Z18 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+Z19 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R5
+R6
+R8
+Z20 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd
+Z21 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd
+l0
+L6
+VlXc1iJn`@N8fn;=3W[`;>0
+!s100 PSaj8BM8T:iS2PNaA]DU<2
+R11
+31
+!i10b 1
+Z22 !s108 1672912406.349000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
+Z24 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
+R15
+R16
+Aarc
+R18
+R19
+R5
+R6
+DEx4 work 13 uni_projektas 0 22 lXc1iJn`@N8fn;=3W[`;>0
+l59
+L10
+VTWz>l9m:[A`DDK[m@_N8?0
+!s100 ek1lK>L@ODzk7RiogE>Y]2
+R11
+31
+!i10b 1
+R22
+R23
+R24
+R15
+R16

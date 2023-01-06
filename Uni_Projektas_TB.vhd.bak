@@ -1,0 +1,77 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
+entity Uni_Projektas_TB is
+
+end entity;
+
+architecture arc of Uni_Projektas_TB is
+
+component ADC_Manager is
+generic(
+SIGNAL_BITS: integer := 8;
+CONV_BITS: integer := 64;
+SIGNAL_BUF_LEN: integer := 250;
+CONV_FUNC_LEN: integer := 250
+);
+port(
+CLK : in std_logic;
+ADC_IN : in std_logic_vector(7 downto 0);
+DATA_OUT : out std_logic_vector(6-1 downto 0);
+PREAMBULE_READY : out std_logic;
+DATA_READY : out std_logic;
+OUTPUTAS : out std_logic_vector(63 downto 0)
+);
+end component;
+
+
+
+signal CLK : std_logic := '0';
+signal adc_out : std_logic_vector(7 downto 0);
+signal arrIndex : integer := 0;
+signal DATA_GOT : std_logic_vector(6-1 downto 0);
+signal PREAMBULE_READY : std_logic;
+signal DATA_READY : std_logic;
+
+--Read from file
+file file_voltages: text;
+type b_data is array(0 to 705) of std_logic_vector(7 downto 0);
+impure function init return b_data is
+variable r : b_data := (others => (others => '0'));
+variable iline: line;
+variable temp_data : std_logic_vector(7 downto 0);
+begin
+	file_open(file_voltages, "testVoltage.txt",  read_mode);
+	 for i in 0 to 705-1 loop --Iskaitant 9
+		readline(file_voltages, iline);
+		read(iline, temp_data);
+		r(i) := temp_data;
+	end loop;
+	return r;
+end function init;
+
+signal adc_buffer : b_data := init;
+signal ram_out : std_logic_vector(7 downto 0);
+
+signal c_data_blt : std_logic_vector(63 downto 0);
+begin
+ADC_Manager1 : ADC_Manager port map(CLK => CLK, ADC_IN => adc_out, DATA_OUT => DATA_GOT, PREAMBULE_READY => PREAMBULE_READY, DATA_READY => DATA_READY, OUTPUTAS => c_data_blt);
+
+
+CLK <= not CLK after 0.01us;
+
+process(CLK)
+begin
+	if(rising_edge(CLK)) then
+		if(arrIndex < 705-1) then
+			arrIndex <= arrIndex + 1;
+			adc_out <= adc_buffer(arrIndex);
+		else
+			adc_out <= (others => '0');
+		end if;
+	end if;
+end process;
+
+end architecture;
