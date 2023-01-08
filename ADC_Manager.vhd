@@ -140,7 +140,7 @@ begin
 							--Add to tracking of found bits number
 							data_counts <= data_counts + 1;
 							if(data_counts = MAX_DATA_COUNTS-1) then
-								data_done <= '1';
+								--data_done <= '1';
 							end if;
 						else
 							counter <= counter + 1;
@@ -178,7 +178,7 @@ begin
 								when 4 =>
 									c_00_value <=  to_integer(unsigned(c_short_value));
 								when 5 =>
-									check_corr <= '0';
+									--check_corr <= '0';
 									c_short_func_input_index <= 0;
 									if(c_01_value > c_10_value and c_01_value > c_00_value and c_01_value > c_11_value) then
 										if(c_01_value > BITS_FUNC_THRESHOLD) then --Threshold value
