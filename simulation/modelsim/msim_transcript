@@ -128,10 +128,7 @@
 #    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/c_00_value
-add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/c_01_value
-add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/c_10_value
-add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/c_11_value
+add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/c_short_func_input_index
 restart
 run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -162,5 +159,1121 @@ run
 #    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# WARNING: No extended dataflow license exists
+add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/preambule_delay_done
+add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/preambule_found
+add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/data_done
+add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/data_counts
+restart
 run
-write list -window .main_pane.list C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Matlabas/modelsimData.txt
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/check_corr
+restart
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(259): near "if": expecting PROCESS
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/c_long_func_input
+restart
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Fatal: (vsim-3421) Value 7 for c_short_func_input_index is out of range 0 to 6.
+#    Time: 20690 ns  Iteration: 0  Process: /uni_projektas_tb/projektas/ADC_Manager1/line__164 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Fatal error in Process line__164 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd line 214
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd 214 Process line__164
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# WARNING: No extended dataflow license exists
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/c_long_value
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(174): near "&": syntax error
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(264): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(174): Operator "&" is ambiguous.
+#    Feasible operators are:
+#       (implicit) corr_package."&"[work.corr_package.double_array, STD_LOGIC_VECTOR return work.corr_package.double_array] at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd(7)
+#       (implicit) corr_package."&"[work.corr_package.double_array, work.corr_package.double_array return work.corr_package.double_array] at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd(7)
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(174): Type error resolving infix expression "&" as type work.corr_package.double_array.
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(264): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(174): Operator "&" is ambiguous.
+#    Feasible operators are:
+#       (implicit) corr_package."&"[work.corr_package.double_array, STD_LOGIC_VECTOR return work.corr_package.double_array] at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd(7)
+#       (implicit) corr_package."&"[work.corr_package.double_array, work.corr_package.double_array return work.corr_package.double_array] at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd(7)
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(174): Type error resolving infix expression "&" as type work.corr_package.double_array.
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(264): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(174): near ")": expecting ';'
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(265): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(174): near ")": expecting ';'
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd(265): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Fatal: (vsim-3714) At array depth 1, array lengths do not match. Left is 50 (0 to 49). Right is 20 (0 to 19).
+#    Time: 20710 ns  Iteration: 0  Process: /uni_projektas_tb/projektas/ADC_Manager1/line__164 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Fatal error in Process line__164 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd line 175
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd 175 Process line__164
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Fatal: (vsim-3421) Value 7 for c_short_func_input_index is out of range 0 to 6.
+#    Time: 20690 ns  Iteration: 0  Process: /uni_projektas_tb/projektas/ADC_Manager1/line__164 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Fatal error in Process line__164 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd line 213
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd 213 Process line__164
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Fatal: (vsim-3421) Value 7 for c_short_func_input_index is out of range 0 to 6.
+#    Time: 20690 ns  Iteration: 0  Process: /uni_projektas_tb/projektas/ADC_Manager1/line__164 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Fatal error in Process line__164 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd line 210
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd 210 Process line__164
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Fatal: (vsim-3421) Value 6 for c_short_func_input_index is out of range 0 to 5.
+#    Time: 20690 ns  Iteration: 0  Process: /uni_projektas_tb/projektas/ADC_Manager1/line__164 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Fatal error in Process line__164 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd line 210
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd 210 Process line__164
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/c_01_value
+add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/c_10_value
+add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/c_11_value
+add wave -position end  sim:/uni_projektas_tb/projektas/ADC_Manager1/c_00_value
+restart
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
+restart
+# Loading work.adc_manager(arc)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
