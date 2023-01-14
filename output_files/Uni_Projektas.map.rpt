@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Uni_Projektas
-Sat Jan 14 14:02:39 2023
+Sat Jan 14 20:07:13 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -153,13 +153,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jan 14 14:02:39 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sat Jan 14 20:07:12 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 5,171                                           ;
-;     Total combinational functions  ; 4,150                                           ;
+; Total logic elements               ; 5,170                                           ;
+;     Total combinational functions  ; 4,149                                           ;
 ;     Dedicated logic registers      ; 1,556                                           ;
 ; Total registers                    ; 1556                                            ;
 ; Total pins                         ; 16                                              ;
@@ -309,16 +309,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 5,171 ;
+; Estimated Total logic elements              ; 5,170 ;
 ;                                             ;       ;
-; Total combinational functions               ; 4150  ;
+; Total combinational functions               ; 4149  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 1213  ;
-;     -- 3 input functions                    ; 2272  ;
-;     -- <=2 input functions                  ; 665   ;
+;     -- 4 input functions                    ; 991   ;
+;     -- 3 input functions                    ; 2251  ;
+;     -- <=2 input functions                  ; 907   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 2005  ;
+;     -- normal mode                          ; 2004  ;
 ;     -- arithmetic mode                      ; 2145  ;
 ;                                             ;       ;
 ; Total registers                             ; 1556  ;
@@ -330,8 +330,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 26    ;
 ; Maximum fan-out node                        ; CLK   ;
 ; Maximum fan-out                             ; 1098  ;
-; Total fan-out                               ; 18270 ;
-; Average fan-out                             ; 3.16  ;
+; Total fan-out                               ; 17803 ;
+; Average fan-out                             ; 3.08  ;
 +---------------------------------------------+-------+
 
 
@@ -340,8 +340,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                               ; Library Name ;
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |UNI_Projektas                                   ; 4150 (1)          ; 1556 (0)     ; 2040        ; 26           ; 26      ; 0         ; 16   ; 0            ; |UNI_Projektas                                                                                                                                                                    ; work         ;
-;    |ADC_Manager:ADC_Manager1|                    ; 4136 (844)        ; 1546 (1526)  ; 0           ; 26           ; 26      ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                                                                                                           ; work         ;
+; |UNI_Projektas                                   ; 4149 (1)          ; 1556 (0)     ; 2040        ; 26           ; 26      ; 0         ; 16   ; 0            ; |UNI_Projektas                                                                                                                                                                    ; work         ;
+;    |ADC_Manager:ADC_Manager1|                    ; 4135 (843)        ; 1546 (1526)  ; 0           ; 26           ; 26      ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                                                                                                           ; work         ;
 ;       |Correlation_function:corr_long|           ; 3292 (883)        ; 20 (20)      ; 0           ; 26           ; 26      ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long                                                                                                            ; work         ;
 ;          |lpm_mult:Mult0|                        ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult0                                                                                             ; work         ;
 ;             |mult_o5t:auto_generated|            ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult0|mult_o5t:auto_generated                                                                     ; work         ;
@@ -6640,7 +6640,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -6650,7 +6650,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Jan 14 14:02:28 2023
+    Info: Processing started: Sat Jan 14 20:07:03 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file uni_projektas_tb.vhd
@@ -6907,16 +6907,16 @@ Info (13014): Ignored 3552 buffer(s)
     Info (13019): Ignored 3360 SOFT buffer(s)
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5221 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5220 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 5171 logic cells
+    Info (21061): Implemented 5170 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21062): Implemented 26 DSP elements
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4686 megabytes
-    Info: Processing ended: Sat Jan 14 14:02:39 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4692 megabytes
+    Info: Processing ended: Sat Jan 14 20:07:13 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:08
 
 

@@ -10,12 +10,12 @@ generic(
 SIGNAL_BITS: integer := 8;
 CONV_BITS: integer := 20;
 SIGNAL_BUF_LEN: integer := 200;
-PREAMBULE_FUNC_LEN: integer := 50;
+PREAMBULE_FUNC_LEN: integer := 50; --93 90 29 basic
 BITS_FUNC_LEN: integer := 20;
 MAX_DATA_COUNTS : integer := 3;
 BITS_PER_DATA_COUNT : integer := 2;
 PREAMBULE_FUNC_THRESHOLD : integer := 480000;
-BITS_FUNC_THRESHOLD : integer := 3; --Buvo 3000
+BITS_FUNC_THRESHOLD : integer := 3;
 PREAMBULE_DELAY_LEN: integer := 30
 );
 port(
@@ -50,13 +50,8 @@ architecture arc of ADC_Manager is
 --end function init;
 
 --Function signals
---signal c_func : double_array(0 to CONV_FUNC_LEN-1) := init(file_name => "idealPreambuleVoltage.txt", array_length => CONV_FUNC_LEN);
---signal c_one_func : double_array(0 to CONV_BIT_FUNC_LEN-1) := init(file_name => "idealOneVoltage.txt", array_length => CONV_BIT_FUNC_LEN);
---signal c_zero_func : double_array(0 to CONV_BIT_FUNC_LEN-1) := init(file_name => "idealZeroVoltage.txt", array_length => CONV_BIT_FUNC_LEN);
 signal c_preamb_func : double_array(0 to PREAMBULE_FUNC_LEN-1) := (others => (others => '0'));
 
---182 149 39 
---154 132 28
 --signal c_10_func : double_array(0 to BITS_FUNC_LEN-1) := (others => (others => '0'));
 --signal c_01_func : double_array(0 to BITS_FUNC_LEN-1) := (others => (others => '0'));
 --signal c_00_func : double_array(0 to BITS_FUNC_LEN-1) := (others => (others => '0'));
@@ -73,10 +68,7 @@ signal adc_buffer : double_array(0 to SIGNAL_BUF_LEN-1) := (others => (others =>
 
 --Function result signals
 signal c_long_value : std_logic_vector(CONV_BITS-1 downto 0) := (others => '0');
---signal c_short_value : std_logic_vector(CONV_BITS-1 downto 0) := (others => '0');
-
 signal c_long_func_input : double_array(0 to PREAMBULE_FUNC_LEN-1) := (others => (others => '0'));
---signal c_short_func_input : double_array(0 to BITS_FUNC_LEN-1) := (others => (others => '0'));
 
 --Counting signals
 signal preambule_found : std_logic := '0';
@@ -89,7 +81,6 @@ signal data_done : std_logic := '0';
 signal readDataFromRam : std_logic := '1';
 
 --Correlation inputs
---signal c_long_func_input_index : integer range 0 to 2 := 0;
 signal c_short_func_input_index : integer range 0 to 5 := 0;
 signal check_corr : std_logic := '0';
 
@@ -109,18 +100,8 @@ end component;
 begin
 --Components
 corr_long : Correlation_function generic map(function_length => PREAMBULE_FUNC_LEN) port map(CLK => CLK, input_function => c_long_func_input, input_values => adc_buffer(0 to PREAMBULE_FUNC_LEN-1), output_value => c_long_value);
---corr_short : Correlation_function generic map(function_length => BITS_FUNC_LEN) port map(CLK => CLK, input_function => c_short_func_input, input_values => adc_buffer(0 to BITS_FUNC_LEN-1), output_value => c_short_value);
 
 DATA_OUT <= data_buffer;
-
-
---c_long_func_input <= c_preamb_func when c_long_func_input_index = 1 else
---							(others => (others => '0'));
---c_short_func_input <= c_10_func when c_short_func_input_index = 0 else
---							c_01_func when c_short_func_input_index = 1 else
---							c_11_func when c_short_func_input_index = 2 else
---							c_00_func when c_short_func_input_index = 3 else
---							(others => (others => '0'));
 
 --Processes
 --Sync signal 10MHz process
