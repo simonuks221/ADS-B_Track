@@ -73,10 +73,10 @@ signal adc_buffer : double_array(0 to SIGNAL_BUF_LEN-1) := (others => (others =>
 
 --Function result signals
 signal c_long_value : std_logic_vector(CONV_BITS-1 downto 0) := (others => '0');
-signal c_short_value : std_logic_vector(CONV_BITS-1 downto 0) := (others => '0');
+--signal c_short_value : std_logic_vector(CONV_BITS-1 downto 0) := (others => '0');
 
 signal c_long_func_input : double_array(0 to PREAMBULE_FUNC_LEN-1) := (others => (others => '0'));
-signal c_short_func_input : double_array(0 to BITS_FUNC_LEN-1) := (others => (others => '0'));
+--signal c_short_func_input : double_array(0 to BITS_FUNC_LEN-1) := (others => (others => '0'));
 
 --Counting signals
 signal preambule_found : std_logic := '0';
@@ -89,7 +89,7 @@ signal data_done : std_logic := '0';
 signal readDataFromRam : std_logic := '1';
 
 --Correlation inputs
-signal c_long_func_input_index : integer range 0 to 2 := 0;
+--signal c_long_func_input_index : integer range 0 to 2 := 0;
 signal c_short_func_input_index : integer range 0 to 5 := 0;
 signal check_corr : std_logic := '0';
 
@@ -109,13 +109,13 @@ end component;
 begin
 --Components
 corr_long : Correlation_function generic map(function_length => PREAMBULE_FUNC_LEN) port map(CLK => CLK, input_function => c_long_func_input, input_values => adc_buffer(0 to PREAMBULE_FUNC_LEN-1), output_value => c_long_value);
-corr_short : Correlation_function generic map(function_length => BITS_FUNC_LEN) port map(CLK => CLK, input_function => c_short_func_input, input_values => adc_buffer(0 to BITS_FUNC_LEN-1), output_value => c_short_value);
+--corr_short : Correlation_function generic map(function_length => BITS_FUNC_LEN) port map(CLK => CLK, input_function => c_short_func_input, input_values => adc_buffer(0 to BITS_FUNC_LEN-1), output_value => c_short_value);
 
 DATA_OUT <= data_buffer;
 
 
-c_long_func_input <= c_preamb_func when c_long_func_input_index = 1 else
-							(others => (others => '0'));
+--c_long_func_input <= c_preamb_func when c_long_func_input_index = 1 else
+--							(others => (others => '0'));
 --c_short_func_input <= c_10_func when c_short_func_input_index = 0 else
 --							c_01_func when c_short_func_input_index = 1 else
 --							c_11_func when c_short_func_input_index = 2 else
@@ -175,25 +175,33 @@ begin
 							case(c_short_func_input_index) is
 								when 0 =>
 									--c_short_func_input <= c_01_func;
-									c_short_func_input(0 to 10-1) <= c_0_func;
-									c_short_func_input(10 to 20-1) <= c_1_func;
+									--c_short_func_input(0 to 10-1) <= c_0_func;
+									--c_short_func_input(10 to 20-1) <= c_1_func;
+									c_long_func_input(0 to 10-1) <= c_0_func;
+									c_long_func_input(10 to 20-1) <= c_1_func;
 								when 1 =>
-									c_10_value <=  to_integer(unsigned(c_short_value));
+									c_10_value <=  to_integer(unsigned(c_long_value));
 									--c_short_func_input <= c_11_func;
-									c_short_func_input(0 to 10-1) <= c_1_func;
-									c_short_func_input(10 to 20-1) <= c_1_func;
+									--c_short_func_input(0 to 10-1) <= c_1_func;
+									--c_short_func_input(10 to 20-1) <= c_1_func;
+									c_long_func_input(0 to 10-1) <= c_1_func;
+									c_long_func_input(10 to 20-1) <= c_1_func;
 								when 2 =>
-									c_01_value <=  to_integer(unsigned(c_short_value));
+									c_01_value <=  to_integer(unsigned(c_long_value));
 									--c_short_func_input <= c_00_func;
-									c_short_func_input(0 to 10-1) <= c_0_func;
-									c_short_func_input(10 to 20-1) <= c_0_func;
+									--c_short_func_input(0 to 10-1) <= c_0_func;
+									--c_short_func_input(10 to 20-1) <= c_0_func;
+									c_long_func_input(0 to 10-1) <= c_0_func;
+									c_long_func_input(10 to 20-1) <= c_0_func;
 								when 3 =>
-									c_11_value <=  to_integer(unsigned(c_short_value));
+									c_11_value <=  to_integer(unsigned(c_long_value));
 									--c_short_func_input <= c_10_func;
-									c_short_func_input(0 to 10-1) <= c_1_func;
-									c_short_func_input(10 to 20-1) <= c_0_func;
+									--c_short_func_input(0 to 10-1) <= c_1_func;
+									--c_short_func_input(10 to 20-1) <= c_0_func;
+									c_long_func_input(0 to 10-1) <= c_1_func;
+									c_long_func_input(10 to 20-1) <= c_0_func;
 								when 4 =>
-									c_00_value <=  to_integer(unsigned(c_short_value));
+									c_00_value <=  to_integer(unsigned(c_long_value));
 									--c_short_func_input <= c_10_func;
 								when 5 =>
 									check_corr <= '0';
@@ -232,11 +240,15 @@ begin
 						
 					end if;
 				else --Preambule not found
-					c_long_func_input_index <= 1; --Preambule
+					c_long_func_input <= c_preamb_func;
+					--c_long_func_input_index <= 1; --Preambule
 					if(to_integer(unsigned(c_long_value)) > PREAMBULE_FUNC_THRESHOLD) then
 						preambule_found <= '1';
-						c_short_func_input(0 to 10-1) <= c_1_func;
-						c_short_func_input(10 to 20-1) <= c_0_func;
+						--c_short_func_input(0 to 10-1) <= c_1_func;
+						--c_short_func_input(10 to 20-1) <= c_0_func;
+						c_long_func_input <= (others => (others => '0'));
+						c_long_func_input(0 to 10-1) <= c_1_func;
+						c_long_func_input(10 to 20-1) <= c_0_func;
 						--c_short_func_input <= c_10_func;
 					end if;
 				end if;
@@ -249,7 +261,7 @@ begin
 					ram_counter <= ram_counter + 1;
 				end if;
 				--Read data from ram
-				if (ram_counter < PREAMBULE_FUNC_LEN+4*BITS_FUNC_LEN) then
+				if (ram_counter < PREAMBULE_FUNC_LEN+3*BITS_FUNC_LEN) then
 					ram_ADDRESS_BUS <= std_logic_vector(to_unsigned(ram_counter, ram_ADDRESS_BUS'length));
 				end if;
 				
