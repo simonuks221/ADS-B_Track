@@ -9,14 +9,14 @@ entity ADC_Manager is
 generic(
 SIGNAL_BITS: integer := 8;
 CONV_BITS: integer := 20;
-SIGNAL_BUF_LEN: integer := 200;
-PREAMBULE_FUNC_LEN: integer := 50; --93 90 29 basic
+SIGNAL_BUF_LEN: integer := 50;
+PREAMBULE_FUNC_LEN: integer := 50; --92 87 29 basic
 BITS_FUNC_LEN: integer := 20;
 MAX_DATA_COUNTS : integer := 3;
 BITS_PER_DATA_COUNT : integer := 2;
 PREAMBULE_FUNC_THRESHOLD : integer := 480000;
 BITS_FUNC_THRESHOLD : integer := 3;
-PREAMBULE_DELAY_LEN: integer := 30
+PREAMBULE_DELAY_LEN: integer := 30 --3us, 30 atskaitu
 );
 port(
 CLK : in std_logic;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Uni_Projektas
-Sat Jan 14 20:07:13 2023
+Sun Jan 15 10:21:41 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,32 +17,32 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. Analysis & Synthesis DSP Block Usage Summary
  10. Analysis & Synthesis IP Cores Summary
  11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated
- 16. Parameter Settings for User Entity Instance: ADC_Manager:ADC_Manager1
- 17. Parameter Settings for User Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long
- 18. Parameter Settings for User Entity Instance: wizard_ram:wizard_ram_1|altsyncram:altsyncram_component
- 19. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult45
- 20. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult44
- 21. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult8
- 22. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult31
- 23. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult30
- 24. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult35
- 25. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult34
- 26. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult33
- 27. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult32
- 28. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult43
- 29. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult42
- 30. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult41
- 31. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult40
- 32. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult39
- 33. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult38
- 34. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult37
- 35. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult36
- 36. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult49
- 37. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult48
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated
+ 17. Parameter Settings for User Entity Instance: ADC_Manager:ADC_Manager1
+ 18. Parameter Settings for User Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long
+ 19. Parameter Settings for User Entity Instance: wizard_ram:wizard_ram_1|altsyncram:altsyncram_component
+ 20. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult48
+ 21. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult45
+ 22. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult44
+ 23. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult8
+ 24. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult31
+ 25. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult30
+ 26. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult35
+ 27. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult34
+ 28. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult33
+ 29. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult32
+ 30. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult43
+ 31. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult42
+ 32. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult41
+ 33. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult40
+ 34. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult39
+ 35. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult38
+ 36. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult37
+ 37. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult36
  38. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult47
  39. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult46
  40. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult25
@@ -120,14 +120,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 112. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult18|mult_o5t:auto_generated|alt_mac_out:mac_out2
 113. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult19|mult_o5t:auto_generated|alt_mac_mult:mac_mult1
 114. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult19|mult_o5t:auto_generated|alt_mac_out:mac_out2
-115. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated|alt_mac_mult:mac_mult1
-116. Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated|alt_mac_out:mac_out2
-117. altsyncram Parameter Settings by Entity Instance
-118. lpm_mult Parameter Settings by Entity Instance
-119. Port Connectivity Checks: "Clock_divider:clock_divider1"
-120. Port Connectivity Checks: "wizard_ram:wizard_ram_1"
-121. Elapsed Time Per Partition
-122. Analysis & Synthesis Messages
+115. altsyncram Parameter Settings by Entity Instance
+116. lpm_mult Parameter Settings by Entity Instance
+117. Port Connectivity Checks: "Clock_divider:clock_divider1"
+118. Port Connectivity Checks: "wizard_ram:wizard_ram_1"
+119. Port Connectivity Checks: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long"
+120. Elapsed Time Per Partition
+121. Analysis & Synthesis Messages
 
 
 
@@ -153,15 +152,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jan 14 20:07:12 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 15 10:21:41 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 5,170                                           ;
-;     Total combinational functions  ; 4,149                                           ;
-;     Dedicated logic registers      ; 1,556                                           ;
-; Total registers                    ; 1556                                            ;
+; Total logic elements               ; 5,032                                           ;
+;     Total combinational functions  ; 4,027                                           ;
+;     Dedicated logic registers      ; 1,532                                           ;
+; Total registers                    ; 1532                                            ;
 ; Total pins                         ; 16                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 2,040                                           ;
@@ -309,28 +308,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 5,170 ;
+; Estimated Total logic elements              ; 5,032 ;
 ;                                             ;       ;
-; Total combinational functions               ; 4149  ;
+; Total combinational functions               ; 4027  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 991   ;
-;     -- 3 input functions                    ; 2251  ;
-;     -- <=2 input functions                  ; 907   ;
+;     -- 4 input functions                    ; 953   ;
+;     -- 3 input functions                    ; 2192  ;
+;     -- <=2 input functions                  ; 882   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 2004  ;
-;     -- arithmetic mode                      ; 2145  ;
+;     -- normal mode                          ; 1943  ;
+;     -- arithmetic mode                      ; 2084  ;
 ;                                             ;       ;
-; Total registers                             ; 1556  ;
-;     -- Dedicated logic registers            ; 1556  ;
+; Total registers                             ; 1532  ;
+;     -- Dedicated logic registers            ; 1532  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 16    ;
 ; Total memory bits                           ; 2040  ;
 ; Embedded Multiplier 9-bit elements          ; 26    ;
 ; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 1098  ;
-; Total fan-out                               ; 17803 ;
+; Maximum fan-out                             ; 1082  ;
+; Total fan-out                               ; 17361 ;
 ; Average fan-out                             ; 3.08  ;
 +---------------------------------------------+-------+
 
@@ -340,9 +339,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                               ; Library Name ;
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |UNI_Projektas                                   ; 4149 (1)          ; 1556 (0)     ; 2040        ; 26           ; 26      ; 0         ; 16   ; 0            ; |UNI_Projektas                                                                                                                                                                    ; work         ;
-;    |ADC_Manager:ADC_Manager1|                    ; 4135 (843)        ; 1546 (1526)  ; 0           ; 26           ; 26      ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                                                                                                           ; work         ;
-;       |Correlation_function:corr_long|           ; 3292 (883)        ; 20 (20)      ; 0           ; 26           ; 26      ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long                                                                                                            ; work         ;
+; |UNI_Projektas                                   ; 4027 (1)          ; 1532 (0)     ; 2040        ; 26           ; 26      ; 0         ; 16   ; 0            ; |UNI_Projektas                                                                                                                                                                    ; work         ;
+;    |ADC_Manager:ADC_Manager1|                    ; 4013 (838)        ; 1522 (1502)  ; 0           ; 26           ; 26      ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                                                                                                           ; work         ;
+;       |Correlation_function:corr_long|           ; 3175 (866)        ; 20 (20)      ; 0           ; 26           ; 26      ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long                                                                                                            ; work         ;
 ;          |lpm_mult:Mult0|                        ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult0                                                                                             ; work         ;
 ;             |mult_o5t:auto_generated|            ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult0|mult_o5t:auto_generated                                                                     ; work         ;
 ;                |alt_mac_mult:mac_mult1|          ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult0|mult_o5t:auto_generated|alt_mac_mult:mac_mult1                                              ; work         ;
@@ -403,11 +402,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                |alt_mac_mult:mac_mult1|          ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult1|mult_o5t:auto_generated|alt_mac_mult:mac_mult1                                              ; work         ;
 ;                   |mac_mult_jng1:auto_generated| ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult1|mult_o5t:auto_generated|alt_mac_mult:mac_mult1|mac_mult_jng1:auto_generated                 ; work         ;
 ;                      |mult_bjl:mult1|            ; 101 (101)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult1|mult_o5t:auto_generated|alt_mac_mult:mac_mult1|mac_mult_jng1:auto_generated|mult_bjl:mult1  ; work         ;
-;          |lpm_mult:Mult20|                       ; 100 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20                                                                                            ; work         ;
-;             |mult_o5t:auto_generated|            ; 100 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated                                                                    ; work         ;
-;                |alt_mac_mult:mac_mult1|          ; 100 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated|alt_mac_mult:mac_mult1                                             ; work         ;
-;                   |mac_mult_jng1:auto_generated| ; 100 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated|alt_mac_mult:mac_mult1|mac_mult_jng1:auto_generated                ; work         ;
-;                      |mult_bjl:mult1|            ; 100 (100)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated|alt_mac_mult:mac_mult1|mac_mult_jng1:auto_generated|mult_bjl:mult1 ; work         ;
+;          |lpm_mult:Mult20|                       ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20                                                                                            ; work         ;
+;             |mult_o5t:auto_generated|            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated                                                                    ; work         ;
 ;          |lpm_mult:Mult21|                       ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult21                                                                                            ; work         ;
 ;             |mult_o5t:auto_generated|            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult21|mult_o5t:auto_generated                                                                    ; work         ;
 ;          |lpm_mult:Mult22|                       ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult22                                                                                            ; work         ;
@@ -486,8 +482,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |mult_o5t:auto_generated|            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult47|mult_o5t:auto_generated                                                                    ; work         ;
 ;          |lpm_mult:Mult48|                       ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult48                                                                                            ; work         ;
 ;             |mult_o5t:auto_generated|            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult48|mult_o5t:auto_generated                                                                    ; work         ;
-;          |lpm_mult:Mult49|                       ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult49                                                                                            ; work         ;
-;             |mult_o5t:auto_generated|            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult49|mult_o5t:auto_generated                                                                    ; work         ;
 ;          |lpm_mult:Mult4|                        ; 100 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult4                                                                                             ; work         ;
 ;             |mult_o5t:auto_generated|            ; 100 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult4|mult_o5t:auto_generated                                                                     ; work         ;
 ;                |alt_mac_mult:mac_mult1|          ; 100 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult4|mult_o5t:auto_generated|alt_mac_mult:mac_mult1                                              ; work         ;
@@ -559,14 +553,46 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------+--------------+---------+--------------+--------------+----------------------------------------+--------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                       ;
-+-------------------------------------------------+----------------------------------------+
-; Register name                                   ; Reason for Removal                     ;
-+-------------------------------------------------+----------------------------------------+
-; Clock_divider:clock_divider1|half_clock[0,2..7] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 7           ;                                        ;
-+-------------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++---------------------------------------------------+----------------------------------------+
+; Register name                                     ; Reason for Removal                     ;
++---------------------------------------------------+----------------------------------------+
+; Clock_divider:clock_divider1|half_clock[0,2..7]   ; Stuck at GND due to stuck port data_in ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][7] ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][7]     ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][6] ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][6]     ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][5] ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][5]     ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][4] ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][4]     ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][3] ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][3]     ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][2] ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][2]     ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][1] ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][1]     ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][0] ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][0]     ; Lost fanout                            ;
+; Total Number of Removed Registers = 23            ;                                        ;
++---------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                            ;
++---------------------------------------------------+--------------------+-----------------------------------------------+
+; Register name                                     ; Reason for Removal ; Registers Removed due to This Register        ;
++---------------------------------------------------+--------------------+-----------------------------------------------+
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][7] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][7] ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][6] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][6] ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][5] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][5] ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][4] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][4] ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][3] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][3] ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][2] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][2] ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][1] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][1] ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][0] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][0] ;
++---------------------------------------------------+--------------------+-----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -574,12 +600,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1556  ;
+; Total registers                              ; 1532  ;
 ; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 160   ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1520  ;
+; Number of registers using Clock Enable       ; 1496  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -601,11 +627,11 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|Clock_divider:clock_divider1|counter[7]           ;
 ; 6:1                ; 12 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_10_value[9]            ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|counter[2]               ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|counter[6]               ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[1]           ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[4]           ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[3]           ;
 ; 8:1                ; 80 bits   ; 400 LEs       ; 160 LEs              ; 240 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[7][5]  ;
-; 7:1                ; 80 bits   ; 320 LEs       ; 160 LEs              ; 160 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[13][5] ;
+; 7:1                ; 80 bits   ; 320 LEs       ; 160 LEs              ; 160 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[13][1] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
@@ -625,7 +651,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------------+--------+-----------------------------------+
 ; SIGNAL_BITS              ; 8      ; Signed Integer                    ;
 ; CONV_BITS                ; 20     ; Signed Integer                    ;
-; SIGNAL_BUF_LEN           ; 200    ; Signed Integer                    ;
+; SIGNAL_BUF_LEN           ; 50     ; Signed Integer                    ;
 ; PREAMBULE_FUNC_LEN       ; 50     ; Signed Integer                    ;
 ; BITS_FUNC_LEN            ; 20     ; Signed Integer                    ;
 ; MAX_DATA_COUNTS          ; 3      ; Signed Integer                    ;
@@ -705,6 +731,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                  ;
 ; CBXI_PARAMETER                     ; altsyncram_i0d1      ; Untyped                                  ;
 +------------------------------------+----------------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult48 ;
++------------------------------------------------+------------+------------------------------------------------------------+
+; Parameter Name                                 ; Value      ; Type                                                       ;
++------------------------------------------------+------------+------------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE                                             ;
+; LPM_WIDTHA                                     ; 8          ; Untyped                                                    ;
+; LPM_WIDTHB                                     ; 8          ; Untyped                                                    ;
+; LPM_WIDTHP                                     ; 16         ; Untyped                                                    ;
+; LPM_WIDTHR                                     ; 16         ; Untyped                                                    ;
+; LPM_WIDTHS                                     ; 1          ; Untyped                                                    ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                                                    ;
+; LPM_PIPELINE                                   ; 0          ; Untyped                                                    ;
+; LATENCY                                        ; 0          ; Untyped                                                    ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                                                    ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped                                                    ;
+; USE_EAB                                        ; OFF        ; Untyped                                                    ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped                                                    ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                                                    ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped                                                    ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K                                        ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                                                    ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                                                    ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                                                    ;
+; CBXI_PARAMETER                                 ; mult_o5t   ; Untyped                                                    ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                                                    ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                                                    ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                                                    ;
++------------------------------------------------+------------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1270,76 +1331,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +--------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult36 ;
-+------------------------------------------------+------------+------------------------------------------------------------+
-; Parameter Name                                 ; Value      ; Type                                                       ;
-+------------------------------------------------+------------+------------------------------------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY                                                 ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY                                               ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE                                               ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE                                             ;
-; LPM_WIDTHA                                     ; 8          ; Untyped                                                    ;
-; LPM_WIDTHB                                     ; 8          ; Untyped                                                    ;
-; LPM_WIDTHP                                     ; 16         ; Untyped                                                    ;
-; LPM_WIDTHR                                     ; 16         ; Untyped                                                    ;
-; LPM_WIDTHS                                     ; 1          ; Untyped                                                    ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                                                    ;
-; LPM_PIPELINE                                   ; 0          ; Untyped                                                    ;
-; LATENCY                                        ; 0          ; Untyped                                                    ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                                                    ;
-; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped                                                    ;
-; USE_EAB                                        ; OFF        ; Untyped                                                    ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped                                                    ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                                                    ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped                                                    ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K                                        ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                                                    ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                                                    ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                                                    ;
-; CBXI_PARAMETER                                 ; mult_o5t   ; Untyped                                                    ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                                                    ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                                                    ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                                                    ;
-+------------------------------------------------+------------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult49 ;
-+------------------------------------------------+------------+------------------------------------------------------------+
-; Parameter Name                                 ; Value      ; Type                                                       ;
-+------------------------------------------------+------------+------------------------------------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY                                                 ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY                                               ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE                                               ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE                                             ;
-; LPM_WIDTHA                                     ; 8          ; Untyped                                                    ;
-; LPM_WIDTHB                                     ; 8          ; Untyped                                                    ;
-; LPM_WIDTHP                                     ; 16         ; Untyped                                                    ;
-; LPM_WIDTHR                                     ; 16         ; Untyped                                                    ;
-; LPM_WIDTHS                                     ; 1          ; Untyped                                                    ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                                                    ;
-; LPM_PIPELINE                                   ; 0          ; Untyped                                                    ;
-; LATENCY                                        ; 0          ; Untyped                                                    ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                                                    ;
-; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped                                                    ;
-; USE_EAB                                        ; OFF        ; Untyped                                                    ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped                                                    ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                                                    ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped                                                    ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K                                        ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                                                    ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                                                    ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                                                    ;
-; CBXI_PARAMETER                                 ; mult_o5t   ; Untyped                                                    ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                                                    ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                                                    ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                                                    ;
-+------------------------------------------------+------------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult48 ;
 +------------------------------------------------+------------+------------------------------------------------------------+
 ; Parameter Name                                 ; Value      ; Type                                                       ;
 +------------------------------------------------+------------+------------------------------------------------------------+
@@ -5885,155 +5876,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated|alt_mac_mult:mac_mult1 ;
-+------------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name               ; Value         ; Type                                                                                                                     ;
-+------------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------+
-; LPM_WIDTHS                   ; 1             ; Untyped                                                                                                                  ;
-; DATAA_WIDTH                  ; 8             ; Untyped                                                                                                                  ;
-; DATAB_WIDTH                  ; 8             ; Untyped                                                                                                                  ;
-; DATAA_CLOCK                  ; NONE          ; Untyped                                                                                                                  ;
-; DATAB_CLOCK                  ; NONE          ; Untyped                                                                                                                  ;
-; SIGNA_CLOCK                  ; NONE          ; Untyped                                                                                                                  ;
-; SIGNB_CLOCK                  ; NONE          ; Untyped                                                                                                                  ;
-; OUTPUT_CLOCK                 ; NONE          ; Untyped                                                                                                                  ;
-; DATAA_CLEAR                  ; NONE          ; Untyped                                                                                                                  ;
-; DATAB_CLEAR                  ; NONE          ; Untyped                                                                                                                  ;
-; SIGNA_CLEAR                  ; NONE          ; Untyped                                                                                                                  ;
-; SIGNB_CLEAR                  ; NONE          ; Untyped                                                                                                                  ;
-; OUTPUT_CLEAR                 ; NONE          ; Untyped                                                                                                                  ;
-; ROUND_CLOCK                  ; none          ; Untyped                                                                                                                  ;
-; ROUND_CLEAR                  ; none          ; Untyped                                                                                                                  ;
-; SATURATE_CLOCK               ; none          ; Untyped                                                                                                                  ;
-; SATURATE_CLEAR               ; none          ; Untyped                                                                                                                  ;
-; BYPASS_MULTIPLIER            ; NO            ; Untyped                                                                                                                  ;
-; DYNAMIC_SCAN_CHAIN_SUPPORTED ; NO            ; Untyped                                                                                                                  ;
-; USING_ROUNDING               ; NO            ; Untyped                                                                                                                  ;
-; USING_SATURATION             ; NO            ; Untyped                                                                                                                  ;
-; EXTRA_OUTPUT_CLOCK           ; none          ; Untyped                                                                                                                  ;
-; EXTRA_SIGNA_CLOCK            ; none          ; Untyped                                                                                                                  ;
-; EXTRA_SIGNB_CLOCK            ; none          ; Untyped                                                                                                                  ;
-; EXTRA_OUTPUT_CLEAR           ; none          ; Untyped                                                                                                                  ;
-; EXTRA_SIGNA_CLEAR            ; none          ; Untyped                                                                                                                  ;
-; EXTRA_SIGNB_CLEAR            ; none          ; Untyped                                                                                                                  ;
-; MULT_PIPELINE                ; 0             ; Untyped                                                                                                                  ;
-; MULT_CLOCK                   ; NONE          ; Untyped                                                                                                                  ;
-; MULT_CLEAR                   ; NONE          ; Untyped                                                                                                                  ;
-; MULT_REPRESENTATION_A        ; UNSIGNED      ; Untyped                                                                                                                  ;
-; MULT_REPRESENTATION_B        ; UNSIGNED      ; Untyped                                                                                                                  ;
-; MULT_INPUT_A_IS_CONSTANT     ; NO            ; Untyped                                                                                                                  ;
-; MULT_INPUT_B_IS_CONSTANT     ; NO            ; Untyped                                                                                                                  ;
-; MULT_INPUT_A_FIXED_VALUE     ; Bx            ; Untyped                                                                                                                  ;
-; MULT_INPUT_B_FIXED_VALUE     ; Bx            ; Untyped                                                                                                                  ;
-; MULT_MAXIMIZE_SPEED          ; 5             ; Untyped                                                                                                                  ;
-; CBXI_PARAMETER               ; mac_mult_jng1 ; Untyped                                                                                                                  ;
-+------------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated|alt_mac_out:mac_out2 ;
-+-------------------------------+--------------+------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name                ; Value        ; Type                                                                                                                   ;
-+-------------------------------+--------------+------------------------------------------------------------------------------------------------------------------------+
-; OPERATION_MODE                ; OUTPUT_ONLY  ; Untyped                                                                                                                ;
-; DATAA_WIDTH                   ; 16           ; Untyped                                                                                                                ;
-; DATAB_WIDTH                   ; 0            ; Untyped                                                                                                                ;
-; DATAC_WIDTH                   ; 0            ; Untyped                                                                                                                ;
-; DATAD_WIDTH                   ; 0            ; Untyped                                                                                                                ;
-; ADDNSUB0_CLOCK                ; NONE         ; Untyped                                                                                                                ;
-; ADDNSUB1_CLOCK                ; NONE         ; Untyped                                                                                                                ;
-; ROUND0_CLOCK                  ; none         ; Untyped                                                                                                                ;
-; ROUND1_CLOCK                  ; none         ; Untyped                                                                                                                ;
-; SATURATE_CLOCK                ; none         ; Untyped                                                                                                                ;
-; MULTABSATURATE_CLOCK          ; none         ; Untyped                                                                                                                ;
-; MULTCDSATURATE_CLOCK          ; none         ; Untyped                                                                                                                ;
-; ZEROACC_CLOCK                 ; NONE         ; Untyped                                                                                                                ;
-; SIGNA_CLOCK                   ; NONE         ; Untyped                                                                                                                ;
-; SIGNB_CLOCK                   ; NONE         ; Untyped                                                                                                                ;
-; OUTPUT_CLOCK                  ; NONE         ; Untyped                                                                                                                ;
-; ADDNSUB0_CLEAR                ; NONE         ; Untyped                                                                                                                ;
-; ADDNSUB1_CLEAR                ; NONE         ; Untyped                                                                                                                ;
-; ROUND0_CLEAR                  ; none         ; Untyped                                                                                                                ;
-; ROUND1_CLEAR                  ; none         ; Untyped                                                                                                                ;
-; SATURATE_CLEAR                ; none         ; Untyped                                                                                                                ;
-; MULTABSATURATE_CLEAR          ; none         ; Untyped                                                                                                                ;
-; MULTCDSATURATE_CLEAR          ; none         ; Untyped                                                                                                                ;
-; ZEROACC_CLEAR                 ; NONE         ; Untyped                                                                                                                ;
-; SIGNA_CLEAR                   ; NONE         ; Untyped                                                                                                                ;
-; SIGNB_CLEAR                   ; NONE         ; Untyped                                                                                                                ;
-; OUTPUT_CLEAR                  ; NONE         ; Untyped                                                                                                                ;
-; ADDNSUB0_PIPELINE_CLOCK       ; NONE         ; Untyped                                                                                                                ;
-; ADDNSUB1_PIPELINE_CLOCK       ; NONE         ; Untyped                                                                                                                ;
-; ROUND0_PIPELINE_CLOCK         ; none         ; Untyped                                                                                                                ;
-; ROUND1_PIPELINE_CLOCK         ; none         ; Untyped                                                                                                                ;
-; SATURATE_PIPELINE_CLOCK       ; none         ; Untyped                                                                                                                ;
-; MULTABSATURATE_PIPELINE_CLOCK ; none         ; Untyped                                                                                                                ;
-; MULTCDSATURATE_PIPELINE_CLOCK ; none         ; Untyped                                                                                                                ;
-; ZEROACC_PIPELINE_CLOCK        ; NONE         ; Untyped                                                                                                                ;
-; SIGNA_PIPELINE_CLOCK          ; NONE         ; Untyped                                                                                                                ;
-; SIGNB_PIPELINE_CLOCK          ; NONE         ; Untyped                                                                                                                ;
-; ADDNSUB0_PIPELINE_CLEAR       ; NONE         ; Untyped                                                                                                                ;
-; ADDNSUB1_PIPELINE_CLEAR       ; NONE         ; Untyped                                                                                                                ;
-; ROUND0_PIPELINE_CLEAR         ; none         ; Untyped                                                                                                                ;
-; ROUND1_PIPELINE_CLEAR         ; none         ; Untyped                                                                                                                ;
-; SATURATE_PIPELINE_CLEAR       ; none         ; Untyped                                                                                                                ;
-; MULTABSATURATE_PIPELINE_CLEAR ; none         ; Untyped                                                                                                                ;
-; MULTCDSATURATE_PIPELINE_CLEAR ; none         ; Untyped                                                                                                                ;
-; ZEROACC_PIPELINE_CLEAR        ; NONE         ; Untyped                                                                                                                ;
-; SIGNA_PIPELINE_CLEAR          ; NONE         ; Untyped                                                                                                                ;
-; SIGNB_PIPELINE_CLEAR          ; NONE         ; Untyped                                                                                                                ;
-; MODE0_CLOCK                   ; none         ; Untyped                                                                                                                ;
-; MODE1_CLOCK                   ; none         ; Untyped                                                                                                                ;
-; ZEROACC1_CLOCK                ; none         ; Untyped                                                                                                                ;
-; SATURATE1_CLOCK               ; none         ; Untyped                                                                                                                ;
-; OUTPUT1_CLOCK                 ; none         ; Untyped                                                                                                                ;
-; OUTPUT2_CLOCK                 ; none         ; Untyped                                                                                                                ;
-; OUTPUT3_CLOCK                 ; none         ; Untyped                                                                                                                ;
-; OUTPUT4_CLOCK                 ; none         ; Untyped                                                                                                                ;
-; OUTPUT5_CLOCK                 ; none         ; Untyped                                                                                                                ;
-; OUTPUT6_CLOCK                 ; none         ; Untyped                                                                                                                ;
-; OUTPUT7_CLOCK                 ; none         ; Untyped                                                                                                                ;
-; MODE0_CLEAR                   ; none         ; Untyped                                                                                                                ;
-; MODE1_CLEAR                   ; none         ; Untyped                                                                                                                ;
-; ZEROACC1_CLEAR                ; none         ; Untyped                                                                                                                ;
-; SATURATE1_CLEAR               ; none         ; Untyped                                                                                                                ;
-; OUTPUT1_CLEAR                 ; none         ; Untyped                                                                                                                ;
-; OUTPUT2_CLEAR                 ; none         ; Untyped                                                                                                                ;
-; OUTPUT3_CLEAR                 ; none         ; Untyped                                                                                                                ;
-; OUTPUT4_CLEAR                 ; none         ; Untyped                                                                                                                ;
-; OUTPUT5_CLEAR                 ; none         ; Untyped                                                                                                                ;
-; OUTPUT6_CLEAR                 ; none         ; Untyped                                                                                                                ;
-; OUTPUT7_CLEAR                 ; none         ; Untyped                                                                                                                ;
-; MODE0_PIPELINE_CLOCK          ; none         ; Untyped                                                                                                                ;
-; MODE1_PIPELINE_CLOCK          ; none         ; Untyped                                                                                                                ;
-; ZEROACC1_PIPELINE_CLOCK       ; none         ; Untyped                                                                                                                ;
-; SATURATE1_PIPELINE_CLOCK      ; none         ; Untyped                                                                                                                ;
-; MODE0_PIPELINE_CLEAR          ; none         ; Untyped                                                                                                                ;
-; MODE1_PIPELINE_CLEAR          ; none         ; Untyped                                                                                                                ;
-; ZEROACC1_PIPELINE_CLEAR       ; none         ; Untyped                                                                                                                ;
-; SATURATE1_PIPELINE_CLEAR      ; none         ; Untyped                                                                                                                ;
-; FIRST_ADDER0_CLOCK            ; NONE         ; Untyped                                                                                                                ;
-; FIRST_ADDER1_CLOCK            ; NONE         ; Untyped                                                                                                                ;
-; FIRST_ADDER0_CLEAR            ; NONE         ; Untyped                                                                                                                ;
-; FIRST_ADDER1_CLEAR            ; NONE         ; Untyped                                                                                                                ;
-; DATAA_FORCED_TO_ZERO          ; NO           ; Untyped                                                                                                                ;
-; DATAC_FORCED_TO_ZERO          ; NO           ; Untyped                                                                                                                ;
-; USING_ROUNDING                ; NO           ; Untyped                                                                                                                ;
-; USING_SATURATION              ; NO           ; Untyped                                                                                                                ;
-; USING_MULT_SATURATION         ; NO           ; Untyped                                                                                                                ;
-; USING_LOADABLE_ACCUM          ; NO           ; Untyped                                                                                                                ;
-; LOADABLE_ACCUM_SUPPORTED      ; NO           ; Untyped                                                                                                                ;
-; USING_CHAINOUT                ; NO           ; Untyped                                                                                                                ;
-; CHAININ_WIDTH                 ; 0            ; Untyped                                                                                                                ;
-; CHAINOUT_PIPELINE_CLOCK       ; none         ; Untyped                                                                                                                ;
-; CHAINOUT_PIPELINE_CLEAR       ; none         ; Untyped                                                                                                                ;
-; CBXI_PARAMETER                ; mac_out_cn82 ; Untyped                                                                                                                ;
-+-------------------------------+--------------+------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                    ;
 +-------------------------------------------+---------------------------------------------------------+
@@ -6059,7 +5901,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+-------------------------------------------------------------------------+
 ; Name                                  ; Value                                                                   ;
 +---------------------------------------+-------------------------------------------------------------------------+
-; Number of entity instances            ; 50                                                                      ;
+; Number of entity instances            ; 49                                                                      ;
+; Entity Instance                       ; ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult48 ;
+;     -- LPM_WIDTHA                     ; 8                                                                       ;
+;     -- LPM_WIDTHB                     ; 8                                                                       ;
+;     -- LPM_WIDTHP                     ; 16                                                                      ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                      ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                                      ;
+;     -- USE_EAB                        ; OFF                                                                     ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                    ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                      ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                      ;
 ; Entity Instance                       ; ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult45 ;
 ;     -- LPM_WIDTHA                     ; 8                                                                       ;
 ;     -- LPM_WIDTHB                     ; 8                                                                       ;
@@ -6237,28 +6090,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                      ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                      ;
 ; Entity Instance                       ; ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult36 ;
-;     -- LPM_WIDTHA                     ; 8                                                                       ;
-;     -- LPM_WIDTHB                     ; 8                                                                       ;
-;     -- LPM_WIDTHP                     ; 16                                                                      ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                                      ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                                                      ;
-;     -- USE_EAB                        ; OFF                                                                     ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                    ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                      ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                      ;
-; Entity Instance                       ; ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult49 ;
-;     -- LPM_WIDTHA                     ; 8                                                                       ;
-;     -- LPM_WIDTHB                     ; 8                                                                       ;
-;     -- LPM_WIDTHP                     ; 16                                                                      ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                                      ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                                                      ;
-;     -- USE_EAB                        ; OFF                                                                     ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                    ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                      ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                      ;
-; Entity Instance                       ; ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult48 ;
 ;     -- LPM_WIDTHA                     ; 8                                                                       ;
 ;     -- LPM_WIDTHB                     ; 8                                                                       ;
 ;     -- LPM_WIDTHP                     ; 16                                                                      ;
@@ -6635,6 +6466,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+---------------------------+
 
 
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long" ;
++------------------+-------+----------+-----------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                       ;
++------------------+-------+----------+-----------------------------------------------+
+; input_values[49] ; Input ; Info     ; Stuck at GND                                  ;
++------------------+-------+----------+-----------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -6650,7 +6490,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Jan 14 20:07:03 2023
+    Info: Processing started: Sun Jan 15 10:21:30 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file uni_projektas_tb.vhd
@@ -6698,7 +6538,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_i0d1
 Info (12128): Elaborating entity "altsyncram_i0d1" for hierarchy "wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated"
 Info (12128): Elaborating entity "Clock_divider" for hierarchy "Clock_divider:clock_divider1"
-Info (278001): Inferred 50 megafunctions from design logic
+Info (278001): Inferred 49 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult48"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult45"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult44"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult8"
@@ -6716,8 +6557,6 @@ Info (278001): Inferred 50 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult38"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult37"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult36"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult49"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult48"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult47"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult46"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult25"
@@ -6749,8 +6588,8 @@ Info (278001): Inferred 50 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult0"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult3"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|Mult2"
-Info (12130): Elaborated megafunction instantiation "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult45"
-Info (12133): Instantiated megafunction "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult45" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult48"
+Info (12133): Instantiated megafunction "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult48" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "8"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHP" = "16"
@@ -6762,10 +6601,10 @@ Info (12133): Instantiated megafunction "ADC_Manager:ADC_Manager1|Correlation_fu
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_o5t.tdf
     Info (12023): Found entity 1: mult_o5t
-Info (270001): Converted 24 DSP block slices
+Info (270001): Converted 23 DSP block slices
     Info (270002): Used 25 DSP blocks before DSP block balancing
-        Info (270003): Used 50 DSP block slices in "Simple Multiplier (9-bit)" mode implemented in approximately 25 DSP blocks
-    Info (270013): Converted the following 24 DSP block slices to logic elements
+        Info (270003): Used 49 DSP block slices in "Simple Multiplier (9-bit)" mode implemented in approximately 25 DSP blocks
+    Info (270013): Converted the following 23 DSP block slices to logic elements
         Info (270006): DSP block slice in "Simple Multiplier (9-bit)" mode with output node "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult2|mult_o5t:auto_generated|mac_out2"
             Info (270004): DSP block output node "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult2|mult_o5t:auto_generated|mac_out2"
             Info (270005): DSP block multiplier node "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult2|mult_o5t:auto_generated|mac_mult1"
@@ -6835,9 +6674,6 @@ Info (270001): Converted 24 DSP block slices
         Info (270006): DSP block slice in "Simple Multiplier (9-bit)" mode with output node "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult19|mult_o5t:auto_generated|mac_out2"
             Info (270004): DSP block output node "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult19|mult_o5t:auto_generated|mac_out2"
             Info (270005): DSP block multiplier node "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult19|mult_o5t:auto_generated|mac_mult1"
-        Info (270006): DSP block slice in "Simple Multiplier (9-bit)" mode with output node "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated|mac_out2"
-            Info (270004): DSP block output node "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated|mac_out2"
-            Info (270005): DSP block multiplier node "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated|mac_mult1"
     Info (270002): Used 13 DSP blocks after DSP block balancing
         Info (270003): Used 26 DSP block slices in "Simple Multiplier (9-bit)" mode implemented in approximately 13 DSP blocks
 Info (12130): Elaborated megafunction instantiation "ADC_Manager:ADC_Manager1|Correlation_function:corr_long|lpm_mult:Mult2|mult_o5t:auto_generated|alt_mac_mult:mac_mult1"
@@ -6902,21 +6738,22 @@ Info (12133): Instantiated megafunction "ADC_Manager:ADC_Manager1|Correlation_fu
     Info (12134): Parameter "zeroacc_pipeline_clear" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mac_out_cn82.tdf
     Info (12023): Found entity 1: mac_out_cn82
-Info (13014): Ignored 3552 buffer(s)
-    Info (13016): Ignored 192 CARRY_SUM buffer(s)
-    Info (13019): Ignored 3360 SOFT buffer(s)
+Info (13014): Ignored 3404 buffer(s)
+    Info (13016): Ignored 184 CARRY_SUM buffer(s)
+    Info (13019): Ignored 3220 SOFT buffer(s)
+Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5220 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5082 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 5170 logic cells
+    Info (21061): Implemented 5032 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21062): Implemented 26 DSP elements
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4692 megabytes
-    Info: Processing ended: Sat Jan 14 20:07:13 2023
-    Info: Elapsed time: 00:00:10
+    Info: Peak virtual memory: 4680 megabytes
+    Info: Processing ended: Sun Jan 15 10:21:41 2023
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:08
 
 
