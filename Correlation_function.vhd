@@ -5,7 +5,7 @@ use work.corr_package.all;
 
 entity Correlation_function is
 generic(
-function_length : integer := 250
+function_length : integer := 50
 );
 port(
 CLK: in std_logic;

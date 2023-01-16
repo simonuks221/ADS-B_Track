@@ -24,15 +24,6 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity wizard_ram
 # -- Compiling architecture SYN of wizard_ram
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UNI_Projektas
-# -- Compiling architecture arc of UNI_Projektas
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -61,6 +52,16 @@
 # -- Loading package corr_package
 # -- Compiling entity Correlation_function
 # -- Compiling architecture arc1 of Correlation_function
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package corr_package
+# -- Compiling entity UNI_Projektas
+# -- Compiling architecture arc of UNI_Projektas
 # 
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas_TB.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -82,10 +83,9 @@
 # Loading ieee.numeric_std(body)
 # Loading ieee.std_logic_textio(body)
 # Loading work.uni_projektas_tb(arc)
-# Loading work.uni_projektas(arc)
 # Loading work.corr_package
+# Loading work.uni_projektas(arc)
 # Loading work.adc_manager(arc)
-# Loading work.correlation_function(arc1)
 # Loading work.wizard_ram(syn)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
@@ -93,6 +93,7 @@
 # Loading altera_mf.altera_device_families(body)
 # Loading altera_mf.altsyncram(translated)
 # Loading work.clock_divider(arc)
+# Loading work.correlation_function(arc1)
 # 
 # add wave *
 # view structure

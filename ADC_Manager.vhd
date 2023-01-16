@@ -26,6 +26,10 @@ DATA_OUT : out std_logic_vector(6-1 downto 0);
 RAM_DATA_BUS : in std_logic_vector(7 downto 0);
 RAM_ADDRESS_BUS : out std_logic_vector(7 downto 0);
 
+c_long_value_in : in std_logic_vector(20-1 downto 0) := (others => '0');
+c_long_func_input_out : out double_array(0 to 50-1) := (others => (others => '0'));
+adc_buffer_out : out double_array(0 to 50-1) := (others => (others => '0'));
+
 SYNC: in std_logic
 );
 end entity;
@@ -84,24 +88,11 @@ signal readDataFromRam : std_logic := '1';
 signal c_short_func_input_index : integer range 0 to 5 := 0;
 signal check_corr : std_logic := '0';
 
---Components
-component Correlation_function is
-generic(
-function_length : integer := 250
-);
-port(
-CLK: in std_logic;
-input_function : in double_array(0 to function_length - 1);
-input_values : in double_array(0 to function_length - 1);
-output_value : out std_logic_vector(19 downto 0)
-);
-end component;
-
 begin
---Components
-corr_long : Correlation_function generic map(function_length => PREAMBULE_FUNC_LEN) port map(CLK => CLK, input_function => c_long_func_input, input_values => adc_buffer(0 to PREAMBULE_FUNC_LEN-1), output_value => c_long_value);
-
 DATA_OUT <= data_buffer;
+c_long_value <= c_long_value_in;
+c_long_func_input_out <= c_long_func_input;
+adc_buffer_out <= adc_buffer;
 
 --Processes
 --Sync signal 10MHz process
