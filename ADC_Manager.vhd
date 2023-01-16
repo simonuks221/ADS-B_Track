@@ -6,31 +6,31 @@ use ieee.std_logic_textio.all;
 use work.corr_package.all;
 
 entity ADC_Manager is
-generic(
-SIGNAL_BITS: integer := 8;
-CONV_BITS: integer := 20;
-SIGNAL_BUF_LEN: integer := 50;
-PREAMBULE_FUNC_LEN: integer := 50; --92 87 29 basic
-BITS_FUNC_LEN: integer := 20;
-MAX_DATA_COUNTS : integer := 3;
-BITS_PER_DATA_COUNT : integer := 2;
-PREAMBULE_FUNC_THRESHOLD : integer := 480000;
-BITS_FUNC_THRESHOLD : integer := 3;
-PREAMBULE_DELAY_LEN: integer := 30 --3us, 30 atskaitu
-);
-port(
-CLK : in std_logic;
-ADC_IN : in std_logic_vector(7 downto 0);
-DATA_OUT : out std_logic_vector(6-1 downto 0);
+	generic(
+		SIGNAL_BITS: integer := 8;
+		CONV_BITS: integer := 20;
+		SIGNAL_BUF_LEN: integer := 50;
+		PREAMBULE_FUNC_LEN: integer := 50; --91 87 29 basic
+		BITS_FUNC_LEN: integer := 20;
+		MAX_DATA_COUNTS : integer := 3;
+		BITS_PER_DATA_COUNT : integer := 2;
+		PREAMBULE_FUNC_THRESHOLD : integer := 480000;
+		BITS_FUNC_THRESHOLD : integer := 3;
+		PREAMBULE_DELAY_LEN: integer := 30 --3us, 30 atskaitu
+	);
+	port(
+		CLK : in std_logic;
+		ADC_IN : in std_logic_vector(7 downto 0);
+		DATA_OUT : out std_logic_vector(6-1 downto 0);
 
-RAM_DATA_BUS : in std_logic_vector(7 downto 0);
-RAM_ADDRESS_BUS : out std_logic_vector(7 downto 0);
+		RAM_DATA_BUS : in std_logic_vector(7 downto 0);
+		RAM_ADDRESS_BUS : out std_logic_vector(7 downto 0);
 
-c_long_value_in : in std_logic_vector(20-1 downto 0) := (others => '0');
-c_long_func_input_out : out double_array(0 to 50-1) := (others => (others => '0'));
-adc_buffer_out : out double_array(0 to 50-1) := (others => (others => '0'));
+		c_long_value_in : in std_logic_vector(20-1 downto 0) := (others => '0');
+		c_long_func_input_out : out double_array(0 to 50-1) := (others => (others => '0'));
+		adc_buffer_out : out double_array(0 to 50-1) := (others => (others => '0'));
 
-SYNC: in std_logic
+		SYNC: in std_logic
 );
 end entity;
 

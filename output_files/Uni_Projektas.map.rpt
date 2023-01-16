@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Uni_Projektas
-Mon Jan 16 18:10:32 2023
+Mon Jan 16 18:54:19 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -126,12 +126,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 118. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult19|mult_o5t:auto_generated|alt_mac_out:mac_out2
 119. altsyncram Parameter Settings by Entity Instance
 120. lpm_mult Parameter Settings by Entity Instance
-121. Port Connectivity Checks: "big_ram_wizard:ram2"
-122. Port Connectivity Checks: "big_ram_wizard:ram1"
-123. Port Connectivity Checks: "Clock_divider:clock_divider1"
-124. Port Connectivity Checks: "wizard_ram:wizard_ram_1"
-125. Elapsed Time Per Partition
-126. Analysis & Synthesis Messages
+121. Port Connectivity Checks: "Clock_divider:clock_divider1"
+122. Port Connectivity Checks: "wizard_ram:wizard_ram_1"
+123. Elapsed Time Per Partition
+124. Analysis & Synthesis Messages
 
 
 
@@ -157,7 +155,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jan 16 18:10:32 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan 16 18:54:19 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
@@ -283,6 +281,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Uni_Projektas.vhd                ; yes             ; User VHDL File                   ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd         ;         ;
 ; Clock_divider.vhd                ; yes             ; User VHDL File                   ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd         ;         ;
 ; big_ram_wizard.vhd               ; yes             ; User Wizard-Generated File       ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd        ;         ;
+; ADC_ram_shifter.vhd              ; yes             ; User VHDL File                   ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_ram_shifter.vhd       ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -562,46 +561,170 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------+--------------+---------+--------------+--------------+----------------------------------------+------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                         ;
-+---------------------------------------------------+----------------------------------------+
-; Register name                                     ; Reason for Removal                     ;
-+---------------------------------------------------+----------------------------------------+
-; Clock_divider:clock_divider1|half_clock[0,2..7]   ; Stuck at GND due to stuck port data_in ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][7] ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_preamb_func[49][7]     ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][6] ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_preamb_func[49][6]     ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][5] ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_preamb_func[49][5]     ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][4] ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_preamb_func[49][4]     ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][3] ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_preamb_func[49][3]     ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][2] ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_preamb_func[49][2]     ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][1] ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_preamb_func[49][1]     ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][0] ; Lost fanout                            ;
-; ADC_Manager:ADC_Manager1|c_preamb_func[49][0]     ; Lost fanout                            ;
-; Total Number of Removed Registers = 23            ;                                        ;
-+---------------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                               ;
++---------------------------------------------------------+----------------------------------------+
+; Register name                                           ; Reason for Removal                     ;
++---------------------------------------------------------+----------------------------------------+
+; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[0..6,8..127] ; Lost fanout                            ;
+; ADC_ram_shifter:adc_ram_shifter_1|wren_a_1              ; Lost fanout                            ;
+; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[7]           ; Lost fanout                            ;
+; Clock_divider:clock_divider1|half_clock[0,2..7]         ; Stuck at GND due to stuck port data_in ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][7]       ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][7]           ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][6]       ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][6]           ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][5]       ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][5]           ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][4]       ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][4]           ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][3]       ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][3]           ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][2]       ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][2]           ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][1]       ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][1]           ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][0]       ; Lost fanout                            ;
+; ADC_Manager:ADC_Manager1|c_preamb_func[49][0]           ; Lost fanout                            ;
+; Total Number of Removed Registers = 152                 ;                                        ;
++---------------------------------------------------------+----------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                            ;
-+---------------------------------------------------+--------------------+-----------------------------------------------+
-; Register name                                     ; Reason for Removal ; Registers Removed due to This Register        ;
-+---------------------------------------------------+--------------------+-----------------------------------------------+
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][7] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][7] ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][6] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][6] ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][5] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][5] ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][4] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][4] ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][3] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][3] ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][2] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][2] ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][1] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][1] ;
-; ADC_Manager:ADC_Manager1|c_long_func_input[49][0] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][0] ;
-+---------------------------------------------------+--------------------+-----------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                               ;
++---------------------------------------------------+--------------------+--------------------------------------------------+
+; Register name                                     ; Reason for Removal ; Registers Removed due to This Register           ;
++---------------------------------------------------+--------------------+--------------------------------------------------+
+; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[120]   ; Lost Fanouts       ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[112], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[104], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[96],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[88],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[80],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[72],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[64],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[56],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[48],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[40],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[32],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[24],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[16],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[8],   ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[0],   ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|wren_a_1       ;
+; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[121]   ; Lost Fanouts       ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[113], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[105], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[97],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[89],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[81],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[73],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[65],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[57],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[49],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[41],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[33],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[25],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[17],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[9],   ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[1]    ;
+; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[122]   ; Lost Fanouts       ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[114], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[106], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[98],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[90],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[82],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[74],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[66],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[58],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[50],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[42],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[34],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[26],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[18],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[10],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[2]    ;
+; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[123]   ; Lost Fanouts       ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[115], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[107], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[99],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[91],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[83],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[75],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[67],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[59],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[51],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[43],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[35],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[27],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[19],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[11],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[3]    ;
+; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[124]   ; Lost Fanouts       ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[116], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[108], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[100], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[92],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[84],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[76],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[68],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[60],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[52],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[44],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[36],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[28],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[20],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[12],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[4]    ;
+; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[125]   ; Lost Fanouts       ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[117], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[109], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[101], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[93],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[85],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[77],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[69],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[61],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[53],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[45],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[37],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[29],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[21],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[13],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[5]    ;
+; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[126]   ; Lost Fanouts       ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[118], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[110], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[102], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[94],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[86],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[78],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[70],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[62],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[54],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[46],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[38],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[30],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[22],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[14],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[6]    ;
+; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[127]   ; Lost Fanouts       ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[119], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[111], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[103], ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[95],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[87],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[79],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[71],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[63],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[55],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[47],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[39],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[31],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[23],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[15],  ;
+;                                                   ;                    ; ADC_ram_shifter:adc_ram_shifter_1|data_a_1[7]    ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][7] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][7]    ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][6] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][6]    ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][5] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][5]    ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][4] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][4]    ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][3] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][3]    ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][2] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][2]    ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][1] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][1]    ;
+; ADC_Manager:ADC_Manager1|c_long_func_input[49][0] ; Lost Fanouts       ; ADC_Manager:ADC_Manager1|c_preamb_func[49][0]    ;
++---------------------------------------------------+--------------------+--------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -6615,30 +6738,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "big_ram_wizard:ram2"                                                                  ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; wren_a ; Input  ; Info     ; Stuck at GND                                                                        ;
-; wren_b ; Input  ; Info     ; Stuck at GND                                                                        ;
-; q_a    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; q_b    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "big_ram_wizard:ram1"                                                                  ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; wren_a ; Input  ; Info     ; Stuck at GND                                                                        ;
-; wren_b ; Input  ; Info     ; Stuck at GND                                                                        ;
-; q_a    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; q_b    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------+
 ; Port Connectivity Checks: "Clock_divider:clock_divider1" ;
 +-----------------+-------+----------+---------------------+
@@ -6676,7 +6775,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Jan 16 18:10:23 2023
+    Info: Processing started: Mon Jan 16 18:54:10 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file uni_projektas_tb.vhd
@@ -6702,23 +6801,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file clock_d
 Info (12021): Found 2 design units, including 1 entities, in source file big_ram_wizard.vhd
     Info (12022): Found design unit 1: big_ram_wizard-SYN
     Info (12023): Found entity 1: big_ram_wizard
+Info (12021): Found 2 design units, including 1 entities, in source file adc_ram_shifter.vhd
+    Info (12022): Found design unit 1: ADC_ram_shifter-arc
+    Info (12023): Found entity 1: ADC_ram_shifter
 Info (12127): Elaborating entity "Uni_Projektas" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Uni_Projektas.vhd(96): used implicit default value for signal "address_a_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Uni_Projektas.vhd(97): used implicit default value for signal "address_b_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Uni_Projektas.vhd(98): used implicit default value for signal "data_a_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Uni_Projektas.vhd(99): used implicit default value for signal "data_b_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(100): used explicit default value for signal "wren_a_1" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(101): used explicit default value for signal "wren_b_1" because signal was never assigned a value
-Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(102): object "q_a_1" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(103): object "q_b_1" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at Uni_Projektas.vhd(105): used implicit default value for signal "address_a_2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Uni_Projektas.vhd(106): used implicit default value for signal "address_b_2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Uni_Projektas.vhd(107): used implicit default value for signal "data_a_2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Uni_Projektas.vhd(108): used implicit default value for signal "data_b_2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(109): used explicit default value for signal "wren_a_2" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(110): used explicit default value for signal "wren_b_2" because signal was never assigned a value
-Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(111): object "q_a_2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(112): object "q_b_2" assigned a value but never read
+Info (12128): Elaborating entity "ADC_ram_shifter" for hierarchy "ADC_ram_shifter:adc_ram_shifter_1"
+Warning (10540): VHDL Signal Declaration warning at ADC_ram_shifter.vhd(13): used explicit default value for signal "data_b_1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ADC_ram_shifter.vhd(17): used explicit default value for signal "data_a_2" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ADC_ram_shifter.vhd(18): used explicit default value for signal "data_b_2" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ADC_ram_shifter.vhd(27): used explicit default value for signal "wren_b_1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ADC_ram_shifter.vhd(29): used explicit default value for signal "wren_a_2" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ADC_ram_shifter.vhd(30): used explicit default value for signal "wren_b_2" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ADC_ram_shifter.vhd(38): used explicit default value for signal "count" because signal was never assigned a value
 Info (12128): Elaborating entity "ADC_Manager" for hierarchy "ADC_Manager:ADC_Manager1"
 Info (12128): Elaborating entity "wizard_ram" for hierarchy "wizard_ram:wizard_ram_1"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "wizard_ram:wizard_ram_1|altsyncram:altsyncram_component"
@@ -6904,6 +6998,14 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[125]"
         Warning (14320): Synthesized away node "big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[126]"
         Warning (14320): Synthesized away node "big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[127]"
+        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[120]"
+        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[121]"
+        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[122]"
+        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[123]"
+        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[124]"
+        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[125]"
+        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[126]"
+        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[127]"
         Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[0]"
         Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[1]"
         Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[2]"
@@ -7024,14 +7126,6 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[117]"
         Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[118]"
         Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[119]"
-        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[120]"
-        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[121]"
-        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[122]"
-        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[123]"
-        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[124]"
-        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[125]"
-        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[126]"
-        Warning (14320): Synthesized away node "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|q_a[127]"
 Info (278001): Inferred 49 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Correlation_function:corr_long|Mult48"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Correlation_function:corr_long|Mult45"
@@ -7235,7 +7329,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mac_
 Info (13014): Ignored 3404 buffer(s)
     Info (13016): Ignored 184 CARRY_SUM buffer(s)
     Info (13019): Ignored 3220 SOFT buffer(s)
-Info (17049): 16 registers lost all their fanouts during netlist optimizations.
+Info (17049): 145 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 5082 device resources after synthesis - the final resource count might be different
@@ -7244,9 +7338,9 @@ Info (21057): Implemented 5082 device resources after synthesis - the final reso
     Info (21061): Implemented 5032 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21062): Implemented 26 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 275 warnings
-    Info: Peak virtual memory: 4692 megabytes
-    Info: Processing ended: Mon Jan 16 18:10:32 2023
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 266 warnings
+    Info: Peak virtual memory: 4685 megabytes
+    Info: Processing ended: Mon Jan 16 18:54:19 2023
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:08
 

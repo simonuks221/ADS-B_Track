@@ -46,39 +46,68 @@ end component;
 component wizard_ram IS
 	PORT
 	(
-		address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		address	: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		clock		: IN STD_LOGIC  := '1';
 		data		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		wren		: IN STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+		q			: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
 END component;
 
 component big_ram_wizard IS
 	PORT
 	(
-		address_a		: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
-		address_b		: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
-		clock		: IN STD_LOGIC  := '1';
+		address_a	: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+		address_b	: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+		clock			: IN STD_LOGIC  := '1';
 		data_a		: IN STD_LOGIC_VECTOR (127 DOWNTO 0);
 		data_b		: IN STD_LOGIC_VECTOR (127 DOWNTO 0);
 		wren_a		: IN STD_LOGIC  := '0';
 		wren_b		: IN STD_LOGIC  := '0';
-		q_a		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0);
-		q_b		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0)
+		q_a			: OUT STD_LOGIC_VECTOR (127 DOWNTO 0);
+		q_b			: OUT STD_LOGIC_VECTOR (127 DOWNTO 0)
 	);
 END component;
+
+component ADC_ram_shifter is
+	port (
+		CLK : in std_logic := '0';
+		address_a_1		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
+		address_b_1		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
+		data_a_1		: out STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
+		data_b_1		: out STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
+		
+		address_a_2		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
+		address_b_2		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
+		data_a_2		: out STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
+		data_b_2		: out STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
+		
+		q_a_1		: in STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
+		q_b_1		: in STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
+		
+		q_a_2		: in STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
+		q_b_2		: in STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
+		
+		wren_a_1		: out STD_LOGIC  := '1';
+		wren_b_1		: out STD_LOGIC  := '1';
+		
+		wren_a_2		: out STD_LOGIC  := '1';
+		wren_b_2		: out STD_LOGIC  := '1';
+		
+		new_adc_in : std_logic_vector(7 downto 0)
+	);
+end component;
 
 --Components
 component Correlation_function is
 	generic(
-	function_length : integer := 50
+		function_length : integer := 50
 	);
 	port(
-	CLK: in std_logic;
-	input_function : in double_array(0 to function_length - 1);
-	input_values : in double_array(0 to function_length - 1);
-	output_value : out std_logic_vector(19 downto 0)
+		CLK: in std_logic;
+		input_function : in double_array(0 to function_length - 1);
+		input_values : in double_array(0 to function_length - 1);
+		output_value : out std_logic_vector(19 downto 0)
 	);
 end component;
 
@@ -97,8 +126,8 @@ signal address_a_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
 signal address_b_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
 signal data_a_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 signal data_b_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-signal wren_a_1		: STD_LOGIC  := '0';
-signal wren_b_1		: STD_LOGIC  := '0';
+signal wren_a_1		: STD_LOGIC  := '1';
+signal wren_b_1		: STD_LOGIC  := '1';
 signal q_a_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 signal q_b_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 
@@ -106,8 +135,8 @@ signal address_a_2		: STD_LOGIC_VECTOR (2 DOWNTO 0);
 signal address_b_2		: STD_LOGIC_VECTOR (2 DOWNTO 0);
 signal data_a_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 signal data_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-signal wren_a_2		: STD_LOGIC  := '0';
-signal wren_b_2		: STD_LOGIC  := '0';
+signal wren_a_2		: STD_LOGIC  := '1';
+signal wren_b_2		: STD_LOGIC  := '1';
 signal q_a_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 signal q_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 
@@ -115,6 +144,13 @@ signal sync_clk : std_logic := '0';
 
 signal RECEIVED_CODE : std_logic_vector(5 downto 0);
 begin
+adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => address_a_1, address_a_2 => address_a_2, address_b_1 => address_b_1,
+	address_b_2 => address_b_2, data_a_1 => data_a_1, data_a_2 => data_a_2, data_b_1 => data_b_1, data_b_2 => data_b_2,
+	q_a_1 => q_a_1, q_a_2 => q_a_2, q_b_1 => q_b_1, q_b_2 => q_b_2,
+	wren_a_1 => wren_a_1, wren_a_2 => wren_a_2, wren_b_1 => wren_b_1, wren_b_2 => wren_b_2,
+	new_adc_in => ADC_IN);
+
+
 ADC_Manager1 : ADC_Manager port map(CLK => CLK, ADC_IN => ADC_IN, DATA_OUT => RECEIVED_CODE, RAM_DATA_BUS => func_ram_out, RAM_ADDRESS_BUS => func_ram_address_bus, SYNC => sync_clk,
 												c_long_value_in => c_long_value, c_long_func_input_out => c_long_func_input, adc_buffer_out => adc_buffer);
 wizard_ram_1 : wizard_ram port map(address => func_ram_address_bus, clock => CLK, data => "00000000", wren => '0', q => func_ram_out);
