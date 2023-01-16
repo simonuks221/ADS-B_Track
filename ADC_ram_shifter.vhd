@@ -49,6 +49,12 @@ begin
 	if(rising_edge(CLK)) then
 		wren_a_1 <= '1';
 		data_a_1 <= q_a_1(119 downto 0) & new_adc_in;
+		wren_b_1 <= '1';
+		data_b_1 <= q_b_1(119 downto 0) & q_a_1(127 downto 120);
+		wren_a_2 <= '1';
+		data_a_2 <= q_a_2(119 downto 0) & q_b_1(127 downto 120);
+		wren_b_2 <= '1';
+		data_b_2 <= q_b_2(119 downto 0) & q_a_2(127 downto 120);
 	end if;
 end process;
 end architecture;
