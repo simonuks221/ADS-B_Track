@@ -28,16 +28,14 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult26" CBX_FILE_NAME="mult_o5t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult28|mult_o5t:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_cn82.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult44" CBX_FILE_NAME="mult_o5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Uni_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_hf52.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult17|mult_o5t:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_jng1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult27" CBX_FILE_NAME="mult_o5t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult45" CBX_FILE_NAME="mult_o5t.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult18|mult_o5t:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_jng1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult19" CBX_FILE_NAME="mult_o5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Uni_Projektas|big_ram_wizard:ram2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_hf52.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult27|mult_o5t:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_jng1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult28" CBX_FILE_NAME="mult_o5t.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult37" CBX_FILE_NAME="mult_o5t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult46" CBX_FILE_NAME="mult_o5t.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult9|mult_o5t:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_jng1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult19|mult_o5t:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_jng1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult28|mult_o5t:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_jng1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult29" CBX_FILE_NAME="mult_o5t.tdf"/>
@@ -97,5 +95,9 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult29|mult_o5t:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_cn82.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult36" CBX_FILE_NAME="mult_o5t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult9" CBX_FILE_NAME="mult_o5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult18|mult_o5t:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_jng1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult19" CBX_FILE_NAME="mult_o5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult37" CBX_FILE_NAME="mult_o5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult9|mult_o5t:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_jng1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

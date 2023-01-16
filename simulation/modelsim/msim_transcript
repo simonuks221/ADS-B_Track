@@ -129,3 +129,63 @@
 #    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/a.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity a
+# -- Compiling architecture SYN of a
+vsim work.a
+# vsim work.a 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.a(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading lpm.lpm_components
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_shiftreg(lpm_syn)
+add wave -position end  sim:/a/clock
+add wave -position end  sim:/a/q
+add wave -position end  sim:/a/shiftin
+force -freeze sim:/a/clock 1 0, 0 {50 ps} -r 100
+run
+force -freeze sim:/a/q 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000U 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/a/q 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000U 0
+noforce sim:/a/q
+run
+run
+run
+run
+run
+run
+run
+noforce sim:/a/q
+force -freeze sim:/a/shiftin 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/a/shiftin 1 0
+run
+run
+run
+run
+run
+run
+run

@@ -92,6 +92,25 @@ signal c_long_value : std_logic_vector(20-1 downto 0) := (others => '0');
 signal c_long_func_input : double_array(0 to 50-1) := (others => (others => '0'));
 signal adc_buffer : double_array(0 to 50-1) := (others => (others => '0'));
 
+--Big ram signals
+signal address_a_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
+signal address_b_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
+signal data_a_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+signal data_b_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+signal wren_a_1		: STD_LOGIC  := '0';
+signal wren_b_1		: STD_LOGIC  := '0';
+signal q_a_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+signal q_b_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+
+signal address_a_2		: STD_LOGIC_VECTOR (2 DOWNTO 0);
+signal address_b_2		: STD_LOGIC_VECTOR (2 DOWNTO 0);
+signal data_a_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+signal data_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+signal wren_a_2		: STD_LOGIC  := '0';
+signal wren_b_2		: STD_LOGIC  := '0';
+signal q_a_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+signal q_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+
 signal sync_clk : std_logic := '0';
 
 signal RECEIVED_CODE : std_logic_vector(5 downto 0);
@@ -102,6 +121,10 @@ wizard_ram_1 : wizard_ram port map(address => func_ram_address_bus, clock => CLK
 clock_divider1 : clock_divider port map(CLK => CLK, Prescaler => "00000101", CLK_OUT => sync_clk);
 corr_long : Correlation_function generic map(function_length => 50) port map(CLK => CLK, input_function => c_long_func_input, input_values => adc_buffer(0 to 50-1), output_value => c_long_value);
 
+ram1 : big_ram_wizard port map(clock => CLK, address_a => address_a_1, address_b => address_b_1, data_a => data_a_1,
+										data_b => data_b_1, wren_a => wren_a_1, wren_b => wren_b_1, q_a => q_a_1, q_b => q_b_1);
+ram2 : big_ram_wizard port map(clock => CLK, address_a => address_a_2, address_b => address_b_2, data_a => data_a_2,
+										data_b => data_b_2, wren_a => wren_a_2, wren_b => wren_b_2, q_a => q_a_2, q_b => q_b_2);
 
 DATA_OUT <= RECEIVED_CODE;
 SYNC <= sync_clk;

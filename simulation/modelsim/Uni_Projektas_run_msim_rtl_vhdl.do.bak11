@@ -7,10 +7,10 @@ vmap work rtl_work
 
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd}
 
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas_TB.vhd}
 
