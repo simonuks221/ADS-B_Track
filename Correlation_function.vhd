@@ -17,18 +17,38 @@ end entity;
 
 architecture arc1 of Correlation_function is
 signal output_int : integer := 0;
+signal temp_int : integer := 0;
+signal first_part : std_Logic := '1';
+
 begin
+
+output_value <= std_logic_vector(to_unsigned(output_int, output_value'length));
 
 process(CLK)
 variable temp_c: integer := 0;
+variable input_adc_values_reduced : std_logic_vector(200-1 downto 0);
 begin
 	if rising_edge(CLK) then
 		temp_c := 0;
-		for i in 0 to function_length-1 loop
+		if(first_part = '1') then
+			input_adc_values_reduced := input_adc_values(200-1 downto 0);
+		else
+			input_adc_values_reduced := input_adc_values(400-1 downto 200);
+		end if;
+		
+		for i in 0 to 25-1 loop
 			temp_c := temp_c + to_integer(unsigned((input_adc_values(i*8+8-1 downto i*8)))) * to_integer(unsigned((input_function(i))));
 		end loop;
-		--Testavimas
-		output_value <= std_logic_vector(to_unsigned(temp_c, output_value'length));
+		--if(first_part = '0') then
+			--output_value <= std_logic_vector(to_unsigned(temp_c, output_value'length));
+		--end if;
+		if(first_part = '0') then
+			output_int <= temp_c + temp_int;
+			temp_int <= 0;
+		else
+			temp_int <= temp_c;
+		end if;
+		first_part <= not first_part;
 	end if;
 end process;
 

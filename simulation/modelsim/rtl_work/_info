@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dC:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\simulation\modelsim
 Eadc_manager
-Z1 w1673888144
+Z1 w1673944903
 Z2 DPx4 work 12 corr_package 0 22 ?ban?PMXL_?Q[aWmL504X1
 Z3 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
 Z4 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
@@ -15,15 +15,15 @@ Z8 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
 Z9 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
 l0
 L8
-VZW:FBN6CEhESNkA78`@z00
+VY?V>zgi7J>1Fig01Y73_31
 Z10 OV;C;10.1d;51
 31
-Z11 !s108 1673944059.116000
+Z11 !s108 1673946849.239000
 Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd|
 Z13 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd|
 Z14 o-93 -work work -O0
 Z15 tExplicit 1
-!s100 :J8LVUaX93eJeK11eWBJV1
+!s100 7<NR7>jk4M[Jb]6K;jV2_1
 !i10b 1
 Aarc
 R2
@@ -31,10 +31,10 @@ R3
 R4
 R5
 R6
-DEx4 work 11 adc_manager 0 22 ZW:FBN6CEhESNkA78`@z00
-l91
-L37
-V@MdT4T16oSR`4QhF[g>PN1
+DEx4 work 11 adc_manager 0 22 Y?V>zgi7J>1Fig01Y73_31
+l87
+L35
+VePiDl4MLYHSAe9e6i7SQW0
 R10
 31
 R11
@@ -42,7 +42,7 @@ R12
 R13
 R14
 R15
-!s100 B?^HOP8Ebg2PG8YJP375V0
+!s100 KOHVooCT:1^N>PY9XWV[L3
 !i10b 1
 Eadc_ram_shifter
 Z16 w1673897529
@@ -58,7 +58,7 @@ L7
 VCfiflDY:_HYlYR1n`=z]03
 R10
 31
-Z19 !s108 1673944059.049000
+Z19 !s108 1673946849.178000
 Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_ram_shifter.vhd|
 Z21 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_ram_shifter.vhd|
 R14
@@ -95,7 +95,7 @@ L42
 VYB0RIH@9bL6FFWLn;ebB41
 R10
 31
-Z25 !s108 1673944058.982000
+Z25 !s108 1673946849.120000
 Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd|
 Z27 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd|
 R14
@@ -132,7 +132,7 @@ L7
 VofHCVh1XiXZIZ?J[L=<In2
 R10
 31
-Z31 !s108 1673944058.896000
+Z31 !s108 1673946849.049000
 Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd|
 Z33 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd|
 R14
@@ -174,11 +174,11 @@ R14
 R15
 !s100 aG?Mn:adR0ZS0i:XP:2Ob1
 !i10b 1
-!s108 1673944058.774000
+!s108 1673946848.935000
 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd|
 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd|
 Ecorrelation_function
-Z34 w1673943761
+Z34 w1673946829
 R2
 R4
 R5
@@ -188,25 +188,25 @@ Z35 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd
 Z36 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd
 l0
 L6
-V>OfLNeK`n2>mOWzo;SEl40
+VXDBY@;ejhRzmlGRY64g?B3
 R10
 31
-Z37 !s108 1673944059.186000
+Z37 !s108 1673946849.301000
 Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd|
 Z39 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd|
 R14
 R15
-!s100 b;h_B[N>?=^5Zljjhe5D70
+!s100 :C`cIEoTXeeMIL45OgRKU1
 !i10b 1
 Aarc1
 R2
 R4
 R5
 R6
-DEx4 work 20 correlation_function 0 22 >OfLNeK`n2>mOWzo;SEl40
-l21
-L19
-V?lT:5VDSdhID5:VbFbYH63
+DEx4 work 20 correlation_function 0 22 XDBY@;ejhRzmlGRY64g?B3
+l23
+L18
+VRa9YMSnNVQVHLdJ1d]9Zj2
 R10
 31
 R37
@@ -214,10 +214,10 @@ R38
 R39
 R14
 R15
-!s100 39MhlHXS6^T^o;9995]J53
+!s100 0HBYDa^0`:bYkPgbSLng_1
 !i10b 1
 Euni_projektas
-Z40 w1673944036
+Z40 w1673944582
 R2
 R3
 R4
@@ -231,7 +231,7 @@ L8
 VFXHJ7]GAbK[:X=bEk5@cC0
 R10
 31
-Z43 !s108 1673944059.254000
+Z43 !s108 1673946849.362000
 Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
 Z45 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
 R14
@@ -245,9 +245,9 @@ R4
 R5
 R6
 DEx4 work 13 uni_projektas 0 22 FXHJ7]GAbK[:X=bEk5@cC0
-l149
+l146
 L17
-VeSHJmbeB6omWE@KaegfVi0
+VKJ=Bc>ELY]NFUlb^gEKkV3
 R10
 31
 R43
@@ -255,7 +255,7 @@ R44
 R45
 R14
 R15
-!s100 QX[<C[^3G74g3Zml>6fc41
+!s100 008<B6I[YnV0cMgmQi9>N0
 !i10b 1
 Euni_projektas_tb
 Z46 w1673024460
@@ -273,7 +273,7 @@ VUP0_[SKQiIkFeomZ6FS421
 R10
 31
 !i10b 1
-Z49 !s108 1673944059.319000
+Z49 !s108 1673946849.424000
 Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas_TB.vhd|
 Z51 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas_TB.vhd|
 R14
@@ -308,7 +308,7 @@ L42
 V>>XX;EfR8>j6zAbg9j=l_3
 R10
 31
-Z55 !s108 1673944058.832000
+Z55 !s108 1673946848.990000
 Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd|
 Z57 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd|
 R14
