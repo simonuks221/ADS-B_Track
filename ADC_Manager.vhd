@@ -10,7 +10,7 @@ entity ADC_Manager is
 		SIGNAL_BITS: integer := 8;
 		CONV_BITS: integer := 20;
 		SIGNAL_BUF_LEN: integer := 50;
-		PREAMBULE_FUNC_LEN: integer := 50; --91 87 29 basic
+		PREAMBULE_FUNC_LEN: integer := 50; --91 87 29 2 basic --Su 2 ramais  95 90 32 3
 		BITS_FUNC_LEN: integer := 20;
 		MAX_DATA_COUNTS : integer := 3;
 		BITS_PER_DATA_COUNT : integer := 2;
@@ -20,7 +20,6 @@ entity ADC_Manager is
 	);
 	port(
 		CLK : in std_logic;
-		ADC_IN : in std_logic_vector(7 downto 0);
 		DATA_OUT : out std_logic_vector(6-1 downto 0);
 
 		RAM_DATA_BUS : in std_logic_vector(7 downto 0);
@@ -28,7 +27,6 @@ entity ADC_Manager is
 
 		c_long_value_in : in std_logic_vector(20-1 downto 0) := (others => '0');
 		c_long_func_input_out : out double_array(0 to 50-1) := (others => (others => '0'));
-		adc_buffer_out : out double_array(0 to 50-1) := (others => (others => '0'));
 
 		SYNC: in std_logic
 );
@@ -68,8 +66,6 @@ signal c_01_value : integer range 0 to 4000 := 0;
 signal c_00_value : integer range 0 to 4000 := 0;
 signal c_11_value : integer range 0 to 4000 := 0;
 
-signal adc_buffer : double_array(0 to SIGNAL_BUF_LEN-1) := (others => (others => '0'));
-
 --Function result signals
 signal c_long_value : std_logic_vector(CONV_BITS-1 downto 0) := (others => '0');
 signal c_long_func_input : double_array(0 to PREAMBULE_FUNC_LEN-1) := (others => (others => '0'));
@@ -92,7 +88,6 @@ begin
 DATA_OUT <= data_buffer;
 c_long_value <= c_long_value_in;
 c_long_func_input_out <= c_long_func_input;
-adc_buffer_out <= adc_buffer;
 
 --Processes
 --Sync signal 10MHz process
@@ -103,10 +98,6 @@ begin
 			if(readDataFromRam = '0') then
 				--Not reading from ram
 				--Shift ADC buffer and add new voltage value
-				for i in 1 to SIGNAL_BUF_LEN-2 loop
-					adc_buffer(i) <= adc_buffer(i-1);
-				end loop;
-				adc_buffer(0) <= ADC_IN;
 				
 				if(preambule_found = '1') then
 					if(preambule_delay_done = '1') then

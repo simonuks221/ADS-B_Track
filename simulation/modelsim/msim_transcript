@@ -151,42 +151,7 @@
 #    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-add wave -position end  sim:/uni_projektas_tb/projektas/q_a_1
-add wave -position end  sim:/uni_projektas_tb/projektas/q_a_2
-add wave -position end  sim:/uni_projektas_tb/projektas/q_b_1
-add wave -position end  sim:/uni_projektas_tb/projektas/q_a_2
-add wave -position end  sim:/uni_projektas_tb/projektas/q_b_2
-restart
-run
-# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
-#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_tb/projektas/ram2/altsyncram_component
-# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
-#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_tb/projektas/ram1/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_tb/projektas/wizard_ram_1/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ns  Iteration: 0  Instance: /uni_projektas_tb/projektas/corr_long
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /uni_projektas_tb/projektas/corr_long
