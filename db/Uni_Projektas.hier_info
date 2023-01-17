@@ -1,4 +1,4 @@
-|Uni_Projektas
+|UNI_Projektas
 CLK => ADC_Manager:ADC_Manager1.CLK
 CLK => wizard_ram:wizard_ram_1.clock
 CLK => Clock_divider:clock_divider1.CLK
@@ -22,7 +22,7 @@ DATA_OUT[5] <= ADC_Manager:ADC_Manager1.DATA_OUT[5]
 SYNC <= Clock_divider:clock_divider1.CLK_OUT
 
 
-|Uni_Projektas|ADC_ram_shifter:adc_ram_shifter_1
+|UNI_Projektas|ADC_ram_shifter:adc_ram_shifter_1
 CLK => data_b_2[0]~reg0.CLK
 CLK => data_b_2[1]~reg0.CLK
 CLK => data_b_2[2]~reg0.CLK
@@ -1589,7 +1589,7 @@ new_adc_in[6] => data_a_1[6]~reg0.DATAIN
 new_adc_in[7] => data_a_1[7]~reg0.DATAIN
 
 
-|Uni_Projektas|ADC_Manager:ADC_Manager1
+|UNI_Projektas|ADC_Manager:ADC_Manager1
 CLK => c_0_func[9][0].CLK
 CLK => c_0_func[9][1].CLK
 CLK => c_0_func[9][2].CLK
@@ -3762,7 +3762,7 @@ SYNC => counter[30].CLK
 SYNC => counter[31].CLK
 
 
-|Uni_Projektas|wizard_ram:wizard_ram_1
+|UNI_Projektas|wizard_ram:wizard_ram_1
 address[0] => altsyncram:altsyncram_component.address_a[0]
 address[1] => altsyncram:altsyncram_component.address_a[1]
 address[2] => altsyncram:altsyncram_component.address_a[2]
@@ -3791,7 +3791,7 @@ q[6] <= altsyncram:altsyncram_component.q_a[6]
 q[7] <= altsyncram:altsyncram_component.q_a[7]
 
 
-|Uni_Projektas|wizard_ram:wizard_ram_1|altsyncram:altsyncram_component
+|UNI_Projektas|wizard_ram:wizard_ram_1|altsyncram:altsyncram_component
 wren_a => altsyncram_i0d1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -3840,7 +3840,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Uni_Projektas|wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated
+|UNI_Projektas|wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -3939,7 +3939,7 @@ wren_a => ram_block1a6.PORTAWE
 wren_a => ram_block1a7.PORTAWE
 
 
-|Uni_Projektas|Clock_divider:clock_divider1
+|UNI_Projektas|Clock_divider:clock_divider1
 CLK => clock_out.CLK
 CLK => counter[0].CLK
 CLK => counter[1].CLK
@@ -3975,7 +3975,7 @@ Prescaler[7] => half_clock[6].DATAIN
 CLK_OUT <= clock_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Uni_Projektas|Correlation_function:corr_long
+|UNI_Projektas|Correlation_function:corr_long
 EN => first_part.OUTPUTSELECT
 EN => output_int.OUTPUTSELECT
 EN => output_int.OUTPUTSELECT
@@ -4904,7 +4904,7 @@ output_value[18] <= output_int[18].DB_MAX_OUTPUT_PORT_TYPE
 output_value[19] <= output_int[19].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Uni_Projektas|big_ram_wizard:ram1
+|UNI_Projektas|big_ram_wizard:ram1
 address_a[0] => altsyncram:altsyncram_component.address_a[0]
 address_a[1] => altsyncram:altsyncram_component.address_a[1]
 address_a[2] => altsyncram:altsyncram_component.address_a[2]
@@ -5428,7 +5428,7 @@ q_b[126] <= altsyncram:altsyncram_component.q_b[126]
 q_b[127] <= altsyncram:altsyncram_component.q_b[127]
 
 
-|Uni_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component
+|UNI_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component
 wren_a => altsyncram_hf52:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => altsyncram_hf52:auto_generated.wren_b
@@ -5968,7 +5968,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Uni_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated
+|UNI_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -7635,7 +7635,7 @@ wren_b => ram_block1a126.PORTBRE
 wren_b => ram_block1a127.PORTBRE
 
 
-|Uni_Projektas|big_ram_wizard:ram2
+|UNI_Projektas|big_ram_wizard:ram2
 address_a[0] => altsyncram:altsyncram_component.address_a[0]
 address_a[1] => altsyncram:altsyncram_component.address_a[1]
 address_a[2] => altsyncram:altsyncram_component.address_a[2]
@@ -8159,7 +8159,7 @@ q_b[126] <= altsyncram:altsyncram_component.q_b[126]
 q_b[127] <= altsyncram:altsyncram_component.q_b[127]
 
 
-|Uni_Projektas|big_ram_wizard:ram2|altsyncram:altsyncram_component
+|UNI_Projektas|big_ram_wizard:ram2|altsyncram:altsyncram_component
 wren_a => altsyncram_hf52:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => altsyncram_hf52:auto_generated.wren_b
@@ -8699,7 +8699,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Uni_Projektas|big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated
+|UNI_Projektas|big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR

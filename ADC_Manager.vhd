@@ -10,7 +10,7 @@ entity ADC_Manager is
 		SIGNAL_BITS: integer := 8;
 		CONV_BITS: integer := 20;
 		SIGNAL_BUF_LEN: integer := 50;
-		PREAMBULE_FUNC_LEN: integer := 50; --91 87 29 2 basic --Su 2 ramais  95 90 32 3 --Su sumazinta koreliacija 36 24 22 3
+		PREAMBULE_FUNC_LEN: integer := 50; --91 87 29 2 basic --Su 2 ramais  95 90 32 3 --Su sumazinta koreliacija 58 38 37 3
 		BITS_FUNC_LEN: integer := 20;
 		MAX_DATA_COUNTS : integer := 3;
 		BITS_PER_DATA_COUNT : integer := 2;
