@@ -27,7 +27,8 @@ component ADC_Manager is
 
 	c_long_value_in : in std_logic_vector(20-1 downto 0) := (others => '0');
 	c_long_func_input_out : out double_array(0 to 50-1) := (others => (others => '0'));
-
+	c_en : out std_logic := '0';
+	
 	SYNC: in std_logic
 	);
 end component;
@@ -102,6 +103,7 @@ component Correlation_function is
 		function_length : integer := 50
 	);
 	port(
+		EN: in std_logic := '0';
 		CLK: in std_logic;
 		input_function : in double_array(0 to function_length - 1);
 		input_adc_values: in std_logic_vector(400-1 downto 0);
@@ -115,6 +117,7 @@ signal func_ram_en : std_logic := '0';
 signal func_ram_out : std_logic_vector(7 downto 0);
 
 --Correlation signals
+signal c_en : std_logic := '0';
 signal c_long_value : std_logic_vector(20-1 downto 0) := (others => '0');
 signal c_long_func_input : double_array(0 to 50-1) := (others => (others => '0'));
 signal adc_buffer : double_array(0 to 50-1) := (others => (others => '0'));
@@ -152,10 +155,11 @@ adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => add
 
 
 ADC_Manager1 : ADC_Manager port map(CLK => CLK, DATA_OUT => RECEIVED_CODE, RAM_DATA_BUS => func_ram_out, RAM_ADDRESS_BUS => func_ram_address_bus, SYNC => sync_clk,
-												c_long_value_in => c_long_value, c_long_func_input_out => c_long_func_input);
+												c_long_value_in => c_long_value, c_long_func_input_out => c_long_func_input,
+												c_en => c_en);
 wizard_ram_1 : wizard_ram port map(address => func_ram_address_bus, clock => CLK, data => "00000000", wren => '0', q => func_ram_out);
 clock_divider1 : clock_divider port map(CLK => CLK, Prescaler => "00000101", CLK_OUT => sync_clk);
-corr_long : Correlation_function generic map(function_length => 50) port map(CLK => CLK, input_function => c_long_func_input, output_value => c_long_value, 
+corr_long : Correlation_function generic map(function_length => 50) port map(EN => c_en, CLK => CLK, input_function => c_long_func_input, output_value => c_long_value, 
 											input_adc_values => input_adc_values);
 
 ram1 : big_ram_wizard port map(clock => CLK, address_a => address_a_1, address_b => address_b_1, data_a => data_a_1,

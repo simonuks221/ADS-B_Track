@@ -27,6 +27,7 @@ entity ADC_Manager is
 
 		c_long_value_in : in std_logic_vector(20-1 downto 0) := (others => '0');
 		c_long_func_input_out : out double_array(0 to 50-1) := (others => (others => '0'));
+		c_en : out std_logic := '0';
 
 		SYNC: in std_logic
 );
@@ -81,13 +82,15 @@ signal data_done : std_logic := '0';
 signal readDataFromRam : std_logic := '1';
 
 --Correlation inputs
-signal c_short_func_input_index : integer range 0 to 5 := 0;
+signal c_short_func_input_index : integer range 0 to 9 := 0;
 signal check_corr : std_logic := '0';
 
 begin
 DATA_OUT <= data_buffer;
 c_long_value <= c_long_value_in;
 c_long_func_input_out <= c_long_func_input;
+
+c_en <= '1' when preambule_found = '0' or check_corr = '1' else '0';
 
 --Processes
 --Sync signal 10MHz process
@@ -137,37 +140,29 @@ begin
 						if(check_corr = '1') then
 							case(c_short_func_input_index) is
 								when 0 =>
-									--c_short_func_input <= c_01_func;
-									--c_short_func_input(0 to 10-1) <= c_0_func;
-									--c_short_func_input(10 to 20-1) <= c_1_func;
 									c_long_func_input(0 to 10-1) <= c_0_func;
 									c_long_func_input(10 to 20-1) <= c_1_func;
 								when 1 =>
-									c_10_value <=  to_integer(unsigned(c_long_value));
-									--c_short_func_input <= c_11_func;
-									--c_short_func_input(0 to 10-1) <= c_1_func;
-									--c_short_func_input(10 to 20-1) <= c_1_func;
 									c_long_func_input(0 to 10-1) <= c_1_func;
 									c_long_func_input(10 to 20-1) <= c_1_func;
 								when 2 =>
 									c_01_value <=  to_integer(unsigned(c_long_value));
-									--c_short_func_input <= c_00_func;
-									--c_short_func_input(0 to 10-1) <= c_0_func;
-									--c_short_func_input(10 to 20-1) <= c_0_func;
-									c_long_func_input(0 to 10-1) <= c_0_func;
-									c_long_func_input(10 to 20-1) <= c_0_func;
 								when 3 =>
-									c_11_value <=  to_integer(unsigned(c_long_value));
-									--c_short_func_input <= c_10_func;
-									--c_short_func_input(0 to 10-1) <= c_1_func;
-									--c_short_func_input(10 to 20-1) <= c_0_func;
 									c_long_func_input(0 to 10-1) <= c_1_func;
 									c_long_func_input(10 to 20-1) <= c_0_func;
 								when 4 =>
-									c_00_value <=  to_integer(unsigned(c_long_value));
-									--c_short_func_input <= c_10_func;
+									c_11_value <=  to_integer(unsigned(c_long_value));
 								when 5 =>
+									c_long_func_input(0 to 10-1) <= c_0_func;
+									c_long_func_input(10 to 20-1) <= c_0_func;
+								when 6 =>
+									c_10_value <=  to_integer(unsigned(c_long_value));
+								when 8 =>
+									c_00_value <=  to_integer(unsigned(c_long_value));
+								when 9 =>
 									check_corr <= '0';
+									c_long_func_input(0 to 10-1) <= c_0_func;
+									c_long_func_input(10 to 20-1) <= c_1_func;
 									c_short_func_input_index <= 0;
 									if(c_01_value > c_10_value and c_01_value > c_00_value and c_01_value > c_11_value) then
 										if(c_01_value > BITS_FUNC_THRESHOLD) then --Threshold value
@@ -189,7 +184,7 @@ begin
 								when others =>
 									
 							end case;
-							if(c_short_func_input_index = 5) then
+							if(c_short_func_input_index = 9) then
 								c_short_func_input_index <= 0;
 							else
 								c_short_func_input_index <= c_short_func_input_index + 1;
@@ -197,10 +192,13 @@ begin
 						else --Check_corr = '0'
 							if(counter = BITS_FUNC_LEN-1) then
 								check_corr <= '1';
+								c_long_func_input(0 to 10-1) <= c_0_func;
+								c_long_func_input(10 to 20-1) <= c_1_func;
 							end if;
 						end if;
 					else --Preambule delay not done
-						
+						--c_long_func_input(0 to 10-1) <= c_1_func;
+						--c_long_func_input(10 to 20-1) <= c_1_func;
 					end if;
 				else --Preambule not found
 					c_long_func_input <= c_preamb_func;
@@ -210,8 +208,8 @@ begin
 						--c_short_func_input(0 to 10-1) <= c_1_func;
 						--c_short_func_input(10 to 20-1) <= c_0_func;
 						c_long_func_input <= (others => (others => '0'));
-						c_long_func_input(0 to 10-1) <= c_1_func;
-						c_long_func_input(10 to 20-1) <= c_0_func;
+						--c_long_func_input(0 to 10-1) <= c_0_func;
+						--c_long_func_input(10 to 20-1) <= c_1_func;
 						--c_short_func_input <= c_10_func;
 					end if;
 				end if;

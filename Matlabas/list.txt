@@ -1,9 +1,5 @@
-         ps       /uni_projektas_tb/arrIndex  /uni_projektas_tb/projektas/ADC_Manager1/c_11_value         
-          delta             /uni_projektas_tb/adc_out                                                     
-       /uni_projektas_tb/projektas/ADC_Manager1/c_00_value                                                
-            /uni_projektas_tb/projektas/ADC_Manager1/c_01_value                                           
-                 /uni_projektas_tb/projektas/ADC_Manager1/c_10_value                                      
-          0  +0                            0 UUUUUUUU    0    0    0                            0 
+                                     
+          0  +0                            0 00000000    0    0    0                            0 
       10000  +4                            0 00000000    0    0    0                            0 
    10050000  +4                            1 00000000    0    0    0                            0 
    10150000  +4                            2 00000000    0    0    0                            0 
