@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
+
+entity UART_TX is
+generic(
+	integer baud_rate := 9600;
+);
+port(
+	CLK: in std_logic
+);
+end entity;
+
+architecture arc of UART_TX is
+
+
+begin
+
+
+end architecture;
