@@ -9,9 +9,9 @@ generic(
 	baud_rate : integer := 9600
 );
 port(
-	--CLK: in std_logic;
-	SEND_DATA_IN: inout std_logic_vector(7 downto 0) := "00000000";
-	SEND_DATA_IN_REQ: inout std_logic := '0';
+	CLK: in std_logic;
+	SEND_DATA_IN: in std_logic_vector(7 downto 0) := "00000000";
+	SEND_DATA_IN_REQ: in std_logic := '0';
 	TX : out std_logic := '1'
 );
 end entity;
@@ -21,7 +21,7 @@ architecture arc of UART_Controller is
 component Clock_divider is
 	port(
 	CLK: in std_logic;
-	Prescaler : in std_logic_vector(7 downto 0);
+	Prescaler : in std_logic_vector(15 downto 0);
 
 	CLK_OUT: out std_logic
 	);
@@ -60,7 +60,6 @@ signal next_state : state := idle;
 
 signal UART_CLK : std_logic := '0';
 signal START_SEND_DATA : std_Logic := '0';
-signal CLK : std_logic := '0';
 signal TX_BUSY : std_logic;
 signal SEND_DATA_OUT : std_logic_vector(7 downto 0) := (others => '0');
 signal fifo_empty : std_logic;
@@ -68,7 +67,7 @@ signal fifo_read_req : std_Logic := '0';
 
 begin
 
-uart_clk_divider : Clock_divider port map(CLK => CLK, Prescaler => std_logic_vector(to_unsigned(20, 8)), CLK_OUT => UART_CLK);
+uart_clk_divider : Clock_divider port map(CLK => CLK, Prescaler => std_logic_vector(to_unsigned(baud_rate, 16)), CLK_OUT => UART_CLK);
 
 uart_tx_1 : UART_TX port map(CLk => CLK, UART_CLK => UART_CLK, SEND_DATA => SEND_DATA_OUT, START_SEND_DATA => START_SEND_DATA, TX => TX,
 				TX_BUSY => TX_BUSY);
@@ -129,23 +128,23 @@ end process;
 
 
 
-CLK <= not CLK after 0.01us; --50MHz
-process
-begin
-		wait until rising_edge(CLK);
-		SEND_DATA_IN <= "00000111";
-		SEND_DATA_IN_REQ <= '1';
-		wait until rising_edge(CLK);
-		SEND_DATA_IN_REQ <= '0';
-		
-		wait for 0.5us;
-		wait until rising_edge(CLK);
-		SEND_DATA_IN <= "10101010";
-		SEND_DATA_IN_REQ <= '1';
-		wait until rising_edge(CLK);
-		SEND_DATA_IN_REQ <= '0';
+--CLK <= not CLK after 0.01us; --50MHz
+--process
+--begin
+--		wait until rising_edge(CLK);
+--		SEND_DATA_IN <= "00000111";
+--		SEND_DATA_IN_REQ <= '1';
+--		wait until rising_edge(CLK);
+--		SEND_DATA_IN_REQ <= '0';
+--		
+--		wait for 0.5us;
+--		wait until rising_edge(CLK);
+--		SEND_DATA_IN <= "10101010";
+--		SEND_DATA_IN_REQ <= '1';
+--		wait until rising_edge(CLK);
+--		SEND_DATA_IN_REQ <= '0';
 		--START_SEND_DATA <= '1';
-		wait;
-end process;
+--		wait;
+--end process;
 				
 end architecture;

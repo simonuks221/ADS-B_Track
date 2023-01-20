@@ -43,6 +43,8 @@ SIGNAL CLK : STD_LOGIC := '0';
 SIGNAL DATA_OUT : STD_LOGIC_VECTOR(5 DOWNTO 0);
 SIGNAL SYNC : STD_LOGIC;
 signal arrIndex : integer := 0;
+SIGNAL UART_TX: std_logic := '0';
+SIGNAL UART_RX: std_logic := '0';
 
 --Functions
 --Read from file
@@ -69,7 +71,9 @@ COMPONENT UNI_Projektas
 	ADC_IN : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 	CLK : IN STD_LOGIC;
 	DATA_OUT : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
-	SYNC : OUT STD_LOGIC
+	SYNC : OUT STD_LOGIC;
+	UART_TX: out std_logic;
+	UART_RX: in std_logic := 'Z'
 	);
 END COMPONENT;
 BEGIN
@@ -79,7 +83,9 @@ i1 : UNI_Projektas
 	ADC_IN => ADC_IN,
 	CLK => CLK,
 	DATA_OUT => DATA_OUT,
-	SYNC => SYNC
+	SYNC => SYNC,
+	UART_RX => UART_RX,
+	UART_TX => UART_TX
 );
 	
 CLK <= not CLK after 0.01us; --50MHz

@@ -21,6 +21,7 @@ entity ADC_Manager is
 	port(
 		CLK : in std_logic;
 		DATA_OUT : out std_logic_vector(6-1 downto 0);
+		DATA_DONE : out std_logic := '0';
 
 		RAM_DATA_BUS : in std_logic_vector(7 downto 0);
 		RAM_ADDRESS_BUS : out std_logic_vector(7 downto 0);
@@ -78,7 +79,7 @@ signal ram_counter: integer := 0;
 signal preambule_delay_done : std_logic := '0';
 signal data_buffer : std_logic_vector(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-1 downto 0) := (others => '0');
 signal data_counts : integer := 0;
-signal data_done : std_logic := '0';
+signal data_end : std_logic := '0';
 signal readDataFromRam : std_logic := '1';
 
 --Correlation inputs
@@ -97,7 +98,7 @@ c_en <= '1' when preambule_found = '0' or check_corr = '1' else '0';
 process(SYNC)
 begin
 	if(rising_edge(SYNC)) then
-		if(data_done = '0') then
+		if(data_end = '0') then
 			if(readDataFromRam = '0') then
 				--Not reading from ram
 				--Shift ADC buffer and add new voltage value
@@ -110,7 +111,8 @@ begin
 							--Add to tracking of found bits number
 							data_counts <= data_counts + 1;
 							if(data_counts = MAX_DATA_COUNTS-1) then
-								data_done <= '1';
+								data_end <= '1';
+								DATA_DONE <= '1';
 							end if;
 						else
 							counter <= counter + 1;
@@ -125,6 +127,9 @@ begin
 					end if;
 				end if;
 			end if;
+		else
+			--Data_over
+			--DATA_DONE <= '0';
 		end if;
 	end if;
 end process;
@@ -133,7 +138,7 @@ end process;
 process(CLK)
 begin
 	if(rising_edge(CLK)) then
-		if(data_done = '0' or data_done = '1') then
+		if(data_end = '0' or data_end = '1') then
 			if(readDataFromRam = '0') then
 				if(preambule_found = '1') then
 					if(preambule_delay_done = '1') then

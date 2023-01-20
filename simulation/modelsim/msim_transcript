@@ -49,6 +49,31 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity ADC_ram_shifter
 # -- Compiling architecture arc of ADC_ram_shifter
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity UART_Controller
+# -- Compiling architecture arc of UART_Controller
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity UART_TX
+# -- Compiling architecture arc of UART_TX
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity UART_FIFO_wizard
+# -- Compiling architecture SYN of uart_fifo_wizard
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -88,8 +113,8 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity UNI_Projektas_vhd_tst
 # -- Compiling architecture UNI_Projektas_arch of UNI_Projektas_vhd_tst
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/UNI_Projektas.vht(85): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/UNI_Projektas.vht(90): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/UNI_Projektas.vht(91): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/UNI_Projektas.vht(96): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  UNI_Projektas
 # vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps UNI_Projektas 
@@ -111,16 +136,20 @@
 # Loading work.clock_divider(arc)
 # Loading work.correlation_function(arc1)
 # Loading work.big_ram_wizard(syn)
+# Loading work.uart_controller(arc)
+# Loading work.uart_tx(arc)
+# Loading work.uart_fifo_wizard(syn)
+# Loading altera_mf.scfifo(behavior)
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 12244
 # 
-#           Attempting to use alternate WLF file "./wlftf1a84t".
+#           Attempting to use alternate WLF file "./wlftwvsg3n".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftf1a84t
+#           Using alternate file: ./wlftwvsg3n
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -131,1028 +160,317 @@
 #    Time: 0 ps  Iteration: 0  Instance: /uni_projektas/ram2/altsyncram_component
 # ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
 #    Time: 0 ps  Iteration: 0  Instance: /uni_projektas/ram1/altsyncram_component
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-vsim work.uart_controller
-# vsim work.uart_controller 
+vsim work.uni_projektas_vhd_tst
+# vsim work.uni_projektas_vhd_tst 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
 # Loading ieee.std_logic_textio(body)
-# Loading work.uart_controller(arc)
-# Loading work.clock_divider(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
+# Loading work.uni_projektas_vhd_tst(uni_projektas_arch)
+# Loading work.corr_package
+# Loading work.uni_projektas(arc)
+# Loading work.adc_ram_shifter(arc)
+# Loading work.adc_manager(arc)
+# Loading work.wizard_ram(syn)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
 # Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.clock_divider(arc)
+# Loading work.correlation_function(arc1)
+# Loading work.big_ram_wizard(syn)
+# Loading work.uart_controller(arc)
+# Loading work.uart_tx(arc)
+# Loading work.uart_fifo_wizard(syn)
 # Loading altera_mf.scfifo(behavior)
-add wave -position end  sim:/uart_controller/CLK
-add wave -position end  sim:/uart_controller/SEND_DATA_IN
-add wave -position end  sim:/uart_controller/SEND_DATA_IN_REQ
-add wave -position end  sim:/uart_controller/SEND_DATA_OUT
-add wave -position end  sim:/uart_controller/SEND_DONE
-add wave -position end  sim:/uart_controller/START_SEND_DATA
-add wave -position end  sim:/uart_controller/TX
-add wave -position end  sim:/uart_controller/TX_BUSY
-add wave -position end  sim:/uart_controller/UART_CLK
-add wave -position end  sim:/uart_controller/baud_rate
-add wave -position end  sim:/uart_controller/fifo_empty
-add wave -position end  sim:/uart_controller/fifo_read_req
+add wave -position end  sim:/uni_projektas_vhd_tst/ADC_IN
+add wave -position end  sim:/uni_projektas_vhd_tst/CLK
+add wave -position end  sim:/uni_projektas_vhd_tst/DATA_OUT
+add wave -position end  sim:/uni_projektas_vhd_tst/SYNC
+add wave -position end  sim:/uni_projektas_vhd_tst/UART_RX
+add wave -position end  sim:/uni_projektas_vhd_tst/UART_TX
+add wave -position end  sim:/uni_projektas_vhd_tst/VOLTAGE_DATA_LEN
+add wave -position end  sim:/uni_projektas_vhd_tst/adc_buffer
+add wave -position end  sim:/uni_projektas_vhd_tst/arrIndex
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 12244
 # 
-#           Attempting to use alternate WLF file "./wlft73df7y".
+#           Attempting to use alternate WLF file "./wlftr4rh1b".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft73df7y
+#           Using alternate file: ./wlftr4rh1b
 # 
 run
-run
-# WARNING: No extended dataflow license exists
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(30): (vcom-1294) Declaration with designator "data" already exists in this region.
-# ** =====> Prior declaration of "data" is at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(25).
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/ram2/altsyncram_component
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/ram1/altsyncram_component
+# ** Fatal: (vsim-3421) Value 4800 for half_clock is out of range 0 to 4095.
+#    Time: 10 ns  Iteration: 0  Process: /uni_projektas_vhd_tst/i1/UART_Controller_1/uart_clk_divider/line__24 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd
+# Fatal error in Process line__24 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd line 27
 # 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(40): Signal "data" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type state.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(40): Choice in CASE statement alternative must be locally static.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(75): Signal "data" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type state.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(77): Signal "data" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type state.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(77): Choice in CASE statement alternative must be locally static.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(97): VHDL Compiler exiting
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_fifo_wizard(syn)
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(30): (vcom-1294) Declaration with designator "data" already exists in this region.
-# ** =====> Prior declaration of "data" is at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(25).
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd 27 Process line__24
 # 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(40): Signal "data" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type state.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(40): Choice in CASE statement alternative must be locally static.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(75): Signal "data" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type state.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(77): Signal "data" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type state.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(77): Choice in CASE statement alternative must be locally static.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(97): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
+# -- Compiling entity Clock_divider
+# -- Compiling architecture arc of Clock_divider
 restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
+# Loading work.clock_divider(arc)
 run
-add wave -position end  sim:/uart_controller/uart_tx_1/SEND_DATA
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-restart
-# Loading work.uart_controller(arc)
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(101): near "if": syntax error
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(105): near "rising_edge": expecting ';'
-# ** Warning: [2] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(109): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(111): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(105): near "rising_edge": expecting ';'
-# ** Warning: [2] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(109): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(111): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(105): near "rising_edge": expecting ';'
-# ** Warning: [2] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(109): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(111): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(105): near "rising_edge": expecting ';'
-# ** Warning: [2] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(109): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(111): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(105): near "rising_edge": expecting ';'
-# ** Warning: [2] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(109): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(111): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(105): near "rising_edge": expecting ';'
-# ** Warning: [2] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(109): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(111): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(105): near "rising_edge": expecting ';'
-# ** Warning: [2] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(109): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(111): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(105): No feasible entries for subprogram "rising_edge".
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(111): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-restart
-# Loading work.uart_controller(arc)
-run
-# Break key hit 
-# Break in Process line__101 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd line 110
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(102): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
-run
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(109): near "if": expecting PROCESS
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(109): near "if": expecting PROCESS
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break in Process line__101 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd line 111
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
-run
-add wave -position end  sim:/uart_controller/uart_tx_1/tx_curr_state
-run
-add wave -position end  sim:/uart_controller/uart_tx_1/data_send
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/ram2/altsyncram_component
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/ram1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/corr_long
+add wave -position end  sim:/uni_projektas_vhd_tst/i1/ADC_Manager1/DATA_DONE
 restart
 run
-run
-add wave -position end  sim:/uart_controller/uart_fifo/q
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/ram2/altsyncram_component
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/ram1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/corr_long
+add wave -position end  sim:/uni_projektas_vhd_tst/i1/UART_Controller_1/uart_tx_1/tx_curr_state
 restart
 run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/ram2/altsyncram_component
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/ram1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/corr_long
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(99): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
+# -- Loading package corr_package
+# -- Compiling entity ADC_Manager
+# -- Compiling architecture arc of ADC_Manager
 restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
+# Loading work.adc_manager(arc)
 run
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(98): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
-run
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(128): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
-run
-run
-add wave -position end  sim:/uart_controller/CLK
-add wave -position end  sim:/uart_controller/SEND_DATA_IN
-add wave -position end  sim:/uart_controller/SEND_DATA_IN_REQ
-add wave -position end  sim:/uart_controller/SEND_DATA_OUT
-add wave -position end  sim:/uart_controller/SEND_DONE
-add wave -position end  sim:/uart_controller/START_SEND_DATA
-add wave -position end  sim:/uart_controller/TX
-add wave -position end  sim:/uart_controller/TX_BUSY
-add wave -position end  sim:/uart_controller/UART_CLK
-add wave -position end  sim:/uart_controller/baud_rate
-add wave -position end  sim:/uart_controller/curr_state
-add wave -position end  sim:/uart_controller/fifo_empty
-add wave -position end  sim:/uart_controller/fifo_read_req
-add wave -position end  sim:/uart_controller/next_state
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/ram2/altsyncram_component
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/ram1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/corr_long
+add wave -position end  sim:/uni_projektas_vhd_tst/i1/UART_Controller_1/SEND_DATA_IN_REQ
+add wave -position end  sim:/uni_projektas_vhd_tst/i1/UART_Controller_1/curr_state
 restart
 run
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(128): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(137): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
-run
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(128): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(137): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
-run
-add wave -position end  sim:/uart_controller/uart_tx_1/data_send
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(128): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(137): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(128): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(137): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(128): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(137): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/ram2/altsyncram_component
+# ** Warning: Warning: READ_DURING_WRITE_MODE_MIXED_PORTS is assumed as OLD_DATA
+#    Time: 0 ps  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/ram1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 20 ns  Iteration: 1  Instance: /uni_projektas_vhd_tst/i1/wizard_ram_1/altsyncram_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /uni_projektas_vhd_tst/i1/corr_long
 run
 run
 run
 run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(113): (vcom-1136) Unknown identifier "reading_fifo".
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(117): Enumeration literal "reading_fifo2" is type state; expecting type std.STANDARD.BOOLEAN.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(117): Illegal sequential statement.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(117): near "=>": expecting ';'
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(133): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(142): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(110): (vcom-1339) Case statement choices cover only 3 out of 4 cases.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(152): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(113): (vcom-1136) Unknown identifier "reading_fifo".
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(117): Enumeration literal "reading_fifo2" is type state; expecting type std.STANDARD.BOOLEAN.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(117): Illegal sequential statement.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(117): near "=>": expecting ';'
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(133): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(142): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(110): (vcom-1339) Case statement choices cover only 3 out of 4 cases.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(152): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(117): Enumeration literal "reading_fifo2" is type state; expecting type std.STANDARD.BOOLEAN.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(117): Illegal sequential statement.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(117): near "=>": expecting ';'
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(133): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(142): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(110): (vcom-1339) Case statement choices cover only 3 out of 4 cases.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(152): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(118): Enumeration literal "reading_fifo2" is type state; expecting type std.STANDARD.BOOLEAN.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(118): Illegal sequential statement.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(118): near "=>": expecting ';'
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(134): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(143): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(110): (vcom-1339) Case statement choices cover only 3 out of 4 cases.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(153): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(120): near "end": expecting ';'
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(120): near "end": expecting ';'
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(133): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(142): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
 run
 run
 run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(133): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(142): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(29): Nonresolved signal 'data_index' has multiple sources.
-#   Drivers:
-#     C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(34):Process line__34
-#        Driven at:
-#           C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(40)
-#     C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(60):Process line__60
-#        Driven at:
-#           C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(85)
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd(100): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(133): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(142): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
 run
 run
 run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(133): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd(142): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-restart
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run
 run
 run

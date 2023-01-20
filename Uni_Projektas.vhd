@@ -10,7 +10,9 @@ port(
 CLK : in std_logic;
 ADC_IN : in std_logic_vector(7 downto 0);
 DATA_OUT : out std_logic_vector(6-1 downto 0);
-SYNC : out std_logic
+SYNC : out std_logic;
+UART_TX: out std_logic;
+UART_RX: in std_logic := 'Z'
 );
 end entity;
 
@@ -21,6 +23,7 @@ component ADC_Manager is
 	port(
 	CLK : in std_logic;
 	DATA_OUT : out std_logic_vector(6-1 downto 0);
+	DATA_DONE : out std_logic := '0';
 
 	RAM_DATA_BUS : in std_logic_vector(7 downto 0);
 	RAM_ADDRESS_BUS : out std_logic_vector(7 downto 0);
@@ -36,7 +39,7 @@ end component;
 component Clock_divider is
 	port(
 	CLK: in std_logic;
-	Prescaler : in std_logic_vector(7 downto 0);
+	Prescaler : in std_logic_vector(15 downto 0);
 
 	CLK_OUT: out std_logic
 	);
@@ -97,7 +100,6 @@ component ADC_ram_shifter is
 	);
 end component;
 
---Components
 component Correlation_function is
 	generic(
 		function_length : integer := 50
@@ -109,6 +111,18 @@ component Correlation_function is
 		input_adc_values: in std_logic_vector(400-1 downto 0);
 		output_value : out std_logic_vector(19 downto 0)
 	);
+end component;
+
+component UART_Controller is
+generic(
+	baud_rate : integer := 9600
+);
+port(
+	CLK: in std_logic;
+	SEND_DATA_IN: in std_logic_vector(7 downto 0) := (others => '0');
+	SEND_DATA_IN_REQ: in std_logic := '0';
+	TX : out std_logic := '1'
+);
 end component;
 
 --Function ram signals
@@ -146,6 +160,11 @@ signal input_adc_values : std_logic_vector(400-1 downto 0);
 signal sync_clk : std_logic := '0';
 
 signal RECEIVED_CODE : std_logic_vector(5 downto 0);
+
+--UART
+signal UART_CONTROLLER_DATA_IN : std_logic_vector(7 downto 0) := (others => '0');
+signal UART_CONTROLLER_DATA_REQ : std_Logic := '0';
+
 begin
 adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => address_a_1, address_a_2 => address_a_2, address_b_1 => address_b_1,
 	address_b_2 => address_b_2, data_a_1 => data_a_1, data_a_2 => data_a_2, data_b_1 => data_b_1, data_b_2 => data_b_2,
@@ -156,9 +175,9 @@ adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => add
 
 ADC_Manager1 : ADC_Manager port map(CLK => CLK, DATA_OUT => RECEIVED_CODE, RAM_DATA_BUS => func_ram_out, RAM_ADDRESS_BUS => func_ram_address_bus, SYNC => sync_clk,
 												c_long_value_in => c_long_value, c_long_func_input_out => c_long_func_input,
-												c_en => c_en);
+												c_en => c_en, DATA_DONE => UART_CONTROLLER_DATA_REQ);
 wizard_ram_1 : wizard_ram port map(address => func_ram_address_bus, clock => CLK, data => "00000000", wren => '0', q => func_ram_out);
-clock_divider1 : clock_divider port map(CLK => CLK, Prescaler => "00000101", CLK_OUT => sync_clk);
+clock_divider1 : clock_divider port map(CLK => CLK, Prescaler => std_Logic_vector(to_unsigned(5, 16)), CLK_OUT => sync_clk);
 corr_long : Correlation_function generic map(function_length => 50) port map(EN => c_en, CLK => CLK, input_function => c_long_func_input, output_value => c_long_value, 
 											input_adc_values => input_adc_values);
 
@@ -171,5 +190,12 @@ DATA_OUT <= RECEIVED_CODE;
 SYNC <= sync_clk;
 
 input_adc_values <= q_b_2(15 downto 0)& q_a_2 & q_b_1 & q_a_1;
+
+UART_CONTROLLER_DATA_IN <= "00" & RECEIVED_CODE;
+
+UART_Controller_1 : UART_Controller port map(CLK => CLK,
+	SEND_DATA_IN => UART_CONTROLLER_DATA_IN,
+	SEND_DATA_IN_REQ => UART_CONTROLLER_DATA_REQ,
+	TX => UART_TX);
 
 end architecture;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Uni_Projektas
-Fri Jan 20 15:13:39 2023
+Fri Jan 20 15:46:53 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,49 +16,60 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis DSP Block Usage Summary
  10. Analysis & Synthesis IP Cores Summary
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated
- 16. Source assignments for big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated
- 17. Source assignments for big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated
- 18. Parameter Settings for User Entity Instance: ADC_Manager:ADC_Manager1
- 19. Parameter Settings for User Entity Instance: wizard_ram:wizard_ram_1|altsyncram:altsyncram_component
- 20. Parameter Settings for User Entity Instance: Correlation_function:corr_long
- 21. Parameter Settings for User Entity Instance: big_ram_wizard:ram1|altsyncram:altsyncram_component
- 22. Parameter Settings for User Entity Instance: big_ram_wizard:ram2|altsyncram:altsyncram_component
- 23. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult22
- 24. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult8
- 25. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult21
- 26. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult20
- 27. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult19
- 28. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult18
- 29. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult24
- 30. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult23
- 31. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult15
- 32. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult14
- 33. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult13
- 34. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult17
- 35. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult16
- 36. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult4
- 37. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult7
- 38. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult12
- 39. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult11
- 40. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult10
- 41. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult9
- 42. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult6
- 43. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult5
- 44. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult1
- 45. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult0
- 46. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult3
- 47. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult2
- 48. altsyncram Parameter Settings by Entity Instance
- 49. lpm_mult Parameter Settings by Entity Instance
- 50. Port Connectivity Checks: "Clock_divider:clock_divider1"
- 51. Port Connectivity Checks: "wizard_ram:wizard_ram_1"
- 52. Elapsed Time Per Partition
- 53. Analysis & Synthesis Messages
+ 11. State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|next_state
+ 12. State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|curr_state
+ 13. State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state
+ 14. State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state
+ 15. Registers Removed During Synthesis
+ 16. General Register Statistics
+ 17. Inverted Register Statistics
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Source assignments for wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated
+ 20. Source assignments for big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated
+ 21. Source assignments for big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated
+ 22. Source assignments for UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2
+ 23. Parameter Settings for User Entity Instance: ADC_Manager:ADC_Manager1
+ 24. Parameter Settings for User Entity Instance: wizard_ram:wizard_ram_1|altsyncram:altsyncram_component
+ 25. Parameter Settings for User Entity Instance: Correlation_function:corr_long
+ 26. Parameter Settings for User Entity Instance: big_ram_wizard:ram1|altsyncram:altsyncram_component
+ 27. Parameter Settings for User Entity Instance: big_ram_wizard:ram2|altsyncram:altsyncram_component
+ 28. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1
+ 29. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_TX:uart_tx_1
+ 30. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component
+ 31. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult22
+ 32. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult8
+ 33. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult21
+ 34. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult20
+ 35. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult19
+ 36. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult18
+ 37. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult24
+ 38. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult23
+ 39. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult15
+ 40. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult14
+ 41. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult13
+ 42. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult17
+ 43. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult16
+ 44. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult4
+ 45. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult7
+ 46. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult12
+ 47. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult11
+ 48. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult10
+ 49. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult9
+ 50. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult6
+ 51. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult5
+ 52. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult1
+ 53. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult0
+ 54. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult3
+ 55. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult2
+ 56. altsyncram Parameter Settings by Entity Instance
+ 57. scfifo Parameter Settings by Entity Instance
+ 58. lpm_mult Parameter Settings by Entity Instance
+ 59. Port Connectivity Checks: "UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider"
+ 60. Port Connectivity Checks: "UART_Controller:UART_Controller_1"
+ 61. Port Connectivity Checks: "Clock_divider:clock_divider1"
+ 62. Port Connectivity Checks: "wizard_ram:wizard_ram_1"
+ 63. Elapsed Time Per Partition
+ 64. Analysis & Synthesis Messages
 
 
 
@@ -84,18 +95,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan 20 15:13:39 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 20 15:46:53 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 2,869                                           ;
-;     Total combinational functions  ; 1,736                                           ;
-;     Dedicated logic registers      ; 1,690                                           ;
-; Total registers                    ; 1690                                            ;
-; Total pins                         ; 16                                              ;
+; Total logic elements               ; 2,962                                           ;
+;     Total combinational functions  ; 1,811                                           ;
+;     Dedicated logic registers      ; 1,753                                           ;
+; Total registers                    ; 1753                                            ;
+; Total pins                         ; 18                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 4,088                                           ;
+; Total memory bits                  ; 4,216                                           ;
 ; Embedded Multiplier 9-bit elements ; 25                                              ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -211,6 +222,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Clock_divider.vhd                ; yes             ; User VHDL File                   ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd         ;         ;
 ; big_ram_wizard.vhd               ; yes             ; User Wizard-Generated File       ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd        ;         ;
 ; ADC_ram_shifter.vhd              ; yes             ; User VHDL File                   ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_ram_shifter.vhd       ;         ;
+; UART_Controller.vhd              ; yes             ; User VHDL File                   ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd       ;         ;
+; UART_TX.vhd                      ; yes             ; User VHDL File                   ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd               ;         ;
+; UART_FIFO_wizard.vhd             ; yes             ; User Wizard-Generated File       ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd      ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -222,6 +236,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
 ; db/altsyncram_i0d1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/altsyncram_i0d1.tdf    ;         ;
 ; db/altsyncram_hf52.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/altsyncram_hf52.tdf    ;         ;
+; scfifo.tdf                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/scfifo.tdf            ;         ;
+; a_regfifo.inc                    ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_regfifo.inc         ;         ;
+; a_dpfifo.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_dpfifo.inc          ;         ;
+; a_i2fifo.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_i2fifo.inc          ;         ;
+; a_fffifo.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_fffifo.inc          ;         ;
+; a_f2fifo.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_f2fifo.inc          ;         ;
+; db/scfifo_ka21.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/scfifo_ka21.tdf        ;         ;
+; db/a_dpfifo_rg21.tdf             ; yes             ; Auto-Generated Megafunction      ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/a_dpfifo_rg21.tdf      ;         ;
+; db/a_fefifo_76e.tdf              ; yes             ; Auto-Generated Megafunction      ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/a_fefifo_76e.tdf       ;         ;
+; db/cntr_pj7.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/cntr_pj7.tdf           ;         ;
+; db/dpram_st01.tdf                ; yes             ; Auto-Generated Megafunction      ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/dpram_st01.tdf         ;         ;
+; db/altsyncram_0sj1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/altsyncram_0sj1.tdf    ;         ;
+; db/cntr_djb.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/cntr_djb.tdf           ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc          ;         ;
@@ -236,114 +263,128 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 2,869 ;
+; Estimated Total logic elements              ; 2,962 ;
 ;                                             ;       ;
-; Total combinational functions               ; 1736  ;
+; Total combinational functions               ; 1811  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 384   ;
-;     -- 3 input functions                    ; 1157  ;
-;     -- <=2 input functions                  ; 195   ;
+;     -- 4 input functions                    ; 420   ;
+;     -- 3 input functions                    ; 1165  ;
+;     -- <=2 input functions                  ; 226   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1076  ;
-;     -- arithmetic mode                      ; 660   ;
+;     -- normal mode                          ; 1128  ;
+;     -- arithmetic mode                      ; 683   ;
 ;                                             ;       ;
-; Total registers                             ; 1690  ;
-;     -- Dedicated logic registers            ; 1690  ;
+; Total registers                             ; 1753  ;
+;     -- Dedicated logic registers            ; 1753  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 16    ;
-; Total memory bits                           ; 4088  ;
+; I/O pins                                    ; 18    ;
+; Total memory bits                           ; 4216  ;
 ; Embedded Multiplier 9-bit elements          ; 25    ;
 ; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 1376  ;
-; Total fan-out                               ; 11978 ;
+; Maximum fan-out                             ; 1429  ;
+; Total fan-out                               ; 12446 ;
 ; Average fan-out                             ; 3.19  ;
 +---------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                          ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                   ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+--------------+
-; |UNI_Projektas                            ; 1736 (1)          ; 1690 (0)     ; 4088        ; 25           ; 25      ; 0         ; 16   ; 0            ; |UNI_Projektas                                                                                        ; work         ;
-;    |ADC_Manager:ADC_Manager1|             ; 847 (847)         ; 1127 (1127)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                               ; work         ;
-;    |ADC_ram_shifter:adc_ram_shifter_1|    ; 0 (0)             ; 512 (512)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_ram_shifter:adc_ram_shifter_1                                                      ; work         ;
-;    |Clock_divider:clock_divider1|         ; 13 (13)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Clock_divider:clock_divider1                                                           ; work         ;
-;    |Correlation_function:corr_long|       ; 875 (875)         ; 41 (41)      ; 0           ; 25           ; 25      ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long                                                         ; work         ;
-;       |lpm_mult:Mult0|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult0                                          ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult0|mult_o5t:auto_generated                  ; work         ;
-;       |lpm_mult:Mult10|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult10                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult10|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult11|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult11                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult11|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult12|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult12                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult12|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult13|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult13                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult13|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult14|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult14                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult14|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult15|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult15                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult15|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult16|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult16                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult16|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult17|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult17                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult17|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult18|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult18                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult18|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult19|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult19                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult19|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult1|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult1                                          ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult1|mult_o5t:auto_generated                  ; work         ;
-;       |lpm_mult:Mult20|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult20                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult21|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult21                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult21|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult22|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult22                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult22|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult23|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult23                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult23|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult24|                   ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult24                                         ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult24|mult_o5t:auto_generated                 ; work         ;
-;       |lpm_mult:Mult2|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult2                                          ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult2|mult_o5t:auto_generated                  ; work         ;
-;       |lpm_mult:Mult3|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult3                                          ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult3|mult_o5t:auto_generated                  ; work         ;
-;       |lpm_mult:Mult4|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult4                                          ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult4|mult_o5t:auto_generated                  ; work         ;
-;       |lpm_mult:Mult5|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult5                                          ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult5|mult_o5t:auto_generated                  ; work         ;
-;       |lpm_mult:Mult6|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult6                                          ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult6|mult_o5t:auto_generated                  ; work         ;
-;       |lpm_mult:Mult7|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult7                                          ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult7|mult_o5t:auto_generated                  ; work         ;
-;       |lpm_mult:Mult8|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult8                                          ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult8|mult_o5t:auto_generated                  ; work         ;
-;       |lpm_mult:Mult9|                    ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult9                                          ; work         ;
-;          |mult_o5t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult9|mult_o5t:auto_generated                  ; work         ;
-;    |big_ram_wizard:ram1|                  ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram1                                                                    ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component                                    ; work         ;
-;          |altsyncram_hf52:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated     ; work         ;
-;    |big_ram_wizard:ram2|                  ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram2                                                                    ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram2|altsyncram:altsyncram_component                                    ; work         ;
-;          |altsyncram_hf52:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated     ; work         ;
-;    |wizard_ram:wizard_ram_1|              ; 0 (0)             ; 0 (0)        ; 2040        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|wizard_ram:wizard_ram_1                                                                ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 2040        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|wizard_ram:wizard_ram_1|altsyncram:altsyncram_component                                ; work         ;
-;          |altsyncram_i0d1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2040        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated ; work         ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                ; Library Name ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |UNI_Projektas                                     ; 1811 (1)          ; 1753 (0)     ; 4216        ; 25           ; 25      ; 0         ; 18   ; 0            ; |UNI_Projektas                                                                                                                                                                                     ; work         ;
+;    |ADC_Manager:ADC_Manager1|                      ; 848 (848)         ; 1128 (1128)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                                                                                                                            ; work         ;
+;    |ADC_ram_shifter:adc_ram_shifter_1|             ; 0 (0)             ; 512 (512)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_ram_shifter:adc_ram_shifter_1                                                                                                                                                   ; work         ;
+;    |Clock_divider:clock_divider1|                  ; 18 (18)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Clock_divider:clock_divider1                                                                                                                                                        ; work         ;
+;    |Correlation_function:corr_long|                ; 875 (875)         ; 41 (41)      ; 0           ; 25           ; 25      ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long                                                                                                                                                      ; work         ;
+;       |lpm_mult:Mult0|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult0                                                                                                                                       ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult0|mult_o5t:auto_generated                                                                                                               ; work         ;
+;       |lpm_mult:Mult10|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult10                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult10|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult11|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult11                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult11|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult12|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult12                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult12|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult13|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult13                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult13|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult14|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult14                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult14|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult15|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult15                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult15|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult16|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult16                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult16|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult17|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult17                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult17|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult18|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult18                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult18|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult19|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult19                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult19|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult1|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult1                                                                                                                                       ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult1|mult_o5t:auto_generated                                                                                                               ; work         ;
+;       |lpm_mult:Mult20|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult20                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult20|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult21|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult21                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult21|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult22|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult22                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult22|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult23|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult23                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult23|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult24|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult24                                                                                                                                      ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult24|mult_o5t:auto_generated                                                                                                              ; work         ;
+;       |lpm_mult:Mult2|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult2                                                                                                                                       ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult2|mult_o5t:auto_generated                                                                                                               ; work         ;
+;       |lpm_mult:Mult3|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult3                                                                                                                                       ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult3|mult_o5t:auto_generated                                                                                                               ; work         ;
+;       |lpm_mult:Mult4|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult4                                                                                                                                       ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult4|mult_o5t:auto_generated                                                                                                               ; work         ;
+;       |lpm_mult:Mult5|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult5                                                                                                                                       ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult5|mult_o5t:auto_generated                                                                                                               ; work         ;
+;       |lpm_mult:Mult6|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult6                                                                                                                                       ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult6|mult_o5t:auto_generated                                                                                                               ; work         ;
+;       |lpm_mult:Mult7|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult7                                                                                                                                       ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult7|mult_o5t:auto_generated                                                                                                               ; work         ;
+;       |lpm_mult:Mult8|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult8                                                                                                                                       ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult8|mult_o5t:auto_generated                                                                                                               ; work         ;
+;       |lpm_mult:Mult9|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult9                                                                                                                                       ; work         ;
+;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult9|mult_o5t:auto_generated                                                                                                               ; work         ;
+;    |UART_Controller:UART_Controller_1|             ; 69 (7)            ; 59 (8)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1                                                                                                                                                   ; work         ;
+;       |Clock_divider:uart_clk_divider|             ; 14 (14)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider                                                                                                                    ; work         ;
+;       |UART_FIFO_wizard:uart_fifo|                 ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo                                                                                                                        ; work         ;
+;          |scfifo:scfifo_component|                 ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component                                                                                                ; work         ;
+;             |scfifo_ka21:auto_generated|           ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated                                                                     ; work         ;
+;                |a_dpfifo_rg21:dpfifo|              ; 21 (2)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo                                                ; work         ;
+;                   |a_fefifo_76e:fifo_state|        ; 11 (7)            ; 6 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state                        ; work         ;
+;                      |cntr_pj7:count_usedw|        ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw   ; work         ;
+;                   |cntr_djb:rd_ptr_count|          ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:rd_ptr_count                          ; work         ;
+;                   |cntr_djb:wr_ptr|                ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:wr_ptr                                ; work         ;
+;                   |dpram_st01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram                             ; work         ;
+;                      |altsyncram_0sj1:altsyncram2| ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2 ; work         ;
+;       |UART_TX:uart_tx_1|                          ; 27 (27)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1                                                                                                                                 ; work         ;
+;    |big_ram_wizard:ram1|                           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram1                                                                                                                                                                 ; work         ;
+;       |altsyncram:altsyncram_component|            ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component                                                                                                                                 ; work         ;
+;          |altsyncram_hf52:auto_generated|          ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated                                                                                                  ; work         ;
+;    |big_ram_wizard:ram2|                           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram2                                                                                                                                                                 ; work         ;
+;       |altsyncram:altsyncram_component|            ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram2|altsyncram:altsyncram_component                                                                                                                                 ; work         ;
+;          |altsyncram_hf52:auto_generated|          ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated                                                                                                  ; work         ;
+;    |wizard_ram:wizard_ram_1|                       ; 0 (0)             ; 0 (0)        ; 2040        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|wizard_ram:wizard_ram_1                                                                                                                                                             ; work         ;
+;       |altsyncram:altsyncram_component|            ; 0 (0)             ; 0 (0)        ; 2040        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|wizard_ram:wizard_ram_1|altsyncram:altsyncram_component                                                                                                                             ; work         ;
+;          |altsyncram_i0d1:auto_generated|          ; 0 (0)             ; 0 (0)        ; 2040        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated                                                                                              ; work         ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                  ;
-+---------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+--------------------+
-; Name                                                                                              ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                ;
-+---------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+--------------------+
-; big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|ALTSYNCRAM     ; AUTO ; True Dual Port ; 8            ; 128          ; 8            ; 128          ; 1024 ; None               ;
-; big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|ALTSYNCRAM     ; AUTO ; True Dual Port ; 8            ; 128          ; 8            ; 128          ; 1024 ; None               ;
-; wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port    ; 255          ; 8            ; --           ; --           ; 2040 ; Conv_func_data.mif ;
-+---------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+--------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                 ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+--------------------+
+; Name                                                                                                                                                                                           ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+--------------------+
+; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 8            ; 16           ; 8            ; 128  ; None               ;
+; big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|ALTSYNCRAM                                                                                                  ; AUTO ; True Dual Port   ; 8            ; 128          ; 8            ; 128          ; 1024 ; None               ;
+; big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated|ALTSYNCRAM                                                                                                  ; AUTO ; True Dual Port   ; 8            ; 128          ; 8            ; 128          ; 1024 ; None               ;
+; wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated|ALTSYNCRAM                                                                                              ; AUTO ; Single Port      ; 255          ; 8            ; --           ; --           ; 2040 ; Conv_func_data.mif ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+--------------------+
 
 
 +-----------------------------------------------------+
@@ -364,30 +405,89 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                     ;
-+--------+--------------+---------+--------------+--------------+----------------------------------------+------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                        ; IP Include File                                                  ;
-+--------+--------------+---------+--------------+--------------+----------------------------------------+------------------------------------------------------------------+
-; Altera ; RAM: 2-PORT  ; 13.0    ; N/A          ; N/A          ; |UNI_Projektas|big_ram_wizard:ram1     ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd ;
-; Altera ; RAM: 2-PORT  ; 13.0    ; N/A          ; N/A          ; |UNI_Projektas|big_ram_wizard:ram2     ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd ;
-; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |UNI_Projektas|wizard_ram:wizard_ram_1 ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd     ;
-+--------+--------------+---------+--------------+--------------+----------------------------------------+------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                            ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------+--------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                             ; IP Include File                                                    ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------+--------------------------------------------------------------------+
+; Altera ; RAM: 2-PORT  ; 13.0    ; N/A          ; N/A          ; |UNI_Projektas|big_ram_wizard:ram1                                          ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd   ;
+; Altera ; RAM: 2-PORT  ; 13.0    ; N/A          ; N/A          ; |UNI_Projektas|big_ram_wizard:ram2                                          ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd   ;
+; Altera ; FIFO         ; 13.0    ; N/A          ; N/A          ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd ;
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |UNI_Projektas|wizard_ram:wizard_ram_1                                      ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd       ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------+--------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                       ;
-+-------------------------------------------------+----------------------------------------+
-; Register name                                   ; Reason for Removal                     ;
-+-------------------------------------------------+----------------------------------------+
-; Clock_divider:clock_divider1|half_clock[0,2..7] ; Stuck at GND due to stuck port data_in ;
-; ADC_ram_shifter:adc_ram_shifter_1|wren_b_2      ; Stuck at VCC due to stuck port data_in ;
-; ADC_ram_shifter:adc_ram_shifter_1|wren_a_2      ; Stuck at VCC due to stuck port data_in ;
-; ADC_ram_shifter:adc_ram_shifter_1|wren_b_1      ; Stuck at VCC due to stuck port data_in ;
-; ADC_ram_shifter:adc_ram_shifter_1|wren_a_1      ; Stuck at VCC due to stuck port data_in ;
-; Correlation_function:corr_long|temp_int[20..31] ; Lost fanout                            ;
-; Total Number of Removed Registers = 23          ;                                        ;
-+-------------------------------------------------+----------------------------------------+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|next_state                                               ;
++--------------------------+------------------------+--------------------------+--------------------------+-----------------+
+; Name                     ; next_state.transmiting ; next_state.reading_fifo2 ; next_state.reading_fifo1 ; next_state.idle ;
++--------------------------+------------------------+--------------------------+--------------------------+-----------------+
+; next_state.idle          ; 0                      ; 0                        ; 0                        ; 0               ;
+; next_state.reading_fifo1 ; 0                      ; 0                        ; 1                        ; 1               ;
+; next_state.reading_fifo2 ; 0                      ; 1                        ; 0                        ; 1               ;
+; next_state.transmiting   ; 1                      ; 0                        ; 0                        ; 1               ;
++--------------------------+------------------------+--------------------------+--------------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|curr_state                                               ;
++--------------------------+------------------------+--------------------------+--------------------------+-----------------+
+; Name                     ; curr_state.transmiting ; curr_state.reading_fifo2 ; curr_state.reading_fifo1 ; curr_state.idle ;
++--------------------------+------------------------+--------------------------+--------------------------+-----------------+
+; curr_state.idle          ; 0                      ; 0                        ; 0                        ; 0               ;
+; curr_state.reading_fifo1 ; 0                      ; 0                        ; 1                        ; 1               ;
+; curr_state.reading_fifo2 ; 0                      ; 1                        ; 0                        ; 1               ;
+; curr_state.transmiting   ; 1                      ; 0                        ; 0                        ; 1               ;
++--------------------------+------------------------+--------------------------+--------------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state                              ;
++---------------------+--------------------+--------------------+---------------------+--------------------+--------------------+
+; Name                ; tx_next_state.stop ; tx_next_state.data ; tx_next_state.start ; tx_next_state.sync ; tx_next_state.idle ;
++---------------------+--------------------+--------------------+---------------------+--------------------+--------------------+
+; tx_next_state.idle  ; 0                  ; 0                  ; 0                   ; 0                  ; 0                  ;
+; tx_next_state.sync  ; 0                  ; 0                  ; 0                   ; 1                  ; 1                  ;
+; tx_next_state.start ; 0                  ; 0                  ; 1                   ; 0                  ; 1                  ;
+; tx_next_state.data  ; 0                  ; 1                  ; 0                   ; 0                  ; 1                  ;
+; tx_next_state.stop  ; 1                  ; 0                  ; 0                   ; 0                  ; 1                  ;
++---------------------+--------------------+--------------------+---------------------+--------------------+--------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state                              ;
++---------------------+--------------------+--------------------+---------------------+--------------------+--------------------+
+; Name                ; tx_curr_state.stop ; tx_curr_state.data ; tx_curr_state.start ; tx_curr_state.sync ; tx_curr_state.idle ;
++---------------------+--------------------+--------------------+---------------------+--------------------+--------------------+
+; tx_curr_state.idle  ; 0                  ; 0                  ; 0                   ; 0                  ; 0                  ;
+; tx_curr_state.sync  ; 0                  ; 0                  ; 0                   ; 1                  ; 1                  ;
+; tx_curr_state.start ; 0                  ; 0                  ; 1                   ; 0                  ; 1                  ;
+; tx_curr_state.data  ; 0                  ; 1                  ; 0                   ; 0                  ; 1                  ;
+; tx_curr_state.stop  ; 1                  ; 0                  ; 0                   ; 0                  ; 1                  ;
++---------------------+--------------------+--------------------+---------------------+--------------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                     ;
++-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+; Register name                                                                             ; Reason for Removal                                                                         ;
++-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[0..5,8,10,11] ; Stuck at GND due to stuck port data_in                                                     ;
+; Clock_divider:clock_divider1|half_clock[0,2..11]                                          ; Stuck at GND due to stuck port data_in                                                     ;
+; ADC_ram_shifter:adc_ram_shifter_1|wren_b_2                                                ; Stuck at VCC due to stuck port data_in                                                     ;
+; ADC_ram_shifter:adc_ram_shifter_1|wren_a_2                                                ; Stuck at VCC due to stuck port data_in                                                     ;
+; ADC_ram_shifter:adc_ram_shifter_1|wren_b_1                                                ; Stuck at VCC due to stuck port data_in                                                     ;
+; ADC_ram_shifter:adc_ram_shifter_1|wren_a_1                                                ; Stuck at VCC due to stuck port data_in                                                     ;
+; Correlation_function:corr_long|temp_int[20..31]                                           ; Lost fanout                                                                                ;
+; Clock_divider:clock_divider1|half_clock[1]                                                ; Merged with UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[9] ;
+; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[9]            ; Merged with UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[7] ;
+; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[7]            ; Merged with UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[6] ;
+; Total Number of Removed Registers = 39                                                    ;                                                                                            ;
++-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -395,12 +495,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1690  ;
+; Total registers                              ; 1753  ;
 ; Number of registers using Synchronous Clear  ; 212   ;
 ; Number of registers using Synchronous Load   ; 160   ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1160  ;
+; Number of registers using Clock Enable       ; 1182  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -416,19 +516,23 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +-------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|Clock_divider:clock_divider1|counter[7]           ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |UNI_Projektas|Correlation_function:corr_long|output_int[13]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|counter[7]               ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[0]           ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[5]           ;
-; 12:1               ; 80 bits   ; 640 LEs       ; 160 LEs              ; 480 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[9][2]  ;
-; 15:1               ; 80 bits   ; 800 LEs       ; 160 LEs              ; 640 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[11][3] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |UNI_Projektas|Clock_divider:clock_divider1|counter[9]                           ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |UNI_Projektas|Correlation_function:corr_long|output_int[17]                     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|counter[1]                               ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[2] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_end                                 ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[0]                           ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[5]                           ;
+; 12:1               ; 80 bits   ; 640 LEs       ; 160 LEs              ; 480 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[9][1]                  ;
+; 15:1               ; 80 bits   ; 800 LEs       ; 160 LEs              ; 640 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[11][6]                 ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|Selector2                       ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector3     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------+
@@ -456,6 +560,15 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +---------------------------------+--------------------+------+---------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                           ;
 +---------------------------------+--------------------+------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2 ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                                           ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                                            ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -667,6 +780,54 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                              ;
 ; CBXI_PARAMETER                     ; altsyncram_hf52      ; Untyped                              ;
 +------------------------------------+----------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; baud_rate      ; 9600  ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_TX:uart_tx_1 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; baud_rate      ; 9600  ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component ;
++-------------------------+-------------+-------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                                                                      ;
++-------------------------+-------------+-------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                                                                ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                                                              ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                                                              ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                                                            ;
+; lpm_width               ; 8           ; Signed Integer                                                                            ;
+; LPM_NUMWORDS            ; 16          ; Signed Integer                                                                            ;
+; LPM_WIDTHU              ; 4           ; Signed Integer                                                                            ;
+; LPM_SHOWAHEAD           ; OFF         ; Untyped                                                                                   ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                                                                   ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                                                                   ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                                                                   ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                                                                   ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                                                                   ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                                                                   ;
+; USE_EAB                 ; ON          ; Untyped                                                                                   ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                                                                   ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                                                                   ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                                                                   ;
+; CBXI_PARAMETER          ; scfifo_ka21 ; Untyped                                                                                   ;
++-------------------------+-------------+-------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1587,6 +1748,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+---------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------+
+; scfifo Parameter Settings by Entity Instance                                                                      ;
++----------------------------+--------------------------------------------------------------------------------------+
+; Name                       ; Value                                                                                ;
++----------------------------+--------------------------------------------------------------------------------------+
+; Number of entity instances ; 1                                                                                    ;
+; Entity Instance            ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component ;
+;     -- FIFO Type           ; Single Clock                                                                         ;
+;     -- lpm_width           ; 8                                                                                    ;
+;     -- LPM_NUMWORDS        ; 16                                                                                   ;
+;     -- LPM_SHOWAHEAD       ; OFF                                                                                  ;
+;     -- USE_EAB             ; ON                                                                                   ;
++----------------------------+--------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------+
 ; lpm_mult Parameter Settings by Entity Instance                                         ;
 +---------------------------------------+------------------------------------------------+
@@ -1871,16 +2047,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider" ;
++-------------------+-------+----------+-------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                               ;
++-------------------+-------+----------+-------------------------------------------------------+
+; prescaler[8..7]   ; Input ; Info     ; Stuck at VCC                                          ;
+; prescaler[15..14] ; Input ; Info     ; Stuck at GND                                          ;
+; prescaler[12..11] ; Input ; Info     ; Stuck at GND                                          ;
+; prescaler[6..0]   ; Input ; Info     ; Stuck at GND                                          ;
+; prescaler[13]     ; Input ; Info     ; Stuck at VCC                                          ;
+; prescaler[10]     ; Input ; Info     ; Stuck at VCC                                          ;
+; prescaler[9]      ; Input ; Info     ; Stuck at GND                                          ;
++-------------------+-------+----------+-------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "UART_Controller:UART_Controller_1" ;
++--------------------+-------+----------+-----------------------+
+; Port               ; Type  ; Severity ; Details               ;
++--------------------+-------+----------+-----------------------+
+; send_data_in[7..6] ; Input ; Info     ; Stuck at GND          ;
++--------------------+-------+----------+-----------------------+
+
+
 +----------------------------------------------------------+
 ; Port Connectivity Checks: "Clock_divider:clock_divider1" ;
-+-----------------+-------+----------+---------------------+
-; Port            ; Type  ; Severity ; Details             ;
-+-----------------+-------+----------+---------------------+
-; prescaler[7..3] ; Input ; Info     ; Stuck at GND        ;
-; prescaler[2]    ; Input ; Info     ; Stuck at VCC        ;
-; prescaler[1]    ; Input ; Info     ; Stuck at GND        ;
-; prescaler[0]    ; Input ; Info     ; Stuck at VCC        ;
-+-----------------+-------+----------+---------------------+
++------------------+-------+----------+--------------------+
+; Port             ; Type  ; Severity ; Details            ;
++------------------+-------+----------+--------------------+
+; prescaler[15..3] ; Input ; Info     ; Stuck at GND       ;
+; prescaler[2]     ; Input ; Info     ; Stuck at VCC       ;
+; prescaler[1]     ; Input ; Info     ; Stuck at GND       ;
+; prescaler[0]     ; Input ; Info     ; Stuck at VCC       ;
++------------------+-------+----------+--------------------+
 
 
 +-----------------------------------------------------+
@@ -1908,12 +2108,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jan 20 15:13:34 2023
+    Info: Processing started: Fri Jan 20 15:46:46 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file uni_projektas_tb.vhd
-    Info (12022): Found design unit 1: Uni_Projektas_TB-arc
-    Info (12023): Found entity 1: Uni_Projektas_TB
 Info (12021): Found 2 design units, including 1 entities, in source file adc_manager.vhd
     Info (12022): Found design unit 1: ADC_Manager-arc
     Info (12023): Found entity 1: ADC_Manager
@@ -2003,6 +2200,43 @@ Info (12133): Instantiated megafunction "big_ram_wizard:ram1|altsyncram:altsyncr
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hf52.tdf
     Info (12023): Found entity 1: altsyncram_hf52
 Info (12128): Elaborating entity "altsyncram_hf52" for hierarchy "big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated"
+Info (12128): Elaborating entity "UART_Controller" for hierarchy "UART_Controller:UART_Controller_1"
+Info (12128): Elaborating entity "UART_TX" for hierarchy "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1"
+Info (12128): Elaborating entity "UART_FIFO_wizard" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo"
+Info (12128): Elaborating entity "scfifo" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component"
+Info (12130): Elaborated megafunction instantiation "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component"
+Info (12133): Instantiated megafunction "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component" with the following parameter:
+    Info (12134): Parameter "add_ram_output_register" = "OFF"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_numwords" = "16"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "8"
+    Info (12134): Parameter "lpm_widthu" = "4"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_ka21.tdf
+    Info (12023): Found entity 1: scfifo_ka21
+Info (12128): Elaborating entity "scfifo_ka21" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_rg21.tdf
+    Info (12023): Found entity 1: a_dpfifo_rg21
+Info (12128): Elaborating entity "a_dpfifo_rg21" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_fefifo_76e.tdf
+    Info (12023): Found entity 1: a_fefifo_76e
+Info (12128): Elaborating entity "a_fefifo_76e" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_pj7.tdf
+    Info (12023): Found entity 1: cntr_pj7
+Info (12128): Elaborating entity "cntr_pj7" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dpram_st01.tdf
+    Info (12023): Found entity 1: dpram_st01
+Info (12128): Elaborating entity "dpram_st01" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0sj1.tdf
+    Info (12023): Found entity 1: altsyncram_0sj1
+Info (12128): Elaborating entity "altsyncram_0sj1" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_djb.tdf
+    Info (12023): Found entity 1: cntr_djb
+Info (12128): Elaborating entity "cntr_djb" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:rd_ptr_count"
 Info (278001): Inferred 25 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Correlation_function:corr_long|Mult22"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Correlation_function:corr_long|Mult8"
@@ -2045,16 +2279,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mult
 Info (17049): 12 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3175 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 2870 logic cells
-    Info (21064): Implemented 264 RAM segments
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "UART_RX"
+Info (21057): Implemented 3278 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 2963 logic cells
+    Info (21064): Implemented 272 RAM segments
     Info (21062): Implemented 25 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4675 megabytes
-    Info: Processing ended: Fri Jan 20 15:13:39 2023
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4676 megabytes
+    Info: Processing ended: Fri Jan 20 15:46:53 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
