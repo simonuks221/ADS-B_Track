@@ -3,75 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'CLK'
-Slack : -24.975
-TNS   : -14646.422
+Slack : -25.050
+TNS   : -14799.631
 
 Type  : Slow Model Setup 'Clock_divider:clock_divider1|clock_out'
-Slack : -5.639
-TNS   : -939.966
+Slack : -3.803
+TNS   : -916.730
 
 Type  : Slow Model Setup 'UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out'
-Slack : -3.516
-TNS   : -44.056
+Slack : -2.081
+TNS   : -12.737
 
 Type  : Slow Model Hold 'UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out'
-Slack : -2.242
-TNS   : -13.407
+Slack : -1.264
+TNS   : -6.494
 
 Type  : Slow Model Hold 'CLK'
 Slack : 0.499
 TNS   : 0.000
 
 Type  : Slow Model Hold 'Clock_divider:clock_divider1|clock_out'
-Slack : 0.499
+Slack : 0.753
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLK'
 Slack : -2.567
-TNS   : -10330.251
+TNS   : -10228.613
 
 Type  : Slow Model Minimum Pulse Width 'Clock_divider:clock_divider1|clock_out'
 Slack : -0.742
-TNS   : -859.236
+TNS   : -854.784
 
 Type  : Slow Model Minimum Pulse Width 'UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out'
 Slack : -0.742
-TNS   : -25.228
+TNS   : -10.388
 
 Type  : Fast Model Setup 'CLK'
-Slack : -6.094
-TNS   : -4301.824
-
-Type  : Fast Model Setup 'UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out'
-Slack : -1.366
-TNS   : -10.805
+Slack : -6.101
+TNS   : -4333.763
 
 Type  : Fast Model Setup 'Clock_divider:clock_divider1|clock_out'
-Slack : -1.184
-TNS   : -83.399
+Slack : -0.840
+TNS   : -49.303
+
+Type  : Fast Model Setup 'UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out'
+Slack : -0.111
+TNS   : -0.169
 
 Type  : Fast Model Hold 'UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out'
-Slack : -1.206
-TNS   : -8.180
+Slack : -0.905
+TNS   : -5.542
 
 Type  : Fast Model Hold 'CLK'
-Slack : 0.088
-TNS   : 0.000
+Slack : -0.024
+TNS   : -2.132
 
 Type  : Fast Model Hold 'Clock_divider:clock_divider1|clock_out'
-Slack : 0.215
+Slack : 0.243
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLK'
 Slack : -2.000
-TNS   : -7847.730
+TNS   : -7784.380
 
 Type  : Fast Model Minimum Pulse Width 'Clock_divider:clock_divider1|clock_out'
 Slack : -0.500
-TNS   : -579.000
+TNS   : -576.000
 
 Type  : Fast Model Minimum Pulse Width 'UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out'
 Slack : -0.500
-TNS   : -17.000
+TNS   : -7.000
 
 ------------------------------------------------------------

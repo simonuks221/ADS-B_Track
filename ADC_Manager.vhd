@@ -11,7 +11,7 @@ entity ADC_Manager is
 		CONV_BITS: integer := 20;
 		SIGNAL_BUF_LEN: integer := 50;
 		PREAMBULE_FUNC_LEN: integer := 50; --91 87 29 2 basic --Su 2 ramais  95 90 32 3 --Su sumazinta koreliacija 58 38 37 3
-		BITS_FUNC_LEN: integer := 20; --60 40 38 4 su UART
+		BITS_FUNC_LEN: integer := 20; --60 40 38 4 su UART 61 45 38 su 'upgreidais' lmao
 		MAX_DATA_COUNTS : integer := 3;
 		BITS_PER_DATA_COUNT : integer := 2;
 		PREAMBULE_FUNC_THRESHOLD : integer := 480000;
