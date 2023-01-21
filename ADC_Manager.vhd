@@ -36,30 +36,9 @@ end entity;
 
 architecture arc of ADC_Manager is
 
---Load voltage data from files
---file file_voltages: text;
---impure function init(file_name : string; array_length : integer) return double_array is
---variable r : double_array(0 to array_length-1) := (others => (others => '0'));
---variable iline: line;
---variable temp_data : std_logic_vector(7 downto 0);
---begin
---	file_open(file_voltages, file_name, read_mode);
---	 for i in 0 to array_length-1 loop --Reverse because why not, the time moves backwards
---		readline(file_voltages, iline);
---		read(iline, temp_data);
---		r(array_length - 1 - i) := temp_data;
---	end loop;
---	file_close(file_voltages);
---	return r;
---end function init;
-
 --Function signals
 signal c_preamb_func : double_array(0 to PREAMBULE_FUNC_LEN-1) := (others => (others => '0'));
 
---signal c_10_func : double_array(0 to BITS_FUNC_LEN-1) := (others => (others => '0'));
---signal c_01_func : double_array(0 to BITS_FUNC_LEN-1) := (others => (others => '0'));
---signal c_00_func : double_array(0 to BITS_FUNC_LEN-1) := (others => (others => '0'));
---signal c_11_func : double_array(0 to BITS_FUNC_LEN-1) := (others => (others => '0'));
 signal c_1_func : double_array(0 to 10-1) := (others => (others => '0'));
 signal c_0_func : double_array(0 to 10-1) := (others => (others => '0'));
 
@@ -73,160 +52,46 @@ signal c_long_value : std_logic_vector(CONV_BITS-1 downto 0) := (others => '0');
 signal c_long_func_input : double_array(0 to PREAMBULE_FUNC_LEN-1) := (others => (others => '0'));
 
 --Counting signals
-signal preambule_found : std_logic := '0';
 signal counter: integer := 0;
+signal bit_counter: integer := 0;
 signal ram_counter: integer := 0;
-signal preambule_delay_done : std_logic := '0';
 signal data_buffer : std_logic_vector(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-1 downto 0) := (others => '0');
 signal data_counts : integer := 0;
 signal data_end : std_logic := '0';
-signal readDataFromRam : std_logic := '1';
 
 --Correlation inputs
 signal c_short_func_input_index : integer range 0 to 9 := 0;
 signal check_corr : std_logic := '0';
+
+--FSM
+type m_state is (read_init_mem, finding_preambule, waiting_preambule, waiting_bits, finding_bits, idle);
+
+signal main_state : m_state := read_init_mem;
+signal main_next_state : m_state := read_init_mem;
 
 begin
 DATA_OUT <= data_buffer;
 c_long_value <= c_long_value_in;
 c_long_func_input_out <= c_long_func_input;
 
-c_en <= '1' when preambule_found = '0' or check_corr = '1' else '0';
+c_en <= '1' when main_state = finding_preambule or main_state = finding_bits else '0';
 
---Processes
---Sync signal 10MHz process
-process(SYNC)
-begin
-	if(rising_edge(SYNC)) then
-		if(data_end = '0') then
-			if(readDataFromRam = '0') then
-				--Not reading from ram
-				--Shift ADC buffer and add new voltage value
-				
-				if(preambule_found = '1') then
-					if(preambule_delay_done = '1') then
-						if(counter = BITS_FUNC_LEN) then
-							--New bit found
-							counter <= 0;
-							--Add to tracking of found bits number
-							data_counts <= data_counts + 1;
-							if(data_counts = MAX_DATA_COUNTS-1) then
-								data_end <= '1';
-								DATA_DONE <= '1';
-							end if;
-						else
-							counter <= counter + 1;
-						end if;
-					else
-						--Preambule delay not done
-						counter <= counter + 1;
-						if(counter = PREAMBULE_DELAY_LEN) then --3us for delay between preambule and data
-							counter <= 0;
-							preambule_delay_done <= '1';
-						end if;
-					end if;
-				end if;
-			end if;
-		else
-			--Data_over
-			--DATA_DONE <= '0';
-		end if;
-	end if;
-end process;
+--FSM set variables
 
---50MHz process
+--Change state to next
 process(CLK)
 begin
 	if(rising_edge(CLK)) then
-		if(data_end = '0' or data_end = '1') then
-			if(readDataFromRam = '0') then
-				if(preambule_found = '1') then
-					if(preambule_delay_done = '1') then
-						if(check_corr = '1') then
-							case(c_short_func_input_index) is
-								when 0 =>
-									c_long_func_input(0 to 10-1) <= c_0_func;
-									c_long_func_input(10 to 20-1) <= c_1_func;
-								when 1 =>
-									c_long_func_input(0 to 10-1) <= c_1_func;
-									c_long_func_input(10 to 20-1) <= c_1_func;
-								when 2 =>
-									c_01_value <=  to_integer(unsigned(c_long_value));
-								when 3 =>
-									c_long_func_input(0 to 10-1) <= c_1_func;
-									c_long_func_input(10 to 20-1) <= c_0_func;
-								when 4 =>
-									c_11_value <=  to_integer(unsigned(c_long_value));
-								when 5 =>
-									c_long_func_input(0 to 10-1) <= c_0_func;
-									c_long_func_input(10 to 20-1) <= c_0_func;
-								when 6 =>
-									c_10_value <=  to_integer(unsigned(c_long_value));
-								when 8 =>
-									c_00_value <=  to_integer(unsigned(c_long_value));
-								when 9 =>
-									check_corr <= '0';
-									c_long_func_input(0 to 10-1) <= c_0_func;
-									c_long_func_input(10 to 20-1) <= c_1_func;
-									c_short_func_input_index <= 0;
-									if(c_01_value > c_10_value and c_01_value > c_00_value and c_01_value > c_11_value) then
-										if(c_01_value > BITS_FUNC_THRESHOLD) then --Threshold value
-											data_buffer <= data_buffer(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-2-1 downto 0) & "01"; --Shift left to add new found data bit
-										end if;
-									elsif(c_10_value > c_01_value and c_10_value > c_00_value and c_10_value > c_11_value) then
-										if(c_10_value > BITS_FUNC_THRESHOLD) then --Threshold value
-											data_buffer <= data_buffer(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-2-1 downto 0) & "10"; --Shift left to add new found data bit
-										end if;
-									elsif(c_00_value > c_01_value and c_00_value > c_10_value and c_00_value > c_11_value) then
-										if(c_00_value > BITS_FUNC_THRESHOLD) then --Threshold value
-											data_buffer <= data_buffer(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-2-1 downto 0) & "11"; --Shift left to add new found data bit
-										end if;
-									elsif(c_11_value > c_10_value and c_11_value > c_01_value and c_11_value > c_00_value) then
-										if(c_11_value > BITS_FUNC_THRESHOLD) then --Threshold value
-											data_buffer <= data_buffer(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-2-1 downto 0) & "00"; --Shift left to add new found data bit
-										end if;
-									end if;
-								when others =>
-									
-							end case;
-							if(c_short_func_input_index = 9) then
-								c_short_func_input_index <= 0;
-							else
-								c_short_func_input_index <= c_short_func_input_index + 1;
-							end if;
-						else --Check_corr = '0'
-							if(counter = BITS_FUNC_LEN-1) then
-								check_corr <= '1';
-								c_long_func_input(0 to 10-1) <= c_0_func;
-								c_long_func_input(10 to 20-1) <= c_1_func;
-							end if;
-						end if;
-					else --Preambule delay not done
-						--c_long_func_input(0 to 10-1) <= c_1_func;
-						--c_long_func_input(10 to 20-1) <= c_1_func;
-					end if;
-				else --Preambule not found
-					c_long_func_input <= c_preamb_func;
-					--c_long_func_input_index <= 1; --Preambule
-					if(to_integer(unsigned(c_long_value)) > PREAMBULE_FUNC_THRESHOLD) then
-						preambule_found <= '1';
-						--c_short_func_input(0 to 10-1) <= c_1_func;
-						--c_short_func_input(10 to 20-1) <= c_0_func;
-						c_long_func_input <= (others => (others => '0'));
-						--c_long_func_input(0 to 10-1) <= c_0_func;
-						--c_long_func_input(10 to 20-1) <= c_1_func;
-						--c_short_func_input <= c_10_func;
-					end if;
-				end if;
-			else
-				if(ram_counter = PREAMBULE_FUNC_LEN+4*BITS_FUNC_LEN+3) then
-						--Pabaiga duomenu skaitymo
-						readDataFromRam <= '0';
-						ram_counter <= 0;
-				else
-					ram_counter <= ram_counter + 1;
-				end if;
-				--Read data from ram
+		main_state <= main_next_state;
+	end if;
+end process;
+
+--Check to change state
+process(CLK)
+begin
+	if(rising_edge(CLK)) then
+		case(main_state) is
+			when read_init_mem =>
 				if (ram_counter < PREAMBULE_FUNC_LEN+3*BITS_FUNC_LEN) then
 					ram_ADDRESS_BUS <= std_logic_vector(to_unsigned(ram_counter, ram_ADDRESS_BUS'length));
 				end if;
@@ -238,18 +103,119 @@ begin
 						c_1_func(ram_counter-3-PREAMBULE_FUNC_LEN) <= ram_DATA_BUS;
 					elsif(ram_counter < PREAMBULE_FUNC_LEN+2*10+3) then
 						c_0_func(ram_counter-3-PREAMBULE_FUNC_LEN-1*10) <= ram_DATA_BUS;
-					--	c_10_func(ram_counter-3-PREAMBULE_FUNC_LEN) <= ram_DATA_BUS;
-					--elsif(ram_counter < PREAMBULE_FUNC_LEN+2*BITS_FUNC_LEN+3) then
-					--	c_01_func(ram_counter-3-PREAMBULE_FUNC_LEN-BITS_FUNC_LEN) <= ram_DATA_BUS;
-					--elsif(ram_counter < PREAMBULE_FUNC_LEN+3*BITS_FUNC_LEN+3) then
-					--	c_00_func(ram_counter-3-PREAMBULE_FUNC_LEN-2*BITS_FUNC_LEN) <= ram_DATA_BUS;
-					--elsif(ram_counter < PREAMBULE_FUNC_LEN+4*BITS_FUNC_LEN+3) then
-					--	c_11_func(ram_counter-3-PREAMBULE_FUNC_LEN-3*BITS_FUNC_LEN) <= ram_DATA_BUS;
 					end if;
-					
 				end if;
-			end if;
-		end if;
+				if(ram_counter = PREAMBULE_FUNC_LEN+4*BITS_FUNC_LEN+3) then
+						--Pabaiga duomenu skaitymo
+						main_next_state <= finding_preambule;
+				else
+					ram_counter <= ram_counter + 1;
+				end if;
+				
+			when finding_preambule =>
+				c_long_func_input <= c_preamb_func;
+				if(to_integer(unsigned(c_long_value)) > PREAMBULE_FUNC_THRESHOLD) then
+					main_next_state <= waiting_preambule;
+				end if;
+			when waiting_preambule =>
+				c_long_func_input <= (others => (others => '0'));
+				if(counter = PREAMBULE_DELAY_LEN) then --3us for delay between preambule and data
+					main_next_state <= waiting_bits;
+				end if;
+			when waiting_bits =>
+				c_long_func_input(0 to 10-1) <= c_0_func;
+				c_long_func_input(10 to 20-1) <= c_1_func;
+				if(bit_counter = BITS_FUNC_LEN-1) then
+					c_long_func_input(0 to 10-1) <= c_0_func;
+					c_long_func_input(10 to 20-1) <= c_1_func;
+					main_next_state <= finding_bits;
+				end if;
+				c_short_func_input_index <= 0;
+				
+			when finding_bits =>
+				case(c_short_func_input_index) is
+					when 0 =>
+						c_long_func_input(0 to 10-1) <= c_0_func;
+						c_long_func_input(10 to 20-1) <= c_1_func;
+					when 1 =>
+						c_long_func_input(0 to 10-1) <= c_1_func;
+						c_long_func_input(10 to 20-1) <= c_1_func;
+					when 2 =>
+						c_01_value <=  to_integer(unsigned(c_long_value));
+					when 3 =>
+						c_long_func_input(0 to 10-1) <= c_1_func;
+						c_long_func_input(10 to 20-1) <= c_0_func;
+					when 4 =>
+						c_11_value <=  to_integer(unsigned(c_long_value));
+					when 5 =>
+						c_long_func_input(0 to 10-1) <= c_0_func;
+						c_long_func_input(10 to 20-1) <= c_0_func;
+					when 6 =>
+						c_10_value <=  to_integer(unsigned(c_long_value));
+					when 8 =>
+						c_00_value <=  to_integer(unsigned(c_long_value));
+					when 9 =>
+						c_long_func_input(0 to 10-1) <= c_0_func;
+						c_long_func_input(10 to 20-1) <= c_1_func;
+						c_short_func_input_index <= 0;
+						if(c_01_value > c_10_value and c_01_value > c_00_value and c_01_value > c_11_value) then
+							if(c_01_value > BITS_FUNC_THRESHOLD) then --Threshold value
+								data_buffer <= data_buffer(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-2-1 downto 0) & "01"; --Shift left to add new found data bit
+							end if;
+						elsif(c_10_value > c_01_value and c_10_value > c_00_value and c_10_value > c_11_value) then
+							if(c_10_value > BITS_FUNC_THRESHOLD) then --Threshold value
+								data_buffer <= data_buffer(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-2-1 downto 0) & "10"; --Shift left to add new found data bit
+							end if;
+						elsif(c_00_value > c_01_value and c_00_value > c_10_value and c_00_value > c_11_value) then
+							if(c_00_value > BITS_FUNC_THRESHOLD) then --Threshold value
+								data_buffer <= data_buffer(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-2-1 downto 0) & "00"; --Shift left to add new found data bit
+							end if;
+						elsif(c_11_value > c_10_value and c_11_value > c_01_value and c_11_value > c_00_value) then
+							if(c_11_value > BITS_FUNC_THRESHOLD) then --Threshold value
+								data_buffer <= data_buffer(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-2-1 downto 0) & "11"; --Shift left to add new found data bit
+							end if;
+						end if;
+						
+						data_counts <= data_counts + 1;
+						if(data_counts = MAX_DATA_COUNTS-1) then
+							main_next_state <= idle;
+						else
+							main_next_state <= waiting_bits;
+						end if;
+					
+				when others =>
+						
+				end case;
+				if(c_short_func_input_index = 9) then
+					c_short_func_input_index <= 0;
+				else
+					c_short_func_input_index <= c_short_func_input_index + 1;
+				end if;
+			when others =>
+		end case;
+	end if;
+end process;
+
+--Counter 10MHz
+process(SYNC)
+begin
+	if(rising_edge(SYNC)) then
+		case(main_state) is
+			when read_init_mem =>
+				
+			when finding_preambule =>
+				
+			when waiting_preambule =>
+				counter <= counter + 1;
+			when waiting_bits =>
+				counter <= 0;
+				bit_counter <= bit_counter + 1;
+			when finding_bits =>
+				bit_counter <= 0;
+				--DATA_DONE <= '0';
+			when others =>
+				
+		end case;
 	end if;
 end process;
 

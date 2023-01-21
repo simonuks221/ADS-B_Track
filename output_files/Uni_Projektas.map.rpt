@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Uni_Projektas
-Fri Jan 20 16:10:42 2023
+Sat Jan 21 12:35:59 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -20,56 +20,58 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  12. State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|curr_state
  13. State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state
  14. State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state
- 15. Registers Removed During Synthesis
- 16. General Register Statistics
- 17. Inverted Register Statistics
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated
- 20. Source assignments for big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated
- 21. Source assignments for big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated
- 22. Source assignments for UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2
- 23. Parameter Settings for User Entity Instance: ADC_Manager:ADC_Manager1
- 24. Parameter Settings for User Entity Instance: wizard_ram:wizard_ram_1|altsyncram:altsyncram_component
- 25. Parameter Settings for User Entity Instance: Correlation_function:corr_long
- 26. Parameter Settings for User Entity Instance: big_ram_wizard:ram1|altsyncram:altsyncram_component
- 27. Parameter Settings for User Entity Instance: big_ram_wizard:ram2|altsyncram:altsyncram_component
- 28. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1
- 29. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_TX:uart_tx_1
- 30. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component
- 31. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult22
- 32. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult8
- 33. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult21
- 34. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult20
- 35. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult19
- 36. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult18
- 37. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult24
- 38. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult23
- 39. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult15
- 40. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult14
- 41. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult13
- 42. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult17
- 43. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult16
- 44. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult4
- 45. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult7
- 46. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult12
- 47. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult11
- 48. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult10
- 49. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult9
- 50. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult6
- 51. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult5
- 52. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult1
- 53. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult0
- 54. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult3
- 55. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult2
- 56. altsyncram Parameter Settings by Entity Instance
- 57. scfifo Parameter Settings by Entity Instance
- 58. lpm_mult Parameter Settings by Entity Instance
- 59. Port Connectivity Checks: "UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider"
- 60. Port Connectivity Checks: "UART_Controller:UART_Controller_1"
- 61. Port Connectivity Checks: "Clock_divider:clock_divider1"
- 62. Port Connectivity Checks: "wizard_ram:wizard_ram_1"
- 63. Elapsed Time Per Partition
- 64. Analysis & Synthesis Messages
+ 15. State Machine - |UNI_Projektas|ADC_Manager:ADC_Manager1|main_next_state
+ 16. State Machine - |UNI_Projektas|ADC_Manager:ADC_Manager1|main_state
+ 17. Registers Removed During Synthesis
+ 18. General Register Statistics
+ 19. Inverted Register Statistics
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Source assignments for wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated
+ 22. Source assignments for big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated
+ 23. Source assignments for big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated
+ 24. Source assignments for UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2
+ 25. Parameter Settings for User Entity Instance: ADC_Manager:ADC_Manager1
+ 26. Parameter Settings for User Entity Instance: wizard_ram:wizard_ram_1|altsyncram:altsyncram_component
+ 27. Parameter Settings for User Entity Instance: Correlation_function:corr_long
+ 28. Parameter Settings for User Entity Instance: big_ram_wizard:ram1|altsyncram:altsyncram_component
+ 29. Parameter Settings for User Entity Instance: big_ram_wizard:ram2|altsyncram:altsyncram_component
+ 30. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1
+ 31. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_TX:uart_tx_1
+ 32. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component
+ 33. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult22
+ 34. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult8
+ 35. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult21
+ 36. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult20
+ 37. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult19
+ 38. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult18
+ 39. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult24
+ 40. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult23
+ 41. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult15
+ 42. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult14
+ 43. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult13
+ 44. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult17
+ 45. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult16
+ 46. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult4
+ 47. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult7
+ 48. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult12
+ 49. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult11
+ 50. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult10
+ 51. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult9
+ 52. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult6
+ 53. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult5
+ 54. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult1
+ 55. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult0
+ 56. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult3
+ 57. Parameter Settings for Inferred Entity Instance: Correlation_function:corr_long|lpm_mult:Mult2
+ 58. altsyncram Parameter Settings by Entity Instance
+ 59. scfifo Parameter Settings by Entity Instance
+ 60. lpm_mult Parameter Settings by Entity Instance
+ 61. Port Connectivity Checks: "UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider"
+ 62. Port Connectivity Checks: "UART_Controller:UART_Controller_1"
+ 63. Port Connectivity Checks: "Clock_divider:clock_divider1"
+ 64. Port Connectivity Checks: "wizard_ram:wizard_ram_1"
+ 65. Elapsed Time Per Partition
+ 66. Analysis & Synthesis Messages
 
 
 
@@ -95,15 +97,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan 20 16:10:42 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sat Jan 21 12:35:59 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 2,982                                           ;
-;     Total combinational functions  ; 1,832                                           ;
-;     Dedicated logic registers      ; 1,761                                           ;
-; Total registers                    ; 1761                                            ;
+; Total logic elements               ; 3,156                                           ;
+;     Total combinational functions  ; 2,001                                           ;
+;     Dedicated logic registers      ; 1,766                                           ;
+; Total registers                    ; 1766                                            ;
 ; Total pins                         ; 18                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 4,216                                           ;
@@ -263,29 +265,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 2,982 ;
+; Estimated Total logic elements              ; 3,156 ;
 ;                                             ;       ;
-; Total combinational functions               ; 1832  ;
+; Total combinational functions               ; 2001  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 429   ;
-;     -- 3 input functions                    ; 1164  ;
-;     -- <=2 input functions                  ; 239   ;
+;     -- 4 input functions                    ; 362   ;
+;     -- 3 input functions                    ; 1160  ;
+;     -- <=2 input functions                  ; 479   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1140  ;
-;     -- arithmetic mode                      ; 692   ;
+;     -- normal mode                          ; 1310  ;
+;     -- arithmetic mode                      ; 691   ;
 ;                                             ;       ;
-; Total registers                             ; 1761  ;
-;     -- Dedicated logic registers            ; 1761  ;
+; Total registers                             ; 1766  ;
+;     -- Dedicated logic registers            ; 1766  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 18    ;
 ; Total memory bits                           ; 4216  ;
 ; Embedded Multiplier 9-bit elements          ; 25    ;
 ; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 1437  ;
-; Total fan-out                               ; 12522 ;
-; Average fan-out                             ; 3.18  ;
+; Maximum fan-out                             ; 1444  ;
+; Total fan-out                               ; 12250 ;
+; Average fan-out                             ; 2.98  ;
 +---------------------------------------------+-------+
 
 
@@ -294,11 +296,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                ; Library Name ;
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |UNI_Projektas                                     ; 1832 (1)          ; 1761 (0)     ; 4216        ; 25           ; 25      ; 0         ; 18   ; 0            ; |UNI_Projektas                                                                                                                                                                                     ; work         ;
-;    |ADC_Manager:ADC_Manager1|                      ; 848 (848)         ; 1128 (1128)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                                                                                                                            ; work         ;
+; |UNI_Projektas                                     ; 2001 (1)          ; 1766 (0)     ; 4216        ; 25           ; 25      ; 0         ; 18   ; 0            ; |UNI_Projektas                                                                                                                                                                                     ; work         ;
+;    |ADC_Manager:ADC_Manager1|                      ; 1016 (1016)       ; 1133 (1133)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                                                                                                                            ; work         ;
 ;    |ADC_ram_shifter:adc_ram_shifter_1|             ; 0 (0)             ; 512 (512)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_ram_shifter:adc_ram_shifter_1                                                                                                                                                   ; work         ;
 ;    |Clock_divider:clock_divider1|                  ; 24 (24)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Clock_divider:clock_divider1                                                                                                                                                        ; work         ;
-;    |Correlation_function:corr_long|                ; 875 (875)         ; 41 (41)      ; 0           ; 25           ; 25      ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long                                                                                                                                                      ; work         ;
+;    |Correlation_function:corr_long|                ; 876 (876)         ; 41 (41)      ; 0           ; 25           ; 25      ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long                                                                                                                                                      ; work         ;
 ;       |lpm_mult:Mult0|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult0                                                                                                                                       ; work         ;
 ;          |mult_o5t:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult0|mult_o5t:auto_generated                                                                                                               ; work         ;
 ;       |lpm_mult:Mult10|                            ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|lpm_mult:Mult10                                                                                                                                      ; work         ;
@@ -471,6 +473,34 @@ Encoding Type:  One-Hot
 +---------------------+--------------------+--------------------+---------------------+--------------------+--------------------+
 
 
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UNI_Projektas|ADC_Manager:ADC_Manager1|main_next_state                                                                                                                                 ;
++-----------------------------------+------------------------------+------------------------------+-----------------------------------+-----------------------------------+-------------------------------+
+; Name                              ; main_next_state.finding_bits ; main_next_state.waiting_bits ; main_next_state.waiting_preambule ; main_next_state.finding_preambule ; main_next_state.read_init_mem ;
++-----------------------------------+------------------------------+------------------------------+-----------------------------------+-----------------------------------+-------------------------------+
+; main_next_state.read_init_mem     ; 0                            ; 0                            ; 0                                 ; 0                                 ; 0                             ;
+; main_next_state.finding_preambule ; 0                            ; 0                            ; 0                                 ; 1                                 ; 1                             ;
+; main_next_state.waiting_preambule ; 0                            ; 0                            ; 1                                 ; 0                                 ; 1                             ;
+; main_next_state.waiting_bits      ; 0                            ; 1                            ; 0                                 ; 0                                 ; 1                             ;
+; main_next_state.finding_bits      ; 1                            ; 0                            ; 0                                 ; 0                                 ; 1                             ;
++-----------------------------------+------------------------------+------------------------------+-----------------------------------+-----------------------------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UNI_Projektas|ADC_Manager:ADC_Manager1|main_state                                                                                                        ;
++------------------------------+-------------------------+-------------------------+------------------------------+------------------------------+--------------------------+
+; Name                         ; main_state.finding_bits ; main_state.waiting_bits ; main_state.waiting_preambule ; main_state.finding_preambule ; main_state.read_init_mem ;
++------------------------------+-------------------------+-------------------------+------------------------------+------------------------------+--------------------------+
+; main_state.read_init_mem     ; 0                       ; 0                       ; 0                            ; 0                            ; 0                        ;
+; main_state.finding_preambule ; 0                       ; 0                       ; 0                            ; 1                            ; 1                        ;
+; main_state.waiting_preambule ; 0                       ; 0                       ; 1                            ; 0                            ; 1                        ;
+; main_state.waiting_bits      ; 0                       ; 1                       ; 0                            ; 0                            ; 1                        ;
+; main_state.finding_bits      ; 1                       ; 0                       ; 0                            ; 0                            ; 1                        ;
++------------------------------+-------------------------+-------------------------+------------------------------+------------------------------+--------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                                                                                                             ;
 +--------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
@@ -496,12 +526,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1761  ;
-; Number of registers using Synchronous Clear  ; 212   ;
-; Number of registers using Synchronous Load   ; 160   ;
+; Total registers                              ; 1766  ;
+; Number of registers using Synchronous Clear  ; 52    ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1180  ;
+; Number of registers using Clock Enable       ; 1179  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -511,9 +541,8 @@ Encoding Type:  One-Hot
 +-------------------------------------------+---------+
 ; Inverted Register                         ; Fan out ;
 +-------------------------------------------+---------+
-; ADC_Manager:ADC_Manager1|readDataFromRam  ; 41      ;
 ; Correlation_function:corr_long|first_part ; 421     ;
-; Total number of inverted registers = 2    ;         ;
+; Total number of inverted registers = 1    ;         ;
 +-------------------------------------------+---------+
 
 
@@ -522,17 +551,18 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |UNI_Projektas|Clock_divider:clock_divider1|counter[11]                                    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |UNI_Projektas|Clock_divider:clock_divider1|counter[10]                                    ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |UNI_Projektas|UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|counter[5] ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |UNI_Projektas|Correlation_function:corr_long|output_int[14]                               ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|counter[13]                                        ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[0]           ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[0]                                     ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[5]                                     ;
-; 12:1               ; 80 bits   ; 640 LEs       ; 160 LEs              ; 480 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[5][7]                            ;
-; 15:1               ; 80 bits   ; 800 LEs       ; 160 LEs              ; 640 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[18][6]                           ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|Selector0                                 ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector3               ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |UNI_Projektas|Correlation_function:corr_long|output_int[8]                                ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|counter[1]                                         ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[2]           ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[1]                                     ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[3]                                     ;
+; 12:1               ; 80 bits   ; 640 LEs       ; 160 LEs              ; 480 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[6][7]                            ;
+; 15:1               ; 80 bits   ; 800 LEs       ; 160 LEs              ; 640 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[13][3]                           ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|Selector3                                 ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector6               ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Selector4                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 
 
@@ -2099,7 +2129,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -2109,7 +2139,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jan 20 16:10:35 2023
+    Info: Processing started: Sat Jan 21 12:35:53 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file adc_manager.vhd
@@ -2147,6 +2177,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file uart_fi
 Info (12127): Elaborating entity "UNI_Projektas" for the top level hierarchy
 Info (12128): Elaborating entity "ADC_ram_shifter" for hierarchy "ADC_ram_shifter:adc_ram_shifter_1"
 Info (12128): Elaborating entity "ADC_Manager" for hierarchy "ADC_Manager:ADC_Manager1"
+Warning (10036): Verilog HDL or VHDL warning at ADC_Manager.vhd(59): object "data_end" assigned a value but never read
 Info (12128): Elaborating entity "wizard_ram" for hierarchy "wizard_ram:wizard_ram_1"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "wizard_ram:wizard_ram_1|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "wizard_ram:wizard_ram_1|altsyncram:altsyncram_component"
@@ -2282,16 +2313,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "UART_RX"
-Info (21057): Implemented 3298 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3471 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 2983 logic cells
+    Info (21061): Implemented 3156 logic cells
     Info (21064): Implemented 272 RAM segments
     Info (21062): Implemented 25 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4687 megabytes
-    Info: Processing ended: Fri Jan 20 16:10:42 2023
-    Info: Elapsed time: 00:00:07
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4685 megabytes
+    Info: Processing ended: Sat Jan 21 12:35:59 2023
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 
 

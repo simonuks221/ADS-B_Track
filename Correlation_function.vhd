@@ -47,9 +47,7 @@ begin
 			for i in 0 to 25-1 loop
 				temp_c := temp_c + to_integer(unsigned((input_adc_values_reduced(i*8+8-1 downto i*8)))) * to_integer(unsigned((input_function_reduced(i))));
 			end loop;
-			--if(first_part = '0') then
-				--output_value <= std_logic_vector(to_unsigned(temp_c, output_value'length));
-			--end if;
+
 			if(first_part = '0') then
 				output_int <= temp_c + temp_int;
 				temp_int <= 0;
