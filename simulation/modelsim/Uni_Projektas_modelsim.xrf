@@ -1,5 +1,4 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/UNI_Projektas.vht
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd
@@ -16,6 +15,7 @@ source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.v
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.qip
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
+source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/Uni_Projektas.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd

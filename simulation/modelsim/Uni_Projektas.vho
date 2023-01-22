@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "01/21/2023 19:58:26"
+-- DATE "01/22/2023 13:28:38"
 
 -- 
 -- Device: Altera EP2C5T144C8 Package TQFP144
@@ -5274,10 +5274,6 @@ SIGNAL \adc_ram_shifter_1|data_b_2\ : std_logic_vector(127 DOWNTO 0);
 SIGNAL \adc_ram_shifter_1|data_b_1\ : std_logic_vector(127 DOWNTO 0);
 SIGNAL \adc_ram_shifter_1|data_a_2\ : std_logic_vector(127 DOWNTO 0);
 SIGNAL \adc_ram_shifter_1|data_a_1\ : std_logic_vector(127 DOWNTO 0);
-SIGNAL \UART_Controller_1|uart_tx_1|data_index\ : std_logic_vector(2 DOWNTO 0);
-SIGNAL \ADC_IN~combout\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \ram1|altsyncram_component|auto_generated|q_b\ : std_logic_vector(127 DOWNTO 0);
-SIGNAL \ram1|altsyncram_component|auto_generated|q_a\ : std_logic_vector(127 DOWNTO 0);
 SIGNAL \ADC_Manager1|ram_counter\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \ADC_Manager1|data_counts\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \ADC_Manager1|data_buffer\ : std_logic_vector(5 DOWNTO 0);
@@ -5295,6 +5291,10 @@ SIGNAL \corr_long|temp_int\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \corr_long|output_int\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \ram2|altsyncram_component|auto_generated|q_b\ : std_logic_vector(127 DOWNTO 0);
 SIGNAL \ram2|altsyncram_component|auto_generated|q_a\ : std_logic_vector(127 DOWNTO 0);
+SIGNAL \ram1|altsyncram_component|auto_generated|q_a\ : std_logic_vector(127 DOWNTO 0);
+SIGNAL \ram1|altsyncram_component|auto_generated|q_b\ : std_logic_vector(127 DOWNTO 0);
+SIGNAL \UART_Controller_1|uart_tx_1|data_index\ : std_logic_vector(2 DOWNTO 0);
+SIGNAL \ADC_IN~combout\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \ADC_Manager1|ALT_INV_main_state.waiting_preambule~regout\ : std_logic;
 SIGNAL \ADC_Manager1|ALT_INV_c_en~combout\ : std_logic;
 SIGNAL \ADC_Manager1|ALT_INV_main_state.waiting_bits~regout\ : std_logic;

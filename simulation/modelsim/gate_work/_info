@@ -3,85 +3,85 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\simulation\modelsim
-Euni_projektas
-Z1 w1673973645
-Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
-Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
-Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
-Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z7 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
-Z8 dC:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\simulation\modelsim
-Z9 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/Uni_Projektas.vho
-Z10 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/Uni_Projektas.vho
+Etestbenchas
+Z1 w1674381672
+Z2 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\simulation\modelsim
+Z7 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
+Z8 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
 l0
-L34
-VAX?2F4I]`SP8:1CO4lbnc2
-Z11 OV;C;10.1d;51
-32
-Z12 !s108 1673973672.004000
-Z13 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/Uni_Projektas.vho|
-Z14 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/Uni_Projektas.vho|
-Z15 o-work work -O0
-Z16 tExplicit 1
-!s100 L<zNilF;=mW<JPhP;S;ET1
+L33
+Vd9BmA@CMHHXkRaPGH8zC;0
+Z9 OV;C;10.1d;51
+31
+Z10 !s108 1674386082.146000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
+Z12 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 @bi2Z>1El9e`CPAG44OJO2
 !i10b 1
-Astructure
+Auni_projektas_arch
 R2
 R3
 R4
 R5
-R6
-R7
-DEx4 work 13 uni_projektas 0 22 AX?2F4I]`SP8:1CO4lbnc2
-l5081
-L62
-V^IDW1E_N2zHlU[afXe2PT2
-!s100 UY^F5QCL[k<==c`=dMSb93
+DEx4 work 11 testbenchas 0 22 d9BmA@CMHHXkRaPGH8zC;0
+l88
+L47
+V;zZYmA0^5>L6aB?Y_UPeS2
+R9
+31
+R10
 R11
-32
 R12
 R13
 R14
-R15
-R16
+!s100 P4[h5kzVC:ClOD^MCYi>32
 !i10b 1
-Euni_projektas_vhd_tst
-Z17 w1673973356
-Z18 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
-Z19 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Euni_projektas
+Z15 w1674386006
+Z16 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z17 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z18 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+R4
 R5
+Z19 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
 R6
-R8
-Z20 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/UNI_Projektas.vht
-Z21 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/UNI_Projektas.vht
+Z20 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/Uni_Projektas.vho
+Z21 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/Uni_Projektas.vho
 l0
-L33
-VC9A3Rha_79e@bJNQNnYmE1
-!s100 44b>V2IKZ29eRRLCd@>Qz2
-R11
+L34
+V?Y0DV8[oPJzVWQm1a18OR3
+!s100 hE0<6CU>RY0ILfa;Pd_<O2
+R9
 32
 !i10b 1
-Z22 !s108 1673973673.819000
-Z23 !s90 -reportprogress|30|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/UNI_Projektas.vht|
-Z24 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/UNI_Projektas.vht|
-R15
+Z22 !s108 1674386129.154000
+Z23 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/Uni_Projektas.vho|
+Z24 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/simulation/modelsim/Uni_Projektas.vho|
+Z25 o-work work -O0
+R14
+Astructure
 R16
-Auni_projektas_arch
+R17
 R18
-R19
+R4
 R5
-R6
-DEx4 work 21 uni_projektas_vhd_tst 0 22 C9A3Rha_79e@bJNQNnYmE1
-l75
-L38
-V<JSMeQPb=FIHF;amgANFZ2
-Z25 !s100 9fZ4^8=VUXV0flCZ@6bO<2
-R11
+R19
+DEx4 work 13 uni_projektas 0 22 ?Y0DV8[oPJzVWQm1a18OR3
+l5302
+L66
+VfX:nlPCN^a>G0`31en6n>2
+Z26 !s100 7o5<Y?ZTL[Hc[kV@UPOkb1
+R9
 32
 !i10b 1
 R22
 R23
 R24
-R15
-R16
+R25
+R14
