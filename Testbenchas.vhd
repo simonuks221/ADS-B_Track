@@ -6,7 +6,7 @@ use ieee.std_logic_textio.all;
 
 ENTITY Testbenchas IS
 generic(
-VOLTAGE_DATA_LEN: integer := 195
+VOLTAGE_DATA_LEN: integer := 146
 );
 
 END Testbenchas;

@@ -36,27 +36,27 @@ begin
 			output_int <= 0;
 		else
 			temp_c := 0;
-			--if(first_part = '1') then
-			--	input_function_reduced := input_function(0 to 25-1);
-			--	input_adc_values_reduced := input_adc_values(200-1 downto 0);
-			--else
-			--	input_function_reduced := input_function(25 to 50-1);
-			--	input_adc_values_reduced := input_adc_values(400-1 downto 200);
-			--end if;
+			if(first_part = '1') then
+				input_function_reduced := input_function(0 to 25-1);
+				input_adc_values_reduced := input_adc_values(200-1 downto 0);
+			else
+				input_function_reduced := input_function(25 to 50-1);
+				input_adc_values_reduced := input_adc_values(400-1 downto 200);
+			end if;
 			
-			for i in 0 to 14 loop--25-1 loop
+			for i in 0 to 25-1 loop
 				--Geras su dvigubu iskomentuotas
-				--temp_c := temp_c + to_integer(unsigned((input_adc_values_reduced(i*8+8-1 downto i*8)))) * to_integer(unsigned((input_function_reduced(i))));
-				temp_c := temp_c + to_integer(unsigned((input_adc_values(i*8+8-1 downto i*8)))) * to_integer(unsigned((input_function(i))));
+				temp_c := temp_c + to_integer(unsigned((input_adc_values_reduced(i*8+8-1 downto i*8)))) * to_integer(unsigned((input_function_reduced(i))));
+				--temp_c := temp_c + to_integer(unsigned((input_adc_values(i*8+8-1 downto i*8)))) * to_integer(unsigned((input_function(i))));
 			end loop;
 			output_int <= temp_c;
-			--if(first_part = '0') then
-			--	output_int <= temp_c + temp_int;
-			--	temp_int <= 0;
-			--else
-			--	temp_int <= temp_c;
-			--end if;
-			--first_part <= not first_part;
+			if(first_part = '0') then
+				output_int <= temp_c + temp_int;
+				temp_int <= 0;
+			else
+				temp_int <= temp_c;
+			end if;
+			first_part <= not first_part;
 			
 		end if;
 	end if;
