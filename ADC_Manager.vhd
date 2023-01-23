@@ -14,7 +14,7 @@ entity ADC_Manager is
 		BITS_FUNC_LEN: integer := 20; --60 40 38 4 su UART 61 45 38 su 'upgreidais' lmao
 		MAX_DATA_COUNTS : integer := 3;
 		BITS_PER_DATA_COUNT : integer := 2;
-		PREAMBULE_FUNC_THRESHOLD : integer := 480000;
+		PREAMBULE_FUNC_THRESHOLD : integer := 400000;--480000;
 		BITS_FUNC_THRESHOLD : integer := 3;
 		PREAMBULE_DELAY_LEN: integer := 30 --3us, 30 atskaitu
 	);

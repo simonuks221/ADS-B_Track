@@ -10,9 +10,9 @@ entity Correlation_function is
 	port(
 		EN: in std_logic := '0';
 		CLK: in std_logic;
-		input_function : in double_array(0 to function_length - 1);
-		input_adc_values: in std_logic_vector(400-1 downto 0);
-		output_value : out std_logic_vector(19 downto 0)
+		input_function : in double_array(0 to function_length - 1) := (others => (others => '0'));
+		input_adc_values: in std_logic_vector(400-1 downto 0) := (others => '0');
+		output_value : out std_logic_vector(19 downto 0) := (others => '0')
 	);
 end entity;
 
@@ -26,8 +26,8 @@ begin
 output_value <= std_logic_vector(to_unsigned(output_int, output_value'length));
 
 process(CLK, EN)
-variable temp_c: integer := 0;
-variable input_adc_values_reduced : std_logic_vector(200-1 downto 0);
+variable temp_c: integer range 0 to 500000 := 0;
+variable input_adc_values_reduced : std_logic_vector(200-1 downto 0) := (others => '0');
 variable input_function_reduced : double_array(0 to 25 - 1);
 begin
 	if rising_edge(CLK) then
@@ -36,25 +36,28 @@ begin
 			output_int <= 0;
 		else
 			temp_c := 0;
-			if(first_part = '1') then
-				input_function_reduced := input_function(0 to 25-1);
-				input_adc_values_reduced := input_adc_values(200-1 downto 0);
-			else
-				input_function_reduced := input_function(25 to 50-1);
-				input_adc_values_reduced := input_adc_values(400-1 downto 200);
-			end if;
+			--if(first_part = '1') then
+			--	input_function_reduced := input_function(0 to 25-1);
+			--	input_adc_values_reduced := input_adc_values(200-1 downto 0);
+			--else
+			--	input_function_reduced := input_function(25 to 50-1);
+			--	input_adc_values_reduced := input_adc_values(400-1 downto 200);
+			--end if;
 			
-			for i in 0 to 25-1 loop
-				temp_c := temp_c + to_integer(unsigned((input_adc_values_reduced(i*8+8-1 downto i*8)))) * to_integer(unsigned((input_function_reduced(i))));
+			for i in 0 to 14 loop--25-1 loop
+				--Geras su dvigubu iskomentuotas
+				--temp_c := temp_c + to_integer(unsigned((input_adc_values_reduced(i*8+8-1 downto i*8)))) * to_integer(unsigned((input_function_reduced(i))));
+				temp_c := temp_c + to_integer(unsigned((input_adc_values(i*8+8-1 downto i*8)))) * to_integer(unsigned((input_function(i))));
 			end loop;
-
-			if(first_part = '0') then
-				output_int <= temp_c + temp_int;
-				temp_int <= 0;
-			else
-				temp_int <= temp_c;
-			end if;
-			first_part <= not first_part;
+			output_int <= temp_c;
+			--if(first_part = '0') then
+			--	output_int <= temp_c + temp_int;
+			--	temp_int <= 0;
+			--else
+			--	temp_int <= temp_c;
+			--end if;
+			--first_part <= not first_part;
+			
 		end if;
 	end if;
 end process;

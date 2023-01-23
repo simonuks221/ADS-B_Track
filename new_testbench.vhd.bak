@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity new_testbench is
+
+end entity;
+
+architecture arc of new_testbench is
+
+begin
+
+
+end architecture;

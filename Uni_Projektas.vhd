@@ -12,7 +12,9 @@ ADC_IN : in std_logic_vector(7 downto 0);
 DATA_OUT : out std_logic_vector(6-1 downto 0);
 SYNC : out std_logic;
 UART_TX: out std_logic;
-UART_RX: in std_logic := 'Z'
+UART_RX: in std_logic := 'Z';
+test_val: out std_logic_vector(19 downto 0);
+test_val2: out std_logic_vector(19 downto 0)
 );
 end entity;
 
@@ -134,7 +136,6 @@ signal func_ram_out : std_logic_vector(7 downto 0);
 signal c_en : std_logic := '0';
 signal c_long_value : std_logic_vector(20-1 downto 0) := (others => '0');
 signal c_long_func_input : double_array(0 to 50-1) := (others => (others => '0'));
-signal adc_buffer : double_array(0 to 50-1) := (others => (others => '0'));
 
 --Big ram signals
 signal address_a_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
@@ -166,6 +167,10 @@ signal UART_CONTROLLER_DATA_IN : std_logic_vector(7 downto 0) := (others => '0')
 signal UART_CONTROLLER_DATA_REQ : std_Logic := '0';
 
 begin
+
+test_val <= c_long_value;--c_long_func_input(0) & c_long_func_input(1) & std_logic_vector(to_unsigned(0, 4));-- std_logic_vector(to_unsigned(0, 12)) & 
+test_val2 <= c_long_func_input(48) & c_long_func_input(49) & std_logic_vector(to_unsigned(0, 4));
+
 adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => address_a_1, address_a_2 => address_a_2, address_b_1 => address_b_1,
 	address_b_2 => address_b_2, data_a_1 => data_a_1, data_a_2 => data_a_2, data_b_1 => data_b_1, data_b_2 => data_b_2,
 	q_a_1 => q_a_1, q_a_2 => q_a_2, q_b_1 => q_b_1, q_b_2 => q_b_2,
