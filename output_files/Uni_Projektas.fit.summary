@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue Jan 24 11:04:22 2023
+Fitter Status : Successful - Tue Jan 24 16:40:28 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Uni_Projektas
 Top-level Entity Name : UNI_Projektas
 Family : Cyclone II
 Device : EP2C5T144C8
 Timing Models : Final
-Total logic elements : 4,584 / 4,608 ( 99 % )
-    Total combinational functions : 4,563 / 4,608 ( 99 % )
-    Dedicated logic registers : 1,638 / 4,608 ( 36 % )
-Total registers : 1638
+Total logic elements : 2,812 / 4,608 ( 61 % )
+    Total combinational functions : 2,290 / 4,608 ( 50 % )
+    Dedicated logic registers : 1,821 / 4,608 ( 40 % )
+Total registers : 1821
 Total pins : 58 / 89 ( 65 % )
 Total virtual pins : 0
 Total memory bits : 4,104 / 119,808 ( 3 % )
-Embedded Multiplier 9-bit elements : 26 / 26 ( 100 % )
+Embedded Multiplier 9-bit elements : 25 / 26 ( 96 % )
 Total PLLs : 0 / 2 ( 0 % )

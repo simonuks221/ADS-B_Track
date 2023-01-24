@@ -11,7 +11,7 @@ entity Correlation_Gate is
 		CLK : in std_logic := '0';
 		input_func : in std_logic_vector(input_size*8-1 downto 0) := (others => '0');
 		input_adc : in std_logic_vector(input_Size*8-1 downto 0) := (others => '0');
-		output : out std_logic_vector(17 downto 0) := (others => '0')
+		output : out std_logic_vector(18 downto 0) := (others => '0')
 	);
 end entity;
 
@@ -20,7 +20,7 @@ architecture arc of Correlation_Gate is
 begin
 
 process(CLK)
-variable o : integer range 0 to 200000 := 0;
+variable o : integer range 0 to 300000 := 0;
 begin
 	if(rising_edge(CLK)) then
 		o := 0;
