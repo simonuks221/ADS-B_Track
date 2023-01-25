@@ -64,7 +64,7 @@ signal c_short_func_input_index : integer range 0 to 9 := 0;
 signal check_corr : std_logic := '0';
 
 --FSM
-type m_state is (read_init_mem, finding_preambule, waiting_preambule, waiting_bits, finding_bits, idle);
+type m_state is (read_init_mem, finding_preambule, waiting_preambule, waiting_bits, finding_bits, sending_bits, idle);
 
 signal main_state : m_state := read_init_mem;
 signal main_next_state : m_state := read_init_mem;
@@ -178,7 +178,7 @@ begin
 						
 						data_counts <= data_counts + 1;
 						if(data_counts = MAX_DATA_COUNTS-1) then
-							main_next_state <= idle;
+							main_next_state <= sending_bits;
 						else
 							main_next_state <= waiting_bits;
 						end if;
@@ -191,6 +191,11 @@ begin
 				else
 					c_short_func_input_index <= c_short_func_input_index + 1;
 				end if;
+			when sending_bits =>
+				DATA_DONE <= '1';
+				main_next_state <= idle;
+			when idle =>
+				DATA_DONE <= '0';
 			when others =>
 		end case;
 	end if;
@@ -212,7 +217,6 @@ begin
 				bit_counter <= bit_counter + 1;
 			when finding_bits =>
 				bit_counter <= 0;
-				--DATA_DONE <= '0';
 			when others =>
 				
 		end case;

@@ -6,15 +6,18 @@ use ieee.std_logic_textio.all;
 use work.corr_package.all;
 
 entity UNI_Projektas is
+generic (
+	baud_rate : integer := 434 --115200 baud reitui toki prescaleri naudojam
+);
 port(
-CLK : in std_logic;
-ADC_IN : in std_logic_vector(7 downto 0);
-DATA_OUT : out std_logic_vector(6-1 downto 0);
-SYNC : out std_logic;
-UART_TX: out std_logic;
-UART_RX: in std_logic := 'Z';
-test_val: out std_logic_vector(19 downto 0);
-test_val2: out std_logic_vector(19 downto 0)
+	CLK : in std_logic;
+	ADC_IN : in std_logic_vector(7 downto 0);
+	DATA_OUT : out std_logic_vector(6-1 downto 0);
+	SYNC : out std_logic;
+	UART_TX: out std_logic;
+	UART_RX: in std_logic := 'Z';
+	test_val: out std_logic_vector(19 downto 0);
+	test_val2: out std_logic_vector(19 downto 0)
 );
 end entity;
 
@@ -198,7 +201,7 @@ input_adc_values <= q_b_2(15 downto 0)& q_a_2 & q_b_1 & q_a_1;
 
 UART_CONTROLLER_DATA_IN <= "00" & RECEIVED_CODE;
 
-UART_Controller_1 : UART_Controller port map(CLK => CLK,
+UART_Controller_1 : UART_Controller generic map(baud_rate => baud_rate) port map(CLK => CLK,
 	SEND_DATA_IN => UART_CONTROLLER_DATA_IN,
 	SEND_DATA_IN_REQ => UART_CONTROLLER_DATA_REQ,
 	TX => UART_TX);

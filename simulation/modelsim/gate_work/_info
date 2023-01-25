@@ -19,7 +19,7 @@ VV]03D4:>fR:4dXNGbzQ@11
 Z9 OV;C;10.1d;51
 31
 !i10b 1
-Z10 !s108 1674571377.843000
+Z10 !s108 1674587940.947000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
 Z12 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
 Z13 o-93 -work work -O0
@@ -43,7 +43,7 @@ R12
 R13
 R14
 Euni_projektas
-Z15 w1674571236
+Z15 w1674587923
 Z16 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
 Z17 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
 Z18 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
@@ -51,16 +51,16 @@ R4
 R5
 Z19 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
 R6
-Z20 8Uni_Projektas_fast.vho
-Z21 FUni_Projektas_fast.vho
+Z20 8Uni_Projektas.vho
+Z21 FUni_Projektas.vho
 l0
 L34
 V`7kC=K^5b>SaHjLD9KGch3
 R9
 31
-Z22 !s108 1674571377.075000
-Z23 !s90 -reportprogress|300|-93|-work|work|Uni_Projektas_fast.vho|
-Z24 !s107 Uni_Projektas_fast.vho|
+Z22 !s108 1674587940.162000
+Z23 !s90 -reportprogress|300|-93|-work|work|Uni_Projektas.vho|
+Z24 !s107 Uni_Projektas.vho|
 R13
 R14
 !s100 TM`^ok]PmJ5C]m^LQ><Fg0
@@ -73,9 +73,9 @@ R4
 R5
 R19
 DEx4 work 13 uni_projektas 0 22 `7kC=K^5b>SaHjLD9KGch3
-l5482
+l5507
 L108
-V[3O1`CYm@gW2ShUj]AgAA1
+Vlg_1SBhbjT?9HiPk`kGe21
 R9
 31
 R22
@@ -83,5 +83,5 @@ R23
 R24
 R13
 R14
-!s100 5JFD`70L6eFaS^cTAeXV13
+!s100 M@oU2j2>]Tz@ZY`=7Yncg1
 !i10b 1
