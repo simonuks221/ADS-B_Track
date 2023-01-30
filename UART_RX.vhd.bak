@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
+
+entity UART_RX is
+port(
+CLK : in std_logic := '0';
+RX : in std_logic := '0';
+DATA_OUT : std_logic_vector(7 downto 0)
+);
+end entity;
+
+architecture arc of UART_RX is 
+
+begin
+
+process(CLK)
+begin
+	if(rising_edge(CLK)) then
+	
+	end if;
+end process;
+
+end architecture;

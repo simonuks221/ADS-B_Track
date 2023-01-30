@@ -21,8 +21,6 @@ SIGNAL SYNC : STD_LOGIC;
 signal arrIndex : integer := 0;
 SIGNAL UART_TX: std_logic := '0';
 SIGNAL UART_RX: std_logic := '0';
-signal test_val : std_logic_vector(19 downto 0);
-signal test_val2 : std_logic_vector(19 downto 0);
 
 --Functions
 --Read from file
@@ -51,23 +49,18 @@ COMPONENT UNI_Projektas
 	DATA_OUT : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
 	SYNC : OUT STD_LOGIC;
 	UART_TX: out std_logic;
-	UART_RX: in std_logic := 'Z';
-	test_val: out std_logic_vector(19 downto 0);
-	test_val2: out std_logic_vector(19 downto 0)
+	UART_RX_RX: in std_logic
 	);
 END COMPONENT;
 BEGIN
 i1 : UNI_Projektas
 	PORT MAP (
-	-- list connections between master ports and signals
 	ADC_IN => ADC_IN,
 	CLK => CLK,
 	DATA_OUT => DATA_OUT,
 	SYNC => SYNC,
-	UART_RX => UART_RX,
-	UART_TX => UART_TX,
-	test_val => test_val,
-	test_val2 => test_val2
+	UART_RX_RX => UART_RX,
+	UART_TX => UART_TX
 );
 	
 CLK <= not CLK after 0.01us; --50MHz 0.01us 50MHz

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Uni_Projektas
-Mon Jan 30 18:10:39 2023
+Mon Jan 30 20:24:39 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -108,16 +108,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jan 30 18:10:39 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan 30 20:24:38 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 3,465                                           ;
-;     Total combinational functions  ; 2,312                                           ;
+; Total logic elements               ; 3,460                                           ;
+;     Total combinational functions  ; 2,307                                           ;
 ;     Dedicated logic registers      ; 1,840                                           ;
 ; Total registers                    ; 1840                                            ;
-; Total pins                         ; 58                                              ;
+; Total pins                         ; 18                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 4,216                                           ;
 ; Embedded Multiplier 9-bit elements ; 25                                              ;
@@ -277,29 +277,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 3,465 ;
+; Estimated Total logic elements              ; 3,460 ;
 ;                                             ;       ;
-; Total combinational functions               ; 2312  ;
+; Total combinational functions               ; 2307  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 796   ;
-;     -- 3 input functions                    ; 1029  ;
-;     -- <=2 input functions                  ; 487   ;
+;     -- 4 input functions                    ; 805   ;
+;     -- 3 input functions                    ; 1023  ;
+;     -- <=2 input functions                  ; 479   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1576  ;
+;     -- normal mode                          ; 1571  ;
 ;     -- arithmetic mode                      ; 736   ;
 ;                                             ;       ;
 ; Total registers                             ; 1840  ;
 ;     -- Dedicated logic registers            ; 1840  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 58    ;
+; I/O pins                                    ; 18    ;
 ; Total memory bits                           ; 4216  ;
 ; Embedded Multiplier 9-bit elements          ; 25    ;
 ; Maximum fan-out node                        ; CLK   ;
 ; Maximum fan-out                             ; 1519  ;
-; Total fan-out                               ; 13546 ;
-; Average fan-out                             ; 2.99  ;
+; Total fan-out                               ; 13512 ;
+; Average fan-out                             ; 3.01  ;
 +---------------------------------------------+-------+
 
 
@@ -308,8 +308,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                ; Library Name ;
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |UNI_Projektas                                     ; 2312 (1)          ; 1840 (0)     ; 4216        ; 25           ; 25      ; 0         ; 58   ; 0            ; |UNI_Projektas                                                                                                                                                                                     ; work         ;
-;    |ADC_Manager:ADC_Manager1|                      ; 1331 (1331)       ; 1169 (1169)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                                                                                                                            ; work         ;
+; |UNI_Projektas                                     ; 2307 (1)          ; 1840 (0)     ; 4216        ; 25           ; 25      ; 0         ; 18   ; 0            ; |UNI_Projektas                                                                                                                                                                                     ; work         ;
+;    |ADC_Manager:ADC_Manager1|                      ; 1326 (1326)       ; 1169 (1169)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                                                                                                                            ; work         ;
 ;    |ADC_ram_shifter:adc_ram_shifter_1|             ; 0 (0)             ; 512 (512)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_ram_shifter:adc_ram_shifter_1                                                                                                                                                   ; work         ;
 ;    |Clock_divider:clock_divider1|                  ; 24 (24)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Clock_divider:clock_divider1                                                                                                                                                        ; work         ;
 ;    |Correlation_function:corr_long|                ; 870 (462)         ; 79 (41)      ; 0           ; 25           ; 25      ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long                                                                                                                                                      ; work         ;
@@ -569,18 +569,18 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |UNI_Projektas|Clock_divider:clock_divider1|counter[15]                                    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |UNI_Projektas|UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|counter[9] ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |UNI_Projektas|Correlation_function:corr_long|f_output[9]                                  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |UNI_Projektas|Clock_divider:clock_divider1|counter[13]                                    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |UNI_Projektas|UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|counter[2] ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |UNI_Projektas|Correlation_function:corr_long|f_output[19]                                 ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[1]           ;
-; 11:1               ; 80 bits   ; 560 LEs       ; 160 LEs              ; 400 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[7][5]                            ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[0]                                     ;
+; 11:1               ; 80 bits   ; 560 LEs       ; 160 LEs              ; 400 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[1][5]                            ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[1]                                     ;
 ; 10:1               ; 4 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[5]                                     ;
-; 14:1               ; 80 bits   ; 720 LEs       ; 160 LEs              ; 560 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[18][0]                           ;
+; 14:1               ; 80 bits   ; 720 LEs       ; 160 LEs              ; 560 LEs                ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|c_long_func_input[10][2]                           ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|Selector3                                 ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector6               ;
-; 12:1               ; 5 bits    ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Selector6                                          ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; No         ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Selector5                                          ;
+; 12:1               ; 5 bits    ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Selector4                                          ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; No         ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Selector3                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 
 
@@ -2263,7 +2263,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Jan 30 18:10:31 2023
+    Info: Processing started: Mon Jan 30 20:24:31 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file adc_manager.vhd
@@ -2310,6 +2310,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file correla
 Info (12021): Found 2 design units, including 1 entities, in source file sync_pll.vhd
     Info (12022): Found design unit 1: sync_pll-SYN
     Info (12023): Found entity 1: SYNC_PLL
+Info (12021): Found 2 design units, including 1 entities, in source file uart_rx.vhd
+    Info (12022): Found design unit 1: UART_RX-arc
+    Info (12023): Found entity 1: UART_RX
 Info (12127): Elaborating entity "Uni_Projektas" for the top level hierarchy
 Info (12128): Elaborating entity "ADC_ram_shifter" for hierarchy "ADC_ram_shifter:adc_ram_shifter_1"
 Info (12128): Elaborating entity "ADC_Manager" for hierarchy "ADC_Manager:ADC_Manager1"
@@ -2447,25 +2450,20 @@ Info (12133): Instantiated megafunction "Correlation_function:corr_long|Correlat
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_o5t.tdf
     Info (12023): Found entity 1: mult_o5t
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "test_val2[0]" is stuck at GND
-    Warning (13410): Pin "test_val2[1]" is stuck at GND
-    Warning (13410): Pin "test_val2[2]" is stuck at GND
-    Warning (13410): Pin "test_val2[3]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "UART_RX"
-Info (21057): Implemented 3822 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "UART_RX_RX"
+Info (21057): Implemented 3777 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 3467 logic cells
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 3462 logic cells
     Info (21064): Implemented 272 RAM segments
     Info (21062): Implemented 25 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4688 megabytes
-    Info: Processing ended: Mon Jan 30 18:10:39 2023
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4685 megabytes
+    Info: Processing ended: Mon Jan 30 20:24:39 2023
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:08
 
 
