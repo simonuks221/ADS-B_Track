@@ -130,6 +130,14 @@ port(
 );
 end component;
 
+component SYNC_PLL IS
+	PORT
+	(
+		inclk0		: IN STD_LOGIC  := '0';
+		c0		: OUT STD_LOGIC 
+	);
+END component;
+
 --Function ram signals
 signal func_ram_address_bus : std_logic_vector(7 downto 0) := (others => '0');
 signal func_ram_en : std_logic := '0';
@@ -194,6 +202,8 @@ ram1 : big_ram_wizard port map(clock => CLK, address_a => address_a_1, address_b
 ram2 : big_ram_wizard port map(clock => CLK, address_a => address_a_2, address_b => address_b_2, data_a => data_a_2,
 										data_b => data_b_2, wren_a => wren_a_2, wren_b => wren_b_2, q_a => q_a_2, q_b => q_b_2);
 
+--pll :  SYNC_PLL port map(inclk0 =>CLK, c0 => sync_clk);
+										
 DATA_OUT <= RECEIVED_CODE;
 SYNC <= sync_clk;
 

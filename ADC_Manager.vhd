@@ -60,7 +60,7 @@ signal data_counts : integer := 0;
 signal data_end : std_logic := '0';
 
 --Correlation inputs
-signal c_short_func_input_index : integer range 0 to 9 := 0;
+signal c_short_func_input_index : natural range 0 to 9 := 0; --Galim iki 8 sumažint bet neveikia kažkokio velnio
 signal check_corr : std_logic := '0';
 
 --FSM
@@ -152,9 +152,9 @@ begin
 						c_long_func_input(10 to 20-1) <= c_0_func;
 					when 6 =>
 						c_10_value <=  to_integer(unsigned(c_long_value));
-					when 8 =>
+					when 7 =>
 						c_00_value <=  to_integer(unsigned(c_long_value));
-					when 9 =>
+					when 8 =>
 						c_long_func_input(0 to 10-1) <= c_0_func;
 						c_long_func_input(10 to 20-1) <= c_1_func;
 						c_short_func_input_index <= 0;
@@ -186,7 +186,7 @@ begin
 				when others =>
 						
 				end case;
-				if(c_short_func_input_index = 9) then
+				if(c_short_func_input_index = 8) then
 					c_short_func_input_index <= 0;
 				else
 					c_short_func_input_index <= c_short_func_input_index + 1;
