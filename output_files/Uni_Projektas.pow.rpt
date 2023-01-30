@@ -1,0 +1,390 @@
+PowerPlay Power Analyzer report for Uni_Projektas
+Sun Jan 29 17:27:33 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. PowerPlay Power Analyzer Summary
+  3. PowerPlay Power Analyzer Settings
+  4. Indeterminate Toggle Rates
+  5. Operating Conditions Used
+  6. Thermal Power Dissipation by Block
+  7. Thermal Power Dissipation by Block Type
+  8. Thermal Power Dissipation by Hierarchy
+  9. Core Dynamic Thermal Power Dissipation by Clock Domain
+ 10. Current Drawn from Voltage Supplies Summary
+ 11. VCCIO Supply Current Drawn by I/O Bank
+ 12. VCCIO Supply Current Drawn by Voltage
+ 13. Confidence Metric Details
+ 14. Signal Activities
+ 15. PowerPlay Power Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------+
+; PowerPlay Power Analyzer Summary                                                          ;
++----------------------------------------+--------------------------------------------------+
+; PowerPlay Power Analyzer Status        ; Successful - Sun Jan 29 17:27:33 2023            ;
+; Quartus II 64-Bit Version              ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition  ;
+; Revision Name                          ; Uni_Projektas                                    ;
+; Top-level Entity Name                  ; UNI_Projektas                                    ;
+; Family                                 ; Cyclone II                                       ;
+; Device                                 ; EP2C5T144C8                                      ;
+; Power Models                           ; Final                                            ;
+; Total Thermal Power Dissipation        ; 114.62 mW                                        ;
+; Core Dynamic Thermal Power Dissipation ; 58.07 mW                                         ;
+; Core Static Thermal Power Dissipation  ; 18.21 mW                                         ;
+; I/O Thermal Power Dissipation          ; 38.33 mW                                         ;
+; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
++----------------------------------------+--------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; PowerPlay Power Analyzer Settings                                                                                                  ;
++----------------------------------------------------------------------------+---------------------------------------+---------------+
+; Option                                                                     ; Setting                               ; Default Value ;
++----------------------------------------------------------------------------+---------------------------------------+---------------+
+; Use smart compilation                                                      ; On                                    ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                                    ; On            ;
+; Enable compact report table                                                ; Off                                   ; Off           ;
+; Preset Cooling Solution                                                    ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ;               ;
+; Board thermal model                                                        ; None (CONSERVATIVE)                   ;               ;
+; Default Power Toggle Rate                                                  ; 12.5%                                 ; 12.5%         ;
+; Default Power Input I/O Toggle Rate                                        ; 12.5%                                 ; 12.5%         ;
+; Use vectorless estimation                                                  ; On                                    ; On            ;
+; Use Input Files                                                            ; Off                                   ; Off           ;
+; Filter Glitches in VCD File Reader                                         ; On                                    ; On            ;
+; Power Analyzer Report Signal Activity                                      ; Off                                   ; Off           ;
+; Power Analyzer Report Power Dissipation                                    ; Off                                   ; Off           ;
+; Device Power Characteristics                                               ; TYPICAL                               ; TYPICAL       ;
+; Automatically Compute Junction Temperature                                 ; On                                    ; On            ;
+; Specified Junction Temperature                                             ; 25                                    ; 25            ;
+; Ambient Temperature                                                        ; 25                                    ; 25            ;
+; Use Custom Cooling Solution                                                ; Off                                   ; Off           ;
+; Board Temperature                                                          ; 25                                    ; 25            ;
+; Enable HPS                                                                 ; Off                                   ; Off           ;
+; Processor Frequency                                                        ; 0.0                                   ; 0.0           ;
++----------------------------------------------------------------------------+---------------------------------------+---------------+
+
+
++---------------------------------------+
+; Indeterminate Toggle Rates            ;
++---------+-----------------------------+
+; Node    ; Reason                      ;
++---------+-----------------------------+
+; UART_RX ; No valid clock domain found ;
++---------+-----------------------------+
+
+
++--------------------------------------------------------------------------+
+; Operating Conditions Used                                                ;
++---------------------------------------------+----------------------------+
+; Setting                                     ; Value                      ;
++---------------------------------------------+----------------------------+
+; Device power characteristics                ; Typical                    ;
+;                                             ;                            ;
+; Voltages                                    ;                            ;
+;     VCCINT                                  ; 1.20 V                     ;
+;     3.3-V LVTTL I/O Standard                ; 3.3 V                      ;
+;                                             ;                            ;
+; Auto computed junction temperature          ; 26.7 degrees Celsius       ;
+;     Ambient temperature                     ; 25.0 degrees Celsius       ;
+;     Junction-to-Case thermal resistance     ; 10.00 degrees Celsius/Watt ;
+;     Case-to-Heat Sink thermal resistance    ; 0.10 degrees Celsius/Watt  ;
+;     Heat Sink-to-Ambient thermal resistance ; 4.30 degrees Celsius/Watt  ;
+;                                             ;                            ;
+; Board model used                            ; None                       ;
++---------------------------------------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block                                                                                                           ;
++------------+------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+; Block Name ; Block Type ; Total Thermal Power ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ;
++------------+------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+(1) The "Thermal Power Dissipation by Block" Table has been hidden. To show this table, please select the "Write power dissipation by block to report file" option under "PowerPlay Power Analyzer Settings".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block Type                                                                                                                                                                                   ;
++----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Block Type                 ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
++----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; I/O                        ; 27.77 mW                          ; 20.50 mW                    ; 7.23 mW                        ; 0.04 mW                       ;    8.839                                                  ;
+; M4K                        ; 28.34 mW                          ; 16.80 mW                    ; --                             ; 11.54 mW                      ;   24.375                                                  ;
+; Embedded multiplier block  ; 4.34 mW                           ; 4.34 mW                     ; --                             ; 0.00 mW                       ;    4.825                                                  ;
+; Embedded multiplier output ; 1.11 mW                           ; 0.00 mW                     ; --                             ; 1.11 mW                       ;    5.428                                                  ;
+; Combinational cell         ; 9.12 mW                           ; 4.32 mW                     ; --                             ; 4.80 mW                       ;    6.806                                                  ;
+; Register cell              ; 11.69 mW                          ; 7.05 mW                     ; --                             ; 4.64 mW                       ;    6.247                                                  ;
+; Clock control block        ; 3.43 mW                           ; 0.00 mW                     ; --                             ; 3.43 mW                       ;   37.500                                                  ;
++----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+(1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                                                                                                                         ;
++----------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                               ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                                                                                                                ;
++----------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |UNI_Projektas                                           ; 85.80 mW (31.01 mW)                  ; 53.02 mW (20.50 mW)             ; 7.23 mW (7.23 mW)                 ; 25.56 mW (3.28 mW)                ; |UNI_Projektas                                                                                                                                                                                     ;
+;     |ADC_Manager:ADC_Manager1                            ; 11.05 mW (11.05 mW)                  ; 6.61 mW (6.61 mW)               ; --                                ; 4.44 mW (4.44 mW)                 ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                                                                                                                            ;
+;     |ADC_ram_shifter:adc_ram_shifter_1                   ; 3.32 mW (3.32 mW)                    ; 1.66 mW (1.66 mW)               ; --                                ; 1.66 mW (1.66 mW)                 ; |UNI_Projektas|ADC_ram_shifter:adc_ram_shifter_1                                                                                                                                                   ;
+;     |hard_block:auto_generated_inst                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |UNI_Projektas|hard_block:auto_generated_inst                                                                                                                                                      ;
+;     |Clock_divider:clock_divider1                        ; 0.29 mW (0.29 mW)                    ; 0.11 mW (0.11 mW)               ; --                                ; 0.18 mW (0.18 mW)                 ; |UNI_Projektas|Clock_divider:clock_divider1                                                                                                                                                        ;
+;     |Correlation_function:corr_long                      ; 11.17 mW (4.10 mW)                   ; 6.91 mW (1.71 mW)               ; --                                ; 4.26 mW (2.39 mW)                 ; |UNI_Projektas|Correlation_function:corr_long                                                                                                                                                      ;
+;         |Correlation_Gate:gate5                          ; 3.42 mW (0.70 mW)                    ; 2.52 mW (0.41 mW)               ; --                                ; 0.90 mW (0.29 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5                                                                                                                               ;
+;             |lpm_mult:Mult0                              ; 0.21 mW (0.00 mW)                    ; 0.18 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult0                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.21 mW (0.21 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult0|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult1                              ; 0.23 mW (0.00 mW)                    ; 0.19 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult1                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.23 mW (0.23 mW)                    ; 0.19 mW (0.19 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult1|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult2                              ; 0.22 mW (0.00 mW)                    ; 0.18 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult2                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.22 mW (0.22 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult2|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult3                              ; 0.22 mW (0.00 mW)                    ; 0.18 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult3                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.22 mW (0.22 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult3|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult4                              ; 0.23 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.05 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult4                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.23 mW (0.23 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.05 mW (0.05 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult4|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult5                              ; 0.25 mW (0.00 mW)                    ; 0.19 mW (0.00 mW)               ; --                                ; 0.06 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult5                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.25 mW (0.25 mW)                    ; 0.19 mW (0.19 mW)               ; --                                ; 0.06 mW (0.06 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult5|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult6                              ; 0.20 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult6                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.20 mW (0.20 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult6|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult7                              ; 0.21 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult7                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.21 mW (0.21 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult7|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult8                              ; 0.21 mW (0.00 mW)                    ; 0.18 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult8                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.21 mW (0.21 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult8|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult9                              ; 0.22 mW (0.00 mW)                    ; 0.18 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult9                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.22 mW (0.22 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult9|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult10                             ; 0.29 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.11 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult10                                                                                                               ;
+;                 |mult_o5t:auto_generated                 ; 0.29 mW (0.29 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.11 mW (0.11 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult10|mult_o5t:auto_generated                                                                                       ;
+;             |lpm_mult:Mult11                             ; 0.24 mW (0.00 mW)                    ; 0.16 mW (0.00 mW)               ; --                                ; 0.08 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult11                                                                                                               ;
+;                 |mult_o5t:auto_generated                 ; 0.24 mW (0.24 mW)                    ; 0.16 mW (0.16 mW)               ; --                                ; 0.08 mW (0.08 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult11|mult_o5t:auto_generated                                                                                       ;
+;         |Correlation_Gate:gate6                          ; 3.64 mW (0.91 mW)                    ; 2.68 mW (0.44 mW)               ; --                                ; 0.97 mW (0.47 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6                                                                                                                               ;
+;             |lpm_mult:Mult0                              ; 0.21 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult0                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.21 mW (0.21 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult0|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult1                              ; 0.20 mW (0.00 mW)                    ; 0.16 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult1                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.20 mW (0.20 mW)                    ; 0.16 mW (0.16 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult1|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult2                              ; 0.23 mW (0.00 mW)                    ; 0.18 mW (0.00 mW)               ; --                                ; 0.05 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult2                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.23 mW (0.23 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.05 mW (0.05 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult2|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult3                              ; 0.21 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult3                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.21 mW (0.21 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult3|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult4                              ; 0.21 mW (0.00 mW)                    ; 0.16 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult4                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.21 mW (0.21 mW)                    ; 0.16 mW (0.16 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult4|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult5                              ; 0.21 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult5                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.21 mW (0.21 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult5|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult6                              ; 0.21 mW (0.00 mW)                    ; 0.18 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult6                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.21 mW (0.21 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult6|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult7                              ; 0.21 mW (0.00 mW)                    ; 0.18 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult7                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.21 mW (0.21 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult7|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult8                              ; 0.21 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult8                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.21 mW (0.21 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult8|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult9                              ; 0.20 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult9                                                                                                                ;
+;                 |mult_o5t:auto_generated                 ; 0.20 mW (0.20 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult9|mult_o5t:auto_generated                                                                                        ;
+;             |lpm_mult:Mult10                             ; 0.21 mW (0.00 mW)                    ; 0.18 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult10                                                                                                               ;
+;                 |mult_o5t:auto_generated                 ; 0.21 mW (0.21 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult10|mult_o5t:auto_generated                                                                                       ;
+;             |lpm_mult:Mult11                             ; 0.20 mW (0.00 mW)                    ; 0.17 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult11                                                                                                               ;
+;                 |mult_o5t:auto_generated                 ; 0.20 mW (0.20 mW)                    ; 0.17 mW (0.17 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult11|mult_o5t:auto_generated                                                                                       ;
+;             |lpm_mult:Mult12                             ; 0.23 mW (0.00 mW)                    ; 0.18 mW (0.00 mW)               ; --                                ; 0.05 mW (0.00 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult12                                                                                                               ;
+;                 |mult_o5t:auto_generated                 ; 0.23 mW (0.23 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.05 mW (0.05 mW)                 ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult12|mult_o5t:auto_generated                                                                                       ;
+;     |big_ram_wizard:ram1                                 ; 18.84 mW (0.00 mW)                   ; 10.79 mW (0.00 mW)              ; --                                ; 8.05 mW (0.00 mW)                 ; |UNI_Projektas|big_ram_wizard:ram1                                                                                                                                                                 ;
+;         |altsyncram:altsyncram_component                 ; 18.84 mW (0.00 mW)                   ; 10.79 mW (0.00 mW)              ; --                                ; 8.05 mW (0.00 mW)                 ; |UNI_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component                                                                                                                                 ;
+;             |altsyncram_hf52:auto_generated              ; 18.84 mW (18.84 mW)                  ; 10.79 mW (10.79 mW)             ; --                                ; 8.05 mW (8.05 mW)                 ; |UNI_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated                                                                                                  ;
+;     |big_ram_wizard:ram2                                 ; 8.01 mW (0.00 mW)                    ; 5.24 mW (0.00 mW)               ; --                                ; 2.77 mW (0.00 mW)                 ; |UNI_Projektas|big_ram_wizard:ram2                                                                                                                                                                 ;
+;         |altsyncram:altsyncram_component                 ; 8.01 mW (0.00 mW)                    ; 5.24 mW (0.00 mW)               ; --                                ; 2.77 mW (0.00 mW)                 ; |UNI_Projektas|big_ram_wizard:ram2|altsyncram:altsyncram_component                                                                                                                                 ;
+;             |altsyncram_hf52:auto_generated              ; 8.01 mW (8.01 mW)                    ; 5.24 mW (5.24 mW)               ; --                                ; 2.77 mW (2.77 mW)                 ; |UNI_Projektas|big_ram_wizard:ram2|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated                                                                                                  ;
+;     |UART_Controller:UART_Controller_1                   ; 0.83 mW (0.08 mW)                    ; 0.61 mW (0.06 mW)               ; --                                ; 0.22 mW (0.02 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1                                                                                                                                                   ;
+;         |Clock_divider:uart_clk_divider                  ; 0.23 mW (0.23 mW)                    ; 0.14 mW (0.14 mW)               ; --                                ; 0.09 mW (0.09 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider                                                                                                                    ;
+;         |UART_FIFO_wizard:uart_fifo                      ; 0.36 mW (0.00 mW)                    ; 0.30 mW (0.00 mW)               ; --                                ; 0.06 mW (0.00 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo                                                                                                                        ;
+;             |scfifo:scfifo_component                     ; 0.36 mW (0.00 mW)                    ; 0.30 mW (0.00 mW)               ; --                                ; 0.06 mW (0.00 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component                                                                                                ;
+;                 |scfifo_ka21:auto_generated              ; 0.36 mW (0.00 mW)                    ; 0.30 mW (0.00 mW)               ; --                                ; 0.06 mW (0.00 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated                                                                     ;
+;                     |a_dpfifo_rg21:dpfifo                ; 0.36 mW (0.01 mW)                    ; 0.30 mW (0.00 mW)               ; --                                ; 0.06 mW (0.01 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo                                                ;
+;                         |a_fefifo_76e:fifo_state         ; 0.08 mW (0.06 mW)                    ; 0.08 mW (0.05 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state                        ;
+;                             |cntr_pj7:count_usedw        ; 0.03 mW (0.03 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw   ;
+;                         |dpram_st01:FIFOram              ; 0.20 mW (0.00 mW)                    ; 0.19 mW (0.00 mW)               ; --                                ; 0.01 mW (0.00 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram                             ;
+;                             |altsyncram_0sj1:altsyncram2 ; 0.20 mW (0.20 mW)                    ; 0.19 mW (0.19 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2 ;
+;                         |cntr_djb:rd_ptr_count           ; 0.04 mW (0.04 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:rd_ptr_count                          ;
+;                         |cntr_djb:wr_ptr                 ; 0.03 mW (0.03 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:wr_ptr                                ;
+;         |UART_TX:uart_tx_1                               ; 0.16 mW (0.16 mW)                    ; 0.10 mW (0.10 mW)               ; --                                ; 0.05 mW (0.05 mW)                 ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1                                                                                                                                 ;
+;     |wizard_ram:wizard_ram_1                             ; 1.29 mW (0.00 mW)                    ; 0.58 mW (0.00 mW)               ; --                                ; 0.71 mW (0.00 mW)                 ; |UNI_Projektas|wizard_ram:wizard_ram_1                                                                                                                                                             ;
+;         |altsyncram:altsyncram_component                 ; 1.29 mW (0.00 mW)                    ; 0.58 mW (0.00 mW)               ; --                                ; 0.71 mW (0.00 mW)                 ; |UNI_Projektas|wizard_ram:wizard_ram_1|altsyncram:altsyncram_component                                                                                                                             ;
+;             |altsyncram_i0d1:auto_generated              ; 1.29 mW (1.29 mW)                    ; 0.58 mW (0.58 mW)               ; --                                ; 0.71 mW (0.71 mW)                 ; |UNI_Projektas|wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated                                                                                              ;
++----------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+(1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
+
+(2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++-----------------------------------------------------------------+
+; Core Dynamic Thermal Power Dissipation by Clock Domain          ;
++--------------+-----------------------+--------------------------+
+; Clock Domain ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
++--------------+-----------------------+--------------------------+
+; CLK          ; 50.00                 ; 58.07                    ;
+; SYNC         ; 25.00                 ; 0.00                     ;
++--------------+-----------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Current Drawn from Voltage Supplies Summary                                                                                        ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCCINT         ; 67.82 mA                ; 48.83 mA                  ; 19.00 mA                 ; 67.82 mA                         ;
+; VCCIO          ; 10.04 mA                ; 6.03 mA                   ; 4.01 mA                  ; 10.04 mA                         ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
+
+
++-----------------------------------------------------------------------------------------------+
+; VCCIO Supply Current Drawn by I/O Bank                                                        ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; I/O Bank ; VCCIO Voltage ; Total Current Drawn ; Dynamic Current Drawn ; Static Current Drawn ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; 1        ; 3.3V          ; 2.99 mA             ; 1.98 mA               ; 1.01 mA              ;
+; 2        ; 3.3V          ; 2.92 mA             ; 1.87 mA               ; 1.05 mA              ;
+; 3        ; 3.3V          ; 1.21 mA             ; 0.32 mA               ; 0.89 mA              ;
+; 4        ; 3.3V          ; 2.92 mA             ; 1.87 mA               ; 1.05 mA              ;
++----------+---------------+---------------------+-----------------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; VCCIO Supply Current Drawn by Voltage                                                                                             ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; 3.3V          ; 10.04 mA                ; 6.03 mA                   ; 4.01 mA                  ; 10.04 mA                         ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Confidence Metric Details                                                                                                                          ;
++----------------------------------------------------------------------------------------+--------------+------------+---------------+---------------+
+; Data Source                                                                            ; Total        ; Pin        ; Registered    ; Combinational ;
++----------------------------------------------------------------------------------------+--------------+------------+---------------+---------------+
+; Simulation (from file)                                                                 ;              ;            ;               ;               ;
+;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)      ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)      ; 0 (0.0%)      ;
+;                                                                                        ;              ;            ;               ;               ;
+; Node, entity or clock assignment                                                       ;              ;            ;               ;               ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 2 (0.0%)     ; 2 (3.3%)   ; 0 (0.0%)      ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 2 (0.0%)     ; 2 (3.3%)   ; 0 (0.0%)      ; 0 (0.0%)      ;
+;                                                                                        ;              ;            ;               ;               ;
+; Vectorless estimation                                                                  ;              ;            ;               ;               ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 6467 (99.8%) ; 48 (78.7%) ; 2352 (100.0%) ; 4067 (100.0%) ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 65 (1.0%)    ; 5 (8.2%)   ; 1 (0.0%)      ; 59 (1.5%)     ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 6467 (99.8%) ; 48 (78.7%) ; 2352 (100.0%) ; 4067 (100.0%) ;
+;                                                                                        ;              ;            ;               ;               ;
+; Default assignment                                                                     ;              ;            ;               ;               ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 8 (0.1%)     ; 8 (13.1%)  ; 0 (0.0%)      ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 11 (0.2%)    ; 11 (18.0%) ; 0 (0.0%)      ; 0 (0.0%)      ;
+;                                                                                        ;              ;            ;               ;               ;
+; Assumed 0                                                                              ;              ;            ;               ;               ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 3 (0.0%)     ; 3 (4.9%)   ; 0 (0.0%)      ; 0 (0.0%)      ;
++----------------------------------------------------------------------------------------+--------------+------------+---------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Activities                                                                                                                           ;
++--------+------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+; Signal ; Type ; Toggle Rate (millions of transitions / sec) ; Toggle Rate Data Source ; Static Probability ; Static Probability Data Source ;
++--------+------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+(1) The "Signal Activity" Table has been hidden. To show this table, please select the "Write signal activities to report file" option under "PowerPlay Power Analyzer Settings".
+
+
++-----------------------------------+
+; PowerPlay Power Analyzer Messages ;
++-----------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit PowerPlay Power Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jan 29 17:27:31 2023
+Info: Command: quartus_pow --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'Uni_Projektas.sdc'
+Warning (332060): Node: Clock_divider:clock_divider1|clock_out was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out was determined to be a clock but was found without an associated clock assignment.
+Info (223000): Starting Vectorless Power Activity Estimation
+Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
+Info (223001): Completed Vectorless Power Activity Estimation
+Warning (218001): Found 48 output pins without output pin load capacitance assignment
+    Warning (218002): Pin "DATA_OUT[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "DATA_OUT[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "DATA_OUT[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "DATA_OUT[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "DATA_OUT[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "DATA_OUT[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "SYNC" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "UART_TX" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[16]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[17]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[18]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val[19]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[16]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[17]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[18]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+    Warning (218002): Pin "test_val2[19]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for Power Estimation
+Info (215049): Average toggle rate for this design is 7.869 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 114.62 mW
+Info: Quartus II 64-Bit PowerPlay Power Analyzer was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 4581 megabytes
+    Info: Processing ended: Sun Jan 29 17:27:33 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
