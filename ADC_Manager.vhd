@@ -64,7 +64,7 @@ signal data_end : std_logic := '0';
 signal c_short_func_input_index : natural range 0 to 9 := 0; --Galim iki 8 sumažint bet neveikia kažkokio velnio
 
 --FSM
-type m_state is (read_init_mem, finding_preambule, waiting_preambule, waiting_bits, finding_bits, sending_bits);
+type m_state is (read_init_mem, finding_preambule, waiting_preambule, waiting_bits, finding_bits, sending_bits, waiting_after);
 
 signal main_state : m_state := read_init_mem;
 --signal main_state : m_state := read_init_mem;
@@ -196,7 +196,12 @@ begin
 				end if;
 			when sending_bits =>
 				DATA_DONE <= '1';
-				main_state <= finding_preambule;
+				main_state <= waiting_after;
+			when waiting_after =>
+				DATA_DONE <= '0';
+				if(bit_counter = 150) then
+					main_state <= finding_preambule;
+				end if;
 			when others =>
 		end case;
 	end if;
@@ -210,7 +215,7 @@ begin
 			when read_init_mem =>
 				
 			when finding_preambule =>
-				
+				bit_counter <= 0;
 			when waiting_preambule =>
 				counter <= counter + 1;
 			when waiting_bits =>
@@ -218,6 +223,8 @@ begin
 				bit_counter <= bit_counter + 1;
 			when finding_bits =>
 				bit_counter <= 2;
+			when waiting_after =>
+				bit_counter <= bit_counter + 1;
 			when others =>
 				
 		end case;
