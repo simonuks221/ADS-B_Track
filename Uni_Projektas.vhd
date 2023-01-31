@@ -34,6 +34,7 @@ component ADC_Manager is
 	c_long_value_in : in std_logic_vector(20-1 downto 0) := (others => '0');
 	c_long_func_input_out : out double_array(0 to 50-1) := (others => (others => '0'));
 	c_en : out std_logic := '0';
+	shift_en : out std_logic := '0';
 	
 	SYNC: in std_logic
 	);
@@ -99,7 +100,8 @@ component ADC_ram_shifter is
 		wren_a_2		: out STD_LOGIC  := '1';
 		wren_b_2		: out STD_LOGIC  := '1';
 		
-		new_adc_in : std_logic_vector(7 downto 0)
+		new_adc_in : std_logic_vector(7 downto 0);
+		stop_shift : in std_logic := '0'
 	);
 end component;
 
@@ -187,18 +189,20 @@ signal UART_TX_SIG : std_logic := '1';
 signal data_out_sig : std_logic_vector(7 downto 0) := (others => '0');
 signal data_ready_sig : std_logic := '0';
 
+signal shift_en : std_logic := '0';
+
 begin
 
 adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => address_a_1, address_a_2 => address_a_2, address_b_1 => address_b_1,
 	address_b_2 => address_b_2, data_a_1 => data_a_1, data_a_2 => data_a_2, data_b_1 => data_b_1, data_b_2 => data_b_2,
 	q_a_1 => q_a_1, q_a_2 => q_a_2, q_b_1 => q_b_1, q_b_2 => q_b_2,
 	wren_a_1 => wren_a_1, wren_a_2 => wren_a_2, wren_b_1 => wren_b_1, wren_b_2 => wren_b_2,
-	new_adc_in => ADC_IN);
+	new_adc_in => ADC_IN, stop_shift => shift_en);
 
 
 ADC_Manager1 : ADC_Manager port map(CLK => CLK, DATA_OUT => RECEIVED_CODE, RAM_DATA_BUS => func_ram_out, RAM_ADDRESS_BUS => func_ram_address_bus, SYNC => sync_clk,
 												c_long_value_in => c_long_value, c_long_func_input_out => c_long_func_input,
-												c_en => c_en, DATA_DONE => UART_CONTROLLER_DATA_REQ);
+												c_en => c_en, DATA_DONE => UART_CONTROLLER_DATA_REQ, shift_en => shift_en);
 wizard_ram_1 : wizard_ram port map(address => func_ram_address_bus, clock => CLK, data => "00000000", wren => '0', q => func_ram_out);
 clock_divider1 : clock_divider port map(CLK => CLK, Prescaler => std_Logic_vector(to_unsigned(5, 16)), CLK_OUT => sync_clk);
 corr_long : Correlation_function generic map(function_length => 50) port map(EN => c_en, CLK => CLK, input_function => c_long_func_input, output_value => c_long_value, 

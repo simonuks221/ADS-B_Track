@@ -29,6 +29,7 @@ entity ADC_Manager is
 		c_long_value_in : in std_logic_vector(20-1 downto 0) := (others => '0');
 		c_long_func_input_out : out double_array(0 to 50-1) := (others => (others => '0'));
 		c_en : out std_logic := '0';
+		shift_en : out std_logic := '0';
 
 		SYNC: in std_logic
 );
@@ -61,7 +62,6 @@ signal data_end : std_logic := '0';
 
 --Correlation inputs
 signal c_short_func_input_index : natural range 0 to 9 := 0; --Galim iki 8 sumažint bet neveikia kažkokio velnio
-signal check_corr : std_logic := '0';
 
 --FSM
 type m_state is (read_init_mem, finding_preambule, waiting_preambule, waiting_bits, finding_bits, sending_bits);
@@ -75,6 +75,7 @@ c_long_value <= c_long_value_in;
 c_long_func_input_out <= c_long_func_input;
 
 c_en <= '1' when main_state = finding_preambule or main_state = finding_bits else '0';
+shift_en <= '1' when main_state = finding_bits else '0';
 
 --FSM set variables
 
@@ -216,7 +217,7 @@ begin
 				counter <= 0;
 				bit_counter <= bit_counter + 1;
 			when finding_bits =>
-				bit_counter <= 0;
+				bit_counter <= 2;
 			when others =>
 				
 		end case;
