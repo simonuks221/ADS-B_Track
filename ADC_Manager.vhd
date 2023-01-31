@@ -14,7 +14,7 @@ entity ADC_Manager is
 		BITS_FUNC_LEN: integer := 20; --60 40 38 4 su UART 61 45 38 su 'upgreidais' lmao
 		MAX_DATA_COUNTS : integer := 3;
 		BITS_PER_DATA_COUNT : integer := 2;
-		PREAMBULE_FUNC_THRESHOLD : integer := 400000;--480000;
+		PREAMBULE_FUNC_THRESHOLD : integer := 3000;--480000;
 		BITS_FUNC_THRESHOLD : integer := 3;
 		PREAMBULE_DELAY_LEN: integer := 30 --3us, 30 atskaitu
 	);
@@ -64,10 +64,10 @@ signal c_short_func_input_index : natural range 0 to 9 := 0; --Galim iki 8 suma≈
 signal check_corr : std_logic := '0';
 
 --FSM
-type m_state is (read_init_mem, finding_preambule, waiting_preambule, waiting_bits, finding_bits, sending_bits, idle);
+type m_state is (read_init_mem, finding_preambule, waiting_preambule, waiting_bits, finding_bits, sending_bits);
 
 signal main_state : m_state := read_init_mem;
-signal main_next_state : m_state := read_init_mem;
+--signal main_state : m_state := read_init_mem;
 
 begin
 DATA_OUT <= data_buffer;
@@ -82,7 +82,7 @@ c_en <= '1' when main_state = finding_preambule or main_state = finding_bits els
 process(CLK)
 begin
 	if(rising_edge(CLK)) then
-		main_state <= main_next_state;
+		--main_state <= main_state;
 	end if;
 end process;
 
@@ -107,28 +107,27 @@ begin
 				end if;
 				if(ram_counter = PREAMBULE_FUNC_LEN+4*BITS_FUNC_LEN+3) then
 						--Pabaiga duomenu skaitymo
-						main_next_state <= finding_preambule;
+						main_state <= finding_preambule;
 				else
 					ram_counter <= ram_counter + 1;
 				end if;
 				
 			when finding_preambule =>
+				DATA_DONE <= '0';
 				c_long_func_input <= c_preamb_func;
 				if(to_integer(unsigned(c_long_value)) > PREAMBULE_FUNC_THRESHOLD) then
-					main_next_state <= waiting_preambule;
+					main_state <= waiting_preambule;
 				end if;
 			when waiting_preambule =>
 				c_long_func_input <= (others => (others => '0'));
 				if(counter = PREAMBULE_DELAY_LEN) then --3us for delay between preambule and data
-					main_next_state <= waiting_bits;
+					main_state <= waiting_bits;
 				end if;
 			when waiting_bits =>
 				c_long_func_input(0 to 10-1) <= c_0_func;
 				c_long_func_input(10 to 20-1) <= c_1_func;
 				if(bit_counter = BITS_FUNC_LEN-1) then
-					c_long_func_input(0 to 10-1) <= c_0_func;
-					c_long_func_input(10 to 20-1) <= c_1_func;
-					main_next_state <= finding_bits;
+					main_state <= finding_bits;
 				end if;
 				c_short_func_input_index <= 0;
 				
@@ -153,8 +152,10 @@ begin
 					when 6 =>
 						c_10_value <=  to_integer(unsigned(c_long_value));
 					when 7 =>
-						c_00_value <=  to_integer(unsigned(c_long_value));
+						
 					when 8 =>
+						c_00_value <=  to_integer(unsigned(c_long_value));
+					when 9 =>
 						c_long_func_input(0 to 10-1) <= c_0_func;
 						c_long_func_input(10 to 20-1) <= c_1_func;
 						c_short_func_input_index <= 0;
@@ -168,34 +169,33 @@ begin
 							end if;
 						elsif(c_00_value > c_01_value and c_00_value > c_10_value and c_00_value > c_11_value) then
 							if(c_00_value > BITS_FUNC_THRESHOLD) then --Threshold value
-								data_buffer <= data_buffer(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-2-1 downto 0) & "00"; --Shift left to add new found data bit
+								data_buffer <= data_buffer(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-2-1 downto 0) & "11"; --Shift left to add new found data bit
 							end if;
 						elsif(c_11_value > c_10_value and c_11_value > c_01_value and c_11_value > c_00_value) then
 							if(c_11_value > BITS_FUNC_THRESHOLD) then --Threshold value
-								data_buffer <= data_buffer(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-2-1 downto 0) & "11"; --Shift left to add new found data bit
+								data_buffer <= data_buffer(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-2-1 downto 0) & "00"; --Shift left to add new found data bit
 							end if;
 						end if;
 						
 						data_counts <= data_counts + 1;
 						if(data_counts = MAX_DATA_COUNTS-1) then
-							main_next_state <= sending_bits;
+							main_state <= sending_bits;
+							data_counts <= 0;
 						else
-							main_next_state <= waiting_bits;
+							main_state <= waiting_bits;
 						end if;
 					
 				when others =>
 						
 				end case;
-				if(c_short_func_input_index = 8) then
+				if(c_short_func_input_index = 9) then
 					c_short_func_input_index <= 0;
 				else
 					c_short_func_input_index <= c_short_func_input_index + 1;
 				end if;
 			when sending_bits =>
 				DATA_DONE <= '1';
-				main_next_state <= idle;
-			when idle =>
-				DATA_DONE <= '0';
+				main_state <= finding_preambule;
 			when others =>
 		end case;
 	end if;

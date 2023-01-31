@@ -30,31 +30,6 @@ component Correlation_Gate is
 	);
 end component;
 
-signal output_int : integer := 0;
-signal temp_int : integer := 0;
-signal first_part : std_Logic := '1';
-
---5.7k elementu
-
---Multi inputs
-signal input_adc_1 : std_logic_vector(12*8-1 downto 0) := (others => '0');
-signal input_func_1 : std_logic_vector(12*8-1 downto 0) := (others => '0');
-signal output_1 : std_logic_vector(18 downto 0) := (others => '0');
-
-signal input_adc_2 : std_logic_vector(13*8-1 downto 0) := (others => '0');
-signal input_func_2 : std_logic_vector(13*8-1 downto 0) := (others => '0');
-signal output_2 : std_logic_vector(18 downto 0) := (others => '0');
-
-signal input_adc_3 : std_logic_vector(12*8-1 downto 0) := (others => '0');
-signal input_func_3 : std_logic_vector(12*8-1 downto 0) := (others => '0');
-signal output_3 : std_logic_vector(18 downto 0) := (others => '0');
-
-signal input_adc_4 : std_logic_vector(13*8-1 downto 0) := (others => '0');
-signal input_func_4 : std_logic_vector(13*8-1 downto 0) := (others => '0');
-signal output_4 : std_logic_vector(18 downto 0) := (others => '0');
-
-signal all_output : std_logic_vector(19 downto 0) := (others => '0');
-
 --NEW
 signal input_adc_5 : std_logic_vector(12*8-1 downto 0) := (others => '0');
 signal input_func_5 : std_logic_vector(12*8-1 downto 0) := (others => '0');
@@ -69,35 +44,35 @@ signal f_output : std_logic_vector(19 downto 0) := (others => '0');
 signal f : std_logic := '1';
 
 begin
-gate1 : Correlation_Gate generic map(input_size => 12) port map(CLK => CLK, input_func => input_func_1, input_adc => input_adc_1,
-								output => output_1);
-gate2 : Correlation_Gate generic map(input_size => 13) port map(CLK => CLK, input_func => input_func_2, input_adc => input_adc_2,
-								output => output_2);
-gate3 : Correlation_Gate generic map(input_size => 12) port map(CLK => CLK, input_func => input_func_3, input_adc => input_adc_3,
-								output => output_3);
-gate4 : Correlation_Gate generic map(input_size => 13) port map(CLK => CLK, input_func => input_func_4, input_adc => input_adc_4,
-								output => output_4);
+--gate1 : Correlation_Gate generic map(input_size => 12) port map(CLK => CLK, input_func => input_func_1, input_adc => input_adc_1,
+--								output => output_1);
+--gate2 : Correlation_Gate generic map(input_size => 13) port map(CLK => CLK, input_func => input_func_2, input_adc => input_adc_2,
+--								output => output_2);
+--gate3 : Correlation_Gate generic map(input_size => 12) port map(CLK => CLK, input_func => input_func_3, input_adc => input_adc_3,
+--								output => output_3);
+--gate4 : Correlation_Gate generic map(input_size => 13) port map(CLK => CLK, input_func => input_func_4, input_adc => input_adc_4,
+--								output => output_4);
 								
-input_func_1 <=  input_function(11)& input_function(10)& input_function(9)& input_function(8)& input_function(7)& input_function(6)& 
-				input_function(5)& input_function(4)& input_function(3)& input_function(2)& input_function(1)& input_function(0);
-input_adc_1 <= input_adc_values(12*8-1 downto 0);
+--input_func_1 <=  input_function(11)& input_function(10)& input_function(9)& input_function(8)& input_function(7)& input_function(6)& 
+--				input_function(5)& input_function(4)& input_function(3)& input_function(2)& input_function(1)& input_function(0);
+--input_adc_1 <= input_adc_values(12*8-1 downto 0);
+--
+--input_func_2 <=  input_function(24)&input_function(23)& input_function(22)& input_function(21)& input_function(20)& input_function(19)
+--				& input_function(18)& input_function(17)& input_function(16)& input_function(15)& input_function(14)& input_function(13)
+---				& input_function(12);
+--input_adc_2 <= input_adc_values(12*8+13*8-1 downto 12*8);
 
-input_func_2 <=  input_function(24)&input_function(23)& input_function(22)& input_function(21)& input_function(20)& input_function(19)
-				& input_function(18)& input_function(17)& input_function(16)& input_function(15)& input_function(14)& input_function(13)
-				& input_function(12);
-input_adc_2 <= input_adc_values(12*8+13*8-1 downto 12*8);
+--input_func_3 <=  input_function(36)& input_function(35)& input_function(34)& input_function(33)& input_function(32)& input_function(31)& 
+--				input_function(30)& input_function(29)& input_function(28)& input_function(27)& input_function(26)& input_function(25);
+--input_adc_3 <= input_adc_values(12*8+13*8+12*8-1 downto 12*8+13*8);
 
-input_func_3 <=  input_function(36)& input_function(35)& input_function(34)& input_function(33)& input_function(32)& input_function(31)& 
-				input_function(30)& input_function(29)& input_function(28)& input_function(27)& input_function(26)& input_function(25);
-input_adc_3 <= input_adc_values(12*8+13*8+12*8-1 downto 12*8+13*8);
+--input_func_4 <=  input_function(49)&input_function(48)& input_function(47)& input_function(46)& input_function(45)& input_function(44)
+---				& input_function(43)& input_function(42)& input_function(41)& input_function(40)& input_function(39)& input_function(38)
+--				& input_function(37);
+--input_adc_4 <= input_adc_values(12*8+13*8+12*8+13*8-1 downto 12*8+13*8+12*8);
 
-input_func_4 <=  input_function(49)&input_function(48)& input_function(47)& input_function(46)& input_function(45)& input_function(44)
-				& input_function(43)& input_function(42)& input_function(41)& input_function(40)& input_function(39)& input_function(38)
-				& input_function(37);
-input_adc_4 <= input_adc_values(12*8+13*8+12*8+13*8-1 downto 12*8+13*8+12*8);
-
-all_output <= std_logic_vector(to_unsigned(to_integer(unsigned(output_1)) + to_integer(unsigned(output_2))+
-				to_integer(unsigned(output_3)) +to_integer(unsigned(output_4)), all_output'length));
+--all_output <= std_logic_vector(to_unsigned(to_integer(unsigned(output_1)) + to_integer(unsigned(output_2))+
+--				to_integer(unsigned(output_3)) +to_integer(unsigned(output_4)), all_output'length));
 
 output_value <= f_output;
 
@@ -109,17 +84,19 @@ gate6 : Correlation_Gate generic map(input_size => 13) port map(CLK => CLK, inpu
 								
 input_func_5 <= input_function(11)& input_function(10)& input_function(9)& input_function(8)& input_function(7)& input_function(6)& 
 				input_function(5)& input_function(4)& input_function(3)& input_function(2)& input_function(1)& input_function(0)
-				when f = '1' else
+				when f = '1' and EN = '1' else
 				input_function(36)& input_function(35)& input_function(34)& input_function(33)& input_function(32)& input_function(31)& 
-				input_function(30)& input_function(29)& input_function(28)& input_function(27)& input_function(26)& input_function(25);
+				input_function(30)& input_function(29)& input_function(28)& input_function(27)& input_function(26)& input_function(25)
+				when f = '0' and EN = '1' else (others => '0');
 
 input_func_6 <= input_function(24)&input_function(23)& input_function(22)& input_function(21)& input_function(20)& input_function(19)
 				& input_function(18)& input_function(17)& input_function(16)& input_function(15)& input_function(14)& input_function(13)
 				& input_function(12)
-				when f = '1' else
+				when f = '1' and EN = '1' else
 				input_function(49)&input_function(48)& input_function(47)& input_function(46)& input_function(45)& input_function(44)
 				& input_function(43)& input_function(42)& input_function(41)& input_function(40)& input_function(39)& input_function(38)
-				& input_function(37);
+				& input_function(37)
+				when f = '0' and EN = '1' else (others => '0');
 				
 input_adc_5 <= input_adc_values(12*8-1 downto 0) when f = '1' else input_adc_values(12*8+13*8+12*8-1 downto 12*8+13*8);
 input_adc_6 <= input_adc_values(12*8+13*8-1 downto 12*8) when f = '1' else input_adc_values(12*8+13*8+12*8+13*8-1 downto 12*8+13*8+12*8);
@@ -130,6 +107,7 @@ begin
 		if(EN = '0') then
 			f <= '1';
 			f_output <= (others => '0');
+			output_56 <= (others => '0');
 		else
 			if(f = '0') then
 				f_output <= std_Logic_vector(to_unsigned(to_integer(unsigned(output_56)) + to_integer(unsigned(output_5)) + to_integer(unsigned(output_6)), f_output'length));
@@ -142,44 +120,4 @@ begin
 	end if;
 end process;
 			
---output_value <= std_logic_vector(to_unsigned(output_int, output_value'length));
---end process;
-
-process(CLK, EN)
-variable temp_c: integer range 0 to 500000 := 0;
-variable input_adc_values_reduced : std_logic_vector(200-1 downto 0) := (others => '0');
-variable input_function_reduced : double_array(0 to 25 - 1);
-begin
-	if rising_edge(CLK) then
-		if(EN = '0') then
-			first_part <= '1';
-			output_int <= 0;
-		else
-			temp_c := 0;
-			if(first_part = '1') then
-				input_function_reduced := input_function(0 to 25-1);
-				input_adc_values_reduced := input_adc_values(200-1 downto 0);
-			else
-				input_function_reduced := input_function(25 to 50-1);
-				input_adc_values_reduced := input_adc_values(400-1 downto 200);
-			end if;
-			
-			for i in 0 to 25-1 loop--25-1 loop
-				--Geras su dvigubu iskomentuotas
-				temp_c := temp_c + to_integer(unsigned((input_adc_values_reduced(i*8+8-1 downto i*8)))) * to_integer(unsigned((input_function_reduced(i))));
-			--	temp_c := temp_c + to_integer(unsigned((input_adc_values(i*8+8-1 downto i*8)))) * to_integer(unsigned((input_function(i))));
-			end loop;
-			output_int <= temp_c;
-			if(first_part = '0') then
-				output_int <= temp_c + temp_int;
-				temp_int <= 0;
-			else
-				temp_int <= temp_c;
-			end if;
-			first_part <= not first_part;
-			
-		end if;
-	end if;
-end process;
-
 end architecture;
