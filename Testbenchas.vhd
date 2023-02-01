@@ -6,7 +6,7 @@ use ieee.std_logic_textio.all;
 
 ENTITY Testbenchas IS
 generic(
-VOLTAGE_DATA_LEN: integer := 441
+VOLTAGE_DATA_LEN: integer := 436
 );
 
 END Testbenchas;
@@ -14,7 +14,7 @@ END Testbenchas;
 ARCHITECTURE UNI_Projektas_arch OF Testbenchas IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL ADC_IN : STD_LOGIC_VECTOR(7 DOWNTO 0) := (others => '0');
+SIGNAL ADC_IN : STD_LOGIC_VECTOR(9 DOWNTO 0) := (others => '0');
 SIGNAL CLK : STD_LOGIC := '0';
 SIGNAL DATA_OUT : STD_LOGIC_VECTOR(5 DOWNTO 0);
 SIGNAL SYNC : STD_LOGIC;
@@ -25,11 +25,11 @@ SIGNAL UART_RX: std_logic := '0';
 --Functions
 --Read from file
 file file_voltages: text;
-type b_data is array(0 to VOLTAGE_DATA_LEN) of std_logic_vector(7 downto 0);
+type b_data is array(0 to VOLTAGE_DATA_LEN) of std_logic_vector(9 downto 0);
 impure function init return b_data is
 variable r : b_data := (others => (others => '0'));
 variable iline: line;
-variable temp_data : std_logic_vector(7 downto 0);
+variable temp_data : std_logic_vector(9 downto 0);
 begin
 	file_open(file_voltages, "testVoltage.txt",  read_mode);
 	 for i in 0 to VOLTAGE_DATA_LEN-1 loop --Iskaitant 9
@@ -55,7 +55,7 @@ END COMPONENT;
 BEGIN
 i1 : UNI_Projektas
 	PORT MAP (
-	ADC_IN => ADC_IN,
+	ADC_IN => ADC_IN(9 downto 2),
 	CLK => CLK,
 	DATA_OUT => DATA_OUT,
 	SYNC => SYNC,

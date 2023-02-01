@@ -61,7 +61,7 @@ signal data_counts : integer := 0;
 signal data_end : std_logic := '0';
 
 --Correlation inputs
-signal c_short_func_input_index : natural range 0 to 9 := 0; --Galim iki 8 sumažint bet neveikia kažkokio velnio
+signal c_short_func_input_index : natural range 0 to 9 := 0;
 
 --FSM
 type m_state is (read_init_mem, finding_preambule, waiting_preambule, waiting_bits, finding_bits, sending_bits, waiting_after);

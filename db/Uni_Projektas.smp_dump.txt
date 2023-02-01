@@ -30,10 +30,11 @@ tx_curr_state.data 0 1 0 0 1
 tx_curr_state.stop 1 0 0 0 1 
 
 State Machine - |UNI_Projektas|ADC_Manager:ADC_Manager1|main_state
-Name main_state.sending_bits main_state.finding_bits main_state.waiting_bits main_state.waiting_preambule main_state.finding_preambule main_state.read_init_mem 
-main_state.read_init_mem 0 0 0 0 0 0 
-main_state.finding_preambule 0 0 0 0 1 1 
-main_state.waiting_preambule 0 0 0 1 0 1 
-main_state.waiting_bits 0 0 1 0 0 1 
-main_state.finding_bits 0 1 0 0 0 1 
-main_state.sending_bits 1 0 0 0 0 1 
+Name main_state.waiting_after main_state.sending_bits main_state.finding_bits main_state.waiting_bits main_state.waiting_preambule main_state.finding_preambule main_state.read_init_mem 
+main_state.read_init_mem 0 0 0 0 0 0 0 
+main_state.finding_preambule 0 0 0 0 0 1 1 
+main_state.waiting_preambule 0 0 0 0 1 0 1 
+main_state.waiting_bits 0 0 0 1 0 0 1 
+main_state.finding_bits 0 0 1 0 0 0 1 
+main_state.sending_bits 0 1 0 0 0 0 1 
+main_state.waiting_after 1 0 0 0 0 0 1 

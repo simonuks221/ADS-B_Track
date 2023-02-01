@@ -407,3 +407,7 @@ db/Uni_Projektas.quiproj.14140.rdr.flock
 db/Uni_Projektas.quiproj.6292.rdr.flock
 *.Zip
 *.flock
+*.tdb
+*.ddb
+*.hdb
+*.cdb
