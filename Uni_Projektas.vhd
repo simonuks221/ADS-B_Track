@@ -80,28 +80,14 @@ component ADC_ram_shifter is
 		CLK : in std_logic := '0';
 		address_a_1		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
 		address_b_1		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
-		data_a_1		: out STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
-		data_b_1		: out STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
 		
 		address_a_2		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
 		address_b_2		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
-		data_a_2		: out STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
-		data_b_2		: out STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
-		
-		q_a_1		: in STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
-		q_b_1		: in STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
-		
-		q_a_2		: in STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
-		q_b_2		: in STD_LOGIC_VECTOR (127 DOWNTO 0) := (others => '0');
-		
-		wren_a_1		: out STD_LOGIC  := '1';
-		wren_b_1		: out STD_LOGIC  := '1';
-		
-		wren_a_2		: out STD_LOGIC  := '1';
-		wren_b_2		: out STD_LOGIC  := '1';
 		
 		new_adc_in : std_logic_vector(7 downto 0);
-		stop_shift : in std_logic := '0'
+		stop_shift : in std_logic := '0';
+		q : in std_logic_vector(511 downto 0);
+		data : out std_logic_vector(512 downto 0)
 	);
 end component;
 
@@ -130,14 +116,6 @@ port(
 );
 end component;
 
-component SYNC_PLL IS
-	PORT
-	(
-		inclk0		: IN STD_LOGIC  := '0';
-		c0		: OUT STD_LOGIC 
-	);
-END component;
-
 component UART_RX is
 	port(
 	CLK : in std_logic := '0';
@@ -162,8 +140,6 @@ signal address_a_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
 signal address_b_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
 signal data_a_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 signal data_b_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-signal wren_a_1		: STD_LOGIC  := '1';
-signal wren_b_1		: STD_LOGIC  := '1';
 signal q_a_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 signal q_b_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 
@@ -171,12 +147,11 @@ signal address_a_2		: STD_LOGIC_VECTOR (2 DOWNTO 0);
 signal address_b_2		: STD_LOGIC_VECTOR (2 DOWNTO 0);
 signal data_a_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 signal data_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-signal wren_a_2		: STD_LOGIC  := '1';
-signal wren_b_2		: STD_LOGIC  := '1';
 signal q_a_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 signal q_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 
-signal input_adc_values : std_logic_vector(400-1 downto 0);
+signal q : std_logic_vector(511 downto 0) := (others => '0');
+signal data : std_logic_vector(512 downto 0) := (others => '0');
 
 signal sync_clk : std_logic := '0';
 
@@ -194,10 +169,8 @@ signal shift_en : std_logic := '0';
 begin
 
 adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => address_a_1, address_a_2 => address_a_2, address_b_1 => address_b_1,
-	address_b_2 => address_b_2, data_a_1 => data_a_1, data_a_2 => data_a_2, data_b_1 => data_b_1, data_b_2 => data_b_2,
-	q_a_1 => q_a_1, q_a_2 => q_a_2, q_b_1 => q_b_1, q_b_2 => q_b_2,
-	wren_a_1 => wren_a_1, wren_a_2 => wren_a_2, wren_b_1 => wren_b_1, wren_b_2 => wren_b_2,
-	new_adc_in => ADC_IN, stop_shift => shift_en);
+	address_b_2 => address_b_2,
+	new_adc_in => ADC_IN, stop_shift => shift_en, q => q, data => data);
 
 
 ADC_Manager1 : ADC_Manager port map(CLK => CLK, DATA_OUT => RECEIVED_CODE, RAM_DATA_BUS => func_ram_out, RAM_ADDRESS_BUS => func_ram_address_bus, SYNC => sync_clk,
@@ -206,19 +179,21 @@ ADC_Manager1 : ADC_Manager port map(CLK => CLK, DATA_OUT => RECEIVED_CODE, RAM_D
 wizard_ram_1 : wizard_ram port map(address => func_ram_address_bus, clock => CLK, data => "00000000", wren => '0', q => func_ram_out);
 clock_divider1 : clock_divider port map(CLK => CLK, Prescaler => std_Logic_vector(to_unsigned(5, 16)), CLK_OUT => sync_clk);
 corr_long : Correlation_function generic map(function_length => 50) port map(EN => c_en, CLK => CLK, input_function => c_long_func_input, output_value => c_long_value, 
-											input_adc_values => input_adc_values);
+											input_adc_values => q(399 downto 0));
 
 ram1 : big_ram_wizard port map(clock => CLK, address_a => address_a_1, address_b => address_b_1, data_a => data_a_1,
-										data_b => data_b_1, wren_a => wren_a_1, wren_b => wren_b_1, q_a => q_a_1, q_b => q_b_1);
+										data_b => data_b_1, wren_a => '1', wren_b => '1', q_a => q_a_1, q_b => q_b_1);
 ram2 : big_ram_wizard port map(clock => CLK, address_a => address_a_2, address_b => address_b_2, data_a => data_a_2,
-										data_b => data_b_2, wren_a => wren_a_2, wren_b => wren_b_2, q_a => q_a_2, q_b => q_b_2);
-
---pll :  SYNC_PLL port map(inclk0 =>CLK, c0 => sync_clk);
+										data_b => data_b_2, wren_a => '1', wren_b => '1', q_a => q_a_2, q_b => q_b_2);
 										
 DATA_OUT <= RECEIVED_CODE;
 SYNC <= sync_clk;
 
-input_adc_values <= q_b_2(15 downto 0)& q_a_2 & q_b_1 & q_a_1;
+q <= q_b_2 & q_a_2 & q_b_1 & q_a_1;
+data_a_1 <= data(128-1 downto 0);
+data_b_1 <= data(128*2-1 downto 128*1);
+data_a_2 <= data(128*3-1 downto 128*2);
+data_b_2 <= data(128*4-1 downto 128*3);
 
 UART_CONTROLLER_DATA_IN <= "00" & RECEIVED_CODE;
 

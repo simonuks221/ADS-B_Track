@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "02/01/2023 20:00:42"
+-- DATE "02/01/2023 21:41:23"
 
 -- 
 -- Device: Altera EP2C5T144C8 Package TQFP144
@@ -2409,526 +2409,526 @@ SIGNAL \ADC_Manager1|Equal2~9_combout\ : std_logic;
 SIGNAL \ADC_Manager1|Selector4~1_combout\ : std_logic;
 SIGNAL \ADC_Manager1|main_state.finding_bits~regout\ : std_logic;
 SIGNAL \adc_ram_shifter_1|last_stop~regout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1[4]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1[7]~feeder_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data[4]~feeder_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data[7]~feeder_combout\ : std_logic;
 SIGNAL \adc_ram_shifter_1|temp_shift[0]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~80_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~25_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1[0]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~107_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~248_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~98_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data[0]~feeder_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~302_combout\ : std_logic;
 SIGNAL \adc_ram_shifter_1|temp_shift[2]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1[1]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1[2]~feeder_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data[1]~feeder_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data[2]~feeder_combout\ : std_logic;
 SIGNAL \adc_ram_shifter_1|temp_shift[1]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~69_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~85_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~86_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~33_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~97_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~94_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~89_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~119_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~95_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~8_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~8_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~88_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~90_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~77_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~9_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~20_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~21_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~22_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~23_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~27_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~97_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~50_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~51_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~21_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~46_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~106_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~108_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~24_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~26_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~96_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~98_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~100_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~15_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~17_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~3_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~10_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~12_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~13_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~42_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~44_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~30_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~34_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~118_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1[107]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~6_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~24_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~26_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~28_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~30_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~50_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~127_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~76_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~78_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~8_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~1_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~2_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~3_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~12_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~124_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~126_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~34_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~35_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~83_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~28_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~62_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~63_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~15_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~54_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~55_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~37_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~38_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~89_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~17_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~41_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~91_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~30_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~31_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~12_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~13_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~120_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~5_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~6_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~7_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~36_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~28_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~29_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~30_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~31_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~94_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~95_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~36_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~38_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~24_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~25_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~26_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~27_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~89_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~90_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2[42]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~91_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~92_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~93_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~94_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~95_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~105_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~101_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~87_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~74_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~105_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~112_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~113_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~116_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~124_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~103_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~125_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~126_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~125_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~126_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~127_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~119_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~123_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~112_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~113_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~114_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~116_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~117_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~118_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~119_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~115_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~73_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~74_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~75_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~76_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~77_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~78_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~79_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~71_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~70_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~71_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~70_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~127_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~118_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~102_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~124_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~117_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~115_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~114_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~101_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~79_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~123_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~78_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~122_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~77_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~121_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~100_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~120_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~99_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~76_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~111_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~98_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~97_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~96_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~75_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~110_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~73_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~109_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~72_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~108_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~103_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~102_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~86_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~107_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~100_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~122_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~99_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~98_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~97_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2[65]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~96_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~85_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~104_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~84_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~104_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~83_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~67_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~68_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~69_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~59_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~62_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~63_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~52_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~62_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~63_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~52_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~53_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~55_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~54_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~61_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~60_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~59_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~55_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~54_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~53_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~61_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~60_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2[108]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~58_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~57_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~56_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~15_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~45_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~46_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~47_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~51_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~44_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~45_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~46_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~47_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~43_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~42_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~41_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~40_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~4_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~35_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~82_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~121_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~66_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~14_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~3_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~34_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~111_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~65_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~44_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~11_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~2_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~33_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~93_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~81_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~110_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~58_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~57_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~43_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~10_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~32_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~92_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~72_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~109_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~56_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~42_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~9_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~1_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~0_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~90_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~87_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~69_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~40_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~8_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~39_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~86_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~68_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~51_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~16_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~7_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~88_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~85_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~67_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~50_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~23_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~53_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~29_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~84_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~49_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~22_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~14_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~6_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~36_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~82_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~48_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~21_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~13_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~5_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~33_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~110_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~34_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~88_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~81_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~108_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~66_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~20_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~11_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~4_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~0_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~32_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~80_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~82_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~84_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~122_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~108_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~61_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~125_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~106_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~104_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~32_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~107_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~65_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~49_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~19_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~39_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~47_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~27_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~106_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~64_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~18_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~10_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~9_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~26_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~102_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~24_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~17_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~25_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~100_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~38_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~23_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~16_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~7_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~38_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~46_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~120_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~36_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~74_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~116_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~32_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~22_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~15_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~5_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~37_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~45_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~43_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~21_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~14_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~41_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~20_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~11_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~4_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~40_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~72_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~85_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~114_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~39_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~19_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~52_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~112_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~98_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~9_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~2_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~51_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~102_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~96_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~83_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~112_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~18_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~1_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~86_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~28_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~50_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~76_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~37_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~23_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~0_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~49_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~74_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~110_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~14_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~47_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~72_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~104_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~35_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1[53]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~22_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~55_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~45_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_2~80_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~106_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~64_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~48_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~111_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~103_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~109_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~33_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~20_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~13_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~44_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~43_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~7_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~52_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~42_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~19_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~18_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~54_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~118_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~107_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~105_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~12_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~6_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~70_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~121_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~101_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~99_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~29_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~11_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~5_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~68_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~119_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~19_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~10_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~49_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~41_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~4_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~66_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~117_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~18_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~17_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~3_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~48_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~40_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~94_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~29_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~2_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~64_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~115_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~16_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~1_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~53_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~116_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~103_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~39_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~92_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~27_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~0_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~78_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~93_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~75_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~114_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~101_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~91_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~81_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~87_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~79_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~226_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~258_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~260_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~114_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~282_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~261_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~266_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~326_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~278_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~34_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~35_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~264_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~268_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~242_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~38_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~82_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~86_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~90_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~94_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~103_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~267_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~170_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~174_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~87_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~154_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~300_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~304_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~96_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~100_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~280_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~284_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~288_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~62_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~71_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~15_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~43_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~51_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~55_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~139_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~147_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~108_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~116_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~309_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data[235]~feeder_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~27_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~128_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~101_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~105_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~109_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~348_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~327_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~225_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~229_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~32_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~4_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~8_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~12_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~48_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~321_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~325_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~168_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~172_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~414_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~144_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~205_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~207_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~60_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~187_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~191_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~181_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~185_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~426_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~69_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~330_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~430_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~152_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~156_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~49_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~53_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~488_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~21_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~25_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~29_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~177_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~145_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~149_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~153_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~157_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~436_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~438_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~121_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~125_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~129_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~133_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~137_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~141_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~427_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~429_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data[426]~feeder_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~431_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~433_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~435_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~437_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~439_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~458_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~450_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~423_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~396_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~459_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~472_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~474_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~480_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~496_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~455_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~498_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~500_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~499_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~501_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~503_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~486_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~495_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~473_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~475_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~477_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~481_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~483_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~485_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~487_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~479_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~395_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~397_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~399_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~401_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~403_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~405_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~407_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~391_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~389_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~390_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~388_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~502_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~484_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~453_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~497_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~482_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~478_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~476_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~451_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~406_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~494_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~404_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~493_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~402_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~491_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~449_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~489_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~447_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~400_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~471_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~445_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~443_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~441_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~398_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~469_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~394_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~467_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~393_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~465_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~454_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~452_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~421_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~463_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~448_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~492_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~446_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~444_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~442_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data[321]~feeder_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~440_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~419_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~457_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~417_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~456_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~415_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~383_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~385_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~387_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~366_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~372_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~374_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~352_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~373_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~375_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~353_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~355_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~359_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~357_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~371_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~369_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~367_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~358_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~356_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~354_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~370_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~368_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data[364]~feeder_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~365_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~363_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~361_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~61_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~338_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~340_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~342_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~351_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~337_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~339_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~341_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~343_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~335_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~333_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~331_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~329_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~17_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~173_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~413_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~490_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~381_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~57_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~13_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~169_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~470_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~379_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~336_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~45_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~9_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~165_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~434_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~411_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~468_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~364_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~362_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~334_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~41_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~161_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~432_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~392_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~466_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~360_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~332_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~37_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~5_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~1_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~428_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~422_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~386_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~328_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~33_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~189_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~420_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~384_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~350_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~65_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~28_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~425_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~418_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~382_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~349_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~93_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~183_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~148_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~416_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~347_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~89_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~56_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~24_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~176_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~412_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~345_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~85_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~52_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~20_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~164_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~293_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~117_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~424_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~410_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~464_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~380_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~81_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~44_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~16_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~0_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~160_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~233_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~237_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~241_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~317_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~289_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~203_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~323_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~285_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~281_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~113_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~462_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~378_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~346_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~77_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~188_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~159_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~140_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~461_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~377_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~73_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~40_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~36_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~136_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~277_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~97_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~68_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~132_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~273_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~124_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~92_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~64_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~31_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~184_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~155_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~313_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~120_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~221_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~305_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~112_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~88_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~63_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~23_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~180_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~151_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~143_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~84_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~59_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~135_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~80_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~47_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~19_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~131_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~217_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~243_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~301_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~127_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~76_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~179_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~297_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~269_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~39_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~11_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~175_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~292_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~265_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~239_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~312_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~72_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~7_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~245_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~104_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~171_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~240_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~123_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~95_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~3_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~167_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~236_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~308_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~58_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~158_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~232_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~296_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~119_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data[181]~feeder_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~91_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~190_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~150_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~409_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~460_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~376_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~344_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~295_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~279_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~291_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~115_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~83_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~54_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~146_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~142_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~30_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~178_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~138_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~79_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~75_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~186_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~324_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~287_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~283_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~50_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~26_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~228_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~315_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~275_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~271_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~107_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~46_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~22_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~224_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~311_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~78_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~42_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~166_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~134_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~18_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~220_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~307_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~74_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~70_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~14_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~163_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~130_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~276_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~106_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~10_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~216_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~303_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~67_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~6_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~182_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~320_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~294_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~126_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~272_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~102_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~2_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~244_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~274_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~238_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~316_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~290_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~270_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~235_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~247_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~231_combout\ : std_logic;
 SIGNAL \adc_ram_shifter_1|temp_shift[7]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~63_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~95_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~77_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~62_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~75_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~37_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~93_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~73_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~61_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~117_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~71_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~123_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~99_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~35_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~92_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~31_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~70_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~60_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~91_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~59_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~58_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~90_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~57_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~89_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~79_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~56_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~206_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~263_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~227_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~204_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~223_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~122_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~259_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~219_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~202_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~322_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~215_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~319_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~286_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~118_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~257_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~111_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~214_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~201_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~255_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~199_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~197_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~253_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~195_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~251_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~246_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~193_combout\ : std_logic;
 SIGNAL \adc_ram_shifter_1|temp_shift[15]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~87_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~31_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~67_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~115_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~69_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~113_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~66_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~84_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~73_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~111_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~65_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~262_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~110_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~211_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~318_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~213_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~314_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~210_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~256_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~234_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~310_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~209_combout\ : std_logic;
 SIGNAL \adc_ram_shifter_1|temp_shift[11]~feeder_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~83_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~71_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~60_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~59_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~58_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~57_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~56_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~82_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~67_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~109_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~64_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~81_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~25_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~88_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~65_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~113_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_b_1~68_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~105_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~16_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_1~48_combout\ : std_logic;
-SIGNAL \adc_ram_shifter_1|data_a_2~80_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~254_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~230_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~200_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~198_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~196_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~194_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~192_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~252_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~222_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~306_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~208_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~250_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~99_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~249_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~218_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~299_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~212_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~298_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~66_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~162_combout\ : std_logic;
+SIGNAL \adc_ram_shifter_1|data~408_combout\ : std_logic;
 SIGNAL \corr_long|input_adc_6[49]~49_combout\ : std_logic;
 SIGNAL \corr_long|input_adc_6[50]~50_combout\ : std_logic;
 SIGNAL \corr_long|input_adc_6[51]~51_combout\ : std_logic;
@@ -6277,10 +6277,7 @@ SIGNAL \UART_Controller_1|uart_clk_divider|half_clock\ : std_logic_vector(15 DOW
 SIGNAL \UART_Controller_1|uart_clk_divider|counter\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|wr_ptr|safe_q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \adc_ram_shifter_1|temp_shift\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \adc_ram_shifter_1|data_b_2\ : std_logic_vector(127 DOWNTO 0);
-SIGNAL \adc_ram_shifter_1|data_b_1\ : std_logic_vector(127 DOWNTO 0);
-SIGNAL \adc_ram_shifter_1|data_a_2\ : std_logic_vector(127 DOWNTO 0);
-SIGNAL \adc_ram_shifter_1|data_a_1\ : std_logic_vector(127 DOWNTO 0);
+SIGNAL \adc_ram_shifter_1|data\ : std_logic_vector(512 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|q_b\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \ADC_IN~combout\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|rd_ptr_count|safe_q\ : std_logic_vector(3 DOWNTO 0);
@@ -7591,13 +7588,13 @@ ww_devpor <= devpor;
 \corr_long|gate6|Mult4|auto_generated|mac_mult1~DATAOUT14\ <= \corr_long|gate6|Mult4|auto_generated|mac_mult1_DATAOUT_bus\(16);
 \corr_long|gate6|Mult4|auto_generated|mac_mult1~DATAOUT15\ <= \corr_long|gate6|Mult4|auto_generated|mac_mult1_DATAOUT_bus\(17);
 
-\ram1|altsyncram_component|auto_generated|ram_block1a64_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_2\(23) & \adc_ram_shifter_1|data_a_2\(22) & \adc_ram_shifter_1|data_a_2\(21) & \adc_ram_shifter_1|data_a_2\(20) & \adc_ram_shifter_1|data_a_2\(19)
-& \adc_ram_shifter_1|data_a_2\(18) & \adc_ram_shifter_1|data_a_2\(17) & \adc_ram_shifter_1|data_a_2\(16) & \adc_ram_shifter_1|data_a_2\(8) & \adc_ram_shifter_1|data_a_1\(79) & \adc_ram_shifter_1|data_a_1\(78) & \adc_ram_shifter_1|data_a_1\(77) & 
-\adc_ram_shifter_1|data_a_1\(76) & \adc_ram_shifter_1|data_a_1\(75) & \adc_ram_shifter_1|data_a_1\(74) & \adc_ram_shifter_1|data_a_1\(73) & \adc_ram_shifter_1|data_a_1\(72) & \adc_ram_shifter_1|data_a_1\(64));
+\ram1|altsyncram_component|auto_generated|ram_block1a64_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(279) & \adc_ram_shifter_1|data\(278) & \adc_ram_shifter_1|data\(277) & \adc_ram_shifter_1|data\(276) & \adc_ram_shifter_1|data\(275) & 
+\adc_ram_shifter_1|data\(274) & \adc_ram_shifter_1|data\(273) & \adc_ram_shifter_1|data\(272) & \adc_ram_shifter_1|data\(264) & \adc_ram_shifter_1|data\(79) & \adc_ram_shifter_1|data\(78) & \adc_ram_shifter_1|data\(77) & \adc_ram_shifter_1|data\(76)
+& \adc_ram_shifter_1|data\(75) & \adc_ram_shifter_1|data\(74) & \adc_ram_shifter_1|data\(73) & \adc_ram_shifter_1|data\(72) & \adc_ram_shifter_1|data\(64));
 
-\ram1|altsyncram_component|auto_generated|ram_block1a64_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_2\(23) & \adc_ram_shifter_1|data_b_2\(22) & \adc_ram_shifter_1|data_b_2\(21) & \adc_ram_shifter_1|data_b_2\(20) & \adc_ram_shifter_1|data_b_2\(19)
-& \adc_ram_shifter_1|data_b_2\(18) & \adc_ram_shifter_1|data_b_2\(17) & \adc_ram_shifter_1|data_b_2\(16) & \adc_ram_shifter_1|data_b_2\(8) & \adc_ram_shifter_1|data_b_1\(79) & \adc_ram_shifter_1|data_b_1\(78) & \adc_ram_shifter_1|data_b_1\(77) & 
-\adc_ram_shifter_1|data_b_1\(76) & \adc_ram_shifter_1|data_b_1\(75) & \adc_ram_shifter_1|data_b_1\(74) & \adc_ram_shifter_1|data_b_1\(73) & \adc_ram_shifter_1|data_b_1\(72) & \adc_ram_shifter_1|data_b_1\(64));
+\ram1|altsyncram_component|auto_generated|ram_block1a64_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(407) & \adc_ram_shifter_1|data\(406) & \adc_ram_shifter_1|data\(405) & \adc_ram_shifter_1|data\(404) & \adc_ram_shifter_1|data\(403) & 
+\adc_ram_shifter_1|data\(402) & \adc_ram_shifter_1|data\(401) & \adc_ram_shifter_1|data\(400) & \adc_ram_shifter_1|data\(392) & \adc_ram_shifter_1|data\(207) & \adc_ram_shifter_1|data\(206) & \adc_ram_shifter_1|data\(205) & \adc_ram_shifter_1|data\(204)
+& \adc_ram_shifter_1|data\(203) & \adc_ram_shifter_1|data\(202) & \adc_ram_shifter_1|data\(201) & \adc_ram_shifter_1|data\(200) & \adc_ram_shifter_1|data\(192));
 
 \ram1|altsyncram_component|auto_generated|ram_block1a64_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -7641,13 +7638,13 @@ ww_devpor <= devpor;
 \ram2|altsyncram_component|auto_generated|q_b\(22) <= \ram1|altsyncram_component|auto_generated|ram_block1a64_PORTBDATAOUT_bus\(16);
 \ram2|altsyncram_component|auto_generated|q_b\(23) <= \ram1|altsyncram_component|auto_generated|ram_block1a64_PORTBDATAOUT_bus\(17);
 
-\ram1|altsyncram_component|auto_generated|ram_block1a56_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_2\(15) & \adc_ram_shifter_1|data_a_2\(14) & \adc_ram_shifter_1|data_a_2\(13) & \adc_ram_shifter_1|data_a_2\(12) & \adc_ram_shifter_1|data_a_2\(11)
-& \adc_ram_shifter_1|data_a_2\(10) & \adc_ram_shifter_1|data_a_2\(9) & \adc_ram_shifter_1|data_a_2\(1) & \adc_ram_shifter_1|data_a_2\(0) & \adc_ram_shifter_1|data_a_1\(71) & \adc_ram_shifter_1|data_a_1\(70) & \adc_ram_shifter_1|data_a_1\(69) & 
-\adc_ram_shifter_1|data_a_1\(68) & \adc_ram_shifter_1|data_a_1\(67) & \adc_ram_shifter_1|data_a_1\(66) & \adc_ram_shifter_1|data_a_1\(65) & \adc_ram_shifter_1|data_a_1\(57) & \adc_ram_shifter_1|data_a_1\(56));
+\ram1|altsyncram_component|auto_generated|ram_block1a56_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(271) & \adc_ram_shifter_1|data\(270) & \adc_ram_shifter_1|data\(269) & \adc_ram_shifter_1|data\(268) & \adc_ram_shifter_1|data\(267) & 
+\adc_ram_shifter_1|data\(266) & \adc_ram_shifter_1|data\(265) & \adc_ram_shifter_1|data\(257) & \adc_ram_shifter_1|data\(256) & \adc_ram_shifter_1|data\(71) & \adc_ram_shifter_1|data\(70) & \adc_ram_shifter_1|data\(69) & \adc_ram_shifter_1|data\(68)
+& \adc_ram_shifter_1|data\(67) & \adc_ram_shifter_1|data\(66) & \adc_ram_shifter_1|data\(65) & \adc_ram_shifter_1|data\(57) & \adc_ram_shifter_1|data\(56));
 
-\ram1|altsyncram_component|auto_generated|ram_block1a56_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_2\(15) & \adc_ram_shifter_1|data_b_2\(14) & \adc_ram_shifter_1|data_b_2\(13) & \adc_ram_shifter_1|data_b_2\(12) & \adc_ram_shifter_1|data_b_2\(11)
-& \adc_ram_shifter_1|data_b_2\(10) & \adc_ram_shifter_1|data_b_2\(9) & \adc_ram_shifter_1|data_b_2\(1) & \adc_ram_shifter_1|data_b_2\(0) & \adc_ram_shifter_1|data_b_1\(71) & \adc_ram_shifter_1|data_b_1\(70) & \adc_ram_shifter_1|data_b_1\(69) & 
-\adc_ram_shifter_1|data_b_1\(68) & \adc_ram_shifter_1|data_b_1\(67) & \adc_ram_shifter_1|data_b_1\(66) & \adc_ram_shifter_1|data_b_1\(65) & \adc_ram_shifter_1|data_b_1\(57) & \adc_ram_shifter_1|data_b_1\(56));
+\ram1|altsyncram_component|auto_generated|ram_block1a56_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(399) & \adc_ram_shifter_1|data\(398) & \adc_ram_shifter_1|data\(397) & \adc_ram_shifter_1|data\(396) & \adc_ram_shifter_1|data\(395) & 
+\adc_ram_shifter_1|data\(394) & \adc_ram_shifter_1|data\(393) & \adc_ram_shifter_1|data\(385) & \adc_ram_shifter_1|data\(384) & \adc_ram_shifter_1|data\(199) & \adc_ram_shifter_1|data\(198) & \adc_ram_shifter_1|data\(197) & \adc_ram_shifter_1|data\(196)
+& \adc_ram_shifter_1|data\(195) & \adc_ram_shifter_1|data\(194) & \adc_ram_shifter_1|data\(193) & \adc_ram_shifter_1|data\(185) & \adc_ram_shifter_1|data\(184));
 
 \ram1|altsyncram_component|auto_generated|ram_block1a56_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -7691,13 +7688,13 @@ ww_devpor <= devpor;
 \ram2|altsyncram_component|auto_generated|q_b\(14) <= \ram1|altsyncram_component|auto_generated|ram_block1a56_PORTBDATAOUT_bus\(16);
 \ram2|altsyncram_component|auto_generated|q_b\(15) <= \ram1|altsyncram_component|auto_generated|ram_block1a56_PORTBDATAOUT_bus\(17);
 
-\ram1|altsyncram_component|auto_generated|ram_block1a48_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_2\(7) & \adc_ram_shifter_1|data_a_2\(6) & \adc_ram_shifter_1|data_a_2\(5) & \adc_ram_shifter_1|data_a_2\(4) & \adc_ram_shifter_1|data_a_2\(3)
-& \adc_ram_shifter_1|data_a_2\(2) & \adc_ram_shifter_1|data_a_1\(122) & \adc_ram_shifter_1|data_a_1\(121) & \adc_ram_shifter_1|data_a_1\(120) & \adc_ram_shifter_1|data_a_1\(63) & \adc_ram_shifter_1|data_a_1\(62) & \adc_ram_shifter_1|data_a_1\(61) & 
-\adc_ram_shifter_1|data_a_1\(60) & \adc_ram_shifter_1|data_a_1\(59) & \adc_ram_shifter_1|data_a_1\(58) & \adc_ram_shifter_1|data_a_1\(50) & \adc_ram_shifter_1|data_a_1\(49) & \adc_ram_shifter_1|data_a_1\(48));
+\ram1|altsyncram_component|auto_generated|ram_block1a48_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(263) & \adc_ram_shifter_1|data\(262) & \adc_ram_shifter_1|data\(261) & \adc_ram_shifter_1|data\(260) & \adc_ram_shifter_1|data\(259) & 
+\adc_ram_shifter_1|data\(258) & \adc_ram_shifter_1|data\(122) & \adc_ram_shifter_1|data\(121) & \adc_ram_shifter_1|data\(120) & \adc_ram_shifter_1|data\(63) & \adc_ram_shifter_1|data\(62) & \adc_ram_shifter_1|data\(61) & \adc_ram_shifter_1|data\(60)
+& \adc_ram_shifter_1|data\(59) & \adc_ram_shifter_1|data\(58) & \adc_ram_shifter_1|data\(50) & \adc_ram_shifter_1|data\(49) & \adc_ram_shifter_1|data\(48));
 
-\ram1|altsyncram_component|auto_generated|ram_block1a48_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_2\(7) & \adc_ram_shifter_1|data_b_2\(6) & \adc_ram_shifter_1|data_b_2\(5) & \adc_ram_shifter_1|data_b_2\(4) & \adc_ram_shifter_1|data_b_2\(3)
-& \adc_ram_shifter_1|data_b_2\(2) & \adc_ram_shifter_1|data_b_1\(122) & \adc_ram_shifter_1|data_b_1\(121) & \adc_ram_shifter_1|data_b_1\(120) & \adc_ram_shifter_1|data_b_1\(63) & \adc_ram_shifter_1|data_b_1\(62) & \adc_ram_shifter_1|data_b_1\(61) & 
-\adc_ram_shifter_1|data_b_1\(60) & \adc_ram_shifter_1|data_b_1\(59) & \adc_ram_shifter_1|data_b_1\(58) & \adc_ram_shifter_1|data_b_1\(50) & \adc_ram_shifter_1|data_b_1\(49) & \adc_ram_shifter_1|data_b_1\(48));
+\ram1|altsyncram_component|auto_generated|ram_block1a48_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(391) & \adc_ram_shifter_1|data\(390) & \adc_ram_shifter_1|data\(389) & \adc_ram_shifter_1|data\(388) & \adc_ram_shifter_1|data\(387) & 
+\adc_ram_shifter_1|data\(386) & \adc_ram_shifter_1|data\(250) & \adc_ram_shifter_1|data\(249) & \adc_ram_shifter_1|data\(248) & \adc_ram_shifter_1|data\(191) & \adc_ram_shifter_1|data\(190) & \adc_ram_shifter_1|data\(189) & \adc_ram_shifter_1|data\(188)
+& \adc_ram_shifter_1|data\(187) & \adc_ram_shifter_1|data\(186) & \adc_ram_shifter_1|data\(178) & \adc_ram_shifter_1|data\(177) & \adc_ram_shifter_1|data\(176));
 
 \ram1|altsyncram_component|auto_generated|ram_block1a48_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -7741,13 +7738,13 @@ ww_devpor <= devpor;
 \ram2|altsyncram_component|auto_generated|q_b\(6) <= \ram1|altsyncram_component|auto_generated|ram_block1a48_PORTBDATAOUT_bus\(16);
 \ram2|altsyncram_component|auto_generated|q_b\(7) <= \ram1|altsyncram_component|auto_generated|ram_block1a48_PORTBDATAOUT_bus\(17);
 
-\ram1|altsyncram_component|auto_generated|ram_block1a51_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_2\(35) & \adc_ram_shifter_1|data_a_2\(34) & \adc_ram_shifter_1|data_a_2\(33) & \adc_ram_shifter_1|data_a_2\(32) & \adc_ram_shifter_1|data_a_1\(127)
-& \adc_ram_shifter_1|data_a_1\(126) & \adc_ram_shifter_1|data_a_1\(125) & \adc_ram_shifter_1|data_a_1\(124) & \adc_ram_shifter_1|data_a_1\(123) & \adc_ram_shifter_1|data_a_1\(91) & \adc_ram_shifter_1|data_a_1\(90) & \adc_ram_shifter_1|data_a_1\(89) & 
-\adc_ram_shifter_1|data_a_1\(88) & \adc_ram_shifter_1|data_a_1\(55) & \adc_ram_shifter_1|data_a_1\(54) & \adc_ram_shifter_1|data_a_1\(53) & \adc_ram_shifter_1|data_a_1\(52) & \adc_ram_shifter_1|data_a_1\(51));
+\ram1|altsyncram_component|auto_generated|ram_block1a51_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(291) & \adc_ram_shifter_1|data\(290) & \adc_ram_shifter_1|data\(289) & \adc_ram_shifter_1|data\(288) & \adc_ram_shifter_1|data\(127) & 
+\adc_ram_shifter_1|data\(126) & \adc_ram_shifter_1|data\(125) & \adc_ram_shifter_1|data\(124) & \adc_ram_shifter_1|data\(123) & \adc_ram_shifter_1|data\(91) & \adc_ram_shifter_1|data\(90) & \adc_ram_shifter_1|data\(89) & \adc_ram_shifter_1|data\(88)
+& \adc_ram_shifter_1|data\(55) & \adc_ram_shifter_1|data\(54) & \adc_ram_shifter_1|data\(53) & \adc_ram_shifter_1|data\(52) & \adc_ram_shifter_1|data\(51));
 
-\ram1|altsyncram_component|auto_generated|ram_block1a51_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_2\(35) & \adc_ram_shifter_1|data_b_2\(34) & \adc_ram_shifter_1|data_b_2\(33) & \adc_ram_shifter_1|data_b_2\(32) & \adc_ram_shifter_1|data_b_1\(127)
-& \adc_ram_shifter_1|data_b_1\(126) & \adc_ram_shifter_1|data_b_1\(125) & \adc_ram_shifter_1|data_b_1\(124) & \adc_ram_shifter_1|data_b_1\(123) & \adc_ram_shifter_1|data_b_1\(91) & \adc_ram_shifter_1|data_b_1\(90) & \adc_ram_shifter_1|data_b_1\(89) & 
-\adc_ram_shifter_1|data_b_1\(88) & \adc_ram_shifter_1|data_b_1\(55) & \adc_ram_shifter_1|data_b_1\(54) & \adc_ram_shifter_1|data_b_1\(53) & \adc_ram_shifter_1|data_b_1\(52) & \adc_ram_shifter_1|data_b_1\(51));
+\ram1|altsyncram_component|auto_generated|ram_block1a51_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(419) & \adc_ram_shifter_1|data\(418) & \adc_ram_shifter_1|data\(417) & \adc_ram_shifter_1|data\(416) & \adc_ram_shifter_1|data\(255) & 
+\adc_ram_shifter_1|data\(254) & \adc_ram_shifter_1|data\(253) & \adc_ram_shifter_1|data\(252) & \adc_ram_shifter_1|data\(251) & \adc_ram_shifter_1|data\(219) & \adc_ram_shifter_1|data\(218) & \adc_ram_shifter_1|data\(217) & \adc_ram_shifter_1|data\(216)
+& \adc_ram_shifter_1|data\(183) & \adc_ram_shifter_1|data\(182) & \adc_ram_shifter_1|data\(181) & \adc_ram_shifter_1|data\(180) & \adc_ram_shifter_1|data\(179));
 
 \ram1|altsyncram_component|auto_generated|ram_block1a51_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -7791,13 +7788,13 @@ ww_devpor <= devpor;
 \ram2|altsyncram_component|auto_generated|q_b\(34) <= \ram1|altsyncram_component|auto_generated|ram_block1a51_PORTBDATAOUT_bus\(16);
 \ram2|altsyncram_component|auto_generated|q_b\(35) <= \ram1|altsyncram_component|auto_generated|ram_block1a51_PORTBDATAOUT_bus\(17);
 
-\ram1|altsyncram_component|auto_generated|ram_block1a80_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_2\(39) & \adc_ram_shifter_1|data_a_2\(38) & \adc_ram_shifter_1|data_a_2\(37) & \adc_ram_shifter_1|data_a_2\(36) & \adc_ram_shifter_1|data_a_2\(28)
-& \adc_ram_shifter_1|data_a_2\(27) & \adc_ram_shifter_1|data_a_2\(26) & \adc_ram_shifter_1|data_a_2\(25) & \adc_ram_shifter_1|data_a_2\(24) & \adc_ram_shifter_1|data_a_1\(95) & \adc_ram_shifter_1|data_a_1\(94) & \adc_ram_shifter_1|data_a_1\(93) & 
-\adc_ram_shifter_1|data_a_1\(92) & \adc_ram_shifter_1|data_a_1\(84) & \adc_ram_shifter_1|data_a_1\(83) & \adc_ram_shifter_1|data_a_1\(82) & \adc_ram_shifter_1|data_a_1\(81) & \adc_ram_shifter_1|data_a_1\(80));
+\ram1|altsyncram_component|auto_generated|ram_block1a80_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(295) & \adc_ram_shifter_1|data\(294) & \adc_ram_shifter_1|data\(293) & \adc_ram_shifter_1|data\(292) & \adc_ram_shifter_1|data\(284) & 
+\adc_ram_shifter_1|data\(283) & \adc_ram_shifter_1|data\(282) & \adc_ram_shifter_1|data\(281) & \adc_ram_shifter_1|data\(280) & \adc_ram_shifter_1|data\(95) & \adc_ram_shifter_1|data\(94) & \adc_ram_shifter_1|data\(93) & \adc_ram_shifter_1|data\(92)
+& \adc_ram_shifter_1|data\(84) & \adc_ram_shifter_1|data\(83) & \adc_ram_shifter_1|data\(82) & \adc_ram_shifter_1|data\(81) & \adc_ram_shifter_1|data\(80));
 
-\ram1|altsyncram_component|auto_generated|ram_block1a80_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_2\(39) & \adc_ram_shifter_1|data_b_2\(38) & \adc_ram_shifter_1|data_b_2\(37) & \adc_ram_shifter_1|data_b_2\(36) & \adc_ram_shifter_1|data_b_2\(28)
-& \adc_ram_shifter_1|data_b_2\(27) & \adc_ram_shifter_1|data_b_2\(26) & \adc_ram_shifter_1|data_b_2\(25) & \adc_ram_shifter_1|data_b_2\(24) & \adc_ram_shifter_1|data_b_1\(95) & \adc_ram_shifter_1|data_b_1\(94) & \adc_ram_shifter_1|data_b_1\(93) & 
-\adc_ram_shifter_1|data_b_1\(92) & \adc_ram_shifter_1|data_b_1\(84) & \adc_ram_shifter_1|data_b_1\(83) & \adc_ram_shifter_1|data_b_1\(82) & \adc_ram_shifter_1|data_b_1\(81) & \adc_ram_shifter_1|data_b_1\(80));
+\ram1|altsyncram_component|auto_generated|ram_block1a80_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(423) & \adc_ram_shifter_1|data\(422) & \adc_ram_shifter_1|data\(421) & \adc_ram_shifter_1|data\(420) & \adc_ram_shifter_1|data\(412) & 
+\adc_ram_shifter_1|data\(411) & \adc_ram_shifter_1|data\(410) & \adc_ram_shifter_1|data\(409) & \adc_ram_shifter_1|data\(408) & \adc_ram_shifter_1|data\(223) & \adc_ram_shifter_1|data\(222) & \adc_ram_shifter_1|data\(221) & \adc_ram_shifter_1|data\(220)
+& \adc_ram_shifter_1|data\(212) & \adc_ram_shifter_1|data\(211) & \adc_ram_shifter_1|data\(210) & \adc_ram_shifter_1|data\(209) & \adc_ram_shifter_1|data\(208));
 
 \ram1|altsyncram_component|auto_generated|ram_block1a80_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -7841,13 +7838,13 @@ ww_devpor <= devpor;
 \ram2|altsyncram_component|auto_generated|q_b\(38) <= \ram1|altsyncram_component|auto_generated|ram_block1a80_PORTBDATAOUT_bus\(16);
 \ram2|altsyncram_component|auto_generated|q_b\(39) <= \ram1|altsyncram_component|auto_generated|ram_block1a80_PORTBDATAOUT_bus\(17);
 
-\ram1|altsyncram_component|auto_generated|ram_block1a0_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_2\(31) & \adc_ram_shifter_1|data_a_2\(30) & \adc_ram_shifter_1|data_a_2\(29) & \adc_ram_shifter_1|data_a_1\(87) & \adc_ram_shifter_1|data_a_1\(86)
-& \adc_ram_shifter_1|data_a_1\(85) & \adc_ram_shifter_1|data_a_1\(15) & \adc_ram_shifter_1|data_a_1\(14) & \adc_ram_shifter_1|data_a_1\(13) & \adc_ram_shifter_1|data_a_1\(12) & \adc_ram_shifter_1|data_a_1\(11) & \adc_ram_shifter_1|data_a_1\(10) & 
-\adc_ram_shifter_1|data_a_1\(9) & \adc_ram_shifter_1|data_a_1\(8) & \adc_ram_shifter_1|data_a_1\(3) & \adc_ram_shifter_1|data_a_1\(2) & \adc_ram_shifter_1|data_a_1\(1) & \adc_ram_shifter_1|data_a_1\(0));
+\ram1|altsyncram_component|auto_generated|ram_block1a0_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(287) & \adc_ram_shifter_1|data\(286) & \adc_ram_shifter_1|data\(285) & \adc_ram_shifter_1|data\(87) & \adc_ram_shifter_1|data\(86) & 
+\adc_ram_shifter_1|data\(85) & \adc_ram_shifter_1|data\(15) & \adc_ram_shifter_1|data\(14) & \adc_ram_shifter_1|data\(13) & \adc_ram_shifter_1|data\(12) & \adc_ram_shifter_1|data\(11) & \adc_ram_shifter_1|data\(10) & \adc_ram_shifter_1|data\(9)
+& \adc_ram_shifter_1|data\(8) & \adc_ram_shifter_1|data\(3) & \adc_ram_shifter_1|data\(2) & \adc_ram_shifter_1|data\(1) & \adc_ram_shifter_1|data\(0));
 
-\ram1|altsyncram_component|auto_generated|ram_block1a0_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_2\(31) & \adc_ram_shifter_1|data_b_2\(30) & \adc_ram_shifter_1|data_b_2\(29) & \adc_ram_shifter_1|data_b_1\(87) & \adc_ram_shifter_1|data_b_1\(86)
-& \adc_ram_shifter_1|data_b_1\(85) & \adc_ram_shifter_1|data_b_1\(15) & \adc_ram_shifter_1|data_b_1\(14) & \adc_ram_shifter_1|data_b_1\(13) & \adc_ram_shifter_1|data_b_1\(12) & \adc_ram_shifter_1|data_b_1\(11) & \adc_ram_shifter_1|data_b_1\(10) & 
-\adc_ram_shifter_1|data_b_1\(9) & \adc_ram_shifter_1|data_b_1\(8) & \adc_ram_shifter_1|data_b_1\(3) & \adc_ram_shifter_1|data_b_1\(2) & \adc_ram_shifter_1|data_b_1\(1) & \adc_ram_shifter_1|data_b_1\(0));
+\ram1|altsyncram_component|auto_generated|ram_block1a0_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(415) & \adc_ram_shifter_1|data\(414) & \adc_ram_shifter_1|data\(413) & \adc_ram_shifter_1|data\(215) & \adc_ram_shifter_1|data\(214) & 
+\adc_ram_shifter_1|data\(213) & \adc_ram_shifter_1|data\(143) & \adc_ram_shifter_1|data\(142) & \adc_ram_shifter_1|data\(141) & \adc_ram_shifter_1|data\(140) & \adc_ram_shifter_1|data\(139) & \adc_ram_shifter_1|data\(138) & \adc_ram_shifter_1|data\(137)
+& \adc_ram_shifter_1|data\(136) & \adc_ram_shifter_1|data\(131) & \adc_ram_shifter_1|data\(130) & \adc_ram_shifter_1|data\(129) & \adc_ram_shifter_1|data\(128));
 
 \ram1|altsyncram_component|auto_generated|ram_block1a0_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -7891,13 +7888,13 @@ ww_devpor <= devpor;
 \ram2|altsyncram_component|auto_generated|q_b\(30) <= \ram1|altsyncram_component|auto_generated|ram_block1a0_PORTBDATAOUT_bus\(16);
 \ram2|altsyncram_component|auto_generated|q_b\(31) <= \ram1|altsyncram_component|auto_generated|ram_block1a0_PORTBDATAOUT_bus\(17);
 
-\ram1|altsyncram_component|auto_generated|ram_block1a4_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_1\(102) & \adc_ram_shifter_1|data_a_1\(101) & \adc_ram_shifter_1|data_a_1\(100) & \adc_ram_shifter_1|data_a_1\(99) & \adc_ram_shifter_1|data_a_1\(98)
-& \adc_ram_shifter_1|data_a_1\(97) & \adc_ram_shifter_1|data_a_1\(96) & \adc_ram_shifter_1|data_a_1\(30) & \adc_ram_shifter_1|data_a_1\(29) & \adc_ram_shifter_1|data_a_1\(28) & \adc_ram_shifter_1|data_a_1\(27) & \adc_ram_shifter_1|data_a_1\(26) & 
-\adc_ram_shifter_1|data_a_1\(25) & \adc_ram_shifter_1|data_a_1\(24) & \adc_ram_shifter_1|data_a_1\(7) & \adc_ram_shifter_1|data_a_1\(6) & \adc_ram_shifter_1|data_a_1\(5) & \adc_ram_shifter_1|data_a_1\(4));
+\ram1|altsyncram_component|auto_generated|ram_block1a4_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(102) & \adc_ram_shifter_1|data\(101) & \adc_ram_shifter_1|data\(100) & \adc_ram_shifter_1|data\(99) & \adc_ram_shifter_1|data\(98) & 
+\adc_ram_shifter_1|data\(97) & \adc_ram_shifter_1|data\(96) & \adc_ram_shifter_1|data\(30) & \adc_ram_shifter_1|data\(29) & \adc_ram_shifter_1|data\(28) & \adc_ram_shifter_1|data\(27) & \adc_ram_shifter_1|data\(26) & \adc_ram_shifter_1|data\(25)
+& \adc_ram_shifter_1|data\(24) & \adc_ram_shifter_1|data\(7) & \adc_ram_shifter_1|data\(6) & \adc_ram_shifter_1|data\(5) & \adc_ram_shifter_1|data\(4));
 
-\ram1|altsyncram_component|auto_generated|ram_block1a4_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_1\(102) & \adc_ram_shifter_1|data_b_1\(101) & \adc_ram_shifter_1|data_b_1\(100) & \adc_ram_shifter_1|data_b_1\(99) & \adc_ram_shifter_1|data_b_1\(98)
-& \adc_ram_shifter_1|data_b_1\(97) & \adc_ram_shifter_1|data_b_1\(96) & \adc_ram_shifter_1|data_b_1\(30) & \adc_ram_shifter_1|data_b_1\(29) & \adc_ram_shifter_1|data_b_1\(28) & \adc_ram_shifter_1|data_b_1\(27) & \adc_ram_shifter_1|data_b_1\(26) & 
-\adc_ram_shifter_1|data_b_1\(25) & \adc_ram_shifter_1|data_b_1\(24) & \adc_ram_shifter_1|data_b_1\(7) & \adc_ram_shifter_1|data_b_1\(6) & \adc_ram_shifter_1|data_b_1\(5) & \adc_ram_shifter_1|data_b_1\(4));
+\ram1|altsyncram_component|auto_generated|ram_block1a4_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(230) & \adc_ram_shifter_1|data\(229) & \adc_ram_shifter_1|data\(228) & \adc_ram_shifter_1|data\(227) & \adc_ram_shifter_1|data\(226) & 
+\adc_ram_shifter_1|data\(225) & \adc_ram_shifter_1|data\(224) & \adc_ram_shifter_1|data\(158) & \adc_ram_shifter_1|data\(157) & \adc_ram_shifter_1|data\(156) & \adc_ram_shifter_1|data\(155) & \adc_ram_shifter_1|data\(154) & \adc_ram_shifter_1|data\(153)
+& \adc_ram_shifter_1|data\(152) & \adc_ram_shifter_1|data\(135) & \adc_ram_shifter_1|data\(134) & \adc_ram_shifter_1|data\(133) & \adc_ram_shifter_1|data\(132));
 
 \ram1|altsyncram_component|auto_generated|ram_block1a4_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -7941,13 +7938,13 @@ ww_devpor <= devpor;
 \ram1|altsyncram_component|auto_generated|q_b\(101) <= \ram1|altsyncram_component|auto_generated|ram_block1a4_PORTBDATAOUT_bus\(16);
 \ram1|altsyncram_component|auto_generated|q_b\(102) <= \ram1|altsyncram_component|auto_generated|ram_block1a4_PORTBDATAOUT_bus\(17);
 
-\ram1|altsyncram_component|auto_generated|ram_block1a16_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_1\(115) & \adc_ram_shifter_1|data_a_1\(114) & \adc_ram_shifter_1|data_a_1\(113) & \adc_ram_shifter_1|data_a_1\(112) & \adc_ram_shifter_1|data_a_1\(103)
-& \adc_ram_shifter_1|data_a_1\(43) & \adc_ram_shifter_1|data_a_1\(42) & \adc_ram_shifter_1|data_a_1\(41) & \adc_ram_shifter_1|data_a_1\(40) & \adc_ram_shifter_1|data_a_1\(31) & \adc_ram_shifter_1|data_a_1\(23) & \adc_ram_shifter_1|data_a_1\(22) & 
-\adc_ram_shifter_1|data_a_1\(21) & \adc_ram_shifter_1|data_a_1\(20) & \adc_ram_shifter_1|data_a_1\(19) & \adc_ram_shifter_1|data_a_1\(18) & \adc_ram_shifter_1|data_a_1\(17) & \adc_ram_shifter_1|data_a_1\(16));
+\ram1|altsyncram_component|auto_generated|ram_block1a16_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(115) & \adc_ram_shifter_1|data\(114) & \adc_ram_shifter_1|data\(113) & \adc_ram_shifter_1|data\(112) & \adc_ram_shifter_1|data\(103) & 
+\adc_ram_shifter_1|data\(43) & \adc_ram_shifter_1|data\(42) & \adc_ram_shifter_1|data\(41) & \adc_ram_shifter_1|data\(40) & \adc_ram_shifter_1|data\(31) & \adc_ram_shifter_1|data\(23) & \adc_ram_shifter_1|data\(22) & \adc_ram_shifter_1|data\(21)
+& \adc_ram_shifter_1|data\(20) & \adc_ram_shifter_1|data\(19) & \adc_ram_shifter_1|data\(18) & \adc_ram_shifter_1|data\(17) & \adc_ram_shifter_1|data\(16));
 
-\ram1|altsyncram_component|auto_generated|ram_block1a16_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_1\(115) & \adc_ram_shifter_1|data_b_1\(114) & \adc_ram_shifter_1|data_b_1\(113) & \adc_ram_shifter_1|data_b_1\(112) & \adc_ram_shifter_1|data_b_1\(103)
-& \adc_ram_shifter_1|data_b_1\(43) & \adc_ram_shifter_1|data_b_1\(42) & \adc_ram_shifter_1|data_b_1\(41) & \adc_ram_shifter_1|data_b_1\(40) & \adc_ram_shifter_1|data_b_1\(31) & \adc_ram_shifter_1|data_b_1\(23) & \adc_ram_shifter_1|data_b_1\(22) & 
-\adc_ram_shifter_1|data_b_1\(21) & \adc_ram_shifter_1|data_b_1\(20) & \adc_ram_shifter_1|data_b_1\(19) & \adc_ram_shifter_1|data_b_1\(18) & \adc_ram_shifter_1|data_b_1\(17) & \adc_ram_shifter_1|data_b_1\(16));
+\ram1|altsyncram_component|auto_generated|ram_block1a16_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(243) & \adc_ram_shifter_1|data\(242) & \adc_ram_shifter_1|data\(241) & \adc_ram_shifter_1|data\(240) & \adc_ram_shifter_1|data\(231) & 
+\adc_ram_shifter_1|data\(171) & \adc_ram_shifter_1|data\(170) & \adc_ram_shifter_1|data\(169) & \adc_ram_shifter_1|data\(168) & \adc_ram_shifter_1|data\(159) & \adc_ram_shifter_1|data\(151) & \adc_ram_shifter_1|data\(150) & \adc_ram_shifter_1|data\(149)
+& \adc_ram_shifter_1|data\(148) & \adc_ram_shifter_1|data\(147) & \adc_ram_shifter_1|data\(146) & \adc_ram_shifter_1|data\(145) & \adc_ram_shifter_1|data\(144));
 
 \ram1|altsyncram_component|auto_generated|ram_block1a16_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -7991,13 +7988,13 @@ ww_devpor <= devpor;
 \ram1|altsyncram_component|auto_generated|q_b\(114) <= \ram1|altsyncram_component|auto_generated|ram_block1a16_PORTBDATAOUT_bus\(16);
 \ram1|altsyncram_component|auto_generated|q_b\(115) <= \ram1|altsyncram_component|auto_generated|ram_block1a16_PORTBDATAOUT_bus\(17);
 
-\ram1|altsyncram_component|auto_generated|ram_block1a32_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_1\(119) & \adc_ram_shifter_1|data_a_1\(118) & \adc_ram_shifter_1|data_a_1\(117) & \adc_ram_shifter_1|data_a_1\(116) & \adc_ram_shifter_1|data_a_1\(108)
-& \adc_ram_shifter_1|data_a_1\(107) & \adc_ram_shifter_1|data_a_1\(106) & \adc_ram_shifter_1|data_a_1\(105) & \adc_ram_shifter_1|data_a_1\(104) & \adc_ram_shifter_1|data_a_1\(47) & \adc_ram_shifter_1|data_a_1\(46) & \adc_ram_shifter_1|data_a_1\(45) & 
-\adc_ram_shifter_1|data_a_1\(44) & \adc_ram_shifter_1|data_a_1\(36) & \adc_ram_shifter_1|data_a_1\(35) & \adc_ram_shifter_1|data_a_1\(34) & \adc_ram_shifter_1|data_a_1\(33) & \adc_ram_shifter_1|data_a_1\(32));
+\ram1|altsyncram_component|auto_generated|ram_block1a32_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(119) & \adc_ram_shifter_1|data\(118) & \adc_ram_shifter_1|data\(117) & \adc_ram_shifter_1|data\(116) & \adc_ram_shifter_1|data\(108) & 
+\adc_ram_shifter_1|data\(107) & \adc_ram_shifter_1|data\(106) & \adc_ram_shifter_1|data\(105) & \adc_ram_shifter_1|data\(104) & \adc_ram_shifter_1|data\(47) & \adc_ram_shifter_1|data\(46) & \adc_ram_shifter_1|data\(45) & \adc_ram_shifter_1|data\(44)
+& \adc_ram_shifter_1|data\(36) & \adc_ram_shifter_1|data\(35) & \adc_ram_shifter_1|data\(34) & \adc_ram_shifter_1|data\(33) & \adc_ram_shifter_1|data\(32));
 
-\ram1|altsyncram_component|auto_generated|ram_block1a32_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_1\(119) & \adc_ram_shifter_1|data_b_1\(118) & \adc_ram_shifter_1|data_b_1\(117) & \adc_ram_shifter_1|data_b_1\(116) & \adc_ram_shifter_1|data_b_1\(108)
-& \adc_ram_shifter_1|data_b_1\(107) & \adc_ram_shifter_1|data_b_1\(106) & \adc_ram_shifter_1|data_b_1\(105) & \adc_ram_shifter_1|data_b_1\(104) & \adc_ram_shifter_1|data_b_1\(47) & \adc_ram_shifter_1|data_b_1\(46) & \adc_ram_shifter_1|data_b_1\(45) & 
-\adc_ram_shifter_1|data_b_1\(44) & \adc_ram_shifter_1|data_b_1\(36) & \adc_ram_shifter_1|data_b_1\(35) & \adc_ram_shifter_1|data_b_1\(34) & \adc_ram_shifter_1|data_b_1\(33) & \adc_ram_shifter_1|data_b_1\(32));
+\ram1|altsyncram_component|auto_generated|ram_block1a32_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(247) & \adc_ram_shifter_1|data\(246) & \adc_ram_shifter_1|data\(245) & \adc_ram_shifter_1|data\(244) & \adc_ram_shifter_1|data\(236) & 
+\adc_ram_shifter_1|data\(235) & \adc_ram_shifter_1|data\(234) & \adc_ram_shifter_1|data\(233) & \adc_ram_shifter_1|data\(232) & \adc_ram_shifter_1|data\(175) & \adc_ram_shifter_1|data\(174) & \adc_ram_shifter_1|data\(173) & \adc_ram_shifter_1|data\(172)
+& \adc_ram_shifter_1|data\(164) & \adc_ram_shifter_1|data\(163) & \adc_ram_shifter_1|data\(162) & \adc_ram_shifter_1|data\(161) & \adc_ram_shifter_1|data\(160));
 
 \ram1|altsyncram_component|auto_generated|ram_block1a32_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -8041,13 +8038,13 @@ ww_devpor <= devpor;
 \ram1|altsyncram_component|auto_generated|q_b\(118) <= \ram1|altsyncram_component|auto_generated|ram_block1a32_PORTBDATAOUT_bus\(16);
 \ram1|altsyncram_component|auto_generated|q_b\(119) <= \ram1|altsyncram_component|auto_generated|ram_block1a32_PORTBDATAOUT_bus\(17);
 
-\ram1|altsyncram_component|auto_generated|ram_block1a37_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_2\(127) & \adc_ram_shifter_1|data_a_2\(126) & \adc_ram_shifter_1|data_a_2\(125) & \adc_ram_shifter_1|data_a_2\(124) & \adc_ram_shifter_1|data_a_2\(123)
-& \adc_ram_shifter_1|data_a_2\(122) & \adc_ram_shifter_1|data_a_2\(121) & \adc_ram_shifter_1|data_a_2\(120) & \adc_ram_shifter_1|data_a_2\(115) & \adc_ram_shifter_1|data_a_2\(114) & \adc_ram_shifter_1|data_a_2\(113) & \adc_ram_shifter_1|data_a_2\(112) & 
-\adc_ram_shifter_1|data_a_1\(111) & \adc_ram_shifter_1|data_a_1\(110) & \adc_ram_shifter_1|data_a_1\(109) & \adc_ram_shifter_1|data_a_1\(39) & \adc_ram_shifter_1|data_a_1\(38) & \adc_ram_shifter_1|data_a_1\(37));
+\ram1|altsyncram_component|auto_generated|ram_block1a37_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(383) & \adc_ram_shifter_1|data\(382) & \adc_ram_shifter_1|data\(381) & \adc_ram_shifter_1|data\(380) & \adc_ram_shifter_1|data\(379) & 
+\adc_ram_shifter_1|data\(378) & \adc_ram_shifter_1|data\(377) & \adc_ram_shifter_1|data\(376) & \adc_ram_shifter_1|data\(371) & \adc_ram_shifter_1|data\(370) & \adc_ram_shifter_1|data\(369) & \adc_ram_shifter_1|data\(368) & \adc_ram_shifter_1|data\(111)
+& \adc_ram_shifter_1|data\(110) & \adc_ram_shifter_1|data\(109) & \adc_ram_shifter_1|data\(39) & \adc_ram_shifter_1|data\(38) & \adc_ram_shifter_1|data\(37));
 
-\ram1|altsyncram_component|auto_generated|ram_block1a37_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_2\(127) & \adc_ram_shifter_1|data_b_2\(126) & \adc_ram_shifter_1|data_b_2\(125) & \adc_ram_shifter_1|data_b_2\(124) & \adc_ram_shifter_1|data_b_2\(123)
-& \adc_ram_shifter_1|data_b_2\(122) & \adc_ram_shifter_1|data_b_2\(121) & \adc_ram_shifter_1|data_b_2\(120) & \adc_ram_shifter_1|data_b_2\(115) & \adc_ram_shifter_1|data_b_2\(114) & \adc_ram_shifter_1|data_b_2\(113) & \adc_ram_shifter_1|data_b_2\(112) & 
-\adc_ram_shifter_1|data_b_1\(111) & \adc_ram_shifter_1|data_b_1\(110) & \adc_ram_shifter_1|data_b_1\(109) & \adc_ram_shifter_1|data_b_1\(39) & \adc_ram_shifter_1|data_b_1\(38) & \adc_ram_shifter_1|data_b_1\(37));
+\ram1|altsyncram_component|auto_generated|ram_block1a37_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(511) & \adc_ram_shifter_1|data\(510) & \adc_ram_shifter_1|data\(509) & \adc_ram_shifter_1|data\(508) & \adc_ram_shifter_1|data\(507) & 
+\adc_ram_shifter_1|data\(506) & \adc_ram_shifter_1|data\(505) & \adc_ram_shifter_1|data\(504) & \adc_ram_shifter_1|data\(499) & \adc_ram_shifter_1|data\(498) & \adc_ram_shifter_1|data\(497) & \adc_ram_shifter_1|data\(496) & \adc_ram_shifter_1|data\(239)
+& \adc_ram_shifter_1|data\(238) & \adc_ram_shifter_1|data\(237) & \adc_ram_shifter_1|data\(167) & \adc_ram_shifter_1|data\(166) & \adc_ram_shifter_1|data\(165));
 
 \ram1|altsyncram_component|auto_generated|ram_block1a37_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -8083,13 +8080,13 @@ ww_devpor <= devpor;
 \ram2|altsyncram_component|auto_generated|q_b\(114) <= \ram1|altsyncram_component|auto_generated|ram_block1a37_PORTBDATAOUT_bus\(8);
 \ram2|altsyncram_component|auto_generated|q_b\(115) <= \ram1|altsyncram_component|auto_generated|ram_block1a37_PORTBDATAOUT_bus\(9);
 
-\ram2|altsyncram_component|auto_generated|ram_block1a96_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_2\(119) & \adc_ram_shifter_1|data_a_2\(118) & \adc_ram_shifter_1|data_a_2\(117) & \adc_ram_shifter_1|data_a_2\(116) & \adc_ram_shifter_1|data_a_2\(111)
-& \adc_ram_shifter_1|data_a_2\(110) & \adc_ram_shifter_1|data_a_2\(109) & \adc_ram_shifter_1|data_a_2\(108) & \adc_ram_shifter_1|data_a_2\(107) & \adc_ram_shifter_1|data_a_2\(106) & \adc_ram_shifter_1|data_a_2\(105) & \adc_ram_shifter_1|data_a_2\(104) & 
-\adc_ram_shifter_1|data_a_2\(101) & \adc_ram_shifter_1|data_a_2\(100) & \adc_ram_shifter_1|data_a_2\(99) & \adc_ram_shifter_1|data_a_2\(98) & \adc_ram_shifter_1|data_a_2\(97) & \adc_ram_shifter_1|data_a_2\(96));
+\ram2|altsyncram_component|auto_generated|ram_block1a96_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(375) & \adc_ram_shifter_1|data\(374) & \adc_ram_shifter_1|data\(373) & \adc_ram_shifter_1|data\(372) & \adc_ram_shifter_1|data\(367) & 
+\adc_ram_shifter_1|data\(366) & \adc_ram_shifter_1|data\(365) & \adc_ram_shifter_1|data\(364) & \adc_ram_shifter_1|data\(363) & \adc_ram_shifter_1|data\(362) & \adc_ram_shifter_1|data\(361) & \adc_ram_shifter_1|data\(360) & \adc_ram_shifter_1|data\(357)
+& \adc_ram_shifter_1|data\(356) & \adc_ram_shifter_1|data\(355) & \adc_ram_shifter_1|data\(354) & \adc_ram_shifter_1|data\(353) & \adc_ram_shifter_1|data\(352));
 
-\ram2|altsyncram_component|auto_generated|ram_block1a96_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_2\(119) & \adc_ram_shifter_1|data_b_2\(118) & \adc_ram_shifter_1|data_b_2\(117) & \adc_ram_shifter_1|data_b_2\(116) & \adc_ram_shifter_1|data_b_2\(111)
-& \adc_ram_shifter_1|data_b_2\(110) & \adc_ram_shifter_1|data_b_2\(109) & \adc_ram_shifter_1|data_b_2\(108) & \adc_ram_shifter_1|data_b_2\(107) & \adc_ram_shifter_1|data_b_2\(106) & \adc_ram_shifter_1|data_b_2\(105) & \adc_ram_shifter_1|data_b_2\(104) & 
-\adc_ram_shifter_1|data_b_2\(101) & \adc_ram_shifter_1|data_b_2\(100) & \adc_ram_shifter_1|data_b_2\(99) & \adc_ram_shifter_1|data_b_2\(98) & \adc_ram_shifter_1|data_b_2\(97) & \adc_ram_shifter_1|data_b_2\(96));
+\ram2|altsyncram_component|auto_generated|ram_block1a96_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(503) & \adc_ram_shifter_1|data\(502) & \adc_ram_shifter_1|data\(501) & \adc_ram_shifter_1|data\(500) & \adc_ram_shifter_1|data\(495) & 
+\adc_ram_shifter_1|data\(494) & \adc_ram_shifter_1|data\(493) & \adc_ram_shifter_1|data\(492) & \adc_ram_shifter_1|data\(491) & \adc_ram_shifter_1|data\(490) & \adc_ram_shifter_1|data\(489) & \adc_ram_shifter_1|data\(488) & \adc_ram_shifter_1|data\(485)
+& \adc_ram_shifter_1|data\(484) & \adc_ram_shifter_1|data\(483) & \adc_ram_shifter_1|data\(482) & \adc_ram_shifter_1|data\(481) & \adc_ram_shifter_1|data\(480));
 
 \ram2|altsyncram_component|auto_generated|ram_block1a96_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -8133,13 +8130,13 @@ ww_devpor <= devpor;
 \ram2|altsyncram_component|auto_generated|q_b\(118) <= \ram2|altsyncram_component|auto_generated|ram_block1a96_PORTBDATAOUT_bus\(16);
 \ram2|altsyncram_component|auto_generated|q_b\(119) <= \ram2|altsyncram_component|auto_generated|ram_block1a96_PORTBDATAOUT_bus\(17);
 
-\ram2|altsyncram_component|auto_generated|ram_block1a48_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_2\(103) & \adc_ram_shifter_1|data_a_2\(102) & \adc_ram_shifter_1|data_a_2\(95) & \adc_ram_shifter_1|data_a_2\(94) & \adc_ram_shifter_1|data_a_2\(93)
-& \adc_ram_shifter_1|data_a_2\(92) & \adc_ram_shifter_1|data_a_2\(91) & \adc_ram_shifter_1|data_a_2\(90) & \adc_ram_shifter_1|data_a_2\(89) & \adc_ram_shifter_1|data_a_2\(88) & \adc_ram_shifter_1|data_a_2\(55) & \adc_ram_shifter_1|data_a_2\(54) & 
-\adc_ram_shifter_1|data_a_2\(53) & \adc_ram_shifter_1|data_a_2\(52) & \adc_ram_shifter_1|data_a_2\(51) & \adc_ram_shifter_1|data_a_2\(50) & \adc_ram_shifter_1|data_a_2\(49) & \adc_ram_shifter_1|data_a_2\(48));
+\ram2|altsyncram_component|auto_generated|ram_block1a48_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(359) & \adc_ram_shifter_1|data\(358) & \adc_ram_shifter_1|data\(351) & \adc_ram_shifter_1|data\(350) & \adc_ram_shifter_1|data\(349) & 
+\adc_ram_shifter_1|data\(348) & \adc_ram_shifter_1|data\(347) & \adc_ram_shifter_1|data\(346) & \adc_ram_shifter_1|data\(345) & \adc_ram_shifter_1|data\(344) & \adc_ram_shifter_1|data\(311) & \adc_ram_shifter_1|data\(310) & \adc_ram_shifter_1|data\(309)
+& \adc_ram_shifter_1|data\(308) & \adc_ram_shifter_1|data\(307) & \adc_ram_shifter_1|data\(306) & \adc_ram_shifter_1|data\(305) & \adc_ram_shifter_1|data\(304));
 
-\ram2|altsyncram_component|auto_generated|ram_block1a48_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_2\(103) & \adc_ram_shifter_1|data_b_2\(102) & \adc_ram_shifter_1|data_b_2\(95) & \adc_ram_shifter_1|data_b_2\(94) & \adc_ram_shifter_1|data_b_2\(93)
-& \adc_ram_shifter_1|data_b_2\(92) & \adc_ram_shifter_1|data_b_2\(91) & \adc_ram_shifter_1|data_b_2\(90) & \adc_ram_shifter_1|data_b_2\(89) & \adc_ram_shifter_1|data_b_2\(88) & \adc_ram_shifter_1|data_b_2\(55) & \adc_ram_shifter_1|data_b_2\(54) & 
-\adc_ram_shifter_1|data_b_2\(53) & \adc_ram_shifter_1|data_b_2\(52) & \adc_ram_shifter_1|data_b_2\(51) & \adc_ram_shifter_1|data_b_2\(50) & \adc_ram_shifter_1|data_b_2\(49) & \adc_ram_shifter_1|data_b_2\(48));
+\ram2|altsyncram_component|auto_generated|ram_block1a48_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(487) & \adc_ram_shifter_1|data\(486) & \adc_ram_shifter_1|data\(479) & \adc_ram_shifter_1|data\(478) & \adc_ram_shifter_1|data\(477) & 
+\adc_ram_shifter_1|data\(476) & \adc_ram_shifter_1|data\(475) & \adc_ram_shifter_1|data\(474) & \adc_ram_shifter_1|data\(473) & \adc_ram_shifter_1|data\(472) & \adc_ram_shifter_1|data\(439) & \adc_ram_shifter_1|data\(438) & \adc_ram_shifter_1|data\(437)
+& \adc_ram_shifter_1|data\(436) & \adc_ram_shifter_1|data\(435) & \adc_ram_shifter_1|data\(434) & \adc_ram_shifter_1|data\(433) & \adc_ram_shifter_1|data\(432));
 
 \ram2|altsyncram_component|auto_generated|ram_block1a48_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -8183,13 +8180,13 @@ ww_devpor <= devpor;
 \ram2|altsyncram_component|auto_generated|q_b\(102) <= \ram2|altsyncram_component|auto_generated|ram_block1a48_PORTBDATAOUT_bus\(16);
 \ram2|altsyncram_component|auto_generated|q_b\(103) <= \ram2|altsyncram_component|auto_generated|ram_block1a48_PORTBDATAOUT_bus\(17);
 
-\ram2|altsyncram_component|auto_generated|ram_block1a40_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_2\(71) & \adc_ram_shifter_1|data_a_2\(70) & \adc_ram_shifter_1|data_a_2\(69) & \adc_ram_shifter_1|data_a_2\(68) & \adc_ram_shifter_1|data_a_2\(67)
-& \adc_ram_shifter_1|data_a_2\(66) & \adc_ram_shifter_1|data_a_2\(65) & \adc_ram_shifter_1|data_a_2\(64) & \adc_ram_shifter_1|data_a_2\(57) & \adc_ram_shifter_1|data_a_2\(56) & \adc_ram_shifter_1|data_a_2\(47) & \adc_ram_shifter_1|data_a_2\(46) & 
-\adc_ram_shifter_1|data_a_2\(45) & \adc_ram_shifter_1|data_a_2\(44) & \adc_ram_shifter_1|data_a_2\(43) & \adc_ram_shifter_1|data_a_2\(42) & \adc_ram_shifter_1|data_a_2\(41) & \adc_ram_shifter_1|data_a_2\(40));
+\ram2|altsyncram_component|auto_generated|ram_block1a40_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(327) & \adc_ram_shifter_1|data\(326) & \adc_ram_shifter_1|data\(325) & \adc_ram_shifter_1|data\(324) & \adc_ram_shifter_1|data\(323) & 
+\adc_ram_shifter_1|data\(322) & \adc_ram_shifter_1|data\(321) & \adc_ram_shifter_1|data\(320) & \adc_ram_shifter_1|data\(313) & \adc_ram_shifter_1|data\(312) & \adc_ram_shifter_1|data\(303) & \adc_ram_shifter_1|data\(302) & \adc_ram_shifter_1|data\(301)
+& \adc_ram_shifter_1|data\(300) & \adc_ram_shifter_1|data\(299) & \adc_ram_shifter_1|data\(298) & \adc_ram_shifter_1|data\(297) & \adc_ram_shifter_1|data\(296));
 
-\ram2|altsyncram_component|auto_generated|ram_block1a40_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_2\(71) & \adc_ram_shifter_1|data_b_2\(70) & \adc_ram_shifter_1|data_b_2\(69) & \adc_ram_shifter_1|data_b_2\(68) & \adc_ram_shifter_1|data_b_2\(67)
-& \adc_ram_shifter_1|data_b_2\(66) & \adc_ram_shifter_1|data_b_2\(65) & \adc_ram_shifter_1|data_b_2\(64) & \adc_ram_shifter_1|data_b_2\(57) & \adc_ram_shifter_1|data_b_2\(56) & \adc_ram_shifter_1|data_b_2\(47) & \adc_ram_shifter_1|data_b_2\(46) & 
-\adc_ram_shifter_1|data_b_2\(45) & \adc_ram_shifter_1|data_b_2\(44) & \adc_ram_shifter_1|data_b_2\(43) & \adc_ram_shifter_1|data_b_2\(42) & \adc_ram_shifter_1|data_b_2\(41) & \adc_ram_shifter_1|data_b_2\(40));
+\ram2|altsyncram_component|auto_generated|ram_block1a40_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(455) & \adc_ram_shifter_1|data\(454) & \adc_ram_shifter_1|data\(453) & \adc_ram_shifter_1|data\(452) & \adc_ram_shifter_1|data\(451) & 
+\adc_ram_shifter_1|data\(450) & \adc_ram_shifter_1|data\(449) & \adc_ram_shifter_1|data\(448) & \adc_ram_shifter_1|data\(441) & \adc_ram_shifter_1|data\(440) & \adc_ram_shifter_1|data\(431) & \adc_ram_shifter_1|data\(430) & \adc_ram_shifter_1|data\(429)
+& \adc_ram_shifter_1|data\(428) & \adc_ram_shifter_1|data\(427) & \adc_ram_shifter_1|data\(426) & \adc_ram_shifter_1|data\(425) & \adc_ram_shifter_1|data\(424));
 
 \ram2|altsyncram_component|auto_generated|ram_block1a40_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -8233,13 +8230,13 @@ ww_devpor <= devpor;
 \ram2|altsyncram_component|auto_generated|q_b\(70) <= \ram2|altsyncram_component|auto_generated|ram_block1a40_PORTBDATAOUT_bus\(16);
 \ram2|altsyncram_component|auto_generated|q_b\(71) <= \ram2|altsyncram_component|auto_generated|ram_block1a40_PORTBDATAOUT_bus\(17);
 
-\ram2|altsyncram_component|auto_generated|ram_block1a58_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_2\(87) & \adc_ram_shifter_1|data_a_2\(86) & \adc_ram_shifter_1|data_a_2\(85) & \adc_ram_shifter_1|data_a_2\(84) & \adc_ram_shifter_1|data_a_2\(83)
-& \adc_ram_shifter_1|data_a_2\(82) & \adc_ram_shifter_1|data_a_2\(81) & \adc_ram_shifter_1|data_a_2\(80) & \adc_ram_shifter_1|data_a_2\(75) & \adc_ram_shifter_1|data_a_2\(74) & \adc_ram_shifter_1|data_a_2\(73) & \adc_ram_shifter_1|data_a_2\(72) & 
-\adc_ram_shifter_1|data_a_2\(63) & \adc_ram_shifter_1|data_a_2\(62) & \adc_ram_shifter_1|data_a_2\(61) & \adc_ram_shifter_1|data_a_2\(60) & \adc_ram_shifter_1|data_a_2\(59) & \adc_ram_shifter_1|data_a_2\(58));
+\ram2|altsyncram_component|auto_generated|ram_block1a58_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(343) & \adc_ram_shifter_1|data\(342) & \adc_ram_shifter_1|data\(341) & \adc_ram_shifter_1|data\(340) & \adc_ram_shifter_1|data\(339) & 
+\adc_ram_shifter_1|data\(338) & \adc_ram_shifter_1|data\(337) & \adc_ram_shifter_1|data\(336) & \adc_ram_shifter_1|data\(331) & \adc_ram_shifter_1|data\(330) & \adc_ram_shifter_1|data\(329) & \adc_ram_shifter_1|data\(328) & \adc_ram_shifter_1|data\(319)
+& \adc_ram_shifter_1|data\(318) & \adc_ram_shifter_1|data\(317) & \adc_ram_shifter_1|data\(316) & \adc_ram_shifter_1|data\(315) & \adc_ram_shifter_1|data\(314));
 
-\ram2|altsyncram_component|auto_generated|ram_block1a58_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_2\(87) & \adc_ram_shifter_1|data_b_2\(86) & \adc_ram_shifter_1|data_b_2\(85) & \adc_ram_shifter_1|data_b_2\(84) & \adc_ram_shifter_1|data_b_2\(83)
-& \adc_ram_shifter_1|data_b_2\(82) & \adc_ram_shifter_1|data_b_2\(81) & \adc_ram_shifter_1|data_b_2\(80) & \adc_ram_shifter_1|data_b_2\(75) & \adc_ram_shifter_1|data_b_2\(74) & \adc_ram_shifter_1|data_b_2\(73) & \adc_ram_shifter_1|data_b_2\(72) & 
-\adc_ram_shifter_1|data_b_2\(63) & \adc_ram_shifter_1|data_b_2\(62) & \adc_ram_shifter_1|data_b_2\(61) & \adc_ram_shifter_1|data_b_2\(60) & \adc_ram_shifter_1|data_b_2\(59) & \adc_ram_shifter_1|data_b_2\(58));
+\ram2|altsyncram_component|auto_generated|ram_block1a58_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(471) & \adc_ram_shifter_1|data\(470) & \adc_ram_shifter_1|data\(469) & \adc_ram_shifter_1|data\(468) & \adc_ram_shifter_1|data\(467) & 
+\adc_ram_shifter_1|data\(466) & \adc_ram_shifter_1|data\(465) & \adc_ram_shifter_1|data\(464) & \adc_ram_shifter_1|data\(459) & \adc_ram_shifter_1|data\(458) & \adc_ram_shifter_1|data\(457) & \adc_ram_shifter_1|data\(456) & \adc_ram_shifter_1|data\(447)
+& \adc_ram_shifter_1|data\(446) & \adc_ram_shifter_1|data\(445) & \adc_ram_shifter_1|data\(444) & \adc_ram_shifter_1|data\(443) & \adc_ram_shifter_1|data\(442));
 
 \ram2|altsyncram_component|auto_generated|ram_block1a58_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -8283,9 +8280,9 @@ ww_devpor <= devpor;
 \ram2|altsyncram_component|auto_generated|q_b\(86) <= \ram2|altsyncram_component|auto_generated|ram_block1a58_PORTBDATAOUT_bus\(16);
 \ram2|altsyncram_component|auto_generated|q_b\(87) <= \ram2|altsyncram_component|auto_generated|ram_block1a58_PORTBDATAOUT_bus\(17);
 
-\ram2|altsyncram_component|auto_generated|ram_block1a76_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data_a_2\(79) & \adc_ram_shifter_1|data_a_2\(78) & \adc_ram_shifter_1|data_a_2\(77) & \adc_ram_shifter_1|data_a_2\(76));
+\ram2|altsyncram_component|auto_generated|ram_block1a76_PORTADATAIN_bus\ <= (\adc_ram_shifter_1|data\(335) & \adc_ram_shifter_1|data\(334) & \adc_ram_shifter_1|data\(333) & \adc_ram_shifter_1|data\(332));
 
-\ram2|altsyncram_component|auto_generated|ram_block1a76_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data_b_2\(79) & \adc_ram_shifter_1|data_b_2\(78) & \adc_ram_shifter_1|data_b_2\(77) & \adc_ram_shifter_1|data_b_2\(76));
+\ram2|altsyncram_component|auto_generated|ram_block1a76_PORTBDATAIN_bus\ <= (\adc_ram_shifter_1|data\(463) & \adc_ram_shifter_1|data\(462) & \adc_ram_shifter_1|data\(461) & \adc_ram_shifter_1|data\(460));
 
 \ram2|altsyncram_component|auto_generated|ram_block1a76_PORTAADDR_bus\ <= (\~GND~combout\ & \~GND~combout\ & \~GND~combout\);
 
@@ -38101,9 +38098,9 @@ PORT MAP (
 	combout => \ADC_IN~combout\(4));
 
 -- Location: LCCOMB_X24_Y9_N0
-\adc_ram_shifter_1|data_a_1[4]~feeder\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data[4]~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1[4]~feeder_combout\ = \ADC_IN~combout\(4)
+-- \adc_ram_shifter_1|data[4]~feeder_combout\ = \ADC_IN~combout\(4)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38112,17 +38109,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datad => \ADC_IN~combout\(4),
-	combout => \adc_ram_shifter_1|data_a_1[4]~feeder_combout\);
+	combout => \adc_ram_shifter_1|data[4]~feeder_combout\);
 
 -- Location: LCFF_X24_Y9_N1
-\adc_ram_shifter_1|data_a_1[4]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[4]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1[4]~feeder_combout\,
+	datain => \adc_ram_shifter_1|data[4]~feeder_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(4));
+	regout => \adc_ram_shifter_1|data\(4));
 
 -- Location: PIN_96,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \ADC_IN[5]~I\ : cycloneii_io
@@ -38151,7 +38148,7 @@ PORT MAP (
 	combout => \ADC_IN~combout\(5));
 
 -- Location: LCFF_X24_Y9_N15
-\adc_ram_shifter_1|data_a_1[5]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[5]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
 	sdata => \ADC_IN~combout\(5),
@@ -38159,7 +38156,7 @@ PORT MAP (
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(5));
+	regout => \adc_ram_shifter_1|data\(5));
 
 -- Location: PIN_88,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \ADC_IN[6]~I\ : cycloneii_io
@@ -38188,7 +38185,7 @@ PORT MAP (
 	combout => \ADC_IN~combout\(6));
 
 -- Location: LCFF_X24_Y11_N7
-\adc_ram_shifter_1|data_a_1[6]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[6]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
 	sdata => \ADC_IN~combout\(6),
@@ -38196,7 +38193,7 @@ PORT MAP (
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(6));
+	regout => \adc_ram_shifter_1|data\(6));
 
 -- Location: PIN_89,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \ADC_IN[7]~I\ : cycloneii_io
@@ -38225,9 +38222,9 @@ PORT MAP (
 	combout => \ADC_IN~combout\(7));
 
 -- Location: LCCOMB_X26_Y7_N14
-\adc_ram_shifter_1|data_a_1[7]~feeder\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data[7]~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1[7]~feeder_combout\ = \ADC_IN~combout\(7)
+-- \adc_ram_shifter_1|data[7]~feeder_combout\ = \ADC_IN~combout\(7)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38236,17 +38233,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datad => \ADC_IN~combout\(7),
-	combout => \adc_ram_shifter_1|data_a_1[7]~feeder_combout\);
+	combout => \adc_ram_shifter_1|data[7]~feeder_combout\);
 
 -- Location: LCFF_X26_Y7_N15
-\adc_ram_shifter_1|data_a_1[7]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[7]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1[7]~feeder_combout\,
+	datain => \adc_ram_shifter_1|data[7]~feeder_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(7));
+	regout => \adc_ram_shifter_1|data\(7));
 
 -- Location: PIN_99,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \ADC_IN[0]~I\ : cycloneii_io
@@ -38310,9 +38307,9 @@ PORT MAP (
 	regout => \adc_ram_shifter_1|temp_shift\(8));
 
 -- Location: LCCOMB_X22_Y11_N18
-\adc_ram_shifter_1|data_a_1~80\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~248\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~80_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(8)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(8)))
+-- \adc_ram_shifter_1|data~248_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(8)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(8)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38323,22 +38320,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(8),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \adc_ram_shifter_1|temp_shift\(8),
-	combout => \adc_ram_shifter_1|data_a_1~80_combout\);
+	combout => \adc_ram_shifter_1|data~248_combout\);
 
 -- Location: LCFF_X22_Y11_N19
-\adc_ram_shifter_1|data_a_1[16]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[16]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~80_combout\,
+	datain => \adc_ram_shifter_1|data~248_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(16));
+	regout => \adc_ram_shifter_1|data\(16));
 
 -- Location: LCCOMB_X20_Y6_N20
-\adc_ram_shifter_1|data_a_1~25\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~98\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~25_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(24)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(40)))
+-- \adc_ram_shifter_1|data~98_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(24)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(40)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38349,22 +38346,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(40),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(24),
-	combout => \adc_ram_shifter_1|data_a_1~25_combout\);
+	combout => \adc_ram_shifter_1|data~98_combout\);
 
 -- Location: LCFF_X20_Y6_N21
-\adc_ram_shifter_1|data_a_1[48]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[48]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~25_combout\,
+	datain => \adc_ram_shifter_1|data~98_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(48));
+	regout => \adc_ram_shifter_1|data\(48));
 
 -- Location: LCCOMB_X24_Y11_N16
-\adc_ram_shifter_1|data_a_1[0]~feeder\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data[0]~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1[0]~feeder_combout\ = \ADC_IN~combout\(0)
+-- \adc_ram_shifter_1|data[0]~feeder_combout\ = \ADC_IN~combout\(0)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38373,22 +38370,22 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datad => \ADC_IN~combout\(0),
-	combout => \adc_ram_shifter_1|data_a_1[0]~feeder_combout\);
+	combout => \adc_ram_shifter_1|data[0]~feeder_combout\);
 
 -- Location: LCFF_X24_Y11_N17
-\adc_ram_shifter_1|data_a_1[0]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[0]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1[0]~feeder_combout\,
+	datain => \adc_ram_shifter_1|data[0]~feeder_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(0));
+	regout => \adc_ram_shifter_1|data\(0));
 
 -- Location: LCCOMB_X20_Y9_N24
-\adc_ram_shifter_1|data_a_1~107\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~302\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~107_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(9)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(25)))
+-- \adc_ram_shifter_1|data~302_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(9)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(25)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38399,17 +38396,17 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(25),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(9),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~107_combout\);
+	combout => \adc_ram_shifter_1|data~302_combout\);
 
 -- Location: LCFF_X20_Y9_N25
-\adc_ram_shifter_1|data_a_1[33]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[33]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~107_combout\,
+	datain => \adc_ram_shifter_1|data~302_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(33));
+	regout => \adc_ram_shifter_1|data\(33));
 
 -- Location: PIN_118,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \ADC_IN[2]~I\ : cycloneii_io
@@ -38499,9 +38496,9 @@ PORT MAP (
 	combout => \ADC_IN~combout\(1));
 
 -- Location: LCCOMB_X27_Y11_N12
-\adc_ram_shifter_1|data_a_1[1]~feeder\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data[1]~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1[1]~feeder_combout\ = \ADC_IN~combout\(1)
+-- \adc_ram_shifter_1|data[1]~feeder_combout\ = \ADC_IN~combout\(1)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38510,22 +38507,22 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datad => \ADC_IN~combout\(1),
-	combout => \adc_ram_shifter_1|data_a_1[1]~feeder_combout\);
+	combout => \adc_ram_shifter_1|data[1]~feeder_combout\);
 
 -- Location: LCFF_X27_Y11_N13
-\adc_ram_shifter_1|data_a_1[1]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[1]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1[1]~feeder_combout\,
+	datain => \adc_ram_shifter_1|data[1]~feeder_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(1));
+	regout => \adc_ram_shifter_1|data\(1));
 
 -- Location: LCCOMB_X21_Y11_N16
-\adc_ram_shifter_1|data_a_1[2]~feeder\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data[2]~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1[2]~feeder_combout\ = \ADC_IN~combout\(2)
+-- \adc_ram_shifter_1|data[2]~feeder_combout\ = \ADC_IN~combout\(2)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38534,17 +38531,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datad => \ADC_IN~combout\(2),
-	combout => \adc_ram_shifter_1|data_a_1[2]~feeder_combout\);
+	combout => \adc_ram_shifter_1|data[2]~feeder_combout\);
 
 -- Location: LCFF_X21_Y11_N17
-\adc_ram_shifter_1|data_a_1[2]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[2]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1[2]~feeder_combout\,
+	datain => \adc_ram_shifter_1|data[2]~feeder_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(2));
+	regout => \adc_ram_shifter_1|data\(2));
 
 -- Location: PIN_115,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \ADC_IN[3]~I\ : cycloneii_io
@@ -38573,7 +38570,7 @@ PORT MAP (
 	combout => \ADC_IN~combout\(3));
 
 -- Location: LCFF_X24_Y11_N21
-\adc_ram_shifter_1|data_a_1[3]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[3]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
 	sdata => \ADC_IN~combout\(3),
@@ -38581,7 +38578,7 @@ PORT MAP (
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(3));
+	regout => \adc_ram_shifter_1|data\(3));
 
 -- Location: LCCOMB_X27_Y11_N22
 \adc_ram_shifter_1|temp_shift[1]~feeder\ : cycloneii_lcell_comb
@@ -38630,9 +38627,9 @@ PORT MAP (
 	regout => \adc_ram_shifter_1|temp_shift\(4));
 
 -- Location: LCCOMB_X21_Y11_N14
-\adc_ram_shifter_1|data_a_1~69\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~226\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~69_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(2)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(18)))
+-- \adc_ram_shifter_1|data~226_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(2)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(18)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38643,17 +38640,17 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(18),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(2),
-	combout => \adc_ram_shifter_1|data_a_1~69_combout\);
+	combout => \adc_ram_shifter_1|data~226_combout\);
 
 -- Location: LCFF_X21_Y11_N15
-\adc_ram_shifter_1|data_a_1[26]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[26]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~69_combout\,
+	datain => \adc_ram_shifter_1|data~226_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(26));
+	regout => \adc_ram_shifter_1|data\(26));
 
 -- Location: LCFF_X24_Y9_N27
 \adc_ram_shifter_1|temp_shift[5]\ : cycloneii_lcell_ff
@@ -38678,9 +38675,9 @@ PORT MAP (
 	regout => \adc_ram_shifter_1|temp_shift\(13));
 
 -- Location: LCCOMB_X24_Y9_N8
-\adc_ram_shifter_1|data_a_1~85\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~258\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~85_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(13)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(13)))
+-- \adc_ram_shifter_1|data~258_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(13)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(13)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38691,17 +38688,17 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(13),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \adc_ram_shifter_1|temp_shift\(13),
-	combout => \adc_ram_shifter_1|data_a_1~85_combout\);
+	combout => \adc_ram_shifter_1|data~258_combout\);
 
 -- Location: LCFF_X24_Y9_N9
-\adc_ram_shifter_1|data_a_1[21]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[21]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~85_combout\,
+	datain => \adc_ram_shifter_1|data~258_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(21));
+	regout => \adc_ram_shifter_1|data\(21));
 
 -- Location: LCFF_X24_Y12_N17
 \adc_ram_shifter_1|temp_shift[6]\ : cycloneii_lcell_ff
@@ -38726,9 +38723,9 @@ PORT MAP (
 	regout => \adc_ram_shifter_1|temp_shift\(14));
 
 -- Location: LCCOMB_X24_Y12_N12
-\adc_ram_shifter_1|data_a_1~86\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~260\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~86_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(14)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(14)))
+-- \adc_ram_shifter_1|data~260_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(14)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(14)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38739,22 +38736,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(14),
 	datab => \adc_ram_shifter_1|temp_shift\(14),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~86_combout\);
+	combout => \adc_ram_shifter_1|data~260_combout\);
 
 -- Location: LCFF_X24_Y12_N13
-\adc_ram_shifter_1|data_a_1[22]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[22]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~86_combout\,
+	datain => \adc_ram_shifter_1|data~260_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(22));
+	regout => \adc_ram_shifter_1|data\(22));
 
 -- Location: LCCOMB_X22_Y9_N28
-\adc_ram_shifter_1|data_a_1~33\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~114\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~33_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(28)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(44)))
+-- \adc_ram_shifter_1|data~114_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(28)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(44)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38765,22 +38762,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(44),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(28),
-	combout => \adc_ram_shifter_1|data_a_1~33_combout\);
+	combout => \adc_ram_shifter_1|data~114_combout\);
 
 -- Location: LCFF_X22_Y9_N29
-\adc_ram_shifter_1|data_a_1[52]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[52]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~33_combout\,
+	datain => \adc_ram_shifter_1|data~114_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(52));
+	regout => \adc_ram_shifter_1|data\(52));
 
 -- Location: LCCOMB_X22_Y5_N6
-\adc_ram_shifter_1|data_a_1~97\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~282\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~97_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(20)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(36)))
+-- \adc_ram_shifter_1|data~282_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(20)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(36)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38791,22 +38788,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(36),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(20),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~97_combout\);
+	combout => \adc_ram_shifter_1|data~282_combout\);
 
 -- Location: LCFF_X22_Y5_N7
-\adc_ram_shifter_1|data_a_1[44]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[44]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~97_combout\,
+	datain => \adc_ram_shifter_1|data~282_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(44));
+	regout => \adc_ram_shifter_1|data\(44));
 
 -- Location: LCCOMB_X22_Y7_N26
-\adc_ram_shifter_1|data_b_1~94\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~261\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~94_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(126)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(14)))
+-- \adc_ram_shifter_1|data~261_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(126)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(14)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38817,22 +38814,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(14),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(126),
-	combout => \adc_ram_shifter_1|data_b_1~94_combout\);
+	combout => \adc_ram_shifter_1|data~261_combout\);
 
 -- Location: LCFF_X22_Y7_N27
-\adc_ram_shifter_1|data_b_1[22]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[150]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~94_combout\,
+	datain => \adc_ram_shifter_1|data~261_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(22));
+	regout => \adc_ram_shifter_1|data\(150));
 
 -- Location: LCCOMB_X20_Y6_N4
-\adc_ram_shifter_1|data_a_1~89\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~266\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~89_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(16))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(32))))
+-- \adc_ram_shifter_1|data~266_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(16))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(32))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38843,22 +38840,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(16),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(32),
-	combout => \adc_ram_shifter_1|data_a_1~89_combout\);
+	combout => \adc_ram_shifter_1|data~266_combout\);
 
 -- Location: LCFF_X20_Y6_N5
-\adc_ram_shifter_1|data_a_1[40]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[40]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~89_combout\,
+	datain => \adc_ram_shifter_1|data~266_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(40));
+	regout => \adc_ram_shifter_1|data\(40));
 
 -- Location: LCCOMB_X26_Y7_N16
-\adc_ram_shifter_1|data_a_1~119\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~326\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~119_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(15)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(31)))
+-- \adc_ram_shifter_1|data~326_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(15)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(31)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38869,22 +38866,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(31),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(15),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~119_combout\);
+	combout => \adc_ram_shifter_1|data~326_combout\);
 
 -- Location: LCFF_X26_Y7_N17
-\adc_ram_shifter_1|data_a_1[39]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[39]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~119_combout\,
+	datain => \adc_ram_shifter_1|data~326_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(39));
+	regout => \adc_ram_shifter_1|data\(39));
 
 -- Location: LCCOMB_X22_Y7_N2
-\adc_ram_shifter_1|data_a_1~95\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~278\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~95_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(19)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(35)))
+-- \adc_ram_shifter_1|data~278_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(19)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(35)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38895,22 +38892,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(35),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(19),
-	combout => \adc_ram_shifter_1|data_a_1~95_combout\);
+	combout => \adc_ram_shifter_1|data~278_combout\);
 
 -- Location: LCFF_X22_Y7_N3
-\adc_ram_shifter_1|data_a_1[43]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[43]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~95_combout\,
+	datain => \adc_ram_shifter_1|data~278_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(43));
+	regout => \adc_ram_shifter_1|data\(43));
 
 -- Location: LCCOMB_X24_Y10_N20
-\adc_ram_shifter_1|data_a_1~8\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~34\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~8_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(40))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(56))))
+-- \adc_ram_shifter_1|data~34_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(40))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(56))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38921,22 +38918,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(40),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(56),
-	combout => \adc_ram_shifter_1|data_a_1~8_combout\);
+	combout => \adc_ram_shifter_1|data~34_combout\);
 
 -- Location: LCFF_X24_Y10_N21
-\adc_ram_shifter_1|data_a_1[64]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[64]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~8_combout\,
+	datain => \adc_ram_shifter_1|data~34_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(64));
+	regout => \adc_ram_shifter_1|data\(64));
 
 -- Location: LCCOMB_X19_Y6_N16
-\adc_ram_shifter_1|data_b_1~8\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~35\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~8_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(40)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(56)))
+-- \adc_ram_shifter_1|data~35_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(40)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(56)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38947,22 +38944,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(56),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(40),
-	combout => \adc_ram_shifter_1|data_b_1~8_combout\);
+	combout => \adc_ram_shifter_1|data~35_combout\);
 
 -- Location: LCFF_X19_Y6_N17
-\adc_ram_shifter_1|data_b_1[64]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[192]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~8_combout\,
+	datain => \adc_ram_shifter_1|data~35_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(64));
+	regout => \adc_ram_shifter_1|data\(192));
 
 -- Location: LCCOMB_X24_Y9_N24
-\adc_ram_shifter_1|data_a_1~88\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~264\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~88_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(88))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(104))))
+-- \adc_ram_shifter_1|data~264_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(88))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(104))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38973,22 +38970,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(88),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(104),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~88_combout\);
+	combout => \adc_ram_shifter_1|data~264_combout\);
 
 -- Location: LCFF_X24_Y9_N25
-\adc_ram_shifter_1|data_a_1[112]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[112]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~88_combout\,
+	datain => \adc_ram_shifter_1|data~264_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(112));
+	regout => \adc_ram_shifter_1|data\(112));
 
 -- Location: LCCOMB_X24_Y10_N4
-\adc_ram_shifter_1|data_a_1~90\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~268\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~90_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(89))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(105))))
+-- \adc_ram_shifter_1|data~268_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(89))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(105))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -38999,22 +38996,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(89),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(105),
-	combout => \adc_ram_shifter_1|data_a_1~90_combout\);
+	combout => \adc_ram_shifter_1|data~268_combout\);
 
 -- Location: LCFF_X24_Y10_N5
-\adc_ram_shifter_1|data_a_1[113]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[113]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~90_combout\,
+	datain => \adc_ram_shifter_1|data~268_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(113));
+	regout => \adc_ram_shifter_1|data\(113));
 
 -- Location: LCCOMB_X19_Y7_N24
-\adc_ram_shifter_1|data_a_1~77\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~242\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~77_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(6)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(22)))
+-- \adc_ram_shifter_1|data~242_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(6)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(22)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39025,22 +39022,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(22),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(6),
-	combout => \adc_ram_shifter_1|data_a_1~77_combout\);
+	combout => \adc_ram_shifter_1|data~242_combout\);
 
 -- Location: LCFF_X19_Y7_N25
-\adc_ram_shifter_1|data_a_1[30]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[30]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~77_combout\,
+	datain => \adc_ram_shifter_1|data~242_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(30));
+	regout => \adc_ram_shifter_1|data\(30));
 
 -- Location: LCCOMB_X24_Y6_N26
-\adc_ram_shifter_1|data_a_1~9\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~38\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~9_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(41)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(57)))
+-- \adc_ram_shifter_1|data~38_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(41)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(57)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39051,22 +39048,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(57),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(41),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~9_combout\);
+	combout => \adc_ram_shifter_1|data~38_combout\);
 
 -- Location: LCFF_X24_Y6_N27
-\adc_ram_shifter_1|data_a_1[65]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[65]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~9_combout\,
+	datain => \adc_ram_shifter_1|data~38_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(65));
+	regout => \adc_ram_shifter_1|data\(65));
 
 -- Location: LCCOMB_X22_Y5_N14
-\adc_ram_shifter_1|data_a_1~20\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~82\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~20_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(36))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(52))))
+-- \adc_ram_shifter_1|data~82_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(36))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(52))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39077,22 +39074,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(36),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(52),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~20_combout\);
+	combout => \adc_ram_shifter_1|data~82_combout\);
 
 -- Location: LCFF_X22_Y5_N15
-\adc_ram_shifter_1|data_a_1[60]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[60]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~20_combout\,
+	datain => \adc_ram_shifter_1|data~82_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(60));
+	regout => \adc_ram_shifter_1|data\(60));
 
 -- Location: LCCOMB_X21_Y10_N18
-\adc_ram_shifter_1|data_a_1~21\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~86\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~21_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(37)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(53)))
+-- \adc_ram_shifter_1|data~86_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(37)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(53)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39103,22 +39100,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(53),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(37),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~21_combout\);
+	combout => \adc_ram_shifter_1|data~86_combout\);
 
 -- Location: LCFF_X21_Y10_N19
-\adc_ram_shifter_1|data_a_1[61]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[61]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~21_combout\,
+	datain => \adc_ram_shifter_1|data~86_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(61));
+	regout => \adc_ram_shifter_1|data\(61));
 
 -- Location: LCCOMB_X20_Y10_N24
-\adc_ram_shifter_1|data_a_1~22\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~90\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~22_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(38)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(54)))
+-- \adc_ram_shifter_1|data~90_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(38)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(54)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39129,22 +39126,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(54),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(38),
-	combout => \adc_ram_shifter_1|data_a_1~22_combout\);
+	combout => \adc_ram_shifter_1|data~90_combout\);
 
 -- Location: LCFF_X20_Y10_N25
-\adc_ram_shifter_1|data_a_1[62]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[62]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~22_combout\,
+	datain => \adc_ram_shifter_1|data~90_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(62));
+	regout => \adc_ram_shifter_1|data\(62));
 
 -- Location: LCCOMB_X22_Y2_N14
-\adc_ram_shifter_1|data_a_1~23\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~94\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~23_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(39)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(55)))
+-- \adc_ram_shifter_1|data~94_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(39)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(55)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39155,22 +39152,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(55),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(39),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~23_combout\);
+	combout => \adc_ram_shifter_1|data~94_combout\);
 
 -- Location: LCFF_X22_Y2_N15
-\adc_ram_shifter_1|data_a_1[63]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[63]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~23_combout\,
+	datain => \adc_ram_shifter_1|data~94_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(63));
+	regout => \adc_ram_shifter_1|data\(63));
 
 -- Location: LCCOMB_X19_Y5_N0
-\adc_ram_shifter_1|data_b_1~27\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~103\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~27_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(25)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(41)))
+-- \adc_ram_shifter_1|data~103_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(25)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(41)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39181,22 +39178,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(41),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(25),
-	combout => \adc_ram_shifter_1|data_b_1~27_combout\);
+	combout => \adc_ram_shifter_1|data~103_combout\);
 
 -- Location: LCFF_X19_Y5_N1
-\adc_ram_shifter_1|data_b_1[49]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[177]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~27_combout\,
+	datain => \adc_ram_shifter_1|data~103_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(49));
+	regout => \adc_ram_shifter_1|data\(177));
 
 -- Location: LCCOMB_X22_Y6_N12
-\adc_ram_shifter_1|data_b_1~97\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~267\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~97_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(16)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(32)))
+-- \adc_ram_shifter_1|data~267_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(16)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(32)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39207,22 +39204,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(32),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(16),
-	combout => \adc_ram_shifter_1|data_b_1~97_combout\);
+	combout => \adc_ram_shifter_1|data~267_combout\);
 
 -- Location: LCFF_X22_Y6_N13
-\adc_ram_shifter_1|data_b_1[40]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[168]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~97_combout\,
+	datain => \adc_ram_shifter_1|data~267_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(40));
+	regout => \adc_ram_shifter_1|data\(168));
 
 -- Location: LCCOMB_X22_Y8_N30
-\adc_ram_shifter_1|data_a_1~50\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~170\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~50_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(58)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(74)))
+-- \adc_ram_shifter_1|data~170_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(58)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(74)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39233,22 +39230,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(74),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(58),
-	combout => \adc_ram_shifter_1|data_a_1~50_combout\);
+	combout => \adc_ram_shifter_1|data~170_combout\);
 
 -- Location: LCFF_X22_Y8_N31
-\adc_ram_shifter_1|data_a_1[82]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[82]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~50_combout\,
+	datain => \adc_ram_shifter_1|data~170_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(82));
+	regout => \adc_ram_shifter_1|data\(82));
 
 -- Location: LCCOMB_X24_Y12_N22
-\adc_ram_shifter_1|data_a_1~51\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~174\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~51_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(59)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(75)))
+-- \adc_ram_shifter_1|data~174_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(59)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(75)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39259,22 +39256,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(75),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(59),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~51_combout\);
+	combout => \adc_ram_shifter_1|data~174_combout\);
 
 -- Location: LCFF_X24_Y12_N23
-\adc_ram_shifter_1|data_a_1[83]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[83]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~51_combout\,
+	datain => \adc_ram_shifter_1|data~174_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(83));
+	regout => \adc_ram_shifter_1|data\(83));
 
 -- Location: LCCOMB_X22_Y4_N28
-\adc_ram_shifter_1|data_b_1~21\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~87\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~21_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(37)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(53)))
+-- \adc_ram_shifter_1|data~87_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(37)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(53)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39285,22 +39282,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(53),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(37),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~21_combout\);
+	combout => \adc_ram_shifter_1|data~87_combout\);
 
 -- Location: LCFF_X22_Y4_N29
-\adc_ram_shifter_1|data_b_1[61]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[189]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~21_combout\,
+	datain => \adc_ram_shifter_1|data~87_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(61));
+	regout => \adc_ram_shifter_1|data\(189));
 
 -- Location: LCCOMB_X24_Y10_N22
-\adc_ram_shifter_1|data_a_1~46\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~154\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~46_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(70))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(86))))
+-- \adc_ram_shifter_1|data~154_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(70))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(86))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39311,22 +39308,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(70),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(86),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~46_combout\);
+	combout => \adc_ram_shifter_1|data~154_combout\);
 
 -- Location: LCFF_X24_Y10_N23
-\adc_ram_shifter_1|data_a_1[94]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[94]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~46_combout\,
+	datain => \adc_ram_shifter_1|data~154_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(94));
+	regout => \adc_ram_shifter_1|data\(94));
 
 -- Location: LCCOMB_X15_Y6_N6
-\adc_ram_shifter_1|data_a_1~106\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~300\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~106_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(81)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(97)))
+-- \adc_ram_shifter_1|data~300_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(81)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(97)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39337,22 +39334,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(97),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(81),
-	combout => \adc_ram_shifter_1|data_a_1~106_combout\);
+	combout => \adc_ram_shifter_1|data~300_combout\);
 
 -- Location: LCFF_X15_Y6_N7
-\adc_ram_shifter_1|data_a_1[105]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[105]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~106_combout\,
+	datain => \adc_ram_shifter_1|data~300_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(105));
+	regout => \adc_ram_shifter_1|data\(105));
 
 -- Location: LCCOMB_X24_Y5_N0
-\adc_ram_shifter_1|data_a_1~108\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~304\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~108_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(82)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(98)))
+-- \adc_ram_shifter_1|data~304_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(82)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(98)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39363,22 +39360,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(98),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(82),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~108_combout\);
+	combout => \adc_ram_shifter_1|data~304_combout\);
 
 -- Location: LCFF_X24_Y5_N1
-\adc_ram_shifter_1|data_a_1[106]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[106]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~108_combout\,
+	datain => \adc_ram_shifter_1|data~304_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(106));
+	regout => \adc_ram_shifter_1|data\(106));
 
 -- Location: LCCOMB_X20_Y9_N30
-\adc_ram_shifter_1|data_a_1~24\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~96\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~24_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(96)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(112)))
+-- \adc_ram_shifter_1|data~96_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(96)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(112)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39389,22 +39386,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(112),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(96),
-	combout => \adc_ram_shifter_1|data_a_1~24_combout\);
+	combout => \adc_ram_shifter_1|data~96_combout\);
 
 -- Location: LCFF_X20_Y9_N31
-\adc_ram_shifter_1|data_a_1[120]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[120]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~24_combout\,
+	datain => \adc_ram_shifter_1|data~96_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(120));
+	regout => \adc_ram_shifter_1|data\(120));
 
 -- Location: LCCOMB_X22_Y2_N12
-\adc_ram_shifter_1|data_a_1~26\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~100\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~26_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(97))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(113))))
+-- \adc_ram_shifter_1|data~100_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(97))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(113))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39415,22 +39412,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(97),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(113),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~26_combout\);
+	combout => \adc_ram_shifter_1|data~100_combout\);
 
 -- Location: LCFF_X22_Y2_N13
-\adc_ram_shifter_1|data_a_1[121]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[121]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~26_combout\,
+	datain => \adc_ram_shifter_1|data~100_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(121));
+	regout => \adc_ram_shifter_1|data\(121));
 
 -- Location: LCCOMB_X22_Y5_N16
-\adc_ram_shifter_1|data_a_1~96\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~280\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~96_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(92))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(108))))
+-- \adc_ram_shifter_1|data~280_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(92))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(108))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39441,22 +39438,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(92),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(108),
-	combout => \adc_ram_shifter_1|data_a_1~96_combout\);
+	combout => \adc_ram_shifter_1|data~280_combout\);
 
 -- Location: LCFF_X22_Y5_N17
-\adc_ram_shifter_1|data_a_1[116]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[116]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~96_combout\,
+	datain => \adc_ram_shifter_1|data~280_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(116));
+	regout => \adc_ram_shifter_1|data\(116));
 
 -- Location: LCCOMB_X24_Y5_N8
-\adc_ram_shifter_1|data_a_1~98\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~284\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~98_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(93)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(109)))
+-- \adc_ram_shifter_1|data~284_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(93)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(109)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39467,22 +39464,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(109),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(93),
-	combout => \adc_ram_shifter_1|data_a_1~98_combout\);
+	combout => \adc_ram_shifter_1|data~284_combout\);
 
 -- Location: LCFF_X24_Y5_N9
-\adc_ram_shifter_1|data_a_1[117]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[117]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~98_combout\,
+	datain => \adc_ram_shifter_1|data~284_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(117));
+	regout => \adc_ram_shifter_1|data\(117));
 
 -- Location: LCCOMB_X22_Y7_N8
-\adc_ram_shifter_1|data_a_1~100\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~288\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~100_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(94)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(110)))
+-- \adc_ram_shifter_1|data~288_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(94)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(110)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39493,22 +39490,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(110),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(94),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~100_combout\);
+	combout => \adc_ram_shifter_1|data~288_combout\);
 
 -- Location: LCFF_X22_Y7_N9
-\adc_ram_shifter_1|data_a_1[118]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[118]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~100_combout\,
+	datain => \adc_ram_shifter_1|data~288_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(118));
+	regout => \adc_ram_shifter_1|data\(118));
 
 -- Location: LCCOMB_X24_Y6_N18
-\adc_ram_shifter_1|data_a_1~15\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~62\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~15_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(47)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(63)))
+-- \adc_ram_shifter_1|data~62_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(47)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(63)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39519,22 +39516,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(63),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(47),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~15_combout\);
+	combout => \adc_ram_shifter_1|data~62_combout\);
 
 -- Location: LCFF_X24_Y6_N19
-\adc_ram_shifter_1|data_a_1[71]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[71]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~15_combout\,
+	datain => \adc_ram_shifter_1|data~62_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(71));
+	regout => \adc_ram_shifter_1|data\(71));
 
 -- Location: LCCOMB_X20_Y4_N2
-\adc_ram_shifter_1|data_b_1~17\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~71\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~17_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(33))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(49))))
+-- \adc_ram_shifter_1|data~71_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(33))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(49))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39545,22 +39542,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(33),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(49),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~17_combout\);
+	combout => \adc_ram_shifter_1|data~71_combout\);
 
 -- Location: LCFF_X20_Y4_N3
-\adc_ram_shifter_1|data_b_1[57]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[185]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~17_combout\,
+	datain => \adc_ram_shifter_1|data~71_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(57));
+	regout => \adc_ram_shifter_1|data\(185));
 
 -- Location: LCCOMB_X24_Y10_N0
-\adc_ram_shifter_1|data_b_1~3\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~15\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~3_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(51)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(67)))
+-- \adc_ram_shifter_1|data~15_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(51)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(67)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39571,22 +39568,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(67),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(51),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~3_combout\);
+	combout => \adc_ram_shifter_1|data~15_combout\);
 
 -- Location: LCFF_X24_Y10_N1
-\adc_ram_shifter_1|data_b_1[75]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[203]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~3_combout\,
+	datain => \adc_ram_shifter_1|data~15_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(75));
+	regout => \adc_ram_shifter_1|data\(203));
 
 -- Location: LCCOMB_X21_Y5_N0
-\adc_ram_shifter_1|data_b_1~10\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~43\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~10_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(42)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(58)))
+-- \adc_ram_shifter_1|data~43_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(42)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(58)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39597,22 +39594,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(58),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(42),
-	combout => \adc_ram_shifter_1|data_b_1~10_combout\);
+	combout => \adc_ram_shifter_1|data~43_combout\);
 
 -- Location: LCFF_X21_Y5_N1
-\adc_ram_shifter_1|data_b_1[66]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[194]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~10_combout\,
+	datain => \adc_ram_shifter_1|data~43_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(66));
+	regout => \adc_ram_shifter_1|data\(194));
 
 -- Location: LCCOMB_X22_Y6_N30
-\adc_ram_shifter_1|data_b_1~12\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~51\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~12_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(44))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(60))))
+-- \adc_ram_shifter_1|data~51_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(44))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(60))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39623,22 +39620,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(44),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(60),
-	combout => \adc_ram_shifter_1|data_b_1~12_combout\);
+	combout => \adc_ram_shifter_1|data~51_combout\);
 
 -- Location: LCFF_X22_Y6_N31
-\adc_ram_shifter_1|data_b_1[68]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[196]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~12_combout\,
+	datain => \adc_ram_shifter_1|data~51_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(68));
+	regout => \adc_ram_shifter_1|data\(196));
 
 -- Location: LCCOMB_X24_Y5_N28
-\adc_ram_shifter_1|data_b_1~13\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~55\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~13_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(45)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(61)))
+-- \adc_ram_shifter_1|data~55_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(45)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(61)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39649,22 +39646,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(61),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(45),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~13_combout\);
+	combout => \adc_ram_shifter_1|data~55_combout\);
 
 -- Location: LCFF_X24_Y5_N29
-\adc_ram_shifter_1|data_b_1[69]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[197]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~13_combout\,
+	datain => \adc_ram_shifter_1|data~55_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(69));
+	regout => \adc_ram_shifter_1|data\(197));
 
 -- Location: LCCOMB_X24_Y10_N6
-\adc_ram_shifter_1|data_b_1~42\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~139\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~42_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(66)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(82)))
+-- \adc_ram_shifter_1|data~139_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(66)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(82)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39675,22 +39672,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(82),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(66),
-	combout => \adc_ram_shifter_1|data_b_1~42_combout\);
+	combout => \adc_ram_shifter_1|data~139_combout\);
 
 -- Location: LCFF_X24_Y10_N7
-\adc_ram_shifter_1|data_b_1[90]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[218]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~42_combout\,
+	datain => \adc_ram_shifter_1|data~139_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(90));
+	regout => \adc_ram_shifter_1|data\(218));
 
 -- Location: LCCOMB_X24_Y8_N10
-\adc_ram_shifter_1|data_b_1~44\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~147\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~44_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(68)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(84)))
+-- \adc_ram_shifter_1|data~147_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(68)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(84)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39701,22 +39698,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(84),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(68),
-	combout => \adc_ram_shifter_1|data_b_1~44_combout\);
+	combout => \adc_ram_shifter_1|data~147_combout\);
 
 -- Location: LCFF_X24_Y8_N11
-\adc_ram_shifter_1|data_b_1[92]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[220]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~44_combout\,
+	datain => \adc_ram_shifter_1|data~147_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(92));
+	regout => \adc_ram_shifter_1|data\(220));
 
 -- Location: LCCOMB_X22_Y10_N0
-\adc_ram_shifter_1|data_a_1~30\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~108\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~30_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(99)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(115)))
+-- \adc_ram_shifter_1|data~108_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(99)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(115)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39727,22 +39724,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(115),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(99),
-	combout => \adc_ram_shifter_1|data_a_1~30_combout\);
+	combout => \adc_ram_shifter_1|data~108_combout\);
 
 -- Location: LCFF_X22_Y10_N1
-\adc_ram_shifter_1|data_a_1[123]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[123]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~30_combout\,
+	datain => \adc_ram_shifter_1|data~108_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(123));
+	regout => \adc_ram_shifter_1|data\(123));
 
 -- Location: LCCOMB_X22_Y10_N4
-\adc_ram_shifter_1|data_a_1~34\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~116\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~34_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(101)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(117)))
+-- \adc_ram_shifter_1|data~116_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(101)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(117)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39753,22 +39750,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(117),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(101),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~34_combout\);
+	combout => \adc_ram_shifter_1|data~116_combout\);
 
 -- Location: LCFF_X22_Y10_N5
-\adc_ram_shifter_1|data_a_1[125]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[125]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~34_combout\,
+	datain => \adc_ram_shifter_1|data~116_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(125));
+	regout => \adc_ram_shifter_1|data\(125));
 
 -- Location: LCCOMB_X24_Y10_N26
-\adc_ram_shifter_1|data_b_1~118\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~309\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~118_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(83)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(99)))
+-- \adc_ram_shifter_1|data~309_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(83)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(99)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39779,12 +39776,12 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(99),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(83),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~118_combout\);
+	combout => \adc_ram_shifter_1|data~309_combout\);
 
 -- Location: LCCOMB_X24_Y5_N6
-\adc_ram_shifter_1|data_b_1[107]~feeder\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data[235]~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1[107]~feeder_combout\ = \adc_ram_shifter_1|data_b_1~118_combout\
+-- \adc_ram_shifter_1|data[235]~feeder_combout\ = \adc_ram_shifter_1|data~309_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39792,23 +39789,23 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \adc_ram_shifter_1|data_b_1~118_combout\,
-	combout => \adc_ram_shifter_1|data_b_1[107]~feeder_combout\);
+	datad => \adc_ram_shifter_1|data~309_combout\,
+	combout => \adc_ram_shifter_1|data[235]~feeder_combout\);
 
 -- Location: LCFF_X24_Y5_N7
-\adc_ram_shifter_1|data_b_1[107]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[235]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1[107]~feeder_combout\,
+	datain => \adc_ram_shifter_1|data[235]~feeder_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(107));
+	regout => \adc_ram_shifter_1|data\(235));
 
 -- Location: LCCOMB_X24_Y8_N20
-\adc_ram_shifter_1|data_b_1~6\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~27\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~6_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(54)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(70)))
+-- \adc_ram_shifter_1|data~27_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(54)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(70)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39819,22 +39816,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(70),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(54),
-	combout => \adc_ram_shifter_1|data_b_1~6_combout\);
+	combout => \adc_ram_shifter_1|data~27_combout\);
 
 -- Location: LCFF_X24_Y8_N21
-\adc_ram_shifter_1|data_b_1[78]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[206]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~6_combout\,
+	datain => \adc_ram_shifter_1|data~27_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(78));
+	regout => \adc_ram_shifter_1|data\(206));
 
 -- Location: LCCOMB_X22_Y10_N24
-\adc_ram_shifter_1|data_a_2~24\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~128\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~24_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(8))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(24))))
+-- \adc_ram_shifter_1|data~128_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(8))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(24))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39845,17 +39842,17 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(8),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(24),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~24_combout\);
+	combout => \adc_ram_shifter_1|data~128_combout\);
 
 -- Location: LCFF_X22_Y10_N25
-\adc_ram_shifter_1|data_a_2[32]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[288]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~24_combout\,
+	datain => \adc_ram_shifter_1|data~128_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(32));
+	regout => \adc_ram_shifter_1|data\(288));
 
 -- Location: M4K_X23_Y7
 \ram1|altsyncram_component|auto_generated|ram_block1a16\ : cycloneii_ram_block
@@ -39913,9 +39910,9 @@ PORT MAP (
 	portbdataout => \ram1|altsyncram_component|auto_generated|ram_block1a16_PORTBDATAOUT_bus\);
 
 -- Location: LCCOMB_X22_Y9_N18
-\adc_ram_shifter_1|data_b_1~26\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~101\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~26_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(97))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(113))))
+-- \adc_ram_shifter_1|data~101_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(97))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(113))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39926,22 +39923,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(97),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(113),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~26_combout\);
+	combout => \adc_ram_shifter_1|data~101_combout\);
 
 -- Location: LCFF_X22_Y9_N19
-\adc_ram_shifter_1|data_b_1[121]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[249]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~26_combout\,
+	datain => \adc_ram_shifter_1|data~101_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(121));
+	regout => \adc_ram_shifter_1|data\(249));
 
 -- Location: LCCOMB_X19_Y7_N14
-\adc_ram_shifter_1|data_b_1~28\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~105\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~28_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(98)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(114)))
+-- \adc_ram_shifter_1|data~105_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(98)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(114)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39952,22 +39949,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(114),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(98),
-	combout => \adc_ram_shifter_1|data_b_1~28_combout\);
+	combout => \adc_ram_shifter_1|data~105_combout\);
 
 -- Location: LCFF_X19_Y7_N15
-\adc_ram_shifter_1|data_b_1[122]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[250]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~28_combout\,
+	datain => \adc_ram_shifter_1|data~105_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(122));
+	regout => \adc_ram_shifter_1|data\(250));
 
 -- Location: LCCOMB_X24_Y10_N28
-\adc_ram_shifter_1|data_b_1~30\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~109\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~30_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(99))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(115))))
+-- \adc_ram_shifter_1|data~109_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(99))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(115))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -39978,22 +39975,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(99),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(115),
-	combout => \adc_ram_shifter_1|data_b_1~30_combout\);
+	combout => \adc_ram_shifter_1|data~109_combout\);
 
 -- Location: LCFF_X24_Y10_N29
-\adc_ram_shifter_1|data_b_1[123]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[251]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~30_combout\,
+	datain => \adc_ram_shifter_1|data~109_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(123));
+	regout => \adc_ram_shifter_1|data\(251));
 
 -- Location: LCCOMB_X24_Y4_N28
-\adc_ram_shifter_1|data_a_2~50\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~348\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~50_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(90))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(106))))
+-- \adc_ram_shifter_1|data~348_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(90))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(106))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40004,22 +40001,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(90),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(106),
-	combout => \adc_ram_shifter_1|data_a_2~50_combout\);
+	combout => \adc_ram_shifter_1|data~348_combout\);
 
 -- Location: LCFF_X24_Y4_N29
-\adc_ram_shifter_1|data_a_2[114]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[370]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~50_combout\,
+	datain => \adc_ram_shifter_1|data~348_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(114));
+	regout => \adc_ram_shifter_1|data\(370));
 
 -- Location: LCCOMB_X21_Y4_N8
-\adc_ram_shifter_1|data_b_1~127\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~327\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~127_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(15))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(31))))
+-- \adc_ram_shifter_1|data~327_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(15))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(31))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40030,22 +40027,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(15),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(31),
-	combout => \adc_ram_shifter_1|data_b_1~127_combout\);
+	combout => \adc_ram_shifter_1|data~327_combout\);
 
 -- Location: LCFF_X21_Y4_N9
-\adc_ram_shifter_1|data_b_1[39]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[167]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~127_combout\,
+	datain => \adc_ram_shifter_1|data~327_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(39));
+	regout => \adc_ram_shifter_1|data\(167));
 
 -- Location: LCCOMB_X22_Y9_N8
-\adc_ram_shifter_1|data_b_1~76\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~225\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~76_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(74))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(90))))
+-- \adc_ram_shifter_1|data~225_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(74))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(90))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40056,22 +40053,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(74),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(90),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~76_combout\);
+	combout => \adc_ram_shifter_1|data~225_combout\);
 
 -- Location: LCFF_X22_Y9_N9
-\adc_ram_shifter_1|data_b_1[98]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[226]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~76_combout\,
+	datain => \adc_ram_shifter_1|data~225_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(98));
+	regout => \adc_ram_shifter_1|data\(226));
 
 -- Location: LCCOMB_X26_Y7_N24
-\adc_ram_shifter_1|data_b_1~78\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~229\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~78_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(75)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(91)))
+-- \adc_ram_shifter_1|data~229_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(75)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(91)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40082,22 +40079,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(91),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(75),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~78_combout\);
+	combout => \adc_ram_shifter_1|data~229_combout\);
 
 -- Location: LCFF_X26_Y7_N25
-\adc_ram_shifter_1|data_b_1[99]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[227]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~78_combout\,
+	datain => \adc_ram_shifter_1|data~229_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(99));
+	regout => \adc_ram_shifter_1|data\(227));
 
 -- Location: LCCOMB_X22_Y8_N26
-\adc_ram_shifter_1|data_a_2~8\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~32\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~8_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(112)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(0)))
+-- \adc_ram_shifter_1|data~32_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(112)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40108,22 +40105,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(0),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(112),
-	combout => \adc_ram_shifter_1|data_a_2~8_combout\);
+	combout => \adc_ram_shifter_1|data~32_combout\);
 
 -- Location: LCFF_X22_Y8_N27
-\adc_ram_shifter_1|data_a_2[8]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[264]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~8_combout\,
+	datain => \adc_ram_shifter_1|data~32_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(8));
+	regout => \adc_ram_shifter_1|data\(264));
 
 -- Location: LCCOMB_X21_Y6_N24
-\adc_ram_shifter_1|data_a_2~1\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~4\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~1_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(121)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(9)))
+-- \adc_ram_shifter_1|data~4_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(121)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(9)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40134,22 +40131,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(9),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(121),
-	combout => \adc_ram_shifter_1|data_a_2~1_combout\);
+	combout => \adc_ram_shifter_1|data~4_combout\);
 
 -- Location: LCFF_X21_Y6_N25
-\adc_ram_shifter_1|data_a_2[17]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[273]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~1_combout\,
+	datain => \adc_ram_shifter_1|data~4_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(17));
+	regout => \adc_ram_shifter_1|data\(273));
 
 -- Location: LCCOMB_X19_Y6_N0
-\adc_ram_shifter_1|data_a_2~2\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~8\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~2_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(122))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(10))))
+-- \adc_ram_shifter_1|data~8_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(122))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(10))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40160,22 +40157,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(122),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(10),
-	combout => \adc_ram_shifter_1|data_a_2~2_combout\);
+	combout => \adc_ram_shifter_1|data~8_combout\);
 
 -- Location: LCFF_X19_Y6_N1
-\adc_ram_shifter_1|data_a_2[18]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[274]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~2_combout\,
+	datain => \adc_ram_shifter_1|data~8_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(18));
+	regout => \adc_ram_shifter_1|data\(274));
 
 -- Location: LCCOMB_X22_Y8_N28
-\adc_ram_shifter_1|data_a_2~3\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~12\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~3_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(123)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(11)))
+-- \adc_ram_shifter_1|data~12_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(123)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(11)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40186,22 +40183,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(11),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(123),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~3_combout\);
+	combout => \adc_ram_shifter_1|data~12_combout\);
 
 -- Location: LCFF_X22_Y8_N29
-\adc_ram_shifter_1|data_a_2[19]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[275]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~3_combout\,
+	datain => \adc_ram_shifter_1|data~12_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(19));
+	regout => \adc_ram_shifter_1|data\(275));
 
 -- Location: LCCOMB_X22_Y6_N8
-\adc_ram_shifter_1|data_a_2~12\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~48\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~12_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(116)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(4)))
+-- \adc_ram_shifter_1|data~48_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(116)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(4)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40212,22 +40209,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(4),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(116),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~12_combout\);
+	combout => \adc_ram_shifter_1|data~48_combout\);
 
 -- Location: LCFF_X22_Y6_N9
-\adc_ram_shifter_1|data_a_2[12]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[268]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~12_combout\,
+	datain => \adc_ram_shifter_1|data~48_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(12));
+	regout => \adc_ram_shifter_1|data\(268));
 
 -- Location: LCCOMB_X20_Y4_N28
-\adc_ram_shifter_1|data_b_1~124\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~321\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~124_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(86)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(102)))
+-- \adc_ram_shifter_1|data~321_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(86)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(102)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40238,22 +40235,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(102),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(86),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~124_combout\);
+	combout => \adc_ram_shifter_1|data~321_combout\);
 
 -- Location: LCFF_X20_Y4_N29
-\adc_ram_shifter_1|data_b_1[110]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[238]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~124_combout\,
+	datain => \adc_ram_shifter_1|data~321_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(110));
+	regout => \adc_ram_shifter_1|data\(238));
 
 -- Location: LCCOMB_X24_Y11_N12
-\adc_ram_shifter_1|data_b_1~126\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~325\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~126_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(87))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(103))))
+-- \adc_ram_shifter_1|data~325_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(87))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(103))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40264,22 +40261,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(87),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(103),
-	combout => \adc_ram_shifter_1|data_b_1~126_combout\);
+	combout => \adc_ram_shifter_1|data~325_combout\);
 
 -- Location: LCFF_X24_Y11_N13
-\adc_ram_shifter_1|data_b_1[111]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[239]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~126_combout\,
+	datain => \adc_ram_shifter_1|data~325_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(111));
+	regout => \adc_ram_shifter_1|data\(239));
 
 -- Location: LCCOMB_X22_Y8_N22
-\adc_ram_shifter_1|data_a_2~34\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~168\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~34_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(2)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(18)))
+-- \adc_ram_shifter_1|data~168_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(2)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(18)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40290,22 +40287,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(18),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(2),
-	combout => \adc_ram_shifter_1|data_a_2~34_combout\);
+	combout => \adc_ram_shifter_1|data~168_combout\);
 
 -- Location: LCFF_X22_Y8_N23
-\adc_ram_shifter_1|data_a_2[26]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[282]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~34_combout\,
+	datain => \adc_ram_shifter_1|data~168_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(26));
+	regout => \adc_ram_shifter_1|data\(282));
 
 -- Location: LCCOMB_X22_Y9_N4
-\adc_ram_shifter_1|data_a_2~35\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~172\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~35_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(3)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(19)))
+-- \adc_ram_shifter_1|data~172_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(3)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(19)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40316,22 +40313,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(19),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(3),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~35_combout\);
+	combout => \adc_ram_shifter_1|data~172_combout\);
 
 -- Location: LCFF_X22_Y9_N5
-\adc_ram_shifter_1|data_a_2[27]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[283]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~35_combout\,
+	datain => \adc_ram_shifter_1|data~172_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(27));
+	regout => \adc_ram_shifter_1|data\(283));
 
 -- Location: LCCOMB_X22_Y10_N28
-\adc_ram_shifter_1|data_a_2~83\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~414\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~83_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(27)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(43)))
+-- \adc_ram_shifter_1|data~414_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(27)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(43)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40342,22 +40339,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(43),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(27),
-	combout => \adc_ram_shifter_1|data_a_2~83_combout\);
+	combout => \adc_ram_shifter_1|data~414_combout\);
 
 -- Location: LCFF_X22_Y10_N29
-\adc_ram_shifter_1|data_a_2[51]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[307]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~83_combout\,
+	datain => \adc_ram_shifter_1|data~414_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(51));
+	regout => \adc_ram_shifter_1|data\(307));
 
 -- Location: LCCOMB_X22_Y12_N16
-\adc_ram_shifter_1|data_a_2~28\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~144\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~28_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(12))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(28))))
+-- \adc_ram_shifter_1|data~144_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(12))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(28))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40368,22 +40365,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(12),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(28),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~28_combout\);
+	combout => \adc_ram_shifter_1|data~144_combout\);
 
 -- Location: LCFF_X22_Y12_N17
-\adc_ram_shifter_1|data_a_2[36]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[292]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~28_combout\,
+	datain => \adc_ram_shifter_1|data~144_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(36));
+	regout => \adc_ram_shifter_1|data\(292));
 
 -- Location: LCCOMB_X24_Y8_N12
-\adc_ram_shifter_1|data_b_1~62\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~205\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~62_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(118)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(6)))
+-- \adc_ram_shifter_1|data~205_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(118)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(6)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40394,23 +40391,23 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(6),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(118),
-	combout => \adc_ram_shifter_1|data_b_1~62_combout\);
+	combout => \adc_ram_shifter_1|data~205_combout\);
 
 -- Location: LCFF_X24_Y11_N27
-\adc_ram_shifter_1|data_b_1[14]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[142]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	sdata => \adc_ram_shifter_1|data_b_1~62_combout\,
+	sdata => \adc_ram_shifter_1|data~205_combout\,
 	sload => VCC,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(14));
+	regout => \adc_ram_shifter_1|data\(142));
 
 -- Location: LCCOMB_X24_Y7_N28
-\adc_ram_shifter_1|data_b_1~63\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~207\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~63_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(119))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(7))))
+-- \adc_ram_shifter_1|data~207_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(119))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(7))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40421,22 +40418,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(119),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(7),
-	combout => \adc_ram_shifter_1|data_b_1~63_combout\);
+	combout => \adc_ram_shifter_1|data~207_combout\);
 
 -- Location: LCFF_X24_Y7_N29
-\adc_ram_shifter_1|data_b_1[15]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[143]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~63_combout\,
+	datain => \adc_ram_shifter_1|data~207_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(15));
+	regout => \adc_ram_shifter_1|data\(143));
 
 -- Location: LCCOMB_X24_Y6_N0
-\adc_ram_shifter_1|data_a_2~15\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~60\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~15_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(119)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(7)))
+-- \adc_ram_shifter_1|data~60_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(119)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(7)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40447,22 +40444,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(7),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(119),
-	combout => \adc_ram_shifter_1|data_a_2~15_combout\);
+	combout => \adc_ram_shifter_1|data~60_combout\);
 
 -- Location: LCFF_X24_Y6_N1
-\adc_ram_shifter_1|data_a_2[15]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[271]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~15_combout\,
+	datain => \adc_ram_shifter_1|data~60_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(15));
+	regout => \adc_ram_shifter_1|data\(271));
 
 -- Location: LCCOMB_X24_Y5_N16
-\adc_ram_shifter_1|data_b_1~54\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~187\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~54_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(62)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(78)))
+-- \adc_ram_shifter_1|data~187_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(62)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(78)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40473,22 +40470,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(78),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(62),
-	combout => \adc_ram_shifter_1|data_b_1~54_combout\);
+	combout => \adc_ram_shifter_1|data~187_combout\);
 
 -- Location: LCFF_X24_Y5_N17
-\adc_ram_shifter_1|data_b_1[86]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[214]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~54_combout\,
+	datain => \adc_ram_shifter_1|data~187_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(86));
+	regout => \adc_ram_shifter_1|data\(214));
 
 -- Location: LCCOMB_X22_Y11_N26
-\adc_ram_shifter_1|data_b_1~55\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~191\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~55_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(63))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(79))))
+-- \adc_ram_shifter_1|data~191_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(63))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(79))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40499,22 +40496,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(63),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(79),
-	combout => \adc_ram_shifter_1|data_b_1~55_combout\);
+	combout => \adc_ram_shifter_1|data~191_combout\);
 
 -- Location: LCFF_X22_Y11_N27
-\adc_ram_shifter_1|data_b_1[87]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[215]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~55_combout\,
+	datain => \adc_ram_shifter_1|data~191_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(87));
+	regout => \adc_ram_shifter_1|data\(215));
 
 -- Location: LCCOMB_X22_Y2_N26
-\adc_ram_shifter_1|data_b_2~37\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~181\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~37_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(5)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(21)))
+-- \adc_ram_shifter_1|data~181_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(5)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(21)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40525,22 +40522,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(21),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(5),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~37_combout\);
+	combout => \adc_ram_shifter_1|data~181_combout\);
 
 -- Location: LCFF_X22_Y2_N27
-\adc_ram_shifter_1|data_b_2[29]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[413]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~37_combout\,
+	datain => \adc_ram_shifter_1|data~181_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(29));
+	regout => \adc_ram_shifter_1|data\(413));
 
 -- Location: LCCOMB_X22_Y11_N14
-\adc_ram_shifter_1|data_b_2~38\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~185\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~38_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(6)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(22)))
+-- \adc_ram_shifter_1|data~185_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(6)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(22)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40551,17 +40548,17 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(22),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(6),
-	combout => \adc_ram_shifter_1|data_b_2~38_combout\);
+	combout => \adc_ram_shifter_1|data~185_combout\);
 
 -- Location: LCFF_X22_Y11_N15
-\adc_ram_shifter_1|data_b_2[30]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[414]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~38_combout\,
+	datain => \adc_ram_shifter_1|data~185_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(30));
+	regout => \adc_ram_shifter_1|data\(414));
 
 -- Location: M4K_X23_Y11
 \ram1|altsyncram_component|auto_generated|ram_block1a0\ : cycloneii_ram_block
@@ -40619,9 +40616,9 @@ PORT MAP (
 	portbdataout => \ram1|altsyncram_component|auto_generated|ram_block1a0_PORTBDATAOUT_bus\);
 
 -- Location: LCCOMB_X20_Y10_N16
-\adc_ram_shifter_1|data_a_2~89\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~426\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~89_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(17)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(33)))
+-- \adc_ram_shifter_1|data~426_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(17)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(33)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40632,22 +40629,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(33),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(17),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~89_combout\);
+	combout => \adc_ram_shifter_1|data~426_combout\);
 
 -- Location: LCFF_X20_Y10_N17
-\adc_ram_shifter_1|data_a_2[41]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[297]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~89_combout\,
+	datain => \adc_ram_shifter_1|data~426_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(41));
+	regout => \adc_ram_shifter_1|data\(297));
 
 -- Location: LCCOMB_X21_Y4_N4
-\adc_ram_shifter_1|data_b_2~17\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~69\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~17_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(105)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(121)))
+-- \adc_ram_shifter_1|data~69_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(105)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(121)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40658,23 +40655,23 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(121),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(105),
-	combout => \adc_ram_shifter_1|data_b_2~17_combout\);
+	combout => \adc_ram_shifter_1|data~69_combout\);
 
 -- Location: LCFF_X22_Y4_N1
-\adc_ram_shifter_1|data_b_2[1]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[385]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	sdata => \adc_ram_shifter_1|data_b_2~17_combout\,
+	sdata => \adc_ram_shifter_1|data~69_combout\,
 	sload => VCC,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(1));
+	regout => \adc_ram_shifter_1|data\(385));
 
 -- Location: LCCOMB_X22_Y4_N6
-\adc_ram_shifter_1|data_a_2~41\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~330\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~41_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(97))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(113))))
+-- \adc_ram_shifter_1|data~330_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(97))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(113))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40685,22 +40682,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(97),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(113),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~41_combout\);
+	combout => \adc_ram_shifter_1|data~330_combout\);
 
 -- Location: LCFF_X22_Y4_N7
-\adc_ram_shifter_1|data_a_2[121]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[377]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~41_combout\,
+	datain => \adc_ram_shifter_1|data~330_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(121));
+	regout => \adc_ram_shifter_1|data\(377));
 
 -- Location: LCCOMB_X22_Y9_N26
-\adc_ram_shifter_1|data_a_2~91\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~430\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~91_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(19))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(35))))
+-- \adc_ram_shifter_1|data~430_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(19))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(35))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40711,22 +40708,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(19),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(35),
-	combout => \adc_ram_shifter_1|data_a_2~91_combout\);
+	combout => \adc_ram_shifter_1|data~430_combout\);
 
 -- Location: LCFF_X22_Y9_N27
-\adc_ram_shifter_1|data_a_2[43]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[299]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~91_combout\,
+	datain => \adc_ram_shifter_1|data~430_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(43));
+	regout => \adc_ram_shifter_1|data\(299));
 
 -- Location: LCCOMB_X24_Y12_N26
-\adc_ram_shifter_1|data_a_2~30\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~152\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~30_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(14)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(30)))
+-- \adc_ram_shifter_1|data~152_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(14)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(30)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40737,22 +40734,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(30),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(14),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~30_combout\);
+	combout => \adc_ram_shifter_1|data~152_combout\);
 
 -- Location: LCFF_X24_Y12_N27
-\adc_ram_shifter_1|data_a_2[38]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[294]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~30_combout\,
+	datain => \adc_ram_shifter_1|data~152_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(38));
+	regout => \adc_ram_shifter_1|data\(294));
 
 -- Location: LCCOMB_X22_Y12_N8
-\adc_ram_shifter_1|data_a_2~31\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~156\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~31_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(15)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(31)))
+-- \adc_ram_shifter_1|data~156_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(15)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(31)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40763,22 +40760,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(31),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(15),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~31_combout\);
+	combout => \adc_ram_shifter_1|data~156_combout\);
 
 -- Location: LCFF_X22_Y12_N9
-\adc_ram_shifter_1|data_a_2[39]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[295]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~31_combout\,
+	datain => \adc_ram_shifter_1|data~156_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(39));
+	regout => \adc_ram_shifter_1|data\(295));
 
 -- Location: LCCOMB_X21_Y4_N6
-\adc_ram_shifter_1|data_b_2~12\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~49\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~12_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(116))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(4))))
+-- \adc_ram_shifter_1|data~49_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(116))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40789,23 +40786,23 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(116),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(4),
-	combout => \adc_ram_shifter_1|data_b_2~12_combout\);
+	combout => \adc_ram_shifter_1|data~49_combout\);
 
 -- Location: LCFF_X22_Y6_N29
-\adc_ram_shifter_1|data_b_2[12]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[396]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	sdata => \adc_ram_shifter_1|data_b_2~12_combout\,
+	sdata => \adc_ram_shifter_1|data~49_combout\,
 	sload => VCC,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(12));
+	regout => \adc_ram_shifter_1|data\(396));
 
 -- Location: LCCOMB_X22_Y2_N24
-\adc_ram_shifter_1|data_b_2~13\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~53\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~13_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(117))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(5))))
+-- \adc_ram_shifter_1|data~53_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(117))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40816,22 +40813,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(117),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(5),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~13_combout\);
+	combout => \adc_ram_shifter_1|data~53_combout\);
 
 -- Location: LCFF_X22_Y2_N25
-\adc_ram_shifter_1|data_b_2[13]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[397]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~13_combout\,
+	datain => \adc_ram_shifter_1|data~53_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(13));
+	regout => \adc_ram_shifter_1|data\(397));
 
 -- Location: LCCOMB_X20_Y5_N6
-\adc_ram_shifter_1|data_a_2~120\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~488\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~120_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(48))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(64))))
+-- \adc_ram_shifter_1|data~488_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(48))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(64))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40842,22 +40839,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(48),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(64),
-	combout => \adc_ram_shifter_1|data_a_2~120_combout\);
+	combout => \adc_ram_shifter_1|data~488_combout\);
 
 -- Location: LCFF_X20_Y5_N7
-\adc_ram_shifter_1|data_a_2[72]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[328]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~120_combout\,
+	datain => \adc_ram_shifter_1|data~488_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(72));
+	regout => \adc_ram_shifter_1|data\(328));
 
 -- Location: LCCOMB_X20_Y4_N30
-\adc_ram_shifter_1|data_b_2~5\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~21\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~5_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(125)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(13)))
+-- \adc_ram_shifter_1|data~21_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(125)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(13)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40868,18 +40865,18 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(13),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(125),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~5_combout\);
+	combout => \adc_ram_shifter_1|data~21_combout\);
 
 -- Location: LCFF_X22_Y4_N23
-\adc_ram_shifter_1|data_b_2[21]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[405]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	sdata => \adc_ram_shifter_1|data_b_2~5_combout\,
+	sdata => \adc_ram_shifter_1|data~21_combout\,
 	sload => VCC,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(21));
+	regout => \adc_ram_shifter_1|data\(405));
 
 -- Location: M4K_X23_Y6
 \ram1|altsyncram_component|auto_generated|ram_block1a56\ : cycloneii_ram_block
@@ -40937,9 +40934,9 @@ PORT MAP (
 	portbdataout => \ram1|altsyncram_component|auto_generated|ram_block1a56_PORTBDATAOUT_bus\);
 
 -- Location: LCCOMB_X22_Y3_N6
-\adc_ram_shifter_1|data_b_2~6\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~25\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~6_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(126)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(14)))
+-- \adc_ram_shifter_1|data~25_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(126)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(14)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40950,22 +40947,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(14),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(126),
-	combout => \adc_ram_shifter_1|data_b_2~6_combout\);
+	combout => \adc_ram_shifter_1|data~25_combout\);
 
 -- Location: LCFF_X22_Y3_N7
-\adc_ram_shifter_1|data_b_2[22]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[406]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~6_combout\,
+	datain => \adc_ram_shifter_1|data~25_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(22));
+	regout => \adc_ram_shifter_1|data\(406));
 
 -- Location: LCCOMB_X22_Y4_N20
-\adc_ram_shifter_1|data_b_2~7\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~29\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~7_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(127)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(15)))
+-- \adc_ram_shifter_1|data~29_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(127)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(15)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40976,22 +40973,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(15),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(127),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~7_combout\);
+	combout => \adc_ram_shifter_1|data~29_combout\);
 
 -- Location: LCFF_X22_Y4_N21
-\adc_ram_shifter_1|data_b_2[23]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[407]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~7_combout\,
+	datain => \adc_ram_shifter_1|data~29_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(23));
+	regout => \adc_ram_shifter_1|data\(407));
 
 -- Location: LCCOMB_X24_Y9_N6
-\adc_ram_shifter_1|data_b_2~36\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~177\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~36_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(4))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(20))))
+-- \adc_ram_shifter_1|data~177_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(4))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(20))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41002,22 +40999,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(4),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(20),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~36_combout\);
+	combout => \adc_ram_shifter_1|data~177_combout\);
 
 -- Location: LCFF_X24_Y9_N7
-\adc_ram_shifter_1|data_b_2[28]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[412]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~36_combout\,
+	datain => \adc_ram_shifter_1|data~177_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(28));
+	regout => \adc_ram_shifter_1|data\(412));
 
 -- Location: LCCOMB_X24_Y12_N28
-\adc_ram_shifter_1|data_b_2~28\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~145\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~28_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(12)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(28)))
+-- \adc_ram_shifter_1|data~145_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(12)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(28)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41028,22 +41025,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(28),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(12),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~28_combout\);
+	combout => \adc_ram_shifter_1|data~145_combout\);
 
 -- Location: LCFF_X24_Y12_N29
-\adc_ram_shifter_1|data_b_2[36]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[420]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~28_combout\,
+	datain => \adc_ram_shifter_1|data~145_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(36));
+	regout => \adc_ram_shifter_1|data\(420));
 
 -- Location: LCCOMB_X24_Y12_N20
-\adc_ram_shifter_1|data_b_2~29\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~149\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~29_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(13))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(29))))
+-- \adc_ram_shifter_1|data~149_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(13))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(29))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41054,22 +41051,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(13),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(29),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~29_combout\);
+	combout => \adc_ram_shifter_1|data~149_combout\);
 
 -- Location: LCFF_X24_Y12_N21
-\adc_ram_shifter_1|data_b_2[37]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[421]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~29_combout\,
+	datain => \adc_ram_shifter_1|data~149_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(37));
+	regout => \adc_ram_shifter_1|data\(421));
 
 -- Location: LCCOMB_X22_Y5_N10
-\adc_ram_shifter_1|data_b_2~30\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~153\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~30_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(14))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(30))))
+-- \adc_ram_shifter_1|data~153_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(14))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(30))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41080,22 +41077,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(14),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(30),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~30_combout\);
+	combout => \adc_ram_shifter_1|data~153_combout\);
 
 -- Location: LCFF_X22_Y5_N11
-\adc_ram_shifter_1|data_b_2[38]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[422]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~30_combout\,
+	datain => \adc_ram_shifter_1|data~153_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(38));
+	regout => \adc_ram_shifter_1|data\(422));
 
 -- Location: LCCOMB_X22_Y11_N10
-\adc_ram_shifter_1|data_b_2~31\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~157\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~31_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(15)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(31)))
+-- \adc_ram_shifter_1|data~157_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(15)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(31)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41106,22 +41103,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(31),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(15),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~31_combout\);
+	combout => \adc_ram_shifter_1|data~157_combout\);
 
 -- Location: LCFF_X22_Y11_N11
-\adc_ram_shifter_1|data_b_2[39]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[423]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~31_combout\,
+	datain => \adc_ram_shifter_1|data~157_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(39));
+	regout => \adc_ram_shifter_1|data\(423));
 
 -- Location: LCCOMB_X22_Y8_N16
-\adc_ram_shifter_1|data_a_2~94\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~436\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~94_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(22)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(38)))
+-- \adc_ram_shifter_1|data~436_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(22)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(38)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41132,22 +41129,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(38),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(22),
-	combout => \adc_ram_shifter_1|data_a_2~94_combout\);
+	combout => \adc_ram_shifter_1|data~436_combout\);
 
 -- Location: LCFF_X22_Y8_N17
-\adc_ram_shifter_1|data_a_2[46]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[302]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~94_combout\,
+	datain => \adc_ram_shifter_1|data~436_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(46));
+	regout => \adc_ram_shifter_1|data\(302));
 
 -- Location: LCCOMB_X10_Y9_N22
-\adc_ram_shifter_1|data_a_2~95\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~438\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~95_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(23))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(39))))
+-- \adc_ram_shifter_1|data~438_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(23))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(39))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41158,22 +41155,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(23),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(39),
-	combout => \adc_ram_shifter_1|data_a_2~95_combout\);
+	combout => \adc_ram_shifter_1|data~438_combout\);
 
 -- Location: LCFF_X10_Y9_N23
-\adc_ram_shifter_1|data_a_2[47]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[303]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~95_combout\,
+	datain => \adc_ram_shifter_1|data~438_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(47));
+	regout => \adc_ram_shifter_1|data\(303));
 
 -- Location: LCCOMB_X22_Y6_N26
-\adc_ram_shifter_1|data_b_1~36\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~121\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~36_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(102))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(118))))
+-- \adc_ram_shifter_1|data~121_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(102))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(118))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41184,22 +41181,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(102),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(118),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~36_combout\);
+	combout => \adc_ram_shifter_1|data~121_combout\);
 
 -- Location: LCFF_X22_Y6_N27
-\adc_ram_shifter_1|data_b_1[126]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[254]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~36_combout\,
+	datain => \adc_ram_shifter_1|data~121_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(126));
+	regout => \adc_ram_shifter_1|data\(254));
 
 -- Location: LCCOMB_X21_Y6_N22
-\adc_ram_shifter_1|data_b_1~38\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~125\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~38_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(103))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(119))))
+-- \adc_ram_shifter_1|data~125_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(103))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(119))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41210,22 +41207,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(103),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(119),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~38_combout\);
+	combout => \adc_ram_shifter_1|data~125_combout\);
 
 -- Location: LCFF_X21_Y6_N23
-\adc_ram_shifter_1|data_b_1[127]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[255]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~38_combout\,
+	datain => \adc_ram_shifter_1|data~125_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(127));
+	regout => \adc_ram_shifter_1|data\(255));
 
 -- Location: LCCOMB_X20_Y9_N0
-\adc_ram_shifter_1|data_b_2~24\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~129\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~24_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(8))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(24))))
+-- \adc_ram_shifter_1|data~129_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(8))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(24))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41236,22 +41233,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(8),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(24),
-	combout => \adc_ram_shifter_1|data_b_2~24_combout\);
+	combout => \adc_ram_shifter_1|data~129_combout\);
 
 -- Location: LCFF_X20_Y9_N1
-\adc_ram_shifter_1|data_b_2[32]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[416]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~24_combout\,
+	datain => \adc_ram_shifter_1|data~129_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(32));
+	regout => \adc_ram_shifter_1|data\(416));
 
 -- Location: LCCOMB_X22_Y6_N24
-\adc_ram_shifter_1|data_b_2~25\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~133\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~25_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(9))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(25))))
+-- \adc_ram_shifter_1|data~133_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(9))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(25))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41262,22 +41259,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(9),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(25),
-	combout => \adc_ram_shifter_1|data_b_2~25_combout\);
+	combout => \adc_ram_shifter_1|data~133_combout\);
 
 -- Location: LCFF_X22_Y6_N25
-\adc_ram_shifter_1|data_b_2[33]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[417]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~25_combout\,
+	datain => \adc_ram_shifter_1|data~133_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(33));
+	regout => \adc_ram_shifter_1|data\(417));
 
 -- Location: LCCOMB_X24_Y6_N22
-\adc_ram_shifter_1|data_b_2~26\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~137\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~26_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(10)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(26)))
+-- \adc_ram_shifter_1|data~137_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(10)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(26)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41288,22 +41285,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(26),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(10),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~26_combout\);
+	combout => \adc_ram_shifter_1|data~137_combout\);
 
 -- Location: LCFF_X24_Y6_N23
-\adc_ram_shifter_1|data_b_2[34]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[418]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~26_combout\,
+	datain => \adc_ram_shifter_1|data~137_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(34));
+	regout => \adc_ram_shifter_1|data\(418));
 
 -- Location: LCCOMB_X20_Y6_N8
-\adc_ram_shifter_1|data_b_2~27\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~141\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~27_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(11)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(27)))
+-- \adc_ram_shifter_1|data~141_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(11)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(27)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41314,17 +41311,17 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(27),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(11),
-	combout => \adc_ram_shifter_1|data_b_2~27_combout\);
+	combout => \adc_ram_shifter_1|data~141_combout\);
 
 -- Location: LCFF_X20_Y6_N9
-\adc_ram_shifter_1|data_b_2[35]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[419]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~27_combout\,
+	datain => \adc_ram_shifter_1|data~141_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(35));
+	regout => \adc_ram_shifter_1|data\(419));
 
 -- Location: M4K_X23_Y10
 \ram1|altsyncram_component|auto_generated|ram_block1a51\ : cycloneii_ram_block
@@ -41382,9 +41379,9 @@ PORT MAP (
 	portbdataout => \ram1|altsyncram_component|auto_generated|ram_block1a51_PORTBDATAOUT_bus\);
 
 -- Location: LCCOMB_X25_Y9_N20
-\adc_ram_shifter_1|data_b_2~89\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~427\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~89_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(17)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(33)))
+-- \adc_ram_shifter_1|data~427_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(17)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(33)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41395,22 +41392,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(33),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(17),
-	combout => \adc_ram_shifter_1|data_b_2~89_combout\);
+	combout => \adc_ram_shifter_1|data~427_combout\);
 
 -- Location: LCFF_X25_Y9_N21
-\adc_ram_shifter_1|data_b_2[41]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[425]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~89_combout\,
+	datain => \adc_ram_shifter_1|data~427_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(41));
+	regout => \adc_ram_shifter_1|data\(425));
 
 -- Location: LCCOMB_X25_Y7_N8
-\adc_ram_shifter_1|data_b_2~90\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~429\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~90_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(18)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(34)))
+-- \adc_ram_shifter_1|data~429_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(18)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(34)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41421,12 +41418,12 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(34),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(18),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~90_combout\);
+	combout => \adc_ram_shifter_1|data~429_combout\);
 
 -- Location: LCCOMB_X14_Y7_N28
-\adc_ram_shifter_1|data_b_2[42]~feeder\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data[426]~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2[42]~feeder_combout\ = \adc_ram_shifter_1|data_b_2~90_combout\
+-- \adc_ram_shifter_1|data[426]~feeder_combout\ = \adc_ram_shifter_1|data~429_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41434,23 +41431,23 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \adc_ram_shifter_1|data_b_2~90_combout\,
-	combout => \adc_ram_shifter_1|data_b_2[42]~feeder_combout\);
+	datad => \adc_ram_shifter_1|data~429_combout\,
+	combout => \adc_ram_shifter_1|data[426]~feeder_combout\);
 
 -- Location: LCFF_X14_Y7_N29
-\adc_ram_shifter_1|data_b_2[42]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[426]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2[42]~feeder_combout\,
+	datain => \adc_ram_shifter_1|data[426]~feeder_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(42));
+	regout => \adc_ram_shifter_1|data\(426));
 
 -- Location: LCCOMB_X22_Y8_N14
-\adc_ram_shifter_1|data_b_2~91\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~431\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~91_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(19)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(35)))
+-- \adc_ram_shifter_1|data~431_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(19)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(35)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41461,22 +41458,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(35),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(19),
-	combout => \adc_ram_shifter_1|data_b_2~91_combout\);
+	combout => \adc_ram_shifter_1|data~431_combout\);
 
 -- Location: LCFF_X22_Y8_N15
-\adc_ram_shifter_1|data_b_2[43]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[427]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~91_combout\,
+	datain => \adc_ram_shifter_1|data~431_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(43));
+	regout => \adc_ram_shifter_1|data\(427));
 
 -- Location: LCCOMB_X24_Y9_N4
-\adc_ram_shifter_1|data_b_2~92\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~433\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~92_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(20))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(36))))
+-- \adc_ram_shifter_1|data~433_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(20))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(36))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41487,22 +41484,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(20),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(36),
-	combout => \adc_ram_shifter_1|data_b_2~92_combout\);
+	combout => \adc_ram_shifter_1|data~433_combout\);
 
 -- Location: LCFF_X24_Y9_N5
-\adc_ram_shifter_1|data_b_2[44]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[428]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~92_combout\,
+	datain => \adc_ram_shifter_1|data~433_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(44));
+	regout => \adc_ram_shifter_1|data\(428));
 
 -- Location: LCCOMB_X22_Y2_N10
-\adc_ram_shifter_1|data_b_2~93\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~435\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~93_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(21))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(37))))
+-- \adc_ram_shifter_1|data~435_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(21))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(37))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41513,22 +41510,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(21),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(37),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~93_combout\);
+	combout => \adc_ram_shifter_1|data~435_combout\);
 
 -- Location: LCFF_X22_Y2_N11
-\adc_ram_shifter_1|data_b_2[45]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[429]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~93_combout\,
+	datain => \adc_ram_shifter_1|data~435_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(45));
+	regout => \adc_ram_shifter_1|data\(429));
 
 -- Location: LCCOMB_X22_Y12_N6
-\adc_ram_shifter_1|data_b_2~94\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~437\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~94_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(22)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(38)))
+-- \adc_ram_shifter_1|data~437_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(22)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(38)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41539,22 +41536,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(38),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(22),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~94_combout\);
+	combout => \adc_ram_shifter_1|data~437_combout\);
 
 -- Location: LCFF_X22_Y12_N7
-\adc_ram_shifter_1|data_b_2[46]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[430]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~94_combout\,
+	datain => \adc_ram_shifter_1|data~437_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(46));
+	regout => \adc_ram_shifter_1|data\(430));
 
 -- Location: LCCOMB_X21_Y6_N6
-\adc_ram_shifter_1|data_b_2~95\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~439\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~95_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(23))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(39))))
+-- \adc_ram_shifter_1|data~439_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(23))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(39))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41565,22 +41562,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(23),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(39),
-	combout => \adc_ram_shifter_1|data_b_2~95_combout\);
+	combout => \adc_ram_shifter_1|data~439_combout\);
 
 -- Location: LCFF_X21_Y6_N7
-\adc_ram_shifter_1|data_b_2[47]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[431]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~95_combout\,
+	datain => \adc_ram_shifter_1|data~439_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(47));
+	regout => \adc_ram_shifter_1|data\(431));
 
 -- Location: LCCOMB_X20_Y10_N14
-\adc_ram_shifter_1|data_a_2~105\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~458\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~105_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(33))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(49))))
+-- \adc_ram_shifter_1|data~458_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(33))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(49))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41591,22 +41588,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(33),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(49),
-	combout => \adc_ram_shifter_1|data_a_2~105_combout\);
+	combout => \adc_ram_shifter_1|data~458_combout\);
 
 -- Location: LCFF_X20_Y10_N15
-\adc_ram_shifter_1|data_a_2[57]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[313]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~105_combout\,
+	datain => \adc_ram_shifter_1|data~458_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(57));
+	regout => \adc_ram_shifter_1|data\(313));
 
 -- Location: LCCOMB_X12_Y9_N18
-\adc_ram_shifter_1|data_a_2~101\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~450\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~101_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(45)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(61)))
+-- \adc_ram_shifter_1|data~450_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(45)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(61)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41617,22 +41614,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(61),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(45),
-	combout => \adc_ram_shifter_1|data_a_2~101_combout\);
+	combout => \adc_ram_shifter_1|data~450_combout\);
 
 -- Location: LCFF_X12_Y9_N19
-\adc_ram_shifter_1|data_a_2[69]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[325]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~101_combout\,
+	datain => \adc_ram_shifter_1|data~450_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(69));
+	regout => \adc_ram_shifter_1|data\(325));
 
 -- Location: LCCOMB_X22_Y11_N16
-\adc_ram_shifter_1|data_b_2~87\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~423\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~87_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(31)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(47)))
+-- \adc_ram_shifter_1|data~423_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(31)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(47)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41643,22 +41640,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(47),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(31),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~87_combout\);
+	combout => \adc_ram_shifter_1|data~423_combout\);
 
 -- Location: LCFF_X22_Y11_N17
-\adc_ram_shifter_1|data_b_2[55]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[439]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~87_combout\,
+	datain => \adc_ram_shifter_1|data~423_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(55));
+	regout => \adc_ram_shifter_1|data\(439));
 
 -- Location: LCCOMB_X19_Y5_N22
-\adc_ram_shifter_1|data_a_2~74\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~396\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~74_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(66)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(82)))
+-- \adc_ram_shifter_1|data~396_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(66)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(82)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41669,22 +41666,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(82),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(66),
-	combout => \adc_ram_shifter_1|data_a_2~74_combout\);
+	combout => \adc_ram_shifter_1|data~396_combout\);
 
 -- Location: LCFF_X19_Y5_N23
-\adc_ram_shifter_1|data_a_2[90]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[346]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~74_combout\,
+	datain => \adc_ram_shifter_1|data~396_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(90));
+	regout => \adc_ram_shifter_1|data\(346));
 
 -- Location: LCCOMB_X25_Y9_N26
-\adc_ram_shifter_1|data_b_2~105\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~459\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~105_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(33)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(49)))
+-- \adc_ram_shifter_1|data~459_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(33)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(49)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41695,22 +41692,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(49),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(33),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~105_combout\);
+	combout => \adc_ram_shifter_1|data~459_combout\);
 
 -- Location: LCFF_X25_Y9_N27
-\adc_ram_shifter_1|data_b_2[57]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[441]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~105_combout\,
+	datain => \adc_ram_shifter_1|data~459_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(57));
+	regout => \adc_ram_shifter_1|data\(441));
 
 -- Location: LCCOMB_X10_Y9_N0
-\adc_ram_shifter_1|data_a_2~112\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~472\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~112_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(56))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(72))))
+-- \adc_ram_shifter_1|data~472_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(56))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(72))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41721,22 +41718,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(56),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(72),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~112_combout\);
+	combout => \adc_ram_shifter_1|data~472_combout\);
 
 -- Location: LCFF_X10_Y9_N1
-\adc_ram_shifter_1|data_a_2[80]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[336]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~112_combout\,
+	datain => \adc_ram_shifter_1|data~472_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(80));
+	regout => \adc_ram_shifter_1|data\(336));
 
 -- Location: LCCOMB_X13_Y9_N6
-\adc_ram_shifter_1|data_a_2~113\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~474\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~113_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(57))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(73))))
+-- \adc_ram_shifter_1|data~474_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(57))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(73))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41747,22 +41744,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(57),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(73),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~113_combout\);
+	combout => \adc_ram_shifter_1|data~474_combout\);
 
 -- Location: LCFF_X13_Y9_N7
-\adc_ram_shifter_1|data_a_2[81]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[337]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~113_combout\,
+	datain => \adc_ram_shifter_1|data~474_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(81));
+	regout => \adc_ram_shifter_1|data\(337));
 
 -- Location: LCCOMB_X14_Y9_N8
-\adc_ram_shifter_1|data_a_2~116\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~480\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~116_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(60)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(76)))
+-- \adc_ram_shifter_1|data~480_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(60)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(76)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41773,22 +41770,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(76),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(60),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~116_combout\);
+	combout => \adc_ram_shifter_1|data~480_combout\);
 
 -- Location: LCFF_X14_Y9_N9
-\adc_ram_shifter_1|data_a_2[84]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[340]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~116_combout\,
+	datain => \adc_ram_shifter_1|data~480_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(84));
+	regout => \adc_ram_shifter_1|data\(340));
 
 -- Location: LCCOMB_X13_Y9_N20
-\adc_ram_shifter_1|data_a_2~124\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~496\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~124_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(52)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(68)))
+-- \adc_ram_shifter_1|data~496_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(52)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(68)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41799,17 +41796,17 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(68),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(52),
-	combout => \adc_ram_shifter_1|data_a_2~124_combout\);
+	combout => \adc_ram_shifter_1|data~496_combout\);
 
 -- Location: LCFF_X13_Y9_N21
-\adc_ram_shifter_1|data_a_2[76]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[332]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~124_combout\,
+	datain => \adc_ram_shifter_1|data~496_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(76));
+	regout => \adc_ram_shifter_1|data\(332));
 
 -- Location: M4K_X11_Y9
 \ram2|altsyncram_component|auto_generated|ram_block1a40\ : cycloneii_ram_block
@@ -41867,9 +41864,9 @@ PORT MAP (
 	portbdataout => \ram2|altsyncram_component|auto_generated|ram_block1a40_PORTBDATAOUT_bus\);
 
 -- Location: LCCOMB_X10_Y9_N4
-\adc_ram_shifter_1|data_b_2~103\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~455\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~103_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(47)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(63)))
+-- \adc_ram_shifter_1|data~455_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(47)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(63)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41880,22 +41877,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(63),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(47),
-	combout => \adc_ram_shifter_1|data_b_2~103_combout\);
+	combout => \adc_ram_shifter_1|data~455_combout\);
 
 -- Location: LCFF_X10_Y9_N5
-\adc_ram_shifter_1|data_b_2[71]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[455]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~103_combout\,
+	datain => \adc_ram_shifter_1|data~455_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(71));
+	regout => \adc_ram_shifter_1|data\(455));
 
 -- Location: LCCOMB_X14_Y9_N10
-\adc_ram_shifter_1|data_a_2~125\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~498\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~125_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(53))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(69))))
+-- \adc_ram_shifter_1|data~498_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(53))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(69))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41906,22 +41903,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(53),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(69),
-	combout => \adc_ram_shifter_1|data_a_2~125_combout\);
+	combout => \adc_ram_shifter_1|data~498_combout\);
 
 -- Location: LCFF_X14_Y9_N11
-\adc_ram_shifter_1|data_a_2[77]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[333]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~125_combout\,
+	datain => \adc_ram_shifter_1|data~498_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(77));
+	regout => \adc_ram_shifter_1|data\(333));
 
 -- Location: LCCOMB_X19_Y6_N14
-\adc_ram_shifter_1|data_a_2~126\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~500\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~126_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(54))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(70))))
+-- \adc_ram_shifter_1|data~500_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(54))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(70))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41932,22 +41929,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(54),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(70),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~126_combout\);
+	combout => \adc_ram_shifter_1|data~500_combout\);
 
 -- Location: LCFF_X19_Y6_N15
-\adc_ram_shifter_1|data_a_2[78]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[334]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~126_combout\,
+	datain => \adc_ram_shifter_1|data~500_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(78));
+	regout => \adc_ram_shifter_1|data\(334));
 
 -- Location: LCCOMB_X21_Y2_N10
-\adc_ram_shifter_1|data_b_2~125\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~499\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~125_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(53)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(69)))
+-- \adc_ram_shifter_1|data~499_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(53)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(69)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41958,22 +41955,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(69),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(53),
-	combout => \adc_ram_shifter_1|data_b_2~125_combout\);
+	combout => \adc_ram_shifter_1|data~499_combout\);
 
 -- Location: LCFF_X21_Y2_N11
-\adc_ram_shifter_1|data_b_2[77]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[461]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~125_combout\,
+	datain => \adc_ram_shifter_1|data~499_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(77));
+	regout => \adc_ram_shifter_1|data\(461));
 
 -- Location: LCCOMB_X19_Y6_N6
-\adc_ram_shifter_1|data_b_2~126\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~501\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~126_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(54))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(70))))
+-- \adc_ram_shifter_1|data~501_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(54))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(70))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41984,22 +41981,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(54),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(70),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~126_combout\);
+	combout => \adc_ram_shifter_1|data~501_combout\);
 
 -- Location: LCFF_X19_Y6_N7
-\adc_ram_shifter_1|data_b_2[78]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[462]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~126_combout\,
+	datain => \adc_ram_shifter_1|data~501_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(78));
+	regout => \adc_ram_shifter_1|data\(462));
 
 -- Location: LCCOMB_X21_Y6_N16
-\adc_ram_shifter_1|data_b_2~127\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~503\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~127_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(55)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(71)))
+-- \adc_ram_shifter_1|data~503_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(55)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(71)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42010,17 +42007,17 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(71),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(55),
-	combout => \adc_ram_shifter_1|data_b_2~127_combout\);
+	combout => \adc_ram_shifter_1|data~503_combout\);
 
 -- Location: LCFF_X21_Y6_N17
-\adc_ram_shifter_1|data_b_2[79]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[463]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~127_combout\,
+	datain => \adc_ram_shifter_1|data~503_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(79));
+	regout => \adc_ram_shifter_1|data\(463));
 
 -- Location: M4K_X11_Y6
 \ram2|altsyncram_component|auto_generated|ram_block1a76\ : cycloneii_ram_block
@@ -42078,9 +42075,9 @@ PORT MAP (
 	portbdataout => \ram2|altsyncram_component|auto_generated|ram_block1a76_PORTBDATAOUT_bus\);
 
 -- Location: LCCOMB_X19_Y5_N30
-\adc_ram_shifter_1|data_a_2~119\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~486\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~119_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(63)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(79)))
+-- \adc_ram_shifter_1|data~486_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(63)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(79)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42091,22 +42088,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(79),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(63),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~119_combout\);
+	combout => \adc_ram_shifter_1|data~486_combout\);
 
 -- Location: LCFF_X19_Y5_N31
-\adc_ram_shifter_1|data_a_2[87]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[343]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~119_combout\,
+	datain => \adc_ram_shifter_1|data~486_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(87));
+	regout => \adc_ram_shifter_1|data\(343));
 
 -- Location: LCCOMB_X20_Y5_N4
-\adc_ram_shifter_1|data_b_2~123\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~495\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~123_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(51))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(67))))
+-- \adc_ram_shifter_1|data~495_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(51))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(67))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42117,22 +42114,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(51),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(67),
-	combout => \adc_ram_shifter_1|data_b_2~123_combout\);
+	combout => \adc_ram_shifter_1|data~495_combout\);
 
 -- Location: LCFF_X20_Y5_N5
-\adc_ram_shifter_1|data_b_2[75]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[459]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~123_combout\,
+	datain => \adc_ram_shifter_1|data~495_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(75));
+	regout => \adc_ram_shifter_1|data\(459));
 
 -- Location: LCCOMB_X10_Y9_N6
-\adc_ram_shifter_1|data_b_2~112\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~473\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~112_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(56))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(72))))
+-- \adc_ram_shifter_1|data~473_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(56))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(72))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42143,22 +42140,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(56),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(72),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~112_combout\);
+	combout => \adc_ram_shifter_1|data~473_combout\);
 
 -- Location: LCFF_X10_Y9_N7
-\adc_ram_shifter_1|data_b_2[80]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[464]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~112_combout\,
+	datain => \adc_ram_shifter_1|data~473_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(80));
+	regout => \adc_ram_shifter_1|data\(464));
 
 -- Location: LCCOMB_X12_Y9_N10
-\adc_ram_shifter_1|data_b_2~113\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~475\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~113_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(57)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(73)))
+-- \adc_ram_shifter_1|data~475_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(57)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(73)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42169,22 +42166,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(73),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(57),
-	combout => \adc_ram_shifter_1|data_b_2~113_combout\);
+	combout => \adc_ram_shifter_1|data~475_combout\);
 
 -- Location: LCFF_X12_Y9_N11
-\adc_ram_shifter_1|data_b_2[81]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[465]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~113_combout\,
+	datain => \adc_ram_shifter_1|data~475_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(81));
+	regout => \adc_ram_shifter_1|data\(465));
 
 -- Location: LCCOMB_X12_Y9_N14
-\adc_ram_shifter_1|data_b_2~114\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~477\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~114_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(58)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(74)))
+-- \adc_ram_shifter_1|data~477_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(58)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(74)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42195,22 +42192,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(74),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(58),
-	combout => \adc_ram_shifter_1|data_b_2~114_combout\);
+	combout => \adc_ram_shifter_1|data~477_combout\);
 
 -- Location: LCFF_X12_Y9_N15
-\adc_ram_shifter_1|data_b_2[82]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[466]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~114_combout\,
+	datain => \adc_ram_shifter_1|data~477_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(82));
+	regout => \adc_ram_shifter_1|data\(466));
 
 -- Location: LCCOMB_X10_Y5_N30
-\adc_ram_shifter_1|data_b_2~116\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~481\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~116_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(60))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(76))))
+-- \adc_ram_shifter_1|data~481_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(60))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(76))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42221,22 +42218,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(60),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(76),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~116_combout\);
+	combout => \adc_ram_shifter_1|data~481_combout\);
 
 -- Location: LCFF_X10_Y5_N31
-\adc_ram_shifter_1|data_b_2[84]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[468]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~116_combout\,
+	datain => \adc_ram_shifter_1|data~481_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(84));
+	regout => \adc_ram_shifter_1|data\(468));
 
 -- Location: LCCOMB_X12_Y9_N24
-\adc_ram_shifter_1|data_b_2~117\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~483\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~117_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(61)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(77)))
+-- \adc_ram_shifter_1|data~483_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(61)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(77)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42247,22 +42244,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(77),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(61),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~117_combout\);
+	combout => \adc_ram_shifter_1|data~483_combout\);
 
 -- Location: LCFF_X12_Y9_N25
-\adc_ram_shifter_1|data_b_2[85]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[469]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~117_combout\,
+	datain => \adc_ram_shifter_1|data~483_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(85));
+	regout => \adc_ram_shifter_1|data\(469));
 
 -- Location: LCCOMB_X12_Y9_N6
-\adc_ram_shifter_1|data_b_2~118\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~485\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~118_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(62)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(78)))
+-- \adc_ram_shifter_1|data~485_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(62)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(78)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42273,22 +42270,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(78),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(62),
-	combout => \adc_ram_shifter_1|data_b_2~118_combout\);
+	combout => \adc_ram_shifter_1|data~485_combout\);
 
 -- Location: LCFF_X12_Y9_N7
-\adc_ram_shifter_1|data_b_2[86]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[470]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~118_combout\,
+	datain => \adc_ram_shifter_1|data~485_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(86));
+	regout => \adc_ram_shifter_1|data\(470));
 
 -- Location: LCCOMB_X10_Y5_N28
-\adc_ram_shifter_1|data_b_2~119\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~487\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~119_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(63))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(79))))
+-- \adc_ram_shifter_1|data~487_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(63))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(79))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42299,22 +42296,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(63),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(79),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~119_combout\);
+	combout => \adc_ram_shifter_1|data~487_combout\);
 
 -- Location: LCFF_X10_Y5_N29
-\adc_ram_shifter_1|data_b_2[87]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[471]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~119_combout\,
+	datain => \adc_ram_shifter_1|data~487_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(87));
+	regout => \adc_ram_shifter_1|data\(471));
 
 -- Location: LCCOMB_X10_Y9_N8
-\adc_ram_shifter_1|data_b_2~115\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~479\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~115_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(59))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(75))))
+-- \adc_ram_shifter_1|data~479_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(59))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(75))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42325,22 +42322,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(59),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(75),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~115_combout\);
+	combout => \adc_ram_shifter_1|data~479_combout\);
 
 -- Location: LCFF_X10_Y9_N9
-\adc_ram_shifter_1|data_b_2[83]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[467]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~115_combout\,
+	datain => \adc_ram_shifter_1|data~479_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(83));
+	regout => \adc_ram_shifter_1|data\(467));
 
 -- Location: LCCOMB_X21_Y4_N16
-\adc_ram_shifter_1|data_b_2~73\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~395\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~73_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(65))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(81))))
+-- \adc_ram_shifter_1|data~395_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(65))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(81))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42351,22 +42348,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(65),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(81),
-	combout => \adc_ram_shifter_1|data_b_2~73_combout\);
+	combout => \adc_ram_shifter_1|data~395_combout\);
 
 -- Location: LCFF_X21_Y4_N17
-\adc_ram_shifter_1|data_b_2[89]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[473]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~73_combout\,
+	datain => \adc_ram_shifter_1|data~395_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(89));
+	regout => \adc_ram_shifter_1|data\(473));
 
 -- Location: LCCOMB_X21_Y3_N30
-\adc_ram_shifter_1|data_b_2~74\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~397\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~74_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(66)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(82)))
+-- \adc_ram_shifter_1|data~397_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(66)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(82)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42377,23 +42374,23 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(82),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(66),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~74_combout\);
+	combout => \adc_ram_shifter_1|data~397_combout\);
 
 -- Location: LCFF_X22_Y3_N11
-\adc_ram_shifter_1|data_b_2[90]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[474]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	sdata => \adc_ram_shifter_1|data_b_2~74_combout\,
+	sdata => \adc_ram_shifter_1|data~397_combout\,
 	sload => VCC,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(90));
+	regout => \adc_ram_shifter_1|data\(474));
 
 -- Location: LCCOMB_X24_Y3_N8
-\adc_ram_shifter_1|data_b_2~75\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~399\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~75_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(67)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(83)))
+-- \adc_ram_shifter_1|data~399_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(67)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(83)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42404,22 +42401,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(83),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(67),
-	combout => \adc_ram_shifter_1|data_b_2~75_combout\);
+	combout => \adc_ram_shifter_1|data~399_combout\);
 
 -- Location: LCFF_X24_Y3_N9
-\adc_ram_shifter_1|data_b_2[91]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[475]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~75_combout\,
+	datain => \adc_ram_shifter_1|data~399_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(91));
+	regout => \adc_ram_shifter_1|data\(475));
 
 -- Location: LCCOMB_X14_Y7_N22
-\adc_ram_shifter_1|data_b_2~76\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~401\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~76_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(68)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(84)))
+-- \adc_ram_shifter_1|data~401_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(68)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(84)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42430,22 +42427,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(84),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(68),
-	combout => \adc_ram_shifter_1|data_b_2~76_combout\);
+	combout => \adc_ram_shifter_1|data~401_combout\);
 
 -- Location: LCFF_X14_Y7_N23
-\adc_ram_shifter_1|data_b_2[92]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[476]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~76_combout\,
+	datain => \adc_ram_shifter_1|data~401_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(92));
+	regout => \adc_ram_shifter_1|data\(476));
 
 -- Location: LCCOMB_X21_Y2_N0
-\adc_ram_shifter_1|data_b_2~77\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~403\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~77_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(69)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(85)))
+-- \adc_ram_shifter_1|data~403_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(69)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(85)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42456,22 +42453,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(85),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(69),
-	combout => \adc_ram_shifter_1|data_b_2~77_combout\);
+	combout => \adc_ram_shifter_1|data~403_combout\);
 
 -- Location: LCFF_X21_Y2_N1
-\adc_ram_shifter_1|data_b_2[93]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[477]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~77_combout\,
+	datain => \adc_ram_shifter_1|data~403_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(93));
+	regout => \adc_ram_shifter_1|data\(477));
 
 -- Location: LCCOMB_X19_Y5_N20
-\adc_ram_shifter_1|data_b_2~78\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~405\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~78_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(70)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(86)))
+-- \adc_ram_shifter_1|data~405_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(70)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(86)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42482,22 +42479,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(86),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(70),
-	combout => \adc_ram_shifter_1|data_b_2~78_combout\);
+	combout => \adc_ram_shifter_1|data~405_combout\);
 
 -- Location: LCFF_X19_Y5_N21
-\adc_ram_shifter_1|data_b_2[94]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[478]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~78_combout\,
+	datain => \adc_ram_shifter_1|data~405_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(94));
+	regout => \adc_ram_shifter_1|data\(478));
 
 -- Location: LCCOMB_X24_Y3_N14
-\adc_ram_shifter_1|data_b_2~79\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~407\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~79_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(71)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(87)))
+-- \adc_ram_shifter_1|data~407_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(71)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(87)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42508,17 +42505,17 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(87),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(71),
-	combout => \adc_ram_shifter_1|data_b_2~79_combout\);
+	combout => \adc_ram_shifter_1|data~407_combout\);
 
 -- Location: LCFF_X24_Y3_N15
-\adc_ram_shifter_1|data_b_2[95]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[479]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~79_combout\,
+	datain => \adc_ram_shifter_1|data~407_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(95));
+	regout => \adc_ram_shifter_1|data\(479));
 
 -- Location: M4K_X23_Y3
 \ram2|altsyncram_component|auto_generated|ram_block1a48\ : cycloneii_ram_block
@@ -42576,9 +42573,9 @@ PORT MAP (
 	portbdataout => \ram2|altsyncram_component|auto_generated|ram_block1a48_PORTBDATAOUT_bus\);
 
 -- Location: LCCOMB_X22_Y3_N30
-\adc_ram_shifter_1|data_b_2~71\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~391\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~71_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(79)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(95)))
+-- \adc_ram_shifter_1|data~391_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(79)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(95)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42589,22 +42586,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(95),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(79),
-	combout => \adc_ram_shifter_1|data_b_2~71_combout\);
+	combout => \adc_ram_shifter_1|data~391_combout\);
 
 -- Location: LCFF_X22_Y3_N31
-\adc_ram_shifter_1|data_b_2[103]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[487]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~71_combout\,
+	datain => \adc_ram_shifter_1|data~391_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(103));
+	regout => \adc_ram_shifter_1|data\(487));
 
 -- Location: LCCOMB_X24_Y3_N10
-\adc_ram_shifter_1|data_b_2~70\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~389\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~70_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(78))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(94))))
+-- \adc_ram_shifter_1|data~389_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(78))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(94))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42615,22 +42612,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(78),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(94),
-	combout => \adc_ram_shifter_1|data_b_2~70_combout\);
+	combout => \adc_ram_shifter_1|data~389_combout\);
 
 -- Location: LCFF_X24_Y3_N11
-\adc_ram_shifter_1|data_b_2[102]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[486]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~70_combout\,
+	datain => \adc_ram_shifter_1|data~389_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(102));
+	regout => \adc_ram_shifter_1|data\(486));
 
 -- Location: LCCOMB_X21_Y3_N24
-\adc_ram_shifter_1|data_a_2~71\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~390\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~71_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(79))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(95))))
+-- \adc_ram_shifter_1|data~390_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(79))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(95))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42641,22 +42638,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(79),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(95),
-	combout => \adc_ram_shifter_1|data_a_2~71_combout\);
+	combout => \adc_ram_shifter_1|data~390_combout\);
 
 -- Location: LCFF_X21_Y3_N25
-\adc_ram_shifter_1|data_a_2[103]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[359]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~71_combout\,
+	datain => \adc_ram_shifter_1|data~390_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(103));
+	regout => \adc_ram_shifter_1|data\(359));
 
 -- Location: LCCOMB_X22_Y3_N14
-\adc_ram_shifter_1|data_a_2~70\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~388\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~70_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(78))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(94))))
+-- \adc_ram_shifter_1|data~388_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(78))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(94))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42667,22 +42664,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(78),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(94),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~70_combout\);
+	combout => \adc_ram_shifter_1|data~388_combout\);
 
 -- Location: LCFF_X22_Y3_N15
-\adc_ram_shifter_1|data_a_2[102]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[358]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~70_combout\,
+	datain => \adc_ram_shifter_1|data~388_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(102));
+	regout => \adc_ram_shifter_1|data\(358));
 
 -- Location: LCCOMB_X15_Y6_N20
-\adc_ram_shifter_1|data_a_2~127\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~502\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~127_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(55)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(71)))
+-- \adc_ram_shifter_1|data~502_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(55)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(71)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42693,22 +42690,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(71),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(55),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~127_combout\);
+	combout => \adc_ram_shifter_1|data~502_combout\);
 
 -- Location: LCFF_X15_Y6_N21
-\adc_ram_shifter_1|data_a_2[79]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[335]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~127_combout\,
+	datain => \adc_ram_shifter_1|data~502_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(79));
+	regout => \adc_ram_shifter_1|data\(335));
 
 -- Location: LCCOMB_X14_Y7_N26
-\adc_ram_shifter_1|data_a_2~118\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~484\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~118_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(62))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(78))))
+-- \adc_ram_shifter_1|data~484_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(62))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(78))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42719,22 +42716,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(62),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(78),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~118_combout\);
+	combout => \adc_ram_shifter_1|data~484_combout\);
 
 -- Location: LCFF_X14_Y7_N27
-\adc_ram_shifter_1|data_a_2[86]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[342]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~118_combout\,
+	datain => \adc_ram_shifter_1|data~484_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(86));
+	regout => \adc_ram_shifter_1|data\(342));
 
 -- Location: LCCOMB_X12_Y9_N0
-\adc_ram_shifter_1|data_b_2~102\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~453\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~102_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(46))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(62))))
+-- \adc_ram_shifter_1|data~453_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(46))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(62))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42745,22 +42742,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(46),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(62),
-	combout => \adc_ram_shifter_1|data_b_2~102_combout\);
+	combout => \adc_ram_shifter_1|data~453_combout\);
 
 -- Location: LCFF_X12_Y9_N1
-\adc_ram_shifter_1|data_b_2[70]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[454]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~102_combout\,
+	datain => \adc_ram_shifter_1|data~453_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(70));
+	regout => \adc_ram_shifter_1|data\(454));
 
 -- Location: LCCOMB_X14_Y7_N20
-\adc_ram_shifter_1|data_b_2~124\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~497\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~124_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(52)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(68)))
+-- \adc_ram_shifter_1|data~497_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(52)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(68)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42771,22 +42768,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(68),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(52),
-	combout => \adc_ram_shifter_1|data_b_2~124_combout\);
+	combout => \adc_ram_shifter_1|data~497_combout\);
 
 -- Location: LCFF_X14_Y7_N21
-\adc_ram_shifter_1|data_b_2[76]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[460]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~124_combout\,
+	datain => \adc_ram_shifter_1|data~497_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(76));
+	regout => \adc_ram_shifter_1|data\(460));
 
 -- Location: LCCOMB_X12_Y9_N16
-\adc_ram_shifter_1|data_a_2~117\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~482\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~117_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(61))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(77))))
+-- \adc_ram_shifter_1|data~482_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(61))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(77))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42797,22 +42794,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(61),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(77),
-	combout => \adc_ram_shifter_1|data_a_2~117_combout\);
+	combout => \adc_ram_shifter_1|data~482_combout\);
 
 -- Location: LCFF_X12_Y9_N17
-\adc_ram_shifter_1|data_a_2[85]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[341]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~117_combout\,
+	datain => \adc_ram_shifter_1|data~482_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(85));
+	regout => \adc_ram_shifter_1|data\(341));
 
 -- Location: LCCOMB_X15_Y6_N16
-\adc_ram_shifter_1|data_a_2~115\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~478\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~115_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(59))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(75))))
+-- \adc_ram_shifter_1|data~478_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(59))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(75))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42823,22 +42820,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(59),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(75),
-	combout => \adc_ram_shifter_1|data_a_2~115_combout\);
+	combout => \adc_ram_shifter_1|data~478_combout\);
 
 -- Location: LCFF_X15_Y6_N17
-\adc_ram_shifter_1|data_a_2[83]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[339]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~115_combout\,
+	datain => \adc_ram_shifter_1|data~478_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(83));
+	regout => \adc_ram_shifter_1|data\(339));
 
 -- Location: LCCOMB_X19_Y5_N24
-\adc_ram_shifter_1|data_a_2~114\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~476\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~114_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(58)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(74)))
+-- \adc_ram_shifter_1|data~476_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(58)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(74)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42849,22 +42846,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(74),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(58),
-	combout => \adc_ram_shifter_1|data_a_2~114_combout\);
+	combout => \adc_ram_shifter_1|data~476_combout\);
 
 -- Location: LCFF_X19_Y5_N25
-\adc_ram_shifter_1|data_a_2[82]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[338]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~114_combout\,
+	datain => \adc_ram_shifter_1|data~476_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(82));
+	regout => \adc_ram_shifter_1|data\(338));
 
 -- Location: LCCOMB_X12_Y9_N28
-\adc_ram_shifter_1|data_b_2~101\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~451\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~101_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(45)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(61)))
+-- \adc_ram_shifter_1|data~451_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(45)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(61)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42875,22 +42872,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(61),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(45),
-	combout => \adc_ram_shifter_1|data_b_2~101_combout\);
+	combout => \adc_ram_shifter_1|data~451_combout\);
 
 -- Location: LCFF_X12_Y9_N29
-\adc_ram_shifter_1|data_b_2[69]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[453]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~101_combout\,
+	datain => \adc_ram_shifter_1|data~451_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(69));
+	regout => \adc_ram_shifter_1|data\(453));
 
 -- Location: LCCOMB_X21_Y3_N8
-\adc_ram_shifter_1|data_a_2~79\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~406\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~79_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(71)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(87)))
+-- \adc_ram_shifter_1|data~406_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(71)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(87)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42901,22 +42898,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(87),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(71),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~79_combout\);
+	combout => \adc_ram_shifter_1|data~406_combout\);
 
 -- Location: LCFF_X21_Y3_N9
-\adc_ram_shifter_1|data_a_2[95]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[351]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~79_combout\,
+	datain => \adc_ram_shifter_1|data~406_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(95));
+	regout => \adc_ram_shifter_1|data\(351));
 
 -- Location: LCCOMB_X13_Y9_N8
-\adc_ram_shifter_1|data_a_2~123\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~494\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~123_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(51)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(67)))
+-- \adc_ram_shifter_1|data~494_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(51)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(67)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42927,22 +42924,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(67),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(51),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~123_combout\);
+	combout => \adc_ram_shifter_1|data~494_combout\);
 
 -- Location: LCFF_X13_Y9_N9
-\adc_ram_shifter_1|data_a_2[75]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[331]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~123_combout\,
+	datain => \adc_ram_shifter_1|data~494_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(75));
+	regout => \adc_ram_shifter_1|data\(331));
 
 -- Location: LCCOMB_X22_Y3_N16
-\adc_ram_shifter_1|data_a_2~78\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~404\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~78_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(70))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(86))))
+-- \adc_ram_shifter_1|data~404_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(70))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(86))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42953,22 +42950,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(70),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(86),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~78_combout\);
+	combout => \adc_ram_shifter_1|data~404_combout\);
 
 -- Location: LCFF_X22_Y3_N17
-\adc_ram_shifter_1|data_a_2[94]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[350]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~78_combout\,
+	datain => \adc_ram_shifter_1|data~404_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(94));
+	regout => \adc_ram_shifter_1|data\(350));
 
 -- Location: LCCOMB_X20_Y5_N14
-\adc_ram_shifter_1|data_b_2~122\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~493\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~122_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(50)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(66)))
+-- \adc_ram_shifter_1|data~493_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(50)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(66)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -42979,22 +42976,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(66),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(50),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~122_combout\);
+	combout => \adc_ram_shifter_1|data~493_combout\);
 
 -- Location: LCFF_X20_Y5_N15
-\adc_ram_shifter_1|data_b_2[74]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[458]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~122_combout\,
+	datain => \adc_ram_shifter_1|data~493_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(74));
+	regout => \adc_ram_shifter_1|data\(458));
 
 -- Location: LCCOMB_X22_Y3_N22
-\adc_ram_shifter_1|data_a_2~77\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~402\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~77_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(69)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(85)))
+-- \adc_ram_shifter_1|data~402_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(69)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(85)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43005,22 +43002,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(85),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(69),
-	combout => \adc_ram_shifter_1|data_a_2~77_combout\);
+	combout => \adc_ram_shifter_1|data~402_combout\);
 
 -- Location: LCFF_X22_Y3_N23
-\adc_ram_shifter_1|data_a_2[93]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[349]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~77_combout\,
+	datain => \adc_ram_shifter_1|data~402_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(93));
+	regout => \adc_ram_shifter_1|data\(349));
 
 -- Location: LCCOMB_X21_Y4_N30
-\adc_ram_shifter_1|data_b_2~121\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~491\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~121_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(49))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(65))))
+-- \adc_ram_shifter_1|data~491_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(49))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(65))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43031,22 +43028,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(49),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(65),
-	combout => \adc_ram_shifter_1|data_b_2~121_combout\);
+	combout => \adc_ram_shifter_1|data~491_combout\);
 
 -- Location: LCFF_X21_Y4_N31
-\adc_ram_shifter_1|data_b_2[73]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[457]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~121_combout\,
+	datain => \adc_ram_shifter_1|data~491_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(73));
+	regout => \adc_ram_shifter_1|data\(457));
 
 -- Location: LCCOMB_X10_Y9_N26
-\adc_ram_shifter_1|data_b_2~100\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~449\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~100_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(44))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(60))))
+-- \adc_ram_shifter_1|data~449_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(44))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(60))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43057,22 +43054,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(44),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(60),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~100_combout\);
+	combout => \adc_ram_shifter_1|data~449_combout\);
 
 -- Location: LCFF_X10_Y9_N27
-\adc_ram_shifter_1|data_b_2[68]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[452]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~100_combout\,
+	datain => \adc_ram_shifter_1|data~449_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(68));
+	regout => \adc_ram_shifter_1|data\(452));
 
 -- Location: LCCOMB_X14_Y9_N0
-\adc_ram_shifter_1|data_b_2~120\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~489\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~120_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(48)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(64)))
+-- \adc_ram_shifter_1|data~489_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(48)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(64)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43083,22 +43080,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(64),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(48),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~120_combout\);
+	combout => \adc_ram_shifter_1|data~489_combout\);
 
 -- Location: LCFF_X14_Y9_N1
-\adc_ram_shifter_1|data_b_2[72]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[456]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~120_combout\,
+	datain => \adc_ram_shifter_1|data~489_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(72));
+	regout => \adc_ram_shifter_1|data\(456));
 
 -- Location: LCCOMB_X10_Y9_N2
-\adc_ram_shifter_1|data_b_2~99\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~447\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~99_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(43))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(59))))
+-- \adc_ram_shifter_1|data~447_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(43))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(59))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43109,22 +43106,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(43),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(59),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~99_combout\);
+	combout => \adc_ram_shifter_1|data~447_combout\);
 
 -- Location: LCFF_X10_Y9_N3
-\adc_ram_shifter_1|data_b_2[67]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[451]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~99_combout\,
+	datain => \adc_ram_shifter_1|data~447_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(67));
+	regout => \adc_ram_shifter_1|data\(451));
 
 -- Location: LCCOMB_X21_Y5_N26
-\adc_ram_shifter_1|data_a_2~76\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~400\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~76_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(68))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(84))))
+-- \adc_ram_shifter_1|data~400_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(68))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(84))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43135,22 +43132,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(68),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(84),
-	combout => \adc_ram_shifter_1|data_a_2~76_combout\);
+	combout => \adc_ram_shifter_1|data~400_combout\);
 
 -- Location: LCFF_X21_Y5_N27
-\adc_ram_shifter_1|data_a_2[92]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[348]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~76_combout\,
+	datain => \adc_ram_shifter_1|data~400_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(92));
+	regout => \adc_ram_shifter_1|data\(348));
 
 -- Location: LCCOMB_X21_Y6_N18
-\adc_ram_shifter_1|data_b_2~111\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~471\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~111_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(39)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(55)))
+-- \adc_ram_shifter_1|data~471_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(39)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(55)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43161,22 +43158,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(55),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(39),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~111_combout\);
+	combout => \adc_ram_shifter_1|data~471_combout\);
 
 -- Location: LCFF_X21_Y6_N19
-\adc_ram_shifter_1|data_b_2[63]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[447]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~111_combout\,
+	datain => \adc_ram_shifter_1|data~471_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(63));
+	regout => \adc_ram_shifter_1|data\(447));
 
 -- Location: LCCOMB_X12_Y9_N20
-\adc_ram_shifter_1|data_b_2~98\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~445\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~98_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(42))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(58))))
+-- \adc_ram_shifter_1|data~445_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(42))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(58))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43187,22 +43184,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(42),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(58),
-	combout => \adc_ram_shifter_1|data_b_2~98_combout\);
+	combout => \adc_ram_shifter_1|data~445_combout\);
 
 -- Location: LCFF_X12_Y9_N21
-\adc_ram_shifter_1|data_b_2[66]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[450]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~98_combout\,
+	datain => \adc_ram_shifter_1|data~445_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(66));
+	regout => \adc_ram_shifter_1|data\(450));
 
 -- Location: LCCOMB_X12_Y9_N4
-\adc_ram_shifter_1|data_b_2~97\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~443\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~97_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(41))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(57))))
+-- \adc_ram_shifter_1|data~443_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(41))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(57))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43213,22 +43210,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(41),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(57),
-	combout => \adc_ram_shifter_1|data_b_2~97_combout\);
+	combout => \adc_ram_shifter_1|data~443_combout\);
 
 -- Location: LCFF_X12_Y9_N5
-\adc_ram_shifter_1|data_b_2[65]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[449]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~97_combout\,
+	datain => \adc_ram_shifter_1|data~443_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(65));
+	regout => \adc_ram_shifter_1|data\(449));
 
 -- Location: LCCOMB_X10_Y9_N14
-\adc_ram_shifter_1|data_b_2~96\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~441\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~96_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(40)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(56)))
+-- \adc_ram_shifter_1|data~441_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(40)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(56)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43239,22 +43236,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(56),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(40),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~96_combout\);
+	combout => \adc_ram_shifter_1|data~441_combout\);
 
 -- Location: LCFF_X10_Y9_N15
-\adc_ram_shifter_1|data_b_2[64]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[448]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~96_combout\,
+	datain => \adc_ram_shifter_1|data~441_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(64));
+	regout => \adc_ram_shifter_1|data\(448));
 
 -- Location: LCCOMB_X14_Y9_N24
-\adc_ram_shifter_1|data_a_2~75\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~398\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~75_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(67)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(83)))
+-- \adc_ram_shifter_1|data~398_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(67)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(83)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43265,22 +43262,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(83),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(67),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~75_combout\);
+	combout => \adc_ram_shifter_1|data~398_combout\);
 
 -- Location: LCFF_X14_Y9_N25
-\adc_ram_shifter_1|data_a_2[91]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[347]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~75_combout\,
+	datain => \adc_ram_shifter_1|data~398_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(91));
+	regout => \adc_ram_shifter_1|data\(347));
 
 -- Location: LCCOMB_X19_Y6_N2
-\adc_ram_shifter_1|data_b_2~110\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~469\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~110_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(38))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(54))))
+-- \adc_ram_shifter_1|data~469_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(38))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(54))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43291,22 +43288,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(38),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(54),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~110_combout\);
+	combout => \adc_ram_shifter_1|data~469_combout\);
 
 -- Location: LCFF_X19_Y6_N3
-\adc_ram_shifter_1|data_b_2[62]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[446]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~110_combout\,
+	datain => \adc_ram_shifter_1|data~469_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(62));
+	regout => \adc_ram_shifter_1|data\(446));
 
 -- Location: LCCOMB_X19_Y5_N4
-\adc_ram_shifter_1|data_a_2~73\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~394\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~73_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(65)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(81)))
+-- \adc_ram_shifter_1|data~394_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(65)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(81)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43317,22 +43314,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(81),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(65),
-	combout => \adc_ram_shifter_1|data_a_2~73_combout\);
+	combout => \adc_ram_shifter_1|data~394_combout\);
 
 -- Location: LCFF_X19_Y5_N5
-\adc_ram_shifter_1|data_a_2[89]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[345]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~73_combout\,
+	datain => \adc_ram_shifter_1|data~394_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(89));
+	regout => \adc_ram_shifter_1|data\(345));
 
 -- Location: LCCOMB_X21_Y2_N28
-\adc_ram_shifter_1|data_b_2~109\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~467\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~109_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(37))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(53))))
+-- \adc_ram_shifter_1|data~467_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(37))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(53))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43343,22 +43340,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(37),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(53),
-	combout => \adc_ram_shifter_1|data_b_2~109_combout\);
+	combout => \adc_ram_shifter_1|data~467_combout\);
 
 -- Location: LCFF_X21_Y2_N29
-\adc_ram_shifter_1|data_b_2[61]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[445]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~109_combout\,
+	datain => \adc_ram_shifter_1|data~467_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(61));
+	regout => \adc_ram_shifter_1|data\(445));
 
 -- Location: LCCOMB_X22_Y3_N28
-\adc_ram_shifter_1|data_b_2~72\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~393\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~72_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(64)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(80)))
+-- \adc_ram_shifter_1|data~393_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(64)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(80)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43369,22 +43366,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(80),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(64),
-	combout => \adc_ram_shifter_1|data_b_2~72_combout\);
+	combout => \adc_ram_shifter_1|data~393_combout\);
 
 -- Location: LCFF_X22_Y3_N29
-\adc_ram_shifter_1|data_b_2[88]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[472]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~72_combout\,
+	datain => \adc_ram_shifter_1|data~393_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(88));
+	regout => \adc_ram_shifter_1|data\(472));
 
 -- Location: LCCOMB_X14_Y7_N30
-\adc_ram_shifter_1|data_b_2~108\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~465\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~108_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(36)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(52)))
+-- \adc_ram_shifter_1|data~465_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(36)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(52)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43395,22 +43392,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(52),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(36),
-	combout => \adc_ram_shifter_1|data_b_2~108_combout\);
+	combout => \adc_ram_shifter_1|data~465_combout\);
 
 -- Location: LCFF_X14_Y7_N31
-\adc_ram_shifter_1|data_b_2[60]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[444]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~108_combout\,
+	datain => \adc_ram_shifter_1|data~465_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(60));
+	regout => \adc_ram_shifter_1|data\(444));
 
 -- Location: LCCOMB_X12_Y9_N2
-\adc_ram_shifter_1|data_a_2~103\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~454\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~103_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(47))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(63))))
+-- \adc_ram_shifter_1|data~454_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(47))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(63))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43421,22 +43418,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(47),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(63),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~103_combout\);
+	combout => \adc_ram_shifter_1|data~454_combout\);
 
 -- Location: LCFF_X12_Y9_N3
-\adc_ram_shifter_1|data_a_2[71]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[327]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~103_combout\,
+	datain => \adc_ram_shifter_1|data~454_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(71));
+	regout => \adc_ram_shifter_1|data\(327));
 
 -- Location: LCCOMB_X14_Y9_N28
-\adc_ram_shifter_1|data_a_2~102\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~452\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~102_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(46))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(62))))
+-- \adc_ram_shifter_1|data~452_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(46))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(62))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43447,22 +43444,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(46),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(62),
-	combout => \adc_ram_shifter_1|data_a_2~102_combout\);
+	combout => \adc_ram_shifter_1|data~452_combout\);
 
 -- Location: LCFF_X14_Y9_N29
-\adc_ram_shifter_1|data_a_2[70]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[326]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~102_combout\,
+	datain => \adc_ram_shifter_1|data~452_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(70));
+	regout => \adc_ram_shifter_1|data\(326));
 
 -- Location: LCCOMB_X22_Y6_N14
-\adc_ram_shifter_1|data_b_2~86\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~421\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~86_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(30))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(46))))
+-- \adc_ram_shifter_1|data~421_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(30))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(46))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43473,22 +43470,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(30),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(46),
-	combout => \adc_ram_shifter_1|data_b_2~86_combout\);
+	combout => \adc_ram_shifter_1|data~421_combout\);
 
 -- Location: LCFF_X22_Y6_N15
-\adc_ram_shifter_1|data_b_2[54]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[438]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~86_combout\,
+	datain => \adc_ram_shifter_1|data~421_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(54));
+	regout => \adc_ram_shifter_1|data\(438));
 
 -- Location: LCCOMB_X21_Y6_N4
-\adc_ram_shifter_1|data_b_2~107\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~463\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~107_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(35))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(51))))
+-- \adc_ram_shifter_1|data~463_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(35))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(51))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43499,22 +43496,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(35),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(51),
-	combout => \adc_ram_shifter_1|data_b_2~107_combout\);
+	combout => \adc_ram_shifter_1|data~463_combout\);
 
 -- Location: LCFF_X21_Y6_N5
-\adc_ram_shifter_1|data_b_2[59]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[443]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~107_combout\,
+	datain => \adc_ram_shifter_1|data~463_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(59));
+	regout => \adc_ram_shifter_1|data\(443));
 
 -- Location: LCCOMB_X14_Y9_N2
-\adc_ram_shifter_1|data_a_2~100\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~448\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~100_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(44)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(60)))
+-- \adc_ram_shifter_1|data~448_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(44)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(60)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43525,22 +43522,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(60),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(44),
-	combout => \adc_ram_shifter_1|data_a_2~100_combout\);
+	combout => \adc_ram_shifter_1|data~448_combout\);
 
 -- Location: LCFF_X14_Y9_N3
-\adc_ram_shifter_1|data_a_2[68]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[324]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~100_combout\,
+	datain => \adc_ram_shifter_1|data~448_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(68));
+	regout => \adc_ram_shifter_1|data\(324));
 
 -- Location: LCCOMB_X19_Y5_N10
-\adc_ram_shifter_1|data_a_2~122\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~492\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~122_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(50))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(66))))
+-- \adc_ram_shifter_1|data~492_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(50))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(66))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43551,22 +43548,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(50),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(66),
-	combout => \adc_ram_shifter_1|data_a_2~122_combout\);
+	combout => \adc_ram_shifter_1|data~492_combout\);
 
 -- Location: LCFF_X19_Y5_N11
-\adc_ram_shifter_1|data_a_2[74]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[330]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~122_combout\,
+	datain => \adc_ram_shifter_1|data~492_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(74));
+	regout => \adc_ram_shifter_1|data\(330));
 
 -- Location: LCCOMB_X10_Y9_N18
-\adc_ram_shifter_1|data_a_2~99\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~446\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~99_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(43)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(59)))
+-- \adc_ram_shifter_1|data~446_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(43)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(59)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43577,22 +43574,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(59),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(43),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~99_combout\);
+	combout => \adc_ram_shifter_1|data~446_combout\);
 
 -- Location: LCFF_X10_Y9_N19
-\adc_ram_shifter_1|data_a_2[67]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[323]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~99_combout\,
+	datain => \adc_ram_shifter_1|data~446_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(67));
+	regout => \adc_ram_shifter_1|data\(323));
 
 -- Location: LCCOMB_X12_Y9_N30
-\adc_ram_shifter_1|data_a_2~98\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~444\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~98_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(42))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(58))))
+-- \adc_ram_shifter_1|data~444_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(42))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(58))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43603,22 +43600,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(42),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(58),
-	combout => \adc_ram_shifter_1|data_a_2~98_combout\);
+	combout => \adc_ram_shifter_1|data~444_combout\);
 
 -- Location: LCFF_X12_Y9_N31
-\adc_ram_shifter_1|data_a_2[66]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[322]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~98_combout\,
+	datain => \adc_ram_shifter_1|data~444_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(66));
+	regout => \adc_ram_shifter_1|data\(322));
 
 -- Location: LCCOMB_X13_Y9_N30
-\adc_ram_shifter_1|data_a_2~97\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~442\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~97_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(41))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(57))))
+-- \adc_ram_shifter_1|data~442_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(41))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(57))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43629,12 +43626,12 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(41),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(57),
-	combout => \adc_ram_shifter_1|data_a_2~97_combout\);
+	combout => \adc_ram_shifter_1|data~442_combout\);
 
 -- Location: LCCOMB_X12_Y9_N8
-\adc_ram_shifter_1|data_a_2[65]~feeder\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data[321]~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2[65]~feeder_combout\ = \adc_ram_shifter_1|data_a_2~97_combout\
+-- \adc_ram_shifter_1|data[321]~feeder_combout\ = \adc_ram_shifter_1|data~442_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43642,23 +43639,23 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \adc_ram_shifter_1|data_a_2~97_combout\,
-	combout => \adc_ram_shifter_1|data_a_2[65]~feeder_combout\);
+	datad => \adc_ram_shifter_1|data~442_combout\,
+	combout => \adc_ram_shifter_1|data[321]~feeder_combout\);
 
 -- Location: LCFF_X12_Y9_N9
-\adc_ram_shifter_1|data_a_2[65]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[321]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2[65]~feeder_combout\,
+	datain => \adc_ram_shifter_1|data[321]~feeder_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(65));
+	regout => \adc_ram_shifter_1|data\(321));
 
 -- Location: LCCOMB_X10_Y9_N10
-\adc_ram_shifter_1|data_a_2~96\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~440\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~96_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(40))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(56))))
+-- \adc_ram_shifter_1|data~440_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(40))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(56))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43669,22 +43666,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(40),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(56),
-	combout => \adc_ram_shifter_1|data_a_2~96_combout\);
+	combout => \adc_ram_shifter_1|data~440_combout\);
 
 -- Location: LCFF_X10_Y9_N11
-\adc_ram_shifter_1|data_a_2[64]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[320]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~96_combout\,
+	datain => \adc_ram_shifter_1|data~440_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(64));
+	regout => \adc_ram_shifter_1|data\(320));
 
 -- Location: LCCOMB_X24_Y9_N18
-\adc_ram_shifter_1|data_b_2~85\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~419\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~85_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(29))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(45))))
+-- \adc_ram_shifter_1|data~419_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(29))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(45))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43695,22 +43692,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(29),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(45),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~85_combout\);
+	combout => \adc_ram_shifter_1|data~419_combout\);
 
 -- Location: LCFF_X24_Y9_N19
-\adc_ram_shifter_1|data_b_2[53]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[437]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~85_combout\,
+	datain => \adc_ram_shifter_1|data~419_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(53));
+	regout => \adc_ram_shifter_1|data\(437));
 
 -- Location: LCCOMB_X12_Y9_N22
-\adc_ram_shifter_1|data_b_2~104\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~457\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~104_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(32)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(48)))
+-- \adc_ram_shifter_1|data~457_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(32)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(48)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43721,22 +43718,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(48),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(32),
-	combout => \adc_ram_shifter_1|data_b_2~104_combout\);
+	combout => \adc_ram_shifter_1|data~457_combout\);
 
 -- Location: LCFF_X12_Y9_N23
-\adc_ram_shifter_1|data_b_2[56]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[440]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~104_combout\,
+	datain => \adc_ram_shifter_1|data~457_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(56));
+	regout => \adc_ram_shifter_1|data\(440));
 
 -- Location: LCCOMB_X22_Y9_N12
-\adc_ram_shifter_1|data_b_2~84\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~417\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~84_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(28))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(44))))
+-- \adc_ram_shifter_1|data~417_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(28))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(44))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43747,22 +43744,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(28),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(44),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~84_combout\);
+	combout => \adc_ram_shifter_1|data~417_combout\);
 
 -- Location: LCFF_X22_Y9_N13
-\adc_ram_shifter_1|data_b_2[52]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[436]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~84_combout\,
+	datain => \adc_ram_shifter_1|data~417_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(52));
+	regout => \adc_ram_shifter_1|data\(436));
 
 -- Location: LCCOMB_X20_Y9_N10
-\adc_ram_shifter_1|data_a_2~104\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~456\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~104_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(32))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(48))))
+-- \adc_ram_shifter_1|data~456_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(32))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(48))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43773,22 +43770,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(32),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(48),
-	combout => \adc_ram_shifter_1|data_a_2~104_combout\);
+	combout => \adc_ram_shifter_1|data~456_combout\);
 
 -- Location: LCFF_X20_Y9_N11
-\adc_ram_shifter_1|data_a_2[56]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[312]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~104_combout\,
+	datain => \adc_ram_shifter_1|data~456_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(56));
+	regout => \adc_ram_shifter_1|data\(312));
 
 -- Location: LCCOMB_X22_Y3_N20
-\adc_ram_shifter_1|data_b_2~83\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~415\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~83_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(27))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(43))))
+-- \adc_ram_shifter_1|data~415_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(27))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(43))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43799,22 +43796,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(27),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(43),
-	combout => \adc_ram_shifter_1|data_b_2~83_combout\);
+	combout => \adc_ram_shifter_1|data~415_combout\);
 
 -- Location: LCFF_X22_Y3_N21
-\adc_ram_shifter_1|data_b_2[51]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[435]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~83_combout\,
+	datain => \adc_ram_shifter_1|data~415_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(51));
+	regout => \adc_ram_shifter_1|data\(435));
 
 -- Location: LCCOMB_X24_Y1_N28
-\adc_ram_shifter_1|data_b_2~67\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~383\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~67_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(75)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(91)))
+-- \adc_ram_shifter_1|data~383_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(75)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(91)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43825,22 +43822,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(91),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(75),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~67_combout\);
+	combout => \adc_ram_shifter_1|data~383_combout\);
 
 -- Location: LCFF_X24_Y1_N29
-\adc_ram_shifter_1|data_b_2[99]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[483]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~67_combout\,
+	datain => \adc_ram_shifter_1|data~383_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(99));
+	regout => \adc_ram_shifter_1|data\(483));
 
 -- Location: LCCOMB_X22_Y2_N8
-\adc_ram_shifter_1|data_b_2~68\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~385\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~68_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(76)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(92)))
+-- \adc_ram_shifter_1|data~385_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(76)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(92)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43851,22 +43848,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(92),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(76),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~68_combout\);
+	combout => \adc_ram_shifter_1|data~385_combout\);
 
 -- Location: LCFF_X22_Y2_N9
-\adc_ram_shifter_1|data_b_2[100]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[484]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~68_combout\,
+	datain => \adc_ram_shifter_1|data~385_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(100));
+	regout => \adc_ram_shifter_1|data\(484));
 
 -- Location: LCCOMB_X24_Y1_N0
-\adc_ram_shifter_1|data_b_2~69\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~387\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~69_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(77)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(93)))
+-- \adc_ram_shifter_1|data~387_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(77)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(93)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43877,22 +43874,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(93),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(77),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~69_combout\);
+	combout => \adc_ram_shifter_1|data~387_combout\);
 
 -- Location: LCFF_X24_Y1_N1
-\adc_ram_shifter_1|data_b_2[101]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[485]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~69_combout\,
+	datain => \adc_ram_shifter_1|data~387_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(101));
+	regout => \adc_ram_shifter_1|data\(485));
 
 -- Location: LCCOMB_X19_Y5_N28
-\adc_ram_shifter_1|data_a_2~59\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~366\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~59_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(83))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(99))))
+-- \adc_ram_shifter_1|data~366_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(83))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(99))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43903,22 +43900,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(83),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(99),
-	combout => \adc_ram_shifter_1|data_a_2~59_combout\);
+	combout => \adc_ram_shifter_1|data~366_combout\);
 
 -- Location: LCFF_X19_Y5_N29
-\adc_ram_shifter_1|data_a_2[107]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[363]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~59_combout\,
+	datain => \adc_ram_shifter_1|data~366_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(107));
+	regout => \adc_ram_shifter_1|data\(363));
 
 -- Location: LCCOMB_X22_Y3_N26
-\adc_ram_shifter_1|data_a_2~62\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~372\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~62_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(86))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(102))))
+-- \adc_ram_shifter_1|data~372_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(86))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(102))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43929,22 +43926,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(86),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(102),
-	combout => \adc_ram_shifter_1|data_a_2~62_combout\);
+	combout => \adc_ram_shifter_1|data~372_combout\);
 
 -- Location: LCFF_X22_Y3_N27
-\adc_ram_shifter_1|data_a_2[110]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[366]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~62_combout\,
+	datain => \adc_ram_shifter_1|data~372_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(110));
+	regout => \adc_ram_shifter_1|data\(366));
 
 -- Location: LCCOMB_X21_Y3_N18
-\adc_ram_shifter_1|data_a_2~63\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~374\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~63_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(87))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(103))))
+-- \adc_ram_shifter_1|data~374_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(87))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(103))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43955,22 +43952,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(87),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(103),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~63_combout\);
+	combout => \adc_ram_shifter_1|data~374_combout\);
 
 -- Location: LCFF_X21_Y3_N19
-\adc_ram_shifter_1|data_a_2[111]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[367]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~63_combout\,
+	datain => \adc_ram_shifter_1|data~374_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(111));
+	regout => \adc_ram_shifter_1|data\(367));
 
 -- Location: LCCOMB_X22_Y1_N14
-\adc_ram_shifter_1|data_a_2~52\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~352\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~52_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(92))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(108))))
+-- \adc_ram_shifter_1|data~352_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(92))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(108))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43981,22 +43978,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(92),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(108),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~52_combout\);
+	combout => \adc_ram_shifter_1|data~352_combout\);
 
 -- Location: LCFF_X22_Y1_N15
-\adc_ram_shifter_1|data_a_2[116]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[372]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~52_combout\,
+	datain => \adc_ram_shifter_1|data~352_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(116));
+	regout => \adc_ram_shifter_1|data\(372));
 
 -- Location: LCCOMB_X24_Y5_N2
-\adc_ram_shifter_1|data_b_2~62\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~373\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~62_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(86))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(102))))
+-- \adc_ram_shifter_1|data~373_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(86))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(102))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44007,22 +44004,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(86),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(102),
-	combout => \adc_ram_shifter_1|data_b_2~62_combout\);
+	combout => \adc_ram_shifter_1|data~373_combout\);
 
 -- Location: LCFF_X24_Y5_N3
-\adc_ram_shifter_1|data_b_2[110]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[494]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~62_combout\,
+	datain => \adc_ram_shifter_1|data~373_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(110));
+	regout => \adc_ram_shifter_1|data\(494));
 
 -- Location: LCCOMB_X24_Y3_N28
-\adc_ram_shifter_1|data_b_2~63\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~375\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~63_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(87))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(103))))
+-- \adc_ram_shifter_1|data~375_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(87))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(103))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44033,22 +44030,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(87),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(103),
-	combout => \adc_ram_shifter_1|data_b_2~63_combout\);
+	combout => \adc_ram_shifter_1|data~375_combout\);
 
 -- Location: LCFF_X24_Y3_N29
-\adc_ram_shifter_1|data_b_2[111]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[495]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~63_combout\,
+	datain => \adc_ram_shifter_1|data~375_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(111));
+	regout => \adc_ram_shifter_1|data\(495));
 
 -- Location: LCCOMB_X22_Y1_N12
-\adc_ram_shifter_1|data_b_2~52\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~353\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~52_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(92)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(108)))
+-- \adc_ram_shifter_1|data~353_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(92)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(108)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44059,22 +44056,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(108),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(92),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~52_combout\);
+	combout => \adc_ram_shifter_1|data~353_combout\);
 
 -- Location: LCFF_X22_Y1_N13
-\adc_ram_shifter_1|data_b_2[116]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[500]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~52_combout\,
+	datain => \adc_ram_shifter_1|data~353_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(116));
+	regout => \adc_ram_shifter_1|data\(500));
 
 -- Location: LCCOMB_X24_Y1_N26
-\adc_ram_shifter_1|data_b_2~53\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~355\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~53_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(93)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(109)))
+-- \adc_ram_shifter_1|data~355_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(93)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(109)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44085,22 +44082,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(109),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(93),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~53_combout\);
+	combout => \adc_ram_shifter_1|data~355_combout\);
 
 -- Location: LCFF_X24_Y1_N27
-\adc_ram_shifter_1|data_b_2[117]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[501]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~53_combout\,
+	datain => \adc_ram_shifter_1|data~355_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(117));
+	regout => \adc_ram_shifter_1|data\(501));
 
 -- Location: LCCOMB_X22_Y1_N26
-\adc_ram_shifter_1|data_b_2~55\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~359\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~55_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(95)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(111)))
+-- \adc_ram_shifter_1|data~359_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(95)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(111)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44111,22 +44108,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(111),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(95),
-	combout => \adc_ram_shifter_1|data_b_2~55_combout\);
+	combout => \adc_ram_shifter_1|data~359_combout\);
 
 -- Location: LCFF_X22_Y1_N27
-\adc_ram_shifter_1|data_b_2[119]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[503]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~55_combout\,
+	datain => \adc_ram_shifter_1|data~359_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(119));
+	regout => \adc_ram_shifter_1|data\(503));
 
 -- Location: LCCOMB_X24_Y1_N14
-\adc_ram_shifter_1|data_b_2~54\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~357\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~54_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(94)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(110)))
+-- \adc_ram_shifter_1|data~357_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(94)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(110)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44137,22 +44134,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(110),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(94),
-	combout => \adc_ram_shifter_1|data_b_2~54_combout\);
+	combout => \adc_ram_shifter_1|data~357_combout\);
 
 -- Location: LCFF_X24_Y1_N15
-\adc_ram_shifter_1|data_b_2[118]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[502]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~54_combout\,
+	datain => \adc_ram_shifter_1|data~357_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(118));
+	regout => \adc_ram_shifter_1|data\(502));
 
 -- Location: LCCOMB_X24_Y1_N12
-\adc_ram_shifter_1|data_b_2~61\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~371\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~61_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(85)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(101)))
+-- \adc_ram_shifter_1|data~371_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(85)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(101)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44163,22 +44160,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(101),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(85),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~61_combout\);
+	combout => \adc_ram_shifter_1|data~371_combout\);
 
 -- Location: LCFF_X24_Y1_N13
-\adc_ram_shifter_1|data_b_2[109]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[493]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~61_combout\,
+	datain => \adc_ram_shifter_1|data~371_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(109));
+	regout => \adc_ram_shifter_1|data\(493));
 
 -- Location: LCCOMB_X24_Y1_N20
-\adc_ram_shifter_1|data_b_2~60\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~369\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~60_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(84)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(100)))
+-- \adc_ram_shifter_1|data~369_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(84)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(100)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44189,22 +44186,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(100),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(84),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~60_combout\);
+	combout => \adc_ram_shifter_1|data~369_combout\);
 
 -- Location: LCFF_X24_Y1_N21
-\adc_ram_shifter_1|data_b_2[108]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[492]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~60_combout\,
+	datain => \adc_ram_shifter_1|data~369_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(108));
+	regout => \adc_ram_shifter_1|data\(492));
 
 -- Location: LCCOMB_X22_Y1_N28
-\adc_ram_shifter_1|data_b_2~59\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~367\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~59_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(83))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(99))))
+-- \adc_ram_shifter_1|data~367_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(83))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(99))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44215,22 +44212,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(83),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(99),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~59_combout\);
+	combout => \adc_ram_shifter_1|data~367_combout\);
 
 -- Location: LCFF_X22_Y1_N29
-\adc_ram_shifter_1|data_b_2[107]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[491]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~59_combout\,
+	datain => \adc_ram_shifter_1|data~367_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(107));
+	regout => \adc_ram_shifter_1|data\(491));
 
 -- Location: LCCOMB_X22_Y3_N8
-\adc_ram_shifter_1|data_a_2~55\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~358\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~55_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(95))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(111))))
+-- \adc_ram_shifter_1|data~358_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(95))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(111))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44241,22 +44238,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(95),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(111),
-	combout => \adc_ram_shifter_1|data_a_2~55_combout\);
+	combout => \adc_ram_shifter_1|data~358_combout\);
 
 -- Location: LCFF_X22_Y3_N9
-\adc_ram_shifter_1|data_a_2[119]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[375]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~55_combout\,
+	datain => \adc_ram_shifter_1|data~358_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(119));
+	regout => \adc_ram_shifter_1|data\(375));
 
 -- Location: LCCOMB_X22_Y3_N18
-\adc_ram_shifter_1|data_a_2~54\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~356\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~54_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(94))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(110))))
+-- \adc_ram_shifter_1|data~356_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(94))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(110))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44267,22 +44264,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(94),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(110),
-	combout => \adc_ram_shifter_1|data_a_2~54_combout\);
+	combout => \adc_ram_shifter_1|data~356_combout\);
 
 -- Location: LCFF_X22_Y3_N19
-\adc_ram_shifter_1|data_a_2[118]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[374]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~54_combout\,
+	datain => \adc_ram_shifter_1|data~356_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(118));
+	regout => \adc_ram_shifter_1|data\(374));
 
 -- Location: LCCOMB_X22_Y1_N20
-\adc_ram_shifter_1|data_a_2~53\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~354\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~53_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(93))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(109))))
+-- \adc_ram_shifter_1|data~354_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(93))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(109))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44293,22 +44290,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(93),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(109),
-	combout => \adc_ram_shifter_1|data_a_2~53_combout\);
+	combout => \adc_ram_shifter_1|data~354_combout\);
 
 -- Location: LCFF_X22_Y1_N21
-\adc_ram_shifter_1|data_a_2[117]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[373]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~53_combout\,
+	datain => \adc_ram_shifter_1|data~354_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(117));
+	regout => \adc_ram_shifter_1|data\(373));
 
 -- Location: LCCOMB_X22_Y1_N30
-\adc_ram_shifter_1|data_a_2~61\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~370\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~61_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(85)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(101)))
+-- \adc_ram_shifter_1|data~370_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(85)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(101)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44319,22 +44316,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(101),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(85),
-	combout => \adc_ram_shifter_1|data_a_2~61_combout\);
+	combout => \adc_ram_shifter_1|data~370_combout\);
 
 -- Location: LCFF_X22_Y1_N31
-\adc_ram_shifter_1|data_a_2[109]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[365]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~61_combout\,
+	datain => \adc_ram_shifter_1|data~370_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(109));
+	regout => \adc_ram_shifter_1|data\(365));
 
 -- Location: LCCOMB_X21_Y5_N8
-\adc_ram_shifter_1|data_a_2~60\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~368\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~60_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(84)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(100)))
+-- \adc_ram_shifter_1|data~368_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(84)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(100)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44345,12 +44342,12 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(100),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(84),
-	combout => \adc_ram_shifter_1|data_a_2~60_combout\);
+	combout => \adc_ram_shifter_1|data~368_combout\);
 
 -- Location: LCCOMB_X24_Y1_N30
-\adc_ram_shifter_1|data_a_2[108]~feeder\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data[364]~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2[108]~feeder_combout\ = \adc_ram_shifter_1|data_a_2~60_combout\
+-- \adc_ram_shifter_1|data[364]~feeder_combout\ = \adc_ram_shifter_1|data~368_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44358,23 +44355,23 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \adc_ram_shifter_1|data_a_2~60_combout\,
-	combout => \adc_ram_shifter_1|data_a_2[108]~feeder_combout\);
+	datad => \adc_ram_shifter_1|data~368_combout\,
+	combout => \adc_ram_shifter_1|data[364]~feeder_combout\);
 
 -- Location: LCFF_X24_Y1_N31
-\adc_ram_shifter_1|data_a_2[108]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[364]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2[108]~feeder_combout\,
+	datain => \adc_ram_shifter_1|data[364]~feeder_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(108));
+	regout => \adc_ram_shifter_1|data\(364));
 
 -- Location: LCCOMB_X22_Y1_N18
-\adc_ram_shifter_1|data_b_2~58\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~365\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~58_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(82))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(98))))
+-- \adc_ram_shifter_1|data~365_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(82))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(98))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44385,22 +44382,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(82),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(98),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~58_combout\);
+	combout => \adc_ram_shifter_1|data~365_combout\);
 
 -- Location: LCFF_X22_Y1_N19
-\adc_ram_shifter_1|data_b_2[106]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[490]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~58_combout\,
+	datain => \adc_ram_shifter_1|data~365_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(106));
+	regout => \adc_ram_shifter_1|data\(490));
 
 -- Location: LCCOMB_X24_Y1_N18
-\adc_ram_shifter_1|data_b_2~57\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~363\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~57_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(81))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(97))))
+-- \adc_ram_shifter_1|data~363_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(81))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(97))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44411,22 +44408,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(81),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(97),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~57_combout\);
+	combout => \adc_ram_shifter_1|data~363_combout\);
 
 -- Location: LCFF_X24_Y1_N19
-\adc_ram_shifter_1|data_b_2[105]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[489]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~57_combout\,
+	datain => \adc_ram_shifter_1|data~363_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(105));
+	regout => \adc_ram_shifter_1|data\(489));
 
 -- Location: LCCOMB_X24_Y1_N24
-\adc_ram_shifter_1|data_b_2~56\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~361\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~56_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(80)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(96)))
+-- \adc_ram_shifter_1|data~361_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(80)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(96)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44437,22 +44434,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(96),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(80),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~56_combout\);
+	combout => \adc_ram_shifter_1|data~361_combout\);
 
 -- Location: LCFF_X24_Y1_N25
-\adc_ram_shifter_1|data_b_2[104]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[488]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~56_combout\,
+	datain => \adc_ram_shifter_1|data~361_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(104));
+	regout => \adc_ram_shifter_1|data\(488));
 
 -- Location: LCCOMB_X22_Y2_N2
-\adc_ram_shifter_1|data_b_2~15\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~61\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~15_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(119)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(7)))
+-- \adc_ram_shifter_1|data~61_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(119)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(7)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44463,22 +44460,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(7),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(119),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~15_combout\);
+	combout => \adc_ram_shifter_1|data~61_combout\);
 
 -- Location: LCFF_X22_Y2_N3
-\adc_ram_shifter_1|data_b_2[15]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[399]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~15_combout\,
+	datain => \adc_ram_shifter_1|data~61_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(15));
+	regout => \adc_ram_shifter_1|data\(399));
 
 -- Location: LCCOMB_X22_Y2_N20
-\adc_ram_shifter_1|data_a_2~45\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~338\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~45_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(101)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(117)))
+-- \adc_ram_shifter_1|data~338_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(101)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(117)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44489,22 +44486,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(117),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(101),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~45_combout\);
+	combout => \adc_ram_shifter_1|data~338_combout\);
 
 -- Location: LCFF_X22_Y2_N21
-\adc_ram_shifter_1|data_a_2[125]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[381]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~45_combout\,
+	datain => \adc_ram_shifter_1|data~338_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(125));
+	regout => \adc_ram_shifter_1|data\(381));
 
 -- Location: LCCOMB_X22_Y3_N2
-\adc_ram_shifter_1|data_a_2~46\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~340\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~46_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(102))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(118))))
+-- \adc_ram_shifter_1|data~340_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(102))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(118))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44515,22 +44512,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(102),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(118),
-	combout => \adc_ram_shifter_1|data_a_2~46_combout\);
+	combout => \adc_ram_shifter_1|data~340_combout\);
 
 -- Location: LCFF_X22_Y3_N3
-\adc_ram_shifter_1|data_a_2[126]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[382]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~46_combout\,
+	datain => \adc_ram_shifter_1|data~340_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(126));
+	regout => \adc_ram_shifter_1|data\(382));
 
 -- Location: LCCOMB_X24_Y3_N26
-\adc_ram_shifter_1|data_a_2~47\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~342\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~47_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(103))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(119))))
+-- \adc_ram_shifter_1|data~342_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(103))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(119))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44541,22 +44538,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(103),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(119),
-	combout => \adc_ram_shifter_1|data_a_2~47_combout\);
+	combout => \adc_ram_shifter_1|data~342_combout\);
 
 -- Location: LCFF_X24_Y3_N27
-\adc_ram_shifter_1|data_a_2[127]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[383]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~47_combout\,
+	datain => \adc_ram_shifter_1|data~342_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(127));
+	regout => \adc_ram_shifter_1|data\(383));
 
 -- Location: LCCOMB_X24_Y1_N6
-\adc_ram_shifter_1|data_b_2~51\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~351\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~51_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(91))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(107))))
+-- \adc_ram_shifter_1|data~351_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(91))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(107))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44567,22 +44564,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(91),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(107),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~51_combout\);
+	combout => \adc_ram_shifter_1|data~351_combout\);
 
 -- Location: LCFF_X24_Y1_N7
-\adc_ram_shifter_1|data_b_2[115]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[499]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~51_combout\,
+	datain => \adc_ram_shifter_1|data~351_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(115));
+	regout => \adc_ram_shifter_1|data\(499));
 
 -- Location: LCCOMB_X24_Y1_N2
-\adc_ram_shifter_1|data_b_2~44\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~337\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~44_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(100)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(116)))
+-- \adc_ram_shifter_1|data~337_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(100)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(116)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44593,22 +44590,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(116),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(100),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~44_combout\);
+	combout => \adc_ram_shifter_1|data~337_combout\);
 
 -- Location: LCFF_X24_Y1_N3
-\adc_ram_shifter_1|data_b_2[124]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[508]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~44_combout\,
+	datain => \adc_ram_shifter_1|data~337_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(124));
+	regout => \adc_ram_shifter_1|data\(508));
 
 -- Location: LCCOMB_X24_Y1_N16
-\adc_ram_shifter_1|data_b_2~45\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~339\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~45_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(101))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(117))))
+-- \adc_ram_shifter_1|data~339_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(101))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(117))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44619,22 +44616,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(101),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(117),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~45_combout\);
+	combout => \adc_ram_shifter_1|data~339_combout\);
 
 -- Location: LCFF_X24_Y1_N17
-\adc_ram_shifter_1|data_b_2[125]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[509]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~45_combout\,
+	datain => \adc_ram_shifter_1|data~339_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(125));
+	regout => \adc_ram_shifter_1|data\(509));
 
 -- Location: LCCOMB_X24_Y1_N10
-\adc_ram_shifter_1|data_b_2~46\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~341\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~46_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(102)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(118)))
+-- \adc_ram_shifter_1|data~341_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(102)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(118)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44645,22 +44642,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(118),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(102),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~46_combout\);
+	combout => \adc_ram_shifter_1|data~341_combout\);
 
 -- Location: LCFF_X24_Y1_N11
-\adc_ram_shifter_1|data_b_2[126]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[510]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~46_combout\,
+	datain => \adc_ram_shifter_1|data~341_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(126));
+	regout => \adc_ram_shifter_1|data\(510));
 
 -- Location: LCCOMB_X24_Y3_N30
-\adc_ram_shifter_1|data_b_2~47\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~343\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~47_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(103)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(119)))
+-- \adc_ram_shifter_1|data~343_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(103)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(119)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44671,17 +44668,17 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(119),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(103),
-	combout => \adc_ram_shifter_1|data_b_2~47_combout\);
+	combout => \adc_ram_shifter_1|data~343_combout\);
 
 -- Location: LCFF_X24_Y3_N31
-\adc_ram_shifter_1|data_b_2[127]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[511]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~47_combout\,
+	datain => \adc_ram_shifter_1|data~343_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(127));
+	regout => \adc_ram_shifter_1|data\(511));
 
 -- Location: M4K_X23_Y4
 \ram1|altsyncram_component|auto_generated|ram_block1a37\ : cycloneii_ram_block
@@ -44739,9 +44736,9 @@ PORT MAP (
 	portbdataout => \ram1|altsyncram_component|auto_generated|ram_block1a37_PORTBDATAOUT_bus\);
 
 -- Location: LCCOMB_X22_Y4_N18
-\adc_ram_shifter_1|data_b_2~43\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~335\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~43_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(99))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(115))))
+-- \adc_ram_shifter_1|data~335_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(99))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(115))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44752,22 +44749,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(99),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(115),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~43_combout\);
+	combout => \adc_ram_shifter_1|data~335_combout\);
 
 -- Location: LCFF_X22_Y4_N19
-\adc_ram_shifter_1|data_b_2[123]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[507]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~43_combout\,
+	datain => \adc_ram_shifter_1|data~335_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(123));
+	regout => \adc_ram_shifter_1|data\(507));
 
 -- Location: LCCOMB_X22_Y1_N8
-\adc_ram_shifter_1|data_b_2~42\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~333\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~42_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(98)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(114)))
+-- \adc_ram_shifter_1|data~333_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(98)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(114)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44778,22 +44775,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(114),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(98),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~42_combout\);
+	combout => \adc_ram_shifter_1|data~333_combout\);
 
 -- Location: LCFF_X22_Y1_N9
-\adc_ram_shifter_1|data_b_2[122]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[506]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~42_combout\,
+	datain => \adc_ram_shifter_1|data~333_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(122));
+	regout => \adc_ram_shifter_1|data\(506));
 
 -- Location: LCCOMB_X24_Y4_N26
-\adc_ram_shifter_1|data_b_2~41\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~331\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~41_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(97))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(113))))
+-- \adc_ram_shifter_1|data~331_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(97))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(113))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44804,22 +44801,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(97),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(113),
-	combout => \adc_ram_shifter_1|data_b_2~41_combout\);
+	combout => \adc_ram_shifter_1|data~331_combout\);
 
 -- Location: LCFF_X24_Y4_N27
-\adc_ram_shifter_1|data_b_2[121]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[505]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~41_combout\,
+	datain => \adc_ram_shifter_1|data~331_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(121));
+	regout => \adc_ram_shifter_1|data\(505));
 
 -- Location: LCCOMB_X24_Y1_N8
-\adc_ram_shifter_1|data_b_2~40\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~329\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~40_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(96))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(112))))
+-- \adc_ram_shifter_1|data~329_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(96))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(112))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44830,22 +44827,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(96),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(112),
-	combout => \adc_ram_shifter_1|data_b_2~40_combout\);
+	combout => \adc_ram_shifter_1|data~329_combout\);
 
 -- Location: LCFF_X24_Y1_N9
-\adc_ram_shifter_1|data_b_2[120]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[504]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~40_combout\,
+	datain => \adc_ram_shifter_1|data~329_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(120));
+	regout => \adc_ram_shifter_1|data\(504));
 
 -- Location: LCCOMB_X22_Y4_N12
-\adc_ram_shifter_1|data_b_2~4\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~17\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~4_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(124)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(12)))
+-- \adc_ram_shifter_1|data~17_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(124)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(12)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44856,22 +44853,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(12),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(124),
-	combout => \adc_ram_shifter_1|data_b_2~4_combout\);
+	combout => \adc_ram_shifter_1|data~17_combout\);
 
 -- Location: LCFF_X22_Y4_N13
-\adc_ram_shifter_1|data_b_2[20]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[404]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~4_combout\,
+	datain => \adc_ram_shifter_1|data~17_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(20));
+	regout => \adc_ram_shifter_1|data\(404));
 
 -- Location: LCCOMB_X22_Y8_N4
-\adc_ram_shifter_1|data_b_2~35\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~173\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~35_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(3))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(19))))
+-- \adc_ram_shifter_1|data~173_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(3))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(19))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44882,22 +44879,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(3),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(19),
-	combout => \adc_ram_shifter_1|data_b_2~35_combout\);
+	combout => \adc_ram_shifter_1|data~173_combout\);
 
 -- Location: LCFF_X22_Y8_N5
-\adc_ram_shifter_1|data_b_2[27]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[411]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~35_combout\,
+	datain => \adc_ram_shifter_1|data~173_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(27));
+	regout => \adc_ram_shifter_1|data\(411));
 
 -- Location: LCCOMB_X24_Y6_N16
-\adc_ram_shifter_1|data_b_2~82\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~413\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~82_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(26))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(42))))
+-- \adc_ram_shifter_1|data~413_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(26))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(42))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44908,22 +44905,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(26),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(42),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~82_combout\);
+	combout => \adc_ram_shifter_1|data~413_combout\);
 
 -- Location: LCFF_X24_Y6_N17
-\adc_ram_shifter_1|data_b_2[50]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[434]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~82_combout\,
+	datain => \adc_ram_shifter_1|data~413_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(50));
+	regout => \adc_ram_shifter_1|data\(434));
 
 -- Location: LCCOMB_X18_Y8_N22
-\adc_ram_shifter_1|data_a_2~121\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~490\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~121_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(49)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(65)))
+-- \adc_ram_shifter_1|data~490_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(49)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(65)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44934,22 +44931,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(65),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(49),
-	combout => \adc_ram_shifter_1|data_a_2~121_combout\);
+	combout => \adc_ram_shifter_1|data~490_combout\);
 
 -- Location: LCFF_X18_Y8_N23
-\adc_ram_shifter_1|data_a_2[73]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[329]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~121_combout\,
+	datain => \adc_ram_shifter_1|data~490_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(73));
+	regout => \adc_ram_shifter_1|data\(329));
 
 -- Location: LCCOMB_X22_Y1_N24
-\adc_ram_shifter_1|data_b_2~66\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~381\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~66_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(74)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(90)))
+-- \adc_ram_shifter_1|data~381_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(74)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(90)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44960,22 +44957,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(90),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(74),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~66_combout\);
+	combout => \adc_ram_shifter_1|data~381_combout\);
 
 -- Location: LCFF_X22_Y1_N25
-\adc_ram_shifter_1|data_b_2[98]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[482]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~66_combout\,
+	datain => \adc_ram_shifter_1|data~381_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(98));
+	regout => \adc_ram_shifter_1|data\(482));
 
 -- Location: LCCOMB_X21_Y3_N26
-\adc_ram_shifter_1|data_b_2~14\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~57\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~14_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(118)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(6)))
+-- \adc_ram_shifter_1|data~57_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(118)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(6)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44986,23 +44983,23 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(6),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(118),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~14_combout\);
+	combout => \adc_ram_shifter_1|data~57_combout\);
 
 -- Location: LCFF_X22_Y2_N1
-\adc_ram_shifter_1|data_b_2[14]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[398]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	sdata => \adc_ram_shifter_1|data_b_2~14_combout\,
+	sdata => \adc_ram_shifter_1|data~57_combout\,
 	sload => VCC,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(14));
+	regout => \adc_ram_shifter_1|data\(398));
 
 -- Location: LCCOMB_X21_Y4_N18
-\adc_ram_shifter_1|data_b_2~3\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~13\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~3_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(123))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(11))))
+-- \adc_ram_shifter_1|data~13_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(123))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(11))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45013,22 +45010,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(123),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(11),
-	combout => \adc_ram_shifter_1|data_b_2~3_combout\);
+	combout => \adc_ram_shifter_1|data~13_combout\);
 
 -- Location: LCFF_X21_Y4_N19
-\adc_ram_shifter_1|data_b_2[19]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[403]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~3_combout\,
+	datain => \adc_ram_shifter_1|data~13_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(19));
+	regout => \adc_ram_shifter_1|data\(403));
 
 -- Location: LCCOMB_X24_Y4_N4
-\adc_ram_shifter_1|data_b_2~34\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~169\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~34_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(2))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(18))))
+-- \adc_ram_shifter_1|data~169_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(2))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(18))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45039,22 +45036,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(2),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(18),
-	combout => \adc_ram_shifter_1|data_b_2~34_combout\);
+	combout => \adc_ram_shifter_1|data~169_combout\);
 
 -- Location: LCFF_X24_Y4_N5
-\adc_ram_shifter_1|data_b_2[26]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[410]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~34_combout\,
+	datain => \adc_ram_shifter_1|data~169_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(26));
+	regout => \adc_ram_shifter_1|data\(410));
 
 -- Location: LCCOMB_X10_Y9_N20
-\adc_ram_shifter_1|data_a_2~111\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~470\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~111_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(39)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(55)))
+-- \adc_ram_shifter_1|data~470_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(39)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(55)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45065,22 +45062,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(55),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(39),
-	combout => \adc_ram_shifter_1|data_a_2~111_combout\);
+	combout => \adc_ram_shifter_1|data~470_combout\);
 
 -- Location: LCFF_X10_Y9_N21
-\adc_ram_shifter_1|data_a_2[63]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[319]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~111_combout\,
+	datain => \adc_ram_shifter_1|data~470_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(63));
+	regout => \adc_ram_shifter_1|data\(319));
 
 -- Location: LCCOMB_X22_Y1_N0
-\adc_ram_shifter_1|data_b_2~65\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~379\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~65_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(73)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(89)))
+-- \adc_ram_shifter_1|data~379_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(73)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(89)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45091,22 +45088,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(89),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(73),
-	combout => \adc_ram_shifter_1|data_b_2~65_combout\);
+	combout => \adc_ram_shifter_1|data~379_combout\);
 
 -- Location: LCFF_X22_Y1_N1
-\adc_ram_shifter_1|data_b_2[97]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[481]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~65_combout\,
+	datain => \adc_ram_shifter_1|data~379_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(97));
+	regout => \adc_ram_shifter_1|data\(481));
 
 -- Location: LCCOMB_X21_Y4_N22
-\adc_ram_shifter_1|data_a_2~44\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~336\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~44_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(100))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(116))))
+-- \adc_ram_shifter_1|data~336_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(100))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(116))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45117,22 +45114,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(100),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(116),
-	combout => \adc_ram_shifter_1|data_a_2~44_combout\);
+	combout => \adc_ram_shifter_1|data~336_combout\);
 
 -- Location: LCFF_X21_Y4_N23
-\adc_ram_shifter_1|data_a_2[124]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[380]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~44_combout\,
+	datain => \adc_ram_shifter_1|data~336_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(124));
+	regout => \adc_ram_shifter_1|data\(380));
 
 -- Location: LCCOMB_X24_Y6_N6
-\adc_ram_shifter_1|data_b_2~11\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~45\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~11_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(115)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(3)))
+-- \adc_ram_shifter_1|data~45_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(115)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(3)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45143,22 +45140,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(3),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(115),
-	combout => \adc_ram_shifter_1|data_b_2~11_combout\);
+	combout => \adc_ram_shifter_1|data~45_combout\);
 
 -- Location: LCFF_X24_Y6_N7
-\adc_ram_shifter_1|data_b_2[11]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[395]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~11_combout\,
+	datain => \adc_ram_shifter_1|data~45_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(11));
+	regout => \adc_ram_shifter_1|data\(395));
 
 -- Location: LCCOMB_X24_Y4_N16
-\adc_ram_shifter_1|data_b_2~2\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~9\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~2_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(122)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(10)))
+-- \adc_ram_shifter_1|data~9_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(122)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(10)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45169,22 +45166,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(10),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(122),
-	combout => \adc_ram_shifter_1|data_b_2~2_combout\);
+	combout => \adc_ram_shifter_1|data~9_combout\);
 
 -- Location: LCFF_X24_Y4_N17
-\adc_ram_shifter_1|data_b_2[18]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[402]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~2_combout\,
+	datain => \adc_ram_shifter_1|data~9_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(18));
+	regout => \adc_ram_shifter_1|data\(402));
 
 -- Location: LCCOMB_X21_Y6_N12
-\adc_ram_shifter_1|data_b_2~33\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~165\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~33_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(1)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(17)))
+-- \adc_ram_shifter_1|data~165_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(1)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(17)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45195,22 +45192,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(17),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(1),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~33_combout\);
+	combout => \adc_ram_shifter_1|data~165_combout\);
 
 -- Location: LCFF_X21_Y6_N13
-\adc_ram_shifter_1|data_b_2[25]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[409]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~33_combout\,
+	datain => \adc_ram_shifter_1|data~165_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(25));
+	regout => \adc_ram_shifter_1|data\(409));
 
 -- Location: LCCOMB_X14_Y9_N14
-\adc_ram_shifter_1|data_a_2~93\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~434\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~93_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(21))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(37))))
+-- \adc_ram_shifter_1|data~434_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(21))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(37))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45221,22 +45218,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(21),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(37),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~93_combout\);
+	combout => \adc_ram_shifter_1|data~434_combout\);
 
 -- Location: LCFF_X14_Y9_N15
-\adc_ram_shifter_1|data_a_2[45]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[301]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~93_combout\,
+	datain => \adc_ram_shifter_1|data~434_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(45));
+	regout => \adc_ram_shifter_1|data\(301));
 
 -- Location: LCCOMB_X22_Y6_N10
-\adc_ram_shifter_1|data_b_2~81\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~411\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~81_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(25))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(41))))
+-- \adc_ram_shifter_1|data~411_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(25))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(41))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45247,22 +45244,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(25),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(41),
-	combout => \adc_ram_shifter_1|data_b_2~81_combout\);
+	combout => \adc_ram_shifter_1|data~411_combout\);
 
 -- Location: LCFF_X22_Y6_N11
-\adc_ram_shifter_1|data_b_2[49]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[433]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~81_combout\,
+	datain => \adc_ram_shifter_1|data~411_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(49));
+	regout => \adc_ram_shifter_1|data\(433));
 
 -- Location: LCCOMB_X21_Y5_N12
-\adc_ram_shifter_1|data_a_2~110\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~468\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~110_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(38)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(54)))
+-- \adc_ram_shifter_1|data~468_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(38)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(54)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45273,22 +45270,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(54),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(38),
-	combout => \adc_ram_shifter_1|data_a_2~110_combout\);
+	combout => \adc_ram_shifter_1|data~468_combout\);
 
 -- Location: LCFF_X21_Y5_N13
-\adc_ram_shifter_1|data_a_2[62]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[318]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~110_combout\,
+	datain => \adc_ram_shifter_1|data~468_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(62));
+	regout => \adc_ram_shifter_1|data\(318));
 
 -- Location: LCCOMB_X22_Y1_N4
-\adc_ram_shifter_1|data_a_2~58\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~364\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~58_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(82))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(98))))
+-- \adc_ram_shifter_1|data~364_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(82))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(98))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45299,22 +45296,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(82),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(98),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~58_combout\);
+	combout => \adc_ram_shifter_1|data~364_combout\);
 
 -- Location: LCFF_X22_Y1_N5
-\adc_ram_shifter_1|data_a_2[106]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[362]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~58_combout\,
+	datain => \adc_ram_shifter_1|data~364_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(106));
+	regout => \adc_ram_shifter_1|data\(362));
 
 -- Location: LCCOMB_X22_Y1_N2
-\adc_ram_shifter_1|data_a_2~57\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~362\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~57_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(81)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(97)))
+-- \adc_ram_shifter_1|data~362_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(81)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(97)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45325,22 +45322,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(97),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(81),
-	combout => \adc_ram_shifter_1|data_a_2~57_combout\);
+	combout => \adc_ram_shifter_1|data~362_combout\);
 
 -- Location: LCFF_X22_Y1_N3
-\adc_ram_shifter_1|data_a_2[105]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[361]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~57_combout\,
+	datain => \adc_ram_shifter_1|data~362_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(105));
+	regout => \adc_ram_shifter_1|data\(361));
 
 -- Location: LCCOMB_X22_Y4_N2
-\adc_ram_shifter_1|data_a_2~43\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~334\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~43_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(99)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(115)))
+-- \adc_ram_shifter_1|data~334_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(99)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(115)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45351,22 +45348,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(115),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(99),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~43_combout\);
+	combout => \adc_ram_shifter_1|data~334_combout\);
 
 -- Location: LCFF_X22_Y4_N3
-\adc_ram_shifter_1|data_a_2[123]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[379]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~43_combout\,
+	datain => \adc_ram_shifter_1|data~334_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(123));
+	regout => \adc_ram_shifter_1|data\(379));
 
 -- Location: LCCOMB_X24_Y4_N2
-\adc_ram_shifter_1|data_b_2~10\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~41\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~10_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(114)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(2)))
+-- \adc_ram_shifter_1|data~41_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(114)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(2)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45377,22 +45374,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(2),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(114),
-	combout => \adc_ram_shifter_1|data_b_2~10_combout\);
+	combout => \adc_ram_shifter_1|data~41_combout\);
 
 -- Location: LCFF_X24_Y4_N3
-\adc_ram_shifter_1|data_b_2[10]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[394]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~10_combout\,
+	datain => \adc_ram_shifter_1|data~41_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(10));
+	regout => \adc_ram_shifter_1|data\(394));
 
 -- Location: LCCOMB_X20_Y9_N6
-\adc_ram_shifter_1|data_b_2~32\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~161\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~32_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(0))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(16))))
+-- \adc_ram_shifter_1|data~161_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(0))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(16))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45403,22 +45400,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(0),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(16),
-	combout => \adc_ram_shifter_1|data_b_2~32_combout\);
+	combout => \adc_ram_shifter_1|data~161_combout\);
 
 -- Location: LCFF_X20_Y9_N7
-\adc_ram_shifter_1|data_b_2[24]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[408]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~32_combout\,
+	datain => \adc_ram_shifter_1|data~161_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(24));
+	regout => \adc_ram_shifter_1|data\(408));
 
 -- Location: LCCOMB_X13_Y9_N22
-\adc_ram_shifter_1|data_a_2~92\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~432\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~92_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(20))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(36))))
+-- \adc_ram_shifter_1|data~432_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(20))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(36))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45429,22 +45426,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(20),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(36),
-	combout => \adc_ram_shifter_1|data_a_2~92_combout\);
+	combout => \adc_ram_shifter_1|data~432_combout\);
 
 -- Location: LCFF_X13_Y9_N23
-\adc_ram_shifter_1|data_a_2[44]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[300]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~92_combout\,
+	datain => \adc_ram_shifter_1|data~432_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(44));
+	regout => \adc_ram_shifter_1|data\(300));
 
 -- Location: LCCOMB_X20_Y5_N20
-\adc_ram_shifter_1|data_a_2~72\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~392\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~72_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(64)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(80)))
+-- \adc_ram_shifter_1|data~392_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(64)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(80)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45455,22 +45452,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(80),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(64),
-	combout => \adc_ram_shifter_1|data_a_2~72_combout\);
+	combout => \adc_ram_shifter_1|data~392_combout\);
 
 -- Location: LCFF_X20_Y5_N21
-\adc_ram_shifter_1|data_a_2[88]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[344]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~72_combout\,
+	datain => \adc_ram_shifter_1|data~392_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(88));
+	regout => \adc_ram_shifter_1|data\(344));
 
 -- Location: LCCOMB_X14_Y9_N22
-\adc_ram_shifter_1|data_a_2~109\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~466\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~109_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(37)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(53)))
+-- \adc_ram_shifter_1|data~466_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(37)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(53)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45481,22 +45478,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(53),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(37),
-	combout => \adc_ram_shifter_1|data_a_2~109_combout\);
+	combout => \adc_ram_shifter_1|data~466_combout\);
 
 -- Location: LCFF_X14_Y9_N23
-\adc_ram_shifter_1|data_a_2[61]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[317]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~109_combout\,
+	datain => \adc_ram_shifter_1|data~466_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(61));
+	regout => \adc_ram_shifter_1|data\(317));
 
 -- Location: LCCOMB_X20_Y5_N8
-\adc_ram_shifter_1|data_a_2~56\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~360\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~56_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(80)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(96)))
+-- \adc_ram_shifter_1|data~360_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(80)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(96)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45507,22 +45504,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(96),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(80),
-	combout => \adc_ram_shifter_1|data_a_2~56_combout\);
+	combout => \adc_ram_shifter_1|data~360_combout\);
 
 -- Location: LCFF_X20_Y5_N9
-\adc_ram_shifter_1|data_a_2[104]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[360]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~56_combout\,
+	datain => \adc_ram_shifter_1|data~360_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(104));
+	regout => \adc_ram_shifter_1|data\(360));
 
 -- Location: LCCOMB_X24_Y4_N0
-\adc_ram_shifter_1|data_a_2~42\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~332\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~42_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(98))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(114))))
+-- \adc_ram_shifter_1|data~332_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(98))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(114))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45533,22 +45530,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(98),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(114),
-	combout => \adc_ram_shifter_1|data_a_2~42_combout\);
+	combout => \adc_ram_shifter_1|data~332_combout\);
 
 -- Location: LCFF_X24_Y4_N1
-\adc_ram_shifter_1|data_a_2[122]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[378]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~42_combout\,
+	datain => \adc_ram_shifter_1|data~332_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(122));
+	regout => \adc_ram_shifter_1|data\(378));
 
 -- Location: LCCOMB_X21_Y6_N26
-\adc_ram_shifter_1|data_b_2~9\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~37\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~9_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(113))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(1))))
+-- \adc_ram_shifter_1|data~37_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(113))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45559,22 +45556,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(113),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(1),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~9_combout\);
+	combout => \adc_ram_shifter_1|data~37_combout\);
 
 -- Location: LCFF_X21_Y6_N27
-\adc_ram_shifter_1|data_b_2[9]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[393]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~9_combout\,
+	datain => \adc_ram_shifter_1|data~37_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(9));
+	regout => \adc_ram_shifter_1|data\(393));
 
 -- Location: LCCOMB_X20_Y4_N8
-\adc_ram_shifter_1|data_b_2~1\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~5\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~1_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(121))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(9))))
+-- \adc_ram_shifter_1|data~5_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(121))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(9))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45585,22 +45582,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(121),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(9),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~1_combout\);
+	combout => \adc_ram_shifter_1|data~5_combout\);
 
 -- Location: LCFF_X20_Y4_N9
-\adc_ram_shifter_1|data_b_2[17]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[401]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~1_combout\,
+	datain => \adc_ram_shifter_1|data~5_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(17));
+	regout => \adc_ram_shifter_1|data\(401));
 
 -- Location: LCCOMB_X19_Y4_N20
-\adc_ram_shifter_1|data_b_2~0\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~1\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~0_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(120))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(8))))
+-- \adc_ram_shifter_1|data~1_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(120))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(8))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45611,22 +45608,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(120),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(8),
-	combout => \adc_ram_shifter_1|data_b_2~0_combout\);
+	combout => \adc_ram_shifter_1|data~1_combout\);
 
 -- Location: LCFF_X19_Y4_N21
-\adc_ram_shifter_1|data_b_2[16]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[400]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~0_combout\,
+	datain => \adc_ram_shifter_1|data~1_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(16));
+	regout => \adc_ram_shifter_1|data\(400));
 
 -- Location: LCCOMB_X21_Y8_N0
-\adc_ram_shifter_1|data_a_2~90\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~428\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~90_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(18))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(34))))
+-- \adc_ram_shifter_1|data~428_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(18))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(34))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45637,22 +45634,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(18),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(34),
-	combout => \adc_ram_shifter_1|data_a_2~90_combout\);
+	combout => \adc_ram_shifter_1|data~428_combout\);
 
 -- Location: LCFF_X21_Y8_N1
-\adc_ram_shifter_1|data_a_2[42]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[298]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~90_combout\,
+	datain => \adc_ram_shifter_1|data~428_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(42));
+	regout => \adc_ram_shifter_1|data\(298));
 
 -- Location: LCCOMB_X19_Y7_N28
-\adc_ram_shifter_1|data_a_2~87\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~422\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~87_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(31))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(47))))
+-- \adc_ram_shifter_1|data~422_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(31))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(47))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45663,22 +45660,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(31),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(47),
-	combout => \adc_ram_shifter_1|data_a_2~87_combout\);
+	combout => \adc_ram_shifter_1|data~422_combout\);
 
 -- Location: LCFF_X19_Y7_N29
-\adc_ram_shifter_1|data_a_2[55]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[311]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~87_combout\,
+	datain => \adc_ram_shifter_1|data~422_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(55));
+	regout => \adc_ram_shifter_1|data\(311));
 
 -- Location: LCCOMB_X22_Y1_N22
-\adc_ram_shifter_1|data_a_2~69\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~386\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~69_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(77)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(93)))
+-- \adc_ram_shifter_1|data~386_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(77)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(93)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45689,22 +45686,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(93),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(77),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~69_combout\);
+	combout => \adc_ram_shifter_1|data~386_combout\);
 
 -- Location: LCFF_X22_Y1_N23
-\adc_ram_shifter_1|data_a_2[101]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[357]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~69_combout\,
+	datain => \adc_ram_shifter_1|data~386_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(101));
+	regout => \adc_ram_shifter_1|data\(357));
 
 -- Location: LCCOMB_X20_Y5_N16
-\adc_ram_shifter_1|data_a_2~40\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~328\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~40_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(96)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(112)))
+-- \adc_ram_shifter_1|data~328_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(96)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(112)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45715,22 +45712,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(112),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(96),
-	combout => \adc_ram_shifter_1|data_a_2~40_combout\);
+	combout => \adc_ram_shifter_1|data~328_combout\);
 
 -- Location: LCFF_X20_Y5_N17
-\adc_ram_shifter_1|data_a_2[120]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[376]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~40_combout\,
+	datain => \adc_ram_shifter_1|data~328_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(120));
+	regout => \adc_ram_shifter_1|data\(376));
 
 -- Location: LCCOMB_X20_Y5_N18
-\adc_ram_shifter_1|data_b_2~8\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~33\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~8_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(112))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(0))))
+-- \adc_ram_shifter_1|data~33_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(112))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(0))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45741,22 +45738,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(112),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(0),
-	combout => \adc_ram_shifter_1|data_b_2~8_combout\);
+	combout => \adc_ram_shifter_1|data~33_combout\);
 
 -- Location: LCFF_X20_Y5_N19
-\adc_ram_shifter_1|data_b_2[8]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[392]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~8_combout\,
+	datain => \adc_ram_shifter_1|data~33_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(8));
+	regout => \adc_ram_shifter_1|data\(392));
 
 -- Location: LCCOMB_X21_Y4_N24
-\adc_ram_shifter_1|data_b_2~39\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~189\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~39_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(7)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(23)))
+-- \adc_ram_shifter_1|data~189_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(7)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(23)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45767,22 +45764,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(23),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(7),
-	combout => \adc_ram_shifter_1|data_b_2~39_combout\);
+	combout => \adc_ram_shifter_1|data~189_combout\);
 
 -- Location: LCFF_X21_Y4_N25
-\adc_ram_shifter_1|data_b_2[31]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[415]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~39_combout\,
+	datain => \adc_ram_shifter_1|data~189_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(31));
+	regout => \adc_ram_shifter_1|data\(415));
 
 -- Location: LCCOMB_X22_Y9_N24
-\adc_ram_shifter_1|data_a_2~86\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~420\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~86_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(30))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(46))))
+-- \adc_ram_shifter_1|data~420_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(30))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(46))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45793,22 +45790,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(30),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(46),
-	combout => \adc_ram_shifter_1|data_a_2~86_combout\);
+	combout => \adc_ram_shifter_1|data~420_combout\);
 
 -- Location: LCFF_X22_Y9_N25
-\adc_ram_shifter_1|data_a_2[54]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[310]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~86_combout\,
+	datain => \adc_ram_shifter_1|data~420_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(54));
+	regout => \adc_ram_shifter_1|data\(310));
 
 -- Location: LCCOMB_X22_Y1_N16
-\adc_ram_shifter_1|data_a_2~68\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~384\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~68_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(76))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(92))))
+-- \adc_ram_shifter_1|data~384_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(76))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(92))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45819,22 +45816,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(76),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(92),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~68_combout\);
+	combout => \adc_ram_shifter_1|data~384_combout\);
 
 -- Location: LCFF_X22_Y1_N17
-\adc_ram_shifter_1|data_a_2[100]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[356]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~68_combout\,
+	datain => \adc_ram_shifter_1|data~384_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(100));
+	regout => \adc_ram_shifter_1|data\(356));
 
 -- Location: LCCOMB_X24_Y4_N14
-\adc_ram_shifter_1|data_a_2~51\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~350\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~51_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(91))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(107))))
+-- \adc_ram_shifter_1|data~350_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(91))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(107))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45845,22 +45842,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(91),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(107),
-	combout => \adc_ram_shifter_1|data_a_2~51_combout\);
+	combout => \adc_ram_shifter_1|data~350_combout\);
 
 -- Location: LCFF_X24_Y4_N15
-\adc_ram_shifter_1|data_a_2[115]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[371]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~51_combout\,
+	datain => \adc_ram_shifter_1|data~350_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(115));
+	regout => \adc_ram_shifter_1|data\(371));
 
 -- Location: LCCOMB_X19_Y4_N30
-\adc_ram_shifter_1|data_b_2~16\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~65\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~16_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(104)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(120)))
+-- \adc_ram_shifter_1|data~65_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(104)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(120)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45871,22 +45868,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(120),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(104),
-	combout => \adc_ram_shifter_1|data_b_2~16_combout\);
+	combout => \adc_ram_shifter_1|data~65_combout\);
 
 -- Location: LCFF_X19_Y4_N31
-\adc_ram_shifter_1|data_b_2[0]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[384]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~16_combout\,
+	datain => \adc_ram_shifter_1|data~65_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(0));
+	regout => \adc_ram_shifter_1|data\(384));
 
 -- Location: LCCOMB_X22_Y8_N20
-\adc_ram_shifter_1|data_a_2~7\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~28\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~7_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(127))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(15))))
+-- \adc_ram_shifter_1|data~28_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(127))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(15))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45897,22 +45894,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(127),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(15),
-	combout => \adc_ram_shifter_1|data_a_2~7_combout\);
+	combout => \adc_ram_shifter_1|data~28_combout\);
 
 -- Location: LCFF_X22_Y8_N21
-\adc_ram_shifter_1|data_a_2[23]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[279]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~7_combout\,
+	datain => \adc_ram_shifter_1|data~28_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(23));
+	regout => \adc_ram_shifter_1|data\(279));
 
 -- Location: LCCOMB_X12_Y9_N26
-\adc_ram_shifter_1|data_b_2~88\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~425\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~88_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(16)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(32)))
+-- \adc_ram_shifter_1|data~425_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(16)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(32)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45923,22 +45920,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(32),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(16),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~88_combout\);
+	combout => \adc_ram_shifter_1|data~425_combout\);
 
 -- Location: LCFF_X12_Y9_N27
-\adc_ram_shifter_1|data_b_2[40]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[424]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~88_combout\,
+	datain => \adc_ram_shifter_1|data~425_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(40));
+	regout => \adc_ram_shifter_1|data\(424));
 
 -- Location: LCCOMB_X21_Y11_N20
-\adc_ram_shifter_1|data_a_2~85\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~418\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~85_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(29))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(45))))
+-- \adc_ram_shifter_1|data~418_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(29))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(45))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45949,22 +45946,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(29),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(45),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~85_combout\);
+	combout => \adc_ram_shifter_1|data~418_combout\);
 
 -- Location: LCFF_X21_Y11_N21
-\adc_ram_shifter_1|data_a_2[53]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[309]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~85_combout\,
+	datain => \adc_ram_shifter_1|data~418_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(53));
+	regout => \adc_ram_shifter_1|data\(309));
 
 -- Location: LCCOMB_X24_Y4_N6
-\adc_ram_shifter_1|data_a_2~67\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~382\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~67_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(75)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(91)))
+-- \adc_ram_shifter_1|data~382_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(75)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(91)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -45975,22 +45972,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(91),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(75),
-	combout => \adc_ram_shifter_1|data_a_2~67_combout\);
+	combout => \adc_ram_shifter_1|data~382_combout\);
 
 -- Location: LCFF_X24_Y4_N7
-\adc_ram_shifter_1|data_a_2[99]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[355]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~67_combout\,
+	datain => \adc_ram_shifter_1|data~382_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(99));
+	regout => \adc_ram_shifter_1|data\(355));
 
 -- Location: LCCOMB_X22_Y1_N6
-\adc_ram_shifter_1|data_b_2~50\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~349\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~50_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(90)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(106)))
+-- \adc_ram_shifter_1|data~349_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(90)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(106)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46001,22 +45998,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(106),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(90),
-	combout => \adc_ram_shifter_1|data_b_2~50_combout\);
+	combout => \adc_ram_shifter_1|data~349_combout\);
 
 -- Location: LCFF_X22_Y1_N7
-\adc_ram_shifter_1|data_b_2[114]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[498]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~50_combout\,
+	datain => \adc_ram_shifter_1|data~349_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(114));
+	regout => \adc_ram_shifter_1|data\(498));
 
 -- Location: LCCOMB_X22_Y2_N30
-\adc_ram_shifter_1|data_b_2~23\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~93\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~23_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(111)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(127)))
+-- \adc_ram_shifter_1|data~93_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(111)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(127)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46027,22 +46024,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(127),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(111),
-	combout => \adc_ram_shifter_1|data_b_2~23_combout\);
+	combout => \adc_ram_shifter_1|data~93_combout\);
 
 -- Location: LCFF_X22_Y2_N31
-\adc_ram_shifter_1|data_b_2[7]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[391]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~23_combout\,
+	datain => \adc_ram_shifter_1|data~93_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(7));
+	regout => \adc_ram_shifter_1|data\(391));
 
 -- Location: LCCOMB_X24_Y7_N4
-\adc_ram_shifter_1|data_b_1~53\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~183\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~53_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(61)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(77)))
+-- \adc_ram_shifter_1|data~183_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(61)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(77)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46053,22 +46050,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(77),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(61),
-	combout => \adc_ram_shifter_1|data_b_1~53_combout\);
+	combout => \adc_ram_shifter_1|data~183_combout\);
 
 -- Location: LCFF_X24_Y7_N5
-\adc_ram_shifter_1|data_b_1[85]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[213]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~53_combout\,
+	datain => \adc_ram_shifter_1|data~183_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(85));
+	regout => \adc_ram_shifter_1|data\(213));
 
 -- Location: LCCOMB_X22_Y12_N30
-\adc_ram_shifter_1|data_a_2~29\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~148\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~29_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(13))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(29))))
+-- \adc_ram_shifter_1|data~148_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(13))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(29))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46079,22 +46076,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(13),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(29),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~29_combout\);
+	combout => \adc_ram_shifter_1|data~148_combout\);
 
 -- Location: LCFF_X22_Y12_N31
-\adc_ram_shifter_1|data_a_2[37]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[293]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~29_combout\,
+	datain => \adc_ram_shifter_1|data~148_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(37));
+	regout => \adc_ram_shifter_1|data\(293));
 
 -- Location: LCCOMB_X22_Y11_N0
-\adc_ram_shifter_1|data_a_2~84\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~416\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~84_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(28)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(44)))
+-- \adc_ram_shifter_1|data~416_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(28)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(44)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46105,22 +46102,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(44),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(28),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~84_combout\);
+	combout => \adc_ram_shifter_1|data~416_combout\);
 
 -- Location: LCFF_X22_Y11_N1
-\adc_ram_shifter_1|data_a_2[52]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[308]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~84_combout\,
+	datain => \adc_ram_shifter_1|data~416_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(52));
+	regout => \adc_ram_shifter_1|data\(308));
 
 -- Location: LCCOMB_X22_Y1_N10
-\adc_ram_shifter_1|data_b_2~49\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~347\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~49_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(89)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(105)))
+-- \adc_ram_shifter_1|data~347_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(89)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(105)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46131,22 +46128,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(105),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(89),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~49_combout\);
+	combout => \adc_ram_shifter_1|data~347_combout\);
 
 -- Location: LCFF_X22_Y1_N11
-\adc_ram_shifter_1|data_b_2[113]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[497]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~49_combout\,
+	datain => \adc_ram_shifter_1|data~347_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(113));
+	regout => \adc_ram_shifter_1|data\(497));
 
 -- Location: LCCOMB_X22_Y3_N12
-\adc_ram_shifter_1|data_b_2~22\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~89\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~22_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(110)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(126)))
+-- \adc_ram_shifter_1|data~89_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(110)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(126)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46157,22 +46154,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(126),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(110),
-	combout => \adc_ram_shifter_1|data_b_2~22_combout\);
+	combout => \adc_ram_shifter_1|data~89_combout\);
 
 -- Location: LCFF_X22_Y3_N13
-\adc_ram_shifter_1|data_b_2[6]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[390]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~22_combout\,
+	datain => \adc_ram_shifter_1|data~89_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(6));
+	regout => \adc_ram_shifter_1|data\(390));
 
 -- Location: LCCOMB_X22_Y5_N0
-\adc_ram_shifter_1|data_a_2~14\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~56\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~14_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(118))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(6))))
+-- \adc_ram_shifter_1|data~56_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(118))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(6))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46183,22 +46180,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(118),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(6),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~14_combout\);
+	combout => \adc_ram_shifter_1|data~56_combout\);
 
 -- Location: LCFF_X22_Y5_N1
-\adc_ram_shifter_1|data_a_2[14]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[270]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~14_combout\,
+	datain => \adc_ram_shifter_1|data~56_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(14));
+	regout => \adc_ram_shifter_1|data\(270));
 
 -- Location: LCCOMB_X24_Y8_N14
-\adc_ram_shifter_1|data_a_2~6\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~24\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~6_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(126))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(14))))
+-- \adc_ram_shifter_1|data~24_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(126))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(14))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46209,22 +46206,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(126),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(14),
-	combout => \adc_ram_shifter_1|data_a_2~6_combout\);
+	combout => \adc_ram_shifter_1|data~24_combout\);
 
 -- Location: LCFF_X24_Y8_N15
-\adc_ram_shifter_1|data_a_2[22]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[278]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~6_combout\,
+	datain => \adc_ram_shifter_1|data~24_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(22));
+	regout => \adc_ram_shifter_1|data\(278));
 
 -- Location: LCCOMB_X22_Y12_N18
-\adc_ram_shifter_1|data_a_2~36\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~176\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~36_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(4)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(20)))
+-- \adc_ram_shifter_1|data~176_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(4)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(20)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46235,22 +46232,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(20),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(4),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~36_combout\);
+	combout => \adc_ram_shifter_1|data~176_combout\);
 
 -- Location: LCFF_X22_Y12_N19
-\adc_ram_shifter_1|data_a_2[28]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[284]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~36_combout\,
+	datain => \adc_ram_shifter_1|data~176_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(28));
+	regout => \adc_ram_shifter_1|data\(284));
 
 -- Location: LCCOMB_X24_Y9_N2
-\adc_ram_shifter_1|data_a_2~82\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~412\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~82_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(26)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(42)))
+-- \adc_ram_shifter_1|data~412_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(26)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(42)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46261,23 +46258,23 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(42),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(26),
-	combout => \adc_ram_shifter_1|data_a_2~82_combout\);
+	combout => \adc_ram_shifter_1|data~412_combout\);
 
 -- Location: LCFF_X24_Y3_N25
-\adc_ram_shifter_1|data_a_2[50]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[306]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	sdata => \adc_ram_shifter_1|data_a_2~82_combout\,
+	sdata => \adc_ram_shifter_1|data~412_combout\,
 	sload => VCC,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(50));
+	regout => \adc_ram_shifter_1|data\(306));
 
 -- Location: LCCOMB_X22_Y3_N0
-\adc_ram_shifter_1|data_b_2~48\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~345\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~48_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(88))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(104))))
+-- \adc_ram_shifter_1|data~345_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(88))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(104))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46288,22 +46285,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(88),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(104),
-	combout => \adc_ram_shifter_1|data_b_2~48_combout\);
+	combout => \adc_ram_shifter_1|data~345_combout\);
 
 -- Location: LCFF_X22_Y3_N1
-\adc_ram_shifter_1|data_b_2[112]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[496]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~48_combout\,
+	datain => \adc_ram_shifter_1|data~345_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(112));
+	regout => \adc_ram_shifter_1|data\(496));
 
 -- Location: LCCOMB_X20_Y4_N18
-\adc_ram_shifter_1|data_b_2~21\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~85\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~21_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(109)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(125)))
+-- \adc_ram_shifter_1|data~85_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(109)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(125)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46314,22 +46311,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(125),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(109),
-	combout => \adc_ram_shifter_1|data_b_2~21_combout\);
+	combout => \adc_ram_shifter_1|data~85_combout\);
 
 -- Location: LCFF_X20_Y4_N19
-\adc_ram_shifter_1|data_b_2[5]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[389]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~21_combout\,
+	datain => \adc_ram_shifter_1|data~85_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(5));
+	regout => \adc_ram_shifter_1|data\(389));
 
 -- Location: LCCOMB_X24_Y6_N12
-\adc_ram_shifter_1|data_a_2~13\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~52\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~13_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(117))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(5))))
+-- \adc_ram_shifter_1|data~52_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(117))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46340,22 +46337,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(117),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(5),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~13_combout\);
+	combout => \adc_ram_shifter_1|data~52_combout\);
 
 -- Location: LCFF_X24_Y6_N13
-\adc_ram_shifter_1|data_a_2[13]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[269]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~13_combout\,
+	datain => \adc_ram_shifter_1|data~52_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(13));
+	regout => \adc_ram_shifter_1|data\(269));
 
 -- Location: LCCOMB_X24_Y8_N8
-\adc_ram_shifter_1|data_a_2~5\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~20\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~5_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(125))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(13))))
+-- \adc_ram_shifter_1|data~20_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(125))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(13))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46366,22 +46363,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(125),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(13),
-	combout => \adc_ram_shifter_1|data_a_2~5_combout\);
+	combout => \adc_ram_shifter_1|data~20_combout\);
 
 -- Location: LCFF_X24_Y8_N9
-\adc_ram_shifter_1|data_a_2[21]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[277]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~5_combout\,
+	datain => \adc_ram_shifter_1|data~20_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(21));
+	regout => \adc_ram_shifter_1|data\(277));
 
 -- Location: LCCOMB_X20_Y10_N2
-\adc_ram_shifter_1|data_a_2~33\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~164\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~33_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(1)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(17)))
+-- \adc_ram_shifter_1|data~164_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(1)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(17)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46392,22 +46389,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(17),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(1),
-	combout => \adc_ram_shifter_1|data_a_2~33_combout\);
+	combout => \adc_ram_shifter_1|data~164_combout\);
 
 -- Location: LCFF_X20_Y10_N3
-\adc_ram_shifter_1|data_a_2[25]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[281]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~33_combout\,
+	datain => \adc_ram_shifter_1|data~164_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(25));
+	regout => \adc_ram_shifter_1|data\(281));
 
 -- Location: LCCOMB_X22_Y5_N26
-\adc_ram_shifter_1|data_b_1~110\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~293\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~110_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(95))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(111))))
+-- \adc_ram_shifter_1|data~293_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(95))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(111))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46418,22 +46415,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(95),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(111),
-	combout => \adc_ram_shifter_1|data_b_1~110_combout\);
+	combout => \adc_ram_shifter_1|data~293_combout\);
 
 -- Location: LCFF_X22_Y5_N27
-\adc_ram_shifter_1|data_b_1[119]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[247]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~110_combout\,
+	datain => \adc_ram_shifter_1|data~293_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(119));
+	regout => \adc_ram_shifter_1|data\(247));
 
 -- Location: LCCOMB_X24_Y10_N14
-\adc_ram_shifter_1|data_b_1~34\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~117\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~34_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(101))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(117))))
+-- \adc_ram_shifter_1|data~117_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(101))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(117))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46444,22 +46441,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(101),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(117),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~34_combout\);
+	combout => \adc_ram_shifter_1|data~117_combout\);
 
 -- Location: LCFF_X24_Y10_N15
-\adc_ram_shifter_1|data_b_1[125]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[253]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~34_combout\,
+	datain => \adc_ram_shifter_1|data~117_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(125));
+	regout => \adc_ram_shifter_1|data\(253));
 
 -- Location: LCCOMB_X20_Y9_N8
-\adc_ram_shifter_1|data_a_2~88\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~424\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~88_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(16)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(32)))
+-- \adc_ram_shifter_1|data~424_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(16)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(32)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46470,22 +46467,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(32),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(16),
-	combout => \adc_ram_shifter_1|data_a_2~88_combout\);
+	combout => \adc_ram_shifter_1|data~424_combout\);
 
 -- Location: LCFF_X20_Y9_N9
-\adc_ram_shifter_1|data_a_2[40]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[296]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~88_combout\,
+	datain => \adc_ram_shifter_1|data~424_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(40));
+	regout => \adc_ram_shifter_1|data\(296));
 
 -- Location: LCCOMB_X21_Y6_N2
-\adc_ram_shifter_1|data_a_2~81\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~410\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~81_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(25)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(41)))
+-- \adc_ram_shifter_1|data~410_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(25)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(41)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46496,22 +46493,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(41),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(25),
-	combout => \adc_ram_shifter_1|data_a_2~81_combout\);
+	combout => \adc_ram_shifter_1|data~410_combout\);
 
 -- Location: LCFF_X21_Y6_N3
-\adc_ram_shifter_1|data_a_2[49]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[305]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~81_combout\,
+	datain => \adc_ram_shifter_1|data~410_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(49));
+	regout => \adc_ram_shifter_1|data\(305));
 
 -- Location: LCCOMB_X13_Y9_N0
-\adc_ram_shifter_1|data_a_2~108\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~464\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~108_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(36)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(52)))
+-- \adc_ram_shifter_1|data~464_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(36)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(52)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46522,22 +46519,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(52),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(36),
-	combout => \adc_ram_shifter_1|data_a_2~108_combout\);
+	combout => \adc_ram_shifter_1|data~464_combout\);
 
 -- Location: LCFF_X13_Y9_N1
-\adc_ram_shifter_1|data_a_2[60]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[316]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~108_combout\,
+	datain => \adc_ram_shifter_1|data~464_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(60));
+	regout => \adc_ram_shifter_1|data\(316));
 
 -- Location: LCCOMB_X20_Y5_N12
-\adc_ram_shifter_1|data_a_2~66\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~380\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~66_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(74))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(90))))
+-- \adc_ram_shifter_1|data~380_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(74))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(90))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46548,22 +46545,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(74),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(90),
-	combout => \adc_ram_shifter_1|data_a_2~66_combout\);
+	combout => \adc_ram_shifter_1|data~380_combout\);
 
 -- Location: LCFF_X20_Y5_N13
-\adc_ram_shifter_1|data_a_2[98]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[354]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~66_combout\,
+	datain => \adc_ram_shifter_1|data~380_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(98));
+	regout => \adc_ram_shifter_1|data\(354));
 
 -- Location: LCCOMB_X20_Y4_N22
-\adc_ram_shifter_1|data_b_2~20\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~81\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~20_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(108))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(124))))
+-- \adc_ram_shifter_1|data~81_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(108))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(124))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46574,22 +46571,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(108),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(124),
-	combout => \adc_ram_shifter_1|data_b_2~20_combout\);
+	combout => \adc_ram_shifter_1|data~81_combout\);
 
 -- Location: LCFF_X20_Y4_N23
-\adc_ram_shifter_1|data_b_2[4]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[388]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~20_combout\,
+	datain => \adc_ram_shifter_1|data~81_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(4));
+	regout => \adc_ram_shifter_1|data\(388));
 
 -- Location: LCCOMB_X20_Y6_N16
-\adc_ram_shifter_1|data_a_2~11\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~44\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~11_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(115))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(3))))
+-- \adc_ram_shifter_1|data~44_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(115))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(3))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46600,22 +46597,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(115),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(3),
-	combout => \adc_ram_shifter_1|data_a_2~11_combout\);
+	combout => \adc_ram_shifter_1|data~44_combout\);
 
 -- Location: LCFF_X20_Y6_N17
-\adc_ram_shifter_1|data_a_2[11]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[267]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~11_combout\,
+	datain => \adc_ram_shifter_1|data~44_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(11));
+	regout => \adc_ram_shifter_1|data\(267));
 
 -- Location: LCCOMB_X24_Y5_N4
-\adc_ram_shifter_1|data_a_2~4\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~16\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~4_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(124))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(12))))
+-- \adc_ram_shifter_1|data~16_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(124))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(12))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46626,23 +46623,23 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(124),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(12),
-	combout => \adc_ram_shifter_1|data_a_2~4_combout\);
+	combout => \adc_ram_shifter_1|data~16_combout\);
 
 -- Location: LCFF_X24_Y8_N13
-\adc_ram_shifter_1|data_a_2[20]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[276]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	sdata => \adc_ram_shifter_1|data_a_2~4_combout\,
+	sdata => \adc_ram_shifter_1|data~16_combout\,
 	sload => VCC,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(20));
+	regout => \adc_ram_shifter_1|data\(276));
 
 -- Location: LCCOMB_X24_Y8_N6
-\adc_ram_shifter_1|data_a_2~0\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~0_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(120)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(8)))
+-- \adc_ram_shifter_1|data~0_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(120)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(8)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46653,22 +46650,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(8),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(120),
-	combout => \adc_ram_shifter_1|data_a_2~0_combout\);
+	combout => \adc_ram_shifter_1|data~0_combout\);
 
 -- Location: LCFF_X24_Y8_N7
-\adc_ram_shifter_1|data_a_2[16]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[272]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~0_combout\,
+	datain => \adc_ram_shifter_1|data~0_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(16));
+	regout => \adc_ram_shifter_1|data\(272));
 
 -- Location: LCCOMB_X22_Y8_N0
-\adc_ram_shifter_1|data_a_2~32\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~160\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~32_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(0))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(16))))
+-- \adc_ram_shifter_1|data~160_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(0))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(16))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46679,22 +46676,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(0),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(16),
-	combout => \adc_ram_shifter_1|data_a_2~32_combout\);
+	combout => \adc_ram_shifter_1|data~160_combout\);
 
 -- Location: LCFF_X22_Y8_N1
-\adc_ram_shifter_1|data_a_2[24]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[280]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~32_combout\,
+	datain => \adc_ram_shifter_1|data~160_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(24));
+	regout => \adc_ram_shifter_1|data\(280));
 
 -- Location: LCCOMB_X22_Y7_N28
-\adc_ram_shifter_1|data_b_1~80\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~233\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~80_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(76)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(92)))
+-- \adc_ram_shifter_1|data~233_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(76)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(92)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46705,22 +46702,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(92),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(76),
-	combout => \adc_ram_shifter_1|data_b_1~80_combout\);
+	combout => \adc_ram_shifter_1|data~233_combout\);
 
 -- Location: LCFF_X22_Y7_N29
-\adc_ram_shifter_1|data_b_1[100]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[228]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~80_combout\,
+	datain => \adc_ram_shifter_1|data~233_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(100));
+	regout => \adc_ram_shifter_1|data\(228));
 
 -- Location: LCCOMB_X24_Y7_N2
-\adc_ram_shifter_1|data_b_1~82\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~237\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~82_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(77))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(93))))
+-- \adc_ram_shifter_1|data~237_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(77))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(93))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46731,22 +46728,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(77),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(93),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~82_combout\);
+	combout => \adc_ram_shifter_1|data~237_combout\);
 
 -- Location: LCFF_X24_Y7_N3
-\adc_ram_shifter_1|data_b_1[101]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[229]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~82_combout\,
+	datain => \adc_ram_shifter_1|data~237_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(101));
+	regout => \adc_ram_shifter_1|data\(229));
 
 -- Location: LCCOMB_X24_Y9_N12
-\adc_ram_shifter_1|data_b_1~84\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~241\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~84_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(78)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(94)))
+-- \adc_ram_shifter_1|data~241_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(78)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(94)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46757,17 +46754,17 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(94),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(78),
-	combout => \adc_ram_shifter_1|data_b_1~84_combout\);
+	combout => \adc_ram_shifter_1|data~241_combout\);
 
 -- Location: LCFF_X24_Y9_N13
-\adc_ram_shifter_1|data_b_1[102]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[230]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~84_combout\,
+	datain => \adc_ram_shifter_1|data~241_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(102));
+	regout => \adc_ram_shifter_1|data\(230));
 
 -- Location: M4K_X23_Y9
 \ram1|altsyncram_component|auto_generated|ram_block1a4\ : cycloneii_ram_block
@@ -46825,9 +46822,9 @@ PORT MAP (
 	portbdataout => \ram1|altsyncram_component|auto_generated|ram_block1a4_PORTBDATAOUT_bus\);
 
 -- Location: LCCOMB_X24_Y9_N26
-\adc_ram_shifter_1|data_b_1~122\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~317\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~122_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(85))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(101))))
+-- \adc_ram_shifter_1|data~317_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(85))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(101))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46838,23 +46835,23 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(85),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(101),
-	combout => \adc_ram_shifter_1|data_b_1~122_combout\);
+	combout => \adc_ram_shifter_1|data~317_combout\);
 
 -- Location: LCFF_X24_Y5_N5
-\adc_ram_shifter_1|data_b_1[109]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[237]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	sdata => \adc_ram_shifter_1|data_b_1~122_combout\,
+	sdata => \adc_ram_shifter_1|data~317_combout\,
 	sload => VCC,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(109));
+	regout => \adc_ram_shifter_1|data\(237));
 
 -- Location: LCCOMB_X24_Y5_N26
-\adc_ram_shifter_1|data_b_1~108\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~289\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~108_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(94))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(110))))
+-- \adc_ram_shifter_1|data~289_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(94))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(110))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46865,22 +46862,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(94),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(110),
-	combout => \adc_ram_shifter_1|data_b_1~108_combout\);
+	combout => \adc_ram_shifter_1|data~289_combout\);
 
 -- Location: LCFF_X24_Y5_N27
-\adc_ram_shifter_1|data_b_1[118]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[246]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~108_combout\,
+	datain => \adc_ram_shifter_1|data~289_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(118));
+	regout => \adc_ram_shifter_1|data\(246));
 
 -- Location: LCCOMB_X19_Y7_N10
-\adc_ram_shifter_1|data_b_1~61\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~203\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~61_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(117))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(5))))
+-- \adc_ram_shifter_1|data~203_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(117))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46891,22 +46888,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(117),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(5),
-	combout => \adc_ram_shifter_1|data_b_1~61_combout\);
+	combout => \adc_ram_shifter_1|data~203_combout\);
 
 -- Location: LCFF_X19_Y7_N11
-\adc_ram_shifter_1|data_b_1[13]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[141]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~61_combout\,
+	datain => \adc_ram_shifter_1|data~203_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(13));
+	regout => \adc_ram_shifter_1|data\(141));
 
 -- Location: LCCOMB_X24_Y6_N30
-\adc_ram_shifter_1|data_b_1~125\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~323\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~125_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(14)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(30)))
+-- \adc_ram_shifter_1|data~323_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(14)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(30)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46917,22 +46914,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(30),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(14),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~125_combout\);
+	combout => \adc_ram_shifter_1|data~323_combout\);
 
 -- Location: LCFF_X24_Y6_N31
-\adc_ram_shifter_1|data_b_1[38]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[166]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~125_combout\,
+	datain => \adc_ram_shifter_1|data~323_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(38));
+	regout => \adc_ram_shifter_1|data\(166));
 
 -- Location: LCCOMB_X24_Y5_N14
-\adc_ram_shifter_1|data_b_1~106\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~285\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~106_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(93))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(109))))
+-- \adc_ram_shifter_1|data~285_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(93))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(109))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46943,22 +46940,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(93),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(109),
-	combout => \adc_ram_shifter_1|data_b_1~106_combout\);
+	combout => \adc_ram_shifter_1|data~285_combout\);
 
 -- Location: LCFF_X24_Y5_N15
-\adc_ram_shifter_1|data_b_1[117]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[245]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~106_combout\,
+	datain => \adc_ram_shifter_1|data~285_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(117));
+	regout => \adc_ram_shifter_1|data\(245));
 
 -- Location: LCCOMB_X24_Y5_N22
-\adc_ram_shifter_1|data_b_1~104\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~281\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~104_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(92)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(108)))
+-- \adc_ram_shifter_1|data~281_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(92)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(108)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46969,22 +46966,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(108),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(92),
-	combout => \adc_ram_shifter_1|data_b_1~104_combout\);
+	combout => \adc_ram_shifter_1|data~281_combout\);
 
 -- Location: LCFF_X24_Y5_N23
-\adc_ram_shifter_1|data_b_1[116]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[244]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~104_combout\,
+	datain => \adc_ram_shifter_1|data~281_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(116));
+	regout => \adc_ram_shifter_1|data\(244));
 
 -- Location: LCCOMB_X22_Y6_N0
-\adc_ram_shifter_1|data_b_1~32\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~113\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~32_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(100)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(116)))
+-- \adc_ram_shifter_1|data~113_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(100)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(116)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46995,22 +46992,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(116),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(100),
-	combout => \adc_ram_shifter_1|data_b_1~32_combout\);
+	combout => \adc_ram_shifter_1|data~113_combout\);
 
 -- Location: LCFF_X22_Y6_N1
-\adc_ram_shifter_1|data_b_1[124]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[252]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~32_combout\,
+	datain => \adc_ram_shifter_1|data~113_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(124));
+	regout => \adc_ram_shifter_1|data\(252));
 
 -- Location: LCCOMB_X13_Y9_N16
-\adc_ram_shifter_1|data_a_2~107\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~462\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~107_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(35))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(51))))
+-- \adc_ram_shifter_1|data~462_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(35))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(51))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47021,22 +47018,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(35),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(51),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~107_combout\);
+	combout => \adc_ram_shifter_1|data~462_combout\);
 
 -- Location: LCFF_X13_Y9_N17
-\adc_ram_shifter_1|data_a_2[59]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[315]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~107_combout\,
+	datain => \adc_ram_shifter_1|data~462_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(59));
+	regout => \adc_ram_shifter_1|data\(315));
 
 -- Location: LCCOMB_X18_Y4_N20
-\adc_ram_shifter_1|data_a_2~65\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~378\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~65_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(73)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(89)))
+-- \adc_ram_shifter_1|data~378_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(73)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(89)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47047,23 +47044,23 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(89),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(73),
-	combout => \adc_ram_shifter_1|data_a_2~65_combout\);
+	combout => \adc_ram_shifter_1|data~378_combout\);
 
 -- Location: LCFF_X20_Y4_N17
-\adc_ram_shifter_1|data_a_2[97]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[353]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	sdata => \adc_ram_shifter_1|data_a_2~65_combout\,
+	sdata => \adc_ram_shifter_1|data~378_combout\,
 	sload => VCC,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(97));
+	regout => \adc_ram_shifter_1|data\(353));
 
 -- Location: LCCOMB_X21_Y4_N2
-\adc_ram_shifter_1|data_a_2~49\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~346\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~49_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(89)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(105)))
+-- \adc_ram_shifter_1|data~346_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(89)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(105)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47074,22 +47071,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(105),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(89),
-	combout => \adc_ram_shifter_1|data_a_2~49_combout\);
+	combout => \adc_ram_shifter_1|data~346_combout\);
 
 -- Location: LCFF_X21_Y4_N3
-\adc_ram_shifter_1|data_a_2[113]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[369]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~49_combout\,
+	datain => \adc_ram_shifter_1|data~346_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(113));
+	regout => \adc_ram_shifter_1|data\(369));
 
 -- Location: LCCOMB_X24_Y4_N24
-\adc_ram_shifter_1|data_b_2~19\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~77\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~19_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(107)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(123)))
+-- \adc_ram_shifter_1|data~77_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(107)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(123)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47100,22 +47097,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(123),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(107),
-	combout => \adc_ram_shifter_1|data_b_2~19_combout\);
+	combout => \adc_ram_shifter_1|data~77_combout\);
 
 -- Location: LCFF_X24_Y4_N25
-\adc_ram_shifter_1|data_b_2[3]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[387]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~19_combout\,
+	datain => \adc_ram_shifter_1|data~77_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(3));
+	regout => \adc_ram_shifter_1|data\(387));
 
 -- Location: LCCOMB_X22_Y8_N10
-\adc_ram_shifter_1|data_a_2~39\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~188\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~39_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(7))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(23))))
+-- \adc_ram_shifter_1|data~188_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(7))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(23))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47126,22 +47123,22 @@ PORT MAP (
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(7),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(23),
-	combout => \adc_ram_shifter_1|data_a_2~39_combout\);
+	combout => \adc_ram_shifter_1|data~188_combout\);
 
 -- Location: LCFF_X22_Y8_N11
-\adc_ram_shifter_1|data_a_2[31]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[287]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~39_combout\,
+	datain => \adc_ram_shifter_1|data~188_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(31));
+	regout => \adc_ram_shifter_1|data\(287));
 
 -- Location: LCCOMB_X24_Y12_N30
-\adc_ram_shifter_1|data_b_1~47\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~159\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~47_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(71))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(87))))
+-- \adc_ram_shifter_1|data~159_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(71))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(87))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47152,22 +47149,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(71),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(87),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~47_combout\);
+	combout => \adc_ram_shifter_1|data~159_combout\);
 
 -- Location: LCFF_X24_Y12_N31
-\adc_ram_shifter_1|data_b_1[95]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[223]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~47_combout\,
+	datain => \adc_ram_shifter_1|data~159_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(95));
+	regout => \adc_ram_shifter_1|data\(223));
 
 -- Location: LCCOMB_X22_Y8_N24
-\adc_ram_shifter_1|data_a_2~27\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~140\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~27_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(11))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(27))))
+-- \adc_ram_shifter_1|data~140_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(11))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(27))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47178,22 +47175,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(11),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(27),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~27_combout\);
+	combout => \adc_ram_shifter_1|data~140_combout\);
 
 -- Location: LCFF_X22_Y8_N25
-\adc_ram_shifter_1|data_a_2[35]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[291]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~27_combout\,
+	datain => \adc_ram_shifter_1|data~140_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(35));
+	regout => \adc_ram_shifter_1|data\(291));
 
 -- Location: LCCOMB_X20_Y5_N30
-\adc_ram_shifter_1|data_b_2~106\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~461\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~106_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(34))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(50))))
+-- \adc_ram_shifter_1|data~461_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(34))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(50))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47204,22 +47201,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(34),
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(50),
-	combout => \adc_ram_shifter_1|data_b_2~106_combout\);
+	combout => \adc_ram_shifter_1|data~461_combout\);
 
 -- Location: LCFF_X20_Y5_N31
-\adc_ram_shifter_1|data_b_2[58]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[442]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~106_combout\,
+	datain => \adc_ram_shifter_1|data~461_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(58));
+	regout => \adc_ram_shifter_1|data\(442));
 
 -- Location: LCCOMB_X22_Y3_N24
-\adc_ram_shifter_1|data_b_2~64\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~377\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~64_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(72))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(88))))
+-- \adc_ram_shifter_1|data~377_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(72))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(88))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47230,22 +47227,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_b\(72),
 	datad => \ram2|altsyncram_component|auto_generated|q_b\(88),
-	combout => \adc_ram_shifter_1|data_b_2~64_combout\);
+	combout => \adc_ram_shifter_1|data~377_combout\);
 
 -- Location: LCFF_X22_Y3_N25
-\adc_ram_shifter_1|data_b_2[96]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[480]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~64_combout\,
+	datain => \adc_ram_shifter_1|data~377_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(96));
+	regout => \adc_ram_shifter_1|data\(480));
 
 -- Location: LCCOMB_X24_Y4_N8
-\adc_ram_shifter_1|data_b_2~18\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~73\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~18_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(106)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(122)))
+-- \adc_ram_shifter_1|data~73_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(106)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(122)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47256,22 +47253,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(122),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(106),
-	combout => \adc_ram_shifter_1|data_b_2~18_combout\);
+	combout => \adc_ram_shifter_1|data~73_combout\);
 
 -- Location: LCFF_X24_Y4_N9
-\adc_ram_shifter_1|data_b_2[2]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[386]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~18_combout\,
+	datain => \adc_ram_shifter_1|data~73_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(2));
+	regout => \adc_ram_shifter_1|data\(386));
 
 -- Location: LCCOMB_X22_Y6_N2
-\adc_ram_shifter_1|data_a_2~10\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~40\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~10_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(114))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(2))))
+-- \adc_ram_shifter_1|data~40_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(114))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(2))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47282,22 +47279,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(114),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(2),
-	combout => \adc_ram_shifter_1|data_a_2~10_combout\);
+	combout => \adc_ram_shifter_1|data~40_combout\);
 
 -- Location: LCFF_X22_Y6_N3
-\adc_ram_shifter_1|data_a_2[10]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[266]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~10_combout\,
+	datain => \adc_ram_shifter_1|data~40_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(10));
+	regout => \adc_ram_shifter_1|data\(266));
 
 -- Location: LCCOMB_X20_Y6_N28
-\adc_ram_shifter_1|data_a_2~9\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~36\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~9_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(113))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(1))))
+-- \adc_ram_shifter_1|data~36_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(113))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47308,22 +47305,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(113),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(1),
-	combout => \adc_ram_shifter_1|data_a_2~9_combout\);
+	combout => \adc_ram_shifter_1|data~36_combout\);
 
 -- Location: LCFF_X20_Y6_N29
-\adc_ram_shifter_1|data_a_2[9]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[265]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~9_combout\,
+	datain => \adc_ram_shifter_1|data~36_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(9));
+	regout => \adc_ram_shifter_1|data\(265));
 
 -- Location: LCCOMB_X24_Y10_N8
-\adc_ram_shifter_1|data_a_2~26\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~136\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~26_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(10)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(26)))
+-- \adc_ram_shifter_1|data~136_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(10)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(26)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47334,22 +47331,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(26),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(10),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~26_combout\);
+	combout => \adc_ram_shifter_1|data~136_combout\);
 
 -- Location: LCFF_X24_Y10_N9
-\adc_ram_shifter_1|data_a_2[34]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[290]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~26_combout\,
+	datain => \adc_ram_shifter_1|data~136_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(34));
+	regout => \adc_ram_shifter_1|data\(290));
 
 -- Location: LCCOMB_X26_Y7_N18
-\adc_ram_shifter_1|data_b_1~102\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~277\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~102_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(91))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(107))))
+-- \adc_ram_shifter_1|data~277_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(91))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(107))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47360,22 +47357,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(91),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(107),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~102_combout\);
+	combout => \adc_ram_shifter_1|data~277_combout\);
 
 -- Location: LCFF_X26_Y7_N19
-\adc_ram_shifter_1|data_b_1[115]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[243]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~102_combout\,
+	datain => \adc_ram_shifter_1|data~277_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(115));
+	regout => \adc_ram_shifter_1|data\(243));
 
 -- Location: LCCOMB_X24_Y8_N16
-\adc_ram_shifter_1|data_b_1~24\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~97\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~24_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(96))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(112))))
+-- \adc_ram_shifter_1|data~97_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(96))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(112))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47386,22 +47383,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(96),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(112),
-	combout => \adc_ram_shifter_1|data_b_1~24_combout\);
+	combout => \adc_ram_shifter_1|data~97_combout\);
 
 -- Location: LCFF_X24_Y8_N17
-\adc_ram_shifter_1|data_b_1[120]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[248]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~24_combout\,
+	datain => \adc_ram_shifter_1|data~97_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(120));
+	regout => \adc_ram_shifter_1|data\(248));
 
 -- Location: LCCOMB_X21_Y6_N0
-\adc_ram_shifter_1|data_a_2~17\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~68\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~17_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(105))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(121))))
+-- \adc_ram_shifter_1|data~68_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(105))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(121))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47412,22 +47409,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(105),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(121),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~17_combout\);
+	combout => \adc_ram_shifter_1|data~68_combout\);
 
 -- Location: LCFF_X21_Y6_N1
-\adc_ram_shifter_1|data_a_2[1]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[257]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~17_combout\,
+	datain => \adc_ram_shifter_1|data~68_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(1));
+	regout => \adc_ram_shifter_1|data\(257));
 
 -- Location: LCCOMB_X21_Y6_N8
-\adc_ram_shifter_1|data_a_2~25\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~132\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~25_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(9))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(25))))
+-- \adc_ram_shifter_1|data~132_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(9))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(25))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47438,22 +47435,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(9),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(25),
-	combout => \adc_ram_shifter_1|data_a_2~25_combout\);
+	combout => \adc_ram_shifter_1|data~132_combout\);
 
 -- Location: LCFF_X21_Y6_N9
-\adc_ram_shifter_1|data_a_2[33]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[289]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~25_combout\,
+	datain => \adc_ram_shifter_1|data~132_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(33));
+	regout => \adc_ram_shifter_1|data\(289));
 
 -- Location: LCCOMB_X22_Y5_N28
-\adc_ram_shifter_1|data_b_1~100\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~273\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~100_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(90)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(106)))
+-- \adc_ram_shifter_1|data~273_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(90)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(106)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47464,22 +47461,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(106),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(90),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~100_combout\);
+	combout => \adc_ram_shifter_1|data~273_combout\);
 
 -- Location: LCFF_X22_Y5_N29
-\adc_ram_shifter_1|data_b_1[114]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[242]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~100_combout\,
+	datain => \adc_ram_shifter_1|data~273_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(114));
+	regout => \adc_ram_shifter_1|data\(242));
 
 -- Location: LCCOMB_X24_Y7_N24
-\adc_ram_shifter_1|data_a_1~38\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~124\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~38_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(103))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(119))))
+-- \adc_ram_shifter_1|data~124_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(103))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(119))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47490,22 +47487,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(103),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(119),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~38_combout\);
+	combout => \adc_ram_shifter_1|data~124_combout\);
 
 -- Location: LCFF_X24_Y7_N25
-\adc_ram_shifter_1|data_a_1[127]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[127]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~38_combout\,
+	datain => \adc_ram_shifter_1|data~124_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(127));
+	regout => \adc_ram_shifter_1|data\(127));
 
 -- Location: LCCOMB_X22_Y5_N22
-\adc_ram_shifter_1|data_a_2~23\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~92\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~23_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(111)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(127)))
+-- \adc_ram_shifter_1|data~92_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(111)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(127)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47516,22 +47513,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(127),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(111),
-	combout => \adc_ram_shifter_1|data_a_2~23_combout\);
+	combout => \adc_ram_shifter_1|data~92_combout\);
 
 -- Location: LCFF_X22_Y5_N23
-\adc_ram_shifter_1|data_a_2[7]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[263]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~23_combout\,
+	datain => \adc_ram_shifter_1|data~92_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(7));
+	regout => \adc_ram_shifter_1|data\(263));
 
 -- Location: LCCOMB_X21_Y6_N14
-\adc_ram_shifter_1|data_a_2~16\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~64\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~16_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(104))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(120))))
+-- \adc_ram_shifter_1|data~64_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(104))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(120))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47542,22 +47539,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(104),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(120),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~16_combout\);
+	combout => \adc_ram_shifter_1|data~64_combout\);
 
 -- Location: LCFF_X21_Y6_N15
-\adc_ram_shifter_1|data_a_2[0]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[256]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~16_combout\,
+	datain => \adc_ram_shifter_1|data~64_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(0));
+	regout => \adc_ram_shifter_1|data\(256));
 
 -- Location: LCCOMB_X22_Y4_N10
-\adc_ram_shifter_1|data_b_1~7\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~31\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~7_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(55))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(71))))
+-- \adc_ram_shifter_1|data~31_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(55))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(71))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47568,22 +47565,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(55),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(71),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~7_combout\);
+	combout => \adc_ram_shifter_1|data~31_combout\);
 
 -- Location: LCFF_X22_Y4_N11
-\adc_ram_shifter_1|data_b_1[79]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[207]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~7_combout\,
+	datain => \adc_ram_shifter_1|data~31_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(79));
+	regout => \adc_ram_shifter_1|data\(207));
 
 -- Location: LCCOMB_X22_Y9_N2
-\adc_ram_shifter_1|data_a_2~38\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~184\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~38_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(6))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(22))))
+-- \adc_ram_shifter_1|data~184_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(6))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(22))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47594,22 +47591,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(6),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(22),
-	combout => \adc_ram_shifter_1|data_a_2~38_combout\);
+	combout => \adc_ram_shifter_1|data~184_combout\);
 
 -- Location: LCFF_X22_Y9_N3
-\adc_ram_shifter_1|data_a_2[30]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[286]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~38_combout\,
+	datain => \adc_ram_shifter_1|data~184_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(30));
+	regout => \adc_ram_shifter_1|data\(286));
 
 -- Location: LCCOMB_X24_Y12_N2
-\adc_ram_shifter_1|data_b_1~46\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~155\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~46_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(70))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(86))))
+-- \adc_ram_shifter_1|data~155_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(70))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(86))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47620,22 +47617,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(70),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(86),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~46_combout\);
+	combout => \adc_ram_shifter_1|data~155_combout\);
 
 -- Location: LCFF_X24_Y12_N3
-\adc_ram_shifter_1|data_b_1[94]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[222]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~46_combout\,
+	datain => \adc_ram_shifter_1|data~155_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(94));
+	regout => \adc_ram_shifter_1|data\(222));
 
 -- Location: LCCOMB_X21_Y11_N2
-\adc_ram_shifter_1|data_b_1~120\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~313\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~120_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(84)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(100)))
+-- \adc_ram_shifter_1|data~313_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(84)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(100)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47646,22 +47643,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(100),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(84),
-	combout => \adc_ram_shifter_1|data_b_1~120_combout\);
+	combout => \adc_ram_shifter_1|data~313_combout\);
 
 -- Location: LCFF_X21_Y11_N3
-\adc_ram_shifter_1|data_b_1[108]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[236]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~120_combout\,
+	datain => \adc_ram_shifter_1|data~313_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(108));
+	regout => \adc_ram_shifter_1|data\(236));
 
 -- Location: LCCOMB_X24_Y8_N30
-\adc_ram_shifter_1|data_a_1~36\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~120\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~36_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(102))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(118))))
+-- \adc_ram_shifter_1|data~120_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(102))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(118))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47672,22 +47669,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(102),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(118),
-	combout => \adc_ram_shifter_1|data_a_1~36_combout\);
+	combout => \adc_ram_shifter_1|data~120_combout\);
 
 -- Location: LCFF_X24_Y8_N31
-\adc_ram_shifter_1|data_a_1[126]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[126]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~36_combout\,
+	datain => \adc_ram_shifter_1|data~120_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(126));
+	regout => \adc_ram_shifter_1|data\(126));
 
 -- Location: LCCOMB_X22_Y9_N10
-\adc_ram_shifter_1|data_b_1~74\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~221\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~74_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(73)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(89)))
+-- \adc_ram_shifter_1|data~221_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(73)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(89)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47698,22 +47695,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(89),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(73),
-	combout => \adc_ram_shifter_1|data_b_1~74_combout\);
+	combout => \adc_ram_shifter_1|data~221_combout\);
 
 -- Location: LCFF_X22_Y9_N11
-\adc_ram_shifter_1|data_b_1[97]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[225]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~74_combout\,
+	datain => \adc_ram_shifter_1|data~221_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(97));
+	regout => \adc_ram_shifter_1|data\(225));
 
 -- Location: LCCOMB_X24_Y7_N18
-\adc_ram_shifter_1|data_b_1~116\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~305\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~116_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(82)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(98)))
+-- \adc_ram_shifter_1|data~305_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(82)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(98)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47724,22 +47721,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(98),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(82),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~116_combout\);
+	combout => \adc_ram_shifter_1|data~305_combout\);
 
 -- Location: LCFF_X24_Y7_N19
-\adc_ram_shifter_1|data_b_1[106]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[234]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~116_combout\,
+	datain => \adc_ram_shifter_1|data~305_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(106));
+	regout => \adc_ram_shifter_1|data\(234));
 
 -- Location: LCCOMB_X24_Y10_N24
-\adc_ram_shifter_1|data_a_1~32\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~112\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~32_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(100))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(116))))
+-- \adc_ram_shifter_1|data~112_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(100))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(116))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47750,22 +47747,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(100),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(116),
-	combout => \adc_ram_shifter_1|data_a_1~32_combout\);
+	combout => \adc_ram_shifter_1|data~112_combout\);
 
 -- Location: LCFF_X24_Y10_N25
-\adc_ram_shifter_1|data_a_1[124]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[124]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~32_combout\,
+	datain => \adc_ram_shifter_1|data~112_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(124));
+	regout => \adc_ram_shifter_1|data\(124));
 
 -- Location: LCCOMB_X24_Y6_N10
-\adc_ram_shifter_1|data_a_2~22\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~88\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~22_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(110))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(126))))
+-- \adc_ram_shifter_1|data~88_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(110))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(126))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47776,22 +47773,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(110),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(126),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~22_combout\);
+	combout => \adc_ram_shifter_1|data~88_combout\);
 
 -- Location: LCFF_X24_Y6_N11
-\adc_ram_shifter_1|data_a_2[6]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[262]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~22_combout\,
+	datain => \adc_ram_shifter_1|data~88_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(6));
+	regout => \adc_ram_shifter_1|data\(262));
 
 -- Location: LCCOMB_X24_Y6_N20
-\adc_ram_shifter_1|data_b_1~15\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~63\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~15_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(47))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(63))))
+-- \adc_ram_shifter_1|data~63_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(47))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(63))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47802,22 +47799,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(47),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(63),
-	combout => \adc_ram_shifter_1|data_b_1~15_combout\);
+	combout => \adc_ram_shifter_1|data~63_combout\);
 
 -- Location: LCFF_X24_Y6_N21
-\adc_ram_shifter_1|data_b_1[71]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[199]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~15_combout\,
+	datain => \adc_ram_shifter_1|data~63_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(71));
+	regout => \adc_ram_shifter_1|data\(199));
 
 -- Location: LCCOMB_X22_Y4_N14
-\adc_ram_shifter_1|data_b_1~5\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~23\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~5_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(53)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(69)))
+-- \adc_ram_shifter_1|data~23_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(53)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(69)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47828,22 +47825,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(69),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(53),
-	combout => \adc_ram_shifter_1|data_b_1~5_combout\);
+	combout => \adc_ram_shifter_1|data~23_combout\);
 
 -- Location: LCFF_X22_Y4_N15
-\adc_ram_shifter_1|data_b_1[77]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[205]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~5_combout\,
+	datain => \adc_ram_shifter_1|data~23_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(77));
+	regout => \adc_ram_shifter_1|data\(205));
 
 -- Location: LCCOMB_X22_Y11_N2
-\adc_ram_shifter_1|data_a_2~37\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~180\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~37_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(5))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(21))))
+-- \adc_ram_shifter_1|data~180_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(5))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(21))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47854,22 +47851,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(5),
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(21),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~37_combout\);
+	combout => \adc_ram_shifter_1|data~180_combout\);
 
 -- Location: LCFF_X22_Y11_N3
-\adc_ram_shifter_1|data_a_2[29]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[285]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~37_combout\,
+	datain => \adc_ram_shifter_1|data~180_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(29));
+	regout => \adc_ram_shifter_1|data\(285));
 
 -- Location: LCCOMB_X24_Y9_N10
-\adc_ram_shifter_1|data_b_1~45\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~151\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~45_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(69)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(85)))
+-- \adc_ram_shifter_1|data~151_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(69)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(85)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47880,22 +47877,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(85),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(69),
-	combout => \adc_ram_shifter_1|data_b_1~45_combout\);
+	combout => \adc_ram_shifter_1|data~151_combout\);
 
 -- Location: LCFF_X24_Y9_N11
-\adc_ram_shifter_1|data_b_1[93]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[221]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~45_combout\,
+	datain => \adc_ram_shifter_1|data~151_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(93));
+	regout => \adc_ram_shifter_1|data\(221));
 
 -- Location: LCCOMB_X24_Y10_N10
-\adc_ram_shifter_1|data_b_1~43\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~143\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~43_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(67))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(83))))
+-- \adc_ram_shifter_1|data~143_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(67))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(83))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47906,22 +47903,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(67),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(83),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~43_combout\);
+	combout => \adc_ram_shifter_1|data~143_combout\);
 
 -- Location: LCFF_X24_Y10_N11
-\adc_ram_shifter_1|data_b_1[91]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[219]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~43_combout\,
+	datain => \adc_ram_shifter_1|data~143_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(91));
+	regout => \adc_ram_shifter_1|data\(219));
 
 -- Location: LCCOMB_X24_Y5_N20
-\adc_ram_shifter_1|data_a_2~21\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~84\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~21_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(109)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(125)))
+-- \adc_ram_shifter_1|data~84_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(109)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(125)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47932,22 +47929,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(125),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(109),
-	combout => \adc_ram_shifter_1|data_a_2~21_combout\);
+	combout => \adc_ram_shifter_1|data~84_combout\);
 
 -- Location: LCFF_X24_Y5_N21
-\adc_ram_shifter_1|data_a_2[5]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[261]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~21_combout\,
+	datain => \adc_ram_shifter_1|data~84_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(5));
+	regout => \adc_ram_shifter_1|data\(261));
 
 -- Location: LCCOMB_X24_Y6_N4
-\adc_ram_shifter_1|data_b_1~14\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~59\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~14_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(46))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(62))))
+-- \adc_ram_shifter_1|data~59_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(46))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(62))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47958,22 +47955,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(46),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(62),
-	combout => \adc_ram_shifter_1|data_b_1~14_combout\);
+	combout => \adc_ram_shifter_1|data~59_combout\);
 
 -- Location: LCFF_X24_Y6_N5
-\adc_ram_shifter_1|data_b_1[70]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[198]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~14_combout\,
+	datain => \adc_ram_shifter_1|data~59_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(70));
+	regout => \adc_ram_shifter_1|data\(198));
 
 -- Location: LCCOMB_X24_Y10_N30
-\adc_ram_shifter_1|data_b_1~41\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~135\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~41_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(65))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(81))))
+-- \adc_ram_shifter_1|data~135_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(65))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(81))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47984,22 +47981,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(65),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(81),
-	combout => \adc_ram_shifter_1|data_b_1~41_combout\);
+	combout => \adc_ram_shifter_1|data~135_combout\);
 
 -- Location: LCFF_X24_Y10_N31
-\adc_ram_shifter_1|data_b_1[89]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[217]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~41_combout\,
+	datain => \adc_ram_shifter_1|data~135_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(89));
+	regout => \adc_ram_shifter_1|data\(217));
 
 -- Location: LCCOMB_X24_Y5_N12
-\adc_ram_shifter_1|data_a_2~20\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~80\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~20_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(108)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(124)))
+-- \adc_ram_shifter_1|data~80_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(108)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(124)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48010,22 +48007,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(124),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(108),
-	combout => \adc_ram_shifter_1|data_a_2~20_combout\);
+	combout => \adc_ram_shifter_1|data~80_combout\);
 
 -- Location: LCFF_X24_Y5_N13
-\adc_ram_shifter_1|data_a_2[4]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[260]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~20_combout\,
+	datain => \adc_ram_shifter_1|data~80_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(4));
+	regout => \adc_ram_shifter_1|data\(260));
 
 -- Location: LCCOMB_X21_Y6_N20
-\adc_ram_shifter_1|data_b_1~11\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~47\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~11_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(43))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(59))))
+-- \adc_ram_shifter_1|data~47_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(43))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(59))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48036,22 +48033,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(43),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(59),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~11_combout\);
+	combout => \adc_ram_shifter_1|data~47_combout\);
 
 -- Location: LCFF_X21_Y6_N21
-\adc_ram_shifter_1|data_b_1[67]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[195]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~11_combout\,
+	datain => \adc_ram_shifter_1|data~47_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(67));
+	regout => \adc_ram_shifter_1|data\(195));
 
 -- Location: LCCOMB_X24_Y8_N0
-\adc_ram_shifter_1|data_b_1~4\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~19\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~4_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(52))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(68))))
+-- \adc_ram_shifter_1|data~19_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(52))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(68))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48062,22 +48059,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(52),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(68),
-	combout => \adc_ram_shifter_1|data_b_1~4_combout\);
+	combout => \adc_ram_shifter_1|data~19_combout\);
 
 -- Location: LCFF_X24_Y8_N1
-\adc_ram_shifter_1|data_b_1[76]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[204]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~4_combout\,
+	datain => \adc_ram_shifter_1|data~19_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(76));
+	regout => \adc_ram_shifter_1|data\(204));
 
 -- Location: LCCOMB_X24_Y8_N18
-\adc_ram_shifter_1|data_b_1~40\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~131\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~40_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(64)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(80)))
+-- \adc_ram_shifter_1|data~131_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(64)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(80)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48088,22 +48085,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(80),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(64),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~40_combout\);
+	combout => \adc_ram_shifter_1|data~131_combout\);
 
 -- Location: LCFF_X24_Y8_N19
-\adc_ram_shifter_1|data_b_1[88]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[216]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~40_combout\,
+	datain => \adc_ram_shifter_1|data~131_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(88));
+	regout => \adc_ram_shifter_1|data\(216));
 
 -- Location: LCCOMB_X19_Y7_N30
-\adc_ram_shifter_1|data_b_1~72\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~217\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~72_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(72))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(88))))
+-- \adc_ram_shifter_1|data~217_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(72))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(88))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48114,22 +48111,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(72),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(88),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~72_combout\);
+	combout => \adc_ram_shifter_1|data~217_combout\);
 
 -- Location: LCFF_X19_Y7_N31
-\adc_ram_shifter_1|data_b_1[96]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[224]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~72_combout\,
+	datain => \adc_ram_shifter_1|data~217_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(96));
+	regout => \adc_ram_shifter_1|data\(224));
 
 -- Location: LCCOMB_X24_Y9_N28
-\adc_ram_shifter_1|data_b_1~85\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~243\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~85_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(6)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(22)))
+-- \adc_ram_shifter_1|data~243_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(6)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(22)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48140,22 +48137,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(22),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(6),
-	combout => \adc_ram_shifter_1|data_b_1~85_combout\);
+	combout => \adc_ram_shifter_1|data~243_combout\);
 
 -- Location: LCFF_X24_Y9_N29
-\adc_ram_shifter_1|data_b_1[30]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[158]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~85_combout\,
+	datain => \adc_ram_shifter_1|data~243_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(30));
+	regout => \adc_ram_shifter_1|data\(158));
 
 -- Location: LCCOMB_X22_Y9_N20
-\adc_ram_shifter_1|data_b_1~114\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~301\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~114_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(81))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(97))))
+-- \adc_ram_shifter_1|data~301_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(81))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(97))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48166,22 +48163,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(81),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(97),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~114_combout\);
+	combout => \adc_ram_shifter_1|data~301_combout\);
 
 -- Location: LCFF_X22_Y9_N21
-\adc_ram_shifter_1|data_b_1[105]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[233]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~114_combout\,
+	datain => \adc_ram_shifter_1|data~301_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(105));
+	regout => \adc_ram_shifter_1|data\(233));
 
 -- Location: LCCOMB_X24_Y6_N8
-\adc_ram_shifter_1|data_b_1~39\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~127\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~39_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(31))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(47))))
+-- \adc_ram_shifter_1|data~127_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(31))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(47))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48192,22 +48189,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(31),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(47),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~39_combout\);
+	combout => \adc_ram_shifter_1|data~127_combout\);
 
 -- Location: LCFF_X24_Y6_N9
-\adc_ram_shifter_1|data_b_1[55]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[183]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~39_combout\,
+	datain => \adc_ram_shifter_1|data~127_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(55));
+	regout => \adc_ram_shifter_1|data\(183));
 
 -- Location: LCCOMB_X26_Y7_N28
-\adc_ram_shifter_1|data_a_2~19\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~76\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~19_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(107)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(123)))
+-- \adc_ram_shifter_1|data~76_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(107)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(123)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48218,22 +48215,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(123),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(107),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~19_combout\);
+	combout => \adc_ram_shifter_1|data~76_combout\);
 
 -- Location: LCFF_X26_Y7_N29
-\adc_ram_shifter_1|data_a_2[3]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[259]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~19_combout\,
+	datain => \adc_ram_shifter_1|data~76_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(3));
+	regout => \adc_ram_shifter_1|data\(259));
 
 -- Location: LCCOMB_X22_Y6_N20
-\adc_ram_shifter_1|data_b_1~52\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~179\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~52_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(60)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(76)))
+-- \adc_ram_shifter_1|data~179_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(60)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(76)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48244,22 +48241,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(76),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(60),
-	combout => \adc_ram_shifter_1|data_b_1~52_combout\);
+	combout => \adc_ram_shifter_1|data~179_combout\);
 
 -- Location: LCFF_X22_Y6_N21
-\adc_ram_shifter_1|data_b_1[84]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[212]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~52_combout\,
+	datain => \adc_ram_shifter_1|data~179_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(84));
+	regout => \adc_ram_shifter_1|data\(212));
 
 -- Location: LCCOMB_X24_Y8_N22
-\adc_ram_shifter_1|data_b_1~112\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~297\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~112_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(80))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(96))))
+-- \adc_ram_shifter_1|data~297_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(80))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(96))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48270,22 +48267,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(80),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(96),
-	combout => \adc_ram_shifter_1|data_b_1~112_combout\);
+	combout => \adc_ram_shifter_1|data~297_combout\);
 
 -- Location: LCFF_X24_Y8_N23
-\adc_ram_shifter_1|data_b_1[104]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[232]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~112_combout\,
+	datain => \adc_ram_shifter_1|data~297_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(104));
+	regout => \adc_ram_shifter_1|data\(232));
 
 -- Location: LCCOMB_X20_Y9_N14
-\adc_ram_shifter_1|data_b_1~98\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~269\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~98_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(89)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(105)))
+-- \adc_ram_shifter_1|data~269_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(89)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(105)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48296,22 +48293,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(105),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(89),
-	combout => \adc_ram_shifter_1|data_b_1~98_combout\);
+	combout => \adc_ram_shifter_1|data~269_combout\);
 
 -- Location: LCFF_X20_Y9_N15
-\adc_ram_shifter_1|data_b_1[113]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[241]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~98_combout\,
+	datain => \adc_ram_shifter_1|data~269_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(113));
+	regout => \adc_ram_shifter_1|data\(241));
 
 -- Location: LCCOMB_X19_Y6_N12
-\adc_ram_shifter_1|data_b_1~9\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~39\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~9_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(41)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(57)))
+-- \adc_ram_shifter_1|data~39_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(41)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(57)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48322,22 +48319,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(57),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(41),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~9_combout\);
+	combout => \adc_ram_shifter_1|data~39_combout\);
 
 -- Location: LCFF_X19_Y6_N13
-\adc_ram_shifter_1|data_b_1[65]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[193]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~9_combout\,
+	datain => \adc_ram_shifter_1|data~39_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(65));
+	regout => \adc_ram_shifter_1|data\(193));
 
 -- Location: LCCOMB_X24_Y4_N12
-\adc_ram_shifter_1|data_b_1~2\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~11\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~2_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(50))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(66))))
+-- \adc_ram_shifter_1|data~11_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(50))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(66))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48348,22 +48345,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(50),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(66),
-	combout => \adc_ram_shifter_1|data_b_1~2_combout\);
+	combout => \adc_ram_shifter_1|data~11_combout\);
 
 -- Location: LCFF_X24_Y4_N13
-\adc_ram_shifter_1|data_b_1[74]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[202]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~2_combout\,
+	datain => \adc_ram_shifter_1|data~11_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(74));
+	regout => \adc_ram_shifter_1|data\(202));
 
 -- Location: LCCOMB_X21_Y6_N28
-\adc_ram_shifter_1|data_b_1~51\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~175\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~51_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(59))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(75))))
+-- \adc_ram_shifter_1|data~175_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(59))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(75))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48374,22 +48371,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(59),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(75),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~51_combout\);
+	combout => \adc_ram_shifter_1|data~175_combout\);
 
 -- Location: LCFF_X21_Y6_N29
-\adc_ram_shifter_1|data_b_1[83]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[211]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~51_combout\,
+	datain => \adc_ram_shifter_1|data~175_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(83));
+	regout => \adc_ram_shifter_1|data\(211));
 
 -- Location: LCCOMB_X24_Y5_N18
-\adc_ram_shifter_1|data_a_1~102\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~292\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~102_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(95))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(111))))
+-- \adc_ram_shifter_1|data~292_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(95))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(111))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48400,22 +48397,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(95),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(111),
-	combout => \adc_ram_shifter_1|data_a_1~102_combout\);
+	combout => \adc_ram_shifter_1|data~292_combout\);
 
 -- Location: LCFF_X24_Y5_N19
-\adc_ram_shifter_1|data_a_1[119]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[119]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~102_combout\,
+	datain => \adc_ram_shifter_1|data~292_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(119));
+	regout => \adc_ram_shifter_1|data\(119));
 
 -- Location: LCCOMB_X22_Y7_N14
-\adc_ram_shifter_1|data_b_1~96\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~265\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~96_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(88)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(104)))
+-- \adc_ram_shifter_1|data~265_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(88)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(104)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48426,22 +48423,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(104),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(88),
-	combout => \adc_ram_shifter_1|data_b_1~96_combout\);
+	combout => \adc_ram_shifter_1|data~265_combout\);
 
 -- Location: LCFF_X22_Y7_N15
-\adc_ram_shifter_1|data_b_1[112]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[240]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~96_combout\,
+	datain => \adc_ram_shifter_1|data~265_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(112));
+	regout => \adc_ram_shifter_1|data\(240));
 
 -- Location: LCCOMB_X19_Y7_N8
-\adc_ram_shifter_1|data_b_1~83\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~239\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~83_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(5)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(21)))
+-- \adc_ram_shifter_1|data~239_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(5)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(21)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48452,22 +48449,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(21),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(5),
-	combout => \adc_ram_shifter_1|data_b_1~83_combout\);
+	combout => \adc_ram_shifter_1|data~239_combout\);
 
 -- Location: LCFF_X19_Y7_N9
-\adc_ram_shifter_1|data_b_1[29]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[157]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~83_combout\,
+	datain => \adc_ram_shifter_1|data~239_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(29));
+	regout => \adc_ram_shifter_1|data\(157));
 
 -- Location: LCCOMB_X22_Y12_N10
-\adc_ram_shifter_1|data_a_1~112\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~312\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~112_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(84))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(100))))
+-- \adc_ram_shifter_1|data~312_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(84))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(100))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48478,22 +48475,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(84),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(100),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~112_combout\);
+	combout => \adc_ram_shifter_1|data~312_combout\);
 
 -- Location: LCFF_X22_Y12_N11
-\adc_ram_shifter_1|data_a_1[108]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[108]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~112_combout\,
+	datain => \adc_ram_shifter_1|data~312_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(108));
+	regout => \adc_ram_shifter_1|data\(108));
 
 -- Location: LCCOMB_X19_Y6_N18
-\adc_ram_shifter_1|data_a_2~18\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~72\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~18_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(106))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(122))))
+-- \adc_ram_shifter_1|data~72_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(106))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(122))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48504,22 +48501,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(106),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(122),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~18_combout\);
+	combout => \adc_ram_shifter_1|data~72_combout\);
 
 -- Location: LCFF_X19_Y6_N19
-\adc_ram_shifter_1|data_a_2[2]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[258]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~18_combout\,
+	datain => \adc_ram_shifter_1|data~72_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(2));
+	regout => \adc_ram_shifter_1|data\(258));
 
 -- Location: LCCOMB_X20_Y4_N0
-\adc_ram_shifter_1|data_b_1~1\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~7\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~1_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(49))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(65))))
+-- \adc_ram_shifter_1|data~7_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(49))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(65))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48530,22 +48527,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(49),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(65),
-	combout => \adc_ram_shifter_1|data_b_1~1_combout\);
+	combout => \adc_ram_shifter_1|data~7_combout\);
 
 -- Location: LCFF_X20_Y4_N1
-\adc_ram_shifter_1|data_b_1[73]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[201]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~1_combout\,
+	datain => \adc_ram_shifter_1|data~7_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(73));
+	regout => \adc_ram_shifter_1|data\(201));
 
 -- Location: LCCOMB_X22_Y11_N8
-\adc_ram_shifter_1|data_b_1~86\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~245\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~86_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(79))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(95))))
+-- \adc_ram_shifter_1|data~245_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(79))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(95))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48556,22 +48553,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(79),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(95),
-	combout => \adc_ram_shifter_1|data_b_1~86_combout\);
+	combout => \adc_ram_shifter_1|data~245_combout\);
 
 -- Location: LCFF_X22_Y11_N9
-\adc_ram_shifter_1|data_b_1[103]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[231]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~86_combout\,
+	datain => \adc_ram_shifter_1|data~245_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(103));
+	regout => \adc_ram_shifter_1|data\(231));
 
 -- Location: LCCOMB_X21_Y4_N26
-\adc_ram_shifter_1|data_a_1~28\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~104\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~28_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(98)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(114)))
+-- \adc_ram_shifter_1|data~104_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(98)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(114)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48582,22 +48579,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(114),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(98),
-	combout => \adc_ram_shifter_1|data_a_1~28_combout\);
+	combout => \adc_ram_shifter_1|data~104_combout\);
 
 -- Location: LCFF_X21_Y4_N27
-\adc_ram_shifter_1|data_a_1[122]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[122]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~28_combout\,
+	datain => \adc_ram_shifter_1|data~104_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(122));
+	regout => \adc_ram_shifter_1|data\(122));
 
 -- Location: LCCOMB_X21_Y5_N22
-\adc_ram_shifter_1|data_b_1~50\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~171\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~50_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(58)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(74)))
+-- \adc_ram_shifter_1|data~171_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(58)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(74)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48608,22 +48605,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(74),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(58),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~50_combout\);
+	combout => \adc_ram_shifter_1|data~171_combout\);
 
 -- Location: LCFF_X21_Y5_N23
-\adc_ram_shifter_1|data_b_1[82]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[210]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~50_combout\,
+	datain => \adc_ram_shifter_1|data~171_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(82));
+	regout => \adc_ram_shifter_1|data\(210));
 
 -- Location: LCCOMB_X22_Y8_N18
-\adc_ram_shifter_1|data_a_1~76\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~240\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~76_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(78))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(94))))
+-- \adc_ram_shifter_1|data~240_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(78))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(94))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48634,22 +48631,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(78),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(94),
-	combout => \adc_ram_shifter_1|data_a_1~76_combout\);
+	combout => \adc_ram_shifter_1|data~240_combout\);
 
 -- Location: LCFF_X22_Y8_N19
-\adc_ram_shifter_1|data_a_1[102]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[102]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~76_combout\,
+	datain => \adc_ram_shifter_1|data~240_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(102));
+	regout => \adc_ram_shifter_1|data\(102));
 
 -- Location: LCCOMB_X24_Y6_N2
-\adc_ram_shifter_1|data_b_1~37\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~123\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~37_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(30)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(46)))
+-- \adc_ram_shifter_1|data~123_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(30)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(46)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48660,22 +48657,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(46),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(30),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~37_combout\);
+	combout => \adc_ram_shifter_1|data~123_combout\);
 
 -- Location: LCFF_X24_Y6_N3
-\adc_ram_shifter_1|data_b_1[54]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[182]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~37_combout\,
+	datain => \adc_ram_shifter_1|data~123_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(54));
+	regout => \adc_ram_shifter_1|data\(182));
 
 -- Location: LCCOMB_X22_Y4_N24
-\adc_ram_shifter_1|data_b_1~23\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~95\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~23_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(39)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(55)))
+-- \adc_ram_shifter_1|data~95_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(39)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(55)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48686,22 +48683,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(55),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(39),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~23_combout\);
+	combout => \adc_ram_shifter_1|data~95_combout\);
 
 -- Location: LCFF_X22_Y4_N25
-\adc_ram_shifter_1|data_b_1[63]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[191]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~23_combout\,
+	datain => \adc_ram_shifter_1|data~95_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(63));
+	regout => \adc_ram_shifter_1|data\(191));
 
 -- Location: LCCOMB_X19_Y4_N24
-\adc_ram_shifter_1|data_b_1~0\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~3\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~0_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(48)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(64)))
+-- \adc_ram_shifter_1|data~3_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(48)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(64)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48712,22 +48709,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(64),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(48),
-	combout => \adc_ram_shifter_1|data_b_1~0_combout\);
+	combout => \adc_ram_shifter_1|data~3_combout\);
 
 -- Location: LCFF_X19_Y4_N25
-\adc_ram_shifter_1|data_b_1[72]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[200]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~0_combout\,
+	datain => \adc_ram_shifter_1|data~3_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(72));
+	regout => \adc_ram_shifter_1|data\(200));
 
 -- Location: LCCOMB_X22_Y9_N0
-\adc_ram_shifter_1|data_b_1~49\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~167\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~49_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(57)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(73)))
+-- \adc_ram_shifter_1|data~167_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(57)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(73)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48738,22 +48735,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(73),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(57),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~49_combout\);
+	combout => \adc_ram_shifter_1|data~167_combout\);
 
 -- Location: LCFF_X22_Y9_N1
-\adc_ram_shifter_1|data_b_1[81]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[209]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~49_combout\,
+	datain => \adc_ram_shifter_1|data~167_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(81));
+	regout => \adc_ram_shifter_1|data\(209));
 
 -- Location: LCCOMB_X22_Y12_N26
-\adc_ram_shifter_1|data_a_1~74\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~236\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~74_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(77))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(93))))
+-- \adc_ram_shifter_1|data~236_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(77))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(93))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48764,22 +48761,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(77),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(93),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~74_combout\);
+	combout => \adc_ram_shifter_1|data~236_combout\);
 
 -- Location: LCFF_X22_Y12_N27
-\adc_ram_shifter_1|data_a_1[101]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[101]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~74_combout\,
+	datain => \adc_ram_shifter_1|data~236_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(101));
+	regout => \adc_ram_shifter_1|data\(101));
 
 -- Location: LCCOMB_X22_Y10_N18
-\adc_ram_shifter_1|data_a_1~110\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~308\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~110_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(83))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(99))))
+-- \adc_ram_shifter_1|data~308_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(83))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(99))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48790,22 +48787,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(83),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(99),
-	combout => \adc_ram_shifter_1|data_a_1~110_combout\);
+	combout => \adc_ram_shifter_1|data~308_combout\);
 
 -- Location: LCFF_X22_Y10_N19
-\adc_ram_shifter_1|data_a_1[107]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[107]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~110_combout\,
+	datain => \adc_ram_shifter_1|data~308_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(107));
+	regout => \adc_ram_shifter_1|data\(107));
 
 -- Location: LCCOMB_X22_Y6_N22
-\adc_ram_shifter_1|data_a_1~14\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~58\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~14_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(46)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(62)))
+-- \adc_ram_shifter_1|data~58_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(46)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(62)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48816,22 +48813,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(62),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(46),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~14_combout\);
+	combout => \adc_ram_shifter_1|data~58_combout\);
 
 -- Location: LCFF_X22_Y6_N23
-\adc_ram_shifter_1|data_a_1[70]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[70]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~14_combout\,
+	datain => \adc_ram_shifter_1|data~58_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(70));
+	regout => \adc_ram_shifter_1|data\(70));
 
 -- Location: LCCOMB_X24_Y12_N18
-\adc_ram_shifter_1|data_a_1~47\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~158\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~47_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(71)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(87)))
+-- \adc_ram_shifter_1|data~158_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(71)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(87)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48842,22 +48839,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(87),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(71),
-	combout => \adc_ram_shifter_1|data_a_1~47_combout\);
+	combout => \adc_ram_shifter_1|data~158_combout\);
 
 -- Location: LCFF_X24_Y12_N19
-\adc_ram_shifter_1|data_a_1[95]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[95]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~47_combout\,
+	datain => \adc_ram_shifter_1|data~158_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(95));
+	regout => \adc_ram_shifter_1|data\(95));
 
 -- Location: LCCOMB_X22_Y12_N4
-\adc_ram_shifter_1|data_a_1~72\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~232\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~72_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(76)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(92)))
+-- \adc_ram_shifter_1|data~232_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(76)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(92)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48868,22 +48865,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(92),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(76),
-	combout => \adc_ram_shifter_1|data_a_1~72_combout\);
+	combout => \adc_ram_shifter_1|data~232_combout\);
 
 -- Location: LCFF_X22_Y12_N5
-\adc_ram_shifter_1|data_a_1[100]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[100]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~72_combout\,
+	datain => \adc_ram_shifter_1|data~232_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(100));
+	regout => \adc_ram_shifter_1|data\(100));
 
 -- Location: LCCOMB_X22_Y9_N16
-\adc_ram_shifter_1|data_a_1~104\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~296\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~104_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(80))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(96))))
+-- \adc_ram_shifter_1|data~296_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(80))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(96))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48894,22 +48891,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(80),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(96),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~104_combout\);
+	combout => \adc_ram_shifter_1|data~296_combout\);
 
 -- Location: LCFF_X22_Y9_N17
-\adc_ram_shifter_1|data_a_1[104]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[104]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~104_combout\,
+	datain => \adc_ram_shifter_1|data~296_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(104));
+	regout => \adc_ram_shifter_1|data\(104));
 
 -- Location: LCCOMB_X24_Y5_N24
-\adc_ram_shifter_1|data_b_1~35\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~119\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~35_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(29))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(45))))
+-- \adc_ram_shifter_1|data~119_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(29))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(45))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48920,12 +48917,12 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(29),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(45),
-	combout => \adc_ram_shifter_1|data_b_1~35_combout\);
+	combout => \adc_ram_shifter_1|data~119_combout\);
 
 -- Location: LCCOMB_X24_Y6_N24
-\adc_ram_shifter_1|data_b_1[53]~feeder\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data[181]~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1[53]~feeder_combout\ = \adc_ram_shifter_1|data_b_1~35_combout\
+-- \adc_ram_shifter_1|data[181]~feeder_combout\ = \adc_ram_shifter_1|data~119_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48933,23 +48930,23 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datad => \adc_ram_shifter_1|data_b_1~35_combout\,
-	combout => \adc_ram_shifter_1|data_b_1[53]~feeder_combout\);
+	datad => \adc_ram_shifter_1|data~119_combout\,
+	combout => \adc_ram_shifter_1|data[181]~feeder_combout\);
 
 -- Location: LCFF_X24_Y6_N25
-\adc_ram_shifter_1|data_b_1[53]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[181]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1[53]~feeder_combout\,
+	datain => \adc_ram_shifter_1|data[181]~feeder_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(53));
+	regout => \adc_ram_shifter_1|data\(181));
 
 -- Location: LCCOMB_X24_Y4_N20
-\adc_ram_shifter_1|data_b_1~22\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~91\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~22_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(38)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(54)))
+-- \adc_ram_shifter_1|data~91_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(38)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(54)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48960,22 +48957,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(54),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(38),
-	combout => \adc_ram_shifter_1|data_b_1~22_combout\);
+	combout => \adc_ram_shifter_1|data~91_combout\);
 
 -- Location: LCFF_X24_Y4_N21
-\adc_ram_shifter_1|data_b_1[62]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[190]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~22_combout\,
+	datain => \adc_ram_shifter_1|data~91_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(62));
+	regout => \adc_ram_shifter_1|data\(190));
 
 -- Location: LCCOMB_X24_Y11_N8
-\adc_ram_shifter_1|data_a_1~55\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~190\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~55_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(63)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(79)))
+-- \adc_ram_shifter_1|data~190_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(63)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(79)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -48986,22 +48983,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(79),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(63),
-	combout => \adc_ram_shifter_1|data_a_1~55_combout\);
+	combout => \adc_ram_shifter_1|data~190_combout\);
 
 -- Location: LCFF_X24_Y11_N9
-\adc_ram_shifter_1|data_a_1[87]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[87]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~55_combout\,
+	datain => \adc_ram_shifter_1|data~190_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(87));
+	regout => \adc_ram_shifter_1|data\(87));
 
 -- Location: LCCOMB_X22_Y10_N10
-\adc_ram_shifter_1|data_a_1~45\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~150\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~45_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(69))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(85))))
+-- \adc_ram_shifter_1|data~150_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(69))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(85))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49012,22 +49009,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(69),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(85),
-	combout => \adc_ram_shifter_1|data_a_1~45_combout\);
+	combout => \adc_ram_shifter_1|data~150_combout\);
 
 -- Location: LCFF_X22_Y10_N11
-\adc_ram_shifter_1|data_a_1[93]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[93]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~45_combout\,
+	datain => \adc_ram_shifter_1|data~150_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(93));
+	regout => \adc_ram_shifter_1|data\(93));
 
 -- Location: LCCOMB_X20_Y9_N2
-\adc_ram_shifter_1|data_b_2~80\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~409\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_2~80_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(24)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(40)))
+-- \adc_ram_shifter_1|data~409_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_b\(24)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_b\(40)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49038,22 +49035,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_b\(40),
 	datab => \ram2|altsyncram_component|auto_generated|q_b\(24),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_2~80_combout\);
+	combout => \adc_ram_shifter_1|data~409_combout\);
 
 -- Location: LCFF_X20_Y9_N3
-\adc_ram_shifter_1|data_b_2[48]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[432]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_2~80_combout\,
+	datain => \adc_ram_shifter_1|data~409_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_2\(48));
+	regout => \adc_ram_shifter_1|data\(432));
 
 -- Location: LCCOMB_X21_Y8_N18
-\adc_ram_shifter_1|data_a_2~106\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~460\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~106_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(34)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(50)))
+-- \adc_ram_shifter_1|data~460_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(34)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(50)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49064,22 +49061,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(50),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(34),
-	combout => \adc_ram_shifter_1|data_a_2~106_combout\);
+	combout => \adc_ram_shifter_1|data~460_combout\);
 
 -- Location: LCFF_X21_Y8_N19
-\adc_ram_shifter_1|data_a_2[58]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[314]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~106_combout\,
+	datain => \adc_ram_shifter_1|data~460_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(58));
+	regout => \adc_ram_shifter_1|data\(314));
 
 -- Location: LCCOMB_X21_Y3_N28
-\adc_ram_shifter_1|data_a_2~64\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~376\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~64_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(72))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(88))))
+-- \adc_ram_shifter_1|data~376_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(72))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(88))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49090,22 +49087,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(72),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(88),
-	combout => \adc_ram_shifter_1|data_a_2~64_combout\);
+	combout => \adc_ram_shifter_1|data~376_combout\);
 
 -- Location: LCFF_X21_Y3_N29
-\adc_ram_shifter_1|data_a_2[96]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[352]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~64_combout\,
+	datain => \adc_ram_shifter_1|data~376_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(96));
+	regout => \adc_ram_shifter_1|data\(352));
 
 -- Location: LCCOMB_X24_Y3_N20
-\adc_ram_shifter_1|data_a_2~48\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~344\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~48_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(88))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(104))))
+-- \adc_ram_shifter_1|data~344_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(88))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(104))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49116,22 +49113,22 @@ PORT MAP (
 	dataa => \ram2|altsyncram_component|auto_generated|q_a\(88),
 	datab => \ram2|altsyncram_component|auto_generated|q_a\(104),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_2~48_combout\);
+	combout => \adc_ram_shifter_1|data~344_combout\);
 
 -- Location: LCFF_X24_Y3_N21
-\adc_ram_shifter_1|data_a_2[112]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[368]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~48_combout\,
+	datain => \adc_ram_shifter_1|data~344_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(112));
+	regout => \adc_ram_shifter_1|data\(368));
 
 -- Location: LCCOMB_X22_Y5_N30
-\adc_ram_shifter_1|data_b_1~111\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~295\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~111_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(23)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(39)))
+-- \adc_ram_shifter_1|data~295_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(23)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(39)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49142,22 +49139,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(39),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(23),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~111_combout\);
+	combout => \adc_ram_shifter_1|data~295_combout\);
 
 -- Location: LCFF_X22_Y5_N31
-\adc_ram_shifter_1|data_b_1[47]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[175]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~111_combout\,
+	datain => \adc_ram_shifter_1|data~295_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(47));
+	regout => \adc_ram_shifter_1|data\(175));
 
 -- Location: LCCOMB_X22_Y7_N20
-\adc_ram_shifter_1|data_b_1~103\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~279\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~103_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(19))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(35))))
+-- \adc_ram_shifter_1|data~279_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(19))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(35))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49168,22 +49165,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(19),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(35),
-	combout => \adc_ram_shifter_1|data_b_1~103_combout\);
+	combout => \adc_ram_shifter_1|data~279_combout\);
 
 -- Location: LCFF_X22_Y7_N21
-\adc_ram_shifter_1|data_b_1[43]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[171]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~103_combout\,
+	datain => \adc_ram_shifter_1|data~279_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(43));
+	regout => \adc_ram_shifter_1|data\(171));
 
 -- Location: LCCOMB_X24_Y4_N30
-\adc_ram_shifter_1|data_b_1~109\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~291\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~109_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(22))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(38))))
+-- \adc_ram_shifter_1|data~291_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(22))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(38))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49194,22 +49191,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(22),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(38),
-	combout => \adc_ram_shifter_1|data_b_1~109_combout\);
+	combout => \adc_ram_shifter_1|data~291_combout\);
 
 -- Location: LCFF_X24_Y4_N31
-\adc_ram_shifter_1|data_b_1[46]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[174]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~109_combout\,
+	datain => \adc_ram_shifter_1|data~291_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(46));
+	regout => \adc_ram_shifter_1|data\(174));
 
 -- Location: LCCOMB_X22_Y3_N4
-\adc_ram_shifter_1|data_b_1~33\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~115\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~33_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(28))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(44))))
+-- \adc_ram_shifter_1|data~115_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(28))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(44))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49220,22 +49217,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(28),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(44),
-	combout => \adc_ram_shifter_1|data_b_1~33_combout\);
+	combout => \adc_ram_shifter_1|data~115_combout\);
 
 -- Location: LCFF_X22_Y3_N5
-\adc_ram_shifter_1|data_b_1[52]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[180]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~33_combout\,
+	datain => \adc_ram_shifter_1|data~115_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(52));
+	regout => \adc_ram_shifter_1|data\(180));
 
 -- Location: LCCOMB_X22_Y2_N16
-\adc_ram_shifter_1|data_b_1~20\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~83\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~20_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(36))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(52))))
+-- \adc_ram_shifter_1|data~83_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(36))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(52))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49246,22 +49243,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(36),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(52),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~20_combout\);
+	combout => \adc_ram_shifter_1|data~83_combout\);
 
 -- Location: LCFF_X22_Y2_N17
-\adc_ram_shifter_1|data_b_1[60]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[188]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~20_combout\,
+	datain => \adc_ram_shifter_1|data~83_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(60));
+	regout => \adc_ram_shifter_1|data\(188));
 
 -- Location: LCCOMB_X20_Y6_N22
-\adc_ram_shifter_1|data_a_1~13\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~54\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~13_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(45)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(61)))
+-- \adc_ram_shifter_1|data~54_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(45)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(61)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49272,22 +49269,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(61),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(45),
-	combout => \adc_ram_shifter_1|data_a_1~13_combout\);
+	combout => \adc_ram_shifter_1|data~54_combout\);
 
 -- Location: LCFF_X20_Y6_N23
-\adc_ram_shifter_1|data_a_1[69]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[69]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~13_combout\,
+	datain => \adc_ram_shifter_1|data~54_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(69));
+	regout => \adc_ram_shifter_1|data\(69));
 
 -- Location: LCCOMB_X22_Y12_N14
-\adc_ram_shifter_1|data_a_1~44\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~146\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~44_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(68)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(84)))
+-- \adc_ram_shifter_1|data~146_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(68)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(84)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49298,22 +49295,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(84),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(68),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~44_combout\);
+	combout => \adc_ram_shifter_1|data~146_combout\);
 
 -- Location: LCFF_X22_Y12_N15
-\adc_ram_shifter_1|data_a_1[92]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[92]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~44_combout\,
+	datain => \adc_ram_shifter_1|data~146_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(92));
+	regout => \adc_ram_shifter_1|data\(92));
 
 -- Location: LCCOMB_X22_Y10_N14
-\adc_ram_shifter_1|data_a_1~43\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~142\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~43_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(67)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(83)))
+-- \adc_ram_shifter_1|data~142_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(67)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(83)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49324,22 +49321,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(83),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(67),
-	combout => \adc_ram_shifter_1|data_a_1~43_combout\);
+	combout => \adc_ram_shifter_1|data~142_combout\);
 
 -- Location: LCFF_X22_Y10_N15
-\adc_ram_shifter_1|data_a_1[91]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[91]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~43_combout\,
+	datain => \adc_ram_shifter_1|data~142_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(91));
+	regout => \adc_ram_shifter_1|data\(91));
 
 -- Location: LCCOMB_X24_Y8_N4
-\adc_ram_shifter_1|data_a_1~7\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~30\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~7_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(55))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(71))))
+-- \adc_ram_shifter_1|data~30_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(55))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(71))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49350,22 +49347,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(55),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(71),
-	combout => \adc_ram_shifter_1|data_a_1~7_combout\);
+	combout => \adc_ram_shifter_1|data~30_combout\);
 
 -- Location: LCFF_X24_Y8_N5
-\adc_ram_shifter_1|data_a_1[79]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[79]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~7_combout\,
+	datain => \adc_ram_shifter_1|data~30_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(79));
+	regout => \adc_ram_shifter_1|data\(79));
 
 -- Location: LCCOMB_X22_Y12_N24
-\adc_ram_shifter_1|data_a_1~52\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~178\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~52_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(60)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(76)))
+-- \adc_ram_shifter_1|data~178_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(60)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(76)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49376,22 +49373,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(76),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(60),
-	combout => \adc_ram_shifter_1|data_a_1~52_combout\);
+	combout => \adc_ram_shifter_1|data~178_combout\);
 
 -- Location: LCFF_X22_Y12_N25
-\adc_ram_shifter_1|data_a_1[84]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[84]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~52_combout\,
+	datain => \adc_ram_shifter_1|data~178_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(84));
+	regout => \adc_ram_shifter_1|data\(84));
 
 -- Location: LCCOMB_X24_Y6_N14
-\adc_ram_shifter_1|data_a_1~42\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~138\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~42_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(66)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(82)))
+-- \adc_ram_shifter_1|data~138_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(66)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(82)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49402,22 +49399,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(82),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(66),
-	combout => \adc_ram_shifter_1|data_a_1~42_combout\);
+	combout => \adc_ram_shifter_1|data~138_combout\);
 
 -- Location: LCFF_X24_Y6_N15
-\adc_ram_shifter_1|data_a_1[90]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[90]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~42_combout\,
+	datain => \adc_ram_shifter_1|data~138_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(90));
+	regout => \adc_ram_shifter_1|data\(90));
 
 -- Location: LCCOMB_X19_Y4_N14
-\adc_ram_shifter_1|data_b_1~19\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~79\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~19_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(35)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(51)))
+-- \adc_ram_shifter_1|data~79_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(35)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(51)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49428,22 +49425,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(51),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(35),
-	combout => \adc_ram_shifter_1|data_b_1~19_combout\);
+	combout => \adc_ram_shifter_1|data~79_combout\);
 
 -- Location: LCFF_X19_Y4_N15
-\adc_ram_shifter_1|data_b_1[59]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[187]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~19_combout\,
+	datain => \adc_ram_shifter_1|data~79_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(59));
+	regout => \adc_ram_shifter_1|data\(187));
 
 -- Location: LCCOMB_X24_Y4_N18
-\adc_ram_shifter_1|data_b_1~18\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~75\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~18_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(34))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(50))))
+-- \adc_ram_shifter_1|data~75_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(34))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(50))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49454,22 +49451,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(34),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(50),
-	combout => \adc_ram_shifter_1|data_b_1~18_combout\);
+	combout => \adc_ram_shifter_1|data~75_combout\);
 
 -- Location: LCFF_X24_Y4_N19
-\adc_ram_shifter_1|data_b_1[58]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[186]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~18_combout\,
+	datain => \adc_ram_shifter_1|data~75_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(58));
+	regout => \adc_ram_shifter_1|data\(186));
 
 -- Location: LCCOMB_X22_Y6_N4
-\adc_ram_shifter_1|data_a_1~54\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~186\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~54_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(62)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(78)))
+-- \adc_ram_shifter_1|data~186_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(62)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(78)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49480,22 +49477,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(78),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(62),
-	combout => \adc_ram_shifter_1|data_a_1~54_combout\);
+	combout => \adc_ram_shifter_1|data~186_combout\);
 
 -- Location: LCFF_X22_Y6_N5
-\adc_ram_shifter_1|data_a_1[86]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[86]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~54_combout\,
+	datain => \adc_ram_shifter_1|data~186_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(86));
+	regout => \adc_ram_shifter_1|data\(86));
 
 -- Location: LCCOMB_X24_Y4_N10
-\adc_ram_shifter_1|data_a_1~118\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~324\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~118_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(87))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(103))))
+-- \adc_ram_shifter_1|data~324_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(87))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(103))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49506,22 +49503,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(87),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(103),
-	combout => \adc_ram_shifter_1|data_a_1~118_combout\);
+	combout => \adc_ram_shifter_1|data~324_combout\);
 
 -- Location: LCFF_X24_Y4_N11
-\adc_ram_shifter_1|data_a_1[111]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[111]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~118_combout\,
+	datain => \adc_ram_shifter_1|data~324_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(111));
+	regout => \adc_ram_shifter_1|data\(111));
 
 -- Location: LCCOMB_X22_Y4_N26
-\adc_ram_shifter_1|data_b_1~107\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~287\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~107_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(21))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(37))))
+-- \adc_ram_shifter_1|data~287_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(21))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(37))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49532,22 +49529,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(21),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(37),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~107_combout\);
+	combout => \adc_ram_shifter_1|data~287_combout\);
 
 -- Location: LCFF_X22_Y4_N27
-\adc_ram_shifter_1|data_b_1[45]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[173]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~107_combout\,
+	datain => \adc_ram_shifter_1|data~287_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(45));
+	regout => \adc_ram_shifter_1|data\(173));
 
 -- Location: LCCOMB_X22_Y2_N22
-\adc_ram_shifter_1|data_b_1~105\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~283\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~105_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(20)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(36)))
+-- \adc_ram_shifter_1|data~283_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(20)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(36)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49558,22 +49555,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(36),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(20),
-	combout => \adc_ram_shifter_1|data_b_1~105_combout\);
+	combout => \adc_ram_shifter_1|data~283_combout\);
 
 -- Location: LCFF_X22_Y2_N23
-\adc_ram_shifter_1|data_b_1[44]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[172]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~105_combout\,
+	datain => \adc_ram_shifter_1|data~283_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(44));
+	regout => \adc_ram_shifter_1|data\(172));
 
 -- Location: LCCOMB_X22_Y6_N18
-\adc_ram_shifter_1|data_a_1~12\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~50\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~12_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(44)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(60)))
+-- \adc_ram_shifter_1|data~50_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(44)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(60)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49584,22 +49581,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(60),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(44),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~12_combout\);
+	combout => \adc_ram_shifter_1|data~50_combout\);
 
 -- Location: LCFF_X22_Y6_N19
-\adc_ram_shifter_1|data_a_1[68]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[68]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~12_combout\,
+	datain => \adc_ram_shifter_1|data~50_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(68));
+	regout => \adc_ram_shifter_1|data\(68));
 
 -- Location: LCCOMB_X20_Y10_N18
-\adc_ram_shifter_1|data_a_1~6\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~26\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~6_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(54))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(70))))
+-- \adc_ram_shifter_1|data~26_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(54))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(70))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49610,22 +49607,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(54),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(70),
-	combout => \adc_ram_shifter_1|data_a_1~6_combout\);
+	combout => \adc_ram_shifter_1|data~26_combout\);
 
 -- Location: LCFF_X20_Y10_N19
-\adc_ram_shifter_1|data_a_1[78]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[78]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~6_combout\,
+	datain => \adc_ram_shifter_1|data~26_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(78));
+	regout => \adc_ram_shifter_1|data\(78));
 
 -- Location: LCCOMB_X22_Y10_N16
-\adc_ram_shifter_1|data_a_1~70\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~228\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~70_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(75)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(91)))
+-- \adc_ram_shifter_1|data~228_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(75)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(91)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49636,22 +49633,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(91),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(75),
-	combout => \adc_ram_shifter_1|data_a_1~70_combout\);
+	combout => \adc_ram_shifter_1|data~228_combout\);
 
 -- Location: LCFF_X22_Y10_N17
-\adc_ram_shifter_1|data_a_1[99]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[99]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~70_combout\,
+	datain => \adc_ram_shifter_1|data~228_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(99));
+	regout => \adc_ram_shifter_1|data\(99));
 
 -- Location: LCCOMB_X22_Y5_N8
-\adc_ram_shifter_1|data_b_1~121\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~315\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~121_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(12)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(28)))
+-- \adc_ram_shifter_1|data~315_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(12)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(28)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49662,22 +49659,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(28),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(12),
-	combout => \adc_ram_shifter_1|data_b_1~121_combout\);
+	combout => \adc_ram_shifter_1|data~315_combout\);
 
 -- Location: LCFF_X22_Y5_N9
-\adc_ram_shifter_1|data_b_1[36]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[164]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~121_combout\,
+	datain => \adc_ram_shifter_1|data~315_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(36));
+	regout => \adc_ram_shifter_1|data\(164));
 
 -- Location: LCCOMB_X22_Y5_N4
-\adc_ram_shifter_1|data_b_1~101\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~275\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~101_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(18)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(34)))
+-- \adc_ram_shifter_1|data~275_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(18)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(34)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49688,22 +49685,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(34),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(18),
-	combout => \adc_ram_shifter_1|data_b_1~101_combout\);
+	combout => \adc_ram_shifter_1|data~275_combout\);
 
 -- Location: LCFF_X22_Y5_N5
-\adc_ram_shifter_1|data_b_1[42]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[170]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~101_combout\,
+	datain => \adc_ram_shifter_1|data~275_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(42));
+	regout => \adc_ram_shifter_1|data\(170));
 
 -- Location: LCCOMB_X20_Y4_N24
-\adc_ram_shifter_1|data_b_1~99\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~271\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~99_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(17)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(33)))
+-- \adc_ram_shifter_1|data~271_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(17)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(33)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49714,22 +49711,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(33),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(17),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~99_combout\);
+	combout => \adc_ram_shifter_1|data~271_combout\);
 
 -- Location: LCFF_X20_Y4_N25
-\adc_ram_shifter_1|data_b_1[41]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[169]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~99_combout\,
+	datain => \adc_ram_shifter_1|data~271_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(41));
+	regout => \adc_ram_shifter_1|data\(169));
 
 -- Location: LCCOMB_X21_Y5_N6
-\adc_ram_shifter_1|data_b_1~29\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~107\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~29_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(26))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(42))))
+-- \adc_ram_shifter_1|data~107_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(26))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(42))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49740,22 +49737,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(26),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(42),
-	combout => \adc_ram_shifter_1|data_b_1~29_combout\);
+	combout => \adc_ram_shifter_1|data~107_combout\);
 
 -- Location: LCFF_X21_Y5_N7
-\adc_ram_shifter_1|data_b_1[50]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[178]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~29_combout\,
+	datain => \adc_ram_shifter_1|data~107_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(50));
+	regout => \adc_ram_shifter_1|data\(178));
 
 -- Location: LCCOMB_X22_Y9_N14
-\adc_ram_shifter_1|data_a_1~11\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~46\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~11_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(43))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(59))))
+-- \adc_ram_shifter_1|data~46_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(43))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(59))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49766,22 +49763,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(43),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(59),
-	combout => \adc_ram_shifter_1|data_a_1~11_combout\);
+	combout => \adc_ram_shifter_1|data~46_combout\);
 
 -- Location: LCFF_X22_Y9_N15
-\adc_ram_shifter_1|data_a_1[67]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[67]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~11_combout\,
+	datain => \adc_ram_shifter_1|data~46_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(67));
+	regout => \adc_ram_shifter_1|data\(67));
 
 -- Location: LCCOMB_X22_Y10_N26
-\adc_ram_shifter_1|data_a_1~5\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~22\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~5_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(53)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(69)))
+-- \adc_ram_shifter_1|data~22_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(53)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(69)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49792,22 +49789,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(69),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(53),
-	combout => \adc_ram_shifter_1|data_a_1~5_combout\);
+	combout => \adc_ram_shifter_1|data~22_combout\);
 
 -- Location: LCFF_X22_Y10_N27
-\adc_ram_shifter_1|data_a_1[77]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[77]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~5_combout\,
+	datain => \adc_ram_shifter_1|data~22_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(77));
+	regout => \adc_ram_shifter_1|data\(77));
 
 -- Location: LCCOMB_X25_Y9_N24
-\adc_ram_shifter_1|data_a_1~68\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~224\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~68_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(74))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(90))))
+-- \adc_ram_shifter_1|data~224_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(74))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(90))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49818,22 +49815,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(74),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(90),
-	combout => \adc_ram_shifter_1|data_a_1~68_combout\);
+	combout => \adc_ram_shifter_1|data~224_combout\);
 
 -- Location: LCFF_X25_Y9_N25
-\adc_ram_shifter_1|data_a_1[98]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[98]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~68_combout\,
+	datain => \adc_ram_shifter_1|data~224_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(98));
+	regout => \adc_ram_shifter_1|data\(98));
 
 -- Location: LCCOMB_X19_Y5_N8
-\adc_ram_shifter_1|data_b_1~119\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~311\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~119_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(11))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(27))))
+-- \adc_ram_shifter_1|data~311_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(11))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(27))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49844,22 +49841,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(11),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(27),
-	combout => \adc_ram_shifter_1|data_b_1~119_combout\);
+	combout => \adc_ram_shifter_1|data~311_combout\);
 
 -- Location: LCFF_X19_Y5_N9
-\adc_ram_shifter_1|data_b_1[35]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[163]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~119_combout\,
+	datain => \adc_ram_shifter_1|data~311_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(35));
+	regout => \adc_ram_shifter_1|data\(163));
 
 -- Location: LCCOMB_X20_Y6_N14
-\adc_ram_shifter_1|data_a_1~19\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~78\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~19_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(35))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(51))))
+-- \adc_ram_shifter_1|data~78_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(35))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(51))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49870,22 +49867,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(35),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(51),
-	combout => \adc_ram_shifter_1|data_a_1~19_combout\);
+	combout => \adc_ram_shifter_1|data~78_combout\);
 
 -- Location: LCFF_X20_Y6_N15
-\adc_ram_shifter_1|data_a_1[59]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[59]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~19_combout\,
+	datain => \adc_ram_shifter_1|data~78_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(59));
+	regout => \adc_ram_shifter_1|data\(59));
 
 -- Location: LCCOMB_X24_Y6_N28
-\adc_ram_shifter_1|data_a_1~10\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~42\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~10_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(42))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(58))))
+-- \adc_ram_shifter_1|data~42_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(42))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(58))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49896,22 +49893,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(42),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(58),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~10_combout\);
+	combout => \adc_ram_shifter_1|data~42_combout\);
 
 -- Location: LCFF_X24_Y6_N29
-\adc_ram_shifter_1|data_a_1[66]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[66]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~10_combout\,
+	datain => \adc_ram_shifter_1|data~42_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(66));
+	regout => \adc_ram_shifter_1|data\(66));
 
 -- Location: LCCOMB_X20_Y10_N12
-\adc_ram_shifter_1|data_a_1~49\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~166\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~49_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(57)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(73)))
+-- \adc_ram_shifter_1|data~166_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(57)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(73)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49922,22 +49919,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(73),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(57),
-	combout => \adc_ram_shifter_1|data_a_1~49_combout\);
+	combout => \adc_ram_shifter_1|data~166_combout\);
 
 -- Location: LCFF_X20_Y10_N13
-\adc_ram_shifter_1|data_a_1[81]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[81]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~49_combout\,
+	datain => \adc_ram_shifter_1|data~166_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(81));
+	regout => \adc_ram_shifter_1|data\(81));
 
 -- Location: LCCOMB_X22_Y10_N8
-\adc_ram_shifter_1|data_a_1~41\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~134\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~41_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(65))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(81))))
+-- \adc_ram_shifter_1|data~134_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(65))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(81))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49948,22 +49945,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(65),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(81),
-	combout => \adc_ram_shifter_1|data_a_1~41_combout\);
+	combout => \adc_ram_shifter_1|data~134_combout\);
 
 -- Location: LCFF_X22_Y10_N9
-\adc_ram_shifter_1|data_a_1[89]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[89]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~41_combout\,
+	datain => \adc_ram_shifter_1|data~134_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(89));
+	regout => \adc_ram_shifter_1|data\(89));
 
 -- Location: LCCOMB_X24_Y8_N28
-\adc_ram_shifter_1|data_a_1~4\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~18\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~4_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(52)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(68)))
+-- \adc_ram_shifter_1|data~18_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(52)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(68)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49974,22 +49971,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(68),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(52),
-	combout => \adc_ram_shifter_1|data_a_1~4_combout\);
+	combout => \adc_ram_shifter_1|data~18_combout\);
 
 -- Location: LCFF_X24_Y8_N29
-\adc_ram_shifter_1|data_a_1[76]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[76]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~4_combout\,
+	datain => \adc_ram_shifter_1|data~18_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(76));
+	regout => \adc_ram_shifter_1|data\(76));
 
 -- Location: LCCOMB_X24_Y10_N12
-\adc_ram_shifter_1|data_a_1~66\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~220\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~66_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(73)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(89)))
+-- \adc_ram_shifter_1|data~220_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(73)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(89)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50000,22 +49997,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(89),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(73),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~66_combout\);
+	combout => \adc_ram_shifter_1|data~220_combout\);
 
 -- Location: LCFF_X24_Y10_N13
-\adc_ram_shifter_1|data_a_1[97]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[97]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~66_combout\,
+	datain => \adc_ram_shifter_1|data~220_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(97));
+	regout => \adc_ram_shifter_1|data\(97));
 
 -- Location: LCCOMB_X21_Y5_N4
-\adc_ram_shifter_1|data_b_1~117\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~307\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~117_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(10))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(26))))
+-- \adc_ram_shifter_1|data~307_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(10))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(26))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50026,22 +50023,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(10),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(26),
-	combout => \adc_ram_shifter_1|data_b_1~117_combout\);
+	combout => \adc_ram_shifter_1|data~307_combout\);
 
 -- Location: LCFF_X21_Y5_N5
-\adc_ram_shifter_1|data_b_1[34]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[162]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~117_combout\,
+	datain => \adc_ram_shifter_1|data~307_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(34));
+	regout => \adc_ram_shifter_1|data\(162));
 
 -- Location: LCCOMB_X22_Y2_N28
-\adc_ram_shifter_1|data_a_1~18\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~74\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~18_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(34)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(50)))
+-- \adc_ram_shifter_1|data~74_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(34)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(50)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50052,22 +50049,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(50),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(34),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~18_combout\);
+	combout => \adc_ram_shifter_1|data~74_combout\);
 
 -- Location: LCFF_X22_Y2_N29
-\adc_ram_shifter_1|data_a_1[58]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[58]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~18_combout\,
+	datain => \adc_ram_shifter_1|data~74_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(58));
+	regout => \adc_ram_shifter_1|data\(58));
 
 -- Location: LCCOMB_X19_Y6_N26
-\adc_ram_shifter_1|data_a_1~17\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~70\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~17_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(33))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(49))))
+-- \adc_ram_shifter_1|data~70_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(33))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(49))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50078,22 +50075,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(33),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(49),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~17_combout\);
+	combout => \adc_ram_shifter_1|data~70_combout\);
 
 -- Location: LCFF_X19_Y6_N27
-\adc_ram_shifter_1|data_a_1[57]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[57]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~17_combout\,
+	datain => \adc_ram_shifter_1|data~70_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(57));
+	regout => \adc_ram_shifter_1|data\(57));
 
 -- Location: LCCOMB_X22_Y8_N12
-\adc_ram_shifter_1|data_a_1~3\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~14\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~3_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(51)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(67)))
+-- \adc_ram_shifter_1|data~14_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(51)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(67)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50104,22 +50101,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(67),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(51),
-	combout => \adc_ram_shifter_1|data_a_1~3_combout\);
+	combout => \adc_ram_shifter_1|data~14_combout\);
 
 -- Location: LCFF_X22_Y8_N13
-\adc_ram_shifter_1|data_a_1[75]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[75]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~3_combout\,
+	datain => \adc_ram_shifter_1|data~14_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(75));
+	regout => \adc_ram_shifter_1|data\(75));
 
 -- Location: LCCOMB_X21_Y11_N30
-\adc_ram_shifter_1|data_b_1~48\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~163\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~48_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(56)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(72)))
+-- \adc_ram_shifter_1|data~163_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(56)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(72)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50130,23 +50127,23 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(72),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(56),
-	combout => \adc_ram_shifter_1|data_b_1~48_combout\);
+	combout => \adc_ram_shifter_1|data~163_combout\);
 
 -- Location: LCFF_X22_Y11_N23
-\adc_ram_shifter_1|data_b_1[80]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[208]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	sdata => \adc_ram_shifter_1|data_b_1~48_combout\,
+	sdata => \adc_ram_shifter_1|data~163_combout\,
 	sload => VCC,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(80));
+	regout => \adc_ram_shifter_1|data\(208));
 
 -- Location: LCCOMB_X22_Y10_N2
-\adc_ram_shifter_1|data_a_1~40\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~130\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~40_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(64))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(80))))
+-- \adc_ram_shifter_1|data~130_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(64))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(80))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50157,22 +50154,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(64),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(80),
-	combout => \adc_ram_shifter_1|data_a_1~40_combout\);
+	combout => \adc_ram_shifter_1|data~130_combout\);
 
 -- Location: LCFF_X22_Y10_N3
-\adc_ram_shifter_1|data_a_1[88]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[88]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~40_combout\,
+	datain => \adc_ram_shifter_1|data~130_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(88));
+	regout => \adc_ram_shifter_1|data\(88));
 
 -- Location: LCCOMB_X22_Y10_N22
-\adc_ram_shifter_1|data_a_1~94\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~276\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~94_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(91)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(107)))
+-- \adc_ram_shifter_1|data~276_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(91)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(107)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50183,22 +50180,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(107),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(91),
-	combout => \adc_ram_shifter_1|data_a_1~94_combout\);
+	combout => \adc_ram_shifter_1|data~276_combout\);
 
 -- Location: LCFF_X22_Y10_N23
-\adc_ram_shifter_1|data_a_1[115]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[115]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~94_combout\,
+	datain => \adc_ram_shifter_1|data~276_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(115));
+	regout => \adc_ram_shifter_1|data\(115));
 
 -- Location: LCCOMB_X26_Y7_N30
-\adc_ram_shifter_1|data_a_1~29\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~106\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~29_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(26)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(42)))
+-- \adc_ram_shifter_1|data~106_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(26)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(42)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50209,22 +50206,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(42),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(26),
-	combout => \adc_ram_shifter_1|data_a_1~29_combout\);
+	combout => \adc_ram_shifter_1|data~106_combout\);
 
 -- Location: LCFF_X26_Y7_N31
-\adc_ram_shifter_1|data_a_1[50]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[50]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~29_combout\,
+	datain => \adc_ram_shifter_1|data~106_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(50));
+	regout => \adc_ram_shifter_1|data\(50));
 
 -- Location: LCCOMB_X24_Y5_N30
-\adc_ram_shifter_1|data_a_1~2\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~10\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~2_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(50)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(66)))
+-- \adc_ram_shifter_1|data~10_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(50)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(66)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50235,22 +50232,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(66),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(50),
-	combout => \adc_ram_shifter_1|data_a_1~2_combout\);
+	combout => \adc_ram_shifter_1|data~10_combout\);
 
 -- Location: LCFF_X24_Y5_N31
-\adc_ram_shifter_1|data_a_1[74]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[74]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~2_combout\,
+	datain => \adc_ram_shifter_1|data~10_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(74));
+	regout => \adc_ram_shifter_1|data\(74));
 
 -- Location: LCCOMB_X24_Y9_N16
-\adc_ram_shifter_1|data_a_1~64\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~216\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~64_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(72)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(88)))
+-- \adc_ram_shifter_1|data~216_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(72)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(88)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50261,22 +50258,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(88),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(72),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~64_combout\);
+	combout => \adc_ram_shifter_1|data~216_combout\);
 
 -- Location: LCFF_X24_Y9_N17
-\adc_ram_shifter_1|data_a_1[96]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[96]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~64_combout\,
+	datain => \adc_ram_shifter_1|data~216_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(96));
+	regout => \adc_ram_shifter_1|data\(96));
 
 -- Location: LCCOMB_X19_Y5_N2
-\adc_ram_shifter_1|data_b_1~115\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~303\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~115_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(9))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(25))))
+-- \adc_ram_shifter_1|data~303_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(9))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(25))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50287,22 +50284,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(9),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(25),
-	combout => \adc_ram_shifter_1|data_b_1~115_combout\);
+	combout => \adc_ram_shifter_1|data~303_combout\);
 
 -- Location: LCFF_X19_Y5_N3
-\adc_ram_shifter_1|data_b_1[33]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[161]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~115_combout\,
+	datain => \adc_ram_shifter_1|data~303_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(33));
+	regout => \adc_ram_shifter_1|data\(161));
 
 -- Location: LCCOMB_X19_Y4_N4
-\adc_ram_shifter_1|data_b_1~16\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~67\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~16_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(32))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(48))))
+-- \adc_ram_shifter_1|data~67_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(32))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(48))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50313,22 +50310,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(32),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(48),
-	combout => \adc_ram_shifter_1|data_b_1~16_combout\);
+	combout => \adc_ram_shifter_1|data~67_combout\);
 
 -- Location: LCFF_X19_Y4_N5
-\adc_ram_shifter_1|data_b_1[56]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[184]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~16_combout\,
+	datain => \adc_ram_shifter_1|data~67_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(56));
+	regout => \adc_ram_shifter_1|data\(184));
 
 -- Location: LCCOMB_X19_Y6_N22
-\adc_ram_shifter_1|data_a_1~1\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~6\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~1_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(49))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(65))))
+-- \adc_ram_shifter_1|data~6_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(49))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(65))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50339,22 +50336,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(49),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(65),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~1_combout\);
+	combout => \adc_ram_shifter_1|data~6_combout\);
 
 -- Location: LCFF_X19_Y6_N23
-\adc_ram_shifter_1|data_a_1[73]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[73]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~1_combout\,
+	datain => \adc_ram_shifter_1|data~6_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(73));
+	regout => \adc_ram_shifter_1|data\(73));
 
 -- Location: LCCOMB_X22_Y11_N20
-\adc_ram_shifter_1|data_a_1~53\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~182\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~53_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(61))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(77))))
+-- \adc_ram_shifter_1|data~182_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(61))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(77))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50365,22 +50362,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(61),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(77),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~53_combout\);
+	combout => \adc_ram_shifter_1|data~182_combout\);
 
 -- Location: LCFF_X22_Y11_N21
-\adc_ram_shifter_1|data_a_1[85]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[85]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~53_combout\,
+	datain => \adc_ram_shifter_1|data~182_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(85));
+	regout => \adc_ram_shifter_1|data\(85));
 
 -- Location: LCCOMB_X24_Y8_N24
-\adc_ram_shifter_1|data_a_1~116\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~320\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~116_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(86)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(102)))
+-- \adc_ram_shifter_1|data~320_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(86)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(102)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50391,22 +50388,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(102),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(86),
-	combout => \adc_ram_shifter_1|data_a_1~116_combout\);
+	combout => \adc_ram_shifter_1|data~320_combout\);
 
 -- Location: LCFF_X24_Y8_N25
-\adc_ram_shifter_1|data_a_1[110]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[110]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~116_combout\,
+	datain => \adc_ram_shifter_1|data~320_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(110));
+	regout => \adc_ram_shifter_1|data\(110));
 
 -- Location: LCCOMB_X22_Y5_N18
-\adc_ram_shifter_1|data_a_1~103\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~294\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~103_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(23)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(39)))
+-- \adc_ram_shifter_1|data~294_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(23)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(39)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50417,22 +50414,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(39),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(23),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~103_combout\);
+	combout => \adc_ram_shifter_1|data~294_combout\);
 
 -- Location: LCFF_X22_Y5_N19
-\adc_ram_shifter_1|data_a_1[47]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[47]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~103_combout\,
+	datain => \adc_ram_shifter_1|data~294_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(47));
+	regout => \adc_ram_shifter_1|data\(47));
 
 -- Location: LCCOMB_X26_Y7_N2
-\adc_ram_shifter_1|data_a_1~39\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~126\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~39_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(31))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(47))))
+-- \adc_ram_shifter_1|data~126_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(31))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(47))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50443,22 +50440,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(31),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(47),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~39_combout\);
+	combout => \adc_ram_shifter_1|data~126_combout\);
 
 -- Location: LCFF_X26_Y7_N3
-\adc_ram_shifter_1|data_a_1[55]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[55]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~39_combout\,
+	datain => \adc_ram_shifter_1|data~126_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(55));
+	regout => \adc_ram_shifter_1|data\(55));
 
 -- Location: LCCOMB_X24_Y7_N20
-\adc_ram_shifter_1|data_a_1~92\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~272\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~92_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(90)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(106)))
+-- \adc_ram_shifter_1|data~272_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(90)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(106)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50469,22 +50466,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(106),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(90),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~92_combout\);
+	combout => \adc_ram_shifter_1|data~272_combout\);
 
 -- Location: LCFF_X24_Y7_N21
-\adc_ram_shifter_1|data_a_1[114]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[114]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~92_combout\,
+	datain => \adc_ram_shifter_1|data~272_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(114));
+	regout => \adc_ram_shifter_1|data\(114));
 
 -- Location: LCCOMB_X21_Y6_N30
-\adc_ram_shifter_1|data_a_1~27\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~102\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~27_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(25))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(41))))
+-- \adc_ram_shifter_1|data~102_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(25))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(41))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50495,23 +50492,23 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(25),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(41),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~27_combout\);
+	combout => \adc_ram_shifter_1|data~102_combout\);
 
 -- Location: LCFF_X22_Y6_N7
-\adc_ram_shifter_1|data_a_1[49]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[49]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	sdata => \adc_ram_shifter_1|data_a_1~27_combout\,
+	sdata => \adc_ram_shifter_1|data~102_combout\,
 	sload => VCC,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(49));
+	regout => \adc_ram_shifter_1|data\(49));
 
 -- Location: LCCOMB_X24_Y8_N26
-\adc_ram_shifter_1|data_a_1~0\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~2\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~0_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(48))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(64))))
+-- \adc_ram_shifter_1|data~2_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(48))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(64))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50522,22 +50519,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(48),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(64),
-	combout => \adc_ram_shifter_1|data_a_1~0_combout\);
+	combout => \adc_ram_shifter_1|data~2_combout\);
 
 -- Location: LCFF_X24_Y8_N27
-\adc_ram_shifter_1|data_a_1[72]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[72]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~0_combout\,
+	datain => \adc_ram_shifter_1|data~2_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(72));
+	regout => \adc_ram_shifter_1|data\(72));
 
 -- Location: LCCOMB_X24_Y12_N24
-\adc_ram_shifter_1|data_a_1~78\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~244\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~78_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(79)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(95)))
+-- \adc_ram_shifter_1|data~244_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(79)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(95)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50548,22 +50545,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(95),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(79),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~78_combout\);
+	combout => \adc_ram_shifter_1|data~244_combout\);
 
 -- Location: LCFF_X24_Y12_N25
-\adc_ram_shifter_1|data_a_1[103]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[103]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~78_combout\,
+	datain => \adc_ram_shifter_1|data~244_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(103));
+	regout => \adc_ram_shifter_1|data\(103));
 
 -- Location: LCCOMB_X22_Y7_N0
-\adc_ram_shifter_1|data_a_1~93\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~274\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~93_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(18)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(34)))
+-- \adc_ram_shifter_1|data~274_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(18)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(34)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50574,22 +50571,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(34),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(18),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~93_combout\);
+	combout => \adc_ram_shifter_1|data~274_combout\);
 
 -- Location: LCFF_X22_Y7_N1
-\adc_ram_shifter_1|data_a_1[42]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[42]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~93_combout\,
+	datain => \adc_ram_shifter_1|data~274_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(42));
+	regout => \adc_ram_shifter_1|data\(42));
 
 -- Location: LCCOMB_X22_Y5_N2
-\adc_ram_shifter_1|data_a_1~75\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~238\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~75_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(5)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(21)))
+-- \adc_ram_shifter_1|data~238_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(5)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(21)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50600,22 +50597,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(21),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(5),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~75_combout\);
+	combout => \adc_ram_shifter_1|data~238_combout\);
 
 -- Location: LCFF_X22_Y5_N3
-\adc_ram_shifter_1|data_a_1[29]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[29]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~75_combout\,
+	datain => \adc_ram_shifter_1|data~238_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(29));
+	regout => \adc_ram_shifter_1|data\(29));
 
 -- Location: LCCOMB_X22_Y10_N6
-\adc_ram_shifter_1|data_a_1~114\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~316\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~114_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(85)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(101)))
+-- \adc_ram_shifter_1|data~316_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(85)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(101)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50626,22 +50623,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(101),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(85),
-	combout => \adc_ram_shifter_1|data_a_1~114_combout\);
+	combout => \adc_ram_shifter_1|data~316_combout\);
 
 -- Location: LCFF_X22_Y10_N7
-\adc_ram_shifter_1|data_a_1[109]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[109]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~114_combout\,
+	datain => \adc_ram_shifter_1|data~316_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(109));
+	regout => \adc_ram_shifter_1|data\(109));
 
 -- Location: LCCOMB_X19_Y7_N18
-\adc_ram_shifter_1|data_a_1~101\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~290\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~101_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(22))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(38))))
+-- \adc_ram_shifter_1|data~290_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(22))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(38))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50652,22 +50649,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(22),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(38),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~101_combout\);
+	combout => \adc_ram_shifter_1|data~290_combout\);
 
 -- Location: LCFF_X19_Y7_N19
-\adc_ram_shifter_1|data_a_1[46]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[46]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~101_combout\,
+	datain => \adc_ram_shifter_1|data~290_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(46));
+	regout => \adc_ram_shifter_1|data\(46));
 
 -- Location: LCCOMB_X24_Y7_N16
-\adc_ram_shifter_1|data_a_1~91\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~270\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~91_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(17))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(33))))
+-- \adc_ram_shifter_1|data~270_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(17))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(33))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50678,22 +50675,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(17),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(33),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~91_combout\);
+	combout => \adc_ram_shifter_1|data~270_combout\);
 
 -- Location: LCFF_X24_Y7_N17
-\adc_ram_shifter_1|data_a_1[41]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[41]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~91_combout\,
+	datain => \adc_ram_shifter_1|data~270_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(41));
+	regout => \adc_ram_shifter_1|data\(41));
 
 -- Location: LCCOMB_X22_Y7_N10
-\adc_ram_shifter_1|data_b_1~81\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~235\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~81_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(4))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(20))))
+-- \adc_ram_shifter_1|data~235_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(4))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(20))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50704,22 +50701,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(4),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(20),
-	combout => \adc_ram_shifter_1|data_b_1~81_combout\);
+	combout => \adc_ram_shifter_1|data~235_combout\);
 
 -- Location: LCFF_X22_Y7_N11
-\adc_ram_shifter_1|data_b_1[28]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[156]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~81_combout\,
+	datain => \adc_ram_shifter_1|data~235_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(28));
+	regout => \adc_ram_shifter_1|data\(156));
 
 -- Location: LCCOMB_X24_Y7_N14
-\adc_ram_shifter_1|data_b_1~87\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~247\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~87_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(7)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(23)))
+-- \adc_ram_shifter_1|data~247_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(7)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(23)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50730,22 +50727,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(23),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(7),
-	combout => \adc_ram_shifter_1|data_b_1~87_combout\);
+	combout => \adc_ram_shifter_1|data~247_combout\);
 
 -- Location: LCFF_X24_Y7_N15
-\adc_ram_shifter_1|data_b_1[31]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[159]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~87_combout\,
+	datain => \adc_ram_shifter_1|data~247_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(31));
+	regout => \adc_ram_shifter_1|data\(159));
 
 -- Location: LCCOMB_X22_Y7_N6
-\adc_ram_shifter_1|data_b_1~79\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~231\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~79_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(3)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(19)))
+-- \adc_ram_shifter_1|data~231_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(3)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(19)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50756,17 +50753,17 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(19),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(3),
-	combout => \adc_ram_shifter_1|data_b_1~79_combout\);
+	combout => \adc_ram_shifter_1|data~231_combout\);
 
 -- Location: LCFF_X22_Y7_N7
-\adc_ram_shifter_1|data_b_1[27]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[155]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~79_combout\,
+	datain => \adc_ram_shifter_1|data~231_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(27));
+	regout => \adc_ram_shifter_1|data\(155));
 
 -- Location: LCCOMB_X26_Y7_N26
 \adc_ram_shifter_1|temp_shift[7]~feeder\ : cycloneii_lcell_comb
@@ -50793,9 +50790,9 @@ PORT MAP (
 	regout => \adc_ram_shifter_1|temp_shift\(7));
 
 -- Location: LCCOMB_X26_Y7_N12
-\adc_ram_shifter_1|data_a_1~63\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~206\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~63_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(7)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(7)))
+-- \adc_ram_shifter_1|data~206_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(7)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(7)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50806,22 +50803,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(7),
 	datad => \adc_ram_shifter_1|temp_shift\(7),
-	combout => \adc_ram_shifter_1|data_a_1~63_combout\);
+	combout => \adc_ram_shifter_1|data~206_combout\);
 
 -- Location: LCFF_X26_Y7_N13
-\adc_ram_shifter_1|data_a_1[15]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[15]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~63_combout\,
+	datain => \adc_ram_shifter_1|data~206_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(15));
+	regout => \adc_ram_shifter_1|data\(15));
 
 -- Location: LCCOMB_X24_Y7_N26
-\adc_ram_shifter_1|data_b_1~95\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~263\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~95_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(127)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(15)))
+-- \adc_ram_shifter_1|data~263_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(127)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(15)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50832,22 +50829,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(15),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(127),
-	combout => \adc_ram_shifter_1|data_b_1~95_combout\);
+	combout => \adc_ram_shifter_1|data~263_combout\);
 
 -- Location: LCFF_X24_Y7_N27
-\adc_ram_shifter_1|data_b_1[23]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[151]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~95_combout\,
+	datain => \adc_ram_shifter_1|data~263_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(23));
+	regout => \adc_ram_shifter_1|data\(151));
 
 -- Location: LCCOMB_X22_Y5_N20
-\adc_ram_shifter_1|data_b_1~77\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~227\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~77_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(2))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(18))))
+-- \adc_ram_shifter_1|data~227_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(2))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(18))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50858,22 +50855,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(2),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(18),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~77_combout\);
+	combout => \adc_ram_shifter_1|data~227_combout\);
 
 -- Location: LCFF_X22_Y5_N21
-\adc_ram_shifter_1|data_b_1[26]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[154]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~77_combout\,
+	datain => \adc_ram_shifter_1|data~227_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(26));
+	regout => \adc_ram_shifter_1|data\(154));
 
 -- Location: LCCOMB_X24_Y11_N30
-\adc_ram_shifter_1|data_a_1~62\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~204\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~62_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(6))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(6))))
+-- \adc_ram_shifter_1|data~204_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(6))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(6))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50884,22 +50881,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|temp_shift\(6),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(6),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~62_combout\);
+	combout => \adc_ram_shifter_1|data~204_combout\);
 
 -- Location: LCFF_X24_Y11_N31
-\adc_ram_shifter_1|data_a_1[14]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[14]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~62_combout\,
+	datain => \adc_ram_shifter_1|data~204_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(14));
+	regout => \adc_ram_shifter_1|data\(14));
 
 -- Location: LCCOMB_X21_Y5_N10
-\adc_ram_shifter_1|data_b_1~75\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~223\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~75_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(1))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(17))))
+-- \adc_ram_shifter_1|data~223_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(1))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(17))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50910,22 +50907,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(1),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(17),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~75_combout\);
+	combout => \adc_ram_shifter_1|data~223_combout\);
 
 -- Location: LCFF_X21_Y5_N11
-\adc_ram_shifter_1|data_b_1[25]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[153]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~75_combout\,
+	datain => \adc_ram_shifter_1|data~223_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(25));
+	regout => \adc_ram_shifter_1|data\(153));
 
 -- Location: LCCOMB_X22_Y9_N6
-\adc_ram_shifter_1|data_a_1~37\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~122\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~37_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(30)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(46)))
+-- \adc_ram_shifter_1|data~122_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(30)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(46)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50936,22 +50933,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(46),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(30),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~37_combout\);
+	combout => \adc_ram_shifter_1|data~122_combout\);
 
 -- Location: LCFF_X22_Y9_N7
-\adc_ram_shifter_1|data_a_1[54]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[54]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~37_combout\,
+	datain => \adc_ram_shifter_1|data~122_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(54));
+	regout => \adc_ram_shifter_1|data\(54));
 
 -- Location: LCCOMB_X21_Y11_N24
-\adc_ram_shifter_1|data_b_1~93\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~259\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~93_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(125))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(13))))
+-- \adc_ram_shifter_1|data~259_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(125))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(13))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50962,22 +50959,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(125),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(13),
-	combout => \adc_ram_shifter_1|data_b_1~93_combout\);
+	combout => \adc_ram_shifter_1|data~259_combout\);
 
 -- Location: LCFF_X21_Y11_N25
-\adc_ram_shifter_1|data_b_1[21]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[149]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~93_combout\,
+	datain => \adc_ram_shifter_1|data~259_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(21));
+	regout => \adc_ram_shifter_1|data\(149));
 
 -- Location: LCCOMB_X19_Y7_N4
-\adc_ram_shifter_1|data_b_1~73\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~219\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~73_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(0)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(16)))
+-- \adc_ram_shifter_1|data~219_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(0)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(16)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50988,22 +50985,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(16),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(0),
-	combout => \adc_ram_shifter_1|data_b_1~73_combout\);
+	combout => \adc_ram_shifter_1|data~219_combout\);
 
 -- Location: LCFF_X19_Y7_N5
-\adc_ram_shifter_1|data_b_1[24]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[152]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~73_combout\,
+	datain => \adc_ram_shifter_1|data~219_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(24));
+	regout => \adc_ram_shifter_1|data\(152));
 
 -- Location: LCCOMB_X24_Y9_N20
-\adc_ram_shifter_1|data_a_1~61\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~202\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~61_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(5)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(5)))
+-- \adc_ram_shifter_1|data~202_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(5)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(5)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51014,22 +51011,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(5),
 	datad => \adc_ram_shifter_1|temp_shift\(5),
-	combout => \adc_ram_shifter_1|data_a_1~61_combout\);
+	combout => \adc_ram_shifter_1|data~202_combout\);
 
 -- Location: LCFF_X24_Y9_N21
-\adc_ram_shifter_1|data_a_1[13]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[13]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~61_combout\,
+	datain => \adc_ram_shifter_1|data~202_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(13));
+	regout => \adc_ram_shifter_1|data\(13));
 
 -- Location: LCCOMB_X24_Y7_N30
-\adc_ram_shifter_1|data_a_1~117\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~322\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~117_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(14)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(30)))
+-- \adc_ram_shifter_1|data~322_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(14)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(30)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51040,22 +51037,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(30),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(14),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~117_combout\);
+	combout => \adc_ram_shifter_1|data~322_combout\);
 
 -- Location: LCFF_X24_Y7_N31
-\adc_ram_shifter_1|data_a_1[38]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[38]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~117_combout\,
+	datain => \adc_ram_shifter_1|data~322_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(38));
+	regout => \adc_ram_shifter_1|data\(38));
 
 -- Location: LCCOMB_X22_Y7_N4
-\adc_ram_shifter_1|data_b_1~71\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~215\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~71_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(111)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(127)))
+-- \adc_ram_shifter_1|data~215_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(111)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(127)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51066,22 +51063,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(127),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(111),
-	combout => \adc_ram_shifter_1|data_b_1~71_combout\);
+	combout => \adc_ram_shifter_1|data~215_combout\);
 
 -- Location: LCFF_X22_Y7_N5
-\adc_ram_shifter_1|data_b_1[7]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[135]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~71_combout\,
+	datain => \adc_ram_shifter_1|data~215_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(7));
+	regout => \adc_ram_shifter_1|data\(135));
 
 -- Location: LCCOMB_X24_Y4_N22
-\adc_ram_shifter_1|data_b_1~123\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~319\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~123_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(13))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(29))))
+-- \adc_ram_shifter_1|data~319_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(13))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(29))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51092,22 +51089,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(13),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(29),
-	combout => \adc_ram_shifter_1|data_b_1~123_combout\);
+	combout => \adc_ram_shifter_1|data~319_combout\);
 
 -- Location: LCFF_X24_Y4_N23
-\adc_ram_shifter_1|data_b_1[37]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[165]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~123_combout\,
+	datain => \adc_ram_shifter_1|data~319_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(37));
+	regout => \adc_ram_shifter_1|data\(165));
 
 -- Location: LCCOMB_X22_Y5_N12
-\adc_ram_shifter_1|data_a_1~99\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~286\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~99_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(21)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(37)))
+-- \adc_ram_shifter_1|data~286_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(21)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(37)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51118,22 +51115,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(37),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(21),
-	combout => \adc_ram_shifter_1|data_a_1~99_combout\);
+	combout => \adc_ram_shifter_1|data~286_combout\);
 
 -- Location: LCFF_X22_Y5_N13
-\adc_ram_shifter_1|data_a_1[45]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[45]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~99_combout\,
+	datain => \adc_ram_shifter_1|data~286_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(45));
+	regout => \adc_ram_shifter_1|data\(45));
 
 -- Location: LCCOMB_X24_Y9_N22
-\adc_ram_shifter_1|data_a_1~35\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~118\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~35_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(29))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(45))))
+-- \adc_ram_shifter_1|data~118_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(29))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(45))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51144,22 +51141,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(29),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(45),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~35_combout\);
+	combout => \adc_ram_shifter_1|data~118_combout\);
 
 -- Location: LCFF_X24_Y9_N23
-\adc_ram_shifter_1|data_a_1[53]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[53]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~35_combout\,
+	datain => \adc_ram_shifter_1|data~118_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(53));
+	regout => \adc_ram_shifter_1|data\(53));
 
 -- Location: LCCOMB_X24_Y8_N2
-\adc_ram_shifter_1|data_b_1~92\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~257\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~92_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(124))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(12))))
+-- \adc_ram_shifter_1|data~257_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(124))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(12))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51170,22 +51167,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(124),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(12),
-	combout => \adc_ram_shifter_1|data_b_1~92_combout\);
+	combout => \adc_ram_shifter_1|data~257_combout\);
 
 -- Location: LCFF_X24_Y8_N3
-\adc_ram_shifter_1|data_b_1[20]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[148]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~92_combout\,
+	datain => \adc_ram_shifter_1|data~257_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(20));
+	regout => \adc_ram_shifter_1|data\(148));
 
 -- Location: LCCOMB_X22_Y5_N24
-\adc_ram_shifter_1|data_b_1~31\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~111\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~31_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(27)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(43)))
+-- \adc_ram_shifter_1|data~111_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(27)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(43)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51196,22 +51193,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(43),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(27),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~31_combout\);
+	combout => \adc_ram_shifter_1|data~111_combout\);
 
 -- Location: LCFF_X22_Y5_N25
-\adc_ram_shifter_1|data_b_1[51]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[179]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~31_combout\,
+	datain => \adc_ram_shifter_1|data~111_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(51));
+	regout => \adc_ram_shifter_1|data\(179));
 
 -- Location: LCCOMB_X22_Y7_N22
-\adc_ram_shifter_1|data_b_1~70\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~214\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~70_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(110)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(126)))
+-- \adc_ram_shifter_1|data~214_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(110)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(126)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51222,22 +51219,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(126),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(110),
-	combout => \adc_ram_shifter_1|data_b_1~70_combout\);
+	combout => \adc_ram_shifter_1|data~214_combout\);
 
 -- Location: LCFF_X22_Y7_N23
-\adc_ram_shifter_1|data_b_1[6]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[134]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~70_combout\,
+	datain => \adc_ram_shifter_1|data~214_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(6));
+	regout => \adc_ram_shifter_1|data\(134));
 
 -- Location: LCCOMB_X22_Y7_N30
-\adc_ram_shifter_1|data_b_1~60\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~201\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~60_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(116))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(4))))
+-- \adc_ram_shifter_1|data~201_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(116))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51248,22 +51245,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(116),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(4),
-	combout => \adc_ram_shifter_1|data_b_1~60_combout\);
+	combout => \adc_ram_shifter_1|data~201_combout\);
 
 -- Location: LCFF_X22_Y7_N31
-\adc_ram_shifter_1|data_b_1[12]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[140]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~60_combout\,
+	datain => \adc_ram_shifter_1|data~201_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(12));
+	regout => \adc_ram_shifter_1|data\(140));
 
 -- Location: LCCOMB_X22_Y11_N24
-\adc_ram_shifter_1|data_b_1~91\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~255\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~91_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(123)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(11)))
+-- \adc_ram_shifter_1|data~255_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(123)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(11)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51274,22 +51271,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(11),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(123),
-	combout => \adc_ram_shifter_1|data_b_1~91_combout\);
+	combout => \adc_ram_shifter_1|data~255_combout\);
 
 -- Location: LCFF_X22_Y11_N25
-\adc_ram_shifter_1|data_b_1[19]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[147]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~91_combout\,
+	datain => \adc_ram_shifter_1|data~255_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(19));
+	regout => \adc_ram_shifter_1|data\(147));
 
 -- Location: LCCOMB_X22_Y11_N28
-\adc_ram_shifter_1|data_b_1~59\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~199\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~59_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(115))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(3))))
+-- \adc_ram_shifter_1|data~199_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(115))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(3))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51300,22 +51297,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(115),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(3),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~59_combout\);
+	combout => \adc_ram_shifter_1|data~199_combout\);
 
 -- Location: LCFF_X22_Y11_N29
-\adc_ram_shifter_1|data_b_1[11]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[139]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~59_combout\,
+	datain => \adc_ram_shifter_1|data~199_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(11));
+	regout => \adc_ram_shifter_1|data\(139));
 
 -- Location: LCCOMB_X18_Y9_N4
-\adc_ram_shifter_1|data_b_1~58\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~197\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~58_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(114)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(2)))
+-- \adc_ram_shifter_1|data~197_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(114)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(2)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51326,22 +51323,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(2),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(114),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~58_combout\);
+	combout => \adc_ram_shifter_1|data~197_combout\);
 
 -- Location: LCFF_X18_Y9_N5
-\adc_ram_shifter_1|data_b_1[10]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[138]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~58_combout\,
+	datain => \adc_ram_shifter_1|data~197_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(10));
+	regout => \adc_ram_shifter_1|data\(138));
 
 -- Location: LCCOMB_X21_Y5_N20
-\adc_ram_shifter_1|data_b_1~90\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~253\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~90_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(122)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(10)))
+-- \adc_ram_shifter_1|data~253_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(122)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(10)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51352,22 +51349,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(10),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(122),
-	combout => \adc_ram_shifter_1|data_b_1~90_combout\);
+	combout => \adc_ram_shifter_1|data~253_combout\);
 
 -- Location: LCFF_X21_Y5_N21
-\adc_ram_shifter_1|data_b_1[18]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[146]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~90_combout\,
+	datain => \adc_ram_shifter_1|data~253_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(18));
+	regout => \adc_ram_shifter_1|data\(146));
 
 -- Location: LCCOMB_X24_Y7_N22
-\adc_ram_shifter_1|data_b_1~57\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~195\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~57_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(113))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(1))))
+-- \adc_ram_shifter_1|data~195_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(113))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51378,22 +51375,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(113),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(1),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~57_combout\);
+	combout => \adc_ram_shifter_1|data~195_combout\);
 
 -- Location: LCFF_X24_Y7_N23
-\adc_ram_shifter_1|data_b_1[9]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[137]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~57_combout\,
+	datain => \adc_ram_shifter_1|data~195_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(9));
+	regout => \adc_ram_shifter_1|data\(137));
 
 -- Location: LCCOMB_X24_Y7_N0
-\adc_ram_shifter_1|data_b_1~89\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~251\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~89_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(121))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(9))))
+-- \adc_ram_shifter_1|data~251_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(121))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(9))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51404,22 +51401,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(121),
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(9),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~89_combout\);
+	combout => \adc_ram_shifter_1|data~251_combout\);
 
 -- Location: LCFF_X24_Y7_N1
-\adc_ram_shifter_1|data_b_1[17]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[145]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~89_combout\,
+	datain => \adc_ram_shifter_1|data~251_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(17));
+	regout => \adc_ram_shifter_1|data\(145));
 
 -- Location: LCCOMB_X26_Y7_N10
-\adc_ram_shifter_1|data_a_1~79\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~246\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~79_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(7)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(23)))
+-- \adc_ram_shifter_1|data~246_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(7)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(23)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51430,22 +51427,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(23),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(7),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~79_combout\);
+	combout => \adc_ram_shifter_1|data~246_combout\);
 
 -- Location: LCFF_X26_Y7_N11
-\adc_ram_shifter_1|data_a_1[31]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[31]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~79_combout\,
+	datain => \adc_ram_shifter_1|data~246_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(31));
+	regout => \adc_ram_shifter_1|data\(31));
 
 -- Location: LCCOMB_X24_Y11_N28
-\adc_ram_shifter_1|data_b_1~56\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~193\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~56_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(112))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(0))))
+-- \adc_ram_shifter_1|data~193_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(112))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(0))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51456,17 +51453,17 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(112),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(0),
-	combout => \adc_ram_shifter_1|data_b_1~56_combout\);
+	combout => \adc_ram_shifter_1|data~193_combout\);
 
 -- Location: LCFF_X24_Y11_N29
-\adc_ram_shifter_1|data_b_1[8]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[136]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~56_combout\,
+	datain => \adc_ram_shifter_1|data~193_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(8));
+	regout => \adc_ram_shifter_1|data\(136));
 
 -- Location: LCCOMB_X26_Y7_N6
 \adc_ram_shifter_1|temp_shift[15]~feeder\ : cycloneii_lcell_comb
@@ -51493,9 +51490,9 @@ PORT MAP (
 	regout => \adc_ram_shifter_1|temp_shift\(15));
 
 -- Location: LCCOMB_X26_Y7_N4
-\adc_ram_shifter_1|data_a_1~87\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~262\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~87_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(15)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(15)))
+-- \adc_ram_shifter_1|data~262_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(15)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(15)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51506,22 +51503,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(15),
 	datad => \adc_ram_shifter_1|temp_shift\(15),
-	combout => \adc_ram_shifter_1|data_a_1~87_combout\);
+	combout => \adc_ram_shifter_1|data~262_combout\);
 
 -- Location: LCFF_X26_Y7_N5
-\adc_ram_shifter_1|data_a_1[23]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[23]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~87_combout\,
+	datain => \adc_ram_shifter_1|data~262_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(23));
+	regout => \adc_ram_shifter_1|data\(23));
 
 -- Location: LCCOMB_X22_Y9_N22
-\adc_ram_shifter_1|data_a_1~31\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~110\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~31_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(27)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(43)))
+-- \adc_ram_shifter_1|data~110_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(27)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(43)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51532,22 +51529,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(43),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(27),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~31_combout\);
+	combout => \adc_ram_shifter_1|data~110_combout\);
 
 -- Location: LCFF_X22_Y9_N23
-\adc_ram_shifter_1|data_a_1[51]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[51]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~31_combout\,
+	datain => \adc_ram_shifter_1|data~110_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(51));
+	regout => \adc_ram_shifter_1|data\(51));
 
 -- Location: LCCOMB_X22_Y11_N4
-\adc_ram_shifter_1|data_b_1~67\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~211\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~67_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(107))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(123))))
+-- \adc_ram_shifter_1|data~211_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(107))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(123))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51558,22 +51555,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(107),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(123),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~67_combout\);
+	combout => \adc_ram_shifter_1|data~211_combout\);
 
 -- Location: LCFF_X22_Y11_N5
-\adc_ram_shifter_1|data_b_1[3]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[131]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~67_combout\,
+	datain => \adc_ram_shifter_1|data~211_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(3));
+	regout => \adc_ram_shifter_1|data\(131));
 
 -- Location: LCCOMB_X24_Y9_N30
-\adc_ram_shifter_1|data_a_1~115\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~318\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~115_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(13)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(29)))
+-- \adc_ram_shifter_1|data~318_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(13)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(29)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51584,22 +51581,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(29),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(13),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~115_combout\);
+	combout => \adc_ram_shifter_1|data~318_combout\);
 
 -- Location: LCFF_X24_Y9_N31
-\adc_ram_shifter_1|data_a_1[37]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[37]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~115_combout\,
+	datain => \adc_ram_shifter_1|data~318_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(37));
+	regout => \adc_ram_shifter_1|data\(37));
 
 -- Location: LCCOMB_X24_Y5_N10
-\adc_ram_shifter_1|data_b_1~69\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~213\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~69_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(109)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(125)))
+-- \adc_ram_shifter_1|data~213_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(109)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(125)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51610,22 +51607,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(125),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(109),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~69_combout\);
+	combout => \adc_ram_shifter_1|data~213_combout\);
 
 -- Location: LCFF_X24_Y5_N11
-\adc_ram_shifter_1|data_b_1[5]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[133]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~69_combout\,
+	datain => \adc_ram_shifter_1|data~213_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(5));
+	regout => \adc_ram_shifter_1|data\(133));
 
 -- Location: LCCOMB_X22_Y7_N12
-\adc_ram_shifter_1|data_a_1~113\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~314\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~113_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(12))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(28))))
+-- \adc_ram_shifter_1|data~314_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(12))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(28))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51636,22 +51633,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(12),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(28),
-	combout => \adc_ram_shifter_1|data_a_1~113_combout\);
+	combout => \adc_ram_shifter_1|data~314_combout\);
 
 -- Location: LCFF_X22_Y7_N13
-\adc_ram_shifter_1|data_a_1[36]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[36]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~113_combout\,
+	datain => \adc_ram_shifter_1|data~314_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(36));
+	regout => \adc_ram_shifter_1|data\(36));
 
 -- Location: LCCOMB_X24_Y7_N8
-\adc_ram_shifter_1|data_b_1~66\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~210\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~66_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(106)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(122)))
+-- \adc_ram_shifter_1|data~210_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(106)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(122)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51662,22 +51659,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(122),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(106),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~66_combout\);
+	combout => \adc_ram_shifter_1|data~210_combout\);
 
 -- Location: LCFF_X24_Y7_N9
-\adc_ram_shifter_1|data_b_1[2]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[130]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~66_combout\,
+	datain => \adc_ram_shifter_1|data~210_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(2));
+	regout => \adc_ram_shifter_1|data\(130));
 
 -- Location: LCCOMB_X22_Y7_N16
-\adc_ram_shifter_1|data_a_1~84\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~256\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~84_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(12))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(12))))
+-- \adc_ram_shifter_1|data~256_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(12))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(12))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51688,22 +51685,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|temp_shift\(12),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(12),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~84_combout\);
+	combout => \adc_ram_shifter_1|data~256_combout\);
 
 -- Location: LCFF_X22_Y7_N17
-\adc_ram_shifter_1|data_a_1[20]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[20]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~84_combout\,
+	datain => \adc_ram_shifter_1|data~256_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(20));
+	regout => \adc_ram_shifter_1|data\(20));
 
 -- Location: LCCOMB_X21_Y11_N8
-\adc_ram_shifter_1|data_a_1~73\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~234\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~73_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(4)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(20)))
+-- \adc_ram_shifter_1|data~234_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(4)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(20)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51714,22 +51711,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(20),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(4),
-	combout => \adc_ram_shifter_1|data_a_1~73_combout\);
+	combout => \adc_ram_shifter_1|data~234_combout\);
 
 -- Location: LCFF_X21_Y11_N9
-\adc_ram_shifter_1|data_a_1[28]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[28]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~73_combout\,
+	datain => \adc_ram_shifter_1|data~234_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(28));
+	regout => \adc_ram_shifter_1|data\(28));
 
 -- Location: LCCOMB_X22_Y9_N30
-\adc_ram_shifter_1|data_a_1~111\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~310\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~111_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(11))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(27))))
+-- \adc_ram_shifter_1|data~310_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(11))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(27))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51740,22 +51737,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(11),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(27),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~111_combout\);
+	combout => \adc_ram_shifter_1|data~310_combout\);
 
 -- Location: LCFF_X22_Y9_N31
-\adc_ram_shifter_1|data_a_1[35]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[35]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~111_combout\,
+	datain => \adc_ram_shifter_1|data~310_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(35));
+	regout => \adc_ram_shifter_1|data\(35));
 
 -- Location: LCCOMB_X26_Y7_N20
-\adc_ram_shifter_1|data_b_1~65\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~209\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~65_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(105))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(121))))
+-- \adc_ram_shifter_1|data~209_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(105))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(121))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51766,17 +51763,17 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(105),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(121),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~65_combout\);
+	combout => \adc_ram_shifter_1|data~209_combout\);
 
 -- Location: LCFF_X26_Y7_N21
-\adc_ram_shifter_1|data_b_1[1]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[129]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~65_combout\,
+	datain => \adc_ram_shifter_1|data~209_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(1));
+	regout => \adc_ram_shifter_1|data\(129));
 
 -- Location: LCCOMB_X26_Y7_N0
 \adc_ram_shifter_1|temp_shift[11]~feeder\ : cycloneii_lcell_comb
@@ -51803,9 +51800,9 @@ PORT MAP (
 	regout => \adc_ram_shifter_1|temp_shift\(11));
 
 -- Location: LCCOMB_X26_Y7_N8
-\adc_ram_shifter_1|data_a_1~83\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~254\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~83_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(11)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(11)))
+-- \adc_ram_shifter_1|data~254_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\adc_ram_shifter_1|temp_shift\(11)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(11)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51816,22 +51813,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(11),
 	datad => \adc_ram_shifter_1|temp_shift\(11),
-	combout => \adc_ram_shifter_1|data_a_1~83_combout\);
+	combout => \adc_ram_shifter_1|data~254_combout\);
 
 -- Location: LCFF_X26_Y7_N9
-\adc_ram_shifter_1|data_a_1[19]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[19]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~83_combout\,
+	datain => \adc_ram_shifter_1|data~254_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(19));
+	regout => \adc_ram_shifter_1|data\(19));
 
 -- Location: LCCOMB_X24_Y11_N4
-\adc_ram_shifter_1|data_a_1~71\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~230\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~71_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(3))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(19))))
+-- \adc_ram_shifter_1|data~230_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(3))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(19))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51842,22 +51839,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(3),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(19),
-	combout => \adc_ram_shifter_1|data_a_1~71_combout\);
+	combout => \adc_ram_shifter_1|data~230_combout\);
 
 -- Location: LCFF_X24_Y11_N5
-\adc_ram_shifter_1|data_a_1[27]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[27]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~71_combout\,
+	datain => \adc_ram_shifter_1|data~230_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(27));
+	regout => \adc_ram_shifter_1|data\(27));
 
 -- Location: LCCOMB_X21_Y11_N0
-\adc_ram_shifter_1|data_a_1~60\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~200\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~60_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(4))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(4))))
+-- \adc_ram_shifter_1|data~200_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(4))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51868,22 +51865,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \adc_ram_shifter_1|temp_shift\(4),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(4),
-	combout => \adc_ram_shifter_1|data_a_1~60_combout\);
+	combout => \adc_ram_shifter_1|data~200_combout\);
 
 -- Location: LCFF_X21_Y11_N1
-\adc_ram_shifter_1|data_a_1[12]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[12]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~60_combout\,
+	datain => \adc_ram_shifter_1|data~200_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(12));
+	regout => \adc_ram_shifter_1|data\(12));
 
 -- Location: LCCOMB_X24_Y11_N10
-\adc_ram_shifter_1|data_a_1~59\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~198\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~59_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(3))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(3))))
+-- \adc_ram_shifter_1|data~198_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(3))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(3))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51894,22 +51891,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|temp_shift\(3),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(3),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~59_combout\);
+	combout => \adc_ram_shifter_1|data~198_combout\);
 
 -- Location: LCFF_X24_Y11_N11
-\adc_ram_shifter_1|data_a_1[11]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[11]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~59_combout\,
+	datain => \adc_ram_shifter_1|data~198_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(11));
+	regout => \adc_ram_shifter_1|data\(11));
 
 -- Location: LCCOMB_X21_Y11_N22
-\adc_ram_shifter_1|data_a_1~58\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~196\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~58_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(2))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(2))))
+-- \adc_ram_shifter_1|data~196_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(2))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(2))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51920,22 +51917,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \adc_ram_shifter_1|temp_shift\(2),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(2),
-	combout => \adc_ram_shifter_1|data_a_1~58_combout\);
+	combout => \adc_ram_shifter_1|data~196_combout\);
 
 -- Location: LCFF_X21_Y11_N23
-\adc_ram_shifter_1|data_a_1[10]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[10]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~58_combout\,
+	datain => \adc_ram_shifter_1|data~196_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(10));
+	regout => \adc_ram_shifter_1|data\(10));
 
 -- Location: LCCOMB_X24_Y11_N18
-\adc_ram_shifter_1|data_a_1~57\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~194\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~57_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(1))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(1))))
+-- \adc_ram_shifter_1|data~194_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(1))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51946,22 +51943,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \adc_ram_shifter_1|temp_shift\(1),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(1),
-	combout => \adc_ram_shifter_1|data_a_1~57_combout\);
+	combout => \adc_ram_shifter_1|data~194_combout\);
 
 -- Location: LCFF_X24_Y11_N19
-\adc_ram_shifter_1|data_a_1[9]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[9]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~57_combout\,
+	datain => \adc_ram_shifter_1|data~194_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(9));
+	regout => \adc_ram_shifter_1|data\(9));
 
 -- Location: LCCOMB_X22_Y11_N12
-\adc_ram_shifter_1|data_a_1~56\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~192\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~56_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(0))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(0))))
+-- \adc_ram_shifter_1|data~192_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(0))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(0))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51972,22 +51969,22 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \adc_ram_shifter_1|temp_shift\(0),
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(0),
-	combout => \adc_ram_shifter_1|data_a_1~56_combout\);
+	combout => \adc_ram_shifter_1|data~192_combout\);
 
 -- Location: LCFF_X22_Y11_N13
-\adc_ram_shifter_1|data_a_1[8]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[8]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~56_combout\,
+	datain => \adc_ram_shifter_1|data~192_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(8));
+	regout => \adc_ram_shifter_1|data\(8));
 
 -- Location: LCCOMB_X21_Y11_N6
-\adc_ram_shifter_1|data_a_1~82\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~252\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~82_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(10))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(10))))
+-- \adc_ram_shifter_1|data~252_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(10))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(10))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -51998,22 +51995,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \adc_ram_shifter_1|temp_shift\(10),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(10),
-	combout => \adc_ram_shifter_1|data_a_1~82_combout\);
+	combout => \adc_ram_shifter_1|data~252_combout\);
 
 -- Location: LCFF_X21_Y11_N7
-\adc_ram_shifter_1|data_a_1[18]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[18]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~82_combout\,
+	datain => \adc_ram_shifter_1|data~252_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(18));
+	regout => \adc_ram_shifter_1|data\(18));
 
 -- Location: LCCOMB_X24_Y7_N12
-\adc_ram_shifter_1|data_a_1~67\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~222\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~67_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(1))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(17))))
+-- \adc_ram_shifter_1|data~222_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(1))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(17))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52024,22 +52021,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(1),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(17),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~67_combout\);
+	combout => \adc_ram_shifter_1|data~222_combout\);
 
 -- Location: LCFF_X24_Y7_N13
-\adc_ram_shifter_1|data_a_1[25]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[25]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~67_combout\,
+	datain => \adc_ram_shifter_1|data~222_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(25));
+	regout => \adc_ram_shifter_1|data\(25));
 
 -- Location: LCCOMB_X26_Y7_N22
-\adc_ram_shifter_1|data_a_1~109\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~306\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~109_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(10)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(26)))
+-- \adc_ram_shifter_1|data~306_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(10)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(26)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52050,22 +52047,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(26),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(10),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~109_combout\);
+	combout => \adc_ram_shifter_1|data~306_combout\);
 
 -- Location: LCFF_X26_Y7_N23
-\adc_ram_shifter_1|data_a_1[34]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[34]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~109_combout\,
+	datain => \adc_ram_shifter_1|data~306_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(34));
+	regout => \adc_ram_shifter_1|data\(34));
 
 -- Location: LCCOMB_X24_Y7_N10
-\adc_ram_shifter_1|data_b_1~64\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~208\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~64_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(104)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(120)))
+-- \adc_ram_shifter_1|data~208_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(104)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(120)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52076,22 +52073,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(120),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(104),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~64_combout\);
+	combout => \adc_ram_shifter_1|data~208_combout\);
 
 -- Location: LCFF_X24_Y7_N11
-\adc_ram_shifter_1|data_b_1[0]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[128]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~64_combout\,
+	datain => \adc_ram_shifter_1|data~208_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(0));
+	regout => \adc_ram_shifter_1|data\(128));
 
 -- Location: LCCOMB_X24_Y11_N14
-\adc_ram_shifter_1|data_a_1~81\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~250\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~81_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(9))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(9))))
+-- \adc_ram_shifter_1|data~250_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\adc_ram_shifter_1|temp_shift\(9))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(9))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52102,22 +52099,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|temp_shift\(9),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(9),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~81_combout\);
+	combout => \adc_ram_shifter_1|data~250_combout\);
 
 -- Location: LCFF_X24_Y11_N15
-\adc_ram_shifter_1|data_a_1[17]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[17]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~81_combout\,
+	datain => \adc_ram_shifter_1|data~250_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(17));
+	regout => \adc_ram_shifter_1|data\(17));
 
 -- Location: LCCOMB_X20_Y5_N24
-\adc_ram_shifter_1|data_b_1~25\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~99\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~25_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(24))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(40))))
+-- \adc_ram_shifter_1|data~99_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(24))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(40))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52128,22 +52125,22 @@ PORT MAP (
 	dataa => \adc_ram_shifter_1|last_stop~regout\,
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(24),
 	datad => \ram1|altsyncram_component|auto_generated|q_b\(40),
-	combout => \adc_ram_shifter_1|data_b_1~25_combout\);
+	combout => \adc_ram_shifter_1|data~99_combout\);
 
 -- Location: LCFF_X20_Y5_N25
-\adc_ram_shifter_1|data_b_1[48]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[176]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~25_combout\,
+	datain => \adc_ram_shifter_1|data~99_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(48));
+	regout => \adc_ram_shifter_1|data\(176));
 
 -- Location: LCCOMB_X24_Y7_N6
-\adc_ram_shifter_1|data_b_1~88\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~249\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~88_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(120)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(8)))
+-- \adc_ram_shifter_1|data~249_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(120)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(8)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52154,22 +52151,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_b\(8),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(120),
-	combout => \adc_ram_shifter_1|data_b_1~88_combout\);
+	combout => \adc_ram_shifter_1|data~249_combout\);
 
 -- Location: LCFF_X24_Y7_N7
-\adc_ram_shifter_1|data_b_1[16]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[144]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~88_combout\,
+	datain => \adc_ram_shifter_1|data~249_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(16));
+	regout => \adc_ram_shifter_1|data\(144));
 
 -- Location: LCCOMB_X19_Y7_N22
-\adc_ram_shifter_1|data_a_1~65\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~218\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~65_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(0))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(16))))
+-- \adc_ram_shifter_1|data~218_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(0))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(16))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52180,22 +52177,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(0),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(16),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~65_combout\);
+	combout => \adc_ram_shifter_1|data~218_combout\);
 
 -- Location: LCFF_X19_Y7_N23
-\adc_ram_shifter_1|data_a_1[24]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[24]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~65_combout\,
+	datain => \adc_ram_shifter_1|data~218_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(24));
+	regout => \adc_ram_shifter_1|data\(24));
 
 -- Location: LCCOMB_X20_Y5_N2
-\adc_ram_shifter_1|data_b_1~113\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~299\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~113_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(8)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(24)))
+-- \adc_ram_shifter_1|data~299_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_b\(8)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_b\(24)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52206,22 +52203,22 @@ PORT MAP (
 	datab => \ram1|altsyncram_component|auto_generated|q_b\(24),
 	datac => \ram1|altsyncram_component|auto_generated|q_b\(8),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_b_1~113_combout\);
+	combout => \adc_ram_shifter_1|data~299_combout\);
 
 -- Location: LCFF_X20_Y5_N3
-\adc_ram_shifter_1|data_b_1[32]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[160]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~113_combout\,
+	datain => \adc_ram_shifter_1|data~299_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(32));
+	regout => \adc_ram_shifter_1|data\(160));
 
 -- Location: LCCOMB_X20_Y6_N30
-\adc_ram_shifter_1|data_b_1~68\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~212\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_b_1~68_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(108)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(124)))
+-- \adc_ram_shifter_1|data~212_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(108)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(124)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52232,22 +52229,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(124),
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datad => \ram1|altsyncram_component|auto_generated|q_a\(108),
-	combout => \adc_ram_shifter_1|data_b_1~68_combout\);
+	combout => \adc_ram_shifter_1|data~212_combout\);
 
 -- Location: LCFF_X20_Y6_N31
-\adc_ram_shifter_1|data_b_1[4]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[132]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_b_1~68_combout\,
+	datain => \adc_ram_shifter_1|data~212_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_b_1\(4));
+	regout => \adc_ram_shifter_1|data\(132));
 
 -- Location: LCCOMB_X22_Y11_N30
-\adc_ram_shifter_1|data_a_1~105\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~298\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~105_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(8))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(24))))
+-- \adc_ram_shifter_1|data~298_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(8))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(24))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52258,22 +52255,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(8),
 	datac => \ram1|altsyncram_component|auto_generated|q_a\(24),
 	datad => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~105_combout\);
+	combout => \adc_ram_shifter_1|data~298_combout\);
 
 -- Location: LCFF_X22_Y11_N31
-\adc_ram_shifter_1|data_a_1[32]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[32]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~105_combout\,
+	datain => \adc_ram_shifter_1|data~298_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(32));
+	regout => \adc_ram_shifter_1|data\(32));
 
 -- Location: LCCOMB_X20_Y6_N24
-\adc_ram_shifter_1|data_a_1~16\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~66\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~16_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(32)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(48)))
+-- \adc_ram_shifter_1|data~66_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(32)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(48)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52284,22 +52281,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(48),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(32),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~16_combout\);
+	combout => \adc_ram_shifter_1|data~66_combout\);
 
 -- Location: LCFF_X20_Y6_N25
-\adc_ram_shifter_1|data_a_1[56]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[56]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~16_combout\,
+	datain => \adc_ram_shifter_1|data~66_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(56));
+	regout => \adc_ram_shifter_1|data\(56));
 
 -- Location: LCCOMB_X24_Y10_N2
-\adc_ram_shifter_1|data_a_1~48\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~162\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_1~48_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(56)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(72)))
+-- \adc_ram_shifter_1|data~162_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & ((\ram1|altsyncram_component|auto_generated|q_a\(56)))) # (!\adc_ram_shifter_1|last_stop~regout\ & (\ram1|altsyncram_component|auto_generated|q_a\(72)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52310,22 +52307,22 @@ PORT MAP (
 	dataa => \ram1|altsyncram_component|auto_generated|q_a\(72),
 	datab => \ram1|altsyncram_component|auto_generated|q_a\(56),
 	datac => \adc_ram_shifter_1|last_stop~regout\,
-	combout => \adc_ram_shifter_1|data_a_1~48_combout\);
+	combout => \adc_ram_shifter_1|data~162_combout\);
 
 -- Location: LCFF_X24_Y10_N3
-\adc_ram_shifter_1|data_a_1[80]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[80]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_1~48_combout\,
+	datain => \adc_ram_shifter_1|data~162_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_1\(80));
+	regout => \adc_ram_shifter_1|data\(80));
 
 -- Location: LCCOMB_X20_Y9_N4
-\adc_ram_shifter_1|data_a_2~80\ : cycloneii_lcell_comb
+\adc_ram_shifter_1|data~408\ : cycloneii_lcell_comb
 -- Equation(s):
--- \adc_ram_shifter_1|data_a_2~80_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(24))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(40))))
+-- \adc_ram_shifter_1|data~408_combout\ = (\adc_ram_shifter_1|last_stop~regout\ & (\ram2|altsyncram_component|auto_generated|q_a\(24))) # (!\adc_ram_shifter_1|last_stop~regout\ & ((\ram2|altsyncram_component|auto_generated|q_a\(40))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52336,17 +52333,17 @@ PORT MAP (
 	datab => \adc_ram_shifter_1|last_stop~regout\,
 	datac => \ram2|altsyncram_component|auto_generated|q_a\(24),
 	datad => \ram2|altsyncram_component|auto_generated|q_a\(40),
-	combout => \adc_ram_shifter_1|data_a_2~80_combout\);
+	combout => \adc_ram_shifter_1|data~408_combout\);
 
 -- Location: LCFF_X20_Y9_N5
-\adc_ram_shifter_1|data_a_2[48]\ : cycloneii_lcell_ff
+\adc_ram_shifter_1|data[304]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \clock_divider1|clock_out~clkctrl_outclk\,
-	datain => \adc_ram_shifter_1|data_a_2~80_combout\,
+	datain => \adc_ram_shifter_1|data~408_combout\,
 	ena => \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \adc_ram_shifter_1|data_a_2\(48));
+	regout => \adc_ram_shifter_1|data\(304));
 
 -- Location: LCCOMB_X19_Y3_N22
 \corr_long|input_adc_6[49]~49\ : cycloneii_lcell_comb

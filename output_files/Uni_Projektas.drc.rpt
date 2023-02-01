@@ -1,5 +1,5 @@
 Design Assistant report for Uni_Projektas
-Wed Feb 01 20:00:40 2023
+Wed Feb 01 21:41:21 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Design Assistant Summary                                                ;
 +-----------------------------------+-------------------------------------+
-; Design Assistant Status           ; Analyzed - Wed Feb 01 20:00:40 2023 ;
+; Design Assistant Status           ; Analyzed - Wed Feb 01 21:41:21 2023 ;
 ; Revision Name                     ; Uni_Projektas                       ;
 ; Top-level Entity Name             ; UNI_Projektas                       ;
 ; Family                            ; Cyclone II                          ;
@@ -248,7 +248,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Design Assistant
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Feb 01 20:00:39 2023
+    Info: Processing started: Wed Feb 01 21:41:20 2023
 Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Info (332104): Reading SDC File: 'Uni_Projektas.sdc'
 Warning (332060): Node: Clock_divider:clock_divider1|clock_out was determined to be a clock but was found without an associated clock assignment.
@@ -330,7 +330,7 @@ Info (308044): (Information) Rule T102: Top nodes with the highest number of fan
 Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 87 information messages and 8 warning messages
 Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 12 warnings
     Info: Peak virtual memory: 4573 megabytes
-    Info: Processing ended: Wed Feb 01 20:00:40 2023
+    Info: Processing ended: Wed Feb 01 21:41:21 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
