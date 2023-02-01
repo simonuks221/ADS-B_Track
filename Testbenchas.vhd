@@ -14,9 +14,11 @@ END Testbenchas;
 ARCHITECTURE UNI_Projektas_arch OF Testbenchas IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL ADC_IN : STD_LOGIC_VECTOR(7 DOWNTO 0) := (others => '0');
+SIGNAL ADC_IN : STD_LOGIC_VECTOR(9 DOWNTO 0) := (others => '0');
+SIGNAL ADC_DOR : std_logic;
+SIGNAL ADC_DCKL : std_logic;
 SIGNAL CLK : STD_LOGIC := '0';
-SIGNAL DATA_OUT : STD_LOGIC_VECTOR(5 DOWNTO 0);
+SIGNAL DATA_OUT : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL SYNC : STD_LOGIC;
 signal arrIndex : integer := 0;
 SIGNAL UART_TX: std_logic := '0';
@@ -44,9 +46,11 @@ signal adc_buffer : b_data := init;
 
 COMPONENT UNI_Projektas
 	PORT (
-	ADC_IN : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+	ADC_IN : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 	CLK : IN STD_LOGIC;
-	DATA_OUT : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+	DATA_OUT : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	ADC_DOR : in std_logic;
+	ADC_DCKL : in std_logic;
 	SYNC : OUT STD_LOGIC;
 	UART_TX: out std_logic;
 	UART_RX_RX: in std_logic
@@ -58,6 +62,8 @@ i1 : UNI_Projektas
 	ADC_IN => ADC_IN,
 	CLK => CLK,
 	DATA_OUT => DATA_OUT,
+	ADC_DOR => ADC_DOR,
+	ADC_DCKL => ADC_DCKL,
 	SYNC => SYNC,
 	UART_RX_RX => UART_RX,
 	UART_TX => UART_TX

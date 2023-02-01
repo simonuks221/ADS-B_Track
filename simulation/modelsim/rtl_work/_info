@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dC:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\simulation\modelsim
 Eadc_manager
-Z1 w1675179936
+Z1 w1675266499
 Z2 DPx4 work 12 corr_package 0 22 ?ban?PMXL_?Q[aWmL504X1
 Z3 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
 Z4 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
@@ -20,7 +20,7 @@ VLl28n<V8jhPfcechh3UA31
 Z10 OV;C;10.1d;51
 32
 !i10b 1
-Z11 !s108 1675179940.341000
+Z11 !s108 1675266507.577000
 Z12 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd|
 Z13 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd|
 Z14 o-work work -O0
@@ -58,7 +58,7 @@ L7
 Vg`kPAK:hfT??E0HbBg0P@1
 R10
 31
-Z19 !s108 1675179863.946000
+Z19 !s108 1675266470.489000
 Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_ram_shifter.vhd|
 Z21 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_ram_shifter.vhd|
 Z22 o-93 -work work -O0
@@ -95,7 +95,7 @@ L42
 VYB0RIH@9bL6FFWLn;ebB41
 R10
 31
-Z26 !s108 1675179863.885000
+Z26 !s108 1675266470.429000
 Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd|
 Z28 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd|
 R22
@@ -132,7 +132,7 @@ L7
 V<afa>64UjEQH]]^OXYBGD1
 R10
 31
-Z32 !s108 1675179863.807000
+Z32 !s108 1675266470.366000
 Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd|
 Z34 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd|
 R22
@@ -174,7 +174,7 @@ R22
 R15
 !s100 aG?Mn:adR0ZS0i:XP:2Ob1
 !i10b 1
-!s108 1675179863.696000
+!s108 1675266470.226000
 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd|
 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd|
 Ecorrelation_function
@@ -191,7 +191,7 @@ L6
 V7HA5LCEDKjWMk`4k^KQjH3
 R10
 31
-Z38 !s108 1675179864.245000
+Z38 !s108 1675266470.798000
 Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd|
 Z40 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd|
 R22
@@ -230,7 +230,7 @@ L6
 V2555TRMDY4cb30A5?`FIN1
 R10
 31
-Z44 !s108 1675179864.369000
+Z44 !s108 1675266470.921000
 Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_gate.vhd|
 Z46 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_gate.vhd|
 R22
@@ -269,7 +269,7 @@ L7
 VXTAVoI13@:A@JGd1>3Q_81
 R10
 31
-Z50 !s108 1675179864.429000
+Z50 !s108 1675266470.984000
 Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
 Z52 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
 R22
@@ -308,7 +308,7 @@ L7
 V^PVahDVaoR[Eao1dob3>P3
 R10
 31
-Z56 !s108 1675179864.007000
+Z56 !s108 1675266470.551000
 Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd|
 Z58 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd|
 R22
@@ -345,7 +345,7 @@ L42
 VkPMA?<I:3BohhMEPM36VC3
 R10
 31
-Z62 !s108 1675179864.125000
+Z62 !s108 1675266470.674000
 Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd|
 Z64 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd|
 R22
@@ -382,7 +382,7 @@ L10
 VB1[jgUGUUn5fhRWWWgT0]1
 R10
 31
-Z68 !s108 1675179864.067000
+Z68 !s108 1675266470.613000
 Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd|
 Z70 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd|
 R22
@@ -422,7 +422,7 @@ L8
 V_AWnlJ[@I4M`Eh;;egRH:1
 R10
 31
-Z74 !s108 1675179864.306000
+Z74 !s108 1675266470.859000
 Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
 Z76 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
 R22
@@ -460,7 +460,7 @@ L42
 V>>XX;EfR8>j6zAbg9j=l_3
 R10
 31
-Z80 !s108 1675179863.744000
+Z80 !s108 1675266470.304000
 Z81 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd|
 Z82 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd|
 R22
