@@ -29,7 +29,7 @@ entity ADC_ram_shifter is
 		wren_a_2		: out STD_LOGIC  := '1';
 		wren_b_2		: out STD_LOGIC  := '1';
 		
-		new_adc_in : in std_logic_vector(9 downto 0) := (others => '0');
+		new_adc_in : in std_logic_vector(7 downto 0) := (others => '0');
 		stop_shift : in std_logic := '0'
 	);
 end entity;
@@ -60,12 +60,12 @@ begin
 			wren_b_2 <= '1';
 			if(last_stop = '1') then
 				last_stop <= '0';
-				data_a_1 <= q_a_1(119-16 downto 0) & temp_shift & new_adc_in(7 downto 0);
+				data_a_1 <= q_a_1(119-16 downto 0) & temp_shift & new_adc_in;
 				data_b_1 <= q_b_1(119-16 downto 0) & q_a_1(127 downto 120-16);
 				data_a_2 <= q_a_2(119-16 downto 0) & q_b_1(127 downto 120-16);
 				data_b_2 <= q_b_2(119-16 downto 0) & q_a_2(127 downto 120-16);
 			else
-				data_a_1 <= q_a_1(119 downto 0) & new_adc_in(7 downto 0);
+				data_a_1 <= q_a_1(119 downto 0) & new_adc_in;
 				data_b_1 <= q_b_1(119 downto 0) & q_a_1(127 downto 120);
 				data_a_2 <= q_a_2(119 downto 0) & q_b_1(127 downto 120);
 				data_b_2 <= q_b_2(119 downto 0) & q_a_2(127 downto 120);
@@ -73,8 +73,13 @@ begin
 			
 		else
 			--Stop shifting
-			last_stop <= '1';	
-			temp_shift <= temp_shift(7 downto 0) & new_adc_in(7 downto 0);
+			last_stop <= '1';
+			--wren_a_1 <= '0';
+			--wren_b_1 <= '0';
+			--wren_a_2 <= '0';
+			--wren_b_2 <= '0';
+			
+			temp_shift <= temp_shift(7 downto 0) & new_adc_in;
 		end if;
 	end if;
 end process;

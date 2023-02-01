@@ -11,10 +11,8 @@ generic (
 );
 port(
 	CLK : in std_logic;
-	ADC_IN : in std_logic_vector(9 downto 0);
-	ADC_DOR : in std_logic;
-	ADC_DCKL : in std_logic;
-	DATA_OUT : out std_logic_vector(7 downto 0);
+	ADC_IN : in std_logic_vector(7 downto 0);
+	DATA_OUT : out std_logic_vector(6-1 downto 0);
 	SYNC : out std_logic;
 	UART_TX: out std_logic;
 	UART_RX_RX: in std_logic
@@ -102,7 +100,7 @@ component ADC_ram_shifter is
 		wren_a_2		: out STD_LOGIC  := '1';
 		wren_b_2		: out STD_LOGIC  := '1';
 		
-		new_adc_in : std_logic_vector(9 downto 0);
+		new_adc_in : std_logic_vector(7 downto 0);
 		stop_shift : in std_logic := '0'
 	);
 end component;
@@ -217,7 +215,7 @@ ram2 : big_ram_wizard port map(clock => CLK, address_a => address_a_2, address_b
 
 --pll :  SYNC_PLL port map(inclk0 =>CLK, c0 => sync_clk);
 										
-DATA_OUT <= "00" & RECEIVED_CODE;
+DATA_OUT <= RECEIVED_CODE;
 SYNC <= sync_clk;
 
 input_adc_values <= q_b_2(15 downto 0)& q_a_2 & q_b_1 & q_a_1;
