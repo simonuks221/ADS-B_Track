@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dC:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\simulation\modelsim
 Eadc_manager
-Z1 w1675179936
+Z1 w1675266499
 Z2 DPx4 work 12 corr_package 0 22 ?ban?PMXL_?Q[aWmL504X1
 Z3 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
 Z4 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
@@ -17,16 +17,9 @@ l0
 L8
 VoHd23n9Ml92CLXQRJaCjY1
 Z10 OV;C;10.1d;51
-<<<<<<< HEAD
 31
-Z11 !s108 1675272754.290000
+Z11 !s108 1675273273.173000
 Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd|
-=======
-32
-!i10b 1
-Z11 !s108 1675179940.341000
-Z12 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd|
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
 Z13 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd|
 Z14 o-93 -work work -O0
 Z15 tExplicit 1
@@ -65,11 +58,7 @@ L7
 Vg`kPAK:hfT??E0HbBg0P@1
 R10
 31
-<<<<<<< HEAD
-Z19 !s108 1675272754.037000
-=======
-Z19 !s108 1675179863.946000
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
+Z19 !s108 1675273272.936000
 Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_ram_shifter.vhd|
 Z21 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_ram_shifter.vhd|
 R14
@@ -106,17 +95,10 @@ L42
 VYB0RIH@9bL6FFWLn;ebB41
 R10
 31
-<<<<<<< HEAD
-Z25 !s108 1675272753.975000
+Z25 !s108 1675273272.881000
 Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd|
 Z27 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd|
 R14
-=======
-Z26 !s108 1675179863.885000
-Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd|
-Z28 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd|
-R22
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
 R15
 !s100 CCWAgQ85>F`fKeBO9e6jY1
 !i10b 1
@@ -150,17 +132,10 @@ L7
 V<afa>64UjEQH]]^OXYBGD1
 R10
 31
-<<<<<<< HEAD
-Z31 !s108 1675272753.913000
+Z31 !s108 1675273272.810000
 Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd|
 Z33 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd|
 R14
-=======
-Z32 !s108 1675179863.807000
-Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd|
-Z34 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd|
-R22
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
 R15
 !s100 kkJkzg`S9>Uh:d>`IL6c[2
 !i10b 1
@@ -199,11 +174,7 @@ R14
 R15
 !s100 aG?Mn:adR0ZS0i:XP:2Ob1
 !i10b 1
-<<<<<<< HEAD
-!s108 1675272753.776000
-=======
-!s108 1675179863.696000
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
+!s108 1675273272.698000
 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd|
 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd|
 Ecorrelation_function
@@ -220,17 +191,10 @@ L6
 V7HA5LCEDKjWMk`4k^KQjH3
 R10
 31
-<<<<<<< HEAD
-Z37 !s108 1675272754.355000
+Z37 !s108 1675273273.237000
 Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd|
 Z39 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd|
 R14
-=======
-Z38 !s108 1675179864.245000
-Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd|
-Z40 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd|
-R22
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
 R15
 !s100 J?3Z6]z8o@HmD<Dhb81f90
 !i10b 1
@@ -266,17 +230,10 @@ L6
 V2555TRMDY4cb30A5?`FIN1
 R10
 31
-<<<<<<< HEAD
-Z43 !s108 1675272754.487000
+Z43 !s108 1675273273.348000
 Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_gate.vhd|
 Z45 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_gate.vhd|
 R14
-=======
-Z44 !s108 1675179864.369000
-Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_gate.vhd|
-Z46 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_gate.vhd|
-R22
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
 R15
 !s100 kQl`I8j:M4mn>zD9<MIBR2
 !i10b 1
@@ -313,17 +270,8 @@ VXTAVoI13@:A@JGd1>3Q_81
 !s100 XFKl1=`32ABE8hUkA728H3
 R10
 31
-<<<<<<< HEAD
-=======
-Z50 !s108 1675179864.429000
-Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
-Z52 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
-R22
-R15
-!s100 XFKl1=`32ABE8hUkA728H3
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
 !i10b 1
-Z48 !s108 1675272754.554000
+Z48 !s108 1675273273.411000
 Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
 Z50 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
 R14
@@ -360,17 +308,10 @@ L7
 V^PVahDVaoR[Eao1dob3>P3
 R10
 31
-<<<<<<< HEAD
-Z54 !s108 1675272754.102000
+Z54 !s108 1675273272.999000
 Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd|
 Z56 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd|
 R14
-=======
-Z56 !s108 1675179864.007000
-Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd|
-Z58 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd|
-R22
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
 R15
 !s100 i[X:l38@EHz;U0H>@iYQn3
 !i10b 1
@@ -404,17 +345,10 @@ L42
 VkPMA?<I:3BohhMEPM36VC3
 R10
 31
-<<<<<<< HEAD
-Z60 !s108 1675272754.226000
+Z60 !s108 1675273273.110000
 Z61 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd|
 Z62 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd|
 R14
-=======
-Z62 !s108 1675179864.125000
-Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd|
-Z64 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd|
-R22
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
 R15
 !s100 =<Ofg0c3hRkJnDCZUK5Qk1
 !i10b 1
@@ -448,17 +382,10 @@ L10
 VB1[jgUGUUn5fhRWWWgT0]1
 R10
 31
-<<<<<<< HEAD
-Z66 !s108 1675272754.166000
+Z66 !s108 1675273273.046000
 Z67 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd|
 Z68 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd|
 R14
-=======
-Z68 !s108 1675179864.067000
-Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd|
-Z70 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd|
-R22
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
 R15
 !s100 aC5jh4o1^0CiBkF56hGUU3
 !i10b 1
@@ -495,17 +422,10 @@ L8
 V_AWnlJ[@I4M`Eh;;egRH:1
 R10
 31
-<<<<<<< HEAD
-Z71 !s108 1675272754.419000
+Z71 !s108 1675273273.285000
 Z72 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
 Z73 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
 R14
-=======
-Z74 !s108 1675179864.306000
-Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
-Z76 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
-R22
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
 R15
 !s100 YE4;PJ9YNGXJ`YT;F>zmC1
 !i10b 1
@@ -540,17 +460,10 @@ L42
 V>>XX;EfR8>j6zAbg9j=l_3
 R10
 31
-<<<<<<< HEAD
-Z77 !s108 1675272753.836000
+Z77 !s108 1675273272.762000
 Z78 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd|
 Z79 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd|
 R14
-=======
-Z80 !s108 1675179863.744000
-Z81 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd|
-Z82 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd|
-R22
->>>>>>> parent of 4ca17b3 (Pries 10bit ramus)
 R15
 !s100 h;DloUO]JX0M`@BW98iVc3
 !i10b 1
