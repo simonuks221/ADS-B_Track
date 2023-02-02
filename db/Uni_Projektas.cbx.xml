@@ -13,12 +13,13 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult0" CBX_FILE_NAME="mult_o5t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult8" CBX_FILE_NAME="mult_o5t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult7" CBX_FILE_NAME="mult_o5t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Uni_Projektas|wizard_ram:wizard_ram_1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_i0d1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult1" CBX_FILE_NAME="mult_o5t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult10" CBX_FILE_NAME="mult_o5t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult9" CBX_FILE_NAME="mult_o5t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult0" CBX_FILE_NAME="mult_o5t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult8" CBX_FILE_NAME="mult_o5t.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Uni_Projektas|corr_func_rom_1:ram3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ve42.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Uni_Projektas|corr_func_rom_1:ram3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_he42.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult11" CBX_FILE_NAME="mult_o5t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate5|lpm_mult:Mult2" CBX_FILE_NAME="mult_o5t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult1" CBX_FILE_NAME="mult_o5t.tdf"/>

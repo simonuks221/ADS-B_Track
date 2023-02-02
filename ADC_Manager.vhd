@@ -59,6 +59,7 @@ signal c_long_func_input : double_array(0 to PREAMBULE_FUNC_LEN-1) := (others =>
 --Counting signals
 signal counter: integer := 0;
 signal bit_counter: integer := 0;
+signal bit_polarity: std_logic := '0';
 signal ram_counter: integer := 0;
 signal data_buffer : std_logic_vector(MAX_DATA_COUNTS*BITS_PER_DATA_COUNT-1 downto 0) := (others => '0');
 signal data_counts : integer := 0;
@@ -116,68 +117,88 @@ begin
 				else
 					ram_counter <= ram_counter + 1;
 				end if;
+				bit_polarity <= '1';
 				
 			when finding_preambule =>
+				bit_polarity <= not bit_polarity;
 				DATA_DONE <= '0';
-				corr_func_rom_adress_a <= std_logic_vector(to_unsigned(1, corr_func_rom_adress_a'length));
-				corr_func_rom_adress_b <= std_logic_vector(to_unsigned(0, corr_func_rom_adress_b'length));
+				if(bit_polarity = '1') then
+					corr_func_rom_adress_a <= std_logic_vector(to_unsigned(1, corr_func_rom_adress_a'length));
+					corr_func_rom_adress_b <= std_logic_vector(to_unsigned(0, corr_func_rom_adress_b'length));
+				else
+					corr_func_rom_adress_a <= std_logic_vector(to_unsigned(3, corr_func_rom_adress_a'length));
+					corr_func_rom_adress_b <= std_logic_vector(to_unsigned(2, corr_func_rom_adress_b'length));
+				end if;
+				
 				c_long_func_input <= c_preamb_func;
 				if(to_integer(unsigned(c_long_value)) > PREAMBULE_FUNC_THRESHOLD) then
 					main_state <= waiting_preambule;
 				end if;
 			when waiting_preambule =>
+				bit_polarity <= '1';
 				c_long_func_input <= (others => (others => '0'));
 				
 				if(counter = PREAMBULE_DELAY_LEN) then --3us for delay between preambule and data
 					main_state <= waiting_bits;
 				end if;
 			when waiting_bits =>
-				corr_func_rom_adress_a <= std_logic_vector(to_unsigned(6, corr_func_rom_adress_a'length));
-				corr_func_rom_adress_b <= std_logic_vector(to_unsigned(2, corr_func_rom_adress_b'length));
+				bit_polarity <= '1';
+				corr_func_rom_adress_a <= std_logic_vector(to_unsigned(5, corr_func_rom_adress_a'length));
+				corr_func_rom_adress_b <= std_logic_vector(to_unsigned(4, corr_func_rom_adress_b'length));
 				c_long_func_input(0 to 10-1) <= c_0_func;
 				c_long_func_input(10 to 20-1) <= c_1_func;
 				if(bit_counter = BITS_FUNC_LEN-1) then
 					main_state <= finding_bits;
+					corr_func_rom_adress_a <= std_logic_vector(to_unsigned(15, corr_func_rom_adress_a'length));
+					corr_func_rom_adress_b <= std_logic_vector(to_unsigned(15, corr_func_rom_adress_b'length));
 				end if;
 				c_short_func_input_index <= 0;
 				
 			when finding_bits =>
 				case(c_short_func_input_index) is
 					when 0 =>
-						corr_func_rom_adress_a <= std_logic_vector(to_unsigned(6, corr_func_rom_adress_a'length));
-						corr_func_rom_adress_b <= std_logic_vector(to_unsigned(2, corr_func_rom_adress_b'length));
+						corr_func_rom_adress_a <= std_logic_vector(to_unsigned(7, corr_func_rom_adress_a'length));
+						corr_func_rom_adress_b <= std_logic_vector(to_unsigned(6, corr_func_rom_adress_b'length));
+						
 						c_long_func_input(0 to 10-1) <= c_0_func;
 						c_long_func_input(10 to 20-1) <= c_1_func;
 					when 1 =>
-						--corr_func_rom_adress_a <= std_logic_vector(to_unsigned(3, corr_func_rom_adress_a'length));
-						--corr_func_rom_adress_b <= std_logic_vector(to_unsigned(6, corr_func_rom_adress_b'length));
-						--c_long_func_input(0 to 10-1) <= c_1_func;
-						--c_long_func_input(10 to 20-1) <= c_1_func;
+						corr_func_rom_adress_a <= std_logic_vector(to_unsigned(15, corr_func_rom_adress_a'length));
+						corr_func_rom_adress_b <= std_logic_vector(to_unsigned(15, corr_func_rom_adress_b'length));
+						c_long_func_input(0 to 10-1) <= c_1_func;
+						c_long_func_input(10 to 20-1) <= c_1_func;
 					when 2 =>
 						c_01_value <=  to_integer(unsigned(c_long_value));
+						corr_func_rom_adress_a <= std_logic_vector(to_unsigned(9, corr_func_rom_adress_a'length));
+						corr_func_rom_adress_b <= std_logic_vector(to_unsigned(8, corr_func_rom_adress_b'length));
 					when 3 =>
-						--corr_func_rom_adress_a <= std_logic_vector(to_unsigned(4, corr_func_rom_adress_a'length));
-						--corr_func_rom_adress_b <= std_logic_vector(to_unsigned(6, corr_func_rom_adress_b'length));
-						--c_long_func_input(0 to 10-1) <= c_1_func;
-						--c_long_func_input(10 to 20-1) <= c_0_func;
+						corr_func_rom_adress_a <= std_logic_vector(to_unsigned(15, corr_func_rom_adress_a'length));
+						corr_func_rom_adress_b <= std_logic_vector(to_unsigned(15, corr_func_rom_adress_b'length));
+						c_long_func_input(0 to 10-1) <= c_1_func;
+						c_long_func_input(10 to 20-1) <= c_0_func;
 					when 4 =>
+						corr_func_rom_adress_a <= std_logic_vector(to_unsigned(11, corr_func_rom_adress_a'length));
+						corr_func_rom_adress_b <= std_logic_vector(to_unsigned(10, corr_func_rom_adress_b'length));
 						c_11_value <=  to_integer(unsigned(c_long_value));
 					when 5 =>
-						--corr_func_rom_adress_a <= std_logic_vector(to_unsigned(5, corr_func_rom_adress_a'length));
-						--corr_func_rom_adress_b <= std_logic_vector(to_unsigned(6, corr_func_rom_adress_b'length));
-						--c_long_func_input(0 to 10-1) <= c_0_func;
-						--c_long_func_input(10 to 20-1) <= c_0_func;
+						corr_func_rom_adress_a <= std_logic_vector(to_unsigned(15, corr_func_rom_adress_a'length));
+						corr_func_rom_adress_b <= std_logic_vector(to_unsigned(15, corr_func_rom_adress_b'length));
+						c_long_func_input(0 to 10-1) <= c_0_func;
+						c_long_func_input(10 to 20-1) <= c_0_func;
 					when 6 =>
+						corr_func_rom_adress_a <= std_logic_vector(to_unsigned(13, corr_func_rom_adress_a'length));
+						corr_func_rom_adress_b <= std_logic_vector(to_unsigned(12, corr_func_rom_adress_b'length));
 						c_10_value <=  to_integer(unsigned(c_long_value));
 					when 7 =>
-						
+						corr_func_rom_adress_a <= std_logic_vector(to_unsigned(15, corr_func_rom_adress_a'length));
+						corr_func_rom_adress_b <= std_logic_vector(to_unsigned(15, corr_func_rom_adress_b'length));
 					when 8 =>
 						c_00_value <=  to_integer(unsigned(c_long_value));
 					when 9 =>
-						--corr_func_rom_adress_a <= std_logic_vector(to_unsigned(2, corr_func_rom_adress_a'length));
-						--corr_func_rom_adress_b <= std_logic_vector(to_unsigned(6, corr_func_rom_adress_b'length));
-						--c_long_func_input(0 to 10-1) <= c_0_func;
-						--c_long_func_input(10 to 20-1) <= c_1_func;
+						corr_func_rom_adress_a <= std_logic_vector(to_unsigned(5, corr_func_rom_adress_a'length));
+						corr_func_rom_adress_b <= std_logic_vector(to_unsigned(4, corr_func_rom_adress_b'length));
+						c_long_func_input(0 to 10-1) <= c_0_func;
+						c_long_func_input(10 to 20-1) <= c_1_func;
 						c_short_func_input_index <= 0;
 						if(c_01_value > c_10_value and c_01_value > c_00_value and c_01_value > c_11_value) then
 							if(c_01_value > BITS_FUNC_THRESHOLD) then --Threshold value

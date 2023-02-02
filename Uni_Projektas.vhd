@@ -103,7 +103,7 @@ component Correlation_function is
 		input_function : in double_array(0 to function_length - 1);
 		input_adc_values: in std_logic_vector(400-1 downto 0);
 		output_value : out std_logic_vector(19 downto 0);
-		input_function_ram : in std_logic_vector(575 downto 0)
+		input_function_ram : in std_logic_vector(255 downto 0)
 	);
 end component;
 
@@ -134,8 +134,8 @@ component corr_func_rom_1 IS
 		address_a		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
 		address_b		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
 		clock		: IN STD_LOGIC  := '1';
-		q_a		: OUT STD_LOGIC_VECTOR (287 DOWNTO 0);
-		q_b		: OUT STD_LOGIC_VECTOR (287 DOWNTO 0)
+		q_a		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0);
+		q_b		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0)
 	);
 END component;
 
@@ -186,7 +186,7 @@ signal address_3_a		: STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0');
 signal address_3_b		: STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0');
 --signal q_a_3		: STD_LOGIC_VECTOR (287 DOWNTO 0) := (others => '0');
 --signal q_b_3		: STD_LOGIC_VECTOR (287 DOWNTO 0) := (others => '0');
-signal q_3 : std_logic_vector(575 downto 0) := (others => '0');
+signal q_3 : std_logic_vector(255 downto 0) := (others => '0');
 
 --Misc
 signal sync_clk : std_logic := '0';
@@ -228,7 +228,7 @@ ram2 : big_ram_wizard port map(clock => CLK, address_a => address_a_2, address_b
 --										data_b => data_b_3, wren_a => '1', wren_b => '1', q_a => q_a_3, q_b => q_b_3);
 --ram4 : big_ram_wizard port map(clock => CLK, address_a => address_a_4, address_b => address_b_4, data_a => data_a_4,
 --										data_b => data_b_4, wren_a => '1', wren_b => '1', q_a => q_a_4, q_b => q_b_4);
-ram3 : corr_func_rom_1 port map(clock => CLK, address_a => address_3_a, address_b => address_3_b, q_a => q_3(575 downto 288), q_b => q_3(287 downto 0));						
+ram3 : corr_func_rom_1 port map(clock => CLK, address_a => address_3_a, address_b => address_3_b, q_a => q_3(255 downto 128), q_b => q_3(127 downto 0));						
 
 					
 DATA_OUT <= RECEIVED_CODE;

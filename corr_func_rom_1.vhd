@@ -45,19 +45,19 @@ ENTITY corr_func_rom_1 IS
 		address_a		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
 		address_b		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
 		clock		: IN STD_LOGIC  := '1';
-		q_a		: OUT STD_LOGIC_VECTOR (287 DOWNTO 0);
-		q_b		: OUT STD_LOGIC_VECTOR (287 DOWNTO 0)
+		q_a		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0);
+		q_b		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0)
 	);
 END corr_func_rom_1;
 
 
 ARCHITECTURE SYN OF corr_func_rom_1 IS
 
-	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (287 DOWNTO 0);
-	SIGNAL sub_wire1	: STD_LOGIC_VECTOR (287 DOWNTO 0);
+	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (127 DOWNTO 0);
+	SIGNAL sub_wire1	: STD_LOGIC_VECTOR (127 DOWNTO 0);
 	SIGNAL sub_wire2	: STD_LOGIC ;
-	SIGNAL sub_wire3_bv	: BIT_VECTOR (287 DOWNTO 0);
-	SIGNAL sub_wire3	: STD_LOGIC_VECTOR (287 DOWNTO 0);
+	SIGNAL sub_wire3_bv	: BIT_VECTOR (127 DOWNTO 0);
+	SIGNAL sub_wire3	: STD_LOGIC_VECTOR (127 DOWNTO 0);
 
 
 
@@ -92,21 +92,21 @@ ARCHITECTURE SYN OF corr_func_rom_1 IS
 			clock0	: IN STD_LOGIC ;
 			wren_a	: IN STD_LOGIC ;
 			address_b	: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
-			data_b	: IN STD_LOGIC_VECTOR (287 DOWNTO 0);
-			q_a	: OUT STD_LOGIC_VECTOR (287 DOWNTO 0);
+			data_b	: IN STD_LOGIC_VECTOR (127 DOWNTO 0);
+			q_a	: OUT STD_LOGIC_VECTOR (127 DOWNTO 0);
 			wren_b	: IN STD_LOGIC ;
 			address_a	: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
-			data_a	: IN STD_LOGIC_VECTOR (287 DOWNTO 0);
-			q_b	: OUT STD_LOGIC_VECTOR (287 DOWNTO 0)
+			data_a	: IN STD_LOGIC_VECTOR (127 DOWNTO 0);
+			q_b	: OUT STD_LOGIC_VECTOR (127 DOWNTO 0)
 	);
 	END COMPONENT;
 
 BEGIN
 	sub_wire2    <= '0';
-	sub_wire3_bv(287 DOWNTO 0) <= "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+	sub_wire3_bv(127 DOWNTO 0) <= "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 	sub_wire3    <= To_stdlogicvector(sub_wire3_bv);
-	q_b    <= sub_wire0(287 DOWNTO 0);
-	q_a    <= sub_wire1(287 DOWNTO 0);
+	q_b    <= sub_wire0(127 DOWNTO 0);
+	q_a    <= sub_wire1(127 DOWNTO 0);
 
 	altsyncram_component : altsyncram
 	GENERIC MAP (
@@ -129,8 +129,8 @@ BEGIN
 		power_up_uninitialized => "FALSE",
 		widthad_a => 5,
 		widthad_b => 5,
-		width_a => 288,
-		width_b => 288,
+		width_a => 128,
+		width_b => 128,
 		width_byteena_a => 1,
 		width_byteena_b => 1,
 		wrcontrol_wraddress_reg_b => "CLOCK0"
@@ -184,7 +184,7 @@ END SYN;
 -- Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 -- Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 -- Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
--- Retrieval info: PRIVATE: MEMSIZE NUMERIC "9216"
+-- Retrieval info: PRIVATE: MEMSIZE NUMERIC "4096"
 -- Retrieval info: PRIVATE: MEM_IN_BITS NUMERIC "0"
 -- Retrieval info: PRIVATE: MIFfilename STRING "Conv_func_data_wide.mif"
 -- Retrieval info: PRIVATE: OPERATION_MODE NUMERIC "3"
@@ -202,10 +202,10 @@ END SYN;
 -- Retrieval info: PRIVATE: USE_DIFF_CLKEN NUMERIC "0"
 -- Retrieval info: PRIVATE: UseDPRAM NUMERIC "1"
 -- Retrieval info: PRIVATE: VarWidth NUMERIC "0"
--- Retrieval info: PRIVATE: WIDTH_READ_A NUMERIC "288"
--- Retrieval info: PRIVATE: WIDTH_READ_B NUMERIC "288"
--- Retrieval info: PRIVATE: WIDTH_WRITE_A NUMERIC "288"
--- Retrieval info: PRIVATE: WIDTH_WRITE_B NUMERIC "288"
+-- Retrieval info: PRIVATE: WIDTH_READ_A NUMERIC "128"
+-- Retrieval info: PRIVATE: WIDTH_READ_B NUMERIC "128"
+-- Retrieval info: PRIVATE: WIDTH_WRITE_A NUMERIC "128"
+-- Retrieval info: PRIVATE: WIDTH_WRITE_B NUMERIC "128"
 -- Retrieval info: PRIVATE: WRADDR_ACLR_B NUMERIC "0"
 -- Retrieval info: PRIVATE: WRADDR_REG_B NUMERIC "1"
 -- Retrieval info: PRIVATE: WRCTRL_ACLR_B NUMERIC "0"
@@ -231,25 +231,25 @@ END SYN;
 -- Retrieval info: CONSTANT: POWER_UP_UNINITIALIZED STRING "FALSE"
 -- Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "5"
 -- Retrieval info: CONSTANT: WIDTHAD_B NUMERIC "5"
--- Retrieval info: CONSTANT: WIDTH_A NUMERIC "288"
--- Retrieval info: CONSTANT: WIDTH_B NUMERIC "288"
+-- Retrieval info: CONSTANT: WIDTH_A NUMERIC "128"
+-- Retrieval info: CONSTANT: WIDTH_B NUMERIC "128"
 -- Retrieval info: CONSTANT: WIDTH_BYTEENA_A NUMERIC "1"
 -- Retrieval info: CONSTANT: WIDTH_BYTEENA_B NUMERIC "1"
 -- Retrieval info: CONSTANT: WRCONTROL_WRADDRESS_REG_B STRING "CLOCK0"
 -- Retrieval info: USED_PORT: address_a 0 0 5 0 INPUT NODEFVAL "address_a[4..0]"
 -- Retrieval info: USED_PORT: address_b 0 0 5 0 INPUT NODEFVAL "address_b[4..0]"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT VCC "clock"
--- Retrieval info: USED_PORT: q_a 0 0 288 0 OUTPUT NODEFVAL "q_a[287..0]"
--- Retrieval info: USED_PORT: q_b 0 0 288 0 OUTPUT NODEFVAL "q_b[287..0]"
+-- Retrieval info: USED_PORT: q_a 0 0 128 0 OUTPUT NODEFVAL "q_a[127..0]"
+-- Retrieval info: USED_PORT: q_b 0 0 128 0 OUTPUT NODEFVAL "q_b[127..0]"
 -- Retrieval info: CONNECT: @address_a 0 0 5 0 address_a 0 0 5 0
 -- Retrieval info: CONNECT: @address_b 0 0 5 0 address_b 0 0 5 0
 -- Retrieval info: CONNECT: @clock0 0 0 0 0 clock 0 0 0 0
--- Retrieval info: CONNECT: @data_a 0 0 288 0 GND 0 0 288 0
--- Retrieval info: CONNECT: @data_b 0 0 288 0 GND 0 0 288 0
+-- Retrieval info: CONNECT: @data_a 0 0 128 0 GND 0 0 128 0
+-- Retrieval info: CONNECT: @data_b 0 0 128 0 GND 0 0 128 0
 -- Retrieval info: CONNECT: @wren_a 0 0 0 0 GND 0 0 0 0
 -- Retrieval info: CONNECT: @wren_b 0 0 0 0 GND 0 0 0 0
--- Retrieval info: CONNECT: q_a 0 0 288 0 @q_a 0 0 288 0
--- Retrieval info: CONNECT: q_b 0 0 288 0 @q_b 0 0 288 0
+-- Retrieval info: CONNECT: q_a 0 0 128 0 @q_a 0 0 128 0
+-- Retrieval info: CONNECT: q_b 0 0 128 0 @q_b 0 0 128 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL corr_func_rom_1.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL corr_func_rom_1.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL corr_func_rom_1.cmp TRUE
