@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "02/01/2023 21:41:23"
+-- DATE "02/02/2023 10:29:07"
 
 -- 
 -- Device: Altera EP2C5T144C8 Package TQFP144
@@ -6278,9 +6278,10 @@ SIGNAL \UART_Controller_1|uart_clk_divider|counter\ : std_logic_vector(15 DOWNTO
 SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|wr_ptr|safe_q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \adc_ram_shifter_1|temp_shift\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL \adc_ram_shifter_1|data\ : std_logic_vector(512 DOWNTO 0);
-SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|q_b\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \ADC_IN~combout\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|rd_ptr_count|safe_q\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \ADC_IN~combout\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|safe_q\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|q_b\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \ADC_Manager1|ram_counter\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \ADC_Manager1|data_counts\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \ADC_Manager1|data_buffer\ : std_logic_vector(5 DOWNTO 0);
@@ -6302,7 +6303,6 @@ SIGNAL \ram1|altsyncram_component|auto_generated|q_b\ : std_logic_vector(127 DOW
 SIGNAL \ram1|altsyncram_component|auto_generated|q_a\ : std_logic_vector(127 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_tx_1|data_send\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_tx_1|data_index\ : std_logic_vector(2 DOWNTO 0);
-SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|safe_q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \ADC_Manager1|ALT_INV_main_state.waiting_preambule~regout\ : std_logic;
 SIGNAL \ADC_Manager1|ALT_INV_main_state.finding_bits~regout\ : std_logic;
 

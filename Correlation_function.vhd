@@ -12,7 +12,8 @@ entity Correlation_function is
 		CLK: in std_logic;
 		input_function : in double_array(0 to function_length - 1) := (others => (others => '0'));
 		input_adc_values: in std_logic_vector(400-1 downto 0) := (others => '0');
-		output_value : out std_logic_vector(19 downto 0) := (others => '0')
+		output_value : out std_logic_vector(19 downto 0) := (others => '0');
+		input_function_ram : in std_logic_vector(575 downto 0)
 	);
 end entity;
 
@@ -42,6 +43,9 @@ signal output_6 : std_logic_vector(18 downto 0) := (others => '0');
 signal output_56 : std_logic_vector(19 downto 0) := (others => '0');
 signal f_output : std_logic_vector(19 downto 0) := (others => '0');
 signal f : std_logic := '1';
+
+signal input_func_55 : std_logic_vector(12*8-1 downto 0) := (others => '0');
+signal input_func_66 : std_logic_vector(13*8-1 downto 0) := (others => '0');
 
 begin
 --gate1 : Correlation_Gate generic map(input_size => 12) port map(CLK => CLK, input_func => input_func_1, input_adc => input_adc_1,
@@ -97,6 +101,9 @@ input_func_6 <= input_function(24)&input_function(23)& input_function(22)& input
 				& input_function(43)& input_function(42)& input_function(41)& input_function(40)& input_function(39)& input_function(38)
 				& input_function(37)
 				when f = '0' and EN = '1' else (others => '0');
+
+input_func_55 <= input_function_ram(575-13*8 downto 575-13*8-12*8+1) when f = '0' else input_function_ram(575-13*8-12*8-13*8 downto 575-13*8-12*8-13*8-12*8+1);--input_function_ram(575 downto 575-12*8+1) when f = '1' and EN = '1' else input_function_ram(12*8+13*8+12*8-1 downto 12*8+13*8);
+input_func_66 <= input_function_ram(575 downto 575-13*8+1) when f = '0' else input_function_ram(575-13*8-12*8 downto 575-13*8-12*8-13*8+1);--input_function_ram(12*8+13*8-1 downto 12*8) when f = '1' and EN = '1' else input_function_ram(12*8+13*8+12*8+13*8-1 downto 12*8+13*8+12*8);
 				
 input_adc_5 <= input_adc_values(12*8-1 downto 0) when f = '1' else input_adc_values(12*8+13*8+12*8-1 downto 12*8+13*8);
 input_adc_6 <= input_adc_values(12*8+13*8-1 downto 12*8) when f = '1' else input_adc_values(12*8+13*8+12*8+13*8-1 downto 12*8+13*8+12*8);
