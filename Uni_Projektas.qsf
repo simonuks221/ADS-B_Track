@@ -60,7 +60,6 @@ set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
 set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
 set_global_assignment -name VHDL_FILE ADC_Manager.vhd
 set_global_assignment -name VHDL_FILE Correlation_function.vhd
-set_global_assignment -name VHDL_FILE corr_package.vhd
 set_global_assignment -name MIF_FILE Conv_func_data.mif
 set_global_assignment -name QIP_FILE wizard_ram.qip
 set_global_assignment -name SMF_FILE StateMachineWizard.smf
@@ -79,7 +78,6 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME i1 -section_id Testbenchas
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "30 us" -section_id Testbenchas
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Testbenchas -section_id Testbenchas
 set_global_assignment -name SDC_FILE Uni_Projektas.sdc
-set_global_assignment -name VHDL_FILE new_testbench.vhd
 set_global_assignment -name EDA_TEST_BENCH_NAME new_testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id new_testbench
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "10 us" -section_id new_testbench

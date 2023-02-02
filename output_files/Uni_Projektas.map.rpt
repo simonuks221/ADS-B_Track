@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Uni_Projektas
-Thu Feb 02 17:19:43 2023
+Thu Feb 02 17:32:18 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -104,15 +104,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 02 17:19:43 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 02 17:32:18 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 2,045                                           ;
-;     Total combinational functions  ; 1,950                                           ;
-;     Dedicated logic registers      ; 888                                             ;
-; Total registers                    ; 888                                             ;
+; Total logic elements               ; 1,998                                           ;
+;     Total combinational functions  ; 1,903                                           ;
+;     Dedicated logic registers      ; 855                                             ;
+; Total registers                    ; 855                                             ;
 ; Total pins                         ; 18                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 6,272                                           ;
@@ -224,7 +224,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
 ; ADC_Manager.vhd                  ; yes             ; User VHDL File                         ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd           ;         ;
 ; Correlation_function.vhd         ; yes             ; User VHDL File                         ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd  ;         ;
-; corr_package.vhd                 ; yes             ; User VHDL File                         ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd          ;         ;
 ; Conv_func_data.mif               ; yes             ; User Memory Initialization File        ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Conv_func_data.mif        ;         ;
 ; wizard_ram.vhd                   ; yes             ; User Wizard-Generated File             ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd            ;         ;
 ; Uni_Projektas.vhd                ; yes             ; User VHDL File                         ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd         ;         ;
@@ -276,29 +275,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------------------------------+
 ; Resource                                    ; Usage                                            ;
 +---------------------------------------------+--------------------------------------------------+
-; Estimated Total logic elements              ; 2,045                                            ;
+; Estimated Total logic elements              ; 1,998                                            ;
 ;                                             ;                                                  ;
-; Total combinational functions               ; 1950                                             ;
+; Total combinational functions               ; 1903                                             ;
 ; Logic element usage by number of LUT inputs ;                                                  ;
-;     -- 4 input functions                    ; 141                                              ;
-;     -- 3 input functions                    ; 1539                                             ;
-;     -- <=2 input functions                  ; 270                                              ;
+;     -- 4 input functions                    ; 123                                              ;
+;     -- 3 input functions                    ; 1544                                             ;
+;     -- <=2 input functions                  ; 236                                              ;
 ;                                             ;                                                  ;
 ; Logic elements by mode                      ;                                                  ;
-;     -- normal mode                          ; 1214                                             ;
-;     -- arithmetic mode                      ; 736                                              ;
+;     -- normal mode                          ; 1197                                             ;
+;     -- arithmetic mode                      ; 706                                              ;
 ;                                             ;                                                  ;
-; Total registers                             ; 888                                              ;
-;     -- Dedicated logic registers            ; 888                                              ;
+; Total registers                             ; 855                                              ;
+;     -- Dedicated logic registers            ; 855                                              ;
 ;     -- I/O registers                        ; 0                                                ;
 ;                                             ;                                                  ;
 ; I/O pins                                    ; 18                                               ;
 ; Total memory bits                           ; 6272                                             ;
 ; Embedded Multiplier 9-bit elements          ; 25                                               ;
 ; Maximum fan-out node                        ; ADC_Manager:ADC_Manager1|main_state.finding_bits ;
-; Maximum fan-out                             ; 783                                              ;
-; Total fan-out                               ; 10734                                            ;
-; Average fan-out                             ; 3.25                                             ;
+; Maximum fan-out                             ; 784                                              ;
+; Total fan-out                               ; 10513                                            ;
+; Average fan-out                             ; 3.27                                             ;
 +---------------------------------------------+--------------------------------------------------+
 
 
@@ -307,8 +306,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                ; Library Name ;
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |UNI_Projektas                                     ; 1950 (1)          ; 888 (0)      ; 6272        ; 25           ; 25      ; 0         ; 18   ; 0            ; |UNI_Projektas                                                                                                                                                                                     ; work         ;
-;    |ADC_Manager:ADC_Manager1|                      ; 467 (467)         ; 200 (200)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                                                                                                                            ; work         ;
+; |UNI_Projektas                                     ; 1903 (1)          ; 855 (0)      ; 6272        ; 25           ; 25      ; 0         ; 18   ; 0            ; |UNI_Projektas                                                                                                                                                                                     ; work         ;
+;    |ADC_Manager:ADC_Manager1|                      ; 419 (419)         ; 168 (168)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_Manager:ADC_Manager1                                                                                                                                                            ; work         ;
 ;    |ADC_ram_shifter:adc_ram_shifter_1|             ; 504 (504)         ; 529 (529)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|ADC_ram_shifter:adc_ram_shifter_1                                                                                                                                                   ; work         ;
 ;    |Clock_divider:clock_divider1|                  ; 24 (24)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Clock_divider:clock_divider1                                                                                                                                                        ; work         ;
 ;    |Correlation_function:corr_long|                ; 870 (462)         ; 79 (41)      ; 0           ; 25           ; 25      ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long                                                                                                                                                      ; work         ;
@@ -364,8 +363,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |mult_o5t:auto_generated|              ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult8|mult_o5t:auto_generated                                                                                        ; work         ;
 ;          |lpm_mult:Mult9|                          ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult9                                                                                                                ; work         ;
 ;             |mult_o5t:auto_generated|              ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |UNI_Projektas|Correlation_function:corr_long|Correlation_Gate:gate6|lpm_mult:Mult9|mult_o5t:auto_generated                                                                                        ; work         ;
-;    |UART_Controller:UART_Controller_1|             ; 84 (8)            ; 63 (8)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1                                                                                                                                                   ; work         ;
-;       |Clock_divider:uart_clk_divider|             ; 30 (30)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider                                                                                                                    ; work         ;
+;    |UART_Controller:UART_Controller_1|             ; 85 (8)            ; 62 (8)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1                                                                                                                                                   ; work         ;
+;       |Clock_divider:uart_clk_divider|             ; 30 (30)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider                                                                                                                    ; work         ;
 ;       |UART_FIFO_wizard:uart_fifo|                 ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo                                                                                                                        ; work         ;
 ;          |scfifo:scfifo_component|                 ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component                                                                                                ; work         ;
 ;             |scfifo_ka21:auto_generated|           ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated                                                                     ; work         ;
@@ -376,7 +375,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                   |cntr_djb:wr_ptr|                ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:wr_ptr                                ; work         ;
 ;                   |dpram_st01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram                             ; work         ;
 ;                      |altsyncram_0sj1:altsyncram2| ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2 ; work         ;
-;       |UART_TX:uart_tx_1|                          ; 25 (25)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1                                                                                                                                 ; work         ;
+;       |UART_TX:uart_tx_1|                          ; 26 (26)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1                                                                                                                                 ; work         ;
 ;    |big_ram_wizard:ram1|                           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram1                                                                                                                                                                 ; work         ;
 ;       |altsyncram:altsyncram_component|            ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component                                                                                                                                 ; work         ;
 ;          |altsyncram_hf52:auto_generated|          ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component|altsyncram_hf52:auto_generated                                                                                                  ; work         ;
@@ -510,7 +509,6 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
 ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[1,2,5,8..15] ; Stuck at GND due to stuck port data_in                                                     ;
 ; Clock_divider:clock_divider1|half_clock[0,2..15]                                         ; Stuck at GND due to stuck port data_in                                                     ;
-; ADC_Manager:ADC_Manager1|RAM_ADDRESS_BUS[0..7]                                           ; Lost fanout                                                                                ;
 ; Clock_divider:clock_divider1|half_clock[1]                                               ; Merged with UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[7] ;
 ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[7]           ; Merged with UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[6] ;
 ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[6]           ; Merged with UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[4] ;
@@ -521,7 +519,8 @@ Encoding Type:  One-Hot
 ; ADC_Manager:ADC_Manager1|corr_func_rom_adress_a[2]                                       ; Merged with ADC_Manager:ADC_Manager1|corr_func_rom_adress_b[2]                             ;
 ; ADC_Manager:ADC_Manager1|corr_func_rom_adress_a[3]                                       ; Merged with ADC_Manager:ADC_Manager1|corr_func_rom_adress_b[3]                             ;
 ; ADC_Manager:ADC_Manager1|corr_func_rom_adress_a[4]                                       ; Stuck at GND due to stuck port data_in                                                     ;
-; Total Number of Removed Registers = 44                                                   ;                                                                                            ;
+; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[0]           ; Merged with ADC_Manager:ADC_Manager1|main_state.read_init_mem                              ;
+; Total Number of Removed Registers = 37                                                   ;                                                                                            ;
 +------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
 
 
@@ -530,12 +529,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 888   ;
+; Total registers                              ; 855   ;
 ; Number of registers using Synchronous Clear  ; 40    ;
 ; Number of registers using Synchronous Load   ; 33    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 716   ;
+; Number of registers using Clock Enable       ; 685   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -555,19 +554,20 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_counts[19]                                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_counts[12]                                    ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |UNI_Projektas|Clock_divider:clock_divider1|counter[10]                                    ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |UNI_Projektas|UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|counter[9] ;
 ; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |UNI_Projektas|Correlation_function:corr_long|f_output[3]                                  ;
 ; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |UNI_Projektas|Correlation_function:corr_long|output_56[15]                                ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|bit_counter[30]                                    ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|bit_counter[0]                                     ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[2]           ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[0]                                     ;
 ; 10:1               ; 4 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |UNI_Projektas|ADC_Manager:ADC_Manager1|data_buffer[2]                                     ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|Selector0                                 ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector6               ;
-; 13:1               ; 5 bits    ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Selector4                                          ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; No         ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Selector3                                          ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 6 LEs                ; 15 LEs                 ; No         ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Selector4                                          ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; No         ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Selector3                                          ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; No         ; |UNI_Projektas|ADC_Manager:ADC_Manager1|Selector1                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 
 
@@ -2250,14 +2250,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+-------+----------+--------------------+
 
 
-+-----------------------------------------------------+
-; Port Connectivity Checks: "wizard_ram:wizard_ram_1" ;
-+------+-------+----------+---------------------------+
-; Port ; Type  ; Severity ; Details                   ;
-+------+-------+----------+---------------------------+
-; data ; Input ; Info     ; Stuck at GND              ;
-; wren ; Input ; Info     ; Stuck at GND              ;
-+------+-------+----------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wizard_ram:wizard_ram_1"                                                               ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; address ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; wren    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; q       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -2284,7 +2286,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Feb 02 17:19:37 2023
+    Info: Processing started: Thu Feb 02 17:32:12 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file adc_manager.vhd
@@ -2293,8 +2295,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file adc_man
 Info (12021): Found 2 design units, including 1 entities, in source file correlation_function.vhd
     Info (12022): Found design unit 1: Correlation_function-arc1
     Info (12023): Found entity 1: Correlation_function
-Info (12021): Found 1 design units, including 0 entities, in source file corr_package.vhd
-    Info (12022): Found design unit 1: corr_package
 Info (12021): Found 2 design units, including 1 entities, in source file wizard_ram.vhd
     Info (12022): Found design unit 1: wizard_ram-SYN
     Info (12023): Found entity 1: wizard_ram
@@ -2322,9 +2322,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file uart_fi
 Info (12021): Found 2 design units, including 1 entities, in source file testbenchas.vhd
     Info (12022): Found design unit 1: Testbenchas-UNI_Projektas_arch
     Info (12023): Found entity 1: Testbenchas
-Info (12021): Found 2 design units, including 1 entities, in source file new_testbench.vhd
-    Info (12022): Found design unit 1: new_testbench-arc
-    Info (12023): Found entity 1: new_testbench
 Info (12021): Found 2 design units, including 1 entities, in source file correlation_gate.vhd
     Info (12022): Found design unit 1: Correlation_Gate-arc
     Info (12023): Found entity 1: Correlation_Gate
@@ -2335,6 +2332,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file corr_fu
     Info (12022): Found design unit 1: corr_func_rom_1-SYN
     Info (12023): Found entity 1: corr_func_rom_1
 Info (12127): Elaborating entity "Uni_Projektas" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(137): used explicit default value for signal "func_ram_address_bus" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(139): object "func_ram_out" assigned a value but never read
 Info (12128): Elaborating entity "ADC_ram_shifter" for hierarchy "ADC_ram_shifter:adc_ram_shifter_1"
 Info (12128): Elaborating entity "ADC_Manager" for hierarchy "ADC_Manager:ADC_Manager1"
 Info (12128): Elaborating entity "wizard_ram" for hierarchy "wizard_ram:wizard_ram_1"
@@ -2360,8 +2359,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_i0d1" for hierarchy "wizard_ram:wizard_ram_1|altsyncram:altsyncram_component|altsyncram_i0d1:auto_generated"
 Info (12128): Elaborating entity "Clock_divider" for hierarchy "Clock_divider:clock_divider1"
 Info (12128): Elaborating entity "Correlation_function" for hierarchy "Correlation_function:corr_long"
-Warning (10036): Verilog HDL or VHDL warning at Correlation_function.vhd(36): object "input_func_5" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Correlation_function.vhd(40): object "input_func_6" assigned a value but never read
 Info (12128): Elaborating entity "Correlation_Gate" for hierarchy "Correlation_function:corr_long|Correlation_Gate:gate5"
 Info (12128): Elaborating entity "Correlation_Gate" for hierarchy "Correlation_function:corr_long|Correlation_Gate:gate6"
 Info (12128): Elaborating entity "big_ram_wizard" for hierarchy "big_ram_wizard:ram1"
@@ -2513,20 +2510,19 @@ Info (12133): Instantiated megafunction "Correlation_function:corr_long|Correlat
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_o5t.tdf
     Info (12023): Found entity 1: mult_o5t
-Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "UART_RX_RX"
-Info (21057): Implemented 2480 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2433 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 2045 logic cells
+    Info (21061): Implemented 1998 logic cells
     Info (21064): Implemented 392 RAM segments
     Info (21062): Implemented 25 DSP elements
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4698 megabytes
-    Info: Processing ended: Thu Feb 02 17:19:43 2023
+    Info: Peak virtual memory: 4691 megabytes
+    Info: Processing ended: Thu Feb 02 17:32:18 2023
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:05
 

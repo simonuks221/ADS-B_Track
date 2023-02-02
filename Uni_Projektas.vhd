@@ -3,7 +3,6 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
-use work.corr_package.all;
 
 entity UNI_Projektas is
 generic (
@@ -28,11 +27,7 @@ component ADC_Manager is
 	DATA_OUT : out std_logic_vector(6-1 downto 0);
 	DATA_DONE : out std_logic := '0';
 
-	RAM_DATA_BUS : in std_logic_vector(7 downto 0);
-	RAM_ADDRESS_BUS : out std_logic_vector(7 downto 0);
-
 	c_long_value_in : in std_logic_vector(20-1 downto 0) := (others => '0');
-	c_long_func_input_out : out double_array(0 to 50-1) := (others => (others => '0'));
 	c_en : out std_logic := '0';
 	shift_en : out std_logic := '0';
 	
@@ -100,7 +95,6 @@ component Correlation_function is
 	port(
 		EN: in std_logic := '0';
 		CLK: in std_logic;
-		input_function : in double_array(0 to function_length - 1);
 		input_adc_values: in std_logic_vector(400-1 downto 0);
 		output_value : out std_logic_vector(19 downto 0);
 		input_function_ram : in std_logic_vector(255 downto 0)
@@ -147,7 +141,6 @@ signal func_ram_out : std_logic_vector(7 downto 0);
 --Correlation signals
 signal c_en : std_logic := '0';
 signal c_long_value : std_logic_vector(20-1 downto 0) := (others => '0');
-signal c_long_func_input : double_array(0 to 50-1) := (others => (others => '0'));
 
 --Big ram for voltage shifting
 signal address_a_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
@@ -209,13 +202,13 @@ adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => add
 	new_adc_in => ADC_IN, stop_shift => shift_en, q => q, data => data);
 
 
-ADC_Manager1 : ADC_Manager port map(CLK => CLK, DATA_OUT => RECEIVED_CODE, RAM_DATA_BUS => func_ram_out, RAM_ADDRESS_BUS => func_ram_address_bus, SYNC => sync_clk,
-												c_long_value_in => c_long_value, c_long_func_input_out => c_long_func_input,
+ADC_Manager1 : ADC_Manager port map(CLK => CLK, DATA_OUT => RECEIVED_CODE, SYNC => sync_clk,
+												c_long_value_in => c_long_value,
 												c_en => c_en, DATA_DONE => UART_CONTROLLER_DATA_REQ, shift_en => shift_en,
 												corr_func_rom_adress_a => address_3_a, corr_func_rom_adress_b => address_3_b);
 wizard_ram_1 : wizard_ram port map(address => func_ram_address_bus, clock => CLK, data => "00000000", wren => '0', q => func_ram_out);
 clock_divider1 : clock_divider port map(CLK => CLK, Prescaler => std_Logic_vector(to_unsigned(5, 16)), CLK_OUT => sync_clk);
-corr_long : Correlation_function generic map(function_length => 50) port map(EN => c_en, CLK => CLK, input_function => c_long_func_input, output_value => c_long_value, 
+corr_long : Correlation_function generic map(function_length => 50) port map(EN => c_en, CLK => CLK, output_value => c_long_value, 
 											input_adc_values => q(399 downto 0), input_function_ram => q_3);
 
 --Ram for shifting voltage
