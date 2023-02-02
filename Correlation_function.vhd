@@ -81,9 +81,9 @@ begin
 output_value <= f_output;
 
 --NEW
-gate5 : Correlation_Gate generic map(input_size => 12) port map(CLK => CLK, input_func => input_func_5, input_adc => input_adc_5,
+gate5 : Correlation_Gate generic map(input_size => 12) port map(CLK => CLK, input_func => input_func_55, input_adc => input_adc_5,
 								output => output_5);
-gate6 : Correlation_Gate generic map(input_size => 13) port map(CLK => CLK, input_func => input_func_6, input_adc => input_adc_6,
+gate6 : Correlation_Gate generic map(input_size => 13) port map(CLK => CLK, input_func => input_func_66, input_adc => input_adc_6,
 								output => output_6);
 								
 input_func_5 <= input_function(11)& input_function(10)& input_function(9)& input_function(8)& input_function(7)& input_function(6)& 
@@ -102,8 +102,9 @@ input_func_6 <= input_function(24)&input_function(23)& input_function(22)& input
 				& input_function(37)
 				when f = '0' and EN = '1' else (others => '0');
 
-input_func_55 <= input_function_ram(575-13*8 downto 575-13*8-12*8+1) when f = '0' else input_function_ram(575-13*8-12*8-13*8 downto 575-13*8-12*8-13*8-12*8+1);--input_function_ram(575 downto 575-12*8+1) when f = '1' and EN = '1' else input_function_ram(12*8+13*8+12*8-1 downto 12*8+13*8);
-input_func_66 <= input_function_ram(575 downto 575-13*8+1) when f = '0' else input_function_ram(575-13*8-12*8 downto 575-13*8-12*8-13*8+1);--input_function_ram(12*8+13*8-1 downto 12*8) when f = '1' and EN = '1' else input_function_ram(12*8+13*8+12*8+13*8-1 downto 12*8+13*8+12*8);
+				--12*8 ir 13*8
+input_func_55 <= input_function_ram(12*8-1 downto 0) when f = '1' else input_function_ram(12*8+13*8+12*8-1 downto 12*8+13*8);--input_function_ram(575-13*8 downto 575-13*8-12*8+1) when f = '0' else input_function_ram(575-13*8-12*8-13*8 downto 575-13*8-12*8-13*8-12*8+1);--input_function_ram(575 downto 575-12*8+1) when f = '1' and EN = '1' else input_function_ram(12*8+13*8+12*8-1 downto 12*8+13*8);
+input_func_66 <= input_function_ram(12*8+13*8-1 downto 12*8) when f = '1' else input_function_ram(12*8+13*8+12*8+13*8-1 downto 12*8+13*8+12*8);--(others => '0');--input_function_ram(575 downto 575-13*8+1) when f = '0' else input_function_ram(575-13*8-12*8 downto 575-13*8-12*8-13*8+1);--input_function_ram(12*8+13*8-1 downto 12*8) when f = '1' and EN = '1' else input_function_ram(12*8+13*8+12*8+13*8-1 downto 12*8+13*8+12*8);
 				
 input_adc_5 <= input_adc_values(12*8-1 downto 0) when f = '1' else input_adc_values(12*8+13*8+12*8-1 downto 12*8+13*8);
 input_adc_6 <= input_adc_values(12*8+13*8-1 downto 12*8) when f = '1' else input_adc_values(12*8+13*8+12*8+13*8-1 downto 12*8+13*8+12*8);
