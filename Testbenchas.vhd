@@ -21,6 +21,9 @@ SIGNAL SYNC : STD_LOGIC;
 signal arrIndex : integer := 0;
 SIGNAL UART_TX: std_logic := '0';
 SIGNAL UART_RX: std_logic := '0';
+SIGNAL SPI_SCLK: std_logic := '0';
+SIGNAL SPI_MOSI: std_logic := '0';
+SIGNAL SPI_CS: std_logic := '0';
 
 --Functions
 --Read from file
@@ -49,7 +52,10 @@ COMPONENT UNI_Projektas
 	DATA_OUT : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
 	SYNC : OUT STD_LOGIC;
 	UART_TX: out std_logic;
-	UART_RX_RX: in std_logic
+	UART_RX_RX: in std_logic;
+	SPI_SCLK: out std_logic;
+	SPI_MOSI: out std_logic;
+	SPI_CS: out std_logic
 	);
 END COMPONENT;
 BEGIN
@@ -60,7 +66,10 @@ i1 : UNI_Projektas
 	DATA_OUT => DATA_OUT,
 	SYNC => SYNC,
 	UART_RX_RX => UART_RX,
-	UART_TX => UART_TX
+	UART_TX => UART_TX,
+	SPI_SCLK => SPI_SCLK,
+	SPI_MOSI => SPI_MOSI,
+	SPI_CS => SPI_CS
 );
 	
 CLK <= not CLK after 0.01us; --50MHz 0.01us 50MHz

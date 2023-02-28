@@ -14,7 +14,10 @@ port(
 	DATA_OUT : out std_logic_vector(6-1 downto 0);
 	SYNC : out std_logic;
 	UART_TX: out std_logic;
-	UART_RX_RX: in std_logic
+	UART_RX_RX: in std_logic;
+	SPI_SCLK: out std_logic;
+	SPI_MOSI: out std_logic;
+	SPI_CS: out std_logic
 );
 end entity;
 

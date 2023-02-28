@@ -24,6 +24,9 @@ DATA_OUT[5] <= ADC_Manager:ADC_Manager1.DATA_OUT[5]
 SYNC <= Clock_divider:clock_divider1.CLK_OUT
 UART_TX <= UART_Controller:UART_Controller_1.TX
 UART_RX_RX => ~NO_FANOUT~
+SPI_SCLK <= SPI_SCLK.DB_MAX_OUTPUT_PORT_TYPE
+SPI_MOSI <= SPI_MOSI.DB_MAX_OUTPUT_PORT_TYPE
+SPI_CS <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Uni_Projektas|ADC_ram_shifter:adc_ram_shifter_1

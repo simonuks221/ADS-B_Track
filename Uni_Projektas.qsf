@@ -100,7 +100,15 @@ set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
 set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
 set_global_assignment -name AUTO_PACKED_REGISTERS_STRATIXII NORMAL
 set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
-set_location_assignment PIN_3 -to CLK
-set_instance_assignment -name IO_STANDARD LVDS -to CLK
-set_location_assignment PIN_4 -to "CLK(n)"
+set_location_assignment PIN_24 -to CLK
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 2.5-V SSTL CLASS II" -to CLK
+set_location_assignment PIN_25 -to "CLK(n)"
+set_location_assignment PIN_28 -to ADC_IN[7]
+set_location_assignment PIN_30 -to ADC_IN[6]
+set_location_assignment PIN_32 -to ADC_IN[5]
+set_location_assignment PIN_31 -to ADC_IN[4]
+set_location_assignment PIN_40 -to ADC_IN[3]
+set_location_assignment PIN_41 -to ADC_IN[2]
+set_location_assignment PIN_42 -to ADC_IN[1]
+set_location_assignment PIN_43 -to ADC_IN[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
