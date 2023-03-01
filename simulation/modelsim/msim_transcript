@@ -6363,6 +6363,8 @@ vsim work.spi_controller
 # Loading ieee.numeric_std(body)
 # Loading ieee.std_logic_textio(body)
 # Loading work.spi_controller(arc)
+# Loading work.clock_divider(arc)
+add wave -position end  sim:/spi_controller/SEND_CLK_PRESCALER
 add wave -position end  sim:/spi_controller/CLK
 add wave -position end  sim:/spi_controller/SPI_SCLK
 add wave -position end  sim:/spi_controller/SPI_MOSI
@@ -6376,17 +6378,289 @@ add wave -position end  sim:/spi_controller/send_readwrite_buffer
 add wave -position end  sim:/spi_controller/send_address_buffer
 add wave -position end  sim:/spi_controller/send_data_buffer
 add wave -position end  sim:/spi_controller/send_counter
+add wave -position end  sim:/spi_controller/send_CLK
+add wave -position end  sim:/spi_controller/set_variable
+add wave -position end  sim:/spi_controller/SCLK
+force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/spi_controller/SEND_IRQ 1 100 -cancel 300
 run
 run
 run
+run
+run
+run
+run
+run
+# ** Fatal: (vsim-3734) Index value -1 is out of range 7 downto 0.
+#    Time: 7800 ps  Iteration: 2  Process: /spi_controller/line__77 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Fatal error in Process line__77 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd line 100
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+restart
+# Loading work.spi_controller(arc)
+force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/spi_controller/SEND_IRQ 0 1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/spi_controller/SEND_IRQ 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Fatal: (vsim-3734) Index value -1 is out of range 7 downto 0.
+#    Time: 21300 ps  Iteration: 2  Process: /spi_controller/line__77 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Fatal error in Process line__77 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd line 102
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 102 Process line__77
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 102 Process line__77
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 102 Process line__77
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 102 Process line__77
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 102 Process line__77
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+restart
+# Loading work.spi_controller(arc)
 run
 force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/spi_controller/SEND_IRQ 1 0
 run
 run
 run
 run
 run
 run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(82): No feasible entries for infix operator "and".
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(82): near "!": expecting ')'
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): No feasible entries for subprogram "rising_edge".
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(121): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): No feasible entries for subprogram "rising_edge".
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(121): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): No feasible entries for infix operator "=".
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): Type error resolving infix expression "=" as type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(121): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+restart
+# Loading work.spi_controller(arc)
+force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/spi_controller/SEND_IRQ 1 0
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+restart
+# Loading work.spi_controller(arc)
+run
+force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/spi_controller/SEND_IRQ 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Fatal: (vsim-3734) Index value -1 is out of range 7 downto 0.
+#    Time: 8300 ps  Iteration: 3  Process: /spi_controller/line__84 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Fatal error in Process line__84 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd line 98
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+restart
+# Loading work.spi_controller(arc)
+run
+force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/spi_controller/SEND_IRQ 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+restart
+# Loading work.spi_controller(arc)
+run
+force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
 force -freeze sim:/spi_controller/SEND_IRQ 1 0
 run
 run
@@ -6422,41 +6696,14 @@ vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projekta
 restart
 # Loading work.spi_controller(arc)
 run
-run
 force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
 run
-run
-force -freeze sim:/spi_controller/SEND_IRQ 1 0
-run
+force -freeze sim:/spi_controller/SEND_IRQ 1 0 -cancel 100
 run
 run
 run
 run
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-restart
-# Loading work.spi_controller(arc)
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-force -freeze sim:/spi_controller/SEND_IRQ 1 0
 run
 run
 run
@@ -6469,16 +6716,161 @@ run
 run
 run
 # ** Fatal: (vsim-3734) Index value 8 is out of range 7 downto 0.
-#    Time: 1100 ps  Iteration: 0  Process: /spi_controller/line__59 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Fatal error in Process line__59 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd line 71
+#    Time: 17300 ps  Iteration: 3  Process: /spi_controller/line__84 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Fatal error in Process line__84 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd line 98
 # 
 # HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 71 Process line__59
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
 # 
 run
 # Cannot continue because of fatal error.
 # HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 71 Process line__59
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
 # 
 vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -6493,6 +6885,88 @@ restart
 # Loading work.spi_controller(arc)
 run
 force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/spi_controller/SEND_IRQ 1 0 -cancel 300
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+restart
+# Loading work.spi_controller(arc)
+run
+run
+force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+force -freeze sim:/spi_controller/SEND_IRQ 1 0
+run
+force -freeze sim:/spi_controller/SEND_IRQ 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+restart
+# Loading work.spi_controller(arc)
+run
+force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
+run
+run
 force -freeze sim:/spi_controller/SEND_IRQ 1 0
 run
 run
@@ -6515,213 +6989,6 @@ run
 run
 run
 run
-# ** Fatal: (vsim-3734) Index value 16 is out of range 7 downto 0.
-#    Time: 2200 ps  Iteration: 0  Process: /spi_controller/line__59 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Fatal error in Process line__59 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd line 69
-# 
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 69 Process line__59
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 69 Process line__59
-# 
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(32): near "entity": expecting COMPONENT
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): (vcom-1484) Unknown formal identifier "CLK".
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): (vcom-1484) Unknown formal identifier "Prescaler".
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): (vcom-1484) Unknown formal identifier "CLK_OUT".
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(75): No feasible entries for subprogram "rising_edge".
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): Illegal target for signal assignment.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): (vcom-1136) Unknown identifier "send_CLK_Counter".
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): (vcom-1136) Unknown identifier "send_CLK_counter".
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(100): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(32): near "entity": expecting COMPONENT
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): (vcom-1484) Unknown formal identifier "CLK".
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): (vcom-1484) Unknown formal identifier "Prescaler".
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): (vcom-1484) Unknown formal identifier "CLK_OUT".
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(75): No feasible entries for subprogram "rising_edge".
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(100): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): Signal "send_CLK_prescaler" is type std.STANDARD.INTEGER; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): Signal "send_CLK" is type std.STANDARD.INTEGER; expecting type ieee.std_logic_1164.STD_LOGIC.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(75): No feasible entries for subprogram "rising_edge".
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(100): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): (vcom-1136) Unknown identifier "Prescaler".
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): Prefix of attribute "length" must be appropriate for an array object or must denote an array subtype.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): (vcom-1436) Actual expression (function call "TO_UNSIGNED") of formal "Prescaler" is not globally static.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): Signal "send_CLK" is type std.STANDARD.INTEGER; expecting type ieee.std_logic_1164.STD_LOGIC.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(75): No feasible entries for subprogram "rising_edge".
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(100): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): (vcom-1436) Actual expression (function call "TO_UNSIGNED") of formal "Prescaler" is not globally static.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): Signal "send_CLK" is type std.STANDARD.INTEGER; expecting type ieee.std_logic_1164.STD_LOGIC.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(75): No feasible entries for subprogram "rising_edge".
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(100): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): (vcom-1436) Actual expression (function call "TO_UNSIGNED") of formal "Prescaler" is not globally static.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(100): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(47): (vcom-1436) Actual expression (function call "TO_UNSIGNED") of formal "Prescaler" is not globally static.
-# 
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(100): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-restart
-# Loading work.spi_controller(arc)
-# Loading work.clock_divider(arc)
-run
-run
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-add wave -position end  sim:/spi_controller/send_CLK
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-force -freeze sim:/spi_controller/SEND_IRQ 1 0 -cancel 200
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
 run
 run
 run
@@ -6737,10 +7004,49 @@ vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projekta
 # -- Compiling architecture arc of SPI_Controller
 restart
 # Loading work.spi_controller(arc)
+force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/spi_controller/SEND_IRQ 1 0 -cancel 300
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+force -freeze sim:/spi_controller/CLK 1 0
+run
+run
+run
+run
+run
+force -freeze sim:/spi_controller/SEND_IRQ 1 0 -cancel 300
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run
 run
 force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-force -freeze sim:/spi_controller/SEND_IRQ 1 0 -cancel 200
+run
+run
+run
+run
+run
+run
+force -freeze sim:/spi_controller/SEND_IRQ 1 0 -cancel 300
 run
 run
 run
@@ -6758,12 +7064,3 @@ run
 run
 run
 run
-run
-run
-# ** Fatal: (vsim-3734) Index value -1 is out of range 7 downto 0.
-#    Time: 4 ns  Iteration: 2  Process: /spi_controller/line__76 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Fatal error in Process line__76 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd line 91
-# 
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 91 Process line__76
-# 
