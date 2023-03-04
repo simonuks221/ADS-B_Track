@@ -1,63 +1,63 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\FPGA_ADC_SHIELD_PCB\MainBoard.PcbDoc
-Date     : 2023-03-01
-Time     : 18:54:07
+Date     : 2023-03-04
+Time     : 11:13:22
 
-Processing Rule : Clearance Constraint (Gap=7.874mil) (All),(All)
+Processing Rule : Clearance Constraint (Gap=0.102mm) (All),(All)
 Rule Violations :0
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad P200-111(1759.291mil,159.055mil) on Multi-Layer And Pad P200-112(1759.291mil,259.055mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Via (867mil,460mil) from Top Layer to Bottom Layer And Pad P200-112(1759.291mil,259.055mil) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad P200-29(459.409mil,1959.882mil) on Multi-Layer And Via (468mil,826mil) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Track (1173.228mil,815.945mil)(1173.228mil,852.417mil) on Top Layer And Pad P200-57(1959.764mil,1759.252mil) on Multi-Layer 
-Rule Violations :4
+Rule Violations :0
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=1mil) (Max=100mil) (Preferred=10mil) (All)
+Processing Rule : Width Constraint (Min=0.102mm) (Max=2.54mm) (Preferred=0.254mm) (All)
 Rule Violations :0
 
-Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Processing Rule : Width Constraint (Min=0.65mm) (Max=0.65mm) (Preferred=0.65mm) (InNetClass('RF'))
 Rule Violations :0
 
-Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
 Rule Violations :0
 
-Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Processing Rule : Minimum Annular Ring (Minimum=0.1mm) (All)
 Rule Violations :0
 
-Processing Rule : Minimum Solder Mask Sliver (Gap=0.85mil) (All),(All)
+Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=2.54mm) (IsVia)
 Rule Violations :0
 
-Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
+Processing Rule : Hole To Hole Clearance (Gap=0.3mm) (All),(All)
 Rule Violations :0
 
-Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.015mm) (All),(All)
 Rule Violations :0
 
-Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Processing Rule : Silk To Solder Mask (Clearance=0.152mm) (IsPad),(All)
 Rule Violations :0
 
-Processing Rule : Matched Lengths(Tolerance=3.937mil) (InNetClass('BIT579'))
-   Violation between Matched Net Lengths: Between Net ADC_BIT_5 And Net ADC_BIT_7 Length:522.219mil is not within 3.937mil tolerance of Length:547.333mil (21.177mil short) 
-   Violation between Matched Net Lengths: Between Net ADC_BIT_5 And Net ADC_BIT_9 Length:497.106mil is not within 3.937mil tolerance of Length:547.333mil (46.291mil short) 
-Rule Violations :2
-
-Processing Rule : Room Connectors (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (Disabled)(InComponentClass('Connectors'))
+Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
 Rule Violations :0
 
-Processing Rule : Room Computation (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (Disabled)(InComponentClass('Computation'))
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
 Rule Violations :0
 
-Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Processing Rule : Matched Lengths(Tolerance=0.1mm) (InNetClass('BIT579'))
+Rule Violations :0
+
+Processing Rule : Room Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (Disabled)(InComponentClass('Computation'))
+Rule Violations :0
+
+Processing Rule : Room Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (Disabled)(InComponentClass('Connectors'))
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
 Rule Violations :0
 
 
-Violations Detected : 6
+Violations Detected : 0
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:02
