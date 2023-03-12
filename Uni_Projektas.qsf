@@ -82,9 +82,6 @@ set_global_assignment -name EDA_TEST_BENCH_NAME new_testbench -section_id eda_si
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id new_testbench
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "10 us" -section_id new_testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME new_testbench -section_id new_testbench
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name SMART_RECOMPILE ON
 set_global_assignment -name AUTO_SHIFT_REGISTER_RECOGNITION ALWAYS
 set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
@@ -112,5 +109,10 @@ set_location_assignment PIN_41 -to ADC_IN[2]
 set_location_assignment PIN_42 -to ADC_IN[1]
 set_location_assignment PIN_43 -to ADC_IN[0]
 set_global_assignment -name VHDL_FILE SPI_Controller.vhd
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V HSTL CLASS I" -to "CLK(n)"
+set_global_assignment -name VHDL_FILE SPI_TX.vhd
+set_global_assignment -name QIP_FILE wizard_spi_fifo.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

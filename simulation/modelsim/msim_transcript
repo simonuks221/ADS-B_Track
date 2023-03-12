@@ -6346,6 +6346,13 @@
 #    Time: 4930 ns  Iteration: 0  Instance: /testbenchas/i1/corr_long/gate6
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 4970 ns  Iteration: 0  Instance: /testbenchas/i1/corr_long/gate6
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity wizard_spi_fifo
+# -- Compiling architecture SYN of wizard_spi_fifo
 vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -6355,6 +6362,28 @@ vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projekta
 # -- Loading package std_logic_textio
 # -- Compiling entity SPI_Controller
 # -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 vsim work.spi_controller
 # vsim work.spi_controller 
 # Loading std.standard
@@ -6363,134 +6392,715 @@ vsim work.spi_controller
 # Loading ieee.numeric_std(body)
 # Loading ieee.std_logic_textio(body)
 # Loading work.spi_controller(arc)
-# Loading work.clock_divider(arc)
-add wave -position end  sim:/spi_controller/SEND_CLK_PRESCALER
-add wave -position end  sim:/spi_controller/CLK
-add wave -position end  sim:/spi_controller/SPI_SCLK
+# Loading work.wizard_spi_fifo(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.scfifo(behavior)
+# Loading work.spi_tx(arc)
+add wave -position end  sim:/spi_controller/CLKk
 add wave -position end  sim:/spi_controller/SPI_MOSI
+add wave -position end  sim:/spi_controller/SPI_SCLK
 add wave -position end  sim:/spi_controller/SPI_CS
-add wave -position end  sim:/spi_controller/SEND_ADDRESS
-add wave -position end  sim:/spi_controller/SEND_DATA
-add wave -position end  sim:/spi_controller/SEND_READWRITE
-add wave -position end  sim:/spi_controller/SEND_IRQ
+add wave -position end  sim:/spi_controller/CLK
+add wave -position end  sim:/spi_controller/fifo_clk
+add wave -position end  sim:/spi_controller/fifo_data
+add wave -position end  sim:/spi_controller/fifo_rdreq
+add wave -position end  sim:/spi_controller/fifo_wrreq
+add wave -position end  sim:/spi_controller/fifo_empty
+add wave -position end  sim:/spi_controller/fifo_q
+add wave -position end  sim:/spi_controller/tx_send_data
+add wave -position end  sim:/spi_controller/tx_send_irq
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+run
+run
+# WARNING: No extended dataflow license exists
+restart
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+# Loading work.spi_tx(arc)
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(74): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(74): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(88): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(93): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+run
+run
+run
+run
+add wave -position end  sim:/spi_controller/spi_tx_component/tx_buf
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Fatal: (vsim-3421) Value 9 for bits_sent is out of range 0 to 8.
+#    Time: 2250 ns  Iteration: 0  Process: /spi_controller/spi_tx_component/line__38 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Fatal error in Process line__38 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd line 59
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd 59 Process line__38
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd 59 Process line__38
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd 59 Process line__38
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd 59 Process line__38
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+# Loading work.spi_tx(arc)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/spi_controller/spi_tx_component/curr_state
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+restart
+# Loading work.spi_controller(arc)
+# Loading work.spi_tx(arc)
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+restart
+# Loading work.spi_controller(arc)
+# Loading work.spi_tx(arc)
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 16 (15 downto 0). Right is 8 (15 downto 8).
+#    Time: 0 ps  Iteration: 0  Instance: /spi_controller/spi_tx_component File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd Line: 17
+# FATAL ERROR while loading design
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+vsim work.spi_controller
+# vsim work.spi_controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.spi_controller(arc)
+# Loading work.wizard_spi_fifo(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.scfifo(behavior)
+# Loading work.spi_tx(arc)
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 16 (15 downto 0). Right is 8 (15 downto 8).
+#    Time: 0 ps  Iteration: 0  Instance: /spi_controller/spi_tx_component File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd Line: 17
+# FATAL ERROR while loading design
+# Error loading design
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vsim work.spi_controller
+# vsim work.spi_controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.spi_controller(arc)
+# Loading work.wizard_spi_fifo(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.scfifo(behavior)
+# Loading work.spi_tx(arc)
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(92): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(97): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+restart
+# Loading work.spi_controller(arc)
+# Loading work.spi_tx(arc)
+run
+run
+run
+run
+run
+# ** Fatal: (vsim-3421) Value 17 for bits_sent is out of range 0 to 16.
+#    Time: 4170 ns  Iteration: 0  Process: /spi_controller/spi_tx_component/line__38 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Fatal error in Process line__38 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd line 59
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd 59 Process line__38
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd 59 Process line__38
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(96): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+run
+run
+run
+run
+run
+# ** Fatal: (vsim-3421) Value 17 for bits_sent is out of range 0 to 16.
+#    Time: 4190 ns  Iteration: 0  Process: /spi_controller/spi_tx_component/line__38 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Fatal error in Process line__38 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd line 59
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd 59 Process line__38
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd 59 Process line__38
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(95): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(100): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(96): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(96): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+# Loading work.spi_tx(arc)
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+restart
+# Loading work.spi_tx(arc)
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(96): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+restart
+# Loading work.spi_controller(arc)
+# Loading work.spi_tx(arc)
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(96): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(96): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
 add wave -position end  sim:/spi_controller/curr_state
-add wave -position end  sim:/spi_controller/send_readwrite_buffer
-add wave -position end  sim:/spi_controller/send_address_buffer
-add wave -position end  sim:/spi_controller/send_data_buffer
-add wave -position end  sim:/spi_controller/send_counter
-add wave -position end  sim:/spi_controller/send_CLK
-add wave -position end  sim:/spi_controller/set_variable
-add wave -position end  sim:/spi_controller/SCLK
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-force -freeze sim:/spi_controller/SEND_IRQ 1 100 -cancel 300
-run
-run
-run
-run
-run
-run
-run
-run
-# ** Fatal: (vsim-3734) Index value -1 is out of range 7 downto 0.
-#    Time: 7800 ps  Iteration: 2  Process: /spi_controller/line__77 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Fatal error in Process line__77 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd line 100
-# 
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 100 Process line__77
-# 
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
 restart
 # Loading work.spi_controller(arc)
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-force -freeze sim:/spi_controller/SEND_IRQ 0 1
+# Loading work.spi_tx(arc)
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-force -freeze sim:/spi_controller/SEND_IRQ 1 0
-run
-run
-run
-run
-run
-run
-run
-run
-# ** Fatal: (vsim-3734) Index value -1 is out of range 7 downto 0.
-#    Time: 21300 ps  Iteration: 2  Process: /spi_controller/line__77 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Fatal error in Process line__77 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd line 102
-# 
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 102 Process line__77
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 102 Process line__77
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 102 Process line__77
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 102 Process line__77
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 102 Process line__77
-# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
 vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -6500,26 +7110,33 @@ vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projekta
 # -- Loading package std_logic_textio
 # -- Compiling entity SPI_Controller
 # -- Compiling architecture arc of SPI_Controller
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(106): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 restart
 # Loading work.spi_controller(arc)
-run
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-force -freeze sim:/spi_controller/SEND_IRQ 1 0
+# Loading work.spi_tx(arc)
 run
 run
 run
 run
+add wave -position end  sim:/spi_controller/SPI_MOSI
+add wave -position end  sim:/spi_controller/SPI_SCLK
+add wave -position end  sim:/spi_controller/SPI_CS
+add wave -position end  sim:/spi_controller/curr_state
+restart
 run
+add wave -position end  sim:/spi_controller/tx_send_done
+restart
 run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
 vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -6529,51 +7146,21 @@ vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projekta
 # -- Loading package std_logic_textio
 # -- Compiling entity SPI_Controller
 # -- Compiling architecture arc of SPI_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(82): No feasible entries for infix operator "and".
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(82): near "!": expecting ')'
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): No feasible entries for subprogram "rising_edge".
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(121): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): No feasible entries for subprogram "rising_edge".
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(121): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): No feasible entries for infix operator "=".
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(90): Type error resolving infix expression "=" as type ieee.std_logic_1164.STD_LOGIC.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(121): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(106): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 restart
 # Loading work.spi_controller(arc)
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-force -freeze sim:/spi_controller/SEND_IRQ 1 0
+# Loading work.spi_tx(arc)
 run
-run
-run
-run
-run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
 vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -6583,294 +7170,23 @@ vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projekta
 # -- Loading package std_logic_textio
 # -- Compiling entity SPI_Controller
 # -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(106): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 restart
 # Loading work.spi_controller(arc)
+# Loading work.spi_tx(arc)
 run
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-force -freeze sim:/spi_controller/SEND_IRQ 1 0
-run
-run
-run
-run
-run
-run
-run
-run
-# ** Fatal: (vsim-3734) Index value -1 is out of range 7 downto 0.
-#    Time: 8300 ps  Iteration: 3  Process: /spi_controller/line__84 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Fatal error in Process line__84 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd line 98
+# ** Fatal: (vsim-3421) Value 17 for bits_sent is out of range 0 to 16.
+#    Time: 4270 ns  Iteration: 0  Process: /spi_controller/spi_tx_component/line__39 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Fatal error in Process line__39 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd line 61
 # 
 # HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd 61 Process line__39
 # 
 run
 # Cannot continue because of fatal error.
 # HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-restart
-# Loading work.spi_controller(arc)
-run
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-force -freeze sim:/spi_controller/SEND_IRQ 1 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-restart
-# Loading work.spi_controller(arc)
-run
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-force -freeze sim:/spi_controller/SEND_IRQ 1 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-restart
-# Loading work.spi_controller(arc)
-run
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-run
-force -freeze sim:/spi_controller/SEND_IRQ 1 0 -cancel 100
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# ** Fatal: (vsim-3734) Index value 8 is out of range 7 downto 0.
-#    Time: 17300 ps  Iteration: 3  Process: /spi_controller/line__84 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Fatal error in Process line__84 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd line 98
-# 
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd 98 Process line__84
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd 61 Process line__39
 # 
 vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -6881,35 +7197,45 @@ vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projekta
 # -- Loading package std_logic_textio
 # -- Compiling entity SPI_Controller
 # -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(106): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
 restart
 # Loading work.spi_controller(arc)
-run
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-force -freeze sim:/spi_controller/SEND_IRQ 1 0 -cancel 300
+# Loading work.spi_tx(arc)
 run
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(106): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart
+# Loading work.spi_controller(arc)
+# Loading work.spi_tx(arc)
 run
 vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -6920,38 +7246,39 @@ vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projekta
 # -- Loading package std_logic_textio
 # -- Compiling entity SPI_Controller
 # -- Compiling architecture arc of SPI_Controller
-restart
-# Loading work.spi_controller(arc)
-run
-run
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-run
-run
-run
-run
-run
-run
-force -freeze sim:/spi_controller/SEND_IRQ 1 0
-run
-force -freeze sim:/spi_controller/SEND_IRQ 0 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(106): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd(67): No feasible entries for infix operator "=".
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd(67): Bad expression in right operand of infix expression "and".
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd(67): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd(81): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
 vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -6961,106 +7288,10 @@ vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projekta
 # -- Loading package std_logic_textio
 # -- Compiling entity SPI_Controller
 # -- Compiling architecture arc of SPI_Controller
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(106): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 restart
 # Loading work.spi_controller(arc)
-run
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-run
-run
-force -freeze sim:/spi_controller/SEND_IRQ 1 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-restart
-# Loading work.spi_controller(arc)
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-force -freeze sim:/spi_controller/SEND_IRQ 1 0 -cancel 300
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-force -freeze sim:/spi_controller/CLK 1 0
-run
-run
-run
-run
-run
-force -freeze sim:/spi_controller/SEND_IRQ 1 0 -cancel 300
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-force -freeze sim:/spi_controller/CLK 1 0, 0 {50 ps} -r 100
-run
-run
-run
-run
-run
-run
-force -freeze sim:/spi_controller/SEND_IRQ 1 0 -cancel 300
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+# Loading work.spi_tx(arc)
 run
 run

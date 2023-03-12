@@ -6,98 +6,120 @@ use ieee.std_logic_textio.all;
 
 entity SPI_Controller is 
 generic(
-	SEND_CLK_PRESCALER : integer := 5
+	SEND_CLK_COUNTER_MAX : integer := 5;
+	BITS : integer := 16
 );
 port(
-	CLK: in std_logic;
-	SPI_SCLK: out std_logic := '0';
-	SPI_MOSI: out std_logic := '0';
-	SPI_CS: out std_logic := '1';
-	SEND_ADDRESS: in std_logic_vector(7 downto 0) := "10101010";
-	SEND_DATA: in std_logic_vector(7 downto 0) := "11110000";
-	SEND_READWRITE : in std_logic := '0';
-	SEND_IRQ: in std_logic := '0'
+	CLKk : inout std_logic;
+	SPI_MOSI : out std_logic;
+	SPI_SCLK : out std_logic;
+	SPI_CS : out std_logic
 );
 end entity;
 
 architecture arc of SPI_Controller is
 
-component Clock_divider is
-	port(
-	CLK: in std_logic;
-	Prescaler : in std_logic_vector(15 downto 0);
-
-	CLK_OUT: out std_logic
+component wizard_spi_fifo IS
+	PORT
+	(
+		clock		: IN STD_LOGIC ;
+		data		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+		rdreq		: IN STD_LOGIC ;
+		wrreq		: IN STD_LOGIC ;
+		empty		: OUT STD_LOGIC ;
+		q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 	);
+END component;
+
+component SPI_TX is 
+generic(
+	SEND_CLK_COUNTER_MAX : integer := 5;
+	BITS : integer := 8
+);
+port(
+	CLK: in std_logic := '0';
+	SPI_CS: out std_logic := '1';
+	SPI_SCLK: out std_logic := '0';
+	SPI_MOSI: out std_logic := '0';
+	SEND_DATA: in std_logic_vector(BITS-1 downto 0) := "10110001";
+	SEND_IRQ: in std_logic := '0';
+	SEND_DONE: out std_logic := '0'
+);
 end component;
 
-type state is (idle, readwrite, address, data);
+signal CLK : std_logic := '0';
 
+signal fifo_clk : STD_LOGIC := '0';
+signal fifo_data : STD_LOGIC_VECTOR (15 DOWNTO 0) := (others => '0');
+signal fifo_rdreq : STD_LOGIC := '0';
+signal fifo_wrreq : STD_LOGIC := '0';
+signal fifo_empty : STD_LOGIC := '0';
+signal fifo_q : STD_LOGIC_VECTOR (15 DOWNTO 0) := (others => '0');
+
+--Spi tx component
+signal tx_send_data : std_logic_vector(BITS-1 downto 0) := (others => '0');
+signal tx_send_irq : std_logic := '0';
+signal tx_send_done : std_logic := '0';
+
+type state is (idle, reading_fifo, transmiting);
 signal curr_state : state := idle;
-signal send_readwrite_buffer : std_logic := '0';
-signal send_address_buffer : std_logic_vector(7 downto 0) := (others => '0');
-signal send_data_buffer : std_logic_vector(7 downto 0) := (others => '0');
-
-signal send_counter : integer range 0 to 16 := 0;
-signal send_CLK : std_logic := '0';
-signal set_variable : std_logic := '0';
-
-signal SCLK : std_logic := '1';
 
 begin
 
-send_clock_divider : Clock_divider port map(CLK => CLK, Prescaler => std_logic_vector(to_unsigned(SEND_CLK_PRESCALER, 16)), CLK_OUT => send_CLK);
+spi_fifo_component : wizard_spi_fifo port map(clock => fifo_clk, data => fifo_data, rdreq => fifo_rdreq, wrreq => fifo_wrreq, empty => fifo_empty, q => fifo_q);
 
-SPI_SCLK <= '1' when curr_state = idle else SCLK;
+spi_tx_component : spi_tx generic map(SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => BITS) 
+						port map(CLK => CLK, SPI_CS => SPI_CS, SPI_SCLK => SPI_SCLK, SPI_MOSI => SPI_MOSI, SEND_DATA => tx_send_data, SEND_IRQ => tx_send_irq, SEND_DONE => tx_send_done);
 
+tx_send_data <= fifo_q;
+						
 process(CLK)
 begin
-	if(rising_edge(CLK))then
+	if(rising_edge(CLK)) then
 		case curr_state is
 			when idle =>
-				if(SEND_IRQ = '1' and send_CLK = '0') then
-					curr_state <= readwrite;
+				tx_send_irq <= '0';
+				if(fifo_empty = '0') then
+					fifo_rdreq <= '1';
+					curr_state <= reading_fifo;
 				end if;
-			when readwrite =>
-				if(send_counter = 1) then
-					curr_state <= address;
-				end if;
-			when address =>
-				if(send_counter = 8) then
-					curr_state <= data;
-				end if;
-			when data =>
-				if(send_counter = 16) then
+			when reading_fifo =>
+				fifo_rdreq <= '0';
+				tx_send_irq <= '1';
+				curr_state <= transmiting;
+			when transmiting =>
+				fifo_rdreq <= '0';
+				tx_send_irq <= '0';
+				if(tx_send_done = '1') then
 					curr_state <= idle;
 				end if;
 		end case;
 	end if;
 end process;
-
-process(send_CLK)
+						
+						
+CLK <= not CLK after 0.01us; --50MHz
+fifo_clk <= CLK;
+process
 begin
-	if(rising_edge(send_CLK)) then
-		SCLK <= not SCLK;
-	end if;
+		fifo_wrreq <= '0';
+		wait for 0.1us;
+		wait until rising_edge(CLK);
+		fifo_data <= "0000011100000111";
+		wait until rising_edge(CLK);
+		fifo_wrreq <= '1';
+		wait until rising_edge(CLK);
+		fifo_wrreq <= '0';
+		
+		wait until rising_edge(CLK);
+		fifo_data <= "1111000011110000";
+		wait until rising_edge(CLK);
+		fifo_wrreq <= '1';
+		wait until rising_edge(CLK);
+		fifo_wrreq <= '0';
+		
+		--START_SEND_DATA <= '1';
+		wait;
 end process;
-
-process(SCLK)
-begin
-	if(falling_edge(SCLK))then
-		case curr_state is
-			when idle =>
-
-			when readwrite =>
-				SPI_MOSI <= send_readwrite;
-				send_counter <= 1;
-			when address =>
-				send_counter <= send_counter + 1;
-				SPI_MOSI <= SEND_ADDRESS(send_counter);
-			when data =>
-				send_counter <= send_counter + 1;
-				SPI_MOSI <= SEND_DATA(send_counter-8);
-		end case;
-	end if;
-end process;
-
+						
 end architecture;
