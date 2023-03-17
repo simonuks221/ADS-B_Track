@@ -1,5 +1,5 @@
 Design Assistant report for Uni_Projektas
-Sun Feb 19 10:20:03 2023
+Mon Mar 13 18:34:11 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -9,10 +9,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. Design Assistant Summary
   3. Design Assistant Settings
-  4. High Violations
-  5. Medium Violations
-  6. Information only Violations
-  7. Design Assistant Messages
+  4. Information only Violations
+  5. Design Assistant Messages
 
 
 
@@ -38,17 +36,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Design Assistant Summary                                                ;
 +-----------------------------------+-------------------------------------+
-; Design Assistant Status           ; Analyzed - Sun Feb 19 10:20:03 2023 ;
+; Design Assistant Status           ; Analyzed - Mon Mar 13 18:34:11 2023 ;
 ; Revision Name                     ; Uni_Projektas                       ;
-; Top-level Entity Name             ; UNI_Projektas                       ;
+; Top-level Entity Name             ; SPI_Test_projektas                  ;
 ; Family                            ; Cyclone II                          ;
 ; Total Critical Violations         ; 0                                   ;
-; Total High Violations             ; 8                                   ;
-; - Rule S104                       ; 8                                   ;
-; Total Medium Violations           ; 1                                   ;
-; - Rule C104                       ; 1                                   ;
-; Total Information only Violations ; 62                                  ;
-; - Rule T101                       ; 12                                  ;
+; Total High Violations             ; 0                                   ;
+; Total Medium Violations           ; 0                                   ;
+; Total Information only Violations ; 52                                  ;
+; - Rule T101                       ; 2                                   ;
 ; - Rule T102                       ; 50                                  ;
 +-----------------------------------+-------------------------------------+
 
@@ -99,124 +95,64 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+----+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; High Violations                                                                                                                                                                    ;
-+-------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
-; Rule name                                                                                             ; Name                                                                       ;
-+-------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.sync     ;
-;  Violated clock and other port source node(s) list                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.idle     ;
-;  Violated clock and other port source node(s) list                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.data     ;
-;  Violated clock and other port source node(s) list                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.stop     ;
-;  Violated clock and other port source node(s) list                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[2]          ;
-;  Violated clock and other port source node(s) list                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[0]          ;
-;  Violated clock and other port source node(s) list                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.start    ;
-;  Violated clock and other port source node(s) list                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[1]          ;
-;  Violated clock and other port source node(s) list                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-+-------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Medium Violations                                                                                                                               ;
-+--------------------------------------------------------------------+----------------------------------------------------------------------------+
-; Rule name                                                          ; Name                                                                       ;
-+--------------------------------------------------------------------+----------------------------------------------------------------------------+
-; Rule C104: Clock signal source should drive only clock input ports ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|TX_BUSY                ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.sync     ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.idle     ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.data     ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.stop     ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[2]          ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[0]          ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.start    ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[1]          ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_send[2]           ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector5~0            ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state~13       ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[0]~5        ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[2]~3        ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector4~1            ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector6~1            ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector2~0            ;
-+--------------------------------------------------------------------+----------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Information only Violations                                                                                                                                                                                                  ;
-+------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Rule name                                                        ; Name                                                                                                                                            ; Fan-Out ;
-+------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Rule T101: Nodes with more than the specified number of fan-outs ; ADC_Manager:ADC_Manager1|main_state.waiting_bits                                                                                                ; 42      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; ADC_Manager:ADC_Manager1|WideOr5                                                                                                                ; 32      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; ADC_Manager:ADC_Manager1|main_state.waiting_preambule                                                                                           ; 35      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Correlation_function:corr_long|f_output[3]~44                                                                                                   ; 78      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; ADC_Manager:ADC_Manager1|main_state.finding_preambule                                                                                           ; 242     ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; CLK                                                                                                                                             ; 670     ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; ~GND                                                                                                                                            ; 414     ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; ADC_Manager:ADC_Manager1|main_state.finding_bits                                                                                                ; 784     ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Clock_divider:clock_divider1|clock_out~clkctrl                                                                                                  ; 593     ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; ADC_Manager:ADC_Manager1|data_counts[12]~32                                                                                                     ; 36      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; ADC_ram_shifter:adc_ram_shifter_1|last_stop                                                                                                     ; 504     ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; Correlation_function:corr_long|f                                                                                                                ; 202     ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|main_state.finding_bits                                                                                                ; 784     ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; CLK                                                                                                                                             ; 670     ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Clock_divider:clock_divider1|clock_out~clkctrl                                                                                                  ; 593     ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_ram_shifter:adc_ram_shifter_1|last_stop                                                                                                     ; 504     ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ~GND                                                                                                                                            ; 414     ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|main_state.finding_preambule                                                                                           ; 242     ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Correlation_function:corr_long|f                                                                                                                ; 202     ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Correlation_function:corr_long|f_output[3]~44                                                                                                   ; 78      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|main_state.waiting_bits                                                                                                ; 42      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|data_counts[12]~32                                                                                                     ; 36      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|main_state.waiting_preambule                                                                                           ; 35      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|WideOr5                                                                                                                ; 32      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_en                                                                                                                   ; 20      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|corr_func_rom_adress_b[2]                                                                                              ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|corr_func_rom_adress_b[1]                                                                                              ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out~clkctrl                                                              ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_short_func_input_index[0]                                                                                            ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|corr_func_rom_adress_b[3]                                                                                              ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_01_value[11]~0                                                                                                       ; 12      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_10_value[11]~0                                                                                                       ; 12      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_11_value[11]~0                                                                                                       ; 12      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_00_value[11]~0                                                                                                       ; 12      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.sync                                                                          ; 12      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|corr_func_rom_adress_b[0]                                                                                              ; 10      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_short_func_input_index[3]                                                                                            ; 10      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|corr_func_rom_adress_a[0]                                                                                              ; 9       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_short_func_input_index[1]                                                                                            ; 9       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|valid_wreq ; 9       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.data                                                                          ; 9       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[1]                                                                               ; 8       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out                                                                      ; 8       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_01_value[6]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_00_value[4]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_11_value[7]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_01_value[7]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_01_value[8]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_10_value[2]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_01_value[2]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_00_value[3]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_11_value[11]                                                                                                         ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_11_value[10]                                                                                                         ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_11_value[9]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_11_value[8]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_00_value[9]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_00_value[8]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_00_value[7]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_00_value[6]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_00_value[5]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_01_value[5]                                                                                                          ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_Manager:ADC_Manager1|c_10_value[5]                                                                                                          ; 7       ;
-+------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Information only Violations                                                                                                                                                                                                                                                    ;
++------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Rule name                                                        ; Name                                                                                                                                                                                              ; Fan-Out ;
++------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Rule T101: Nodes with more than the specified number of fan-outs ; CLK~clkctrl                                                                                                                                                                                       ; 103     ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|tx_buf[15]~17                                                                                                                             ; 31      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; CLK~clkctrl                                                                                                                                                                                       ; 103     ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|tx_buf[15]~17                                                                                                                             ; 31      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|curr_state                                                                                                                                ; 22      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|tx_buf[1]_OTERM1                                                                                                                          ; 15      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal4~2                                                                                                                                                                                          ; 14      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal3~4                                                                                                                                                                                          ; 14      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; ~GND                                                                                                                                                                                              ; 12      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_send_data[4]                                                                                                                                                                                  ; 9       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_wreq                                             ; 9       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|clk_counter[8]                                                                                                                            ; 9       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|Equal0~0_OTERM65                                                                                                                          ; 8       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|Equal0~1_OTERM63                                                                                                                          ; 8       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|sclk                                                                                                                                      ; 7       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_non_empty                    ; 7       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|Equal0~2                                                                                                                                  ; 6       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|bits_sent[2]~12                                                                                                                           ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[0]                                                                                                                                                                                        ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|bits_sent[2]~13                                                                                                                           ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|fifo_rdreq                                                                                                                                                        ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_send_irq                                                                                                                                                                                      ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_rreq                                             ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_full                         ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[6]                                                                                                                                                                                        ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|tx_send_irq                                                                                                                                                       ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[1]                                                                                                                                                                                        ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|_~0                            ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[7]                                                                                                                                                                                        ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|bits_sent[4]                                                                                                                              ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[5]                                                                                                                                                                                        ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[0] ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[24]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[3] ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|tx_buf[0]                                                                                                                                 ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[20]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[25]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[23]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[21]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[12]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[2] ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|curr_state.idle                                                                                                                                                   ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|SEND_DONE                                                                                                                                 ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[2]                                                                                                                                                                                        ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[15]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[14]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[16]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[18]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[19]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[11]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[22]                                                                                                                                                                                       ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|SPI_MOSI~0                                                                                                                                ; 3       ;
++------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------+
@@ -225,72 +161,52 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Design Assistant
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Feb 19 10:20:02 2023
+    Info: Processing started: Mon Mar 13 18:34:11 2023
 Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Info (332104): Reading SDC File: 'Uni_Projektas.sdc'
-Warning (332060): Node: Clock_divider:clock_divider1|clock_out was determined to be a clock but was found without an associated clock assignment.
-Warning (332060): Node: UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out was determined to be a clock but was found without an associated clock assignment.
-Critical Warning (308018): (High) Rule S104: Clock port and any other port of a register should not be driven by the same signal source. Found 8 node(s) related to this rule.
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.sync"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.idle"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.data"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.stop"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[2]"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[0]"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.start"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[1]"
-Warning (308040): (Medium) Rule C104: Clock signal source should drive only clock input ports. Found 1 nodes related to this rule.
-    Warning (308010): Node  "UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out"
-Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 12 node(s) with highest fan-out.
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|main_state.waiting_bits"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|WideOr5"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|main_state.waiting_preambule"
-    Info (308011): Node  "Correlation_function:corr_long|f_output[3]~44"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|main_state.finding_preambule"
-    Info (308011): Node  "CLK"
-    Info (308011): Node  "~GND"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|main_state.finding_bits"
-    Info (308011): Node  "Clock_divider:clock_divider1|clock_out~clkctrl"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|data_counts[12]~32"
-    Info (308011): Node  "ADC_ram_shifter:adc_ram_shifter_1|last_stop"
-    Info (308011): Node  "Correlation_function:corr_long|f"
+Warning (332174): Ignored filter at Uni_Projektas.sdc(2): SYNC could not be matched with a port
+Warning (332049): Ignored create_clock at Uni_Projektas.sdc(2): Argument <targets> is an empty collection
+    Info (332050): create_clock -name SYNC -period 40.000 [get_ports {SYNC}]
+Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 2 node(s) with highest fan-out.
+    Info (308011): Node  "CLK~clkctrl"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|tx_buf[15]~17"
 Info (308044): (Information) Rule T102: Top nodes with the highest number of fan-outs. (Value defined:50). Found 50 node(s) with highest fan-out.
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|main_state.finding_bits"
-    Info (308011): Node  "CLK"
-    Info (308011): Node  "Clock_divider:clock_divider1|clock_out~clkctrl"
-    Info (308011): Node  "ADC_ram_shifter:adc_ram_shifter_1|last_stop"
+    Info (308011): Node  "CLK~clkctrl"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|tx_buf[15]~17"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|curr_state"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|tx_buf[1]_OTERM1"
+    Info (308011): Node  "Equal4~2"
+    Info (308011): Node  "Equal3~4"
     Info (308011): Node  "~GND"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|main_state.finding_preambule"
-    Info (308011): Node  "Correlation_function:corr_long|f"
-    Info (308011): Node  "Correlation_function:corr_long|f_output[3]~44"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|main_state.waiting_bits"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|data_counts[12]~32"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|main_state.waiting_preambule"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|WideOr5"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|c_en"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|corr_func_rom_adress_b[2]"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|corr_func_rom_adress_b[1]"
-    Info (308011): Node  "UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out~clkctrl"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|c_short_func_input_index[0]"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|corr_func_rom_adress_b[3]"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|c_01_value[11]~0"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|c_10_value[11]~0"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|c_11_value[11]~0"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|c_00_value[11]~0"
-    Info (308011): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.sync"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|corr_func_rom_adress_b[0]"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|c_short_func_input_index[3]"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|corr_func_rom_adress_a[0]"
-    Info (308011): Node  "ADC_Manager:ADC_Manager1|c_short_func_input_index[1]"
-    Info (308011): Node  "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|valid_wreq"
-    Info (308011): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.data"
-    Info (308011): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[1]"
+    Info (308011): Node  "SPI_send_data[4]"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_wreq"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|clk_counter[8]"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|Equal0~0_OTERM65"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|Equal0~1_OTERM63"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|sclk"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_non_empty"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|Equal0~2"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|bits_sent[2]~12"
+    Info (308011): Node  "counter[0]"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|bits_sent[2]~13"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|fifo_rdreq"
+    Info (308011): Node  "SPI_send_irq"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_rreq"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_full"
+    Info (308011): Node  "counter[6]"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|tx_send_irq"
+    Info (308011): Node  "counter[1]"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|_~0"
+    Info (308011): Node  "counter[7]"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|SPI_TX:spi_tx_component|bits_sent[4]"
+    Info (308011): Node  "counter[5]"
+    Info (308011): Node  "SPI_Controller:spi_controller_1|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[0]"
     Info (308002): Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
-Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 62 information messages and 9 warning messages
-Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4567 megabytes
-    Info: Processing ended: Sun Feb 19 10:20:03 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 52 information messages and 0 warning messages
+Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4520 megabytes
+    Info: Processing ended: Mon Mar 13 18:34:11 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
 
 

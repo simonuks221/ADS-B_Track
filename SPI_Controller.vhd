@@ -6,14 +6,16 @@ use ieee.std_logic_textio.all;
 
 entity SPI_Controller is 
 generic(
-	SEND_CLK_COUNTER_MAX : integer := 5;
+	SEND_CLK_COUNTER_MAX : integer := 500;
 	BITS : integer := 16
 );
 port(
-	CLKk : inout std_logic;
+	CLK : in std_logic;
 	SPI_MOSI : out std_logic;
 	SPI_SCLK : out std_logic;
-	SPI_CS : out std_logic
+	SPI_CS : out std_logic;
+	SPI_send_data : std_logic_vector(BITS-1 downto 0) := (others => '0');
+	SPI_send_irq : std_logic := '0'
 );
 end entity;
 
@@ -33,7 +35,7 @@ END component;
 
 component SPI_TX is 
 generic(
-	SEND_CLK_COUNTER_MAX : integer := 5;
+	SEND_CLK_COUNTER_MAX : integer := 500;
 	BITS : integer := 8
 );
 port(
@@ -41,13 +43,11 @@ port(
 	SPI_CS: out std_logic := '1';
 	SPI_SCLK: out std_logic := '0';
 	SPI_MOSI: out std_logic := '0';
-	SEND_DATA: in std_logic_vector(BITS-1 downto 0) := "10110001";
+	SEND_DATA: in std_logic_vector(BITS-1 downto 0) := (others => '0');
 	SEND_IRQ: in std_logic := '0';
 	SEND_DONE: out std_logic := '0'
 );
 end component;
-
-signal CLK : std_logic := '0';
 
 signal fifo_clk : STD_LOGIC := '0';
 signal fifo_data : STD_LOGIC_VECTOR (15 DOWNTO 0) := (others => '0');
@@ -57,7 +57,7 @@ signal fifo_empty : STD_LOGIC := '0';
 signal fifo_q : STD_LOGIC_VECTOR (15 DOWNTO 0) := (others => '0');
 
 --Spi tx component
-signal tx_send_data : std_logic_vector(BITS-1 downto 0) := (others => '0');
+signal tx_send_data : std_logic_vector(BITS-1 downto 0);
 signal tx_send_irq : std_logic := '0';
 signal tx_send_done : std_logic := '0';
 
@@ -72,6 +72,9 @@ spi_tx_component : spi_tx generic map(SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_M
 						port map(CLK => CLK, SPI_CS => SPI_CS, SPI_SCLK => SPI_SCLK, SPI_MOSI => SPI_MOSI, SEND_DATA => tx_send_data, SEND_IRQ => tx_send_irq, SEND_DONE => tx_send_done);
 
 tx_send_data <= fifo_q;
+fifo_clk <= CLK;
+fifo_data <= SPI_send_data;
+fifo_wrreq <= SPI_send_irq;
 						
 process(CLK)
 begin
@@ -96,30 +99,5 @@ begin
 		end case;
 	end if;
 end process;
-						
-						
-CLK <= not CLK after 0.01us; --50MHz
-fifo_clk <= CLK;
-process
-begin
-		fifo_wrreq <= '0';
-		wait for 0.1us;
-		wait until rising_edge(CLK);
-		fifo_data <= "0000011100000111";
-		wait until rising_edge(CLK);
-		fifo_wrreq <= '1';
-		wait until rising_edge(CLK);
-		fifo_wrreq <= '0';
-		
-		wait until rising_edge(CLK);
-		fifo_data <= "1111000011110000";
-		wait until rising_edge(CLK);
-		fifo_wrreq <= '1';
-		wait until rising_edge(CLK);
-		fifo_wrreq <= '0';
-		
-		--START_SEND_DATA <= '1';
-		wait;
-end process;
-						
+			
 end architecture;

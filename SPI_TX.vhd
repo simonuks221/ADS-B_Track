@@ -6,7 +6,7 @@ use ieee.std_logic_textio.all;
 
 entity SPI_TX is 
 generic(
-	SEND_CLK_COUNTER_MAX : integer := 5;
+	SEND_CLK_COUNTER_MAX : integer := 500;
 	BITS : integer := 16
 );
 port(
