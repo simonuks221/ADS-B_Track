@@ -1,6 +1,40 @@
 
-State Machine - |SPI_Test_projektas|SPI_Controller:spi_controller_1|curr_state
-Name curr_state.transmiting curr_state.reading_fifo curr_state.idle 
-curr_state.idle 0 0 0 
-curr_state.reading_fifo 0 1 1 
-curr_state.transmiting 1 0 1 
+State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|next_state
+Name next_state.transmiting next_state.reading_fifo2 next_state.reading_fifo1 next_state.idle 
+next_state.idle 0 0 0 0 
+next_state.reading_fifo1 0 0 1 1 
+next_state.reading_fifo2 0 1 0 1 
+next_state.transmiting 1 0 0 1 
+
+State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|curr_state
+Name curr_state.transmiting curr_state.reading_fifo2 curr_state.reading_fifo1 curr_state.idle 
+curr_state.idle 0 0 0 0 
+curr_state.reading_fifo1 0 0 1 1 
+curr_state.reading_fifo2 0 1 0 1 
+curr_state.transmiting 1 0 0 1 
+
+State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state
+Name tx_next_state.stop tx_next_state.data tx_next_state.start tx_next_state.sync tx_next_state.idle 
+tx_next_state.idle 0 0 0 0 0 
+tx_next_state.sync 0 0 0 1 1 
+tx_next_state.start 0 0 1 0 1 
+tx_next_state.data 0 1 0 0 1 
+tx_next_state.stop 1 0 0 0 1 
+
+State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state
+Name tx_curr_state.stop tx_curr_state.data tx_curr_state.start tx_curr_state.sync tx_curr_state.idle 
+tx_curr_state.idle 0 0 0 0 0 
+tx_curr_state.sync 0 0 0 1 1 
+tx_curr_state.start 0 0 1 0 1 
+tx_curr_state.data 0 1 0 0 1 
+tx_curr_state.stop 1 0 0 0 1 
+
+State Machine - |UNI_Projektas|ADC_Manager:ADC_Manager1|main_state
+Name main_state.waiting_after main_state.sending_bits main_state.finding_bits main_state.waiting_bits main_state.waiting_preambule main_state.finding_preambule main_state.read_init_mem 
+main_state.read_init_mem 0 0 0 0 0 0 0 
+main_state.finding_preambule 0 0 0 0 0 1 1 
+main_state.waiting_preambule 0 0 0 0 1 0 1 
+main_state.waiting_bits 0 0 0 1 0 0 1 
+main_state.finding_bits 0 0 1 0 0 0 1 
+main_state.sending_bits 0 1 0 0 0 0 1 
+main_state.waiting_after 1 0 0 0 0 0 1 

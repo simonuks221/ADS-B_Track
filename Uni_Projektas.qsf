@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C5T144C8
-set_global_assignment -name TOP_LEVEL_ENTITY SPI_Test_projektas
+set_global_assignment -name TOP_LEVEL_ENTITY Uni_Projektas
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:31:19  DECEMBER 06, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -102,13 +102,82 @@ set_global_assignment -name VHDL_FILE SPI_Controller.vhd
 set_global_assignment -name VHDL_FILE SPI_TX.vhd
 set_global_assignment -name QIP_FILE wizard_spi_fifo.qip
 set_global_assignment -name VHDL_FILE SPI_Test_projektas.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_40 -to SPI_CS
+set_location_assignment PIN_44 -to SPI_CS
 set_location_assignment PIN_41 -to SPI_MOSI
 set_location_assignment PIN_42 -to SPI_SCLK
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED WITH WEAK PULL-UP"
-set_location_assignment PIN_7 -to LED_OUT
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_3 -to MRAM_A[13]
+set_location_assignment PIN_7 -to MRAM_A[11]
+set_location_assignment PIN_9 -to MRAM_A[10]
+set_location_assignment PIN_4 -to MRAM_A[14]
+set_location_assignment PIN_8 -to MRAM_A[12]
+set_location_assignment PIN_24 -to ADC_SHDN
+set_location_assignment PIN_143 -to MRAM_D[8]
+set_location_assignment PIN_141 -to MRAM_A[9]
+set_location_assignment PIN_137 -to MRAM_A[7]
+set_location_assignment PIN_135 -to MRAM_A[5]
+set_location_assignment PIN_133 -to MRAM_D[7]
+set_location_assignment PIN_129 -to MRAM_D[5]
+set_location_assignment PIN_125 -to MRAM_D[3]
+set_location_assignment PIN_121 -to MRAM_D[1]
+set_location_assignment PIN_118 -to MRAM_EN
+set_location_assignment PIN_114 -to MRAM_A[3]
+set_location_assignment PIN_112 -to MRAM_A[1]
+set_location_assignment PIN_142 -to MRAM_D[9]
+set_location_assignment PIN_139 -to MRAM_A[8]
+set_location_assignment PIN_136 -to MRAM_A[6]
+set_location_assignment PIN_134 -to MRAM_WRITE_EN
+set_location_assignment PIN_132 -to MRAM_D[6]
+set_location_assignment PIN_126 -to MRAM_D[4]
+set_location_assignment PIN_122 -to MRAM_D[2]
+set_location_assignment PIN_120 -to MRAM_D[0]
+set_location_assignment PIN_119 -to MRAM_A[4]
+set_location_assignment PIN_115 -to MRAM_A[2]
+set_location_assignment PIN_113 -to MRAM_A[0]
+set_location_assignment PIN_103 -to MRAM_UPPER_EN
+set_location_assignment PIN_100 -to MRAM_A[15]
+set_location_assignment PIN_97 -to MRAM_A[17]
+set_location_assignment PIN_94 -to MRAM_D[13]
+set_location_assignment PIN_92 -to MRAM_D[11]
+set_location_assignment PIN_86 -to ADC_DCLKA
+set_location_assignment PIN_80 -to ADC_BIT_A[9]
+set_location_assignment PIN_76 -to ADC_BIT_A[7]
+set_location_assignment PIN_74 -to ADC_BIT_A[5]
+set_location_assignment PIN_104 -to MRAM_LOWER_EN
+set_location_assignment PIN_101 -to MRAM_OUTPUT_EN
+set_location_assignment PIN_99 -to MRAM_A[16]
+set_location_assignment PIN_96 -to MRAM_D[15]
+set_location_assignment PIN_93 -to MRAM_D[14]
+set_location_assignment PIN_87 -to ADC_SPI_SDIN
+set_location_assignment PIN_81 -to ADC_DORA
+set_location_assignment PIN_79 -to ADC_BIT_A[8]
+set_location_assignment PIN_75 -to ADC_BIT_A[6]
+set_location_assignment PIN_73 -to ADC_BIT_A[4]
+set_location_assignment PIN_40 -to SPI_MISO
+set_location_assignment PIN_45 -to ADC_SYNC
+set_location_assignment PIN_52 -to ADC_DORB
+set_location_assignment PIN_55 -to ADC_BIT_B[0]
+set_location_assignment PIN_58 -to ADC_BIT_B[2]
+set_location_assignment PIN_60 -to ADC_BIT_B[4]
+set_location_assignment PIN_64 -to ADC_BIT_B[6]
+set_location_assignment PIN_67 -to ADC_BIT_B[8]
+set_location_assignment PIN_70 -to ADC_BIT_A[1]
+set_location_assignment PIN_72 -to ADC_BIT_A[3]
+set_location_assignment PIN_71 -to ADC_BIT_A[2]
+set_location_assignment PIN_69 -to ADC_BIT_A[0]
+set_location_assignment PIN_65 -to ADC_BIT_B[9]
+set_location_assignment PIN_63 -to ADC_BIT_B[7]
+set_location_assignment PIN_59 -to ADC_BIT_B[5]
+set_location_assignment PIN_57 -to ADC_BIT_B[3]
+set_location_assignment PIN_53 -to ADC_BIT_B[1]
+set_location_assignment PIN_51 -to ADC_DCLKB
+set_location_assignment PIN_47 -to ADC_CLK
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_location_assignment PIN_144 -to BUTTON
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BUTTON
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

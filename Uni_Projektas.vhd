@@ -9,15 +9,38 @@ generic (
 	baud_rate : integer := 434 --115200 baud reitui toki prescaleri naudojam
 );
 port(
-	CLK : in std_logic;
-	ADC_IN : in std_logic_vector(7 downto 0);
-	DATA_OUT : out std_logic_vector(6-1 downto 0);
-	SYNC : out std_logic;
-	UART_TX: out std_logic;
-	UART_RX_RX: in std_logic;
-	SPI_SCLK: out std_logic;
-	SPI_MOSI: out std_logic;
-	SPI_CS: out std_logic
+	CLK : in std_logic := '0';
+	BUTTON : in std_logic := '0';
+	
+	--ADC SIGNALS
+	ADC_SHDN : out std_logic := '0';
+	ADC_SYNC : out std_logic := '0';
+	ADC_CLK : out std_logic := '0';
+	ADC_DORB : in std_logic := '0';
+	ADC_DORA : in std_logic := '0';
+	ADC_DCLKB : out std_logic := '0';
+	ADC_DCLKA : out std_logic := '0';
+	ADC_BIT_B : in std_logic_vector(9 downto 0) := (others => '0');
+	ADC_BIT_A : in std_logic_vector(9 downto 0) := (others => '0');
+	ADC_SPI_SDIN : inout std_logic := 'Z';
+	ADC_SPI_SCLK : out std_logic := '0';
+	ADC_SPI_CS : out std_logic := '1';
+	
+	--SPI TO FPGA
+	SPI_MOSI : inout std_logic := 'Z';
+	SPI_MISO : inout std_logic := 'Z';
+	SPI_SCLK : inout std_logic := 'Z';
+	SPI_CS : inout std_logic := 'Z';
+	
+	--MRAM
+	MRAM_OUTPUT_EN : out std_logic := '0';
+	MRAM_A : out std_logic_vector(17 downto 0) := (others => '0');
+	MRAM_EN : out std_logic := '0';
+	MRAM_WRITE_EN : out std_logic := '0';
+	MRAM_UPPER_EN : out std_logic := '0';
+	MRAM_LOWER_EN : out std_logic := '0';
+	MRAM_D : out std_logic_vector(15 downto 0) := (others => '0')
+	
 );
 end entity;
 
@@ -202,7 +225,7 @@ begin
 
 adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => address_a_1, address_a_2 => address_a_2, address_b_1 => address_b_1,
 	address_b_2 => address_b_2,
-	new_adc_in => ADC_IN, stop_shift => shift_en, q => q, data => data);
+	new_adc_in => ADC_BIT_A(7 downto 0), stop_shift => shift_en, q => q, data => data);
 
 
 ADC_Manager1 : ADC_Manager port map(CLK => CLK, DATA_OUT => RECEIVED_CODE, SYNC => sync_clk,
@@ -227,8 +250,8 @@ ram2 : big_ram_wizard port map(clock => CLK, address_a => address_a_2, address_b
 ram3 : corr_func_rom_1 port map(clock => CLK, address_a => address_3_a, address_b => address_3_b, q_a => q_3(255 downto 128), q_b => q_3(127 downto 0));						
 
 					
-DATA_OUT <= RECEIVED_CODE;
-SYNC <= sync_clk;
+--DATA_OUT <= RECEIVED_CODE;
+ADC_SYNC <= sync_clk;
 
 q <= q_b_2 & q_a_2 & q_b_1 & q_a_1;
 data_a_1 <= data(128-1 downto 0);
@@ -245,6 +268,6 @@ UART_Controller_1 : UART_Controller generic map(baud_rate => baud_rate) port map
 	SEND_DATA_IN_REQ => UART_CONTROLLER_DATA_REQ,
 	TX => UART_TX_SIG);
 	
-UART_TX <= UART_TX_SIG;
+--UART_TX <= UART_TX_SIG;
 
 end architecture;
