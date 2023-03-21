@@ -13,15 +13,16 @@ port(
 	BUTTON : in std_logic := '0';
 	
 	--ADC SIGNALS
-	ADC_SHDN : out std_logic := '0';
+	ADC_SHDN : out std_logic := '0'; --1 - ADC OFF, 0 - ADC ON
 	ADC_SYNC : out std_logic := '0';
 	ADC_CLK : out std_logic := '0';
 	ADC_DORB : in std_logic := '0';
 	ADC_DORA : in std_logic := '0';
-	ADC_DCLKB : out std_logic := '0';
-	ADC_DCLKA : out std_logic := '0';
+	ADC_DCLKB : in std_logic := '0';
+	ADC_DCLKA : in std_logic := '0';
 	ADC_BIT_B : in std_logic_vector(9 downto 0) := (others => '0');
 	ADC_BIT_A : in std_logic_vector(9 downto 0) := (others => '0');
+	--ADC SPI
 	ADC_SPI_SDIN : inout std_logic := 'Z';
 	ADC_SPI_SCLK : out std_logic := '0';
 	ADC_SPI_CS : out std_logic := '1';

@@ -4,6 +4,8 @@ use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
+--First send bit (So MSB of 16bit) 0 - write, 1 - read. Ant kylancio fronto skaityt
+
 entity SPI_Controller is 
 generic(
 	SEND_CLK_COUNTER_MAX : integer := 500;
@@ -40,7 +42,6 @@ generic(
 );
 port(
 	CLK: in std_logic := '0';
-	SPI_CS: out std_logic := '1';
 	SPI_SCLK: out std_logic := '0';
 	SPI_MOSI: out std_logic := '0';
 	SEND_DATA: in std_logic_vector(BITS-1 downto 0) := (others => '0');
@@ -61,15 +62,17 @@ signal tx_send_data : std_logic_vector(BITS-1 downto 0);
 signal tx_send_irq : std_logic := '0';
 signal tx_send_done : std_logic := '0';
 
-type state is (idle, reading_fifo, transmiting);
+type state is (idle, reading_fifo, transmiting, cs_up);
 signal curr_state : state := idle;
+
+signal cs_up_counter : integer range 0 to SEND_CLK_COUNTER_MAX := 0;
 
 begin
 
 spi_fifo_component : wizard_spi_fifo port map(clock => fifo_clk, data => fifo_data, rdreq => fifo_rdreq, wrreq => fifo_wrreq, empty => fifo_empty, q => fifo_q);
 
 spi_tx_component : spi_tx generic map(SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => BITS) 
-						port map(CLK => CLK, SPI_CS => SPI_CS, SPI_SCLK => SPI_SCLK, SPI_MOSI => SPI_MOSI, SEND_DATA => tx_send_data, SEND_IRQ => tx_send_irq, SEND_DONE => tx_send_done);
+						port map(CLK => CLK, SPI_SCLK => SPI_SCLK, SPI_MOSI => SPI_MOSI, SEND_DATA => tx_send_data, SEND_IRQ => tx_send_irq, SEND_DONE => tx_send_done);
 
 tx_send_data <= fifo_q;
 fifo_clk <= CLK;
@@ -81,6 +84,7 @@ begin
 	if(rising_edge(CLK)) then
 		case curr_state is
 			when idle =>
+				SPI_CS <= '1';
 				tx_send_irq <= '0';
 				if(fifo_empty = '0') then
 					fifo_rdreq <= '1';
@@ -91,10 +95,19 @@ begin
 				tx_send_irq <= '1';
 				curr_state <= transmiting;
 			when transmiting =>
+				SPI_CS <= '0';
 				fifo_rdreq <= '0';
 				tx_send_irq <= '0';
 				if(tx_send_done = '1') then
+					curr_state <= cs_up;
+					SPI_CS <= '1';
+				end if;
+			when cs_up =>
+				if(cs_up_counter = SEND_CLK_COUNTER_MAX) then
 					curr_state <= idle;
+					cs_up_counter <= 0;
+				else
+					cs_up_counter <= cs_up_counter + 1;
 				end if;
 		end case;
 	end if;

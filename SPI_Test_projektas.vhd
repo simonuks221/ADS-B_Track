@@ -46,13 +46,17 @@ begin
 		case counter is
 			when 100 =>
 				SPI_send_data <= "1111000011110000";
-				
 			when 102 =>
 				SPI_send_irq <= '1';
 			when 103 =>
 				SPI_send_irq <= '0';
+			when 104 => 
+				SPI_send_data <= "1111000011110000";
+				SPI_send_irq <= '1';
+			when 105 =>
+				SPI_send_irq <= '0';
 			when 25000000 =>
-				LED_OUT <= '0';
+				
 			when others =>
 				
 		end case;

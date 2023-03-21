@@ -265,7 +265,7 @@ R14
 !s100 XjHBA5_NWZ7?P[=;BY?702
 !i10b 1
 Espi_controller
-Z47 w1678724458
+Z47 w1679390285
 R2
 R3
 R4
@@ -274,52 +274,52 @@ R6
 Z48 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
 Z49 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
 l0
-L7
+L9
 VKi7kl<k:fY6h5_QA]X;a33
+!s100 GAJEG35BCM`^hSK^N`M2?1
 R9
 32
-Z50 !s108 1679388755.201000
+!i10b 1
+Z50 !s108 1679390286.851000
 Z51 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd|
 Z52 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd|
 Z53 o-work work -O0
 R14
-!s100 >zC1BWhQ64]KARgh3^kbY0
-!i10b 1
 Aarc
 R2
 R3
 R4
 R5
-DEx4 work 14 spi_controller 0 22 Ki7kl<k:fY6h5_QA]X;a33
-l67
-L22
-V?Qdnkc>bCfgHWaV8<mWYE3
+Z54 DEx4 work 14 spi_controller 0 22 Ki7kl<k:fY6h5_QA]X;a33
+l70
+L24
+V250]X7HXA=PgfdZ[J^8__0
+!s100 N:SAmC1UP6Rff_gF>FmDf1
 R9
 32
+!i10b 1
 R50
 R51
 R52
 R53
 R14
-!s100 :VRPc2;iizX`MaPmZ=lYS1
-!i10b 1
 Espi_test_projektas
-Z54 w1678725166
+Z55 w1679389857
 R2
 R3
 R4
 R5
 R6
-Z55 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Test_projektas.vhd
-Z56 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Test_projektas.vhd
+Z56 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Test_projektas.vhd
+Z57 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Test_projektas.vhd
 l0
 L6
 V51E[ON3`zz]Pelm3=aQV13
 R9
 32
-Z57 !s108 1679388753.941000
-Z58 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Test_projektas.vhd|
-Z59 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Test_projektas.vhd|
+Z58 !s108 1679390119.069000
+Z59 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Test_projektas.vhd|
+Z60 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Test_projektas.vhd|
 R53
 R14
 !s100 JA?QTLoA4YfK8IhLb6o6k2
@@ -332,54 +332,54 @@ R5
 DEx4 work 18 spi_test_projektas 0 22 51E[ON3`zz]Pelm3=aQV13
 l38
 L16
-VTBXNIOabeVFzHNG;;?dIZ1
+VHzkm8LWZd>X:e:PJPnl>I0
 R9
 32
-R57
 R58
 R59
+R60
 R53
 R14
-!s100 HP^F7>^cocz`2iIk2TAJ02
+!s100 WWiDRZRD>g:LI5CZPR_2P0
 !i10b 1
 Espi_tx
-Z60 w1678724407
+Z61 w1679390113
 R2
 R3
 R4
 R5
 R6
-Z61 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
-Z62 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+Z62 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+Z63 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
 l0
 L7
-VEn`5ZQni3=bRN>56730VN2
+VdF0IV6XZPEH3lO6VR3C1d0
 R9
 32
-Z63 !s108 1679388756.995000
-Z64 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd|
-Z65 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd|
+Z64 !s108 1679390119.137000
+Z65 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd|
+Z66 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd|
 R53
 R14
-!s100 <[X3g92JLeTHz9a``SR^G3
+!s100 n[W7:a:5UMZh^3aO:6]Q_3
 !i10b 1
 Aarc
 R2
 R3
 R4
 R5
-DEx4 work 6 spi_tx 0 22 En`5ZQni3=bRN>56730VN2
-l35
-L23
-V67fFCdjN44Mi2X3jG:G>P3
+DEx4 work 6 spi_tx 0 22 dF0IV6XZPEH3lO6VR3C1d0
+l34
+L22
+V@2zUaZ]i7h=ZJ`<N154oC1
 R9
 32
-R63
 R64
 R65
+R66
 R53
 R14
-!s100 EH8ADjKDJCg`D5IVAGde=1
+!s100 Ogh>PONgH@JJNI[LEHKTE3
 !i10b 1
 Euart_controller
 R21
@@ -388,16 +388,16 @@ R3
 R4
 R5
 R6
-Z66 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
-Z67 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
+Z67 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
+Z68 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
 l0
 L7
 V^PVahDVaoR[Eao1dob3>P3
 R9
 31
-Z68 !s108 1679388696.227000
-Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd|
-Z70 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd|
+Z69 !s108 1679388696.227000
+Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd|
+Z71 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd|
 R13
 R14
 !s100 i[X:l38@EHz;U0H>@iYQn3
@@ -413,9 +413,9 @@ L19
 V:iBOYUHccHfi:Nl:_8nIH0
 R9
 31
-R68
 R69
 R70
+R71
 R13
 R14
 !s100 oUo@JRFk5O0=0^nam7HBJ0
@@ -425,16 +425,16 @@ R21
 R4
 R5
 R6
-Z71 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
-Z72 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
+Z72 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
+Z73 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd
 l0
 L42
 VkPMA?<I:3BohhMEPM36VC3
 R9
 31
-Z73 !s108 1679388696.357000
-Z74 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd|
-Z75 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd|
+Z74 !s108 1679388696.357000
+Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd|
+Z76 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd|
 R13
 R14
 !s100 =<Ofg0c3hRkJnDCZUK5Qk1
@@ -448,9 +448,9 @@ L55
 V4FfC4F]KUU]l1H2I82jQj2
 R9
 31
-R73
 R74
 R75
+R76
 R13
 R14
 !s100 M>Q<kV1^YeQ8jO9V;ZRFa2
@@ -462,16 +462,16 @@ R3
 R4
 R5
 R6
-Z76 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-Z77 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
+Z77 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
+Z78 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
 l0
 L10
 VB1[jgUGUUn5fhRWWWgT0]1
 R9
 31
-Z78 !s108 1679388696.292000
-Z79 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd|
-Z80 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd|
+Z79 !s108 1679388696.292000
+Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd|
+Z81 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd|
 R13
 R14
 !s100 aC5jh4o1^0CiBkF56hGUU3
@@ -487,30 +487,30 @@ L24
 VM0]cf:PiX_GXNH_]hEE2^1
 R9
 31
-R78
 R79
 R80
+R81
 R13
 R14
 !s100 RIm6SX3ALkM>LJPT8hDDg3
 !i10b 1
 Euni_projektas
-Z81 w1679337522
+Z82 w1679337522
 R2
 R3
 R4
 R5
 R6
-Z82 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd
-Z83 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd
+Z83 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd
+Z84 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd
 l0
 L7
 V`mBHD=_=JOVfHlG4FSj_63
 R9
 31
-Z84 !s108 1679388695.968000
-Z85 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
-Z86 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
+Z85 !s108 1679388695.968000
+Z86 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
+Z87 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
 R13
 R14
 !s100 TQj>89=V[?^eQ?DGO^j6P1
@@ -526,28 +526,28 @@ L47
 V:0X5[^EBl0<F<eHgYheAz1
 R9
 31
-R84
 R85
 R86
+R87
 R13
 R14
 !s100 _fJT`FMiMSP7@Q2bSI0g_0
 !i10b 1
 Ewizard_ram
-Z87 w1673001187
+Z88 w1673001187
 R4
 R5
 R6
-Z88 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd
-Z89 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd
+Z89 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd
+Z90 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd
 l0
 L42
 V>>XX;EfR8>j6zAbg9j=l_3
 R9
 31
-Z90 !s108 1679388695.901000
-Z91 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd|
-Z92 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd|
+Z91 !s108 1679388695.901000
+Z92 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd|
+Z93 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd|
 R13
 R14
 !s100 h;DloUO]JX0M`@BW98iVc3
@@ -561,32 +561,32 @@ L54
 VJ0nGH>aQV^nk45iG5IYnM3
 R9
 31
-R90
 R91
 R92
+R93
 R13
 R14
 !s100 8J4fj76In6l8Um5;Wfl;70
 !i10b 1
 Ewizard_spi_fifo
-Z93 w1678371979
+Z94 w1678371979
 R4
 R5
 R6
-Z94 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd
-Z95 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd
+Z95 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd
+Z96 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd
 l0
 L42
 VzLVF1g>e_3QizfjUAd9h;3
-!s100 iXYb4lzRU]hoTz`TM4jSd2
 R9
 32
-!i10b 1
-Z96 !s108 1679388846.921000
-Z97 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd|
-Z98 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd|
+Z97 !s108 1679388846.921000
+Z98 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd|
+Z99 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd|
 R53
 R14
+!s100 iXYb4lzRU]hoTz`TM4jSd2
+!i10b 1
 Asyn
 R4
 R5
@@ -594,12 +594,12 @@ DEx4 work 15 wizard_spi_fifo 0 22 zLVF1g>e_3QizfjUAd9h;3
 l85
 L55
 V9GVnJ;=8^OLgXXed]fQ^51
-!s100 AWLgO7mS@7W^7O`e>5Iac2
 R9
 32
-!i10b 1
-R96
 R97
 R98
+R99
 R53
 R14
+!s100 AWLgO7mS@7W^7O`e>5Iac2
+!i10b 1

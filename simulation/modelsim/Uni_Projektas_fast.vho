@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "03/20/2023 20:39:45"
+-- DATE "03/21/2023 11:04:20"
 
 -- 
 -- Device: Altera EP2C5T144C8 Package TQFP144
@@ -40,8 +40,8 @@ ENTITY 	UNI_Projektas IS
 	ADC_CLK : OUT std_logic;
 	ADC_DORB : IN std_logic;
 	ADC_DORA : IN std_logic;
-	ADC_DCLKB : OUT std_logic;
-	ADC_DCLKA : OUT std_logic;
+	ADC_DCLKB : IN std_logic;
+	ADC_DCLKA : IN std_logic;
 	ADC_BIT_B : IN std_logic_vector(9 DOWNTO 0);
 	ADC_BIT_A : IN std_logic_vector(9 DOWNTO 0);
 	ADC_SPI_SDIN : INOUT std_logic;
@@ -73,8 +73,8 @@ END UNI_Projektas;
 -- ADC_CLK	=>  Location: PIN_47,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 -- ADC_DORB	=>  Location: PIN_52,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- ADC_DORA	=>  Location: PIN_81,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- ADC_DCLKB	=>  Location: PIN_51,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- ADC_DCLKA	=>  Location: PIN_86,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- ADC_DCLKB	=>  Location: PIN_51,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- ADC_DCLKA	=>  Location: PIN_86,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- ADC_BIT_B[0]	=>  Location: PIN_55,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- ADC_BIT_B[1]	=>  Location: PIN_53,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- ADC_BIT_B[2]	=>  Location: PIN_58,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -225,8 +225,8 @@ ADC_SYNC <= ww_ADC_SYNC;
 ADC_CLK <= ww_ADC_CLK;
 ww_ADC_DORB <= ADC_DORB;
 ww_ADC_DORA <= ADC_DORA;
-ADC_DCLKB <= ww_ADC_DCLKB;
-ADC_DCLKA <= ww_ADC_DCLKA;
+ww_ADC_DCLKB <= ADC_DCLKB;
+ww_ADC_DCLKA <= ADC_DCLKA;
 ww_ADC_BIT_B <= ADC_BIT_B;
 ww_ADC_BIT_A <= ADC_BIT_A;
 ADC_SPI_SCLK <= ww_ADC_SPI_SCLK;
@@ -1163,7 +1163,7 @@ PORT MAP (
 	oe => GND,
 	padio => ww_ADC_DORA);
 
--- Location: PIN_51,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- Location: PIN_51,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \ADC_DCLKB~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -1175,21 +1175,20 @@ GENERIC MAP (
 	oe_power_up => "low",
 	oe_register_mode => "none",
 	oe_sync_reset => "none",
-	operation_mode => "output",
+	operation_mode => "input",
 	output_async_reset => "none",
 	output_power_up => "low",
 	output_register_mode => "none",
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
-	oe => VCC,
+	oe => GND,
 	padio => ww_ADC_DCLKB);
 
--- Location: PIN_86,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- Location: PIN_86,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \ADC_DCLKA~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -1201,18 +1200,17 @@ GENERIC MAP (
 	oe_power_up => "low",
 	oe_register_mode => "none",
 	oe_sync_reset => "none",
-	operation_mode => "output",
+	operation_mode => "input",
 	output_async_reset => "none",
 	output_power_up => "low",
 	output_register_mode => "none",
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
-	oe => VCC,
+	oe => GND,
 	padio => ww_ADC_DCLKA);
 
 -- Location: PIN_55,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default

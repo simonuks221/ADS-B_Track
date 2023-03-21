@@ -224,3 +224,154 @@ force -freeze sim:/spi_test_projektas/CLK 1 0, 0 {50 ps} -r 100
 run
 run
 run
+add wave -position end  sim:/spi_test_projektas/spi_controller_1/curr_state
+restart
+force -freeze sim:/spi_test_projektas/CLK 1 0, 0 {50 ps} -r 100
+run
+add wave -position end  sim:/spi_test_projektas/spi_controller_1/spi_tx_component/curr_state
+restart
+force -freeze sim:/spi_test_projektas/CLK 1 0, 0 {50 ps} -r 100
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+restart
+# Loading work.spi_tx(arc)
+force -freeze sim:/spi_test_projektas/CLK 1 0, 0 {50 ps} -r 100
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Test_projektas.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Test_projektas
+# -- Compiling architecture arc of SPI_Test_projektas
+restart
+# Loading work.spi_test_projektas(arc)
+force -freeze sim:/spi_test_projektas/CLK 1 0, 0 {50 ps} -r 100
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+restart
+# Loading work.spi_tx(arc)
+force -freeze sim:/spi_test_projektas/CLK 1 0, 0 {50 ps} -r 100
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(73): (vcom-1484) Unknown formal identifier "SPI_CS".
+# 
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(107): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Test_projektas.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Test_projektas
+# -- Compiling architecture arc of SPI_Test_projektas
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_TX
+# -- Compiling architecture arc of SPI_TX
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(73): (vcom-1484) Unknown formal identifier "SPI_CS".
+# 
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(107): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+restart
+# Loading work.spi_test_projektas(arc)
+# Loading work.spi_controller(arc)
+# Loading work.spi_tx(arc)
+force -freeze sim:/spi_test_projektas/CLK 1 0, 0 {50 ps} -r 100
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(68): near "0": expecting ';'
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(106): (vcom-1136) Unknown identifier "cs_up_counter".
+# 
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(106): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(108): Illegal target for signal assignment.
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(108): (vcom-1136) Unknown identifier "cs_up_counter".
+# 
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(110): Illegal target for signal assignment.
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(110): (vcom-1136) Unknown identifier "cs_up_counter".
+# 
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(110): (vcom-1136) Unknown identifier "cs_up_counter".
+# 
+# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd(116): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity SPI_Controller
+# -- Compiling architecture arc of SPI_Controller
+restart
+# Loading work.spi_controller(arc)
+force -freeze sim:/spi_test_projektas/CLK 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run

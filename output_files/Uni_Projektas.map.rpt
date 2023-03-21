@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Uni_Projektas
-Mon Mar 20 20:38:49 2023
+Tue Mar 21 11:04:10 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -76,7 +76,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 20 20:38:49 2023           ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 21 11:04:10 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
@@ -1157,7 +1157,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Mar 20 20:38:46 2023
+    Info: Processing started: Tue Mar 21 11:04:05 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file adc_manager.vhd
@@ -1217,20 +1217,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file spi_tes
 Info (12127): Elaborating entity "Uni_Projektas" for the top level hierarchy
 Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(16): used explicit default value for signal "ADC_SHDN" because signal was never assigned a value
 Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(18): used explicit default value for signal "ADC_CLK" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(21): used explicit default value for signal "ADC_DCLKB" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(22): used explicit default value for signal "ADC_DCLKA" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(26): used explicit default value for signal "ADC_SPI_SCLK" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(27): used explicit default value for signal "ADC_SPI_CS" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(36): used explicit default value for signal "MRAM_OUTPUT_EN" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(37): used explicit default value for signal "MRAM_A" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(38): used explicit default value for signal "MRAM_EN" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(39): used explicit default value for signal "MRAM_WRITE_EN" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(40): used explicit default value for signal "MRAM_UPPER_EN" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(41): used explicit default value for signal "MRAM_LOWER_EN" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(42): used explicit default value for signal "MRAM_D" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(163): used explicit default value for signal "func_ram_address_bus" because signal was never assigned a value
-Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(165): object "func_ram_out" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(218): object "UART_TX_SIG" assigned a value but never read
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(27): used explicit default value for signal "ADC_SPI_SCLK" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(28): used explicit default value for signal "ADC_SPI_CS" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(37): used explicit default value for signal "MRAM_OUTPUT_EN" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(38): used explicit default value for signal "MRAM_A" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(39): used explicit default value for signal "MRAM_EN" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(40): used explicit default value for signal "MRAM_WRITE_EN" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(41): used explicit default value for signal "MRAM_UPPER_EN" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(42): used explicit default value for signal "MRAM_LOWER_EN" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(43): used explicit default value for signal "MRAM_D" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(164): used explicit default value for signal "func_ram_address_bus" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(166): object "func_ram_out" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(219): object "UART_TX_SIG" assigned a value but never read
 Info (12128): Elaborating entity "ADC_ram_shifter" for hierarchy "ADC_ram_shifter:adc_ram_shifter_1"
 Info (12128): Elaborating entity "ADC_Manager" for hierarchy "ADC_Manager:ADC_Manager1"
 Info (12128): Elaborating entity "wizard_ram" for hierarchy "wizard_ram:wizard_ram_1"
@@ -1771,8 +1769,6 @@ Warning (13039): The following bidir pins have no drivers
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ADC_SHDN" is stuck at GND
     Warning (13410): Pin "ADC_CLK" is stuck at GND
-    Warning (13410): Pin "ADC_DCLKB" is stuck at GND
-    Warning (13410): Pin "ADC_DCLKA" is stuck at GND
     Warning (13410): Pin "ADC_SPI_SCLK" is stuck at GND
     Warning (13410): Pin "ADC_SPI_CS" is stuck at VCC
     Warning (13410): Pin "MRAM_OUTPUT_EN" is stuck at GND
@@ -1817,10 +1813,12 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (17049): 829 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 23 input pin(s) that do not drive logic
+Warning (21074): Design contains 25 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "BUTTON"
     Warning (15610): No output dependent on input pin "ADC_DORB"
     Warning (15610): No output dependent on input pin "ADC_DORA"
+    Warning (15610): No output dependent on input pin "ADC_DCLKB"
+    Warning (15610): No output dependent on input pin "ADC_DCLKA"
     Warning (15610): No output dependent on input pin "ADC_BIT_B[0]"
     Warning (15610): No output dependent on input pin "ADC_BIT_B[1]"
     Warning (15610): No output dependent on input pin "ADC_BIT_B[2]"
@@ -1842,14 +1840,14 @@ Warning (21074): Design contains 23 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADC_BIT_A[1]"
     Warning (15610): No output dependent on input pin "ADC_BIT_A[0]"
 Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 24 input pins
-    Info (21059): Implemented 46 output pins
+    Info (21058): Implemented 26 input pins
+    Info (21059): Implemented 44 output pins
     Info (21060): Implemented 5 bidirectional pins
     Info (21061): Implemented 25 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 497 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 495 warnings
     Info: Peak virtual memory: 4679 megabytes
-    Info: Processing ended: Mon Mar 20 20:38:49 2023
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Tue Mar 21 11:04:10 2023
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:03
 
 

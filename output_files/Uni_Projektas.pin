@@ -114,7 +114,7 @@ ADC_CLK                      : 47        : output : 3.3-V LVTTL       :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : 48        :        :                   :         : 4         :                
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                
-ADC_DCLKB                    : 51        : output : 3.3-V LVTTL       :         : 4         : Y              
+ADC_DCLKB                    : 51        : input  : 3.3-V LVTTL       :         : 4         : Y              
 ADC_DORB                     : 52        : input  : 3.3-V LVTTL       :         : 4         : Y              
 ADC_BIT_B[1]                 : 53        : input  : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : 54        : power  :                   : 3.3V    : 4         :                
@@ -149,7 +149,7 @@ nSTATUS                      : 82        :        :                   :         
 CONF_DONE                    : 83        :        :                   :         : 3         :                
 MSEL1                        : 84        :        :                   :         : 3         :                
 MSEL0                        : 85        :        :                   :         : 3         :                
-ADC_DCLKA                    : 86        : output : 3.3-V LVTTL       :         : 3         : Y              
+ADC_DCLKA                    : 86        : input  : 3.3-V LVTTL       :         : 3         : Y              
 ADC_SPI_SDIN                 : 87        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
 GND+                         : 88        :        :                   :         : 3         :                
 GND+                         : 89        :        :                   :         : 3         :                

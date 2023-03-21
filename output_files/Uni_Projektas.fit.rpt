@@ -1,5 +1,5 @@
 Fitter report for Uni_Projektas
-Mon Mar 20 20:39:40 2023
+Tue Mar 21 11:04:14 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Mar 20 20:39:40 2023           ;
+; Fitter Status                      ; Successful - Tue Mar 21 11:04:14 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
@@ -284,8 +284,8 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 ;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 24                  ; 0                              ;
-;     -- Output Ports                         ; 46                  ; 0                              ;
+;     -- Input Ports                          ; 26                  ; 0                              ;
+;     -- Output Ports                         ; 44                  ; 0                              ;
 ;     -- Bidir Ports                          ; 5                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Registered Ports                            ;                     ;                                ;
@@ -329,6 +329,8 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 ; ADC_BIT_B[7] ; 63    ; 4        ; 19           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ADC_BIT_B[8] ; 67    ; 4        ; 24           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ADC_BIT_B[9] ; 65    ; 4        ; 21           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_DCLKA    ; 86    ; 3        ; 28           ; 6            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_DCLKB    ; 51    ; 4        ; 7            ; 0            ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ADC_DORA     ; 81    ; 3        ; 28           ; 5            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ADC_DORB     ; 52    ; 4        ; 7            ; 0            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; BUTTON       ; 144   ; 2        ; 1            ; 14           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; On           ; 3.3-V LVTTL  ; Off         ; User                 ;
@@ -342,8 +344,6 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 ; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; ADC_CLK        ; 47    ; 4        ; 5            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; ADC_DCLKA      ; 86    ; 3        ; 28           ; 6            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; ADC_DCLKB      ; 51    ; 4        ; 7            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; ADC_SHDN       ; 24    ; 1        ; 0            ; 5            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; ADC_SPI_CS     ; 32    ; 1        ; 0            ; 2            ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; ADC_SPI_SCLK   ; 28    ; 1        ; 0            ; 4            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
@@ -470,7 +470,7 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 ; 48       ; 50         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP          ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; 49       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 50       ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 51       ; 52         ; 4        ; ADC_DCLKB                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 51       ; 52         ; 4        ; ADC_DCLKB                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 52       ; 53         ; 4        ; ADC_DORB                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 53       ; 57         ; 4        ; ADC_BIT_B[1]                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 54       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -505,7 +505,7 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 ; 83       ; 100        ; 3        ; ^CONF_DONE                               ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 84       ; 101        ; 3        ; ^MSEL1                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 85       ; 102        ; 3        ; ^MSEL0                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; 86       ; 103        ; 3        ; ADC_DCLKA                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; 86       ; 103        ; 3        ; ADC_DCLKA                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 87       ; 104        ; 3        ; ADC_SPI_SDIN                             ; bidir  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 88       ; 105        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 89       ; 106        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -634,8 +634,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ADC_CLK        ; Output   ; --            ; --            ; --                    ; --  ;
 ; ADC_DORB       ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; ADC_DORA       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; ADC_DCLKB      ; Output   ; --            ; --            ; --                    ; --  ;
-; ADC_DCLKA      ; Output   ; --            ; --            ; --                    ; --  ;
+; ADC_DCLKB      ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; ADC_DCLKA      ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; ADC_BIT_B[0]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; ADC_BIT_B[1]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; ADC_BIT_B[2]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
@@ -714,6 +714,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BUTTON              ;                   ;         ;
 ; ADC_DORB            ;                   ;         ;
 ; ADC_DORA            ;                   ;         ;
+; ADC_DCLKB           ;                   ;         ;
+; ADC_DCLKA           ;                   ;         ;
 ; ADC_BIT_B[0]        ;                   ;         ;
 ; ADC_BIT_B[1]        ;                   ;         ;
 ; ADC_BIT_B[2]        ;                   ;         ;
@@ -1060,9 +1062,9 @@ Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X13_Y14
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.41 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.34 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 51 output pins without output pin load capacitance assignment
+Warning (306006): Found 49 output pins without output pin load capacitance assignment
     Info (306007): Pin "ADC_SPI_SDIN" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "SPI_MOSI" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "SPI_MISO" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1071,8 +1073,6 @@ Warning (306006): Found 51 output pins without output pin load capacitance assig
     Info (306007): Pin "ADC_SHDN" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "ADC_SYNC" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "ADC_CLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "ADC_DCLKB" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "ADC_DCLKA" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "ADC_SPI_SCLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "ADC_SPI_CS" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "MRAM_OUTPUT_EN" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1126,8 +1126,8 @@ Warning (169064): Following 5 pins have no output enable or a GND or VCC output 
     Info (169065): Pin SPI_CS has a permanently disabled output enable
 Info (144001): Generated suppressed messages file C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/output_files/Uni_Projektas.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4800 megabytes
-    Info: Processing ended: Mon Mar 20 20:39:40 2023
+    Info: Peak virtual memory: 4802 megabytes
+    Info: Processing ended: Tue Mar 21 11:04:14 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

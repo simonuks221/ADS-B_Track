@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Uni_Projektas
-Mon Mar 20 20:39:43 2023
+Tue Mar 21 11:04:17 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -92,7 +92,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------+--------+--------------------------+
 ; SDC File Path     ; Status ; Read at                  ;
 +-------------------+--------+--------------------------+
-; Uni_Projektas.sdc ; OK     ; Mon Mar 20 20:39:42 2023 ;
+; Uni_Projektas.sdc ; OK     ; Tue Mar 21 11:04:17 2023 ;
 +-------------------+--------+--------------------------+
 
 
@@ -917,7 +917,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Mar 20 20:39:42 2023
+    Info: Processing started: Tue Mar 21 11:04:17 2023
 Info: Command: quartus_sta Uni_Projektas -c Uni_Projektas
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -964,8 +964,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4533 megabytes
-    Info: Processing ended: Mon Mar 20 20:39:43 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Tue Mar 21 11:04:17 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 
