@@ -4,6 +4,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|Uni_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ka21.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Uni_Projektas|big_ram_wizard:ram1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_hf52.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Uni_Projektas|wizard_ram:wizard_ram_1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_i0d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Uni_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_3c21.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Uni_Projektas|big_ram_wizard:ram2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_hf52.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Uni_Projektas|corr_func_rom_1:ram3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_he42.tdf"/>
 	</PROJECT>

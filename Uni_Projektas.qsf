@@ -51,7 +51,7 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS NOT_USED -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
 set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH Testbenchas -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
@@ -86,8 +86,6 @@ set_global_assignment -name SMART_RECOMPILE ON
 set_global_assignment -name AUTO_SHIFT_REGISTER_RECOGNITION ALWAYS
 set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
 set_global_assignment -name ENABLE_DRC_SETTINGS ON
-set_global_assignment -name EDA_TEST_BENCH_FILE Testbenchas.vhd -section_id Testbenchas
-set_global_assignment -name EDA_TEST_BENCH_FILE new_testbench.vhd -section_id new_testbench
 set_global_assignment -name VHDL_FILE Correlation_gate.vhd
 set_global_assignment -name VHDL_FILE UART_RX.vhd
 set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
@@ -180,4 +178,7 @@ set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS R
 set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "USE AS REGULAR IO"
 set_location_assignment PIN_144 -to BUTTON
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BUTTON
+set_global_assignment -name EDA_TEST_BENCH_FILE Testbenchas.vhd -section_id Testbenchas
+set_global_assignment -name EDA_TEST_BENCH_FILE new_testbench.vhd -section_id new_testbench
+set_global_assignment -name VHDL_FILE MRAM_Controller.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

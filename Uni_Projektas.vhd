@@ -14,11 +14,11 @@ port(
 	
 	--ADC SIGNALS
 	ADC_SHDN : out std_logic := '0'; --1 - ADC OFF, 0 - ADC ON
-	ADC_SYNC : out std_logic := '0';
+	ADC_SYNC : out std_logic := '0'; --Sinchronizacija tarp FPGA CLk ir ADC vidinio CLK
 	ADC_CLK : out std_logic := '0';
-	ADC_DORB : in std_logic := '0';
+	ADC_DORB : in std_logic := '0'; --Data over range
 	ADC_DORA : in std_logic := '0';
-	ADC_DCLKB : in std_logic := '0';
+	ADC_DCLKB : in std_logic := '0'; --Valid data on rising edge
 	ADC_DCLKA : in std_logic := '0';
 	ADC_BIT_B : in std_logic_vector(9 downto 0) := (others => '0');
 	ADC_BIT_A : in std_logic_vector(9 downto 0) := (others => '0');
@@ -40,7 +40,7 @@ port(
 	MRAM_WRITE_EN : out std_logic := '0';
 	MRAM_UPPER_EN : out std_logic := '0';
 	MRAM_LOWER_EN : out std_logic := '0';
-	MRAM_D : out std_logic_vector(15 downto 0) := (others => '0')
+	MRAM_D : inout std_logic_vector(15 downto 0) := (others => '0')
 	
 );
 end entity;
@@ -160,6 +160,21 @@ component corr_func_rom_1 IS
 	);
 END component;
 
+component SPI_Controller is 
+generic(
+	SEND_CLK_COUNTER_MAX : integer := 500;
+	BITS : integer := 16
+);
+port(
+	CLK : in std_logic;
+	SPI_MOSI : out std_logic;
+	SPI_SCLK : out std_logic;
+	SPI_CS : out std_logic;
+	SPI_send_data : std_logic_vector(BITS-1 downto 0) := (others => '0');
+	SPI_send_irq : std_logic := '0'
+);
+end component;
+
 --Function ram signals
 signal func_ram_address_bus : std_logic_vector(7 downto 0) := (others => '0');
 signal func_ram_en : std_logic := '0';
@@ -186,6 +201,8 @@ signal q_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 
 signal q : std_logic_vector(511 downto 0) := (others => '0');
 signal data : std_logic_vector(512 downto 0) := (others => '0');
+
+
 
 --Big ram for correlation function
 --signal address_a_3		: STD_LOGIC_VECTOR (2 DOWNTO 0);
@@ -222,7 +239,14 @@ signal data_ready_sig : std_logic := '0';
 
 signal shift_en : std_logic := '0';
 
+--SPI
+signal config_command_counter : integer range 0 to 100 := 0;
+signal ADC_SPI_send_data : std_logic_vector(16-1 downto 0) := (others => '0');
+signal ADC_SPI_send_irq : std_logic := '0';
+
 begin
+
+adc_spi_controller : SPI_Controller port map(CLK => CLK, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK, SPI_CS => ADC_SPI_CS, SPI_send_data => ADC_SPI_send_data, SPI_send_irq => ADC_SPI_Send_irq);
 
 adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => address_a_1, address_a_2 => address_a_2, address_b_1 => address_b_1,
 	address_b_2 => address_b_2,
@@ -252,7 +276,7 @@ ram3 : corr_func_rom_1 port map(clock => CLK, address_a => address_3_a, address_
 
 					
 --DATA_OUT <= RECEIVED_CODE;
-ADC_SYNC <= sync_clk;
+--ADC_SYNC <= sync_clk;
 
 q <= q_b_2 & q_a_2 & q_b_1 & q_a_1;
 data_a_1 <= data(128-1 downto 0);
@@ -260,15 +284,42 @@ data_b_1 <= data(128*2-1 downto 128*1);
 data_a_2 <= data(128*3-1 downto 128*2);
 data_b_2 <= data(128*4-1 downto 128*3);
 
-UART_CONTROLLER_DATA_IN <= "00" & RECEIVED_CODE;
+--UART_CONTROLLER_DATA_IN <= "00" & RECEIVED_CODE;
 
---Uart_rx_stuff : UART_RX port map(CLK => CLK, RX => UART_TX_SIG, DATA_OUT => data_out_sig, DATA_READY => data_ready_sig);
 
 UART_Controller_1 : UART_Controller generic map(baud_rate => baud_rate) port map(CLK => CLK,
 	SEND_DATA_IN => UART_CONTROLLER_DATA_IN,
 	SEND_DATA_IN_REQ => UART_CONTROLLER_DATA_REQ,
 	TX => UART_TX_SIG);
 	
---UART_TX <= UART_TX_SIG;
+
+--Registrai ADC
+--00h default
+--01h default
+--02h default
+--03h default
+--04h 05h default
+--06h default, testavimui 11000000
+
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		if(config_command_counter /= 100) then
+			config_command_counter <= config_command_counter + 1;
+			case config_command_counter is
+				when 1 =>
+					ADC_SPI_send_data <= "0000011011000000"; --test patternas i 06h registra
+					ADC_SPI_send_irq <= '1';
+				when 2 =>
+					ADC_SPI_send_irq <= '0';
+				when others =>
+					ADC_SPI_send_irq <= '0';
+			end case;
+		end if;
+		
+	end if;
+
+end process;
+
 
 end architecture;

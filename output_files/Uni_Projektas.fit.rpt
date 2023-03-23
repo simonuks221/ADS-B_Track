@@ -1,5 +1,5 @@
 Fitter report for Uni_Projektas
-Tue Mar 21 11:04:14 2023
+Tue Mar 21 12:56:48 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,34 +10,36 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Fitter Summary
   3. Fitter Settings
   4. Parallel Compilation
-  5. Incremental Compilation Preservation Summary
-  6. Incremental Compilation Partition Settings
-  7. Incremental Compilation Placement Preservation
-  8. Pin-Out File
-  9. Fitter Resource Usage Summary
- 10. Fitter Partition Statistics
- 11. Input Pins
- 12. Output Pins
- 13. Bidir Pins
- 14. I/O Bank Usage
- 15. All Package Pins
- 16. Output Pin Default Load For Reported TCO
- 17. Fitter Resource Utilization by Entity
- 18. Delay Chain Summary
- 19. Pad To Core Delay Chain Fanout
- 20. Control Signals
- 21. Global & Other Fast Signals
- 22. Non-Global High Fan-Out Signals
- 23. Other Routing Usage Summary
- 24. LAB Logic Elements
- 25. LAB-wide Signals
- 26. LAB Signals Sourced
- 27. LAB Signals Sourced Out
- 28. LAB Distinct Inputs
- 29. Fitter Device Options
- 30. Operating Settings and Conditions
- 31. Fitter Messages
- 32. Fitter Suppressed Messages
+  5. Fitter Netlist Optimizations
+  6. Incremental Compilation Preservation Summary
+  7. Incremental Compilation Partition Settings
+  8. Incremental Compilation Placement Preservation
+  9. Pin-Out File
+ 10. Fitter Resource Usage Summary
+ 11. Fitter Partition Statistics
+ 12. Input Pins
+ 13. Output Pins
+ 14. Bidir Pins
+ 15. I/O Bank Usage
+ 16. All Package Pins
+ 17. Output Pin Default Load For Reported TCO
+ 18. Fitter Resource Utilization by Entity
+ 19. Delay Chain Summary
+ 20. Pad To Core Delay Chain Fanout
+ 21. Control Signals
+ 22. Global & Other Fast Signals
+ 23. Non-Global High Fan-Out Signals
+ 24. Fitter RAM Summary
+ 25. Other Routing Usage Summary
+ 26. LAB Logic Elements
+ 27. LAB-wide Signals
+ 28. LAB Signals Sourced
+ 29. LAB Signals Sourced Out
+ 30. LAB Distinct Inputs
+ 31. Fitter Device Options
+ 32. Operating Settings and Conditions
+ 33. Fitter Messages
+ 34. Fitter Suppressed Messages
 
 
 
@@ -63,20 +65,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Mar 21 11:04:14 2023           ;
+; Fitter Status                      ; Successful - Tue Mar 21 12:56:48 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 25 / 4,608 ( < 1 % )                            ;
-;     Total combinational functions  ; 25 / 4,608 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 18 / 4,608 ( < 1 % )                            ;
-; Total registers                    ; 18                                              ;
+; Total logic elements               ; 140 / 4,608 ( 3 % )                             ;
+;     Total combinational functions  ; 122 / 4,608 ( 3 % )                             ;
+;     Dedicated logic registers      ; 95 / 4,608 ( 2 % )                              ;
+; Total registers                    ; 95                                              ;
 ; Total pins                         ; 75 / 89 ( 84 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
+; Total memory bits                  ; 256 / 119,808 ( < 1 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
 ; Total PLLs                         ; 0 / 2 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
@@ -144,14 +146,84 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                                 ;
++-------------------------------------------------------------------------------------+------------------+--------------------+---------------------+-----------+----------------+------------------+------------------+-----------------------+
+; Node                                                                                ; Action           ; Operation          ; Reason              ; Node Port ; Node Port Name ; Destination Node ; Destination Port ; Destination Port Name ;
++-------------------------------------------------------------------------------------+------------------+--------------------+---------------------+-----------+----------------+------------------+------------------+-----------------------+
+; SPI_Controller:adc_spi_controller|Add0~1                                            ; Modified         ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~2                    ; Modified         ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~15                   ; Modified         ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~1                    ; Modified         ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Equal0~0_OTERM71          ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Equal0~1_OTERM77          ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[0]_NEW78_RTM080 ; Modified         ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[0]_OTERM79      ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter~1             ; Modified         ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]                 ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]_OTERM1          ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]_OTERM3          ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]_OTERM5          ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]_OTERM7_OTERM73  ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]_OTERM7_OTERM75  ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[1]                 ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[1]_OTERM9          ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[1]_OTERM11         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[1]_OTERM13         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[2]                 ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[2]_OTERM15         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[2]_OTERM17         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[3]                 ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[3]_OTERM19         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[3]_OTERM21         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[4]                 ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[4]_OTERM23         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[4]_OTERM25         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[5]                 ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[5]_OTERM27         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[5]_OTERM29         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[6]                 ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[6]_OTERM31         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[6]_OTERM33         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[7]                 ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[7]_OTERM35         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[7]_OTERM37         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[8]                 ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[8]_OTERM39         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[8]_OTERM41         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[9]                 ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[9]_OTERM43         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[9]_OTERM45         ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[10]                ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[10]_OTERM47        ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[10]_OTERM49        ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[11]                ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[11]_OTERM51        ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[11]_OTERM53        ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[12]                ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[12]_OTERM55        ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[12]_OTERM57        ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[13]                ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[13]_OTERM59        ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[13]_OTERM61        ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[14]                ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[14]_OTERM63        ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[14]_OTERM65        ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[15]                ; Deleted          ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[15]_OTERM67        ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[15]_OTERM69        ; Retimed Register ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter~6                                   ; Modified         ; Physical Synthesis ; Timing optimization ;           ;                ;                  ;                  ;                       ;
++-------------------------------------------------------------------------------------+------------------+--------------------+---------------------+-----------+----------------+------------------+------------------+-----------------------+
+
+
 +----------------------------------------------+
 ; Incremental Compilation Preservation Summary ;
 +---------------------+------------------------+
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 121 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 121 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 311 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 311 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -174,7 +246,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 119     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 309     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 2       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -185,123 +257,124 @@ Parallel compilation was disabled, but you have multiple processors available. E
 The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/output_files/Uni_Projektas.pin.
 
 
-+--------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                      ;
-+---------------------------------------------+----------------------+
-; Resource                                    ; Usage                ;
-+---------------------------------------------+----------------------+
-; Total logic elements                        ; 25 / 4,608 ( < 1 % ) ;
-;     -- Combinational with no register       ; 7                    ;
-;     -- Register only                        ; 0                    ;
-;     -- Combinational with a register        ; 18                   ;
-;                                             ;                      ;
-; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 6                    ;
-;     -- 3 input functions                    ; 1                    ;
-;     -- <=2 input functions                  ; 18                   ;
-;     -- Register only                        ; 0                    ;
-;                                             ;                      ;
-; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 10                   ;
-;     -- arithmetic mode                      ; 15                   ;
-;                                             ;                      ;
-; Total registers*                            ; 18 / 4,851 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 18 / 4,608 ( < 1 % ) ;
-;     -- I/O registers                        ; 0 / 243 ( 0 % )      ;
-;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 2 / 288 ( < 1 % )    ;
-; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 75 / 89 ( 84 % )     ;
-;     -- Clock pins                           ; 1 / 4 ( 25 % )       ;
-;                                             ;                      ;
-; Global signals                              ; 1                    ;
-; M4Ks                                        ; 0 / 26 ( 0 % )       ;
-; Total block memory bits                     ; 0 / 119,808 ( 0 % )  ;
-; Total block memory implementation bits      ; 0 / 119,808 ( 0 % )  ;
-; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )       ;
-; PLLs                                        ; 0 / 2 ( 0 % )        ;
-; Global clocks                               ; 1 / 8 ( 13 % )       ;
-; JTAGs                                       ; 0 / 1 ( 0 % )        ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
-; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
-; Maximum fan-out                             ; 18                   ;
-; Highest non-global fan-out                  ; 4                    ;
-; Total fan-out                               ; 98                   ;
-; Average fan-out                             ; 0.81                 ;
-+---------------------------------------------+----------------------+
++-----------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                         ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+; Total logic elements                        ; 140 / 4,608 ( 3 % )     ;
+;     -- Combinational with no register       ; 45                      ;
+;     -- Register only                        ; 18                      ;
+;     -- Combinational with a register        ; 77                      ;
+;                                             ;                         ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 49                      ;
+;     -- 3 input functions                    ; 29                      ;
+;     -- <=2 input functions                  ; 44                      ;
+;     -- Register only                        ; 18                      ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 88                      ;
+;     -- arithmetic mode                      ; 34                      ;
+;                                             ;                         ;
+; Total registers*                            ; 95 / 4,851 ( 2 % )      ;
+;     -- Dedicated logic registers            ; 95 / 4,608 ( 2 % )      ;
+;     -- I/O registers                        ; 0 / 243 ( 0 % )         ;
+;                                             ;                         ;
+; Total LABs:  partially or completely used   ; 11 / 288 ( 4 % )        ;
+; Virtual pins                                ; 0                       ;
+; I/O pins                                    ; 75 / 89 ( 84 % )        ;
+;     -- Clock pins                           ; 1 / 4 ( 25 % )          ;
+;                                             ;                         ;
+; Global signals                              ; 1                       ;
+; M4Ks                                        ; 1 / 26 ( 4 % )          ;
+; Total block memory bits                     ; 256 / 119,808 ( < 1 % ) ;
+; Total block memory implementation bits      ; 4,608 / 119,808 ( 4 % ) ;
+; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )          ;
+; PLLs                                        ; 0 / 2 ( 0 % )           ;
+; Global clocks                               ; 1 / 8 ( 13 % )          ;
+; JTAGs                                       ; 0 / 1 ( 0 % )           ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )           ;
+; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%            ;
+; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%            ;
+; Maximum fan-out                             ; 97                      ;
+; Highest non-global fan-out                  ; 31                      ;
+; Total fan-out                               ; 660                     ;
+; Average fan-out                             ; 2.10                    ;
++---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+----------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                        ;
-+---------------------------------------------+---------------------+--------------------------------+
-; Statistic                                   ; Top                 ; hard_block:auto_generated_inst ;
-+---------------------------------------------+---------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low                 ; Low                            ;
-;                                             ;                     ;                                ;
-; Total logic elements                        ; 25 / 4608 ( < 1 % ) ; 0 / 4608 ( 0 % )               ;
-;     -- Combinational with no register       ; 7                   ; 0                              ;
-;     -- Register only                        ; 0                   ; 0                              ;
-;     -- Combinational with a register        ; 18                  ; 0                              ;
-;                                             ;                     ;                                ;
-; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 6                   ; 0                              ;
-;     -- 3 input functions                    ; 1                   ; 0                              ;
-;     -- <=2 input functions                  ; 18                  ; 0                              ;
-;     -- Register only                        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 10                  ; 0                              ;
-;     -- arithmetic mode                      ; 15                  ; 0                              ;
-;                                             ;                     ;                                ;
-; Total registers                             ; 18                  ; 0                              ;
-;     -- Dedicated logic registers            ; 18 / 4608 ( < 1 % ) ; 0 / 4608 ( 0 % )               ;
-;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 2 / 288 ( < 1 % )   ; 0 / 288 ( 0 % )                ;
-;                                             ;                     ;                                ;
-; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 75                  ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )      ; 0 / 26 ( 0 % )                 ;
-; Total memory bits                           ; 0                   ; 0                              ;
-; Total RAM block bits                        ; 0                   ; 0                              ;
-; Clock control block                         ; 1 / 10 ( 10 % )     ; 0 / 10 ( 0 % )                 ;
-;                                             ;                     ;                                ;
-; Connections                                 ;                     ;                                ;
-;     -- Input Connections                    ; 0                   ; 0                              ;
-;     -- Registered Input Connections         ; 0                   ; 0                              ;
-;     -- Output Connections                   ; 0                   ; 0                              ;
-;     -- Registered Output Connections        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 98                  ; 0                              ;
-;     -- Registered Connections               ; 37                  ; 0                              ;
-;                                             ;                     ;                                ;
-; External Connections                        ;                     ;                                ;
-;     -- Top                                  ; 0                   ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 26                  ; 0                              ;
-;     -- Output Ports                         ; 44                  ; 0                              ;
-;     -- Bidir Ports                          ; 5                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Registered Ports                            ;                     ;                                ;
-;     -- Registered Input Ports               ; 0                   ; 0                              ;
-;     -- Registered Output Ports              ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Port Connectivity                           ;                     ;                                ;
-;     -- Input Ports driven by GND            ; 0                   ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                   ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                   ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                   ; 0                              ;
-;     -- Input Ports with no Source           ; 0                   ; 0                              ;
-;     -- Output Ports with no Source          ; 0                   ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                   ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                   ; 0                              ;
-+---------------------------------------------+---------------------+--------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                       ;
++---------------------------------------------+--------------------+--------------------------------+
+; Statistic                                   ; Top                ; hard_block:auto_generated_inst ;
++---------------------------------------------+--------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                ; Low                            ;
+;                                             ;                    ;                                ;
+; Total logic elements                        ; 140 / 4608 ( 3 % ) ; 0 / 4608 ( 0 % )               ;
+;     -- Combinational with no register       ; 45                 ; 0                              ;
+;     -- Register only                        ; 18                 ; 0                              ;
+;     -- Combinational with a register        ; 77                 ; 0                              ;
+;                                             ;                    ;                                ;
+; Logic element usage by number of LUT inputs ;                    ;                                ;
+;     -- 4 input functions                    ; 49                 ; 0                              ;
+;     -- 3 input functions                    ; 29                 ; 0                              ;
+;     -- <=2 input functions                  ; 44                 ; 0                              ;
+;     -- Register only                        ; 18                 ; 0                              ;
+;                                             ;                    ;                                ;
+; Logic elements by mode                      ;                    ;                                ;
+;     -- normal mode                          ; 88                 ; 0                              ;
+;     -- arithmetic mode                      ; 34                 ; 0                              ;
+;                                             ;                    ;                                ;
+; Total registers                             ; 95                 ; 0                              ;
+;     -- Dedicated logic registers            ; 95 / 4608 ( 2 % )  ; 0 / 4608 ( 0 % )               ;
+;                                             ;                    ;                                ;
+; Total LABs:  partially or completely used   ; 11 / 288 ( 4 % )   ; 0 / 288 ( 0 % )                ;
+;                                             ;                    ;                                ;
+; Virtual pins                                ; 0                  ; 0                              ;
+; I/O pins                                    ; 75                 ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )     ; 0 / 26 ( 0 % )                 ;
+; Total memory bits                           ; 256                ; 0                              ;
+; Total RAM block bits                        ; 4608               ; 0                              ;
+; M4K                                         ; 1 / 26 ( 3 % )     ; 0 / 26 ( 0 % )                 ;
+; Clock control block                         ; 1 / 10 ( 10 % )    ; 0 / 10 ( 0 % )                 ;
+;                                             ;                    ;                                ;
+; Connections                                 ;                    ;                                ;
+;     -- Input Connections                    ; 0                  ; 0                              ;
+;     -- Registered Input Connections         ; 0                  ; 0                              ;
+;     -- Output Connections                   ; 0                  ; 0                              ;
+;     -- Registered Output Connections        ; 0                  ; 0                              ;
+;                                             ;                    ;                                ;
+; Internal Connections                        ;                    ;                                ;
+;     -- Total Connections                    ; 676                ; 0                              ;
+;     -- Registered Connections               ; 278                ; 0                              ;
+;                                             ;                    ;                                ;
+; External Connections                        ;                    ;                                ;
+;     -- Top                                  ; 0                  ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                  ; 0                              ;
+;                                             ;                    ;                                ;
+; Partition Interface                         ;                    ;                                ;
+;     -- Input Ports                          ; 26                 ; 0                              ;
+;     -- Output Ports                         ; 44                 ; 0                              ;
+;     -- Bidir Ports                          ; 5                  ; 0                              ;
+;                                             ;                    ;                                ;
+; Registered Ports                            ;                    ;                                ;
+;     -- Registered Input Ports               ; 0                  ; 0                              ;
+;     -- Registered Output Ports              ; 0                  ; 0                              ;
+;                                             ;                    ;                                ;
+; Port Connectivity                           ;                    ;                                ;
+;     -- Input Ports driven by GND            ; 0                  ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                  ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                  ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                  ; 0                              ;
+;     -- Input Ports with no Source           ; 0                  ; 0                              ;
+;     -- Output Ports with no Source          ; 0                  ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                  ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                  ; 0                              ;
++---------------------------------------------+--------------------+--------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -345,8 +418,8 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 +----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; ADC_CLK        ; 47    ; 4        ; 5            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; ADC_SHDN       ; 24    ; 1        ; 0            ; 5            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; ADC_SPI_CS     ; 32    ; 1        ; 0            ; 2            ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; ADC_SPI_SCLK   ; 28    ; 1        ; 0            ; 4            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ADC_SPI_CS     ; 26    ; 1        ; 0            ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; ADC_SPI_SCLK   ; 25    ; 1        ; 0            ; 5            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; ADC_SYNC       ; 45    ; 4        ; 3            ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; MRAM_A[0]      ; 113   ; 2        ; 26           ; 14           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; MRAM_A[10]     ; 9     ; 1        ; 0            ; 11           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
@@ -367,9 +440,9 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 ; MRAM_A[8]      ; 139   ; 2        ; 3            ; 14           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; MRAM_A[9]      ; 141   ; 2        ; 1            ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; MRAM_D[0]      ; 120   ; 2        ; 19           ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; MRAM_D[10]     ; 30    ; 1        ; 0            ; 2            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MRAM_D[10]     ; 32    ; 1        ; 0            ; 2            ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; MRAM_D[11]     ; 92    ; 3        ; 28           ; 8            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; MRAM_D[12]     ; 25    ; 1        ; 0            ; 5            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MRAM_D[12]     ; 28    ; 1        ; 0            ; 4            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; MRAM_D[13]     ; 94    ; 3        ; 28           ; 9            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; MRAM_D[14]     ; 93    ; 3        ; 28           ; 8            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; MRAM_D[15]     ; 96    ; 3        ; 28           ; 9            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
@@ -395,7 +468,7 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------------+------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------------+------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; ADC_SPI_SDIN ; 87    ; 3        ; 28           ; 6            ; 0           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; ADC_SPI_SDIN ; 87    ; 3        ; 28           ; 6            ; 0           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; SPI_CS       ; 44    ; 4        ; 3            ; 0            ; 1           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; SPI_MISO     ; 40    ; 4        ; 1            ; 0            ; 2           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; SPI_MOSI     ; 41    ; 4        ; 1            ; 0            ; 1           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
@@ -444,14 +517,14 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 ; 22       ; 24         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 23       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 24       ; 25         ; 1        ; ADC_SHDN                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; 25       ; 26         ; 1        ; MRAM_D[12]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 26       ; 27         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP          ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; 25       ; 26         ; 1        ; ADC_SPI_SCLK                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 26       ; 27         ; 1        ; ADC_SPI_CS                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 27       ; 28         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP          ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 28       ; 32         ; 1        ; ADC_SPI_SCLK                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 28       ; 32         ; 1        ; MRAM_D[12]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 29       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 30       ; 40         ; 1        ; MRAM_D[10]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 30       ; 40         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP          ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; 31       ; 41         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP          ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 32       ; 42         ; 1        ; ADC_SPI_CS                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 32       ; 42         ; 1        ; MRAM_D[10]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 33       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 34       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 35       ;            ;          ; VCCD_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -605,16 +678,25 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                   ;
-+----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node             ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                             ; Library Name ;
-+----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------+--------------+
-; |UNI_Projektas                         ; 25 (0)      ; 18 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 75   ; 0            ; 7 (0)        ; 0 (0)             ; 18 (0)           ; |UNI_Projektas                                                                  ; work         ;
-;    |Clock_divider:clock_divider1|      ; 24 (24)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 17 (17)          ; |UNI_Projektas|Clock_divider:clock_divider1                                     ; work         ;
-;    |UART_Controller:UART_Controller_1| ; 1 (0)       ; 1 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; |UNI_Projektas|UART_Controller:UART_Controller_1                                ; work         ;
-;       |Clock_divider:uart_clk_divider| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |UNI_Projektas|UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider ; work         ;
-+----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++----------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                         ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                                                                                        ; Library Name ;
++----------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |UNI_Projektas                                     ; 140 (14)    ; 95 (9)                    ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 75   ; 0            ; 45 (5)       ; 18 (0)            ; 77 (9)           ; |UNI_Projektas                                                                                                                                                                                             ; work         ;
+;    |SPI_Controller:adc_spi_controller|             ; 126 (30)    ; 86 (16)                   ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 40 (14)      ; 18 (0)            ; 68 (16)          ; |UNI_Projektas|SPI_Controller:adc_spi_controller                                                                                                                                                           ; work         ;
+;       |SPI_TX:spi_tx_component|                    ; 75 (75)     ; 56 (56)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 18 (18)           ; 38 (38)          ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component                                                                                                                                   ; work         ;
+;       |wizard_spi_fifo:spi_fifo_component|         ; 21 (0)      ; 14 (0)                    ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 14 (0)           ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component                                                                                                                        ; work         ;
+;          |scfifo:scfifo_component|                 ; 21 (0)      ; 14 (0)                    ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 14 (0)           ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component                                                                                                ; work         ;
+;             |scfifo_3c21:auto_generated|           ; 21 (0)      ; 14 (0)                    ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 14 (0)           ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated                                                                     ; work         ;
+;                |a_dpfifo_ai21:dpfifo|              ; 21 (2)      ; 14 (0)                    ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (2)        ; 0 (0)             ; 14 (0)           ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo                                                ; work         ;
+;                   |a_fefifo_76e:fifo_state|        ; 11 (7)      ; 6 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 6 (2)            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state                        ; work         ;
+;                      |cntr_pj7:count_usedw|        ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw   ; work         ;
+;                   |cntr_djb:rd_ptr_count|          ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count                          ; work         ;
+;                   |cntr_djb:wr_ptr|                ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr                                ; work         ;
+;                   |dpram_bv01:FIFOram|             ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram                             ; work         ;
+;                      |altsyncram_0vj1:altsyncram1| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1 ; work         ;
++----------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -623,11 +705,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+----------+---------------+---------------+-----------------------+-----+
 ; Name           ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +----------------+----------+---------------+---------------+-----------------------+-----+
-; ADC_SPI_SDIN   ; Bidir    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; SPI_MOSI       ; Bidir    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; SPI_MISO       ; Bidir    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; SPI_SCLK       ; Bidir    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; SPI_CS         ; Bidir    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; ADC_SPI_SDIN   ; Bidir    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; BUTTON         ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; ADC_SHDN       ; Output   ; --            ; --            ; --                    ; --  ;
 ; ADC_SYNC       ; Output   ; --            ; --            ; --                    ; --  ;
@@ -706,11 +788,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
-; ADC_SPI_SDIN        ;                   ;         ;
 ; SPI_MOSI            ;                   ;         ;
 ; SPI_MISO            ;                   ;         ;
 ; SPI_SCLK            ;                   ;         ;
 ; SPI_CS              ;                   ;         ;
+; ADC_SPI_SDIN        ;                   ;         ;
 ; BUTTON              ;                   ;         ;
 ; ADC_DORB            ;                   ;         ;
 ; ADC_DORA            ;                   ;         ;
@@ -740,13 +822,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                  ;
-+------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
-; Name ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
-; CLK  ; PIN_17   ; 18      ; Clock ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-+------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                                                                                                                               ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                                                                                                                     ; Location          ; Fan-Out ; Usage                                 ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
+; CLK                                                                                                                                                                      ; PIN_17            ; 96      ; Clock                                 ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; Equal0~1                                                                                                                                                                 ; LCCOMB_X10_Y5_N8  ; 8       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state                                                                                                     ; LCFF_X13_Y5_N29   ; 20      ; Clock enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[14]~16                                                                                                  ; LCCOMB_X12_Y6_N12 ; 31      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|curr_state.cs_up                                                                                                                       ; LCFF_X8_Y6_N31    ; 15      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|_~0 ; LCCOMB_X9_Y6_N0   ; 4       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_rreq                  ; LCCOMB_X9_Y6_N2   ; 5       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_wreq                  ; LCCOMB_X9_Y6_N28  ; 8       ; Clock enable, Write enable            ; no     ; --                   ; --               ; --                        ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -754,213 +843,425 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+----------------------+------------------+---------------------------+
-; CLK  ; PIN_17   ; 18      ; Global Clock         ; GCLK2            ; --                        ;
+; CLK  ; PIN_17   ; 96      ; Global Clock         ; GCLK2            ; --                        ;
 +------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                                                 ;
-+---------------------------------------------------------------------------------------+---------+
-; Name                                                                                  ; Fan-Out ;
-+---------------------------------------------------------------------------------------+---------+
-; Clock_divider:clock_divider1|counter[2]                                               ; 4       ;
-; Clock_divider:clock_divider1|counter[0]                                               ; 3       ;
-; Clock_divider:clock_divider1|LessThan0~4                                              ; 3       ;
-; Clock_divider:clock_divider1|counter[15]                                              ; 2       ;
-; Clock_divider:clock_divider1|counter[1]                                               ; 2       ;
-; Clock_divider:clock_divider1|counter[3]                                               ; 2       ;
-; Clock_divider:clock_divider1|counter[4]                                               ; 2       ;
-; Clock_divider:clock_divider1|counter[5]                                               ; 2       ;
-; Clock_divider:clock_divider1|counter[6]                                               ; 2       ;
-; Clock_divider:clock_divider1|counter[7]                                               ; 2       ;
-; Clock_divider:clock_divider1|counter[8]                                               ; 2       ;
-; Clock_divider:clock_divider1|counter[9]                                               ; 2       ;
-; Clock_divider:clock_divider1|counter[10]                                              ; 2       ;
-; Clock_divider:clock_divider1|counter[11]                                              ; 2       ;
-; Clock_divider:clock_divider1|counter[12]                                              ; 2       ;
-; Clock_divider:clock_divider1|counter[13]                                              ; 2       ;
-; Clock_divider:clock_divider1|counter[14]                                              ; 2       ;
-; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[0]~feeder ; 1       ;
-; Clock_divider:clock_divider1|counter~1                                                ; 1       ;
-; Clock_divider:clock_divider1|counter~0                                                ; 1       ;
-; Clock_divider:clock_divider1|LessThan0~5                                              ; 1       ;
-; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|half_clock[0]        ; 1       ;
-; Clock_divider:clock_divider1|LessThan0~3                                              ; 1       ;
-; Clock_divider:clock_divider1|LessThan0~2                                              ; 1       ;
-; Clock_divider:clock_divider1|LessThan0~1                                              ; 1       ;
-; Clock_divider:clock_divider1|LessThan0~0                                              ; 1       ;
-; Clock_divider:clock_divider1|clock_out                                                ; 1       ;
-; Clock_divider:clock_divider1|Add1~30                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~29                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~28                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~27                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~26                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~25                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~24                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~23                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~22                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~21                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~20                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~19                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~18                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~17                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~16                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~15                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~14                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~13                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~12                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~11                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~10                                                  ; 1       ;
-; Clock_divider:clock_divider1|Add1~9                                                   ; 1       ;
-; Clock_divider:clock_divider1|Add1~8                                                   ; 1       ;
-; Clock_divider:clock_divider1|Add1~7                                                   ; 1       ;
-; Clock_divider:clock_divider1|Add1~6                                                   ; 1       ;
-; Clock_divider:clock_divider1|Add1~5                                                   ; 1       ;
-; Clock_divider:clock_divider1|Add1~4                                                   ; 1       ;
-; Clock_divider:clock_divider1|Add1~3                                                   ; 1       ;
-; Clock_divider:clock_divider1|Add1~2                                                   ; 1       ;
-; Clock_divider:clock_divider1|Add1~1                                                   ; 1       ;
-; Clock_divider:clock_divider1|Add1~0                                                   ; 1       ;
-+---------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                                                                                                                                             ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Name                                                                                                                                                                                                              ; Fan-Out ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[14]~16                                                                                                                                           ; 31      ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state                                                                                                                                              ; 20      ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[1]_OTERM9                                                                                                                                        ; 15      ;
+; SPI_Controller:adc_spi_controller|curr_state.cs_up                                                                                                                                                                ; 15      ;
+; ~GND                                                                                                                                                                                                              ; 12      ;
+; SPI_Controller:adc_spi_controller|cs_up_counter[8]                                                                                                                                                                ; 10      ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[8]                                                                                                                                          ; 10      ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Equal0~1_OTERM77                                                                                                                                        ; 9       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Equal0~0_OTERM71                                                                                                                                        ; 9       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_wreq                                                           ; 9       ;
+; SPI_Controller:adc_spi_controller|Equal0~1                                                                                                                                                                        ; 9       ;
+; SPI_Controller:adc_spi_controller|Equal0~0                                                                                                                                                                        ; 9       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|sclk                                                                                                                                                    ; 9       ;
+; Equal0~1                                                                                                                                                                                                          ; 8       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_non_empty                                  ; 8       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Equal0~2                                                                                                                                                ; 8       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[4]                                                                                                                                            ; 7       ;
+; SPI_Controller:adc_spi_controller|fifo_rdreq                                                                                                                                                                      ; 6       ;
+; ADC_SPI_send_data[10]                                                                                                                                                                                             ; 5       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_rreq                                                           ; 5       ;
+; ADC_SPI_send_irq                                                                                                                                                                                                  ; 5       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|process_0~0                                                                                                                                             ; 5       ;
+; SPI_Controller:adc_spi_controller|curr_state.reading_fifo                                                                                                                                                         ; 5       ;
+; config_command_counter[0]                                                                                                                                                                                         ; 4       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|_~0                                          ; 4       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_full                                       ; 4       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~0                                                                                                                                                  ; 4       ;
+; SPI_Controller:adc_spi_controller|tx_send_irq                                                                                                                                                                     ; 4       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|process_0~1                                                                                                                                             ; 3       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter[0]                                                                                                                                                                ; 3       ;
+; SPI_Controller:adc_spi_controller|Selector6~1                                                                                                                                                                     ; 3       ;
+; SPI_Controller:adc_spi_controller|Selector6~0                                                                                                                                                                     ; 3       ;
+; SPI_Controller:adc_spi_controller|curr_state.idle                                                                                                                                                                 ; 3       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|SPI_MOSI~0                                                                                                                                              ; 3       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[1]                                                                                                                                            ; 3       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[2]                                                                                                                                            ; 3       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[3]                                                                                                                                            ; 3       ;
+; SPI_Controller:adc_spi_controller|curr_state.transmiting                                                                                                                                                          ; 3       ;
+; config_command_counter[6]                                                                                                                                                                                         ; 3       ;
+; config_command_counter[5]                                                                                                                                                                                         ; 3       ;
+; config_command_counter[2]                                                                                                                                                                                         ; 3       ;
+; config_command_counter[4]                                                                                                                                                                                         ; 3       ;
+; config_command_counter[3]                                                                                                                                                                                         ; 3       ;
+; config_command_counter[1]                                                                                                                                                                                         ; 3       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[0]               ; 3       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[1]               ; 3       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[2]               ; 3       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[3]               ; 3       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[0]                                                                                                                                            ; 3       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|SEND_DONE                                                                                                                                               ; 3       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]_OTERM3                                                                                                                                        ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]~32                                                                                                                                            ; 2       ;
+; Mux16~1                                                                                                                                                                                                           ; 2       ;
+; SPI_Controller:adc_spi_controller|Equal0~2                                                                                                                                                                        ; 2       ;
+; SPI_Controller:adc_spi_controller|Selector6~2                                                                                                                                                                     ; 2       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter[7]                                                                                                                                                                ; 2       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter[6]                                                                                                                                                                ; 2       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter[5]                                                                                                                                                                ; 2       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter[1]                                                                                                                                                                ; 2       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter[3]                                                                                                                                                                ; 2       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter[2]                                                                                                                                                                ; 2       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter[4]                                                                                                                                                                ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter~6                                                                                                                                           ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter~5                                                                                                                                           ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter~4                                                                                                                                           ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter~3                                                                                                                                           ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter~1                                                                                                                                           ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter~0                                                                                                                                           ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[0]                                                                                                                                          ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_CS                                                                                                                                                                          ; 2       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count|safe_q[3]                                      ; 2       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count|safe_q[2]                                      ; 2       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count|safe_q[1]                                      ; 2       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count|safe_q[0]                                      ; 2       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|safe_q[3]                                            ; 2       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|safe_q[2]                                            ; 2       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|safe_q[1]                                            ; 2       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|safe_q[0]                                            ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|SPI_MOSI                                                                                                                                                ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~6                                                                                                                                                  ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~2                                                                                                                                                  ; 2       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[0]_OTERM79                                                                                                                                    ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]_OTERM7_OTERM75                                                                                                                                ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]_OTERM7_OTERM73                                                                                                                                ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[15]_OTERM69                                                                                                                                      ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[15]_OTERM67                                                                                                                                      ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[14]_OTERM65                                                                                                                                      ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[14]_OTERM63                                                                                                                                      ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[13]_OTERM61                                                                                                                                      ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[13]_OTERM59                                                                                                                                      ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[12]_OTERM57                                                                                                                                      ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[12]_OTERM55                                                                                                                                      ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[11]_OTERM53                                                                                                                                      ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[11]_OTERM51                                                                                                                                      ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[10]_OTERM49                                                                                                                                      ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[10]_OTERM47                                                                                                                                      ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[9]_OTERM45                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[9]_OTERM43                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[8]_OTERM41                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[8]_OTERM39                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[7]_OTERM37                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[7]_OTERM35                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[6]_OTERM33                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[6]_OTERM31                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[5]_OTERM29                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[5]_OTERM27                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[4]_OTERM25                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[4]_OTERM23                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[3]_OTERM21                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[3]_OTERM19                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[2]_OTERM17                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[2]_OTERM15                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[1]_OTERM13                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[1]_OTERM11                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]_OTERM5                                                                                                                                        ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]_OTERM1                                                                                                                                        ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[0]~31                                                                                                                                            ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|SPI_MOSI~2                                                                                                                                              ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~30                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~29                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~28                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~27                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~26                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~25                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~24                                                                                                                                               ; 1       ;
+; ADC_SPI_send_data[10]~0                                                                                                                                                                                           ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~23                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~22                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~21                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~20                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~19                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~18                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~17                                                                                                                                               ; 1       ;
+; config_command_counter[0]~6                                                                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~15                                                                                                                                               ; 1       ;
+; SPI_Controller:adc_spi_controller|Selector2~0                                                                                                                                                                     ; 1       ;
+; ADC_SPI_send_irq~0                                                                                                                                                                                                ; 1       ;
+; Equal0~0                                                                                                                                                                                                          ; 1       ;
+; Mux16~0                                                                                                                                                                                                           ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_full~2                                     ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_full~1                                     ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_full~0                                     ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|SPI_MOSI~1                                                                                                                                              ; 1       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter~6                                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter~5                                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter~4                                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter~3                                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter~2                                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter~1                                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|cs_up_counter~0                                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_non_empty~2                                ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_non_empty~1                                ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_non_empty~0                                ; 1       ;
+; SPI_Controller:adc_spi_controller|Selector3~0                                                                                                                                                                     ; 1       ;
+; SPI_Controller:adc_spi_controller|Selector1~0                                                                                                                                                                     ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~15                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~14                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~13                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~12                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~11                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|Selector6~3                                                                                                                                                                     ; 1       ;
+; SPI_Controller:adc_spi_controller|Selector4~0                                                                                                                                                                     ; 1       ;
+; SPI_Controller:adc_spi_controller|Selector5~0                                                                                                                                                                     ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|SEND_DONE~0                                                                                                                                             ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter~2                                                                                                                                           ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state~0                                                                                                                                            ; 1       ;
+; SPI_Controller:adc_spi_controller|Selector0~1                                                                                                                                                                     ; 1       ;
+; SPI_Controller:adc_spi_controller|Selector0~0                                                                                                                                                                     ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|sclk~0                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Equal0~1                                                                                                                                                ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[7]                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[6]                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[5]                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[4]                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Equal0~0                                                                                                                                                ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[3]                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[1]                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[2]                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[9]                ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[10]               ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[11]               ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[12]               ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[13]               ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[14]               ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[15]               ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[1]                ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[2]                ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[3]                ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[4]                ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[5]                ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[6]                ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[7]                ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[8]                ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|q_b[0]                ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count|counter_comb_bita3                             ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count|counter_comb_bita2~COUT                        ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count|counter_comb_bita2                             ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count|counter_comb_bita1~COUT                        ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count|counter_comb_bita1                             ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count|counter_comb_bita0~COUT                        ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count|counter_comb_bita0                             ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|counter_comb_bita3                                   ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|counter_comb_bita2~COUT                              ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|counter_comb_bita2                                   ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|counter_comb_bita1~COUT                              ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|counter_comb_bita1                                   ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|counter_comb_bita0~COUT                              ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|counter_comb_bita0                                   ; 1       ;
+; config_command_counter[6]~17                                                                                                                                                                                      ; 1       ;
+; config_command_counter[5]~16                                                                                                                                                                                      ; 1       ;
+; config_command_counter[5]~15                                                                                                                                                                                      ; 1       ;
+; config_command_counter[4]~14                                                                                                                                                                                      ; 1       ;
+; config_command_counter[4]~13                                                                                                                                                                                      ; 1       ;
+; config_command_counter[3]~12                                                                                                                                                                                      ; 1       ;
+; config_command_counter[3]~11                                                                                                                                                                                      ; 1       ;
+; config_command_counter[2]~10                                                                                                                                                                                      ; 1       ;
+; config_command_counter[2]~9                                                                                                                                                                                       ; 1       ;
+; config_command_counter[1]~8                                                                                                                                                                                       ; 1       ;
+; config_command_counter[1]~7                                                                                                                                                                                       ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|counter_comb_bita3      ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|counter_comb_bita2~COUT ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|counter_comb_bita2      ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|counter_comb_bita1~COUT ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|counter_comb_bita1      ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|counter_comb_bita0~COUT ; 1       ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|counter_comb_bita0      ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~16                                                                                                                                                                         ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~15                                                                                                                                                                         ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~14                                                                                                                                                                         ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~13                                                                                                                                                                         ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~12                                                                                                                                                                         ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~11                                                                                                                                                                         ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~10                                                                                                                                                                         ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~9                                                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~8                                                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~7                                                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~6                                                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~5                                                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~4                                                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~3                                                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~2                                                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|Add0~1                                                                                                                                                                          ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~9                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~8                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~7                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~6                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~5                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~4                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~3                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add0~2                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~16                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~15                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~14                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~13                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~12                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~11                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~10                                                                                                                                                 ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~9                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~8                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~7                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~5                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~4                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~3                                                                                                                                                  ; 1       ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Add1~1                                                                                                                                                  ; 1       ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Other Routing Usage Summary                         ;
-+-----------------------------+-----------------------+
-; Other Routing Resource Type ; Usage                 ;
-+-----------------------------+-----------------------+
-; Block interconnects         ; 20 / 15,666 ( < 1 % ) ;
-; C16 interconnects           ; 0 / 812 ( 0 % )       ;
-; C4 interconnects            ; 3 / 11,424 ( < 1 % )  ;
-; Direct links                ; 16 / 15,666 ( < 1 % ) ;
-; Global clocks               ; 1 / 8 ( 13 % )        ;
-; Local interconnects         ; 21 / 4,608 ( < 1 % )  ;
-; R24 interconnects           ; 0 / 652 ( 0 % )       ;
-; R4 interconnects            ; 3 / 13,328 ( < 1 % )  ;
-+-----------------------------+-----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+------------+----------------------+-----------------+-----------------+
+; Name                                                                                                                                                                                                   ; Type ; Mode             ; Clock Mode  ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF  ; Location   ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+------------+----------------------+-----------------+-----------------+
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Dual Clocks ; 16           ; 16           ; 16           ; 16           ; yes                    ; no                      ; yes                    ; no                      ; 256  ; 16                          ; 16                          ; 16                          ; 16                          ; 256                 ; 1    ; None ; M4K_X11_Y6 ; Don't care           ; Don't care      ; Don't care      ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+------------+----------------------+-----------------+-----------------+
+Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
-+---------------------------------------------------------------------------+
-; LAB Logic Elements                                                        ;
-+---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 12.50) ; Number of LABs  (Total = 2) ;
-+---------------------------------------------+-----------------------------+
-; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 1                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 1                           ;
-+---------------------------------------------+-----------------------------+
-
-
-+------------------------------------------------------------------+
-; LAB-wide Signals                                                 ;
-+------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 2) ;
-+------------------------------------+-----------------------------+
-; 1 Clock                            ; 2                           ;
-+------------------------------------+-----------------------------+
++------------------------------------------------------+
+; Other Routing Usage Summary                          ;
++-----------------------------+------------------------+
+; Other Routing Resource Type ; Usage                  ;
++-----------------------------+------------------------+
+; Block interconnects         ; 104 / 15,666 ( < 1 % ) ;
+; C16 interconnects           ; 0 / 812 ( 0 % )        ;
+; C4 interconnects            ; 6 / 11,424 ( < 1 % )   ;
+; Direct links                ; 53 / 15,666 ( < 1 % )  ;
+; Global clocks               ; 1 / 8 ( 13 % )         ;
+; Local interconnects         ; 104 / 4,608 ( 2 % )    ;
+; R24 interconnects           ; 0 / 652 ( 0 % )        ;
+; R4 interconnects            ; 35 / 13,328 ( < 1 % )  ;
++-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
-; LAB Signals Sourced                                                        ;
-+----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 21.50) ; Number of LABs  (Total = 2) ;
-+----------------------------------------------+-----------------------------+
-; 0                                            ; 0                           ;
-; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
-; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
-; 7                                            ; 0                           ;
-; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
-; 10                                           ; 0                           ;
-; 11                                           ; 0                           ;
-; 12                                           ; 0                           ;
-; 13                                           ; 1                           ;
-; 14                                           ; 0                           ;
-; 15                                           ; 0                           ;
-; 16                                           ; 0                           ;
-; 17                                           ; 0                           ;
-; 18                                           ; 0                           ;
-; 19                                           ; 0                           ;
-; 20                                           ; 0                           ;
-; 21                                           ; 0                           ;
-; 22                                           ; 0                           ;
-; 23                                           ; 0                           ;
-; 24                                           ; 0                           ;
-; 25                                           ; 0                           ;
-; 26                                           ; 0                           ;
-; 27                                           ; 0                           ;
-; 28                                           ; 0                           ;
-; 29                                           ; 0                           ;
-; 30                                           ; 1                           ;
-+----------------------------------------------+-----------------------------+
+; LAB Logic Elements                                                         ;
++---------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 12.73) ; Number of LABs  (Total = 11) ;
++---------------------------------------------+------------------------------+
+; 1                                           ; 0                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 2                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 3                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 4                            ;
++---------------------------------------------+------------------------------+
 
 
-+-------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                       ;
-+-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 9.50) ; Number of LABs  (Total = 2) ;
-+-------------------------------------------------+-----------------------------+
-; 0                                               ; 0                           ;
-; 1                                               ; 0                           ;
-; 2                                               ; 0                           ;
-; 3                                               ; 1                           ;
-; 4                                               ; 0                           ;
-; 5                                               ; 0                           ;
-; 6                                               ; 0                           ;
-; 7                                               ; 0                           ;
-; 8                                               ; 0                           ;
-; 9                                               ; 0                           ;
-; 10                                              ; 0                           ;
-; 11                                              ; 0                           ;
-; 12                                              ; 0                           ;
-; 13                                              ; 0                           ;
-; 14                                              ; 0                           ;
-; 15                                              ; 0                           ;
-; 16                                              ; 1                           ;
-+-------------------------------------------------+-----------------------------+
++-------------------------------------------------------------------+
+; LAB-wide Signals                                                  ;
++------------------------------------+------------------------------+
+; LAB-wide Signals  (Average = 1.45) ; Number of LABs  (Total = 11) ;
++------------------------------------+------------------------------+
+; 1 Clock                            ; 11                           ;
+; 1 Clock enable                     ; 4                            ;
+; 2 Clock enables                    ; 1                            ;
++------------------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Signals Sourced  (Average = 21.09) ; Number of LABs  (Total = 11) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 0                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 0                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 2                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 1                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 1                            ;
++----------------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 5.45) ; Number of LABs  (Total = 11) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 0                            ;
+; 1                                               ; 0                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 0                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 3                            ;
+; 7                                               ; 2                            ;
+; 8                                               ; 2                            ;
++-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
-+----------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 10.00) ; Number of LABs  (Total = 2) ;
-+----------------------------------------------+-----------------------------+
-; 0                                            ; 0                           ;
-; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
-; 3                                            ; 1                           ;
-; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
-; 7                                            ; 0                           ;
-; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
-; 10                                           ; 0                           ;
-; 11                                           ; 0                           ;
-; 12                                           ; 0                           ;
-; 13                                           ; 0                           ;
-; 14                                           ; 0                           ;
-; 15                                           ; 0                           ;
-; 16                                           ; 0                           ;
-; 17                                           ; 1                           ;
-+----------------------------------------------+-----------------------------+
++---------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 7.45) ; Number of LABs  (Total = 11) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 1                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 2                            ;
+; 4                                           ; 2                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 2                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 0                            ;
+; 17                                          ; 2                            ;
++---------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------------+
@@ -1008,6 +1309,7 @@ Info (176444): Device migration not selected. If you intend to use device migrat
 Info (169124): Fitter converted 2 user pins into dedicated programming pins
     Info (169125): Pin ~ASDO~ is reserved at location 1
     Info (169125): Pin ~nCSO~ is reserved at location 2
+Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Critical Warning (169085): No exact pin location assignment(s) for 4 pins of 75 total pins
     Info (169086): Pin ADC_SPI_SCLK not assigned to an exact location on the device
     Info (169086): Pin ADC_SPI_CS not assigned to an exact location on the device
@@ -1038,11 +1340,11 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 4 does not use VREF pins and has 3.3V VCCIO pins. 22 total pin(s) used --  2 pins available
 Info (128000): Starting physical synthesis optimizations for speed
 Info (128002): Starting physical synthesis algorithm register retiming
-Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 873 ps
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
 Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:00
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1050,7 +1352,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (128000): Starting physical synthesis optimizations for speed
 Info (128002): Starting physical synthesis algorithm register retiming
-Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 9 ps
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 2 ps
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
 Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm logic and register replication
@@ -1062,14 +1364,14 @@ Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X13_Y14
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.34 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.48 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 49 output pins without output pin load capacitance assignment
-    Info (306007): Pin "ADC_SPI_SDIN" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "SPI_MOSI" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "SPI_MISO" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "SPI_SCLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "SPI_CS" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "ADC_SPI_SDIN" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "ADC_SHDN" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "ADC_SYNC" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "ADC_CLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1118,18 +1420,19 @@ Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Warning (169064): Following 5 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
-    Info (169065): Pin ADC_SPI_SDIN has a permanently disabled output enable
     Info (169065): Pin SPI_MOSI has a permanently disabled output enable
     Info (169065): Pin SPI_MISO has a permanently disabled output enable
     Info (169065): Pin SPI_SCLK has a permanently disabled output enable
     Info (169065): Pin SPI_CS has a permanently disabled output enable
+    Info (169065): Pin ADC_SPI_SDIN has a permanently enabled output enable
 Info (144001): Generated suppressed messages file C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/output_files/Uni_Projektas.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4802 megabytes
-    Info: Processing ended: Tue Mar 21 11:04:14 2023
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4805 megabytes
+    Info: Processing ended: Tue Mar 21 12:56:48 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +----------------------------+

@@ -38,3 +38,10 @@ main_state.waiting_bits 0 0 0 1 0 0 1
 main_state.finding_bits 0 0 1 0 0 0 1 
 main_state.sending_bits 0 1 0 0 0 0 1 
 main_state.waiting_after 1 0 0 0 0 0 1 
+
+State Machine - |UNI_Projektas|SPI_Controller:adc_spi_controller|curr_state
+Name curr_state.cs_up curr_state.transmiting curr_state.reading_fifo curr_state.idle 
+curr_state.idle 0 0 0 0 
+curr_state.reading_fifo 0 0 1 1 
+curr_state.transmiting 0 1 0 1 
+curr_state.cs_up 1 0 0 1 

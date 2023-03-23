@@ -88,14 +88,14 @@ GND+                         : 21        :        :                   :         
 GND+                         : 22        :        :                   :         : 1         :                
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
 ADC_SHDN                     : 24        : output : 3.3-V LVTTL       :         : 1         : Y              
-MRAM_D[12]                   : 25        : output : 3.3-V LVTTL       :         : 1         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 26        :        :                   :         : 1         :                
+ADC_SPI_SCLK                 : 25        : output : 3.3-V LVTTL       :         : 1         : N              
+ADC_SPI_CS                   : 26        : output : 3.3-V LVTTL       :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 27        :        :                   :         : 1         :                
-ADC_SPI_SCLK                 : 28        : output : 3.3-V LVTTL       :         : 1         : N              
+MRAM_D[12]                   : 28        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
-MRAM_D[10]                   : 30        : output : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 30        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 31        :        :                   :         : 1         :                
-ADC_SPI_CS                   : 32        : output : 3.3-V LVTTL       :         : 1         : N              
+MRAM_D[10]                   : 32        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 33        : gnd    :                   :         :           :                
 GND_PLL1                     : 34        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 35        : power  :                   : 1.2V    :           :                
