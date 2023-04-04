@@ -1,5 +1,5 @@
 Flow report for Uni_Projektas
-Thu Mar 23 18:04:11 2023
+Tue Apr 04 22:37:28 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 23 18:04:11 2023           ;
+; Flow Status                        ; Successful - Tue Apr 04 22:37:28 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 121                                             ;
-;     Total combinational functions  ; 121                                             ;
-;     Dedicated logic registers      ; 73                                              ;
-; Total registers                    ; 73                                              ;
+; Total logic elements               ; 145                                             ;
+;     Total combinational functions  ; 145                                             ;
+;     Dedicated logic registers      ; 90                                              ;
+; Total registers                    ; 90                                              ;
 ; Total pins                         ; 75                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 256                                             ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/23/2023 18:04:06 ;
+; Start date & time ; 04/04/2023 22:37:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Uni_Projektas       ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ applicable agreement for further details.
 +-----------------------------------------+---------------------------------------+--------------------------------+-------------+----------------+
 ; AUTO_PACKED_REGISTERS_STRATIXII         ; Normal                                ; Auto                           ; --          ; --             ;
 ; AUTO_SHIFT_REGISTER_RECOGNITION         ; Always                                ; Auto                           ; --          ; --             ;
-; COMPILER_SIGNATURE_ID                   ; 134660531873041.167958744602800       ; --                             ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                   ; 134660531873041.168063704617076       ; --                             ; --          ; --             ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE        ; Speed                                 ; Balanced                       ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME                ; i1                                    ; --                             ; --          ; Testbenchas    ;
 ; EDA_DESIGN_INSTANCE_NAME                ; NA                                    ; --                             ; --          ; new_testbench  ;
@@ -136,8 +136,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4690 MB             ; 00:00:03                           ;
-; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 4651 MB             ; 00:00:02                           ;
+; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

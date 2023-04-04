@@ -9,23 +9,23 @@ generic (
 	baud_rate : integer := 434 --115200 baud reitui toki prescaleri naudojam
 );
 port(
-	CLK : in std_logic := '0';
-	BUTTON : in std_logic := '0';
+	CLK : in std_logic;
+	BUTTON : in std_logic;
 	
 	--ADC SIGNALS
-	ADC_SHDN : out std_logic := '0'; --1 - ADC OFF, 0 - ADC ON
-	ADC_SYNC : out std_logic := '0'; --Sinchronizacija tarp FPGA CLk ir ADC vidinio CLK
-	ADC_CLK : out std_logic := '0';
-	ADC_DORB : in std_logic := '0'; --Data over range
-	ADC_DORA : in std_logic := '0';
-	ADC_DCLKB : in std_logic := '0'; --Valid data on rising edge
-	ADC_DCLKA : in std_logic := '0';
-	ADC_BIT_B : in std_logic_vector(9 downto 0) := (others => '0');
-	ADC_BIT_A : in std_logic_vector(9 downto 0) := (others => '0');
+	ADC_SHDN : out std_logic := 'Z'; --1 - ADC OFF, 0 - ADC ON
+	ADC_SYNC : out std_logic := 'Z'; --Sinchronizacija tarp FPGA CLk ir ADC vidinio CLK
+	ADC_CLK : out std_logic := 'Z';
+	ADC_DORB : in std_logic := 'Z'; --Data over range
+	ADC_DORA : in std_logic := 'Z';
+	ADC_DCLKB : in std_logic := 'Z'; --Valid data on rising edge
+	ADC_DCLKA : in std_logic := 'Z';
+	ADC_BIT_B : in std_logic_vector(9 downto 0) := (others => 'Z');
+	ADC_BIT_A : in std_logic_vector(9 downto 0) := (others => 'Z');
 	--ADC SPI
 	ADC_SPI_SDIN : inout std_logic := 'Z';
-	ADC_SPI_SCLK : out std_logic := '0';
-	ADC_SPI_CS : out std_logic := '1';
+	ADC_SPI_SCLK : out std_logic := 'Z';
+	ADC_SPI_CS : out std_logic := 'Z';
 	
 	--SPI TO FPGA
 	SPI_MOSI : inout std_logic := 'Z';
@@ -34,13 +34,13 @@ port(
 	SPI_CS : inout std_logic := 'Z';
 	
 	--MRAM
-	MRAM_OUTPUT_EN : out std_logic := '0';
-	MRAM_A : out std_logic_vector(17 downto 0) := (others => '0');
-	MRAM_EN : out std_logic := '0';
-	MRAM_WRITE_EN : out std_logic := '0';
-	MRAM_UPPER_EN : out std_logic := '0';
-	MRAM_LOWER_EN : out std_logic := '0';
-	MRAM_D : inout std_logic_vector(15 downto 0) := (others => '0')
+	MRAM_OUTPUT_EN : out std_logic := 'Z';
+	MRAM_A : out std_logic_vector(17 downto 0) := (others => 'Z');
+	MRAM_EN : out std_logic := 'Z';
+	MRAM_WRITE_EN : out std_logic := 'Z';
+	MRAM_UPPER_EN : out std_logic := 'Z';
+	MRAM_LOWER_EN : out std_logic := 'Z';
+	MRAM_D : inout std_logic_vector(15 downto 0) := (others => 'Z')
 	
 );
 end entity;
@@ -181,26 +181,26 @@ signal func_ram_en : std_logic := '0';
 signal func_ram_out : std_logic_vector(7 downto 0);
 
 --Correlation signals
-signal c_en : std_logic := '0';
-signal c_long_value : std_logic_vector(20-1 downto 0) := (others => '0');
+--signal c_en : std_logic := '0';
+--signal c_long_value : std_logic_vector(20-1 downto 0) := (others => '0');
 
 --Big ram for voltage shifting
-signal address_a_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
-signal address_b_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
-signal data_a_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-signal data_b_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-signal q_a_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-signal q_b_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+--signal address_a_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
+--signal address_b_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
+--signal data_a_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+--signal data_b_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+--signal q_a_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+--signal q_b_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 
-signal address_a_2		: STD_LOGIC_VECTOR (2 DOWNTO 0);
-signal address_b_2		: STD_LOGIC_VECTOR (2 DOWNTO 0);
-signal data_a_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-signal data_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-signal q_a_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-signal q_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+--signal address_a_2		: STD_LOGIC_VECTOR (2 DOWNTO 0);
+--signal address_b_2		: STD_LOGIC_VECTOR (2 DOWNTO 0);
+--signal data_a_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+--signal data_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+--signal q_a_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
+--signal q_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 
-signal q : std_logic_vector(511 downto 0) := (others => '0');
-signal data : std_logic_vector(512 downto 0) := (others => '0');
+--signal q : std_logic_vector(511 downto 0) := (others => '0');
+--signal data : std_logic_vector(512 downto 0) := (others => '0');
 
 
 
@@ -219,11 +219,11 @@ signal data : std_logic_vector(512 downto 0) := (others => '0');
 --signal q_a_4		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 --signal q_b_4		: STD_LOGIC_VECTOR (127 DOWNTO 0);
 
-signal address_3_a		: STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0');
-signal address_3_b		: STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0');
+--signal address_3_a		: STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0');
+--signal address_3_b		: STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0');
 --signal q_a_3		: STD_LOGIC_VECTOR (287 DOWNTO 0) := (others => '0');
 --signal q_b_3		: STD_LOGIC_VECTOR (287 DOWNTO 0) := (others => '0');
-signal q_3 : std_logic_vector(255 downto 0) := (others => '0');
+--signal q_3 : std_logic_vector(255 downto 0) := (others => '0');
 
 --Misc
 signal sync_clk : std_logic := '0';
@@ -231,66 +231,70 @@ signal sync_clk : std_logic := '0';
 signal RECEIVED_CODE : std_logic_vector(5 downto 0);
 
 --UART
-signal UART_CONTROLLER_DATA_IN : std_logic_vector(7 downto 0) := (others => '0');
-signal UART_CONTROLLER_DATA_REQ : std_Logic := '0';
-signal UART_TX_SIG : std_logic := '1';
-signal data_out_sig : std_logic_vector(7 downto 0) := (others => '0');
-signal data_ready_sig : std_logic := '0';
+--signal UART_CONTROLLER_DATA_IN : std_logic_vector(7 downto 0) := (others => '0');
+--signal UART_CONTROLLER_DATA_REQ : std_Logic := '0';
+--signal UART_TX_SIG : std_logic := '1';
+--signal data_out_sig : std_logic_vector(7 downto 0) := (others => '0');
+--signal data_ready_sig : std_logic := '0';
 
 signal shift_en : std_logic := '0';
 
 --SPI
-signal config_command_counter : integer range 0 to 100 := 0;
+signal config_command_counter : integer range 0 to 10000000 := 0;
 signal ADC_SPI_send_data : std_logic_vector(16-1 downto 0) := (others => '0');
 signal ADC_SPI_send_irq : std_logic := '0';
 
 begin
 
+
+
 adc_spi_controller : SPI_Controller port map(CLK => CLK, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK, SPI_CS => ADC_SPI_CS, SPI_send_data => ADC_SPI_send_data, SPI_send_irq => ADC_SPI_Send_irq);
 
-adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => address_a_1, address_a_2 => address_a_2, address_b_1 => address_b_1,
-	address_b_2 => address_b_2,
-	new_adc_in => ADC_BIT_A(7 downto 0), stop_shift => shift_en, q => q, data => data);
+--adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => address_a_1, address_a_2 => address_a_2, address_b_1 => address_b_1,
+--	address_b_2 => address_b_2,
+--	new_adc_in => ADC_BIT_A(7 downto 0), stop_shift => shift_en, q => q, data => data);
 
 
-ADC_Manager1 : ADC_Manager port map(CLK => CLK, DATA_OUT => RECEIVED_CODE, SYNC => sync_clk,
-												c_long_value_in => c_long_value,
-												c_en => c_en, DATA_DONE => UART_CONTROLLER_DATA_REQ, shift_en => shift_en,
-												corr_func_rom_adress_a => address_3_a, corr_func_rom_adress_b => address_3_b);
-wizard_ram_1 : wizard_ram port map(address => func_ram_address_bus, clock => CLK, data => "00000000", wren => '0', q => func_ram_out);
-clock_divider1 : clock_divider port map(CLK => CLK, Prescaler => std_Logic_vector(to_unsigned(5, 16)), CLK_OUT => sync_clk);
-corr_long : Correlation_function generic map(function_length => 50) port map(EN => c_en, CLK => CLK, output_value => c_long_value, 
-											input_adc_values => q(399 downto 0), input_function_ram => q_3);
+--ADC_Manager1 : ADC_Manager port map(CLK => CLK, DATA_OUT => RECEIVED_CODE, SYNC => sync_clk,
+--												c_long_value_in => c_long_value,
+--												c_en => c_en, DATA_DONE => UART_CONTROLLER_DATA_REQ, shift_en => shift_en,
+--												corr_func_rom_adress_a => address_3_a, corr_func_rom_adress_b => address_3_b);
+--wizard_ram_1 : wizard_ram port map(address => func_ram_address_bus, clock => CLK, data => "00000000", wren => '0', q => func_ram_out);
+ADC_CLK <= CLK; --Clock divideris padarys 10MHz
+ADC_SHDN <= '0';
+--clock_divider1 : clock_divider port map(CLK => CLK, Prescaler => std_Logic_vector(to_unsigned(5, 16)), CLK_OUT => sync_clk);
+--corr_long : Correlation_function generic map(function_length => 50) port map(EN => c_en, CLK => CLK, output_value => c_long_value, 
+--											input_adc_values => q(399 downto 0), input_function_ram => q_3);
 
 --Ram for shifting voltage
-ram1 : big_ram_wizard port map(clock => CLK, address_a => address_a_1, address_b => address_b_1, data_a => data_a_1,
-										data_b => data_b_1, wren_a => '1', wren_b => '1', q_a => q_a_1, q_b => q_b_1);
-ram2 : big_ram_wizard port map(clock => CLK, address_a => address_a_2, address_b => address_b_2, data_a => data_a_2,
-										data_b => data_b_2, wren_a => '1', wren_b => '1', q_a => q_a_2, q_b => q_b_2);
+--ram1 : big_ram_wizard port map(clock => CLK, address_a => address_a_1, address_b => address_b_1, data_a => data_a_1,
+--										data_b => data_b_1, wren_a => '1', wren_b => '1', q_a => q_a_1, q_b => q_b_1);
+--ram2 : big_ram_wizard port map(clock => CLK, address_a => address_a_2, address_b => address_b_2, data_a => data_a_2,
+--										data_b => data_b_2, wren_a => '1', wren_b => '1', q_a => q_a_2, q_b => q_b_2);
 --Ram for correlation functions
 --ram3 : big_ram_wizard port map(clock => CLK, address_a => address_a_3, address_b => address_b_3, data_a => data_a_3,
 --										data_b => data_b_3, wren_a => '1', wren_b => '1', q_a => q_a_3, q_b => q_b_3);
 --ram4 : big_ram_wizard port map(clock => CLK, address_a => address_a_4, address_b => address_b_4, data_a => data_a_4,
 --										data_b => data_b_4, wren_a => '1', wren_b => '1', q_a => q_a_4, q_b => q_b_4);
-ram3 : corr_func_rom_1 port map(clock => CLK, address_a => address_3_a, address_b => address_3_b, q_a => q_3(255 downto 128), q_b => q_3(127 downto 0));						
+--ram3 : corr_func_rom_1 port map(clock => CLK, address_a => address_3_a, address_b => address_3_b, q_a => q_3(255 downto 128), q_b => q_3(127 downto 0));						
 
 					
 --DATA_OUT <= RECEIVED_CODE;
 --ADC_SYNC <= sync_clk;
 
-q <= q_b_2 & q_a_2 & q_b_1 & q_a_1;
-data_a_1 <= data(128-1 downto 0);
-data_b_1 <= data(128*2-1 downto 128*1);
-data_a_2 <= data(128*3-1 downto 128*2);
-data_b_2 <= data(128*4-1 downto 128*3);
+--q <= q_b_2 & q_a_2 & q_b_1 & q_a_1;
+--data_a_1 <= data(128-1 downto 0);
+--data_b_1 <= data(128*2-1 downto 128*1);
+--data_a_2 <= data(128*3-1 downto 128*2);
+--data_b_2 <= data(128*4-1 downto 128*3);
 
 --UART_CONTROLLER_DATA_IN <= "00" & RECEIVED_CODE;
 
 
-UART_Controller_1 : UART_Controller generic map(baud_rate => baud_rate) port map(CLK => CLK,
-	SEND_DATA_IN => UART_CONTROLLER_DATA_IN,
-	SEND_DATA_IN_REQ => UART_CONTROLLER_DATA_REQ,
-	TX => UART_TX_SIG);
+--UART_Controller_1 : UART_Controller generic map(baud_rate => baud_rate) port map(CLK => CLK,
+--	SEND_DATA_IN => UART_CONTROLLER_DATA_IN,
+--	SEND_DATA_IN_REQ => UART_CONTROLLER_DATA_REQ,
+--	TX => UART_TX_SIG);
 	
 
 --Registrai ADC
@@ -304,19 +308,19 @@ UART_Controller_1 : UART_Controller generic map(baud_rate => baud_rate) port map
 process(CLK)
 begin
 	if rising_edge(CLK) then
-		if(config_command_counter /= 100) then
+		if(config_command_counter /= 10000000) then
 			config_command_counter <= config_command_counter + 1;
 			case config_command_counter is
-				when 1 =>
-					ADC_SPI_send_data <= "0000011011000000"; --test patternas i 06h registra
+				when 1000000+1 =>
+					--ADC_SPI_send_data <= "0000011011000000"; --test patternas i 06h registra
+					ADC_SPI_send_data <= "0000011011000000"; --REad data/DCLK timing 03h - po defaultu 10110110
 					ADC_SPI_send_irq <= '1';
-				when 2 =>
+				when 1000000+2 =>
 					ADC_SPI_send_irq <= '0';
 				when others =>
 					ADC_SPI_send_irq <= '0';
 			end case;
 		end if;
-		
 	end if;
 
 end process;

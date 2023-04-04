@@ -3,46 +3,85 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\simulation\modelsim
-Espi_test_projektas
-Z1 w1678722227
-Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
-Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
-Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
-Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z7 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
-Z8 dC:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\simulation\modelsim
-Z9 8Uni_Projektas.vho
-Z10 FUni_Projektas.vho
+Etestbenchas
+Z1 w1680553447
+Z2 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\simulation\modelsim
+Z7 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
+Z8 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
 l0
-L34
-V8@Pmj0[EkB4VJD?[GRS;]1
-!s100 F:8[eE8o_fN00]PCEfBR=3
-Z11 OV;C;10.1d;51
-31
+L7
+VPCU6:PNKKCFVfM1zfNJMz3
+!s100 JCbIaeN<CK:SzhCj;_n0g3
+Z9 OV;C;10.1d;51
+32
 !i10b 1
-Z12 !s108 1678722293.495000
-Z13 !s90 -reportprogress|300|-93|-work|work|Uni_Projektas.vho|
-Z14 !s107 Uni_Projektas.vho|
-Z15 o-93 -work work -O0
-Z16 tExplicit 1
-Astructure
+Z10 !s108 1680553540.019000
+Z11 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
+Z12 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
+Z13 o-work work -O0
+Z14 tExplicit 1
+Auni_projektas_arch
 R2
 R3
 R4
 R5
-R6
-R7
-DEx4 work 18 spi_test_projektas 0 22 8@Pmj0[EkB4VJD?[GRS;]1
-l273
-L50
-VU=i:?;VD;[3h00L>zhV3]1
-!s100 aG6ghDeehSN^4OdlPZ=n]0
-R11
-31
+DEx4 work 11 testbenchas 0 22 PCU6:PNKKCFVfM1zfNJMz3
+l117
+L14
+VL=>8HBa1k]YBb@h:G9WbY3
+!s100 LCmoG2c]4CE?7Z1CjD8O=2
+R9
+32
 !i10b 1
+R10
+R11
 R12
 R13
 R14
-R15
+Euni_projektas
+Z15 w1680553282
+Z16 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z17 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z18 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+R4
+R5
+Z19 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
+R6
+Z20 8Uni_Projektas.vho
+Z21 FUni_Projektas.vho
+l0
+L34
+V`:ZfBm?W<<?ST`9nOA;Em0
+R9
+31
+Z22 !s108 1680553365.817000
+Z23 !s90 -reportprogress|300|-93|-work|work|Uni_Projektas.vho|
+Z24 !s107 Uni_Projektas.vho|
+Z25 o-93 -work work -O0
+R14
+!s100 ZHjLiFhHCE;0]a]AzM]U_3
+!i10b 1
+Astructure
 R16
+R17
+R18
+R4
+R5
+R19
+DEx4 work 13 uni_projektas 0 22 `:ZfBm?W<<?ST`9nOA;Em0
+l173
+L142
+VGX10<[873O?cE8Jeh8dld0
+R9
+31
+R22
+R23
+R24
+R25
+R14
+!s100 B[_]YX6JgE[LPB01YflQ63
+!i10b 1

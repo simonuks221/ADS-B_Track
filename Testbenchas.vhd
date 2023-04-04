@@ -11,13 +11,47 @@ VOLTAGE_DATA_LEN: integer := 436
 
 END Testbenchas;
 
-ARCHITECTURE UNI_Projektas_arch OF Testbenchas IS
--- constants                                                 
+ARCHITECTURE UNI_Projektas_arch OF Testbenchas IS                                              
+
 -- signals                                                   
 SIGNAL ADC_IN : STD_LOGIC_VECTOR(9 DOWNTO 0) := (others => '0');
 SIGNAL CLK : STD_LOGIC := '0';
 SIGNAL SYNC : STD_LOGIC;
 signal arrIndex : integer := 0;
+
+--Uni_Projektas
+signal BUTTON : std_logic;
+
+--ADC SIGNALS
+signal ADC_SHDN : std_logic; --1 - ADC OFF, 0 - ADC ON
+signal ADC_SYNC : std_logic; --Sinchronizacija tarp FPGA CLk ir ADC vidinio CLK
+signal ADC_CLK : std_logic;
+signal ADC_DORB : std_logic; --Data over range
+signal ADC_DORA : std_logic;
+signal ADC_DCLKB : std_logic; --Valid data on rising edge
+signal ADC_DCLKA : std_logic;
+signal ADC_BIT_B : std_logic_vector(9 downto 0);
+signal ADC_BIT_A : std_logic_vector(9 downto 0);
+--ADC SPI
+signal ADC_SPI_SDIN : std_logic;
+signal ADC_SPI_SCLK : std_logic;
+signal ADC_SPI_CS : std_logic;
+
+--SPI TO FPGA
+signal SPI_MOSI : std_logic;
+signal SPI_MISO : std_logic;
+signal SPI_SCLK : std_logic;
+signal SPI_CS : std_logic;
+
+--MRAM
+signal MRAM_OUTPUT_EN : std_logic;
+signal MRAM_A : std_logic_vector(17 downto 0);
+signal MRAM_EN : std_logic;
+signal MRAM_WRITE_EN : std_logic;
+signal MRAM_UPPER_EN : std_logic;
+signal MRAM_LOWER_EN : std_logic;
+signal MRAM_D : std_logic_vector(15 downto 0);
+
 
 --Functions
 --Read from file
@@ -75,17 +109,17 @@ port(
 	MRAM_WRITE_EN : out std_logic := '0';
 	MRAM_UPPER_EN : out std_logic := '0';
 	MRAM_LOWER_EN : out std_logic := '0';
-	MRAM_D : out std_logic_vector(15 downto 0) := (others => '0')
+	MRAM_D : inout std_logic_vector(15 downto 0) := (others => '0')
 	
 );
 end component;
 
 BEGIN
-i1 : UNI_Projektas port map(CLK => CLK);
+i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, ADC_SYNC => SYNC, ADC_CLK => ADC_CLK);
 	
 CLK <= not CLK after 0.01us; --50MHz 0.01us 50MHz
 
-process(SYNC)
+process(CLK)
 begin
 	if(rising_edge(SYNC)) then
 		if now > 10us then
@@ -99,5 +133,5 @@ begin
 			adc_in <= (others => '0');
 		end if;
 	end if;
-end process;                                          
+end process;                       
 END UNI_Projektas_arch;

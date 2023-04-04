@@ -88,14 +88,14 @@ GND+                         : 21        :        :                   :         
 GND+                         : 22        :        :                   :         : 1         :                
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
 ADC_SHDN                     : 24        : output : 3.3-V LVTTL       :         : 1         : Y              
-ADC_SPI_SCLK                 : 25        : output : 3.3-V LVTTL       :         : 1         : N              
-ADC_SPI_CS                   : 26        : output : 3.3-V LVTTL       :         : 1         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 27        :        :                   :         : 1         :                
-MRAM_D[12]                   : 28        : output : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT_WITH_BUS_HOLD : 25        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 26        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 27        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_BUS_HOLD : 28        :        :                   :         : 1         :                
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 30        :        :                   :         : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 31        :        :                   :         : 1         :                
-MRAM_D[10]                   : 32        : output : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT_WITH_BUS_HOLD : 30        :        :                   :         : 1         :                
+MRAM_D[10]                   : 31        : bidir  : 3.3-V LVTTL       :         : 1         : N              
+MRAM_D[12]                   : 32        : bidir  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 33        : gnd    :                   :         :           :                
 GND_PLL1                     : 34        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 35        : power  :                   : 1.2V    :           :                
@@ -106,12 +106,12 @@ GND                          : 39        : gnd    :                   :         
 SPI_MISO                     : 40        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 SPI_MOSI                     : 41        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 SPI_SCLK                     : 42        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 43        :        :                   :         : 4         :                
+ADC_SPI_SCLK                 : 43        : output : 3.3-V LVTTL       :         : 4         : N              
 SPI_CS                       : 44        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 ADC_SYNC                     : 45        : output : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
 ADC_CLK                      : 47        : output : 3.3-V LVTTL       :         : 4         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 48        :        :                   :         : 4         :                
+ADC_SPI_CS                   : 48        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                
 ADC_DCLKB                    : 51        : input  : 3.3-V LVTTL       :         : 4         : Y              
@@ -155,11 +155,11 @@ GND+                         : 88        :        :                   :         
 GND+                         : 89        :        :                   :         : 3         :                
 GND+                         : 90        :        :                   :         : 3         :                
 GND+                         : 91        :        :                   :         : 3         :                
-MRAM_D[11]                   : 92        : output : 3.3-V LVTTL       :         : 3         : Y              
-MRAM_D[14]                   : 93        : output : 3.3-V LVTTL       :         : 3         : Y              
-MRAM_D[13]                   : 94        : output : 3.3-V LVTTL       :         : 3         : Y              
+MRAM_D[11]                   : 92        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
+MRAM_D[14]                   : 93        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
+MRAM_D[13]                   : 94        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
 VCCIO3                       : 95        : power  :                   : 3.3V    : 3         :                
-MRAM_D[15]                   : 96        : output : 3.3-V LVTTL       :         : 3         : Y              
+MRAM_D[15]                   : 96        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
 MRAM_A[17]                   : 97        : output : 3.3-V LVTTL       :         : 3         : Y              
 GND                          : 98        : gnd    :                   :         :           :                
 MRAM_A[16]                   : 99        : output : 3.3-V LVTTL       :         : 3         : Y              
@@ -183,20 +183,20 @@ VCCIO2                       : 116       : power  :                   : 3.3V    
 GND                          : 117       : gnd    :                   :         :           :                
 MRAM_EN                      : 118       : output : 3.3-V LVTTL       :         : 2         : Y              
 MRAM_A[4]                    : 119       : output : 3.3-V LVTTL       :         : 2         : Y              
-MRAM_D[0]                    : 120       : output : 3.3-V LVTTL       :         : 2         : Y              
-MRAM_D[1]                    : 121       : output : 3.3-V LVTTL       :         : 2         : Y              
-MRAM_D[2]                    : 122       : output : 3.3-V LVTTL       :         : 2         : Y              
+MRAM_D[0]                    : 120       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+MRAM_D[1]                    : 121       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+MRAM_D[2]                    : 122       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 GND                          : 123       : gnd    :                   :         :           :                
 VCCINT                       : 124       : power  :                   : 1.2V    :           :                
-MRAM_D[3]                    : 125       : output : 3.3-V LVTTL       :         : 2         : Y              
-MRAM_D[4]                    : 126       : output : 3.3-V LVTTL       :         : 2         : Y              
+MRAM_D[3]                    : 125       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+MRAM_D[4]                    : 126       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 VCCIO2                       : 127       : power  :                   : 3.3V    : 2         :                
 GND                          : 128       : gnd    :                   :         :           :                
-MRAM_D[5]                    : 129       : output : 3.3-V LVTTL       :         : 2         : Y              
+MRAM_D[5]                    : 129       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 GND                          : 130       : gnd    :                   :         :           :                
 VCCINT                       : 131       : power  :                   : 1.2V    :           :                
-MRAM_D[6]                    : 132       : output : 3.3-V LVTTL       :         : 2         : Y              
-MRAM_D[7]                    : 133       : output : 3.3-V LVTTL       :         : 2         : Y              
+MRAM_D[6]                    : 132       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+MRAM_D[7]                    : 133       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 MRAM_WRITE_EN                : 134       : output : 3.3-V LVTTL       :         : 2         : Y              
 MRAM_A[5]                    : 135       : output : 3.3-V LVTTL       :         : 2         : Y              
 MRAM_A[6]                    : 136       : output : 3.3-V LVTTL       :         : 2         : Y              
@@ -205,6 +205,6 @@ VCCIO2                       : 138       : power  :                   : 3.3V    
 MRAM_A[8]                    : 139       : output : 3.3-V LVTTL       :         : 2         : Y              
 GND                          : 140       : gnd    :                   :         :           :                
 MRAM_A[9]                    : 141       : output : 3.3-V LVTTL       :         : 2         : Y              
-MRAM_D[9]                    : 142       : output : 3.3-V LVTTL       :         : 2         : Y              
-MRAM_D[8]                    : 143       : output : 3.3-V LVTTL       :         : 2         : Y              
+MRAM_D[9]                    : 142       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+MRAM_D[8]                    : 143       : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 BUTTON                       : 144       : input  : 3.3-V LVTTL       :         : 2         : Y              
