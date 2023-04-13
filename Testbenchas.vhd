@@ -120,6 +120,10 @@ port(
 );
 end component;
 
+type mram_data_type is array(0 to 1000) of std_logic_vector(15 downto 0);
+signal mram_data : mram_data_type := (others => (others => '0'));
+
+
 BEGIN
 i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, ADC_SYNC => ADC_SYNC, ADC_CLK => ADC_CLK, ADC_SPI_SDIN => ADC_SPI_SDIN, ADC_SPI_SCLK => ADC_SPI_SCLK, ADC_SPI_CS => ADC_SPI_CS,
 									ADC_DCLKA => ADC_DCLKA, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,  MRAM_A => MRAM_A, MRAM_EN => MRAM_EN, MRAM_WRITE_EN => MRAM_WRITE_EN,
@@ -145,12 +149,21 @@ begin
 end process;                       
 
 
-process
+process --WRite
+begin
+	wait until MRAM_WRITE_EN'event;
+		if(MRAM_WRITE_EN = '1') then
+			mram_data(to_integer(unsigned(MRAM_A))) <= MRAM_D;
+		end if;
+end process;
+
+process --REad
 begin
 	wait until MRAM_OUTPUT_EN'event;
 	if(MRAM_WRITE_EN = '1' and MRAM_OUTPUT_EN = '0') then
 		wait for 35ns;
-		MRAM_D <= "1011101011101011";
+		MRAM_D <= mram_data(to_integer(unsigned(MRAM_A)));
+		--MRAM_D <= "1011101011101011";
 	else
 		MRAM_D <= (others => 'Z');
 	end if;

@@ -316,7 +316,7 @@ R14
 !s100 _=P8o@3]FMOWNY052DFm=2
 !i10b 1
 Etestbenchas
-Z57 w1681377589
+Z57 w1681378923
 R2
 R3
 R4
@@ -327,33 +327,33 @@ Z59 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
 l0
 L7
 VPCU6:PNKKCFVfM1zfNJMz3
-!s100 JCbIaeN<CK:SzhCj;_n0g3
 R9
 32
-!i10b 1
-Z60 !s108 1681377596.239000
+Z60 !s108 1681378928.790000
 Z61 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
 Z62 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
 Z63 o-work work -O0
 R14
+!s100 JCbIaeN<CK:SzhCj;_n0g3
+!i10b 1
 Auni_projektas_arch
 R2
 R3
 R4
 R5
 DEx4 work 11 testbenchas 0 22 PCU6:PNKKCFVfM1zfNJMz3
-l123
+l127
 L14
-Vg4]gHSb^BBdO<m_k14`S@2
-!s100 PmzJYmQO4N2gm=Xe`OZ3_1
+V^EKK6GU=]QKZUU^TC9?Od0
 R9
 32
-!i10b 1
 R60
 R61
 R62
 R63
 R14
+!s100 8THi=i2>@KM7mm`2DhjU92
+!i10b 1
 Euart_controller
 Z64 w1681375132
 R2
@@ -542,7 +542,7 @@ R14
 !s100 AWLgO7mS@7W^7O`e>5Iac2
 !i10b 1
 Ewrite_out_mram_manager
-Z92 w1681375152
+Z92 w1681379383
 R2
 R3
 R4
@@ -552,31 +552,31 @@ Z93 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
 Z94 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
 l0
 L7
-Vn11RW>?M0G6cC0251z<VC3
-R9
-31
-Z95 !s108 1681377535.037000
-Z96 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd|
-Z97 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd|
-R13
-R14
+VP6VFK_VCN1KUOPfe>hfX`0
 !s100 =6gB2>X]18c6HOTDgdVno2
+R9
+32
 !i10b 1
+Z95 !s108 1681379390.154000
+Z96 !s90 -reportprogress|300|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd|
+Z97 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd|
+R63
+R14
 Aarc
 R2
 R3
 R4
 R5
-DEx4 work 22 write_out_mram_manager 0 22 n11RW>?M0G6cC0251z<VC3
+Z98 DEx4 work 22 write_out_mram_manager 0 22 P6VFK_VCN1KUOPfe>hfX`0
 l30
 L26
-Vnze>gffR`:_V73N?[ffUX1
+VmOULD90iTTWe:`iUdaZGY0
+!s100 Nn<KP2SJZ2^ke]jPa>zMi0
 R9
-31
+32
+!i10b 1
 R95
 R96
 R97
-R13
+R63
 R14
-!s100 ZiamF4:cPKNc0?VzgUm_U0
-!i10b 1

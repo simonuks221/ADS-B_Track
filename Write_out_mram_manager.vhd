@@ -36,13 +36,16 @@ process(CLK)
 begin
 	if rising_edge(CLK) then
 		UART_DATA_IRQ <= '0';
+		MRAM_READ_DATA <= '0';
 		if(EN_WRITE_OUT_MRAM = '1') then
 			if(MRAM_DONE = '1') then
 				if(UART_FIFO_EMPTY = '1') then
+					MRAM_READ_DATA <= '1';
 					UART_DATA_IRQ <= '1';
+					address_counter <= address_counter + 1;
 				end if;
 			end if;
-			MRAM_READ_DATA <= '1';
+			
 		end if;
 	end if;
 end process;
