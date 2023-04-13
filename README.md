@@ -7,13 +7,6 @@ This project includes:
 * VHDL code for Cyclone 2 EP2C5T144C8 FPGA development board
 * Computer aplication code to receive data, written in C#
 
-## PCB board
-Some images of high speed PCB:
-
-![Foto1](/foto/Foto1.png)
-
-![Foto1](/foto/Foto2.png)
-
 ## Features
 * Receives 20MHz signal
 * Filters down to 2MHz
@@ -22,3 +15,10 @@ Some images of high speed PCB:
 * Using convolution detects ADSB signal in real time
 * Communicates with ADC using SPI and parralel interface
 * Sends data to PC over UART
+
+## PCB board
+Some images of high speed PCB:
+
+![Foto1](/foto/Foto1.png)
+
+![Foto1](/foto/Foto2.png)
