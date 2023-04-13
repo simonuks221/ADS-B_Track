@@ -10,9 +10,9 @@ This project includes:
 ##PCB board
 Some images of high speed PCB:
 
-[Foto1](/foto/Foto1.png)
+![Foto1](/foto/Foto1.png)
 
-[Foto1](/foto/Foto2.png)
+![Foto1](/foto/Foto2.png)
 
 ##Features
 * Receives 20MHz signal
