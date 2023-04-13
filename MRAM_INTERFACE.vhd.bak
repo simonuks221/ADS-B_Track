@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
+
+entity MRAM_INTERFACE is
+
+
+end entity;
+
+architecture arc on MRAM_INTERFACE is
+
+
+begin
+
+
+end architecture;

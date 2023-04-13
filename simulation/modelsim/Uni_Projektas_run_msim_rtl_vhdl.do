@@ -5,18 +5,20 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/corr_package.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_ram.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/big_ram_wizard.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_ram_shifter.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/ADC_Manager.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_function.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Correlation_gate.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_Controller.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/State_manager.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Multi_OR.vhd}
 
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd}
 

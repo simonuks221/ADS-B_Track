@@ -29,11 +29,21 @@ tx_curr_state.start 0 0 1 0 1
 tx_curr_state.data 0 1 0 0 1 
 tx_curr_state.stop 1 0 0 0 1 
 
-State Machine - |UNI_Projektas|ADC_Manager:ADC_Manager1|main_state
-Name main_state.sending_bits main_state.finding_bits main_state.waiting_bits main_state.waiting_preambule main_state.finding_preambule main_state.read_init_mem 
-main_state.read_init_mem 0 0 0 0 0 0 
-main_state.finding_preambule 0 0 0 0 1 1 
-main_state.waiting_preambule 0 0 0 1 0 1 
-main_state.waiting_bits 0 0 1 0 0 1 
-main_state.finding_bits 0 1 0 0 0 1 
-main_state.sending_bits 1 0 0 0 0 1 
+State Machine - |UNI_Projektas|SPI_Controller:adc_spi_controller|curr_state
+Name curr_state.cs_up curr_state.transmiting curr_state.reading_fifo curr_state.idle 
+curr_state.idle 0 0 0 0 
+curr_state.reading_fifo 0 0 1 1 
+curr_state.transmiting 0 1 0 1 
+curr_state.cs_up 1 0 0 1 
+
+State Machine - |UNI_Projektas|STATE_MANAGER:this_state_manager|curr_state
+Name curr_state.write_out_mram curr_state.read_adc curr_state.setup 
+curr_state.setup 0 0 0 
+curr_state.read_adc 0 1 1 
+curr_state.write_out_mram 1 0 1 
+
+State Machine - |UNI_Projektas|MRAM_Controller:this_mram_controller|curr_state
+Name curr_state.writing curr_state.reading curr_state.idle 
+curr_state.idle 0 0 0 
+curr_state.reading 0 1 1 
+curr_state.writing 1 0 1 
