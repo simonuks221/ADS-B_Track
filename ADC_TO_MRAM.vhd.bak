@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
+
+entity ADC_TO_MRAM is
+port(
+	CLK : in std_logic := '0';
+	data_in : in std_logic_vector(15 downto 0) := (others => '0');
+	data_out : out std_logic_vector(15 downto 0) := (others => '0');
+	address_in : in std_logic_vector(17 downto 0) := (others => '0');
+	write_data : in std_logic := '0';
+	read_data : in std_logic := '0';
+	done : out std_logic := '0';
+);
+end entity;
+
+architecture ar c of ADC_TO_MRAM is 
+
+begin
+
+end architecture;

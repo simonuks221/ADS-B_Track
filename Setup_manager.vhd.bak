@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
+
+entity Setup_manager is
+
+
+end entity;
+
+architecture arc of Setup_manager is
+
+begin
+
+end architecture;

@@ -12,6 +12,7 @@ port(
 	CLK: in std_logic;
 	SEND_DATA_IN: in std_logic_vector(7 downto 0) := "00000000";
 	SEND_DATA_IN_REQ: in std_logic := '0';
+	UART_FIFO_EMPTY: out std_logic := '0';
 	TX : out std_logic := '1'
 );
 end entity;
@@ -62,8 +63,8 @@ signal UART_CLK : std_logic := '0';
 signal START_SEND_DATA : std_Logic := '0';
 signal TX_BUSY : std_logic;
 signal SEND_DATA_OUT : std_logic_vector(7 downto 0) := (others => '0');
-signal fifo_empty : std_logic;
 signal fifo_read_req : std_Logic := '0';
+signal fifo_empty : std_logic := '0';
 
 begin
 
@@ -73,6 +74,8 @@ uart_tx_1 : UART_TX port map(CLk => CLK, UART_CLK => UART_CLK, SEND_DATA => SEND
 				TX_BUSY => TX_BUSY);
 				
 uart_fifo : UART_FIFO_wizard port map(clock => CLK, data => SEND_DATA_IN, rdreq => fifo_read_req, wrreq => SEND_DATA_IN_REQ, q => SEND_DATA_OUT, empty => fifo_empty);
+
+UART_FIFO_EMPTY <= fifo_empty;
 
 --Set next state
 process(CLK)

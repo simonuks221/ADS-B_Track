@@ -19,6 +19,40 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity UNI_Projektas
 # -- Compiling architecture arc of UNI_Projektas
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Clock_divider
+# -- Compiling architecture arc of Clock_divider
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity UART_Controller
+# -- Compiling architecture arc of UART_Controller
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity UART_TX
+# -- Compiling architecture arc of UART_TX
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity UART_FIFO_wizard
+# -- Compiling architecture SYN of uart_fifo_wizard
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -44,6 +78,60 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity wizard_spi_fifo
 # -- Compiling architecture SYN of wizard_spi_fifo
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_Controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity MRAM_Controller
+# -- Compiling architecture arc of MRAM_Controller
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/State_manager.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity STATE_MANAGER
+# -- Compiling architecture arc of STATE_MANAGER
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Setup_manager
+# -- Compiling architecture arc of Setup_manager
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Read_adc_manager
+# -- Compiling architecture arc of Read_adc_manager
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Write_out_mram_manager
+# -- Compiling architecture arc of Write_out_mram_manager
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Multi_OR.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Multi_OR
+# -- Compiling architecture arc1 of Multi_OR
 # 
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -54,8 +142,10 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity Testbenchas
 # -- Compiling architecture UNI_Projektas_arch of Testbenchas
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(120): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(125): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(129): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(130): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(134): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(152): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Testbenchas
 # vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Testbenchas 
@@ -66,6 +156,12 @@
 # Loading ieee.std_logic_textio(body)
 # Loading work.testbenchas(uni_projektas_arch)
 # Loading work.uni_projektas(arc)
+# Loading work.mram_controller(arc)
+# Loading work.state_manager(arc)
+# Loading work.setup_manager(arc)
+# Loading work.read_adc_manager(arc)
+# Loading work.write_out_mram_manager(arc)
+# Loading work.multi_or(arc1)
 # Loading work.spi_controller(arc)
 # Loading work.wizard_spi_fifo(syn)
 # Loading ieee.std_logic_arith(body)
@@ -73,51 +169,43 @@
 # Loading altera_mf.altera_device_families(body)
 # Loading altera_mf.scfifo(behavior)
 # Loading work.spi_tx(arc)
+# Loading work.uart_controller(arc)
+# Loading work.clock_divider(arc)
+# Loading work.uart_tx(arc)
+# Loading work.uart_fifo_wizard(syn)
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
+# 
+#           Attempting to use alternate WLF file "./wlftt6fjc4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftt6fjc4
+# 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 30 us
-add wave -position end  sim:/testbenchas/i1/ADC_SPI_SDIN
-add wave -position end  sim:/testbenchas/i1/ADC_SPI_SCLK
-add wave -position end  sim:/testbenchas/i1/ADC_SPI_CS
-restart
 run
 run
-run
-run
-run
-run
-run
-run
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity UNI_Projektas
-# -- Compiling architecture arc of UNI_Projektas
+# -- Compiling entity Testbenchas
+# -- Compiling architecture UNI_Projektas_arch of Testbenchas
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(129): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(130): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(134): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(152): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 restart
-# Loading work.uni_projektas(arc)
-run
-run
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UNI_Projektas
-# -- Compiling architecture arc of UNI_Projektas
-restart
-# Loading work.uni_projektas(arc)
+# Loading work.testbenchas(uni_projektas_arch)
 run
 run
 run

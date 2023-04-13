@@ -13,7 +13,8 @@ entity MRAM_Controller is
 	CLK : in std_logic := '0';
 	data_in : in std_logic_vector(15 downto 0) := (others => '0');
 	data_out : out std_logic_vector(15 downto 0) := (others => '0');
-	address_in : in std_logic_vector(17 downto 0) := (others => '0');
+	address_in_write : in std_logic_vector(17 downto 0) := (others => '0');
+	address_in_read : in std_logic_vector(17 downto 0) := (others => '0');
 	write_data : in std_logic := '0';
 	read_data : in std_logic := '0';
 	done : out std_logic := '0';
@@ -47,6 +48,7 @@ begin
 		case curr_state is
 			when idle =>
 				MRAM_D <= (others => 'Z');
+				MRAM_A <= (others => '0');
 				--done <= '1';
 			when writing =>
 				--done <= '0';
@@ -54,6 +56,7 @@ begin
 					when 0 =>
 						--Set data
 						MRAM_D <= data_in;
+						MRAM_A <= address_in_write;
 					when 1 =>
 						--Idle, wait for 20ns
 					when 2 =>
@@ -65,7 +68,7 @@ begin
 				case counter is
 					when 0 =>
 						--Set data
-						
+						MRAM_A <= address_in_read;
 					when 1 =>
 						--Idle, wait for 20ns
 					when 2 =>
@@ -107,9 +110,5 @@ begin
 		end if;
 	end if;
 end process;
-
-
-
-
 
 end architecture;

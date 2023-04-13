@@ -8,16 +8,18 @@ use ieee.std_logic_textio.all;
 
 entity SPI_Controller is 
 generic(
-	SEND_CLK_COUNTER_MAX : integer := 500;
-	BITS : integer := 16
+	SEND_CLK_COUNTER_MAX : integer := 100;
+	BITS : integer := 16;
+	SEND_CLK_WAIT_MAX : integer := 100 * 10
 );
 port(
 	CLK : in std_logic;
-	SPI_MOSI : out std_logic;
+	SPI_MOSI : inout std_logic;
 	SPI_SCLK : out std_logic;
 	SPI_CS : out std_logic;
 	SPI_send_data : std_logic_vector(BITS-1 downto 0) := (others => '0');
-	SPI_send_irq : std_logic := '0'
+	SPI_send_irq : std_logic := '0';
+	SPI_FIFO_EMPTY : out std_logic := '0'
 );
 end entity;
 
@@ -37,13 +39,13 @@ END component;
 
 component SPI_TX is 
 generic(
-	SEND_CLK_COUNTER_MAX : integer := 500;
+	SEND_CLK_COUNTER_MAX : integer := 100;
 	BITS : integer := 8
 );
 port(
 	CLK: in std_logic := '0';
 	SPI_SCLK: out std_logic := '0';
-	SPI_MOSI: out std_logic := '0';
+	SPI_MOSI: inout std_logic := '0';
 	SEND_DATA: in std_logic_vector(BITS-1 downto 0) := (others => '0');
 	SEND_IRQ: in std_logic := '0';
 	SEND_DONE: out std_logic := '0'
@@ -65,9 +67,11 @@ signal tx_send_done : std_logic := '0';
 type state is (idle, reading_fifo, transmiting, cs_up);
 signal curr_state : state := idle;
 
-signal cs_up_counter : integer range 0 to SEND_CLK_COUNTER_MAX := 0;
+signal cs_up_counter : integer range 0 to SEND_CLK_WAIT_MAX := 0;
 
 begin
+
+SPI_FIFO_EMPTY <= fifo_empty;
 
 spi_fifo_component : wizard_spi_fifo port map(clock => fifo_clk, data => fifo_data, rdreq => fifo_rdreq, wrreq => fifo_wrreq, empty => fifo_empty, q => fifo_q);
 
@@ -103,7 +107,7 @@ begin
 					SPI_CS <= '1';
 				end if;
 			when cs_up =>
-				if(cs_up_counter = SEND_CLK_COUNTER_MAX) then
+				if(cs_up_counter = SEND_CLK_WAIT_MAX) then
 					curr_state <= idle;
 					cs_up_counter <= 0;
 				else

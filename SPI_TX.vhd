@@ -6,13 +6,13 @@ use ieee.std_logic_textio.all;
 
 entity SPI_TX is 
 generic(
-	SEND_CLK_COUNTER_MAX : integer := 500;
+	SEND_CLK_COUNTER_MAX : integer := 100;
 	BITS : integer := 16
 );
 port(
 	CLK: in std_logic;
 	SPI_SCLK: out std_logic := '0';
-	SPI_MOSI: out std_logic := '0';
+	SPI_MOSI: inout std_logic := '0';
 	SEND_DATA: in std_logic_vector(BITS-1 downto 0) := (others => '0');
 	SEND_IRQ: in std_logic := '0';
 	SEND_DONE: out std_logic := '0'
@@ -30,6 +30,7 @@ signal sclk : std_logic := '1';
 signal sclk_fall : std_Logic := '0';
 
 signal clk_counter : integer range 0 to SEND_CLK_COUNTER_MAX := 0;
+signal is_read : std_logic := '0'; --Read 1, write - 0
 
 begin
 
@@ -46,6 +47,7 @@ begin
 				bits_sent <= 0;
 				if(SEND_IRQ = '1') then
 					tx_buf <= SEND_DATA;
+					is_read <= SEND_DATA(15); 
 					curr_state <= running;
 				end if;
 			when running =>
@@ -53,13 +55,18 @@ begin
 					--Pereiname i kita busena sclk
 					sclk <= not sclk;
 					if(sclk = '1') then --Pereiname i zema busena
-						SPI_MOSI <= tx_buf(BITS-1);
-						tx_buf <= tx_buf(BITS-2 downto 0) & '0';
+						if(bits_sent >= 8 and is_read = '1') then --Z busena jei skaitome
+							SPI_MOSI <= 'Z';
+						else
+							SPI_MOSI <= tx_buf(BITS-1);
+							tx_buf <= tx_buf(BITS-2 downto 0) & '0';
+						end if;
 						bits_sent <= bits_sent + 1;
 						if(bits_sent = BITS) then
 							curr_state <= idle;
 							SEND_DONE <= '1';
 						end if;
+						
 					end if;
 					clk_counter  <= 0;
 				else

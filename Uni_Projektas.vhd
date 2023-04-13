@@ -40,7 +40,11 @@ port(
 	MRAM_WRITE_EN : out std_logic := 'Z';
 	MRAM_UPPER_EN : out std_logic := 'Z';
 	MRAM_LOWER_EN : out std_logic := 'Z';
-	MRAM_D : inout std_logic_vector(15 downto 0) := (others => 'Z')
+	MRAM_D : inout std_logic_vector(15 downto 0) := (others => 'Z');
+	
+	--UART
+	UART_RX : in std_logic := 'Z';
+	UART_TX : out std_logic := '1'
 	
 );
 end entity;
@@ -135,18 +139,10 @@ generic(
 port(
 	CLK: in std_logic;
 	SEND_DATA_IN: in std_logic_vector(7 downto 0) := (others => '0');
+	UART_FIFO_EMPTY: out std_logic := '0';
 	SEND_DATA_IN_REQ: in std_logic := '0';
 	TX : out std_logic := '1'
 );
-end component;
-
-component UART_RX is
-	port(
-	CLK : in std_logic := '0';
-	RX : in std_logic := '0';
-	DATA_OUT : out std_logic_vector(7 downto 0) := (others => '0');
-	DATA_READY : out std_logic := '0'
-	);
 end component;
 
 component corr_func_rom_1 IS
@@ -163,22 +159,35 @@ END component;
 component SPI_Controller is 
 generic(
 	SEND_CLK_COUNTER_MAX : integer := 500;
-	BITS : integer := 16
+	BITS : integer := 16;
+	SEND_CLK_WAIT_MAX : integer := 100 * 10
 );
 port(
 	CLK : in std_logic;
-	SPI_MOSI : out std_logic;
+	SPI_MOSI : inout std_logic;
 	SPI_SCLK : out std_logic;
 	SPI_CS : out std_logic;
-	SPI_send_data : std_logic_vector(BITS-1 downto 0) := (others => '0');
-	SPI_send_irq : std_logic := '0'
+	SPI_send_data : in std_logic_vector(BITS-1 downto 0) := (others => '0');
+	SPI_send_irq : in std_logic := '0';
+	SPI_FIFO_EMPTY : out std_logic := '0'
 );
 end component;
 
+--component wizard_pll IS
+--	PORT
+--	(
+--		inclk0		: IN STD_LOGIC  := '0';
+--		c0		: OUT STD_LOGIC 
+--	);
+--end component;
+
+
+
+
 --Function ram signals
-signal func_ram_address_bus : std_logic_vector(7 downto 0) := (others => '0');
-signal func_ram_en : std_logic := '0';
-signal func_ram_out : std_logic_vector(7 downto 0);
+--signal func_ram_address_bus : std_logic_vector(7 downto 0) := (others => '0');
+--signal func_ram_en : std_logic := '0';
+--signal func_ram_out : std_logic_vector(7 downto 0);
 
 --Correlation signals
 --signal c_en : std_logic := '0';
@@ -226,29 +235,167 @@ signal func_ram_out : std_logic_vector(7 downto 0);
 --signal q_3 : std_logic_vector(255 downto 0) := (others => '0');
 
 --Misc
-signal sync_clk : std_logic := '0';
+--signal RECEIVED_CODE : std_logic_vector(5 downto 0);
 
-signal RECEIVED_CODE : std_logic_vector(5 downto 0);
 
---UART
---signal UART_CONTROLLER_DATA_IN : std_logic_vector(7 downto 0) := (others => '0');
---signal UART_CONTROLLER_DATA_REQ : std_Logic := '0';
---signal UART_TX_SIG : std_logic := '1';
---signal data_out_sig : std_logic_vector(7 downto 0) := (others => '0');
---signal data_ready_sig : std_logic := '0';
+--signal shift_en : std_logic := '0';
 
-signal shift_en : std_logic := '0';
+component MRAM_Controller is
+	port(
+	CLK : in std_logic := '0';
+	data_in : in std_logic_vector(15 downto 0) := (others => '0');
+	data_out : out std_logic_vector(15 downto 0) := (others => '0');
+	address_in_write : in std_logic_vector(17 downto 0) := (others => '0');
+	address_in_read : in std_logic_vector(17 downto 0) := (others => '0');
+	write_data : in std_logic := '0';
+	read_data : in std_logic := '0';
+	done : out std_logic := '0';
+	
+	MRAM_EN : out std_logic := '0';
+	MRAM_OUTPUT_EN : out std_logic := '0';
+	MRAM_WRITE_EN : out std_logic := '0';
+	MRAM_UPPER_EN : out std_logic := '0';
+	MRAM_LOWER_EN : out std_logic := '0';
+	MRAM_A : out std_logic_vector(17 downto 0) := (others => '0');
+	MRAM_D : inout std_logic_vector(15 downto 0) := (others => '0')
+	);
+end component;
+
+component STATE_MANAGER is
+port (
+	CLK : in std_logic := '0';
+	SETUP_DONE : in std_logic := '0';
+	READ_ADC_DONE : in std_logic := '0';
+	WRITE_OUT_DONE : in std_logic := '0';
+	
+	EN_READ_ADC : out std_logic := '0';
+	EN_WRITE_OUT_MRAM : out std_logic := '0'
+	
+);
+end component;
+
+component Setup_manager is
+port(
+	CLK : in std_logic := '0';
+	EN_SETUP : in std_logic := '0';
+	
+	SPI_send_data : out std_logic_vector(16-1 downto 0) := (others => '0');
+	SPI_send_irq : out std_logic := '0';
+	
+	SETUP_DONE : out std_logic := '0'
+);
+end component;
+
+component Read_adc_manager is
+port(
+	CLK : in std_logic := '0';
+	DCLK : in std_logic := '0';
+	ADC_BIT : in std_logic_vector(9 downto 0) := (others => 'Z');
+	MRAM_DATA_OUT : out std_logic_vector(15 downto 0) := (others => '0');
+	MRAM_ADDRESS_OUT : out std_logic_vector(17 downto 0) := (others => '0');
+	MRAM_WRITE_DATA : out std_logic := '0';
+	MRAM_DONE : in std_logic := '0';
+	
+	EN_READ_ADC : in std_logic := '0';
+	READ_ADC_DONE : out std_logic := '0'
+);
+end component;
+
+component Write_out_mram_manager is
+port(
+	CLK : in std_logic := '0';
+	UART_SEND_DATA : out std_logic_vector(7 downto 0);
+	UART_DATA_IRQ : out std_logic := '0';
+	UART_FIFO_EMPTY : in std_logic := '0';
+	
+	MRAM_DATA_OUT : in std_logic_vector(15 downto 0) := (others => '0');
+	MRAM_ADDRESS_IN : out std_logic_vector(17 downto 0) := (others => '0');
+	MRAM_READ_DATA : out std_logic := '0';
+	MRAM_DONE : in std_logic := '0';
+
+	WRITE_OUT_DONE : out std_logic := '0';
+	EN_WRITE_OUT_MRAM : in std_logic := '0'
+);
+end component;
+
+component Multi_OR is
+generic(
+	BITS : integer := 16
+);
+port(
+	input1 : in std_logic_vector(BITS-1 downto 0);
+	input2 : in std_logic_vector(BITS-1 downto 0);
+	output : out std_logic_vector(BITS-1 downto 0)
+);
+
+end component;
+
+--MRAM
+
+signal MRAM_DATA_IN : std_logic_vector(15 downto 0) := (others => '0');
+signal MRAM_DATA_OUT : std_logic_vector(15 downto 0) := (others => '0');
+signal MRAM_ADDRESS_IN_READ : std_logic_vector(17 downto 0) := (others => '0');
+signal MRAM_ADDRESS_IN_WRITE : std_logic_vector(17 downto 0) := (others => '0');
+signal MRAM_WRITE_DATA : std_logic := '0';
+signal MRAM_READ_DATA : std_logic := '0';
+signal MRAM_DONE : std_logic := '0';
+
+--State machine
+signal SETUP_DONE : std_logic := '0';
+signal READ_ADC_DONE : std_logic := '0';
+signal WRITE_OUT_DONE : std_logic := '0';
+
+signal EN_SETUP : std_logic := '1';
+signal EN_READ_ADC : std_logic := '0';
+signal EN_WRITE_OUT_MRAM : std_logic := '0';
 
 --SPI
-signal config_command_counter : integer range 0 to 10000000 := 0;
+
 signal ADC_SPI_send_data : std_logic_vector(16-1 downto 0) := (others => '0');
+signal ADC_SPI_send_data1 : std_logic_vector(16-1 downto 0) := (others => '0');
+signal ADC_SPI_send_data2 : std_logic_vector(16-1 downto 0) := (others => '0');
 signal ADC_SPI_send_irq : std_logic := '0';
+signal ADC_SPI_send_irq1 : std_logic := '0';
+signal ADC_SPI_send_irq2 : std_logic := '0';
+signal ADC_SPI_fifo_empty : std_logic := '0';
+signal button_active : std_logic := '0';
+
+--UART
+signal UART_SEND_DATA : std_logic_vector(7 downto 0);
+signal UART_DATA_IRQ : std_logic := '0';
+signal UART_FIFO_EMPTY : std_logic := '0';
 
 begin
 
+--pll1 : wizard_pll port map(inclk0 => CLK, c0 => ADC_CLK); --75MHz
+ADC_SHDN <= '0';
+ADC_CLK <= CLK;
 
+this_mram_controller : MRAM_Controller port map(CLK => CLK, data_in => MRAM_DATA_IN, data_out => MRAM_DATA_OUT, address_in_write => MRAM_ADDRESS_IN_WRITE, address_in_read => MRAM_ADDRESS_IN_READ, 
+							write_data => MRAM_WRITE_DATA, read_data => MRAM_READ_DATA, done => MRAM_DONE, MRAM_EN => MRAM_EN, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,
+							MRAM_WRITE_EN => MRAM_WRITE_EN, MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_A => MRAM_A, MRAM_D => MRAM_D);
 
-adc_spi_controller : SPI_Controller port map(CLK => CLK, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK, SPI_CS => ADC_SPI_CS, SPI_send_data => ADC_SPI_send_data, SPI_send_irq => ADC_SPI_Send_irq);
+this_state_manager : state_manager port map (CLK => CLK, SETUP_DONE => SETUP_DONE, READ_ADC_DONE => READ_ADC_DONE, WRITE_OUT_DONE => WRITE_OUT_DONE, 
+							EN_READ_ADC => EN_READ_ADC, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM);
+this_setup_manager : setup_manager port map(CLK => CLK, EN_SETUP => EN_SETUP, SPI_send_data => ADC_SPI_Send_data1, SPI_send_irq => ADC_SPI_Send_irq1, SETUP_DONE => SETUP_DONE);
+this_read_adc_manager : read_adc_manager port map(CLK => CLK, DCLK => ADC_DCLKA, ADC_BIT => ADC_BIT_A, MRAM_DATA_OUT => MRAM_DATA_IN, 
+							MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA, MRAM_DONE => MRAM_DONE, EN_READ_ADC => EN_READ_ADC,
+							READ_ADC_DONE => READ_ADC_DONE);
+this_write_out_mram_manager : write_out_mram_manager port map (CLK => CLK,UART_SEND_DATA=>UART_SEND_DATA, UART_DATA_IRQ => UART_DATA_IRQ, 
+							MRAM_DATA_OUT => MRAM_DATA_OUT, MRAM_ADDRESS_IN => MRAM_ADDRESS_IN_READ, MRAM_READ_DATA => MRAM_READ_DATA, MRAM_DONE => MRAM_DONE,
+							WRITE_OUT_DONE => WRITE_OUT_DONE, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
+
+spi_send_data_multi_or : Multi_OR generic map (BITS => 16) port map(input1 => ADC_SPI_send_data1, input2 => ADC_SPI_send_data2, output => ADC_SPI_send_data);
+--ADC_SPI_send_irq_multi_or : Multi_OR generic map(BITS => 1) port map (input1 => ADC_SPI_send_irq1,input2 => ADC_SPI_send_irq2, output => ADC_SPI_send_irq);
+ADC_SPI_send_irq <= ADC_SPI_Send_irq1 or ADC_SPI_send_irq2;
+adc_spi_controller : SPI_Controller generic map (SEND_CLK_COUNTER_MAX => 10, BITS => 16, SEND_CLK_WAIT_MAX => 20) port map(CLK => CLK, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK,
+							SPI_CS => ADC_SPI_CS, SPI_send_data => ADC_SPI_send_data, SPI_send_irq => ADC_SPI_Send_irq, SPI_FIFO_EMPTY => ADC_SPI_fifo_empty);
+UART_Controller_1 : UART_Controller generic map(baud_rate => baud_rate) port map(CLK => CLK,
+	SEND_DATA_IN => UART_SEND_DATA,
+	SEND_DATA_IN_REQ => UART_DATA_IRQ,
+	TX => UART_TX, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
+							
+							
 
 --adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => address_a_1, address_a_2 => address_a_2, address_b_1 => address_b_1,
 --	address_b_2 => address_b_2,
@@ -260,8 +407,9 @@ adc_spi_controller : SPI_Controller port map(CLK => CLK, SPI_MOSI => ADC_SPI_SDI
 --												c_en => c_en, DATA_DONE => UART_CONTROLLER_DATA_REQ, shift_en => shift_en,
 --												corr_func_rom_adress_a => address_3_a, corr_func_rom_adress_b => address_3_b);
 --wizard_ram_1 : wizard_ram port map(address => func_ram_address_bus, clock => CLK, data => "00000000", wren => '0', q => func_ram_out);
-ADC_CLK <= CLK; --Clock divideris padarys 10MHz
-ADC_SHDN <= '0';
+
+
+
 --clock_divider1 : clock_divider port map(CLK => CLK, Prescaler => std_Logic_vector(to_unsigned(5, 16)), CLK_OUT => sync_clk);
 --corr_long : Correlation_function generic map(function_length => 50) port map(EN => c_en, CLK => CLK, output_value => c_long_value, 
 --											input_adc_values => q(399 downto 0), input_function_ram => q_3);
@@ -291,38 +439,18 @@ ADC_SHDN <= '0';
 --UART_CONTROLLER_DATA_IN <= "00" & RECEIVED_CODE;
 
 
---UART_Controller_1 : UART_Controller generic map(baud_rate => baud_rate) port map(CLK => CLK,
---	SEND_DATA_IN => UART_CONTROLLER_DATA_IN,
---	SEND_DATA_IN_REQ => UART_CONTROLLER_DATA_REQ,
---	TX => UART_TX_SIG);
+
 	
 
---Registrai ADC
---00h default
---01h default
---02h default
---03h default
---04h 05h default
---06h default, testavimui 11000000
+
 
 process(CLK)
 begin
-	if rising_edge(CLK) then
-		if(config_command_counter /= 10000000) then
-			config_command_counter <= config_command_counter + 1;
-			case config_command_counter is
-				when 1000000+1 =>
-					--ADC_SPI_send_data <= "0000011011000000"; --test patternas i 06h registra
-					ADC_SPI_send_data <= "0000011011000000"; --REad data/DCLK timing 03h - po defaultu 10110110
-					ADC_SPI_send_irq <= '1';
-				when 1000000+2 =>
-					ADC_SPI_send_irq <= '0';
-				when others =>
-					ADC_SPI_send_irq <= '0';
-			end case;
+	if falling_edge(CLK) then
+	if(BUTTON = '0') then
+		button_active <= '1';
 		end if;
 	end if;
-
 end process;
 
 
