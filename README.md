@@ -7,14 +7,14 @@ This project includes:
 * VHDL code for Cyclone 2 EP2C5T144C8 FPGA development board
 * Computer aplication code to receive data, written in C#
 
-##PCB board
+## PCB board
 Some images of high speed PCB:
 
 ![Foto1](/foto/Foto1.png)
 
 ![Foto1](/foto/Foto2.png)
 
-##Features
+## Features
 * Receives 20MHz signal
 * Filters down to 2MHz
 * Samples signal at 50MHz frequency
