@@ -407,4 +407,7 @@ db/Uni_Projektas.quiproj.14140.rdr.flock
 db/Uni_Projektas.quiproj.6292.rdr.flock
 *.Zip
 *.flock
+<<<<<<< HEAD
 *.hdb
+=======
+>>>>>>> parent of d39af53 (Merge pull request #1 from simonuks221/SPI)
