@@ -142,10 +142,10 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity Testbenchas
 # -- Compiling architecture UNI_Projektas_arch of Testbenchas
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(129): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(130): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(133): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(134): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(152): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(138): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(164): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Testbenchas
 # vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Testbenchas 
@@ -179,84 +179,64 @@
 # 
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
 # 
-#           Attempting to use alternate WLF file "./wlftt6fjc4".
+#           Attempting to use alternate WLF file "./wlfta4dmf5".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftt6fjc4
+#           Using alternate file: ./wlfta4dmf5
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 30 us
-run
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Testbenchas
-# -- Compiling architecture UNI_Projektas_arch of Testbenchas
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(129): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(130): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(134): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(152): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+add wave -position end  sim:/testbenchas/i1/this_state_manager/curr_state
 restart
-# Loading work.testbenchas(uni_projektas_arch)
 run
-run
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Testbenchas
-# -- Compiling architecture UNI_Projektas_arch of Testbenchas
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(133): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(134): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(138): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(155): near "if": expecting ';'
-# ** Warning: [2] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(158): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
+# ** Fatal: (vsim-3421) Value 1001 for address_counter is out of range 0 to 1000.
+#    Time: 56459210 ns  Iteration: 0  Process: /testbenchas/i1/this_write_out_mram_manager/line__35 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
+# Fatal error in Process line__35 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd line 45
 # 
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(164): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Error: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(172): VHDL Compiler exiting
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd 45 Process line__35
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity Testbenchas
-# -- Compiling architecture UNI_Projektas_arch of Testbenchas
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(133): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(134): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(138): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(164): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Testbenchas
-# -- Compiling architecture UNI_Projektas_arch of Testbenchas
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(133): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(134): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(138): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(164): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# -- Compiling entity Setup_manager
+# -- Compiling architecture arc of Setup_manager
 restart
-# Loading work.testbenchas(uni_projektas_arch)
+# Loading work.setup_manager(arc)
 run
+# ** Fatal: (vsim-3421) Value 1001 for address_counter is out of range 0 to 1000.
+#    Time: 56459210 ns  Iteration: 0  Process: /testbenchas/i1/this_write_out_mram_manager/line__35 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
+# Fatal error in Process line__35 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd line 45
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd 45 Process line__35
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Setup_manager
+# -- Compiling architecture arc of Setup_manager
+restart
+# Loading work.setup_manager(arc)
 run
-run
+# ** Fatal: (vsim-3421) Value 1001 for address_counter is out of range 0 to 1000.
+#    Time: 56459210 ns  Iteration: 0  Process: /testbenchas/i1/this_write_out_mram_manager/line__35 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
+# Fatal error in Process line__35 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd line 45
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd 45 Process line__35
+# 
 vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -269,13 +249,41 @@ vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projekta
 restart
 # Loading work.write_out_mram_manager(arc)
 run
+# ** Fatal: (vsim-3421) Value 1001 for address_counter is out of range 0 to 1000.
+#    Time: 56459410 ns  Iteration: 1  Process: /testbenchas/i1/this_read_adc_manager/line__31 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd
+# Fatal error in Process line__31 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd line 39
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd 39 Process line__31
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Read_adc_manager
+# -- Compiling architecture arc of Read_adc_manager
+restart
+# Loading work.read_adc_manager(arc)
 run
-run
-run
-add wave -position 27  sim:/testbenchas/i1/this_write_out_mram_manager/address_counter
-add wave -position end  sim:/testbenchas/i1/this_write_out_mram_manager/UART_FIFO_EMPTY
+add wave -position end  sim:/testbenchas/i1/this_state_manager/READ_ADC_DONE
+add wave -position end  sim:/testbenchas/i1/this_state_manager/SETUP_DONE
+add wave -position end  sim:/testbenchas/i1/this_state_manager/WRITE_OUT_DONE
 restart
 run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Read_adc_manager
+# -- Compiling architecture arc of Read_adc_manager
+restart
+# Loading work.read_adc_manager(arc)
 run
 vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -288,5 +296,4 @@ vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projekta
 # -- Compiling architecture arc of Write_out_mram_manager
 restart
 # Loading work.write_out_mram_manager(arc)
-run
 run

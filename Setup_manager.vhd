@@ -11,6 +11,7 @@ port(
 	
 	SPI_send_data : out std_logic_vector(16-1 downto 0) := (others => '0');
 	SPI_send_irq : out std_logic := '0';
+	SPI_FIFO_EMPTY : in std_logic := '0';
 	
 	SETUP_DONE : out std_logic := '0'
 );

@@ -36,7 +36,6 @@
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.ConnectButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.VoltageRichTextBox = new System.Windows.Forms.RichTextBox();
             this.VoltageChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -85,28 +84,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Connect to COM port";
             // 
-            // VoltageRichTextBox
-            // 
-            this.VoltageRichTextBox.Location = new System.Drawing.Point(12, 67);
-            this.VoltageRichTextBox.Name = "VoltageRichTextBox";
-            this.VoltageRichTextBox.Size = new System.Drawing.Size(376, 296);
-            this.VoltageRichTextBox.TabIndex = 7;
-            this.VoltageRichTextBox.Text = "";
-            // 
             // VoltageChart
             // 
             chartArea1.Name = "ChartArea1";
             this.VoltageChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.VoltageChart.Legends.Add(legend1);
-            this.VoltageChart.Location = new System.Drawing.Point(410, 84);
+            this.VoltageChart.Location = new System.Drawing.Point(45, 84);
             this.VoltageChart.Name = "VoltageChart";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.VoltageChart.Series.Add(series1);
-            this.VoltageChart.Size = new System.Drawing.Size(357, 300);
+            this.VoltageChart.Size = new System.Drawing.Size(722, 300);
             this.VoltageChart.TabIndex = 8;
             this.VoltageChart.Text = "chart1";
             // 
@@ -116,7 +107,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.VoltageChart);
-            this.Controls.Add(this.VoltageRichTextBox);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.ConnectionStatusLabel);
             this.Name = "Form1";
@@ -136,7 +126,6 @@
         private System.Diagnostics.EventLog eventLog1;
         private System.Windows.Forms.Button ConnectButton;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox VoltageRichTextBox;
         private System.Windows.Forms.DataVisualization.Charting.Chart VoltageChart;
     }
 }

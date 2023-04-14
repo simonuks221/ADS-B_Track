@@ -56,9 +56,10 @@ namespace PCKodas
             {
                 VoltageChart.Series[0].Points.AddY(i);
             }
+            VoltageChart.Series[0].Name = "Itampa";
+            VoltageChart.Series[0].
             
         }
-
 
         void ChangeDisplayedInfo(string connectionStatusTest = null, String[] ports = null) //Changes the main label and port box items
         {
@@ -88,7 +89,6 @@ namespace PCKodas
             GetAvailableComPorts();
         }
 
-
         void GetAvailableComPorts()
         {
             try
@@ -104,7 +104,6 @@ namespace PCKodas
                             break;
                         }
                     }
-
                 }
                 else
                 {
@@ -140,39 +139,29 @@ namespace PCKodas
                     return false;
                 }
             }
-            
             return false;
-            
         }
 
         private void Port_DataReceived(object sender, SerialDataReceivedEventArgs e) //Receive USB data
         {
-            
             int count = port.BytesToRead;
             byte[] ByteArray = new byte[count];
             port.Read(ByteArray, 0, count);
-            Debug.WriteLine("Got" + ByteArray.Length);
+            Debug.WriteLine("Got data length: " + ByteArray.Length);
 
             if (ByteArray.Length > 0) {
-                for (int i = 0; i < ByteArray.Length; i+= 3)
+                for (int i = 0; i < ByteArray.Length; i++)
                 {
-                    switch ((int)ByteArray[i])
-                    {
-                        case (1):
-                            break;
-                    }
+                    VoltageChart.Series[0].Points.AddY(ByteArray[i]);
+                    Debug.WriteLine("Added: " + ByteArray[i]);
                 }
-               
             }
-
         }
 
         private void ConnectButton_Click(object sender, EventArgs e)
         {
             ConnectController(comboBox1.GetItemText(comboBox1.SelectedItem));
         }
-
-      
 
         /*
         private void groupBox1_Paint(object sender, PaintEventArgs e)

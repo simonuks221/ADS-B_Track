@@ -37,12 +37,20 @@ begin
 	if rising_edge(CLK) then
 		UART_DATA_IRQ <= '0';
 		MRAM_READ_DATA <= '0';
-		if(EN_WRITE_OUT_MRAM = '1') then
+		if(EN_WRITE_OUT_MRAM = '0') then
+			WRITE_OUT_DONE <= '0';
+			address_counter <= 0;
+		else
 			if(MRAM_DONE = '1') then
 				if(UART_FIFO_EMPTY = '1') then
-					MRAM_READ_DATA <= '1';
-					UART_DATA_IRQ <= '1';
-					address_counter <= address_counter + 1;
+					if(address_counter = 1000) then
+						WRITE_OUT_DONE <= '1';
+					else
+						WRITE_OUT_DONE <= '0';
+						MRAM_READ_DATA <= '1';
+						UART_DATA_IRQ <= '1';
+						address_counter <= address_counter + 1;
+					end if;
 				end if;
 			end if;
 			

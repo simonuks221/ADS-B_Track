@@ -281,6 +281,7 @@ port(
 	
 	SPI_send_data : out std_logic_vector(16-1 downto 0) := (others => '0');
 	SPI_send_irq : out std_logic := '0';
+	SPI_FIFO_EMPTY : in std_logic := '0';
 	
 	SETUP_DONE : out std_logic := '0'
 );
@@ -377,7 +378,8 @@ this_mram_controller : MRAM_Controller port map(CLK => CLK, data_in => MRAM_DATA
 
 this_state_manager : state_manager port map (CLK => CLK, SETUP_DONE => SETUP_DONE, READ_ADC_DONE => READ_ADC_DONE, WRITE_OUT_DONE => WRITE_OUT_DONE, 
 							EN_READ_ADC => EN_READ_ADC, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM);
-this_setup_manager : setup_manager port map(CLK => CLK, EN_SETUP => EN_SETUP, SPI_send_data => ADC_SPI_Send_data1, SPI_send_irq => ADC_SPI_Send_irq1, SETUP_DONE => SETUP_DONE);
+this_setup_manager : setup_manager port map(CLK => CLK, EN_SETUP => EN_SETUP, SPI_send_data => ADC_SPI_Send_data1, SPI_send_irq => ADC_SPI_Send_irq1, SETUP_DONE => SETUP_DONE,
+							SPI_FIFO_EMPTY => ADC_SPI_fifo_empty);
 this_read_adc_manager : read_adc_manager port map(CLK => CLK, DCLK => ADC_DCLKA, ADC_BIT => ADC_BIT_A, MRAM_DATA_OUT => MRAM_DATA_IN, 
 							MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA, MRAM_DONE => MRAM_DONE, EN_READ_ADC => EN_READ_ADC,
 							READ_ADC_DONE => READ_ADC_DONE);

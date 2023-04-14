@@ -31,9 +31,11 @@ READ_ADC_DONE <= '1' when address_counter = 1000 else '0';
 process(DCLK)
 begin
 	if rising_edge(DCLK) then
-		if(EN_READ_ADC = '1') then
+		if(EN_READ_ADC = '0') then
+			read_counter <= 0;
+			address_counter <= 0;
+		else
 			if(read_counter = 5) then
-				
 				if(MRAM_DONE = '1') then
 					read_counter <= 0;
 					address_counter <= address_counter + 1;
