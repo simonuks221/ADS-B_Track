@@ -251,13 +251,13 @@ component MRAM_Controller is
 	read_data : in std_logic := '0';
 	done : out std_logic := '0';
 	
-	MRAM_EN : out std_logic := '0';
-	MRAM_OUTPUT_EN : out std_logic := '0';
-	MRAM_WRITE_EN : out std_logic := '0';
-	MRAM_UPPER_EN : out std_logic := '0';
-	MRAM_LOWER_EN : out std_logic := '0';
+	MRAM_EN : out std_logic := '1';
+	MRAM_OUTPUT_EN : out std_logic := '1';
+	MRAM_WRITE_EN : out std_logic := '1';
+	MRAM_UPPER_EN : out std_logic := '1';
+	MRAM_LOWER_EN : out std_logic := '1';
 	MRAM_A : out std_logic_vector(17 downto 0) := (others => '0');
-	MRAM_D : inout std_logic_vector(15 downto 0) := (others => '0')
+	MRAM_D : inout std_logic_vector(15 downto 0) := (others => 'Z')
 	);
 end component;
 

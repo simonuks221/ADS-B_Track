@@ -4,10 +4,6 @@ use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
---50MHz 20ns
---Read Address, E low, G low, Lb UB low, Q valid after 35ns. When E high Hi-z after 15ns
---Write Address, E low, W low. Write cycle time 35ns, address setup 0ns. Data valid untill W high 10ns
-
 entity MRAM_TEST is
 	port(
 	CLK : in std_logic := '0';
@@ -39,7 +35,7 @@ begin
 				MRAM_LOWER_EN <= '1';
 				MRAM_A <= (others => '0');
 				MRAM_D <= (others => 'Z');
-			when 5000 =>
+			when 5000 => --Write
 				MRAM_A <= std_logic_vector(to_unsigned(0, MRAM_A'length));
 				--MRAM_EN <= '0';
 				MRAM_WRITE_EN <= '0';
