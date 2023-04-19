@@ -40,7 +40,8 @@ begin
 					SPI_send_irq <= '0';
 					
 				when 4 =>
-					SPI_send_data <= "0000011011000000"; --
+					--SPI_send_data <= "0000011011000000"; --TEST PATTERN 
+					SPI_send_data <= "0000011000010000"; -- NORMAL WITH BIANRY OFFSET
 					SPI_send_irq <= '1';
 				when 5 =>
 					SPI_send_irq <= '0';

@@ -1,0 +1,98 @@
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# File: C:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\Uni_ProjektasOG.csv
+# Generated on: Wed Apr 19 13:39:13 2023
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Differential Pair,Weak Pull-Up Resistor
+ADC_BIT_A[9],Input,PIN_80,3,B3_N1,PIN_80,,,,,
+ADC_BIT_A[8],Input,PIN_79,3,B3_N1,PIN_79,,,,,
+ADC_BIT_A[7],Input,PIN_76,3,B3_N1,PIN_76,,,,,
+ADC_BIT_A[6],Input,PIN_75,3,B3_N1,PIN_75,,,,,
+ADC_BIT_A[5],Input,PIN_74,3,B3_N1,PIN_74,,,,,
+ADC_BIT_A[4],Input,PIN_73,3,B3_N1,PIN_73,,,,,
+ADC_BIT_A[3],Input,PIN_72,4,B4_N0,PIN_72,,,,,
+ADC_BIT_A[2],Input,PIN_71,4,B4_N0,PIN_71,,,,,
+ADC_BIT_A[1],Input,PIN_70,4,B4_N0,PIN_70,,,,,
+ADC_BIT_A[0],Input,PIN_69,4,B4_N0,PIN_69,,,,,
+ADC_BIT_B[9],Input,PIN_65,4,B4_N0,PIN_65,,,,,
+ADC_BIT_B[8],Input,PIN_67,4,B4_N0,PIN_67,,,,,
+ADC_BIT_B[7],Input,PIN_63,4,B4_N0,PIN_63,,,,,
+ADC_BIT_B[6],Input,PIN_64,4,B4_N0,PIN_64,,,,,
+ADC_BIT_B[5],Input,PIN_59,4,B4_N0,PIN_59,,,,,
+ADC_BIT_B[4],Input,PIN_60,4,B4_N0,PIN_60,,,,,
+ADC_BIT_B[3],Input,PIN_57,4,B4_N1,PIN_57,,,,,
+ADC_BIT_B[2],Input,PIN_58,4,B4_N1,PIN_58,,,,,
+ADC_BIT_B[1],Input,PIN_53,4,B4_N1,PIN_53,,,,,
+ADC_BIT_B[0],Input,PIN_55,4,B4_N1,PIN_55,,,,,
+ADC_CLK,Output,PIN_48,4,B4_N1,PIN_48,,,,,
+ADC_DCLKA,Input,PIN_86,3,B3_N1,PIN_86,,,,,
+ADC_DCLKB,Input,PIN_51,4,B4_N1,PIN_51,,,,,
+ADC_DORA,Input,PIN_81,3,B3_N1,PIN_81,,,,,
+ADC_DORB,Input,PIN_52,4,B4_N1,PIN_52,,,,,
+ADC_SHDN,Output,PIN_24,1,B1_N1,PIN_24,,,,,
+ADC_SPI_CS,Output,PIN_25,1,B1_N1,PIN_25,,,,,
+ADC_SPI_SCLK,Output,PIN_27,1,B1_N1,PIN_27,,,,,
+ADC_SPI_SDIN,Bidir,PIN_87,3,B3_N1,PIN_87,,,,,
+ADC_SYNC,Output,PIN_45,4,B4_N1,PIN_45,,,,,
+BUTTON,Input,PIN_144,2,B2_N1,PIN_144,,,,,On
+CLK,Input,PIN_17,1,B1_N0,PIN_17,,,,,
+MRAM_A[17],Output,PIN_97,3,B3_N0,PIN_97,,,,,
+MRAM_A[16],Output,PIN_99,3,B3_N0,PIN_99,,,,,
+MRAM_A[15],Output,PIN_100,3,B3_N0,PIN_100,,,,,
+MRAM_A[14],Output,PIN_4,1,B1_N0,PIN_4,,,,,
+MRAM_A[13],Output,PIN_3,1,B1_N0,PIN_3,,,,,
+MRAM_A[12],Output,PIN_8,1,B1_N0,PIN_8,,,,,
+MRAM_A[11],Output,PIN_7,1,B1_N0,PIN_7,,,,,
+MRAM_A[10],Output,PIN_9,1,B1_N0,PIN_9,,,,,
+MRAM_A[9],Output,PIN_141,2,B2_N1,PIN_141,,,,,
+MRAM_A[8],Output,PIN_139,2,B2_N1,PIN_139,,,,,
+MRAM_A[7],Output,PIN_137,2,B2_N1,PIN_137,,,,,
+MRAM_A[6],Output,PIN_136,2,B2_N1,PIN_136,,,,,
+MRAM_A[5],Output,PIN_135,2,B2_N1,PIN_135,,,,,
+MRAM_A[4],Output,PIN_119,2,B2_N0,PIN_119,,,,,
+MRAM_A[3],Output,PIN_114,2,B2_N0,PIN_114,,,,,
+MRAM_A[2],Output,PIN_115,2,B2_N0,PIN_115,,,,,
+MRAM_A[1],Output,PIN_112,2,B2_N0,PIN_112,,,,,
+MRAM_A[0],Output,PIN_113,2,B2_N0,PIN_113,,,,,
+MRAM_D[15],Bidir,PIN_96,3,B3_N0,PIN_96,,,,,
+MRAM_D[14],Bidir,PIN_93,3,B3_N0,PIN_93,,,,,
+MRAM_D[13],Bidir,PIN_94,3,B3_N0,PIN_94,,,,,
+MRAM_D[12],Bidir,,,,PIN_47,,,,,
+MRAM_D[11],Bidir,PIN_92,3,B3_N0,PIN_92,,,,,
+MRAM_D[10],Bidir,,,,PIN_28,,,,,
+MRAM_D[9],Bidir,PIN_142,2,B2_N1,PIN_142,,,,,
+MRAM_D[8],Bidir,PIN_143,2,B2_N1,PIN_143,,,,,
+MRAM_D[7],Bidir,PIN_133,2,B2_N1,PIN_133,,,,,
+MRAM_D[6],Bidir,PIN_132,2,B2_N1,PIN_132,,,,,
+MRAM_D[5],Bidir,PIN_129,2,B2_N1,PIN_129,,,,,
+MRAM_D[4],Bidir,PIN_126,2,B2_N0,PIN_126,,,,,
+MRAM_D[3],Bidir,PIN_125,2,B2_N0,PIN_125,,,,,
+MRAM_D[2],Bidir,PIN_122,2,B2_N0,PIN_122,,,,,
+MRAM_D[1],Bidir,PIN_121,2,B2_N0,PIN_121,,,,,
+MRAM_D[0],Bidir,PIN_120,2,B2_N0,PIN_120,,,,,
+MRAM_EN,Output,PIN_118,2,B2_N0,PIN_118,,,,,
+MRAM_LOWER_EN,Output,PIN_104,3,B3_N0,PIN_104,,,,,
+MRAM_OUTPUT_EN,Output,PIN_101,3,B3_N0,PIN_101,,,,,
+MRAM_UPPER_EN,Output,PIN_103,3,B3_N0,PIN_103,,,,,
+MRAM_WRITE_EN,Output,PIN_134,2,B2_N1,PIN_134,,,,,
+SPI_CS,Bidir,PIN_44,4,B4_N1,PIN_44,,,,,
+SPI_MISO,Bidir,PIN_40,4,B4_N1,PIN_40,,,,,
+SPI_MOSI,Bidir,PIN_41,4,B4_N1,PIN_41,,,,,
+SPI_SCLK,Bidir,PIN_42,4,B4_N1,PIN_42,,,,,
+UART_RX,Input,,,,PIN_18,,,,,
+UART_TX,Output,PIN_26,1,B1_N1,PIN_26,,,,,

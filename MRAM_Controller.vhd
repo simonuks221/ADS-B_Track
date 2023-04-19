@@ -32,7 +32,7 @@ end entity;
 architecture arc of MRAM_Controller is
 type state is (idle, reading, writing);
 signal curr_state : state := idle;
-signal counter : integer range 0 to 3 := 0;
+signal counter : integer range 0 to 4 := 0;
 begin
 
 MRAM_EN <= '1' when curr_state = idle else '0';
@@ -42,13 +42,16 @@ MRAM_LOWER_EN <= '0' when curr_state /= idle else '1';
 MRAM_OUTPUT_EN <= '0' when curr_state = reading else '1';
 done <= '1' when curr_state = idle else '0';
 
+--MRAM_A <= address_in_write when curr_state = writing else address_in_read when curr_state = reading else (others => '0');
+--MRAM_D <= (others => 'Z');
+--MRAM_OUTPUT_EN <= '0';
 process(CLK)
 begin
 	if rising_edge(CLK) then
 		case curr_state is
 			when idle =>
 				MRAM_D <= (others => 'Z');
-				MRAM_A <= (others => '0');
+				--MRAM_A <= (others => '0');
 				--done <= '1';
 			when writing =>
 				--done <= '0';
@@ -72,9 +75,11 @@ begin
 					when 1 =>
 						--Idle, wait for 20ns
 					when 2 =>
-						data_out <= MRAM_D;
+						--data_out <= MRAM_D;
 						--done <= '1';
 						--Read data
+					when 3 =>
+						data_out <= MRAM_D;
 					when others =>
 					
 				end case;
@@ -92,7 +97,9 @@ begin
 				curr_state <= reading;
 			end if;
 		else
-			if(counter = 2) then
+			if(curr_state = writing and counter = 2) then
+				curr_state <= idle;
+			elsif(curr_state = reading and counter = 3) then
 				curr_state <= idle;
 			end if;
 		end if;
@@ -102,8 +109,9 @@ end process;
 --Counter process
 process(CLK)
 begin
-	if rising_edge(CLK) then
+if rising_edge(CLK) then
 		if(curr_state = reading or curr_state = writing) then
+		--if(curr_state = writing) then
 			counter <= counter + 1;
 		else 
 			counter <= 0;

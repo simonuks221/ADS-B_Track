@@ -57,7 +57,7 @@ namespace PCKodas
                 VoltageChart.Series[0].Points.AddY(i);
             }
             VoltageChart.Series[0].Name = "Itampa";
-            VoltageChart.Series[0].
+            
             
         }
 
@@ -124,7 +124,7 @@ namespace PCKodas
             {
                 try
                 {
-                    port = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
+                    port = new SerialPort("COM4", 115200, Parity.None, 8, StopBits.One);
                     port.Open();
                     port.DataReceived += new SerialDataReceivedEventHandler(Port_DataReceived);
                     isConnected = true;
@@ -147,13 +147,17 @@ namespace PCKodas
             int count = port.BytesToRead;
             byte[] ByteArray = new byte[count];
             port.Read(ByteArray, 0, count);
-            Debug.WriteLine("Got data length: " + ByteArray.Length);
+            //Debug.WriteLine("Got data length: " + ByteArray.Length);
 
             if (ByteArray.Length > 0) {
                 for (int i = 0; i < ByteArray.Length; i++)
                 {
-                    VoltageChart.Series[0].Points.AddY(ByteArray[i]);
-                    Debug.WriteLine("Added: " + ByteArray[i]);
+                    Update_Chart(ByteArray[i]);
+                    if (ByteArray[i] != 0)
+                    {
+                        Debug.WriteLine("ADded diff: " + ByteArray[i]);
+                    }
+                    //Debug.WriteLine("Added: " + ByteArray[i]);
                 }
             }
         }
@@ -161,6 +165,15 @@ namespace PCKodas
         private void ConnectButton_Click(object sender, EventArgs e)
         {
             ConnectController(comboBox1.GetItemText(comboBox1.SelectedItem));
+        }
+
+        void Update_Chart(int new_value)
+        {
+            this.Invoke(new MethodInvoker(delegate ()
+            {
+                //Access controls
+                VoltageChart.Series[0].Points.AddY(new_value);
+            }));
         }
 
         /*

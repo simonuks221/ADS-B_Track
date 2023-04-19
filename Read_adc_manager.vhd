@@ -30,7 +30,7 @@ READ_ADC_DONE <= '1' when address_counter = 1000 else '0';
 
 process(DCLK)
 begin
-	if rising_edge(DCLK) then
+	if rising_edge(DCLK) then --Falling edge reikia
 		if(EN_READ_ADC = '0') then
 			read_counter <= 0;
 			address_counter <= 0;

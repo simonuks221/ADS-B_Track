@@ -20,18 +20,17 @@ end entity;
 architecture arc of UART_Controller is
 
 component Clock_divider is
-	port(
-	CLK: in std_logic;
-	Prescaler : in std_logic_vector(15 downto 0);
-
-	CLK_OUT: out std_logic
-	);
+generic(
+Prescaler : integer := 434;
+Half_Prescaler : integer := 217
+);
+port(
+CLK: in std_logic;
+CLK_OUT: out std_logic
+);
 end component;
 
 component UART_TX is
-generic(
-	baud_rate : integer := 9600
-);
 port(
 	CLK: in std_logic;
 	UART_CLK : in std_logic;
@@ -68,7 +67,7 @@ signal fifo_empty : std_logic := '0';
 
 begin
 
-uart_clk_divider : Clock_divider port map(CLK => CLK, Prescaler => std_logic_vector(to_unsigned(baud_rate, 16)), CLK_OUT => UART_CLK);
+uart_clk_divider : Clock_divider port map(CLK => CLK, CLK_OUT => UART_CLK);
 
 uart_tx_1 : UART_TX port map(CLk => CLK, UART_CLK => UART_CLK, SEND_DATA => SEND_DATA_OUT, START_SEND_DATA => START_SEND_DATA, TX => TX,
 				TX_BUSY => TX_BUSY);

@@ -10,128 +10,15 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd}
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_TEST.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity UNI_Projektas
-# -- Compiling architecture arc of UNI_Projektas
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Clock_divider
-# -- Compiling architecture arc of Clock_divider
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_TX
-# -- Compiling architecture arc of SPI_TX
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity wizard_spi_fifo
-# -- Compiling architecture SYN of wizard_spi_fifo
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_Controller.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity MRAM_Controller
-# -- Compiling architecture arc of MRAM_Controller
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/State_manager.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity STATE_MANAGER
-# -- Compiling architecture arc of STATE_MANAGER
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Setup_manager
-# -- Compiling architecture arc of Setup_manager
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Read_adc_manager
-# -- Compiling architecture arc of Read_adc_manager
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Write_out_mram_manager
-# -- Compiling architecture arc of Write_out_mram_manager
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Multi_OR.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Multi_OR
-# -- Compiling architecture arc1 of Multi_OR
+# -- Compiling entity MRAM_TEST
+# -- Compiling architecture arc of MRAM_TEST
 # 
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -146,6 +33,7 @@
 # ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(134): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(138): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(164): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(168): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Testbenchas
 # vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Testbenchas 
@@ -155,145 +43,88 @@
 # Loading ieee.numeric_std(body)
 # Loading ieee.std_logic_textio(body)
 # Loading work.testbenchas(uni_projektas_arch)
-# Loading work.uni_projektas(arc)
-# Loading work.mram_controller(arc)
-# Loading work.state_manager(arc)
-# Loading work.setup_manager(arc)
-# Loading work.read_adc_manager(arc)
-# Loading work.write_out_mram_manager(arc)
-# Loading work.multi_or(arc1)
-# Loading work.spi_controller(arc)
-# Loading work.wizard_spi_fifo(syn)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading altera_mf.altera_device_families(body)
-# Loading altera_mf.scfifo(behavior)
-# Loading work.spi_tx(arc)
-# Loading work.uart_controller(arc)
-# Loading work.clock_divider(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
+# ** Warning: (vsim-3473) Component instance "i1 : UNI_Projektas" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchas File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
 # 
-#           Attempting to use alternate WLF file "./wlfta4dmf5".
+#           Attempting to use alternate WLF file "./wlftnjkdef".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlfta4dmf5
+#           Using alternate file: ./wlftnjkdef
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 30 us
-add wave -position end  sim:/testbenchas/i1/this_state_manager/curr_state
-restart
-run
-# ** Fatal: (vsim-3421) Value 1001 for address_counter is out of range 0 to 1000.
-#    Time: 56459210 ns  Iteration: 0  Process: /testbenchas/i1/this_write_out_mram_manager/line__35 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
-# Fatal error in Process line__35 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd line 45
-# 
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd 45 Process line__35
-# 
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_TEST.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity Setup_manager
-# -- Compiling architecture arc of Setup_manager
-restart
-# Loading work.setup_manager(arc)
+# -- Compiling entity MRAM_TEST
+# -- Compiling architecture arc of MRAM_TEST
+vsim work.mram_test
+# vsim work.mram_test 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.mram_test(arc)
+add wave -position end  sim:/mram_test/CLK
+add wave -position end  sim:/mram_test/MRAM_EN
+add wave -position end  sim:/mram_test/MRAM_OUTPUT_EN
+add wave -position end  sim:/mram_test/MRAM_WRITE_EN
+add wave -position end  sim:/mram_test/MRAM_UPPER_EN
+add wave -position end  sim:/mram_test/MRAM_LOWER_EN
+add wave -position end  sim:/mram_test/MRAM_A
+add wave -position end  sim:/mram_test/MRAM_D
+add wave -position end  sim:/mram_test/counter
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
+# 
+#           Attempting to use alternate WLF file "./wlft0rkbks".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft0rkbks
+# 
+force -freeze sim:/mram_test/CLK 1 0, 0 {50 ps} -r 100
 run
-# ** Fatal: (vsim-3421) Value 1001 for address_counter is out of range 0 to 1000.
-#    Time: 56459210 ns  Iteration: 0  Process: /testbenchas/i1/this_write_out_mram_manager/line__35 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
-# Fatal error in Process line__35 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd line 45
-# 
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd 45 Process line__35
-# 
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_TEST.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity Setup_manager
-# -- Compiling architecture arc of Setup_manager
+# -- Compiling entity MRAM_TEST
+# -- Compiling architecture arc of MRAM_TEST
 restart
-# Loading work.setup_manager(arc)
+# Loading work.mram_test(arc)
 run
-# ** Fatal: (vsim-3421) Value 1001 for address_counter is out of range 0 to 1000.
-#    Time: 56459210 ns  Iteration: 0  Process: /testbenchas/i1/this_write_out_mram_manager/line__35 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
-# Fatal error in Process line__35 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd line 45
-# 
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd 45 Process line__35
-# 
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
+restart
+force -freeze sim:/mram_test/CLK 1 0, 0 {50 ps} -r 100
+run
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_TEST.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity Write_out_mram_manager
-# -- Compiling architecture arc of Write_out_mram_manager
+# -- Compiling entity MRAM_TEST
+# -- Compiling architecture arc of MRAM_TEST
 restart
-# Loading work.write_out_mram_manager(arc)
+# Loading work.mram_test(arc)
 run
-# ** Fatal: (vsim-3421) Value 1001 for address_counter is out of range 0 to 1000.
-#    Time: 56459410 ns  Iteration: 1  Process: /testbenchas/i1/this_read_adc_manager/line__31 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd
-# Fatal error in Process line__31 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd line 39
-# 
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd 39 Process line__31
-# 
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Read_adc_manager
-# -- Compiling architecture arc of Read_adc_manager
 restart
-# Loading work.read_adc_manager(arc)
-run
-add wave -position end  sim:/testbenchas/i1/this_state_manager/READ_ADC_DONE
-add wave -position end  sim:/testbenchas/i1/this_state_manager/SETUP_DONE
-add wave -position end  sim:/testbenchas/i1/this_state_manager/WRITE_OUT_DONE
-restart
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Read_adc_manager
-# -- Compiling architecture arc of Read_adc_manager
-restart
-# Loading work.read_adc_manager(arc)
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Write_out_mram_manager
-# -- Compiling architecture arc of Write_out_mram_manager
-restart
-# Loading work.write_out_mram_manager(arc)
+force -freeze sim:/mram_test/CLK 1 0, 0 {50 ps} -r 100
 run

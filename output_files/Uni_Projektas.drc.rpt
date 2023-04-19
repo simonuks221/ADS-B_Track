@@ -1,5 +1,5 @@
 Design Assistant report for Uni_Projektas
-Thu Apr 13 11:39:56 2023
+Wed Apr 19 14:46:11 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -9,10 +9,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. Design Assistant Summary
   3. Design Assistant Settings
-  4. High Violations
-  5. Medium Violations
-  6. Information only Violations
-  7. Design Assistant Messages
+  4. Information only Violations
+  5. Design Assistant Messages
 
 
 
@@ -38,19 +36,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Design Assistant Summary                                                ;
 +-----------------------------------+-------------------------------------+
-; Design Assistant Status           ; Analyzed - Thu Apr 13 11:39:56 2023 ;
+; Design Assistant Status           ; Analyzed - Wed Apr 19 14:46:11 2023 ;
 ; Revision Name                     ; Uni_Projektas                       ;
-; Top-level Entity Name             ; UNI_Projektas                       ;
+; Top-level Entity Name             ; MRAM_TEST                           ;
 ; Family                            ; Cyclone II                          ;
 ; Total Critical Violations         ; 0                                   ;
-; Total High Violations             ; 31                                  ;
-; - Rule S104                       ; 7                                   ;
-; - Rule D101                       ; 23                                  ;
-; - Rule D103                       ; 1                                   ;
-; Total Medium Violations           ; 1                                   ;
-; - Rule C104                       ; 1                                   ;
-; Total Information only Violations ; 53                                  ;
-; - Rule T101                       ; 3                                   ;
+; Total High Violations             ; 0                                   ;
+; Total Medium Violations           ; 0                                   ;
+; Total Information only Violations ; 51                                  ;
+; - Rule T101                       ; 1                                   ;
 ; - Rule T102                       ; 50                                  ;
 +-----------------------------------+-------------------------------------+
 
@@ -101,233 +95,63 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+----+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; High Violations                                                                                                                                                                                    ;
-+-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
-; Rule name                                                                                                             ; Name                                                                       ;
-+-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source                 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.data     ;
-;  Violated clock and other port source node(s) list                                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source                 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.stop     ;
-;  Violated clock and other port source node(s) list                                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source                 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[0]          ;
-;  Violated clock and other port source node(s) list                                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source                 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.start    ;
-;  Violated clock and other port source node(s) list                                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source                 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.idle     ;
-;  Violated clock and other port source node(s) list                                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source                 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[2]          ;
-;  Violated clock and other port source node(s) list                                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule S104: Clock port and any other port of a register should not be driven by the same signal source                 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[1]          ;
-;  Violated clock and other port source node(s) list                                                                    ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 1           ;                                                                            ;
-;  Source node(s) from clock "CLK"                                                                                      ; MRAM_Controller:this_mram_controller|curr_state.idle                       ;
-;  Destination node(s) from clock "ADC_DCLKA"                                                                           ; Read_adc_manager:this_read_adc_manager|MRAM_WRITE_DATA                     ;
-;  Destination node(s) from clock "ADC_DCLKA"                                                                           ; Read_adc_manager:this_read_adc_manager|read_counter[0]                     ;
-;  Destination node(s) from clock "ADC_DCLKA"                                                                           ; Read_adc_manager:this_read_adc_manager|read_counter[2]                     ;
-;  Destination node(s) from clock "ADC_DCLKA"                                                                           ; Read_adc_manager:this_read_adc_manager|read_counter[3]                     ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 2           ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|address_counter[9]                  ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                 ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.setup                          ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.read_adc                       ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_A[9]                             ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 3           ;                                                                            ;
-;  Source node(s) from clock "CLK"                                                                                      ; STATE_MANAGER:this_state_manager|curr_state.read_adc                       ;
-;  Destination node(s) from clock "ADC_DCLKA"                                                                           ; Read_adc_manager:this_read_adc_manager|MRAM_WRITE_DATA                     ;
-;  Destination node(s) from clock "ADC_DCLKA"                                                                           ; Read_adc_manager:this_read_adc_manager|read_counter[0]                     ;
-;  Destination node(s) from clock "ADC_DCLKA"                                                                           ; Read_adc_manager:this_read_adc_manager|read_counter[2]                     ;
-;  Destination node(s) from clock "ADC_DCLKA"                                                                           ; Read_adc_manager:this_read_adc_manager|read_counter[1]                     ;
-;  Destination node(s) from clock "ADC_DCLKA"                                                                           ; Read_adc_manager:this_read_adc_manager|read_counter[3]                     ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 4           ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|address_counter[1]                  ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                 ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.setup                          ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.read_adc                       ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_A[1]                             ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 5           ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|address_counter[0]                  ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                 ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.setup                          ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.read_adc                       ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_A[0]                             ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 6           ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|address_counter[2]                  ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                 ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.setup                          ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.read_adc                       ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_A[2]                             ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 7           ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|address_counter[3]                  ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                 ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.setup                          ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.read_adc                       ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_A[3]                             ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 8           ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|address_counter[4]                  ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                 ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.setup                          ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.read_adc                       ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_A[4]                             ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 9           ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|address_counter[5]                  ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                 ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.setup                          ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.read_adc                       ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_A[5]                             ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 10          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|address_counter[6]                  ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                 ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.setup                          ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.read_adc                       ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_A[6]                             ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 11          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|address_counter[7]                  ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                 ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.setup                          ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.read_adc                       ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_A[7]                             ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 12          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|address_counter[8]                  ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                 ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.setup                          ;
-;  Destination node(s) from clock "CLK"                                                                                 ; STATE_MANAGER:this_state_manager|curr_state.read_adc                       ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_A[8]                             ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 13          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|MRAM_WRITE_DATA                     ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|curr_state.idle                       ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|curr_state.writing                    ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|curr_state.reading                    ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 14          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[0]                    ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_D[0]~reg0                        ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 15          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[1]                    ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_D[1]~reg0                        ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 16          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[2]                    ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_D[2]~reg0                        ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 17          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[3]                    ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_D[3]~reg0                        ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 18          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[4]                    ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_D[4]~reg0                        ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 19          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[5]                    ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_D[5]~reg0                        ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 20          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[6]                    ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_D[6]~reg0                        ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 21          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[7]                    ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_D[7]~reg0                        ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 22          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[8]                    ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_D[8]~reg0                        ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 23          ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[9]                    ;
-;  Destination node(s) from clock "CLK"                                                                                 ; MRAM_Controller:this_mram_controller|MRAM_D[9]~reg0                        ;
-; Rule D103: Data bits are not correctly synchronized when transferred between asynchronous clock domains - Structure 1 ;                                                                            ;
-;  Source node(s) from clock "ADC_DCLKA"                                                                                ; Read_adc_manager:this_read_adc_manager|MRAM_WRITE_DATA                     ;
-;  Synchronizer node(s) from clock "CLK"                                                                                ; MRAM_Controller:this_mram_controller|curr_state.idle                       ;
-;  Synchronizer node(s) from clock "CLK"                                                                                ; MRAM_Controller:this_mram_controller|MRAM_D[0]~en                          ;
-;  Synchronizer node(s) from clock "CLK"                                                                                ; MRAM_Controller:this_mram_controller|MRAM_D[1]~en                          ;
-;  Synchronizer node(s) from clock "CLK"                                                                                ; MRAM_Controller:this_mram_controller|MRAM_D[2]~en                          ;
-;  Synchronizer node(s) from clock "CLK"                                                                                ; MRAM_Controller:this_mram_controller|MRAM_D[3]~en                          ;
-;  Synchronizer node(s) from clock "CLK"                                                                                ; MRAM_Controller:this_mram_controller|MRAM_D[4]~en                          ;
-;  Synchronizer node(s) from clock "CLK"                                                                                ; MRAM_Controller:this_mram_controller|MRAM_D[5]~en                          ;
-;  Synchronizer node(s) from clock "CLK"                                                                                ; MRAM_Controller:this_mram_controller|MRAM_D[6]~en                          ;
-;  Synchronizer node(s) from clock "CLK"                                                                                ; MRAM_Controller:this_mram_controller|MRAM_D[7]~en                          ;
-;  Synchronizer node(s) from clock "CLK"                                                                                ; MRAM_Controller:this_mram_controller|MRAM_D[8]~en                          ;
-+-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Medium Violations                                                                                                                               ;
-+--------------------------------------------------------------------+----------------------------------------------------------------------------+
-; Rule name                                                          ; Name                                                                       ;
-+--------------------------------------------------------------------+----------------------------------------------------------------------------+
-; Rule C104: Clock signal source should drive only clock input ports ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.data     ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.stop     ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[0]          ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.start    ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.idle     ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[2]          ;
-;  Clock ports destination node(s) list                              ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[1]          ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector5~1            ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector5~0            ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector6~1            ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[0]~6        ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[1]~3        ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector4~2            ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector4~1            ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector2~1            ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector2~0            ;
-;  Non-clock ports destination node(s) list                          ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector6~0            ;
-+--------------------------------------------------------------------+----------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Information only Violations                                                                                                                                                                                                                                   ;
-+------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Rule name                                                        ; Name                                                                                                                                                                             ; Fan-Out ;
-+------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Rule T101: Nodes with more than the specified number of fan-outs ; CLK~clkctrl                                                                                                                                                                      ; 180     ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; MRAM_Controller:this_mram_controller|curr_state.idle                                                                                                                             ; 31      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[7]~19                                                                                                           ; 31      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; CLK~clkctrl                                                                                                                                                                      ; 180     ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MRAM_Controller:this_mram_controller|curr_state.idle                                                                                                                             ; 31      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[7]~19                                                                                                           ; 31      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MRAM_Controller:this_mram_controller|Selector34~0                                                                                                                                ; 26      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ADC_DCLKA                                                                                                                                                                        ; 25      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|Equal12~4                                                                                                                                       ; 25      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Read_adc_manager:this_read_adc_manager|address_counter[0]~9                                                                                                                      ; 20      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state                                                                                                             ; 16      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[1]_OTERM23                                                                                                      ; 15      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|curr_state.cs_up                                                                                                                               ; 12      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MRAM_Controller:this_mram_controller|curr_state.writing                                                                                                                          ; 12      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out                                                                                                       ; 11      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|sclk                                                                                                                   ; 11      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Equal0~0                                                                                                               ; 10      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|config_command_counter[2]                                                                                                                       ; 10      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MRAM_Controller:this_mram_controller|Selector17~1                                                                                                                                ; 10      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|config_command_counter[3]                                                                                                                       ; 10      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_wreq                          ; 9       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|config_command_counter[1]                                                                                                                       ; 9       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; ~GND                                                                                                                                                                             ; 9       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[4]                                                                                                           ; 9       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|config_command_counter[0]                                                                                                                       ; 8       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; STATE_MANAGER:this_state_manager|curr_state.read_adc                                                                                                                             ; 8       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.data                                                                                                           ; 8       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out~clkctrl                                                                                               ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_non_empty ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|Equal0~1                                                                                                                                       ; 7       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.start                                                                                                          ; 6       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[3]                                                                                                           ; 6       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Read_adc_manager:this_read_adc_manager|Equal1~0                                                                                                                                  ; 6       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[0]                                                                                                         ; 6       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MRAM_Controller:this_mram_controller|counter[0]                                                                                                                                  ; 6       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[1]                                                                                                         ; 6       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|tx_send_irq                                                                                                                                    ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Equal2~0                                                                                                               ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_rreq                          ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[2]                                                                                                         ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|config_command_counter[9]                                                                                                                       ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MRAM_Controller:this_mram_controller|counter[1]                                                                                                                                  ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|fifo_rdreq                                                                                                                                     ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|counter[10]~2                                                                                                   ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|config_command_counter[5]                                                                                                                       ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|config_command_counter[14]                                                                                                                      ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|config_command_counter[7]                                                                                                                       ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|config_command_counter[8]                                                                                                                       ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|Selector7~0                                                                                                                                     ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|curr_state.reading_fifo                                                                                                                        ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|config_command_counter[13]                                                                                                                      ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[3]                                                                                                         ; 5       ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; Setup_manager:this_setup_manager|SPI_send_data[0]_OTERM1                                                                                                                         ; 4       ;
-+------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------+
+; Information only Violations                                                                             ;
++------------------------------------------------------------------+----------------------------+---------+
+; Rule name                                                        ; Name                       ; Fan-Out ;
++------------------------------------------------------------------+----------------------------+---------+
+; Rule T101: Nodes with more than the specified number of fan-outs ; CLK~clkctrl                ; 81      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; CLK~clkctrl                ; 81      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal9~2                   ; 27      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal8~1                   ; 21      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; WideOr7                    ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal7~0                   ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; WideOr8                    ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; WideOr9                    ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[1]                 ; 14      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[2]                 ; 13      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[0]                 ; 11      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal5~0_NEW_REG22_OTERM43 ; 8       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal1~4                   ; 7       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal3~0                   ; 6       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; WideOr8~2                  ; 6       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal6~0                   ; 6       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; WideNor0~3                 ; 6       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[12]                ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MRAM_LOWER_EN~reg0         ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[5]~27              ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[4]                 ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal5~2                   ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[12]~41             ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal1~2_OTERM21           ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[10]~37             ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[5]                 ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal4~0                   ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[19]~55             ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal0~5_OTERM33           ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal2~1                   ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal0~3                   ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[11]~39             ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[4]~25              ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[8]~33              ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MRAM_OUTPUT_EN~reg0        ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[7]~31              ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[13]~43             ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[3]~23              ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[18]~53             ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[9]~35              ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[15]~47             ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MRAM_A[0]~reg0             ; 2       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[18]                ; 2       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[9]                 ; 2       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal2~0                   ; 2       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; WideNor0~2                 ; 2       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[16]~49             ; 2       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal1~3                   ; 2       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[19]                ; 2       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; counter[16]                ; 2       ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; Equal0~2_OTERM17           ; 2       ;
++------------------------------------------------------------------+----------------------------+---------+
 
 
 +---------------------------+
@@ -336,90 +160,56 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Design Assistant
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Apr 13 11:39:56 2023
+    Info: Processing started: Wed Apr 19 14:46:11 2023
 Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Info (332104): Reading SDC File: 'Uni_Projektas.sdc'
-Warning (332174): Ignored filter at Uni_Projektas.sdc(2): SYNC could not be matched with a port
+Warning (332174): Ignored filter at Uni_Projektas.sdc(2): ADC_DCLKA could not be matched with a port
 Warning (332049): Ignored create_clock at Uni_Projektas.sdc(2): Argument <targets> is an empty collection
-    Info (332050): create_clock -name SYNC -period 40.000 [get_ports {SYNC}]
-Warning (332060): Node: ADC_DCLKA was determined to be a clock but was found without an associated clock assignment.
-Warning (332060): Node: UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out was determined to be a clock but was found without an associated clock assignment.
-Critical Warning (308018): (High) Rule S104: Clock port and any other port of a register should not be driven by the same signal source. Found 7 node(s) related to this rule.
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.data"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.stop"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[0]"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.start"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_next_state.idle"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[2]"
-    Critical Warning (308012): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[1]"
-Critical Warning (308060): (High) Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains. (Value defined:2). Found 23 asynchronous clock domain interface structure(s) related to this rule.
-    Critical Warning (308012): Node  "MRAM_Controller:this_mram_controller|curr_state.idle"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|address_counter[9]"
-    Critical Warning (308012): Node  "STATE_MANAGER:this_state_manager|curr_state.read_adc"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|address_counter[1]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|address_counter[0]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|address_counter[2]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|address_counter[3]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|address_counter[4]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|address_counter[5]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|address_counter[6]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|address_counter[7]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|address_counter[8]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|MRAM_WRITE_DATA"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[0]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[1]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[2]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[3]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[4]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[5]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[6]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[7]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[8]"
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[9]"
-Critical Warning (308067): (High) Rule D103: Data bits are not correctly synchronized when transferred between asynchronous clock domains. (Value defined:2). Found 1 asynchronous clock domain interface structure(s) related to this rule.
-    Critical Warning (308012): Node  "Read_adc_manager:this_read_adc_manager|MRAM_WRITE_DATA"
-Warning (308040): (Medium) Rule C104: Clock signal source should drive only clock input ports. Found 1 nodes related to this rule.
-    Warning (308010): Node  "UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out"
-Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 3 node(s) with highest fan-out.
+    Info (332050): create_clock -name ADC_DCLKA -period 20.000 [get_ports {ADC_DCLKA}]
+Warning (332174): Ignored filter at Uni_Projektas.sdc(3): ADC_CLK could not be matched with a port
+Warning (332049): Ignored create_clock at Uni_Projektas.sdc(3): Argument <targets> is an empty collection
+    Info (332050): create_clock -name ADC_CLK -period 20.000 [get_ports {ADC_CLK}]
+Warning (332174): Ignored filter at Uni_Projektas.sdc(4): UART_Controller_1|uart_clk_divider|clock_out could not be matched with a net
+Warning (332049): Ignored create_clock at Uni_Projektas.sdc(4): Argument <targets> is an empty collection
+    Info (332050): create_clock -name UART_CLK -period 8680.5 [get_nets {UART_Controller_1|uart_clk_divider|clock_out}]
+Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 1 node(s) with highest fan-out.
     Info (308011): Node  "CLK~clkctrl"
-    Info (308011): Node  "MRAM_Controller:this_mram_controller|curr_state.idle"
-    Info (308011): Node  "SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[7]~19"
 Info (308044): (Information) Rule T102: Top nodes with the highest number of fan-outs. (Value defined:50). Found 50 node(s) with highest fan-out.
     Info (308011): Node  "CLK~clkctrl"
-    Info (308011): Node  "MRAM_Controller:this_mram_controller|curr_state.idle"
-    Info (308011): Node  "SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[7]~19"
-    Info (308011): Node  "MRAM_Controller:this_mram_controller|Selector34~0"
-    Info (308011): Node  "ADC_DCLKA"
-    Info (308011): Node  "Setup_manager:this_setup_manager|Equal12~4"
-    Info (308011): Node  "Read_adc_manager:this_read_adc_manager|address_counter[0]~9"
-    Info (308011): Node  "SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state"
-    Info (308011): Node  "SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[1]_OTERM23"
-    Info (308011): Node  "SPI_Controller:adc_spi_controller|curr_state.cs_up"
-    Info (308011): Node  "MRAM_Controller:this_mram_controller|curr_state.writing"
-    Info (308011): Node  "UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out"
-    Info (308011): Node  "SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|sclk"
-    Info (308011): Node  "SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Equal0~0"
-    Info (308011): Node  "Setup_manager:this_setup_manager|config_command_counter[2]"
-    Info (308011): Node  "MRAM_Controller:this_mram_controller|Selector17~1"
-    Info (308011): Node  "Setup_manager:this_setup_manager|config_command_counter[3]"
-    Info (308011): Node  "SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_wreq"
-    Info (308011): Node  "Setup_manager:this_setup_manager|config_command_counter[1]"
-    Info (308011): Node  "~GND"
-    Info (308011): Node  "SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[4]"
-    Info (308011): Node  "Setup_manager:this_setup_manager|config_command_counter[0]"
-    Info (308011): Node  "STATE_MANAGER:this_state_manager|curr_state.read_adc"
-    Info (308011): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.data"
-    Info (308011): Node  "UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider|clock_out~clkctrl"
-    Info (308011): Node  "SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_non_empty"
-    Info (308011): Node  "SPI_Controller:adc_spi_controller|Equal0~1"
-    Info (308011): Node  "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.start"
-    Info (308011): Node  "SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[3]"
-    Info (308011): Node  "Read_adc_manager:this_read_adc_manager|Equal1~0"
+    Info (308011): Node  "Equal9~2"
+    Info (308011): Node  "Equal8~1"
+    Info (308011): Node  "WideOr7"
+    Info (308011): Node  "Equal7~0"
+    Info (308011): Node  "WideOr8"
+    Info (308011): Node  "WideOr9"
+    Info (308011): Node  "counter[1]"
+    Info (308011): Node  "counter[2]"
+    Info (308011): Node  "counter[0]"
+    Info (308011): Node  "Equal5~0_NEW_REG22_OTERM43"
+    Info (308011): Node  "Equal1~4"
+    Info (308011): Node  "Equal3~0"
+    Info (308011): Node  "WideOr8~2"
+    Info (308011): Node  "Equal6~0"
+    Info (308011): Node  "WideNor0~3"
+    Info (308011): Node  "counter[12]"
+    Info (308011): Node  "MRAM_LOWER_EN~reg0"
+    Info (308011): Node  "counter[5]~27"
+    Info (308011): Node  "counter[4]"
+    Info (308011): Node  "Equal5~2"
+    Info (308011): Node  "counter[12]~41"
+    Info (308011): Node  "Equal1~2_OTERM21"
+    Info (308011): Node  "counter[10]~37"
+    Info (308011): Node  "counter[5]"
+    Info (308011): Node  "Equal4~0"
+    Info (308011): Node  "counter[19]~55"
+    Info (308011): Node  "Equal0~5_OTERM33"
+    Info (308011): Node  "Equal2~1"
+    Info (308011): Node  "Equal0~3"
     Info (308002): Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
-Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 53 information messages and 32 warning messages
-Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 4521 megabytes
-    Info: Processing ended: Thu Apr 13 11:39:56 2023
+Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 51 information messages and 0 warning messages
+Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4520 megabytes
+    Info: Processing ended: Wed Apr 19 14:46:11 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

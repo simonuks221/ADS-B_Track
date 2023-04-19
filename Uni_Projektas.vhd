@@ -440,12 +440,6 @@ UART_Controller_1 : UART_Controller generic map(baud_rate => baud_rate) port map
 
 --UART_CONTROLLER_DATA_IN <= "00" & RECEIVED_CODE;
 
-
-
-	
-
-
-
 process(CLK)
 begin
 	if falling_edge(CLK) then
