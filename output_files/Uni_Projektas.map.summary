@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Wed Apr 19 20:59:07 2023
+Analysis & Synthesis Status : Successful - Thu Apr 20 11:30:14 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Uni_Projektas
-Top-level Entity Name : UNI_Projektas
+Top-level Entity Name : MRAM_TEST
 Family : Cyclone II
-Total logic elements : 345
-    Total combinational functions : 294
-    Dedicated logic registers : 231
-Total registers : 231
-Total pins : 77
+Total logic elements : 122
+    Total combinational functions : 91
+    Dedicated logic registers : 72
+Total registers : 72
+Total pins : 40
 Total virtual pins : 0
-Total memory bits : 384
+Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

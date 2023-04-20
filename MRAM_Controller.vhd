@@ -71,14 +71,15 @@ begin
 						MRAM_D <= (others => 'Z');
 					when 1 =>
 						MRAM_EN <= '0';
-						MRAM_D <= data_in;
+						--MRAM_D <= data_in;
+						MRAM_D <= "1010101010101010";
 						--Idle, wait for 20ns
 					when 2 =>
 						MRAM_EN <= '1';
 						MRAM_LOWER_EN <= '1';
 						MRAM_UPPER_EN <= '1';
 						MRAM_WRITE_EN <= '1';
-						MRAM_D <= data_in;
+						--MRAM_D <= data_in;
 						--done <= '1'
 					when 3 =>
 						MRAM_D <= (others => 'Z');

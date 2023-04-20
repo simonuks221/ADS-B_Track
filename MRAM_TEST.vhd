@@ -21,7 +21,10 @@ end entity;
 architecture arc of MRAM_TEST is
 signal counter : integer range 0 to 1000000 := 0;
 signal got_data : std_logic_vector(15 downto 0) := (others => '0');
+signal output_en : std_logic := '1';
 begin
+
+--MRAM_OUTPUT_EN <= output_en;
 
 process(CLK)
 begin
@@ -35,30 +38,35 @@ begin
 				MRAM_LOWER_EN <= '1';
 				MRAM_A <= (others => '0');
 				MRAM_D <= (others => 'Z');
+			when 4099 =>
+				--MRAM_A <= std_logic_vector(to_unsigned(1, MRAM_A'length));
 			when 5000 => --Write
-				MRAM_A <= std_logic_vector(to_unsigned(0, MRAM_A'length));
+				MRAM_A <= std_logic_vector(to_unsigned(1, MRAM_A'length));
 				--MRAM_EN <= '0';
 				MRAM_WRITE_EN <= '0';
 				MRAM_LOWER_EN <= '0';
 				MRAM_UPPER_EN <= '0';
 			when 5000+1 =>
 				MRAM_EN <= '0';
-				MRAM_D <= std_logic_vector(to_unsigned(240, MRAM_D'length));
+				MRAM_D <= "1010101001010000";
 			when 5000+2=>
 				MRAM_EN <='1';
 				MRAM_LOWER_EN <= '1';
 				MRAM_UPPER_EN <= '1';
 				MRAM_WRITE_EN <= '1';
-			when 5000+4 =>
+			when 5000+3 =>
 				MRAM_D <= (others => 'Z');
+				
+			when 5045 =>
+				--MRAM_A <= std_logic_vector(to_unsigned(1, MRAM_A'length));
 			when 5050 => --Read start
 				MRAM_A <= std_logic_vector(to_unsigned(0, MRAM_A'length));
-			when 5050+2 =>
+				MRAM_D <= (others => 'Z');
 				MRAM_EN <= '0';
 				MRAM_OUTPUT_EN <= '0';
 				MRAM_UPPER_EN <= '0';
 				MRAM_LOWER_EN <= '0';
-			when 5050+3 =>
+			when 5050+2 =>
 				got_data <= MRAM_D;
 				MRAM_EN <= '1';
 				MRAM_OUTPUT_EN <= '1';
@@ -66,6 +74,8 @@ begin
 				MRAM_WRITE_EN <= '1';
 				MRAM_LOWER_EN <= '1';
 				MRAM_D <= (others => 'Z');
+			when 5050+3 =>
+				
 			when 5050+102 =>
 				MRAM_A <= "00" & got_data;
 			when others =>
