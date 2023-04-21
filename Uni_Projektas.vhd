@@ -6,7 +6,7 @@ use ieee.std_logic_textio.all;
 
 entity UNI_Projektas is
 generic (
-	BAUD_RATE_PRESCALER : integer := 54; --434 kad 115200 baud reitui toki prescaleri naudojam --54 kad 921600 baud reitui  
+	BAUD_RATE_PRESCALER : integer := 434; --434 kad 115200 baud reitui toki prescaleri naudojam --54 kad 921600 baud reitui  
 	MAX_ADDRESS_COUNTS : integer :=  100
 );
 port(
@@ -135,7 +135,7 @@ end component;
 
 component UART_Controller is
 generic(
-	baud_rate : integer := 9600
+	BAUD_RATE_PRESCALER : integer := 9600
 );
 port(
 	CLK: in std_logic;
@@ -402,7 +402,7 @@ spi_send_data_multi_or : Multi_OR generic map (BITS => 16) port map(input1 => AD
 ADC_SPI_send_irq <= ADC_SPI_Send_irq1 or ADC_SPI_send_irq2;
 adc_spi_controller : SPI_Controller generic map (SEND_CLK_COUNTER_MAX => 10, BITS => 16, SEND_CLK_WAIT_MAX => 20) port map(CLK => CLK, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK,
 							SPI_CS => ADC_SPI_CS, SPI_send_data => ADC_SPI_send_data, SPI_send_irq => ADC_SPI_Send_irq, SPI_FIFO_EMPTY => ADC_SPI_fifo_empty);
-UART_Controller_1 : UART_Controller generic map(baud_rate => BAUD_RATE_PRESCALER) port map(CLK => CLK,
+UART_Controller_1 : UART_Controller generic map(BAUD_RATE_PRESCALER => BAUD_RATE_PRESCALER) port map(CLK => CLK,
 	SEND_DATA_IN => UART_SEND_DATA,
 	SEND_DATA_IN_REQ => UART_DATA_IRQ,
 	TX => UART_TX, UART_FIFO_EMPTY => UART_FIFO_EMPTY);

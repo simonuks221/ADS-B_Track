@@ -104,7 +104,7 @@ namespace PCKodas
             {
                 try
                 {
-                    port = new SerialPort(selectedPort, 921600, Parity.None, 8, StopBits.One);
+                    port = new SerialPort(selectedPort, 1000000, Parity.None, 8, StopBits.One);
                     port.Open();
                     port.DiscardInBuffer();
                     port.DataReceived += new SerialDataReceivedEventHandler(Port_DataReceived);

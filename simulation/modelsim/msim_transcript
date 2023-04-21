@@ -172,14 +172,34 @@
 # 
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
 # 
-#           Attempting to use alternate WLF file "./wlft4wncvi".
+#           Attempting to use alternate WLF file "./wlftszx4i9".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft4wncvi
+#           Using alternate file: ./wlftszx4i9
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 30 us
+run
+# ** Fatal: (vsim-3421) Value 55 for counter is out of range 0 to 54.
+#    Time: 545310 ns  Iteration: 0  Process: /testbenchas/i1/UART_Controller_1/uart_tx_1/line__35 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
+# Fatal error in Process line__35 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd line 38
+# 
+# HDL call sequence:
+# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd 38 Process line__35
+# 
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity UART_TX
+# -- Compiling architecture arc of UART_TX
+restart
+# Loading work.uart_tx(arc)
+run
 run

@@ -6,7 +6,6 @@ vlib rtl_work
 vmap work rtl_work
 
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd}

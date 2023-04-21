@@ -1419,7 +1419,6 @@ CLK => counter[5].CLK
 CLK => counter[6].CLK
 CLK => counter[7].CLK
 CLK => counter[8].CLK
-CLK => counter[9].CLK
 CLK => tx_curr_state~6.DATAIN
 UART_CLK => ~NO_FANOUT~
 SEND_DATA[0] => data_send[0].DATAIN

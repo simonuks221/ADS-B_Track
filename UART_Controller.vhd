@@ -7,7 +7,7 @@ use ieee.math_real.all;
 
 entity UART_Controller is
 generic(
-	baud_rate : integer := 9600
+	BAUD_RATE_PRESCALER : integer := 9600
 );
 port(
 	CLK: in std_logic;
@@ -20,18 +20,6 @@ end entity;
 
 architecture arc of UART_Controller is
 
-constant hal_prescaler : integer := integer(floor(real(baud_rate)/real(2)));
-
---component Clock_divider is
---generic(
---Prescaler : integer := baud_rate;
---Half_Prescaler : integer := hal_prescaler
---);
---port(
---CLK: in std_logic;
---CLK_OUT: out std_logic
---);
---end component;
 
 component UART_TX is
 generic(
@@ -73,9 +61,7 @@ signal fifo_empty : std_logic := '0';
 
 begin
 
---uart_clk_divider : Clock_divider port map(CLK => CLK, CLK_OUT => UART_CLK);
-
-uart_tx_1 : UART_TX generic map(BAUD_RATE_PRESCALER => baud_rate) 
+uart_tx_1 : UART_TX generic map(BAUD_RATE_PRESCALER => BAUD_RATE_PRESCALER) 
 						port map(CLk => CLK, UART_CLK => UART_CLK, SEND_DATA => SEND_DATA_OUT, START_SEND_DATA => START_SEND_DATA, TX => TX,
 				TX_BUSY => TX_BUSY);
 				
