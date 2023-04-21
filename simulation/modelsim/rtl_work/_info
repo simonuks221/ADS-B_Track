@@ -17,7 +17,7 @@ L7
 V25oW8aW70UgM`5SG2LYLM2
 Z9 OV;C;10.1d;51
 31
-Z10 !s108 1682067716.855000
+Z10 !s108 1682088720.375000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd|
 Z12 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd|
 Z13 o-93 -work work -O0
@@ -43,7 +43,7 @@ R14
 !s100 6?JhG[72dg9C94X<97dzO1
 !i10b 1
 Emram_controller
-Z15 w1682067338
+Z15 w1682088571
 R2
 R3
 R4
@@ -56,7 +56,7 @@ L11
 VhIQ1nN9MV9a9nR8JgOH9:2
 R9
 31
-Z18 !s108 1682067717.319000
+Z18 !s108 1682088720.862000
 Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_Controller.vhd|
 Z20 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_Controller.vhd|
 R13
@@ -71,7 +71,7 @@ R5
 DEx4 work 15 mram_controller 0 22 hIQ1nN9MV9a9nR8JgOH9:2
 l37
 L32
-V6MTmPS@<F5n:LRQD:mh=X0
+VM9178AK_oMNghL37K`?L61
 R9
 31
 R18
@@ -79,7 +79,7 @@ R19
 R20
 R13
 R14
-!s100 Jl?K@UbA4kOKG6kX`WlV_3
+!s100 o3A5zEJKXnf6B7;E@0fdN1
 !i10b 1
 Emulti_or
 Z21 w1681480347
@@ -95,7 +95,7 @@ L7
 VBO`7o24F;JTLNhY[LCUcU3
 R9
 31
-Z24 !s108 1682067717.624000
+Z24 !s108 1682088721.178000
 Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Multi_OR.vhd|
 Z26 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Multi_OR.vhd|
 R13
@@ -121,7 +121,7 @@ R14
 !s100 blaA77ReHC<GgNNkzUah10
 !i10b 1
 Eread_adc_manager
-Z27 w1682067603
+Z27 w1682088694
 R2
 R3
 R4
@@ -131,25 +131,25 @@ Z28 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd
 Z29 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd
 l0
 L7
-Vk6CNeHhVLmiOl?o10Nlf:2
+V=Hgkl5fn@j1:Z:g[XS<aZ3
 R9
 31
-Z30 !s108 1682067717.501000
+Z30 !s108 1682088721.049000
 Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd|
 Z32 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd|
 R13
 R14
-!s100 mg^TDP1PJd@2QPOlVh8C]0
+!s100 KBOW5z4H@@;1?EmM27KJY2
 !i10b 1
 Aarc
 R2
 R3
 R4
 R5
-DEx4 work 16 read_adc_manager 0 22 k6CNeHhVLmiOl?o10Nlf:2
-l26
-L22
-Vbkm4?h6^`]^eA<dN;Skf33
+DEx4 work 16 read_adc_manager 0 22 =Hgkl5fn@j1:Z:g[XS<aZ3
+l29
+L25
+V:kDNee]>MP6^W<T3C4C^=2
 R9
 31
 R30
@@ -157,7 +157,7 @@ R31
 R32
 R13
 R14
-!s100 D?fVE=UjnKhh`KGRZ9iM[0
+!s100 Uom74Y:HVoX_Vi6kLmb2o1
 !i10b 1
 Esetup_manager
 Z33 w1682066791
@@ -173,7 +173,7 @@ L7
 V7IJjIENf@Ajf:8AOOY3@?0
 R9
 31
-Z36 !s108 1682067717.440000
+Z36 !s108 1682088720.984000
 Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd|
 Z38 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd|
 R13
@@ -212,7 +212,7 @@ L9
 V^>BQ9dEGE?bJ`CTD]4kf<3
 R9
 31
-Z42 !s108 1682067717.137000
+Z42 !s108 1682088720.665000
 Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd|
 Z44 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd|
 R13
@@ -251,7 +251,7 @@ L7
 VNR_T6:U@:cB]1nEUfM3D]3
 R9
 31
-Z47 !s108 1682067717.198000
+Z47 !s108 1682088720.729000
 Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd|
 Z49 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd|
 R13
@@ -290,7 +290,7 @@ L7
 V7@z@7WCO2KNG20<H30N`42
 R9
 31
-Z53 !s108 1682067717.379000
+Z53 !s108 1682088720.922000
 Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/State_manager.vhd|
 Z55 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/State_manager.vhd|
 R13
@@ -331,7 +331,7 @@ V0a@5KG6gLY6NLcg=RO7@L1
 R9
 31
 !i10b 1
-Z59 !s108 1682067717.685000
+Z59 !s108 1682088721.242000
 Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
 Z61 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd|
 R13
@@ -368,7 +368,7 @@ L7
 VdZJ=KZj3l=<zS]600kGXf2
 R9
 31
-Z65 !s108 1682067716.950000
+Z65 !s108 1682088720.473000
 Z66 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd|
 Z67 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd|
 R13
@@ -405,7 +405,7 @@ L42
 VkPMA?<I:3BohhMEPM36VC3
 R9
 31
-Z71 !s108 1682067717.074000
+Z71 !s108 1682088720.600000
 Z72 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd|
 Z73 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd|
 R13
@@ -442,7 +442,7 @@ L10
 ViS4V`XNABb5lgkA^c47kF1
 R9
 31
-Z77 !s108 1682067717.012000
+Z77 !s108 1682088720.537000
 Z78 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd|
 Z79 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd|
 R13
@@ -481,7 +481,7 @@ L7
 VoBcGRQGU4C_bUHLKiLOl11
 R9
 31
-Z83 !s108 1682067716.783000
+Z83 !s108 1682088720.309000
 Z84 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
 Z85 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd|
 R13
@@ -518,7 +518,7 @@ L42
 VD^_hMGXQ:Gb^a7`Z41m0_3
 R9
 31
-Z89 !s108 1682067717.260000
+Z89 !s108 1682088720.801000
 Z90 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd|
 Z91 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd|
 R13
@@ -542,7 +542,7 @@ R14
 !s100 AWLgO7mS@7W^7O`e>5Iac2
 !i10b 1
 Ewrite_out_mram_manager
-Z92 w1682018733
+Z92 w1682088364
 R2
 R3
 R4
@@ -552,25 +552,25 @@ Z93 8C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
 Z94 FC:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd
 l0
 L7
-Vn11RW>?M0G6cC0251z<VC3
+VIiM???eMfYnJb[WZ6:llN3
 R9
 31
-Z95 !s108 1682067717.565000
+Z95 !s108 1682088721.114000
 Z96 !s90 -reportprogress|300|-93|-work|work|C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd|
 Z97 !s107 C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd|
 R13
 R14
-!s100 =6gB2>X]18c6HOTDgdVno2
+!s100 3<HUXK1aKz86d?Q0KUT[k2
 !i10b 1
 Aarc
 R2
 R3
 R4
 R5
-DEx4 work 22 write_out_mram_manager 0 22 n11RW>?M0G6cC0251z<VC3
-l30
-L26
-Vz98fnLOH1i5ORD`fK6C=g1
+DEx4 work 22 write_out_mram_manager 0 22 IiM???eMfYnJb[WZ6:llN3
+l34
+L28
+V;bX`dXiY^T<N>]z:RGzo:2
 R9
 31
 R95
@@ -578,5 +578,5 @@ R96
 R97
 R13
 R14
-!s100 _=gf52_e[?5_^nS7`[3_W0
+!s100 _m]DdA?fUTCEgnan]RIOP2
 !i10b 1

@@ -18,17 +18,6 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace PCKodas
 {
-    public struct CompassData
-    {
-        public int compassHeading;
-        public string time;
-
-        public CompassData(int _compassHeading, string _time)
-        {
-            compassHeading = _compassHeading;
-            time = _time;
-        }
-    }
     public partial class Form1 : Form
     {
         private String[] ports;
@@ -38,9 +27,7 @@ namespace PCKodas
 
         public bool isConnected;
 
-        int compass_angle = 0;
-
-        List<CompassData> compassData = new List<CompassData> { };
+        int max_chart_elements = 1000;
 
         //Chartai
         //https://learn.microsoft.com/en-us/previous-versions/dd456769(v=vs.140)?redirectedfrom=MSDN
@@ -51,14 +38,6 @@ namespace PCKodas
         {
             InitializeComponent();
             CheckConnectivity();
-
-            for(int i = 0; i < 20; i++)
-            {
-                VoltageChart.Series[0].Points.AddY(i);
-            }
-            VoltageChart.Series[0].Name = "Itampa";
-            
-            
         }
 
         void ChangeDisplayedInfo(string connectionStatusTest = null, String[] ports = null) //Changes the main label and port box items
@@ -124,8 +103,9 @@ namespace PCKodas
             {
                 try
                 {
-                    port = new SerialPort("COM3", 115200, Parity.None, 8, StopBits.One);
+                    port = new SerialPort(selectedPort, 115200, Parity.None, 8, StopBits.One);
                     port.Open();
+                    port.DiscardInBuffer();
                     port.DataReceived += new SerialDataReceivedEventHandler(Port_DataReceived);
                     isConnected = true;
                     connectedPort = selectedPort;
@@ -155,7 +135,7 @@ namespace PCKodas
                     Update_Chart(ByteArray[i]);
                     if (ByteArray[i] != 0)
                     {
-                        Debug.WriteLine("ADded diff: " + ByteArray[i]);
+                        //Debug.WriteLine("ADded diff: " + ByteArray[i]);
                     }
                     //Debug.WriteLine("Added: " + ByteArray[i]);
                 }
@@ -165,6 +145,10 @@ namespace PCKodas
         private void ConnectButton_Click(object sender, EventArgs e)
         {
             ConnectController(comboBox1.GetItemText(comboBox1.SelectedItem));
+            for (int i = 0; i < 20; i++)
+            {
+                Update_Chart(i);
+            }
         }
 
         void Update_Chart(int new_value)
@@ -172,7 +156,12 @@ namespace PCKodas
             this.Invoke(new MethodInvoker(delegate ()
             {
                 //Access controls
+                if (VoltageChart.Series[0].Points.Count == max_chart_elements) //Only leave some visible
+                {
+                    VoltageChart.Series[0].Points.RemoveAt(0);
+                }
                 VoltageChart.Series[0].Points.AddY(new_value);
+                //Debug.WriteLine(VoltageChart.Series[0].Points[0]);
             }));
         }
 

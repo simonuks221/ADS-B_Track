@@ -95,7 +95,7 @@
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Įtampa";
             this.VoltageChart.Series.Add(series1);
             this.VoltageChart.Size = new System.Drawing.Size(722, 300);
             this.VoltageChart.TabIndex = 8;

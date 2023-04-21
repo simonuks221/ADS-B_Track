@@ -81,7 +81,7 @@ DATA0                        : 14        : input  :                   :         
 DCLK                         : 15        :        :                   :         : 1         :                
 nCE                          : 16        :        :                   :         : 1         :                
 CLK                          : 17        : input  : 3.3-V LVTTL       :         : 1         : Y              
-UART_RX                      : 18        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND+                         : 18        :        :                   :         : 1         :                
 GND                          : 19        : gnd    :                   :         :           :                
 nCONFIG                      : 20        :        :                   :         : 1         :                
 GND+                         : 21        :        :                   :         : 1         :                
@@ -91,9 +91,9 @@ ADC_SHDN                     : 24        : output : 3.3-V LVTTL       :         
 ADC_SPI_CS                   : 25        : output : 3.3-V LVTTL       :         : 1         : Y              
 UART_TX                      : 26        : output : 3.3-V LVTTL       :         : 1         : Y              
 ADC_SPI_SCLK                 : 27        : output : 3.3-V LVTTL       :         : 1         : Y              
-MRAM_D[12]                   : 28        : bidir  : 3.3-V LVTTL       :         : 1         : N              
+MRAM_D[10]                   : 28        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
-RESERVED_INPUT_WITH_BUS_HOLD : 30        :        :                   :         : 1         :                
+MRAM_D[12]                   : 30        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 RESERVED_INPUT_WITH_BUS_HOLD : 31        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_BUS_HOLD : 32        :        :                   :         : 1         :                
 GND                          : 33        : gnd    :                   :         :           :                
@@ -110,7 +110,7 @@ RESERVED_INPUT_WITH_BUS_HOLD : 43        :        :                   :         
 SPI_CS                       : 44        : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 ADC_SYNC                     : 45        : output : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
-MRAM_D[10]                   : 47        : bidir  : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT_WITH_BUS_HOLD : 47        :        :                   :         : 4         :                
 ADC_CLK                      : 48        : output : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                
@@ -151,7 +151,7 @@ MSEL1                        : 84        :        :                   :         
 MSEL0                        : 85        :        :                   :         : 3         :                
 ADC_DCLKA                    : 86        : input  : 3.3-V LVTTL       :         : 3         : Y              
 ADC_SPI_SDIN                 : 87        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GND+                         : 88        :        :                   :         : 3         :                
+UART_RX                      : 88        : input  : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : 89        :        :                   :         : 3         :                
 GND+                         : 90        :        :                   :         : 3         :                
 GND+                         : 91        :        :                   :         : 3         :                

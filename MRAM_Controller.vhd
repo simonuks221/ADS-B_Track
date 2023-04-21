@@ -74,8 +74,8 @@ begin
 				case counter is
 					when 0 =>
 --						--Set data
---						--MRAM_A <= address_in_write;
-						MRAM_A <= std_logic_vector(to_unsigned(0, MRAM_A'length));
+						MRAM_A <= address_in_write;
+						--MRAM_A <= std_logic_vector(to_unsigned(0, MRAM_A'length));
 						MRAM_WRITE_EN <= '0';
 						MRAM_LOWER_EN <= '0';
 						MRAM_UPPER_EN <= '0';
@@ -101,8 +101,8 @@ begin
 				case counter is
 					when 0 =>
 						--Set data
-						--MRAM_A <= address_in_read;
-						MRAM_A <= std_logic_vector(to_unsigned(0, MRAM_A'length));
+						MRAM_A <= address_in_read;
+						--MRAM_A <= std_logic_vector(to_unsigned(0, MRAM_A'length));
 						MRAM_D <= (others => 'Z');
 						MRAM_EN <= '0';
 						MRAM_OUTPUT_EN <= '0';
