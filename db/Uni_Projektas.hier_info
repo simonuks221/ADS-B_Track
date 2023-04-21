@@ -441,6 +441,15 @@ DCLK => MRAM_DATA_OUT[12]~reg0.CLK
 DCLK => MRAM_DATA_OUT[13]~reg0.CLK
 DCLK => MRAM_DATA_OUT[14]~reg0.CLK
 DCLK => MRAM_DATA_OUT[15]~reg0.CLK
+DCLK => real_data_counter[0].CLK
+DCLK => real_data_counter[1].CLK
+DCLK => real_data_counter[2].CLK
+DCLK => real_data_counter[3].CLK
+DCLK => real_data_counter[4].CLK
+DCLK => real_data_counter[5].CLK
+DCLK => real_data_counter[6].CLK
+DCLK => real_data_counter[7].CLK
+DCLK => real_data_counter[8].CLK
 DCLK => address_counter[0].CLK
 DCLK => address_counter[1].CLK
 DCLK => address_counter[2].CLK
@@ -453,16 +462,16 @@ DCLK => read_counter[0].CLK
 DCLK => read_counter[1].CLK
 DCLK => read_counter[2].CLK
 DCLK => read_counter[3].CLK
-ADC_BIT[0] => MRAM_DATA_OUT.DATAB
-ADC_BIT[1] => MRAM_DATA_OUT.DATAB
-ADC_BIT[2] => MRAM_DATA_OUT.DATAB
-ADC_BIT[3] => MRAM_DATA_OUT.DATAB
-ADC_BIT[4] => MRAM_DATA_OUT.DATAB
-ADC_BIT[5] => MRAM_DATA_OUT.DATAB
-ADC_BIT[6] => MRAM_DATA_OUT.DATAB
-ADC_BIT[7] => MRAM_DATA_OUT.DATAB
-ADC_BIT[8] => MRAM_DATA_OUT.DATAB
-ADC_BIT[9] => MRAM_DATA_OUT.DATAB
+ADC_BIT[0] => ~NO_FANOUT~
+ADC_BIT[1] => ~NO_FANOUT~
+ADC_BIT[2] => ~NO_FANOUT~
+ADC_BIT[3] => ~NO_FANOUT~
+ADC_BIT[4] => ~NO_FANOUT~
+ADC_BIT[5] => ~NO_FANOUT~
+ADC_BIT[6] => ~NO_FANOUT~
+ADC_BIT[7] => ~NO_FANOUT~
+ADC_BIT[8] => ~NO_FANOUT~
+ADC_BIT[9] => ~NO_FANOUT~
 MRAM_DATA_OUT[0] <= MRAM_DATA_OUT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 MRAM_DATA_OUT[1] <= MRAM_DATA_OUT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 MRAM_DATA_OUT[2] <= MRAM_DATA_OUT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -509,6 +518,15 @@ MRAM_DONE => address_counter.OUTPUTSELECT
 MRAM_DONE => address_counter.OUTPUTSELECT
 MRAM_DONE => address_counter.OUTPUTSELECT
 MRAM_DONE => address_counter.OUTPUTSELECT
+MRAM_DONE => real_data_counter.OUTPUTSELECT
+MRAM_DONE => real_data_counter.OUTPUTSELECT
+MRAM_DONE => real_data_counter.OUTPUTSELECT
+MRAM_DONE => real_data_counter.OUTPUTSELECT
+MRAM_DONE => real_data_counter.OUTPUTSELECT
+MRAM_DONE => real_data_counter.OUTPUTSELECT
+MRAM_DONE => real_data_counter.OUTPUTSELECT
+MRAM_DONE => real_data_counter.OUTPUTSELECT
+MRAM_DONE => real_data_counter.OUTPUTSELECT
 MRAM_DONE => MRAM_DATA_OUT.OUTPUTSELECT
 MRAM_DONE => MRAM_DATA_OUT.OUTPUTSELECT
 MRAM_DONE => MRAM_DATA_OUT.OUTPUTSELECT
@@ -538,10 +556,10 @@ EN_READ_ADC => address_counter.OUTPUTSELECT
 EN_READ_ADC => address_counter.OUTPUTSELECT
 EN_READ_ADC => address_counter.OUTPUTSELECT
 EN_READ_ADC => address_counter.OUTPUTSELECT
-EN_READ_ADC => MRAM_DATA_OUT[0]~reg0.ENA
-EN_READ_ADC => MRAM_DATA_OUT[1]~reg0.ENA
-EN_READ_ADC => MRAM_DATA_OUT[2]~reg0.ENA
 EN_READ_ADC => MRAM_DATA_OUT[3]~reg0.ENA
+EN_READ_ADC => MRAM_DATA_OUT[2]~reg0.ENA
+EN_READ_ADC => MRAM_DATA_OUT[1]~reg0.ENA
+EN_READ_ADC => MRAM_DATA_OUT[0]~reg0.ENA
 EN_READ_ADC => MRAM_DATA_OUT[4]~reg0.ENA
 EN_READ_ADC => MRAM_DATA_OUT[5]~reg0.ENA
 EN_READ_ADC => MRAM_DATA_OUT[6]~reg0.ENA
@@ -554,6 +572,15 @@ EN_READ_ADC => MRAM_DATA_OUT[12]~reg0.ENA
 EN_READ_ADC => MRAM_DATA_OUT[13]~reg0.ENA
 EN_READ_ADC => MRAM_DATA_OUT[14]~reg0.ENA
 EN_READ_ADC => MRAM_DATA_OUT[15]~reg0.ENA
+EN_READ_ADC => real_data_counter[0].ENA
+EN_READ_ADC => real_data_counter[1].ENA
+EN_READ_ADC => real_data_counter[2].ENA
+EN_READ_ADC => real_data_counter[3].ENA
+EN_READ_ADC => real_data_counter[4].ENA
+EN_READ_ADC => real_data_counter[5].ENA
+EN_READ_ADC => real_data_counter[6].ENA
+EN_READ_ADC => real_data_counter[7].ENA
+EN_READ_ADC => real_data_counter[8].ENA
 READ_ADC_DONE <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -1351,7 +1378,6 @@ SEND_DONE <= SEND_DONE~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Uni_Projektas|UART_Controller:UART_Controller_1
-CLK => Clock_divider:uart_clk_divider.CLK
 CLK => UART_TX:uart_tx_1.CLK
 CLK => UART_FIFO_wizard:uart_fifo.clock
 CLK => next_state~5.DATAIN
@@ -1367,19 +1393,6 @@ SEND_DATA_IN[7] => UART_FIFO_wizard:uart_fifo.data[7]
 SEND_DATA_IN_REQ => UART_FIFO_wizard:uart_fifo.wrreq
 UART_FIFO_EMPTY <= UART_FIFO_wizard:uart_fifo.empty
 TX <= UART_TX:uart_tx_1.TX
-
-
-|Uni_Projektas|UART_Controller:UART_Controller_1|Clock_divider:uart_clk_divider
-CLK => counter[0].CLK
-CLK => counter[1].CLK
-CLK => counter[2].CLK
-CLK => counter[3].CLK
-CLK => counter[4].CLK
-CLK => counter[5].CLK
-CLK => counter[6].CLK
-CLK => counter[7].CLK
-CLK => clock_out.CLK
-CLK_OUT <= clock_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Uni_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1

@@ -1,5 +1,5 @@
 Fitter report for Uni_Projektas
-Fri Apr 21 17:53:51 2023
+Fri Apr 21 18:42:45 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -67,17 +67,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Apr 21 17:53:50 2023           ;
+; Fitter Status                      ; Successful - Fri Apr 21 18:42:45 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 391 / 4,608 ( 8 % )                             ;
-;     Total combinational functions  ; 335 / 4,608 ( 7 % )                             ;
-;     Dedicated logic registers      ; 279 / 4,608 ( 6 % )                             ;
-; Total registers                    ; 279                                             ;
+; Total logic elements               ; 402 / 4,608 ( 9 % )                             ;
+;     Total combinational functions  ; 349 / 4,608 ( 8 % )                             ;
+;     Dedicated logic registers      ; 286 / 4,608 ( 6 % )                             ;
+; Total registers                    ; 286                                             ;
 ; Total pins                         ; 77 / 89 ( 87 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 384 / 119,808 ( < 1 % )                         ;
@@ -268,8 +268,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 718 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 718 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 739 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 739 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -292,7 +292,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 716     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 737     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 2       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -308,26 +308,26 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 391 / 4,608 ( 8 % )     ;
-;     -- Combinational with no register       ; 112                     ;
-;     -- Register only                        ; 56                      ;
-;     -- Combinational with a register        ; 223                     ;
+; Total logic elements                        ; 402 / 4,608 ( 9 % )     ;
+;     -- Combinational with no register       ; 116                     ;
+;     -- Register only                        ; 53                      ;
+;     -- Combinational with a register        ; 233                     ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 123                     ;
-;     -- 3 input functions                    ; 58                      ;
-;     -- <=2 input functions                  ; 154                     ;
-;     -- Register only                        ; 56                      ;
+;     -- 4 input functions                    ; 125                     ;
+;     -- 3 input functions                    ; 61                      ;
+;     -- <=2 input functions                  ; 163                     ;
+;     -- Register only                        ; 53                      ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 242                     ;
-;     -- arithmetic mode                      ; 93                      ;
+;     -- normal mode                          ; 248                     ;
+;     -- arithmetic mode                      ; 101                     ;
 ;                                             ;                         ;
-; Total registers*                            ; 279 / 4,851 ( 6 % )     ;
-;     -- Dedicated logic registers            ; 279 / 4,608 ( 6 % )     ;
+; Total registers*                            ; 286 / 4,851 ( 6 % )     ;
+;     -- Dedicated logic registers            ; 286 / 4,608 ( 6 % )     ;
 ;     -- I/O registers                        ; 0 / 243 ( 0 % )         ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 32 / 288 ( 11 % )       ;
+; Total LABs:  partially or completely used   ; 34 / 288 ( 12 % )       ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 77 / 89 ( 87 % )        ;
 ;     -- Clock pins                           ; 2 / 4 ( 50 % )          ;
@@ -342,11 +342,11 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 ; JTAGs                                       ; 0 / 1 ( 0 % )           ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 1% / 1% / 1%            ;
-; Peak interconnect usage (total/H/V)         ; 1% / 2% / 1%            ;
-; Maximum fan-out                             ; 261                     ;
+; Average interconnect usage (total/H/V)      ; 1% / 1% / 0%            ;
+; Peak interconnect usage (total/H/V)         ; 1% / 1% / 0%            ;
+; Maximum fan-out                             ; 260                     ;
 ; Highest non-global fan-out                  ; 34                      ;
-; Total fan-out                               ; 1859                    ;
+; Total fan-out                               ; 1913                    ;
 ; Average fan-out                             ; 2.51                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -360,25 +360,25 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 +---------------------------------------------+--------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                ; Low                            ;
 ;                                             ;                    ;                                ;
-; Total logic elements                        ; 391 / 4608 ( 8 % ) ; 0 / 4608 ( 0 % )               ;
-;     -- Combinational with no register       ; 112                ; 0                              ;
-;     -- Register only                        ; 56                 ; 0                              ;
-;     -- Combinational with a register        ; 223                ; 0                              ;
+; Total logic elements                        ; 402 / 4608 ( 9 % ) ; 0 / 4608 ( 0 % )               ;
+;     -- Combinational with no register       ; 116                ; 0                              ;
+;     -- Register only                        ; 53                 ; 0                              ;
+;     -- Combinational with a register        ; 233                ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic element usage by number of LUT inputs ;                    ;                                ;
-;     -- 4 input functions                    ; 123                ; 0                              ;
-;     -- 3 input functions                    ; 58                 ; 0                              ;
-;     -- <=2 input functions                  ; 154                ; 0                              ;
-;     -- Register only                        ; 56                 ; 0                              ;
+;     -- 4 input functions                    ; 125                ; 0                              ;
+;     -- 3 input functions                    ; 61                 ; 0                              ;
+;     -- <=2 input functions                  ; 163                ; 0                              ;
+;     -- Register only                        ; 53                 ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic elements by mode                      ;                    ;                                ;
-;     -- normal mode                          ; 242                ; 0                              ;
-;     -- arithmetic mode                      ; 93                 ; 0                              ;
+;     -- normal mode                          ; 248                ; 0                              ;
+;     -- arithmetic mode                      ; 101                ; 0                              ;
 ;                                             ;                    ;                                ;
-; Total registers                             ; 279                ; 0                              ;
-;     -- Dedicated logic registers            ; 279 / 4608 ( 6 % ) ; 0 / 4608 ( 0 % )               ;
+; Total registers                             ; 286                ; 0                              ;
+;     -- Dedicated logic registers            ; 286 / 4608 ( 6 % ) ; 0 / 4608 ( 0 % )               ;
 ;                                             ;                    ;                                ;
-; Total LABs:  partially or completely used   ; 32 / 288 ( 11 % )  ; 0 / 288 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 34 / 288 ( 12 % )  ; 0 / 288 ( 0 % )                ;
 ;                                             ;                    ;                                ;
 ; Virtual pins                                ; 0                  ; 0                              ;
 ; I/O pins                                    ; 77                 ; 0                              ;
@@ -395,8 +395,8 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 ;     -- Registered Output Connections        ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Internal Connections                        ;                    ;                                ;
-;     -- Total Connections                    ; 1874               ; 0                              ;
-;     -- Registered Connections               ; 838                ; 0                              ;
+;     -- Total Connections                    ; 1928               ; 0                              ;
+;     -- Registered Connections               ; 861                ; 0                              ;
 ;                                             ;                    ;                                ;
 ; External Connections                        ;                    ;                                ;
 ;     -- Top                                  ; 0                  ; 0                              ;
@@ -428,16 +428,16 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; ADC_BIT_A[0] ; 69    ; 4        ; 26           ; 0            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ADC_BIT_A[1] ; 70    ; 4        ; 26           ; 0            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ADC_BIT_A[2] ; 71    ; 4        ; 26           ; 0            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ADC_BIT_A[3] ; 72    ; 4        ; 26           ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ADC_BIT_A[4] ; 73    ; 3        ; 28           ; 1            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ADC_BIT_A[5] ; 74    ; 3        ; 28           ; 1            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ADC_BIT_A[6] ; 75    ; 3        ; 28           ; 2            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ADC_BIT_A[7] ; 76    ; 3        ; 28           ; 2            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ADC_BIT_A[8] ; 79    ; 3        ; 28           ; 5            ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ADC_BIT_A[9] ; 80    ; 3        ; 28           ; 5            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_BIT_A[0] ; 69    ; 4        ; 26           ; 0            ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_BIT_A[1] ; 70    ; 4        ; 26           ; 0            ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_BIT_A[2] ; 71    ; 4        ; 26           ; 0            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_BIT_A[3] ; 72    ; 4        ; 26           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_BIT_A[4] ; 73    ; 3        ; 28           ; 1            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_BIT_A[5] ; 74    ; 3        ; 28           ; 1            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_BIT_A[6] ; 75    ; 3        ; 28           ; 2            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_BIT_A[7] ; 76    ; 3        ; 28           ; 2            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_BIT_A[8] ; 79    ; 3        ; 28           ; 5            ; 4           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_BIT_A[9] ; 80    ; 3        ; 28           ; 5            ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ADC_BIT_B[0] ; 55    ; 4        ; 9            ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ADC_BIT_B[1] ; 53    ; 4        ; 9            ; 0            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ADC_BIT_B[2] ; 58    ; 4        ; 12           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
@@ -448,7 +448,7 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 ; ADC_BIT_B[7] ; 63    ; 4        ; 19           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ADC_BIT_B[8] ; 67    ; 4        ; 24           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ADC_BIT_B[9] ; 65    ; 4        ; 21           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ADC_DCLKA    ; 86    ; 3        ; 28           ; 6            ; 1           ; 22                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ADC_DCLKA    ; 86    ; 3        ; 28           ; 6            ; 1           ; 30                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ADC_DCLKB    ; 51    ; 4        ; 7            ; 0            ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ADC_DORA     ; 81    ; 3        ; 28           ; 5            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; ADC_DORB     ; 52    ; 4        ; 7            ; 0            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
@@ -516,7 +516,7 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 ; MRAM_D[6]    ; 132   ; 2        ; 9            ; 14           ; 2           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; MRAM_Controller:this_mram_controller|MRAM_D[6]~en                     ; -                   ;
 ; MRAM_D[7]    ; 133   ; 2        ; 7            ; 14           ; 0           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; MRAM_Controller:this_mram_controller|MRAM_D[7]~en                     ; -                   ;
 ; MRAM_D[8]    ; 143   ; 2        ; 1            ; 14           ; 2           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; MRAM_Controller:this_mram_controller|MRAM_D[8]~en                     ; -                   ;
-; MRAM_D[9]    ; 142   ; 2        ; 1            ; 14           ; 1           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; MRAM_Controller:this_mram_controller|MRAM_D[9]~en                     ; -                   ;
+; MRAM_D[9]    ; 142   ; 2        ; 1            ; 14           ; 1           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; MRAM_Controller:this_mram_controller|MRAM_D[9]~en                     ; -                   ;
 ; SPI_CS       ; 44    ; 4        ; 3            ; 0            ; 1           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                                                                     ; -                   ;
 ; SPI_MISO     ; 40    ; 4        ; 1            ; 0            ; 2           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                                                                     ; -                   ;
 ; SPI_MOSI     ; 41    ; 4        ; 1            ; 0            ; 1           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                                                                     ; -                   ;
@@ -731,9 +731,9 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                                                                                        ; Library Name ;
 +---------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |UNI_Projektas                                          ; 391 (1)     ; 279 (0)                   ; 0 (0)         ; 384         ; 2    ; 0            ; 0       ; 0         ; 77   ; 0            ; 112 (0)      ; 56 (0)            ; 223 (1)          ; |UNI_Projektas                                                                                                                                                                                             ; work         ;
-;    |MRAM_Controller:this_mram_controller|               ; 65 (65)     ; 51 (51)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 24 (24)           ; 27 (27)          ; |UNI_Projektas|MRAM_Controller:this_mram_controller                                                                                                                                                        ; work         ;
-;    |Read_adc_manager:this_read_adc_manager|             ; 29 (29)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 11 (11)           ; 11 (11)          ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager                                                                                                                                                      ; work         ;
+; |UNI_Projektas                                          ; 402 (1)     ; 286 (0)                   ; 0 (0)         ; 384         ; 2    ; 0            ; 0       ; 0         ; 77   ; 0            ; 116 (0)      ; 53 (0)            ; 233 (1)          ; |UNI_Projektas                                                                                                                                                                                             ; work         ;
+;    |MRAM_Controller:this_mram_controller|               ; 63 (63)     ; 50 (50)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 23 (23)           ; 27 (27)          ; |UNI_Projektas|MRAM_Controller:this_mram_controller                                                                                                                                                        ; work         ;
+;    |Read_adc_manager:this_read_adc_manager|             ; 38 (38)     ; 30 (30)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 8 (8)             ; 22 (22)          ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager                                                                                                                                                      ; work         ;
 ;    |SPI_Controller:adc_spi_controller|                  ; 103 (18)    ; 75 (12)                   ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (6)       ; 17 (0)            ; 58 (12)          ; |UNI_Projektas|SPI_Controller:adc_spi_controller                                                                                                                                                           ; work         ;
 ;       |SPI_TX:spi_tx_component|                         ; 64 (64)     ; 49 (49)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (15)      ; 17 (17)           ; 32 (32)          ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component                                                                                                                                   ; work         ;
 ;       |wizard_spi_fifo:spi_fifo_component|              ; 21 (0)      ; 14 (0)                    ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 14 (0)           ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component                                                                                                                        ; work         ;
@@ -748,18 +748,18 @@ Note: User assignments will override these defaults. The user specified values a
 ;                      |altsyncram_0vj1:altsyncram1|      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1 ; work         ;
 ;    |STATE_MANAGER:this_state_manager|                   ; 52 (52)     ; 36 (36)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 36 (36)          ; |UNI_Projektas|STATE_MANAGER:this_state_manager                                                                                                                                                            ; work         ;
 ;    |Setup_manager:this_setup_manager|                   ; 48 (48)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (15)      ; 1 (1)             ; 32 (32)          ; |UNI_Projektas|Setup_manager:this_setup_manager                                                                                                                                                            ; work         ;
-;    |UART_Controller:UART_Controller_1|                  ; 80 (11)     ; 51 (8)                    ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (4)       ; 3 (3)             ; 48 (4)           ; |UNI_Projektas|UART_Controller:UART_Controller_1                                                                                                                                                           ; work         ;
-;       |UART_FIFO_wizard:uart_fifo|                      ; 21 (0)      ; 14 (0)                    ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 15 (0)           ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo                                                                                                                                ; work         ;
-;          |scfifo:scfifo_component|                      ; 21 (0)      ; 14 (0)                    ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 15 (0)           ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component                                                                                                        ; work         ;
-;             |scfifo_ka21:auto_generated|                ; 21 (0)      ; 14 (0)                    ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 15 (0)           ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated                                                                             ; work         ;
-;                |a_dpfifo_rg21:dpfifo|                   ; 21 (2)      ; 14 (0)                    ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (1)        ; 0 (0)             ; 15 (1)           ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo                                                        ; work         ;
+;    |UART_Controller:UART_Controller_1|                  ; 84 (12)     ; 51 (8)                    ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (4)       ; 4 (4)             ; 47 (4)           ; |UNI_Projektas|UART_Controller:UART_Controller_1                                                                                                                                                           ; work         ;
+;       |UART_FIFO_wizard:uart_fifo|                      ; 21 (0)      ; 14 (0)                    ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 14 (0)           ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo                                                                                                                                ; work         ;
+;          |scfifo:scfifo_component|                      ; 21 (0)      ; 14 (0)                    ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 14 (0)           ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component                                                                                                        ; work         ;
+;             |scfifo_ka21:auto_generated|                ; 21 (0)      ; 14 (0)                    ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 14 (0)           ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated                                                                             ; work         ;
+;                |a_dpfifo_rg21:dpfifo|                   ; 21 (2)      ; 14 (0)                    ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (2)        ; 0 (0)             ; 14 (0)           ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo                                                        ; work         ;
 ;                   |a_fefifo_76e:fifo_state|             ; 11 (7)      ; 6 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 6 (2)            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state                                ; work         ;
 ;                      |cntr_pj7:count_usedw|             ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw           ; work         ;
 ;                   |cntr_djb:rd_ptr_count|               ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:rd_ptr_count                                  ; work         ;
 ;                   |cntr_djb:wr_ptr|                     ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:wr_ptr                                        ; work         ;
 ;                   |dpram_st01:FIFOram|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram                                     ; work         ;
 ;                      |altsyncram_0sj1:altsyncram2|      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2         ; work         ;
-;       |UART_TX:uart_tx_1|                               ; 48 (48)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 29 (29)          ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1                                                                                                                                         ; work         ;
+;       |UART_TX:uart_tx_1|                               ; 51 (51)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 29 (29)          ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1                                                                                                                                         ; work         ;
 ;    |Write_out_mram_manager:this_write_out_mram_manager| ; 14 (14)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 11 (11)          ; |UNI_Projektas|Write_out_mram_manager:this_write_out_mram_manager                                                                                                                                          ; work         ;
 +---------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -808,6 +808,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ADC_BIT_B[7]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; ADC_BIT_B[8]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; ADC_BIT_B[9]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; ADC_BIT_A[0]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; ADC_BIT_A[1]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; ADC_BIT_A[2]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; ADC_BIT_A[3]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; ADC_BIT_A[4]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; ADC_BIT_A[5]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; ADC_BIT_A[6]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; ADC_BIT_A[7]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; ADC_BIT_A[8]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; ADC_BIT_A[9]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; ADC_SPI_SCLK   ; Output   ; --            ; --            ; --                    ; --  ;
 ; ADC_SPI_CS     ; Output   ; --            ; --            ; --                    ; --  ;
 ; MRAM_OUTPUT_EN ; Output   ; --            ; --            ; --                    ; --  ;
@@ -837,159 +847,146 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; UART_TX        ; Output   ; --            ; --            ; --                    ; --  ;
 ; CLK            ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; ADC_DCLKA      ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; ADC_BIT_A[0]   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; ADC_BIT_A[1]   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; ADC_BIT_A[2]   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; ADC_BIT_A[3]   ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; ADC_BIT_A[4]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; ADC_BIT_A[5]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; ADC_BIT_A[6]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; ADC_BIT_A[7]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; ADC_BIT_A[8]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; ADC_BIT_A[9]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 +----------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                      ;
-+-----------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                   ; Pad To Core Index ; Setting ;
-+-----------------------------------------------------------------------+-------------------+---------+
-; SPI_MOSI                                                              ;                   ;         ;
-; SPI_MISO                                                              ;                   ;         ;
-; SPI_SCLK                                                              ;                   ;         ;
-; SPI_CS                                                                ;                   ;         ;
-; ADC_SPI_SDIN                                                          ;                   ;         ;
-; MRAM_D[0]                                                             ;                   ;         ;
-;      - MRAM_Controller:this_mram_controller|data_out[0]~feeder        ; 0                 ; 6       ;
-; MRAM_D[1]                                                             ;                   ;         ;
-;      - MRAM_Controller:this_mram_controller|data_out[1]~feeder        ; 0                 ; 6       ;
-; MRAM_D[2]                                                             ;                   ;         ;
-;      - MRAM_Controller:this_mram_controller|data_out[2]~feeder        ; 0                 ; 6       ;
-; MRAM_D[3]                                                             ;                   ;         ;
-;      - MRAM_Controller:this_mram_controller|data_out[3]               ; 0                 ; 6       ;
-; MRAM_D[4]                                                             ;                   ;         ;
-;      - MRAM_Controller:this_mram_controller|data_out[4]~feeder        ; 0                 ; 6       ;
-; MRAM_D[5]                                                             ;                   ;         ;
-;      - MRAM_Controller:this_mram_controller|data_out[5]~feeder        ; 0                 ; 6       ;
-; MRAM_D[6]                                                             ;                   ;         ;
-;      - MRAM_Controller:this_mram_controller|data_out[6]               ; 0                 ; 6       ;
-; MRAM_D[7]                                                             ;                   ;         ;
-;      - MRAM_Controller:this_mram_controller|data_out[7]~feeder        ; 1                 ; 6       ;
-; MRAM_D[8]                                                             ;                   ;         ;
-; MRAM_D[9]                                                             ;                   ;         ;
-; MRAM_D[10]                                                            ;                   ;         ;
-; MRAM_D[11]                                                            ;                   ;         ;
-; MRAM_D[12]                                                            ;                   ;         ;
-; MRAM_D[13]                                                            ;                   ;         ;
-; MRAM_D[14]                                                            ;                   ;         ;
-; MRAM_D[15]                                                            ;                   ;         ;
-; BUTTON                                                                ;                   ;         ;
-; ADC_DORB                                                              ;                   ;         ;
-; ADC_DORA                                                              ;                   ;         ;
-; ADC_DCLKB                                                             ;                   ;         ;
-; ADC_BIT_B[0]                                                          ;                   ;         ;
-; ADC_BIT_B[1]                                                          ;                   ;         ;
-; ADC_BIT_B[2]                                                          ;                   ;         ;
-; ADC_BIT_B[3]                                                          ;                   ;         ;
-; ADC_BIT_B[4]                                                          ;                   ;         ;
-; ADC_BIT_B[5]                                                          ;                   ;         ;
-; ADC_BIT_B[6]                                                          ;                   ;         ;
-; ADC_BIT_B[7]                                                          ;                   ;         ;
-; ADC_BIT_B[8]                                                          ;                   ;         ;
-; ADC_BIT_B[9]                                                          ;                   ;         ;
-; UART_RX                                                               ;                   ;         ;
-; CLK                                                                   ;                   ;         ;
-; ADC_DCLKA                                                             ;                   ;         ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_WRITE_DATA         ; 1                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|read_counter[0]         ; 1                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|read_counter[1]         ; 1                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|read_counter[2]         ; 1                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|read_counter[3]         ; 1                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|address_counter[0]      ; 1                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|address_counter[1]      ; 1                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|address_counter[2]      ; 1                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|address_counter[3]      ; 1                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|address_counter[4]      ; 1                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|address_counter[5]      ; 1                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|address_counter[6]      ; 1                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[0]        ; 0                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[1]        ; 0                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[2]        ; 0                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[3]        ; 0                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[4]        ; 0                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[5]        ; 0                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[6]        ; 0                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[7]        ; 0                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[8]        ; 0                 ; 0       ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[9]        ; 0                 ; 0       ;
-; ADC_BIT_A[0]                                                          ;                   ;         ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[0]~feeder ; 0                 ; 6       ;
-; ADC_BIT_A[1]                                                          ;                   ;         ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[1]~feeder ; 0                 ; 6       ;
-; ADC_BIT_A[2]                                                          ;                   ;         ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[2]~feeder ; 0                 ; 6       ;
-; ADC_BIT_A[3]                                                          ;                   ;         ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[3]~feeder ; 0                 ; 6       ;
-; ADC_BIT_A[4]                                                          ;                   ;         ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[4]~feeder ; 1                 ; 6       ;
-; ADC_BIT_A[5]                                                          ;                   ;         ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[5]~feeder ; 1                 ; 6       ;
-; ADC_BIT_A[6]                                                          ;                   ;         ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[6]~feeder ; 0                 ; 6       ;
-; ADC_BIT_A[7]                                                          ;                   ;         ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[7]~feeder ; 1                 ; 6       ;
-; ADC_BIT_A[8]                                                          ;                   ;         ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[8]~feeder ; 1                 ; 6       ;
-; ADC_BIT_A[9]                                                          ;                   ;         ;
-;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[9]~feeder ; 0                 ; 6       ;
-+-----------------------------------------------------------------------+-------------------+---------+
++--------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                   ;
++--------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                ; Pad To Core Index ; Setting ;
++--------------------------------------------------------------------+-------------------+---------+
+; SPI_MOSI                                                           ;                   ;         ;
+; SPI_MISO                                                           ;                   ;         ;
+; SPI_SCLK                                                           ;                   ;         ;
+; SPI_CS                                                             ;                   ;         ;
+; ADC_SPI_SDIN                                                       ;                   ;         ;
+; MRAM_D[0]                                                          ;                   ;         ;
+;      - MRAM_Controller:this_mram_controller|data_out[0]~feeder     ; 0                 ; 6       ;
+; MRAM_D[1]                                                          ;                   ;         ;
+;      - MRAM_Controller:this_mram_controller|data_out[1]~feeder     ; 0                 ; 6       ;
+; MRAM_D[2]                                                          ;                   ;         ;
+;      - MRAM_Controller:this_mram_controller|data_out[2]~feeder     ; 0                 ; 6       ;
+; MRAM_D[3]                                                          ;                   ;         ;
+;      - MRAM_Controller:this_mram_controller|data_out[3]~feeder     ; 0                 ; 6       ;
+; MRAM_D[4]                                                          ;                   ;         ;
+;      - MRAM_Controller:this_mram_controller|data_out[4]~feeder     ; 0                 ; 6       ;
+; MRAM_D[5]                                                          ;                   ;         ;
+;      - MRAM_Controller:this_mram_controller|data_out[5]~feeder     ; 0                 ; 6       ;
+; MRAM_D[6]                                                          ;                   ;         ;
+;      - MRAM_Controller:this_mram_controller|data_out[6]~feeder     ; 0                 ; 6       ;
+; MRAM_D[7]                                                          ;                   ;         ;
+;      - MRAM_Controller:this_mram_controller|data_out[7]            ; 0                 ; 6       ;
+; MRAM_D[8]                                                          ;                   ;         ;
+; MRAM_D[9]                                                          ;                   ;         ;
+; MRAM_D[10]                                                         ;                   ;         ;
+; MRAM_D[11]                                                         ;                   ;         ;
+; MRAM_D[12]                                                         ;                   ;         ;
+; MRAM_D[13]                                                         ;                   ;         ;
+; MRAM_D[14]                                                         ;                   ;         ;
+; MRAM_D[15]                                                         ;                   ;         ;
+; BUTTON                                                             ;                   ;         ;
+; ADC_DORB                                                           ;                   ;         ;
+; ADC_DORA                                                           ;                   ;         ;
+; ADC_DCLKB                                                          ;                   ;         ;
+; ADC_BIT_B[0]                                                       ;                   ;         ;
+; ADC_BIT_B[1]                                                       ;                   ;         ;
+; ADC_BIT_B[2]                                                       ;                   ;         ;
+; ADC_BIT_B[3]                                                       ;                   ;         ;
+; ADC_BIT_B[4]                                                       ;                   ;         ;
+; ADC_BIT_B[5]                                                       ;                   ;         ;
+; ADC_BIT_B[6]                                                       ;                   ;         ;
+; ADC_BIT_B[7]                                                       ;                   ;         ;
+; ADC_BIT_B[8]                                                       ;                   ;         ;
+; ADC_BIT_B[9]                                                       ;                   ;         ;
+; ADC_BIT_A[0]                                                       ;                   ;         ;
+; ADC_BIT_A[1]                                                       ;                   ;         ;
+; ADC_BIT_A[2]                                                       ;                   ;         ;
+; ADC_BIT_A[3]                                                       ;                   ;         ;
+; ADC_BIT_A[4]                                                       ;                   ;         ;
+; ADC_BIT_A[5]                                                       ;                   ;         ;
+; ADC_BIT_A[6]                                                       ;                   ;         ;
+; ADC_BIT_A[7]                                                       ;                   ;         ;
+; ADC_BIT_A[8]                                                       ;                   ;         ;
+; ADC_BIT_A[9]                                                       ;                   ;         ;
+; UART_RX                                                            ;                   ;         ;
+; CLK                                                                ;                   ;         ;
+; ADC_DCLKA                                                          ;                   ;         ;
+;      - Read_adc_manager:this_read_adc_manager|MRAM_WRITE_DATA      ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|read_counter[0]      ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|read_counter[1]      ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|read_counter[2]      ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|read_counter[3]      ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|address_counter[0]   ; 0                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|address_counter[1]   ; 0                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|address_counter[2]   ; 0                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|address_counter[3]   ; 0                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|address_counter[4]   ; 0                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|address_counter[5]   ; 0                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|address_counter[6]   ; 0                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[0]     ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[1]     ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[2]     ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[3]     ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[4]     ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[5]     ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[6]     ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[7]     ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[8]     ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|real_data_counter[0] ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|real_data_counter[1] ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|real_data_counter[2] ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|real_data_counter[3] ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|real_data_counter[4] ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|real_data_counter[5] ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|real_data_counter[6] ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|real_data_counter[7] ; 1                 ; 0       ;
+;      - Read_adc_manager:this_read_adc_manager|real_data_counter[8] ; 1                 ; 0       ;
++--------------------------------------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                                                                                                                                    ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                                                                                                                                                     ; Location          ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; ADC_DCLKA                                                                                                                                                                ; PIN_86            ; 22      ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; CLK                                                                                                                                                                      ; PIN_17            ; 259     ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; MRAM_Controller:this_mram_controller|MRAM_D[0]~en                                                                                                                        ; LCFF_X20_Y10_N23  ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|MRAM_D[1]~en                                                                                                                        ; LCFF_X20_Y10_N9   ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|MRAM_D[2]~en                                                                                                                        ; LCFF_X19_Y10_N23  ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|MRAM_D[3]~en                                                                                                                        ; LCFF_X19_Y10_N27  ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|MRAM_D[4]~en                                                                                                                        ; LCFF_X19_Y10_N29  ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|MRAM_D[5]~en                                                                                                                        ; LCFF_X20_Y6_N13   ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|MRAM_D[6]~en                                                                                                                        ; LCFF_X19_Y10_N25  ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|MRAM_D[7]~en                                                                                                                        ; LCFF_X19_Y10_N21  ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|MRAM_D[8]~en                                                                                                                        ; LCFF_X19_Y10_N11  ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|MRAM_D[9]~en                                                                                                                        ; LCFF_X19_Y10_N1   ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|Selector22~1                                                                                                                        ; LCCOMB_X19_Y6_N8  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|Selector39~0                                                                                                                        ; LCCOMB_X20_Y6_N4  ; 26      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|curr_state.idle                                                                                                                     ; LCFF_X22_Y6_N9    ; 16      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|curr_state~6                                                                                                                        ; LCCOMB_X20_Y6_N20 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; MRAM_Controller:this_mram_controller|data_out[0]~0                                                                                                                       ; LCCOMB_X20_Y6_N22 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[0]~0                                                                                                                ; LCCOMB_X26_Y6_N30 ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Read_adc_manager:this_read_adc_manager|address_counter~9                                                                                                                 ; LCCOMB_X14_Y6_N0  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Read_adc_manager:this_read_adc_manager|read_counter~1                                                                                                                    ; LCCOMB_X26_Y6_N26 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|SPI_MOSI~2                                                                                                     ; LCCOMB_X8_Y7_N18  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|SPI_MOSI~en                                                                                                    ; LCFF_X8_Y7_N21    ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
-; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state                                                                                                     ; LCFF_X9_Y7_N17    ; 20      ; Sync. clear, Sync. load    ; no     ; --                   ; --               ; --                        ;
-; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~2                                                                                                       ; LCCOMB_X10_Y7_N28 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; SPI_Controller:adc_spi_controller|curr_state.cs_up                                                                                                                       ; LCFF_X9_Y6_N1     ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|_~0 ; LCCOMB_X10_Y6_N16 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_rreq                  ; LCCOMB_X10_Y6_N12 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_wreq                  ; LCCOMB_X10_Y6_N0  ; 8       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; STATE_MANAGER:this_state_manager|curr_state.read_adc                                                                                                                     ; LCFF_X14_Y6_N27   ; 17      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; STATE_MANAGER:this_state_manager|curr_state.wait_1                                                                                                                       ; LCFF_X10_Y5_N13   ; 34      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                                                                                                               ; LCFF_X10_Y5_N1    ; 14      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Setup_manager:this_setup_manager|Equal12~1                                                                                                                               ; LCCOMB_X9_Y8_N30  ; 17      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|_~0         ; LCCOMB_X20_Y9_N4  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|valid_rreq                          ; LCCOMB_X21_Y9_N0  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|valid_wreq                          ; LCCOMB_X20_Y9_N0  ; 8       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.data                                                                                                   ; LCFF_X22_Y10_N29  ; 8       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.sync                                                                                                   ; LCFF_X22_Y10_N5   ; 19      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Write_out_mram_manager:this_write_out_mram_manager|address_counter~9                                                                                                     ; LCCOMB_X15_Y6_N26 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                                                                                                                     ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                                                                                                                     ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; ADC_DCLKA                                                                                                                                                                ; PIN_86             ; 30      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; CLK                                                                                                                                                                      ; PIN_17             ; 258     ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; MRAM_Controller:this_mram_controller|MRAM_D[0]~en                                                                                                                        ; LCFF_X15_Y11_N13   ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|MRAM_D[1]~en                                                                                                                        ; LCFF_X15_Y11_N29   ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|MRAM_D[2]~en                                                                                                                        ; LCFF_X17_Y11_N13   ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|MRAM_D[3]~en                                                                                                                        ; LCFF_X15_Y11_N5    ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|MRAM_D[4]~en                                                                                                                        ; LCFF_X15_Y11_N25   ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|MRAM_D[5]~en                                                                                                                        ; LCFF_X14_Y11_N29   ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|MRAM_D[6]~en                                                                                                                        ; LCFF_X12_Y11_N9    ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|MRAM_D[7]~en                                                                                                                        ; LCFF_X12_Y11_N11   ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|MRAM_D[8]~en                                                                                                                        ; LCFF_X12_Y11_N5    ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|Selector22~1                                                                                                                        ; LCCOMB_X13_Y11_N20 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|Selector39~0                                                                                                                        ; LCCOMB_X15_Y11_N6  ; 25      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|curr_state.idle                                                                                                                     ; LCFF_X13_Y11_N17   ; 16      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|curr_state~6                                                                                                                        ; LCCOMB_X13_Y11_N0  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; MRAM_Controller:this_mram_controller|data_out[0]~0                                                                                                                       ; LCCOMB_X15_Y11_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[0]~0                                                                                                                ; LCCOMB_X14_Y10_N16 ; 18      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Read_adc_manager:this_read_adc_manager|address_counter~9                                                                                                                 ; LCCOMB_X12_Y10_N26 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Read_adc_manager:this_read_adc_manager|read_counter~1                                                                                                                    ; LCCOMB_X14_Y10_N0  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|SPI_MOSI~2                                                                                                     ; LCCOMB_X21_Y5_N20  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|SPI_MOSI~en                                                                                                    ; LCFF_X21_Y5_N1     ; 1       ; Output enable              ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state                                                                                                     ; LCFF_X22_Y5_N3     ; 20      ; Sync. clear, Sync. load    ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~2                                                                                                       ; LCCOMB_X22_Y5_N0   ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|curr_state.cs_up                                                                                                                       ; LCFF_X20_Y5_N21    ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|_~0 ; LCCOMB_X20_Y6_N26  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_rreq                  ; LCCOMB_X20_Y6_N28  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_wreq                  ; LCCOMB_X20_Y6_N12  ; 8       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; STATE_MANAGER:this_state_manager|curr_state.read_adc                                                                                                                     ; LCFF_X10_Y10_N25   ; 17      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; STATE_MANAGER:this_state_manager|curr_state.wait_1                                                                                                                       ; LCFF_X10_Y10_N17   ; 34      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                                                                                                               ; LCFF_X10_Y10_N11   ; 14      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; Setup_manager:this_setup_manager|Equal12~1                                                                                                                               ; LCCOMB_X18_Y6_N24  ; 17      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|_~0         ; LCCOMB_X14_Y12_N18 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|valid_rreq                          ; LCCOMB_X10_Y12_N0  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|valid_wreq                          ; LCCOMB_X14_Y12_N8  ; 8       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.data                                                                                                   ; LCFF_X9_Y12_N19    ; 10      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.sync                                                                                                   ; LCFF_X9_Y12_N21    ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Write_out_mram_manager:this_write_out_mram_manager|address_counter~9                                                                                                     ; LCCOMB_X12_Y10_N30 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -997,7 +994,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+----------------------+------------------+---------------------------+
-; CLK  ; PIN_17   ; 259     ; Global Clock         ; GCLK2            ; --                        ;
+; CLK  ; PIN_17   ; 258     ; Global Clock         ; GCLK2            ; --                        ;
 +------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1008,12 +1005,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; STATE_MANAGER:this_state_manager|curr_state.wait_1                                                                                                                                                                ; 34      ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~2                                                                                                                                                ; 32      ;
-; MRAM_Controller:this_mram_controller|Selector39~0                                                                                                                                                                 ; 26      ;
-; MRAM_Controller:this_mram_controller|counter[0]                                                                                                                                                                   ; 25      ;
-; ADC_DCLKA                                                                                                                                                                                                         ; 22      ;
+; ADC_DCLKA                                                                                                                                                                                                         ; 30      ;
+; MRAM_Controller:this_mram_controller|Selector39~0                                                                                                                                                                 ; 25      ;
+; MRAM_Controller:this_mram_controller|counter[0]                                                                                                                                                                   ; 24      ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state                                                                                                                                              ; 20      ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.sync                                                                                                                                            ; 19      ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.idle                                                                                                                                            ; 17      ;
+; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[0]~0                                                                                                                                                         ; 18      ;
 ; STATE_MANAGER:this_state_manager|curr_state.read_adc                                                                                                                                                              ; 17      ;
 ; Setup_manager:this_setup_manager|Equal12~1                                                                                                                                                                        ; 17      ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[1]_OTERM19                                                                                                                                       ; 16      ;
@@ -1022,22 +1018,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; MRAM_Controller:this_mram_controller|curr_state.writing                                                                                                                                                           ; 15      ;
 ; MRAM_Controller:this_mram_controller|curr_state.reading                                                                                                                                                           ; 15      ;
 ; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                                                                                                                                                        ; 14      ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Equal0~2                                                                                                                                                      ; 13      ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.sync                                                                                                                                            ; 13      ;
 ; MRAM_Controller:this_mram_controller|counter[1]                                                                                                                                                                   ; 13      ;
 ; MRAM_Controller:this_mram_controller|counter[2]                                                                                                                                                                   ; 12      ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.idle                                                                                                                                            ; 11      ;
 ; ~GND                                                                                                                                                                                                              ; 10      ;
-; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[0]~0                                                                                                                                                         ; 10      ;
 ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|b_non_empty                                          ; 10      ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.data                                                                                                                                            ; 10      ;
 ; SPI_Controller:adc_spi_controller|curr_state.cs_up                                                                                                                                                                ; 10      ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Equal0~0_OTERM117                                                                                                                                       ; 9       ;
 ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_wreq                                                           ; 9       ;
 ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|valid_wreq                                                                   ; 9       ;
 ; MRAM_Controller:this_mram_controller|data_out[0]~0                                                                                                                                                                ; 8       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.data                                                                                                                                            ; 8       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Equal0~2                                                                                                                                                      ; 8       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[1]                                                                                                                                                 ; 8       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[0]                                                                                                                                                 ; 8       ;
 ; Setup_manager:this_setup_manager|config_command_counter[0]                                                                                                                                                        ; 8       ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|sclk                                                                                                                                                    ; 8       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.stop                                                                                                                                            ; 7       ;
 ; UART_Controller:UART_Controller_1|curr_state.idle                                                                                                                                                                 ; 7       ;
 ; Read_adc_manager:this_read_adc_manager|address_counter~9                                                                                                                                                          ; 7       ;
 ; Write_out_mram_manager:this_write_out_mram_manager|address_counter~9                                                                                                                                              ; 7       ;
@@ -1049,9 +1047,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; STATE_MANAGER:this_state_manager|Equal0~10                                                                                                                                                                        ; 6       ;
 ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|valid_rreq                                                           ; 5       ;
 ; Setup_manager:this_setup_manager|Selector6~1                                                                                                                                                                      ; 5       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector11~0                                                                                                                                                  ; 5       ;
 ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|valid_rreq                                                                   ; 5       ;
 ; SPI_Controller:adc_spi_controller|fifo_rdreq                                                                                                                                                                      ; 5       ;
 ; SPI_Controller:adc_spi_controller|Equal0~1                                                                                                                                                                        ; 5       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.start                                                                                                                                           ; 5       ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[0]                                                                                                                                          ; 5       ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|clk_counter[1]                                                                                                                                          ; 5       ;
 ; Read_adc_manager:this_read_adc_manager|read_counter[2]                                                                                                                                                            ; 5       ;
@@ -1066,10 +1066,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; UART_Controller:UART_Controller_1|curr_state.reading_fifo2                                                                                                                                                        ; 4       ;
 ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|_~0                                                  ; 4       ;
 ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|_~0                                          ; 4       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Equal2~0                                                                                                                                                      ; 4       ;
 ; UART_Controller:UART_Controller_1|curr_state.reading_fifo1                                                                                                                                                        ; 4       ;
 ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|b_full                                               ; 4       ;
 ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_full                                       ; 4       ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|process_0~1                                                                                                                                             ; 4       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[0]                                                                                                                                                    ; 4       ;
 ; Read_adc_manager:this_read_adc_manager|Equal1~0                                                                                                                                                                   ; 4       ;
 ; SPI_Controller:adc_spi_controller|tx_send_irq                                                                                                                                                                     ; 4       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[2]                                                                                                                                                 ; 4       ;
@@ -1088,13 +1090,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Setup_manager:this_setup_manager|Equal0~5                                                                                                                                                                         ; 3       ;
 ; Setup_manager:this_setup_manager|WideOr0~0                                                                                                                                                                        ; 3       ;
 ; UART_Controller:UART_Controller_1|next_state.reading_fifo2                                                                                                                                                        ; 3       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[8]                                                                                                                                                       ; 3       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[7]                                                                                                                                                       ; 3       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[6]                                                                                                                                                       ; 3       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[5]                                                                                                                                                       ; 3       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[4]                                                                                                                                                       ; 3       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[3]                                                                                                                                                       ; 3       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[2]                                                                                                                                                       ; 3       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[1]                                                                                                                                                       ; 3       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[0]                                                                                                                                                       ; 3       ;
 ; Read_adc_manager:this_read_adc_manager|read_counter~1                                                                                                                                                             ; 3       ;
 ; STATE_MANAGER:this_state_manager|counter[0]                                                                                                                                                                       ; 3       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[0]                                                                                                                                                    ; 3       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[9]                                                                                                                                                    ; 3       ;
 ; MRAM_Controller:this_mram_controller|curr_state~6                                                                                                                                                                 ; 3       ;
 ; SPI_Controller:adc_spi_controller|cs_up_counter[0]                                                                                                                                                                ; 3       ;
 ; SPI_Controller:adc_spi_controller|curr_state.idle                                                                                                                                                                 ; 3       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.start                                                                                                                                           ; 3       ;
 ; SPI_Controller:adc_spi_controller|curr_state.transmiting                                                                                                                                                          ; 3       ;
 ; SPI_Controller:adc_spi_controller|curr_state.reading_fifo                                                                                                                                                         ; 3       ;
 ; Setup_manager:this_setup_manager|Selector6~0                                                                                                                                                                      ; 3       ;
@@ -1146,7 +1156,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|process_0~2                                                                                                                                             ; 2       ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|is_read                                                                                                                                                 ; 2       ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|SPI_MOSI~2                                                                                                                                              ; 2       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.stop                                                                                                                                            ; 2       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector4~1                                                                                                                                                   ; 2       ;
 ; Read_adc_manager:this_read_adc_manager|Equal0~1                                                                                                                                                                   ; 2       ;
 ; STATE_MANAGER:this_state_manager|curr_state.setup                                                                                                                                                                 ; 2       ;
 ; Setup_manager:this_setup_manager|SETUP_DONE                                                                                                                                                                       ; 2       ;
@@ -1188,13 +1198,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent~0                                                                                                                                             ; 2       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector4~0                                                                                                                                                   ; 2       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index[3]                                                                                                                                                 ; 2       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[9]                                                                                                                                                    ; 2       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Equal0~1                                                                                                                                                      ; 2       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[8]                                                                                                                                                    ; 2       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[6]                                                                                                                                                    ; 2       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[7]                                                                                                                                                    ; 2       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[6]                                                                                                                                                    ; 2       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[5]                                                                                                                                                    ; 2       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[4]                                                                                                                                                    ; 2       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Equal0~0                                                                                                                                                      ; 2       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[3]                                                                                                                                                    ; 2       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[4]                                                                                                                                                    ; 2       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[2]                                                                                                                                                    ; 2       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|counter[1]                                                                                                                                                    ; 2       ;
 ; MRAM_Controller:this_mram_controller|Mux41~0                                                                                                                                                                      ; 2       ;
@@ -1287,16 +1298,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Setup_manager:this_setup_manager|SPI_send_data[4]_OTERM9                                                                                                                                                          ; 1       ;
 ; Setup_manager:this_setup_manager|SPI_send_data[0]_OTERM7                                                                                                                                                          ; 1       ;
 ; Setup_manager:this_setup_manager|SPI_send_data[0]_OTERM1                                                                                                                                                          ; 1       ;
-; ADC_BIT_A[9]                                                                                                                                                                                                      ; 1       ;
-; ADC_BIT_A[8]                                                                                                                                                                                                      ; 1       ;
-; ADC_BIT_A[7]                                                                                                                                                                                                      ; 1       ;
-; ADC_BIT_A[6]                                                                                                                                                                                                      ; 1       ;
-; ADC_BIT_A[5]                                                                                                                                                                                                      ; 1       ;
-; ADC_BIT_A[4]                                                                                                                                                                                                      ; 1       ;
-; ADC_BIT_A[3]                                                                                                                                                                                                      ; 1       ;
-; ADC_BIT_A[2]                                                                                                                                                                                                      ; 1       ;
-; ADC_BIT_A[1]                                                                                                                                                                                                      ; 1       ;
-; ADC_BIT_A[0]                                                                                                                                                                                                      ; 1       ;
 ; CLK                                                                                                                                                                                                               ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.start~_wirecell                                                                                                                                 ; 1       ;
 ; MRAM_D[7]~7                                                                                                                                                                                                       ; 1       ;
@@ -1331,6 +1332,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; UART_Controller:UART_Controller_1|Selector2~0                                                                                                                                                                     ; 1       ;
 ; Setup_manager:this_setup_manager|Equal8~0                                                                                                                                                                         ; 1       ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~4                                                                                                                                                ; 1       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter~0                                                                                                                                                        ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Equal2~1                                                                                                                                                                   ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Equal2~0                                                                                                                                                                   ; 1       ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~3                                                                                                                                                ; 1       ;
 ; UART_Controller:UART_Controller_1|Selector0~1                                                                                                                                                                     ; 1       ;
 ; UART_Controller:UART_Controller_1|Selector0~0                                                                                                                                                                     ; 1       ;
@@ -1340,7 +1344,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; UART_Controller:UART_Controller_1|Selector1~0                                                                                                                                                                     ; 1       ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|is_read~0                                                                                                                                               ; 1       ;
 ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf~1                                                                                                                                                ; 1       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector4~1                                                                                                                                                   ; 1       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector4~2                                                                                                                                                   ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|b_full~2                                             ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|b_full~1                                             ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|b_full~0                                             ; 1       ;
@@ -1358,8 +1362,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_full~2                                     ; 1       ;
 ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_full~1                                     ; 1       ;
 ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|b_full~0                                     ; 1       ;
-; MRAM_Controller:this_mram_controller|Mux72~0                                                                                                                                                                      ; 1       ;
-; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[9]                                                                                                                                                           ; 1       ;
 ; MRAM_Controller:this_mram_controller|Mux71~0                                                                                                                                                                      ; 1       ;
 ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[8]                                                                                                                                                           ; 1       ;
 ; MRAM_Controller:this_mram_controller|Mux70~0                                                                                                                                                                      ; 1       ;
@@ -1390,15 +1392,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; MRAM_Controller:this_mram_controller|data_out[4]                                                                                                                                                                  ; 1       ;
 ; MRAM_Controller:this_mram_controller|data_out[6]                                                                                                                                                                  ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector6~0                                                                                                                                                   ; 1       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector15~0                                                                                                                                                  ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector7~0                                                                                                                                                   ; 1       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector9~0                                                                                                                                                   ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector8~0                                                                                                                                                   ; 1       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector9~0                                                                                                                                                   ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector10~0                                                                                                                                                  ; 1       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector11~0                                                                                                                                                  ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector12~0                                                                                                                                                  ; 1       ;
+; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector11~1                                                                                                                                                  ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector13~0                                                                                                                                                  ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector14~0                                                                                                                                                  ; 1       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector15~0                                                                                                                                                  ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector0~0                                                                                                                                                   ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector1~1                                                                                                                                                   ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector1~0                                                                                                                                                   ; 1       ;
@@ -1441,7 +1443,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; MRAM_Controller:this_mram_controller|MRAM_D[11]~en                                                                                                                                                                ; 1       ;
 ; MRAM_Controller:this_mram_controller|MRAM_D[10]~en                                                                                                                                                                ; 1       ;
 ; MRAM_Controller:this_mram_controller|MRAM_D[9]~en                                                                                                                                                                 ; 1       ;
-; MRAM_Controller:this_mram_controller|MRAM_D[9]~reg0                                                                                                                                                               ; 1       ;
 ; MRAM_Controller:this_mram_controller|MRAM_D[8]~en                                                                                                                                                                 ; 1       ;
 ; MRAM_Controller:this_mram_controller|MRAM_D[8]~reg0                                                                                                                                                               ; 1       ;
 ; MRAM_Controller:this_mram_controller|MRAM_D[7]~en                                                                                                                                                                 ; 1       ;
@@ -1469,8 +1470,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector18~1                                                                                                                                                  ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector18~0                                                                                                                                                  ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector19~0                                                                                                                                                  ; 1       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Equal0~1                                                                                                                                                      ; 1       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Equal0~0                                                                                                                                                      ; 1       ;
 ; MRAM_Controller:this_mram_controller|curr_state~8                                                                                                                                                                 ; 1       ;
 ; MRAM_Controller:this_mram_controller|curr_state~7                                                                                                                                                                 ; 1       ;
 ; MRAM_Controller:this_mram_controller|curr_state~5                                                                                                                                                                 ; 1       ;
@@ -1563,6 +1562,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|counter_comb_bita1                                   ; 1       ;
 ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|counter_comb_bita0~COUT                              ; 1       ;
 ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr|counter_comb_bita0                                   ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~16                                                                                                                                                                    ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~15                                                                                                                                                                    ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~14                                                                                                                                                                    ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~13                                                                                                                                                                    ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~12                                                                                                                                                                    ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~11                                                                                                                                                                    ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~10                                                                                                                                                                    ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~9                                                                                                                                                                     ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~8                                                                                                                                                                     ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~7                                                                                                                                                                     ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~6                                                                                                                                                                     ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~5                                                                                                                                                                     ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~4                                                                                                                                                                     ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~3                                                                                                                                                                     ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~2                                                                                                                                                                     ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~1                                                                                                                                                                     ; 1       ;
+; Read_adc_manager:this_read_adc_manager|Add1~0                                                                                                                                                                     ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|counter_comb_bita3              ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|counter_comb_bita2~COUT         ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|counter_comb_bita2              ; 1       ;
@@ -1761,60 +1777,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-------------+----------------------+-----------------+-----------------+
 ; Name                                                                                                                                                                                                   ; Type ; Mode             ; Clock Mode  ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF  ; Location    ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-------------+----------------------+-----------------+-----------------+
-; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Dual Clocks ; 16           ; 16           ; 16           ; 16           ; yes                    ; no                      ; yes                    ; no                      ; 256  ; 16                          ; 16                          ; 16                          ; 16                          ; 256                 ; 1    ; None ; M4K_X11_Y7  ; Don't care           ; Don't care      ; Don't care      ;
-; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2|ALTSYNCRAM         ; AUTO ; Simple Dual Port ; Dual Clocks ; 16           ; 8            ; 16           ; 8            ; yes                    ; no                      ; yes                    ; no                      ; 128  ; 16                          ; 8                           ; 16                          ; 8                           ; 128                 ; 1    ; None ; M4K_X23_Y10 ; Don't care           ; Don't care      ; Don't care      ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Dual Clocks ; 16           ; 16           ; 16           ; 16           ; yes                    ; no                      ; yes                    ; no                      ; 256  ; 16                          ; 16                          ; 16                          ; 16                          ; 256                 ; 1    ; None ; M4K_X23_Y6  ; Don't care           ; Don't care      ; Don't care      ;
+; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2|ALTSYNCRAM         ; AUTO ; Simple Dual Port ; Dual Clocks ; 16           ; 8            ; 16           ; 8            ; yes                    ; no                      ; yes                    ; no                      ; 128  ; 16                          ; 8                           ; 16                          ; 8                           ; 128                 ; 1    ; None ; M4K_X11_Y12 ; Don't care           ; Don't care      ; Don't care      ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-------------+----------------------+-----------------+-----------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
-+----------------------------------------------------+
-; Other Routing Usage Summary                        ;
-+-----------------------------+----------------------+
-; Other Routing Resource Type ; Usage                ;
-+-----------------------------+----------------------+
-; Block interconnects         ; 382 / 15,666 ( 2 % ) ;
-; C16 interconnects           ; 7 / 812 ( < 1 % )    ;
-; C4 interconnects            ; 120 / 11,424 ( 1 % ) ;
-; Direct links                ; 166 / 15,666 ( 1 % ) ;
-; Global clocks               ; 1 / 8 ( 13 % )       ;
-; Local interconnects         ; 265 / 4,608 ( 6 % )  ;
-; R24 interconnects           ; 13 / 652 ( 2 % )     ;
-; R4 interconnects            ; 210 / 13,328 ( 2 % ) ;
-+-----------------------------+----------------------+
++------------------------------------------------------+
+; Other Routing Usage Summary                          ;
++-----------------------------+------------------------+
+; Other Routing Resource Type ; Usage                  ;
++-----------------------------+------------------------+
+; Block interconnects         ; 370 / 15,666 ( 2 % )   ;
+; C16 interconnects           ; 1 / 812 ( < 1 % )      ;
+; C4 interconnects            ; 88 / 11,424 ( < 1 % )  ;
+; Direct links                ; 155 / 15,666 ( < 1 % ) ;
+; Global clocks               ; 1 / 8 ( 13 % )         ;
+; Local interconnects         ; 276 / 4,608 ( 6 % )    ;
+; R24 interconnects           ; 5 / 652 ( < 1 % )      ;
+; R4 interconnects            ; 200 / 13,328 ( 2 % )   ;
++-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.22) ; Number of LABs  (Total = 32) ;
+; Number of Logic Elements  (Average = 11.82) ; Number of LABs  (Total = 34) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 1                            ;
-; 2                                           ; 1                            ;
+; 2                                           ; 0                            ;
 ; 3                                           ; 1                            ;
-; 4                                           ; 2                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 2                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 3                            ;
-; 13                                          ; 1                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 2                            ;
+; 7                                           ; 2                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 2                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 2                            ;
 ; 14                                          ; 1                            ;
-; 15                                          ; 1                            ;
-; 16                                          ; 16                           ;
+; 15                                          ; 2                            ;
+; 16                                          ; 15                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.63) ; Number of LABs  (Total = 32) ;
+; LAB-wide Signals  (Average = 1.59) ; Number of LABs  (Total = 34) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 30                           ;
-; 1 Clock enable                     ; 11                           ;
-; 1 Sync. clear                      ; 5                            ;
+; 1 Clock                            ; 31                           ;
+; 1 Clock enable                     ; 13                           ;
+; 1 Sync. clear                      ; 4                            ;
 ; 1 Sync. load                       ; 1                            ;
 ; 2 Clock enables                    ; 4                            ;
 ; 2 Clocks                           ; 1                            ;
@@ -1824,64 +1840,64 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 20.47) ; Number of LABs  (Total = 32) ;
+; Number of Signals Sourced  (Average = 19.88) ; Number of LABs  (Total = 34) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 1                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 0                            ;
 ; 4                                            ; 1                            ;
 ; 5                                            ; 1                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 2                            ;
+; 8                                            ; 1                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 1                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 2                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
+; 14                                           ; 2                            ;
 ; 15                                           ; 1                            ;
 ; 16                                           ; 0                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 3                            ;
+; 18                                           ; 2                            ;
 ; 19                                           ; 1                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 1                            ;
+; 20                                           ; 2                            ;
+; 21                                           ; 0                            ;
 ; 22                                           ; 3                            ;
 ; 23                                           ; 2                            ;
-; 24                                           ; 1                            ;
+; 24                                           ; 0                            ;
 ; 25                                           ; 1                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 1                            ;
+; 26                                           ; 3                            ;
+; 27                                           ; 3                            ;
 ; 28                                           ; 2                            ;
-; 29                                           ; 1                            ;
+; 29                                           ; 0                            ;
 ; 30                                           ; 2                            ;
 ; 31                                           ; 1                            ;
-; 32                                           ; 3                            ;
+; 32                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.69) ; Number of LABs  (Total = 32) ;
+; Number of Signals Sourced Out  (Average = 7.47) ; Number of LABs  (Total = 34) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 2                            ;
-; 2                                               ; 3                            ;
-; 3                                               ; 2                            ;
+; 1                                               ; 1                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 5                            ;
 ; 4                                               ; 2                            ;
-; 5                                               ; 2                            ;
-; 6                                               ; 4                            ;
-; 7                                               ; 1                            ;
-; 8                                               ; 3                            ;
-; 9                                               ; 0                            ;
-; 10                                              ; 5                            ;
-; 11                                              ; 2                            ;
-; 12                                              ; 1                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 6                            ;
+; 7                                               ; 2                            ;
+; 8                                               ; 4                            ;
+; 9                                               ; 4                            ;
+; 10                                              ; 0                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 0                            ;
 ; 13                                              ; 0                            ;
-; 14                                              ; 2                            ;
+; 14                                              ; 4                            ;
 ; 15                                              ; 1                            ;
 ; 16                                              ; 2                            ;
 +-------------------------------------------------+------------------------------+
@@ -1890,27 +1906,27 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 9.16) ; Number of LABs  (Total = 32) ;
+; Number of Distinct Inputs  (Average = 8.50) ; Number of LABs  (Total = 34) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
 ; 2                                           ; 1                            ;
-; 3                                           ; 4                            ;
-; 4                                           ; 6                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 2                            ;
-; 9                                           ; 2                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 1                            ;
+; 3                                           ; 6                            ;
+; 4                                           ; 4                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 4                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 4                            ;
+; 11                                          ; 4                            ;
 ; 12                                          ; 3                            ;
-; 13                                          ; 2                            ;
+; 13                                          ; 1                            ;
 ; 14                                          ; 1                            ;
 ; 15                                          ; 1                            ;
-; 16                                          ; 1                            ;
+; 16                                          ; 0                            ;
 ; 17                                          ; 1                            ;
-; 18                                          ; 2                            ;
+; 18                                          ; 1                            ;
 ; 19                                          ; 0                            ;
 ; 20                                          ; 0                            ;
 ; 21                                          ; 0                            ;
@@ -1952,21 +1968,18 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; I/O             ; ADC_DCLKA            ; 1.3               ;
-+-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                        ;
-+------------------------------------------------------+-----------------------------------------------------------+-------------------+
-; Source Register                                      ; Destination Register                                      ; Delay Added in ns ;
-+------------------------------------------------------+-----------------------------------------------------------+-------------------+
-; ADC_DCLKA                                            ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[3]   ; 1.005             ;
-; STATE_MANAGER:this_state_manager|curr_state.read_adc ; Read_adc_manager:this_read_adc_manager|address_counter[4] ; 0.097             ;
-+------------------------------------------------------+-----------------------------------------------------------+-------------------+
-Note: This table only shows the top 2 path(s) that have the largest delay added for hold.
++---------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                     ;
++-----------------+-------------------------------------------------------------+-------------------+
+; Source Register ; Destination Register                                        ; Delay Added in ns ;
++-----------------+-------------------------------------------------------------+-------------------+
+; ADC_DCLKA       ; Read_adc_manager:this_read_adc_manager|real_data_counter[0] ; 0.063             ;
++-----------------+-------------------------------------------------------------+-------------------+
+Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2026,10 +2039,10 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (128000): Starting physical synthesis optimizations for speed
 Info (128002): Starting physical synthesis algorithm register retiming
-Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 2 ps
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 1 ps
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
 Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm logic and register replication
@@ -2041,7 +2054,7 @@ Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X14_Y0 to location X28_Y14
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.58 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.55 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 50 output pins without output pin load capacitance assignment
     Info (306007): Pin "SPI_MOSI" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2097,7 +2110,7 @@ Warning (306006): Found 50 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Warning (169064): Following 4 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
     Info (169065): Pin SPI_MOSI has a permanently disabled output enable
@@ -2106,9 +2119,9 @@ Warning (169064): Following 4 pins have no output enable or a GND or VCC output 
     Info (169065): Pin SPI_CS has a permanently disabled output enable
 Info (144001): Generated suppressed messages file C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/output_files/Uni_Projektas.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4811 megabytes
-    Info: Processing ended: Fri Apr 21 17:53:51 2023
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 4808 megabytes
+    Info: Processing ended: Fri Apr 21 18:42:45 2023
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

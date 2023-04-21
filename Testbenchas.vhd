@@ -77,7 +77,8 @@ signal adc_buffer_index : integer := 0;
 
 component UNI_Projektas is
 generic (
-	baud_rate : integer := 434 --115200 baud reitui toki prescaleri naudojam
+	BAUD_RATE_PRESCALER : integer := 54; --434 kad 115200 baud reitui toki prescaleri naudojam --54 kad 921600 baud reitui  
+	MAX_ADDRESS_COUNTS : integer :=  100
 );
 port(
 	CLK : in std_logic := '0';
@@ -120,7 +121,7 @@ port(
 );
 end component;
 
-type mram_data_type is array(0 to 1000) of std_logic_vector(15 downto 0);
+type mram_data_type is array(0 to 25600) of std_logic_vector(15 downto 0);
 signal mram_data : mram_data_type := (others => (others => '0'));
 
 

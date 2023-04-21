@@ -8,6 +8,9 @@ use STD.textio.all;
 use ieee.std_logic_textio.all;
 
 entity UART_TX is
+generic(
+	BAUD_RATE_PRESCALER : integer := 9600
+);
 port(
 	CLK: in std_logic;
 	UART_CLK : in std_logic;
@@ -75,14 +78,14 @@ begin
 			when start =>
 				TX_BUSY <= '1';
 				TX <= '0';
-				if(counter = 433) then
+				if(counter = BAUD_RATE_PRESCALER) then
 					tx_curr_state <= data;
 					counter <= 0;
 				end if;
 			when data =>
 				TX_BUSY <= '1';
 				TX <= data_send(data_index);
-				if(counter = 433) then
+				if(counter = BAUD_RATE_PRESCALER) then
 					data_index <= data_index + 1;
 					counter <= 0;
 						if(data_index = 7) then
@@ -94,7 +97,7 @@ begin
 			when stop =>
 				TX_BUSY <= '1';
 				TX <= '1';
-				if(counter = 433) then
+				if(counter = BAUD_RATE_PRESCALER+1) then
 					tx_curr_state <= idle;
 					counter <= 0;
 				end if;

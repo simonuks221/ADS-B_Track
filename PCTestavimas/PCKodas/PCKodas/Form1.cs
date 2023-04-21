@@ -28,6 +28,7 @@ namespace PCKodas
         public bool isConnected;
 
         int max_chart_elements = 1000;
+        int received_data_length = 0;
 
         //Chartai
         //https://learn.microsoft.com/en-us/previous-versions/dd456769(v=vs.140)?redirectedfrom=MSDN
@@ -103,7 +104,7 @@ namespace PCKodas
             {
                 try
                 {
-                    port = new SerialPort(selectedPort, 115200, Parity.None, 8, StopBits.One);
+                    port = new SerialPort(selectedPort, 921600, Parity.None, 8, StopBits.One);
                     port.Open();
                     port.DiscardInBuffer();
                     port.DataReceived += new SerialDataReceivedEventHandler(Port_DataReceived);
@@ -161,6 +162,8 @@ namespace PCKodas
                     VoltageChart.Series[0].Points.RemoveAt(0);
                 }
                 VoltageChart.Series[0].Points.AddY(new_value);
+                received_data_length++;
+                Debug.WriteLine(received_data_length);
                 //Debug.WriteLine(VoltageChart.Series[0].Points[0]);
             }));
         }

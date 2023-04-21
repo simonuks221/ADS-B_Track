@@ -25,7 +25,7 @@ end entity;
 architecture arc of Read_adc_manager is
 	signal read_counter : integer range 0 to 10 := 0;
 	signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS := 0;
-	signal real_data_counter : integer range 0 to 17 := 0;
+	signal real_data_counter : integer range 0 to 256 := 0;
 begin
 
 MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
@@ -45,13 +45,13 @@ begin
 				if(MRAM_DONE = '1') then
 					read_counter <= 0;
 					address_counter <= address_counter + 1;
-					MRAM_DATA_OUT <= "000000" & ADC_BIT;
---					if(real_data_counter = 16) then
---						real_data_counter <= 0;
---					else
---						real_data_counter <= real_data_counter + 1;
---					end if;
---					MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(real_data_counter, ADC_BIT'length));
+					--MRAM_DATA_OUT <= "000000" & ADC_BIT;
+					if(real_data_counter = 255) then
+						real_data_counter <= 0;
+					else
+						real_data_counter <= real_data_counter + 1;
+					end if;
+					MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(real_data_counter, ADC_BIT'length));
 					MRAM_WRITE_DATA <= '1';
 					--READ_ADC_DONE <= '1';
 				else
