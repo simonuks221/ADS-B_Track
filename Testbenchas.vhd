@@ -131,7 +131,21 @@ i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, 
 									UART_RX => UART_RX, UART_TX => UART_TX);
 	
 CLK <= not CLK after 0.01us; --50MHz 0.01us 50MHz
-ADC_DCLKA <= CLK when now > 40us else '0';
+--ADC_DCLKA <= CLK when now > 40us else '0';
+ADC_DCLKA <= transport CLK after 5ns;
+--ADC_DCLKA <= '0';
+
+--process
+--begin
+--	wait until rising_edge(CLK);
+--	if(now > 40us) then
+--		wait for 10ns;
+--		ADC_DCLKA <= '1';
+--		wait for 10ns;
+--		ADC_DCLKA <= '0';
+--	end if;
+--end process;
+
 process(CLK)
 begin
 	if(falling_edge(CLK)) then

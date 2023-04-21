@@ -12,6 +12,7 @@ port(
 	SPI_send_data : out std_logic_vector(16-1 downto 0) := (others => '0');
 	SPI_send_irq : out std_logic := '0';
 	SPI_FIFO_EMPTY : in std_logic := '0';
+	ADC_SYNC : out std_logic := '0';
 	
 	SETUP_DONE : out std_logic := '0'
 );
@@ -19,7 +20,7 @@ port(
 end entity;
 
 architecture arc of Setup_manager is
-	signal config_command_counter : integer range 0 to 10000000 := 0;
+	signal config_command_counter : integer range 0 to 100000 := 0;
 begin
 
 process(CLK)
@@ -59,15 +60,15 @@ begin
 					SPI_send_irq <= '0';
 					
 				when 25000=>
-					--ADC_SYNC <= '1';
-				when 25100 =>
-					--ADC_SYNC <= '0';
+					ADC_SYNC <= '1';
+				when 25001 =>
+					ADC_SYNC <= '0';
 					
 				when others =>
 					SPI_send_irq <= '0';
 					--ADC_SYNC <= '0';
 			end case;
-			if(config_command_counter /= 2000) then
+			if(config_command_counter /= 26000) then --2ms = 100000
 				config_command_counter <= config_command_counter + 1;
 				SETUP_DONE <= '0';
 			else

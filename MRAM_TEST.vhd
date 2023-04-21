@@ -74,10 +74,8 @@ begin
 				MRAM_WRITE_EN <= '1';
 				MRAM_LOWER_EN <= '1';
 				MRAM_D <= (others => 'Z');
-			when 5050+3 =>
+			when 6000 =>
 				
-			when 5050+102 =>
-				MRAM_A <= "00" & got_data;
 			when others =>
 				
 		end case;

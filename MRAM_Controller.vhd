@@ -33,7 +33,10 @@ architecture arc of MRAM_Controller is
 type state is (idle, reading, writing);
 signal curr_state : state := idle;
 signal counter : integer range 0 to 4 := 0;
+signal s_data_out : std_logic_vector(15 downto 0) := (others => '0');
 begin
+
+
 
 --MRAM_EN <= '1' when curr_state = idle else '0';
 --MRAM_WRITE_EN <= '0' when curr_state = writing else '1';
@@ -48,6 +51,13 @@ done <= '1' when curr_state = idle else '0';
 process(CLK)
 begin
 	if rising_edge(CLK) then
+		if(curr_state = reading or curr_state = writing) then
+		--if(curr_state = writing) then
+			counter <= counter + 1;
+		else 
+			counter <= 0;
+		end if;
+	
 		case curr_state is
 			when idle =>
 				MRAM_EN <= '1';
@@ -63,24 +73,25 @@ begin
 				--done <= '0';
 				case counter is
 					when 0 =>
-						--Set data
-						MRAM_A <= address_in_write;
+--						--Set data
+--						--MRAM_A <= address_in_write;
+						MRAM_A <= std_logic_vector(to_unsigned(0, MRAM_A'length));
 						MRAM_WRITE_EN <= '0';
 						MRAM_LOWER_EN <= '0';
 						MRAM_UPPER_EN <= '0';
 						MRAM_D <= (others => 'Z');
 					when 1 =>
 						MRAM_EN <= '0';
-						--MRAM_D <= data_in;
-						MRAM_D <= "1010101010101010";
+						MRAM_D <= data_in;
+						--MRAM_D <= "1010101010101010";
 						--Idle, wait for 20ns
 					when 2 =>
 						MRAM_EN <= '1';
 						MRAM_LOWER_EN <= '1';
 						MRAM_UPPER_EN <= '1';
 						MRAM_WRITE_EN <= '1';
-						--MRAM_D <= data_in;
-						--done <= '1'
+--						--MRAM_D <= data_in;
+--						--done <= '1'
 					when 3 =>
 						MRAM_D <= (others => 'Z');
 					when others =>
@@ -90,7 +101,8 @@ begin
 				case counter is
 					when 0 =>
 						--Set data
-						MRAM_A <= address_in_read;
+						--MRAM_A <= address_in_read;
+						MRAM_A <= std_logic_vector(to_unsigned(0, MRAM_A'length));
 						MRAM_D <= (others => 'Z');
 						MRAM_EN <= '0';
 						MRAM_OUTPUT_EN <= '0';
@@ -101,12 +113,13 @@ begin
 						MRAM_D <= (others => 'Z');
 					when 2 =>
 						data_out <= MRAM_D;
+						MRAM_D <= (others => 'Z');
+					when 3 =>
 						MRAM_EN <= '1';
 						MRAM_OUTPUT_EN <= '1';
 						MRAM_UPPER_EN <= '1';
 						MRAM_WRITE_EN <= '1';
 						MRAM_LOWER_EN <= '1';
-						MRAM_D <= (others => 'Z');
 					when others =>
 						
 				end case;
@@ -137,12 +150,12 @@ end process;
 process(CLK)
 begin
 if rising_edge(CLK) then
-		if(curr_state = reading or curr_state = writing) then
-		--if(curr_state = writing) then
-			counter <= counter + 1;
-		else 
-			counter <= 0;
-		end if;
+--		if(curr_state = reading or curr_state = writing) then
+--		--if(curr_state = writing) then
+--			counter <= counter + 1;
+--		else 
+--			counter <= 0;
+--		end if;
 	end if;
 end process;
 

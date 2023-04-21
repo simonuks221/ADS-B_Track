@@ -14,14 +14,13 @@ port (
 	EN_SETUP : out std_logic := '1';
 	EN_READ_ADC : out std_logic := '0';
 	EN_WRITE_OUT_MRAM : out std_logic := '0'
-	
 );
-
 end entity;
 
 architecture arc of STATE_MANAGER is
-type state is (setup, read_adc, write_out_mram);
+type state is (setup, read_adc, write_out_mram, wait_1);
 signal curr_state : state := setup;
+signal counter : integer := 0;
 
 begin
 
@@ -40,7 +39,10 @@ begin
 			EN_SETUP <= '0';
 			EN_READ_ADC <= '0';
 			EN_WRITE_OUT_MRAM <= '1';
-		
+		when others =>
+			EN_SETUP <= '0';
+			EN_READ_ADC <= '0';
+			EN_WRITE_OUT_MRAM <= '0';
 	end case;
 end process;
 
@@ -51,9 +53,16 @@ begin
 			when setup =>
 				if(SETUP_DONE = '1') then
 					curr_state <= read_adc;
+					--curr_state <= write_out_mram;
 				end if;
 			when read_adc =>
 				if(READ_ADC_DONE = '1') then
+					curr_state <= wait_1;
+				end if;
+			when wait_1 =>
+				counter <= counter + 1;
+				if(counter = 100) then
+					counter <= 0;
 					curr_state <= write_out_mram;
 				end if;
 			when write_out_mram =>
