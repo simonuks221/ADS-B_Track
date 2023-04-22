@@ -6,7 +6,7 @@ use ieee.std_logic_textio.all;
 
 entity UNI_Projektas is --Up to 260MHz operation
 generic (
-	BAUD_RATE_PRESCALER : integer := 434; --434 kad 115200 baud reitui toki prescaleri naudojam --54 kad 921600 baud reitui  
+	BAUD_RATE_PRESCALER : integer := 1302; --434 arba  kad 115200 baud reitui toki prescaleri naudojam 
 	MAX_ADDRESS_COUNTS : integer :=  100
 );
 port(

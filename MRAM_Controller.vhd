@@ -32,7 +32,7 @@ end entity;
 architecture arc of MRAM_Controller is
 type state is (idle, reading, writing);
 signal curr_state : state := idle;
-signal counter : integer range 0 to 4 := 0;
+signal counter : integer range 0 to 8 := 0;
 signal s_data_out : std_logic_vector(15 downto 0) := (others => '0');
 begin
 
@@ -80,22 +80,22 @@ begin
 						MRAM_LOWER_EN <= '0';
 						MRAM_UPPER_EN <= '0';
 						MRAM_D <= (others => 'Z');
-					when 1 =>
+					when 3 =>
 						MRAM_EN <= '0';
 						MRAM_D <= data_in;
 						--MRAM_D <= "1010101010101010";
 						--Idle, wait for 20ns
-					when 2 =>
+					when 5 =>
 						MRAM_EN <= '1';
 						MRAM_LOWER_EN <= '1';
 						MRAM_UPPER_EN <= '1';
 						MRAM_WRITE_EN <= '1';
 --						--MRAM_D <= data_in;
 --						--done <= '1'
-					when 3 =>
+					when 7 =>
 						MRAM_D <= (others => 'Z');
 					when others =>
-						MRAM_D <= (others => 'Z');
+
 				end case;
 			when reading =>
 				case counter is
@@ -108,13 +108,13 @@ begin
 						MRAM_OUTPUT_EN <= '0';
 						MRAM_UPPER_EN <= '0';
 						MRAM_LOWER_EN <= '0';
-					when 1 =>
+					when 3 =>
 						--Idle, wait for 20ns
 						MRAM_D <= (others => 'Z');
-					when 2 =>
+					when 5 =>
 						data_out <= MRAM_D;
 						MRAM_D <= (others => 'Z');
-					when 3 =>
+					when 7 =>
 						MRAM_EN <= '1';
 						MRAM_OUTPUT_EN <= '1';
 						MRAM_UPPER_EN <= '1';
@@ -137,25 +137,12 @@ begin
 				curr_state <= reading;
 			end if;
 		else
-			if(curr_state = writing and counter = 3) then
+			if(curr_state = writing and counter = 7) then
 				curr_state <= idle;
-			elsif(curr_state = reading and counter = 3) then
+			elsif(curr_state = reading and counter = 7) then
 				curr_state <= idle;
 			end if;
 		end if;
-	end if;
-end process;
-
---Counter process
-process(CLK)
-begin
-if rising_edge(CLK) then
---		if(curr_state = reading or curr_state = writing) then
---		--if(curr_state = writing) then
---			counter <= counter + 1;
---		else 
---			counter <= 0;
---		end if;
 	end if;
 end process;
 
