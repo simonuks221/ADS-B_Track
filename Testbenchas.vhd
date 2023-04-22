@@ -131,9 +131,9 @@ i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, 
 									MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_D => MRAM_D, ADC_BIT_A => ADC_BIT_A, 
 									UART_RX => UART_RX, UART_TX => UART_TX);
 	
-CLK <= not CLK after 0.01us; --50MHz 0.01us 50MHz
+CLK <= not CLK after 10ns; --50MHz 20ns
 --ADC_DCLKA <= CLK when now > 40us else '0';
-ADC_DCLKA <= transport CLK after 5ns;
+ADC_DCLKA <= transport ADC_CLK after 5ns; --50MHz 5ns, ketvirtadalis
 --ADC_DCLKA <= '0';
 
 --process

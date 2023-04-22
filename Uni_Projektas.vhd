@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
-entity UNI_Projektas is
+entity UNI_Projektas is --Up to 260MHz operation
 generic (
 	BAUD_RATE_PRESCALER : integer := 434; --434 kad 115200 baud reitui toki prescaleri naudojam --54 kad 921600 baud reitui  
 	MAX_ADDRESS_COUNTS : integer :=  100
@@ -174,13 +174,13 @@ port(
 );
 end component;
 
---component wizard_pll IS
---	PORT
---	(
---		inclk0		: IN STD_LOGIC  := '0';
---		c0		: OUT STD_LOGIC 
---	);
---end component;
+component wizard_pll IS
+	PORT
+	(
+		inclk0		: IN STD_LOGIC  := '0';
+		c0		: OUT STD_LOGIC 
+	);
+end component;
 
 
 
@@ -327,6 +327,8 @@ port(
 );
 end component;
 
+signal CLK_160 : std_logic  := '0';
+
 --MRAM
 
 signal MRAM_DATA_IN : std_logic_vector(15 downto 0) := (others => '0');
@@ -349,8 +351,6 @@ signal EN_WRITE_OUT_MRAM : std_logic := '0';
 --SPI
 
 signal ADC_SPI_send_data : std_logic_vector(16-1 downto 0) := (others => '0');
-signal ADC_SPI_send_data1 : std_logic_vector(16-1 downto 0) := (others => '0');
-signal ADC_SPI_send_data2 : std_logic_vector(16-1 downto 0) := (others => '0');
 signal ADC_SPI_send_irq : std_logic := '0';
 signal ADC_SPI_send_irq1 : std_logic := '0';
 signal ADC_SPI_send_irq2 : std_logic := '0';
@@ -364,35 +364,33 @@ signal UART_FIFO_EMPTY : std_logic := '0';
 
 begin
 
-ADC_SPI_send_data <= ADC_SPI_send_data1 or ADC_SPI_send_data2;
-
---pll1 : wizard_pll port map(inclk0 => CLK, c0 => ADC_CLK); --75MHz
+pll1 : wizard_pll port map(inclk0 => CLK, c0 => CLK_160); --160MHz
 ADC_SHDN <= '0';
 ADC_CLK <= CLK;
 
-this_mram_controller : MRAM_Controller port map(CLK => CLK, data_in => MRAM_DATA_IN, data_out => MRAM_DATA_OUT, address_in_write => MRAM_ADDRESS_IN_WRITE, address_in_read => MRAM_ADDRESS_IN_READ, 
+this_mram_controller : MRAM_Controller port map(CLK => CLK_160, data_in => MRAM_DATA_IN, data_out => MRAM_DATA_OUT, address_in_write => MRAM_ADDRESS_IN_WRITE, address_in_read => MRAM_ADDRESS_IN_READ, 
 							write_data => MRAM_WRITE_DATA, read_data => MRAM_READ_DATA, done => MRAM_DONE, MRAM_EN => MRAM_EN, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,
 							MRAM_WRITE_EN => MRAM_WRITE_EN, MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_A => MRAM_A, MRAM_D => MRAM_D);
 
-this_state_manager : state_manager port map (CLK => CLK, SETUP_DONE => SETUP_DONE, READ_ADC_DONE => READ_ADC_DONE, WRITE_OUT_DONE => WRITE_OUT_DONE, 
+this_state_manager : state_manager port map (CLK => CLK_160, SETUP_DONE => SETUP_DONE, READ_ADC_DONE => READ_ADC_DONE, WRITE_OUT_DONE => WRITE_OUT_DONE, 
 							EN_READ_ADC => EN_READ_ADC, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM);
-this_setup_manager : setup_manager port map(CLK => CLK, EN_SETUP => EN_SETUP, SPI_send_data => ADC_SPI_Send_data1, SPI_send_irq => ADC_SPI_Send_irq1, SETUP_DONE => SETUP_DONE,
+this_setup_manager : setup_manager port map(CLK => CLK_160, EN_SETUP => EN_SETUP, SPI_send_data => ADC_SPI_Send_data, SPI_send_irq => ADC_SPI_Send_irq1, SETUP_DONE => SETUP_DONE,
 							SPI_FIFO_EMPTY => ADC_SPI_fifo_empty, ADC_SYNC => ADC_SYNC);
 this_read_adc_manager : read_adc_manager generic map(MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS)
-							port map(CLK => CLK, DCLK => ADC_DCLKA, ADC_BIT => ADC_BIT_A, MRAM_DATA_OUT => MRAM_DATA_IN, 
+							port map(CLK => CLK_160, DCLK => ADC_DCLKA, ADC_BIT => ADC_BIT_A, MRAM_DATA_OUT => MRAM_DATA_IN, 
 							MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA, MRAM_DONE => MRAM_DONE, EN_READ_ADC => EN_READ_ADC,
 							READ_ADC_DONE => READ_ADC_DONE);
 this_write_out_mram_manager : write_out_mram_manager generic map(MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS)
-							port map (CLK => CLK,UART_SEND_DATA=>UART_SEND_DATA, UART_DATA_IRQ => UART_DATA_IRQ, 
+							port map (CLK => CLK_160,UART_SEND_DATA=>UART_SEND_DATA, UART_DATA_IRQ => UART_DATA_IRQ, 
 							MRAM_DATA_OUT => MRAM_DATA_OUT, MRAM_ADDRESS_IN => MRAM_ADDRESS_IN_READ, MRAM_READ_DATA => MRAM_READ_DATA, MRAM_DONE => MRAM_DONE,
 							WRITE_OUT_DONE => WRITE_OUT_DONE, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
 
 --spi_send_data_multi_or : Multi_OR generic map (BITS => 16) port map(input1 => ADC_SPI_send_data1, input2 => ADC_SPI_send_data2, output => ADC_SPI_send_data);
 --ADC_SPI_send_irq_multi_or : Multi_OR generic map(BITS => 1) port map (input1 => ADC_SPI_send_irq1,input2 => ADC_SPI_send_irq2, output => ADC_SPI_send_irq);
 ADC_SPI_send_irq <= ADC_SPI_Send_irq1 or ADC_SPI_send_irq2;
-adc_spi_controller : SPI_Controller generic map (SEND_CLK_COUNTER_MAX => 10, BITS => 16, SEND_CLK_WAIT_MAX => 20) port map(CLK => CLK, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK,
+adc_spi_controller : SPI_Controller generic map (SEND_CLK_COUNTER_MAX => 10, BITS => 16, SEND_CLK_WAIT_MAX => 20) port map(CLK => CLK_160, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK,
 							SPI_CS => ADC_SPI_CS, SPI_send_data => ADC_SPI_send_data, SPI_send_irq => ADC_SPI_Send_irq, SPI_FIFO_EMPTY => ADC_SPI_fifo_empty);
-UART_Controller_1 : UART_Controller generic map(BAUD_RATE_PRESCALER => BAUD_RATE_PRESCALER) port map(CLK => CLK,
+UART_Controller_1 : UART_Controller generic map(BAUD_RATE_PRESCALER => BAUD_RATE_PRESCALER) port map(CLK => CLK_160,
 	SEND_DATA_IN => UART_SEND_DATA,
 	SEND_DATA_IN_REQ => UART_DATA_IRQ,
 	TX => UART_TX, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
@@ -440,13 +438,13 @@ UART_Controller_1 : UART_Controller generic map(BAUD_RATE_PRESCALER => BAUD_RATE
 
 --UART_CONTROLLER_DATA_IN <= "00" & RECEIVED_CODE;
 
-process(CLK)
+process(CLK_160)
 begin
-	if falling_edge(CLK) then
-	if(BUTTON = '0') then
-		button_active <= '1';
+	if falling_edge(CLK_160) then
+		if(BUTTON = '0') then
+			button_active <= '1';
+			end if;
 		end if;
-	end if;
 end process;
 
 

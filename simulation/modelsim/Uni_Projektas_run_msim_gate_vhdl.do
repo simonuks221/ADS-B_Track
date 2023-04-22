@@ -5,11 +5,11 @@ if {[file exists gate_work]} {
 vlib gate_work
 vmap work gate_work
 
-vcom -93 -work work {Uni_Projektas.vho}
+vcom -93 -work work {Uni_Projektas_fast.vho}
 
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd}
 
-vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /i1=Uni_Projektas_vhd.sdo -L cycloneii -L gate_work -L work -voptargs="+acc"  Testbenchas
+vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /i1=Uni_Projektas_vhd_fast.sdo -L cycloneii -L gate_work -L work -voptargs="+acc"  Testbenchas
 
 add wave *
 view structure

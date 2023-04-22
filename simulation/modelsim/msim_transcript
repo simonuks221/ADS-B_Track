@@ -10,6 +10,13 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_pll.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity wizard_pll
+# -- Compiling architecture SYN of wizard_pll
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -115,15 +122,6 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity Write_out_mram_manager
 # -- Compiling architecture arc of Write_out_mram_manager
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Multi_OR.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Multi_OR
-# -- Compiling architecture arc1 of Multi_OR
 # 
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -149,57 +147,50 @@
 # Loading ieee.std_logic_textio(body)
 # Loading work.testbenchas(uni_projektas_arch)
 # Loading work.uni_projektas(arc)
+# Loading work.wizard_pll(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_stratixii_pll(vital_pll)
+# Loading altera_mf.arm_m_cntr(behave)
+# Loading altera_mf.arm_n_cntr(behave)
+# Loading altera_mf.arm_scale_cntr(behave)
 # Loading work.mram_controller(arc)
 # Loading work.state_manager(arc)
 # Loading work.setup_manager(arc)
 # Loading work.read_adc_manager(arc)
 # Loading work.write_out_mram_manager(arc)
-# Loading work.multi_or(arc1)
 # Loading work.spi_controller(arc)
 # Loading work.wizard_spi_fifo(syn)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading altera_mf.altera_device_families(body)
 # Loading altera_mf.scfifo(behavior)
 # Loading work.spi_tx(arc)
 # Loading ieee.math_real(body)
 # Loading work.uart_controller(arc)
 # Loading work.uart_tx(arc)
 # Loading work.uart_fifo_wizard(syn)
+# ** Warning: Design size of 28 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
 # 
-#           Attempting to use alternate WLF file "./wlftszx4i9".
+#           Attempting to use alternate WLF file "./wlftaqmfgf".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftszx4i9
+#           Using alternate file: ./wlftaqmfgf
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 30 us
-run
-# ** Fatal: (vsim-3421) Value 55 for counter is out of range 0 to 54.
-#    Time: 545310 ns  Iteration: 0  Process: /testbenchas/i1/UART_Controller_1/uart_tx_1/line__35 File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Fatal error in Process line__35 at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd line 38
-# 
-# HDL call sequence:
-# Stopped at C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd 38 Process line__35
-# 
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-restart
-# Loading work.uart_tx(arc)
-run
+# ** Note: Cyclone II PLL is enabled
+#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pll1/altpll_component/CYCLONEII_ALTPLL/M3
+# ** Note: Cyclone II PLL locked to incoming clock
+#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pll1/altpll_component/CYCLONEII_ALTPLL/M3
 run
