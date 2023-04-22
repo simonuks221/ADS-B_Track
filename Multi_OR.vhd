@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
-entity Multi_OR is
+entity Multi_ORR is
 generic(
 	BITS : integer := 16
 );
@@ -16,7 +16,7 @@ port(
 
 end entity;
 
-architecture arc1 of Multi_OR is
+architecture arc1 of Multi_ORR is
 
 begin
 	output <= input1 or input2;

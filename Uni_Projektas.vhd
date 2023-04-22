@@ -327,18 +327,6 @@ port(
 );
 end component;
 
-component Multi_OR is
-generic(
-	BITS : integer := 16
-);
-port(
-	input1 : in std_logic_vector(BITS-1 downto 0);
-	input2 : in std_logic_vector(BITS-1 downto 0);
-	output : out std_logic_vector(BITS-1 downto 0)
-);
-
-end component;
-
 --MRAM
 
 signal MRAM_DATA_IN : std_logic_vector(15 downto 0) := (others => '0');
@@ -376,6 +364,8 @@ signal UART_FIFO_EMPTY : std_logic := '0';
 
 begin
 
+ADC_SPI_send_data <= ADC_SPI_send_data1 or ADC_SPI_send_data2;
+
 --pll1 : wizard_pll port map(inclk0 => CLK, c0 => ADC_CLK); --75MHz
 ADC_SHDN <= '0';
 ADC_CLK <= CLK;
@@ -397,7 +387,7 @@ this_write_out_mram_manager : write_out_mram_manager generic map(MAX_ADDRESS_COU
 							MRAM_DATA_OUT => MRAM_DATA_OUT, MRAM_ADDRESS_IN => MRAM_ADDRESS_IN_READ, MRAM_READ_DATA => MRAM_READ_DATA, MRAM_DONE => MRAM_DONE,
 							WRITE_OUT_DONE => WRITE_OUT_DONE, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
 
-spi_send_data_multi_or : Multi_OR generic map (BITS => 16) port map(input1 => ADC_SPI_send_data1, input2 => ADC_SPI_send_data2, output => ADC_SPI_send_data);
+--spi_send_data_multi_or : Multi_OR generic map (BITS => 16) port map(input1 => ADC_SPI_send_data1, input2 => ADC_SPI_send_data2, output => ADC_SPI_send_data);
 --ADC_SPI_send_irq_multi_or : Multi_OR generic map(BITS => 1) port map (input1 => ADC_SPI_send_irq1,input2 => ADC_SPI_send_irq2, output => ADC_SPI_send_irq);
 ADC_SPI_send_irq <= ADC_SPI_Send_irq1 or ADC_SPI_send_irq2;
 adc_spi_controller : SPI_Controller generic map (SEND_CLK_COUNTER_MAX => 10, BITS => 16, SEND_CLK_WAIT_MAX => 20) port map(CLK => CLK, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK,

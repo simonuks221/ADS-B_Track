@@ -667,57 +667,6 @@ EN_WRITE_OUT_MRAM => UART_DATA_IRQ.OUTPUTSELECT
 EN_WRITE_OUT_MRAM => MRAM_READ_DATA.OUTPUTSELECT
 
 
-|Uni_Projektas|Multi_OR:spi_send_data_multi_or
-input1[0] => output.IN0
-input1[1] => output.IN0
-input1[2] => output.IN0
-input1[3] => output.IN0
-input1[4] => output.IN0
-input1[5] => output.IN0
-input1[6] => output.IN0
-input1[7] => output.IN0
-input1[8] => output.IN0
-input1[9] => output.IN0
-input1[10] => output.IN0
-input1[11] => output.IN0
-input1[12] => output.IN0
-input1[13] => output.IN0
-input1[14] => output.IN0
-input1[15] => output.IN0
-input2[0] => output.IN1
-input2[1] => output.IN1
-input2[2] => output.IN1
-input2[3] => output.IN1
-input2[4] => output.IN1
-input2[5] => output.IN1
-input2[6] => output.IN1
-input2[7] => output.IN1
-input2[8] => output.IN1
-input2[9] => output.IN1
-input2[10] => output.IN1
-input2[11] => output.IN1
-input2[12] => output.IN1
-input2[13] => output.IN1
-input2[14] => output.IN1
-input2[15] => output.IN1
-output[0] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= output.DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= output.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |Uni_Projektas|SPI_Controller:adc_spi_controller
 CLK => SPI_TX:spi_tx_component.CLK
 CLK => cs_up_counter[0].CLK

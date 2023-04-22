@@ -178,14 +178,12 @@ set_global_assignment -name QIP_FILE corr_func_rom_1.qip
 set_global_assignment -name VHDL_FILE SPI_Controller.vhd
 set_global_assignment -name VHDL_FILE SPI_TX.vhd
 set_global_assignment -name QIP_FILE wizard_spi_fifo.qip
-set_global_assignment -name VHDL_FILE SPI_Test_projektas.vhd
 set_global_assignment -name VHDL_FILE MRAM_Controller.vhd
 set_global_assignment -name QIP_FILE wizard_pll.qip
 set_global_assignment -name VHDL_FILE State_manager.vhd
 set_global_assignment -name VHDL_FILE Setup_manager.vhd
 set_global_assignment -name VHDL_FILE Read_adc_manager.vhd
 set_global_assignment -name VHDL_FILE Write_out_mram_manager.vhd
-set_global_assignment -name VHDL_FILE Multi_OR.vhd
 set_location_assignment PIN_26 -to UART_TX
 set_global_assignment -name MUX_RESTRUCTURE OFF
 set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
