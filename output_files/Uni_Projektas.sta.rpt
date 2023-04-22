@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Uni_Projektas
-Fri Apr 21 22:10:48 2023
+Sat Apr 22 18:31:55 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -114,7 +114,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------+--------+--------------------------+
 ; SDC File Path     ; Status ; Read at                  ;
 +-------------------+--------+--------------------------+
-; Uni_Projektas.sdc ; OK     ; Fri Apr 21 22:10:48 2023 ;
+; Uni_Projektas.sdc ; OK     ; Sat Apr 22 18:31:54 2023 ;
 +-------------------+--------+--------------------------+
 
 
@@ -2138,16 +2138,13 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Apr 21 22:10:47 2023
+    Info: Processing started: Sat Apr 22 18:31:54 2023
 Info: Command: quartus_sta Uni_Projektas -c Uni_Projektas
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332104): Reading SDC File: 'Uni_Projektas.sdc'
-Warning (332174): Ignored filter at Uni_Projektas.sdc(4): UART_Controller_1|uart_clk_divider|clock_out could not be matched with a net
-Warning (332049): Ignored create_clock at Uni_Projektas.sdc(4): Argument <targets> is an empty collection
-    Info (332050): create_clock -name UART_CLK -period 8680.5 [get_nets {UART_Controller_1|uart_clk_divider|clock_out}]
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Info (332146): Worst-case setup slack is 14.519
@@ -2191,10 +2188,10 @@ Info (332146): Worst-case minimum pulse width slack is 7.873
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4543 megabytes
-    Info: Processing ended: Fri Apr 21 22:10:48 2023
+    Info: Processing ended: Sat Apr 22 18:31:55 2023
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

@@ -53,85 +53,85 @@ end entity;
 architecture arc of UNI_Projektas is
 
 --Components
-component ADC_Manager is
-	port(
-	CLK : in std_logic;
-	DATA_OUT : out std_logic_vector(6-1 downto 0);
-	DATA_DONE : out std_logic := '0';
+--component ADC_Manager is
+--	port(
+--	CLK : in std_logic;
+--	DATA_OUT : out std_logic_vector(6-1 downto 0);
+--	DATA_DONE : out std_logic := '0';
+--
+--	c_long_value_in : in std_logic_vector(20-1 downto 0) := (others => '0');
+--	c_en : out std_logic := '0';
+--	shift_en : out std_logic := '0';
+--	
+--	SYNC: in std_logic;
+--	corr_func_rom_adress_a	: out STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0');
+--	corr_func_rom_adress_b	: out STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0')
+--	);
+--end component;
 
-	c_long_value_in : in std_logic_vector(20-1 downto 0) := (others => '0');
-	c_en : out std_logic := '0';
-	shift_en : out std_logic := '0';
-	
-	SYNC: in std_logic;
-	corr_func_rom_adress_a	: out STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0');
-	corr_func_rom_adress_b	: out STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0')
-	);
-end component;
+--component Clock_divider is
+--	port(
+--	CLK: in std_logic;
+--	Prescaler : in std_logic_vector(15 downto 0);
+--
+--	CLK_OUT: out std_logic
+--	);
+--end component;
 
-component Clock_divider is
-	port(
-	CLK: in std_logic;
-	Prescaler : in std_logic_vector(15 downto 0);
+--component wizard_ram IS
+--	PORT
+--	(
+--		address	: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+--		clock		: IN STD_LOGIC  := '1';
+--		data		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+--		wren		: IN STD_LOGIC ;
+--		q			: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+--	);
+--END component;
 
-	CLK_OUT: out std_logic
-	);
-end component;
+--component big_ram_wizard IS
+--	PORT
+--	(
+--		address_a	: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+--		address_b	: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+--		clock			: IN STD_LOGIC  := '1';
+--		data_a		: IN STD_LOGIC_VECTOR (127 DOWNTO 0);
+--		data_b		: IN STD_LOGIC_VECTOR (127 DOWNTO 0);
+--		wren_a		: IN STD_LOGIC  := '0';
+--		wren_b		: IN STD_LOGIC  := '0';
+--		q_a			: OUT STD_LOGIC_VECTOR (127 DOWNTO 0);
+--		q_b			: OUT STD_LOGIC_VECTOR (127 DOWNTO 0)
+--	);
+--END component;
 
-component wizard_ram IS
-	PORT
-	(
-		address	: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-		clock		: IN STD_LOGIC  := '1';
-		data		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-		wren		: IN STD_LOGIC ;
-		q			: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
-	);
-END component;
+--component ADC_ram_shifter is
+--	port (
+--		CLK : in std_logic := '0';
+--		address_a_1		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
+--		address_b_1		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
+--		
+--		address_a_2		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
+--		address_b_2		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
+--		
+--		new_adc_in : std_logic_vector(7 downto 0);
+--		stop_shift : in std_logic := '0';
+--		q : in std_logic_vector(511 downto 0);
+--		data : out std_logic_vector(512 downto 0)
+--	);
+--end component;
 
-component big_ram_wizard IS
-	PORT
-	(
-		address_a	: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
-		address_b	: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
-		clock			: IN STD_LOGIC  := '1';
-		data_a		: IN STD_LOGIC_VECTOR (127 DOWNTO 0);
-		data_b		: IN STD_LOGIC_VECTOR (127 DOWNTO 0);
-		wren_a		: IN STD_LOGIC  := '0';
-		wren_b		: IN STD_LOGIC  := '0';
-		q_a			: OUT STD_LOGIC_VECTOR (127 DOWNTO 0);
-		q_b			: OUT STD_LOGIC_VECTOR (127 DOWNTO 0)
-	);
-END component;
-
-component ADC_ram_shifter is
-	port (
-		CLK : in std_logic := '0';
-		address_a_1		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
-		address_b_1		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
-		
-		address_a_2		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
-		address_b_2		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
-		
-		new_adc_in : std_logic_vector(7 downto 0);
-		stop_shift : in std_logic := '0';
-		q : in std_logic_vector(511 downto 0);
-		data : out std_logic_vector(512 downto 0)
-	);
-end component;
-
-component Correlation_function is
-	generic(
-		function_length : integer := 50
-	);
-	port(
-		EN: in std_logic := '0';
-		CLK: in std_logic;
-		input_adc_values: in std_logic_vector(400-1 downto 0);
-		output_value : out std_logic_vector(19 downto 0);
-		input_function_ram : in std_logic_vector(255 downto 0)
-	);
-end component;
+--component Correlation_function is
+--	generic(
+--		function_length : integer := 50
+--	);
+--	port(
+--		EN: in std_logic := '0';
+--		CLK: in std_logic;
+--		input_adc_values: in std_logic_vector(400-1 downto 0);
+--		output_value : out std_logic_vector(19 downto 0);
+--		input_function_ram : in std_logic_vector(255 downto 0)
+--	);
+--end component;
 
 component UART_Controller is
 generic(
@@ -146,16 +146,16 @@ port(
 );
 end component;
 
-component corr_func_rom_1 IS
-	PORT
-	(
-		address_a		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
-		address_b		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
-		clock		: IN STD_LOGIC  := '1';
-		q_a		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0);
-		q_b		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0)
-	);
-END component;
+--component corr_func_rom_1 IS
+--	PORT
+--	(
+--		address_a		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
+--		address_b		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
+--		clock		: IN STD_LOGIC  := '1';
+--		q_a		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0);
+--		q_b		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0)
+--	);
+--END component;
 
 component SPI_Controller is 
 generic(

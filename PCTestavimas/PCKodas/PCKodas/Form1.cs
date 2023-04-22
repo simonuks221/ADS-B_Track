@@ -30,6 +30,8 @@ namespace PCKodas
         int max_chart_elements = 1000;
         int received_data_length = 0;
 
+        List<int> received_data = new List<int>();
+
         //Chartai
         //https://learn.microsoft.com/en-us/previous-versions/dd456769(v=vs.140)?redirectedfrom=MSDN
         //https://learn.microsoft.com/en-us/previous-versions/dd489233(v=vs.140)?redirectedfrom=MSDN
@@ -157,67 +159,35 @@ namespace PCKodas
             this.Invoke(new MethodInvoker(delegate ()
             {
                 //Access controls
-                if (VoltageChart.Series[0].Points.Count == max_chart_elements) //Only leave some visible
-                {
-                    VoltageChart.Series[0].Points.RemoveAt(0);
-                }
-                VoltageChart.Series[0].Points.AddY(new_value);
                 received_data_length++;
-                Debug.WriteLine(received_data_length);
-                //Debug.WriteLine(VoltageChart.Series[0].Points[0]);
-            }));
-        }
+                received_data.Add(new_value);
+                DataAmountLabel.Text = received_data_length.ToString();
 
-        /*
-        private void groupBox1_Paint(object sender, PaintEventArgs e)
-        {
-            int comppasLineX = -(int)Math.Round(Math.Sin(((float)compass_angle+ (float)180)*Math.PI / (float)180) * 50);
-            int comppasLineY = (int)Math.Round(Math.Cos(((float)compass_angle + (float)180) * Math.PI / (float)180) * 50);
+                if (UpdateChartButton.Checked)
+                {
+                    if (VoltageChart.Series[0].Points.Count == max_chart_elements) //Only leave some visible
+                    {
+                        VoltageChart.Series[0].Points.RemoveAt(0);
+                    }
+                    VoltageChart.Series[0].Points.AddY(new_value);
+                }
+                else
+                {
 
-            Color black = Color.FromArgb(255, 0, 0, 0);
-            Pen blackPen = new Pen(black);
-            blackPen.Width = 2;
-            e.Graphics.DrawLine(blackPen, CompassBox.Width / 2, CompassBox.Height / 2, CompassBox.Width/2 + comppasLineX, CompassBox.Height / 2 + comppasLineY);
-
-            Color green = Color.FromArgb(255, 0, 255, 0);
-            Pen greenPen = new Pen(green);
-            greenPen.Width = 5;
-            e.Graphics.DrawEllipse(greenPen, CompassBox.Width / 2-25, CompassBox.Height / 2-25, 50, 50);
-        }
-
-        void Update_Compass(int newAngle)
-        {
-            compass_angle = newAngle;
-            this.Invoke(new MethodInvoker(delegate ()
-            {
-                //Access controls
-                CompassBox.Refresh();
-                CompassHeadingLabel.Text = newAngle.ToString();
-            }));
-        }
-
-        void Update_Claibration(int newCalibration)
-        {
-            this.Invoke(new MethodInvoker(delegate ()
-            {
-                //Access controls
-                ExistingConfigLabel.Enabled = true;
-                ExistingConfigLabel.Text = "Existing config value: \n" + newCalibration.ToString();
+                }
             }));
         }
 
         private void SaveToFileButton_Click(object sender, EventArgs e)
         {
-            string fullDateTime = DateTime.Now.ToString("yyyy_MM_dd_h_mm_ss");
-            TextWriter txt = new StreamWriter(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, (fullDateTime + "_compass_data.txt")));
-            txt.Write("Heading | Time \n");
-            foreach (CompassData c in compassData)
+            TextWriter txt = new StreamWriter(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "received_data.txt"));
+            foreach (int d in received_data)
             {
-                txt.Write(c.compassHeading.ToString() + " | " + c.time + "\n");
+                txt.Write(d.ToString() + "\n");
             }
             txt.Close();
         }
-
+/*
         private void ConfigButton_Click(object sender, EventArgs e)
         {
             if(ConfigTextBox.Text.Length > 0)

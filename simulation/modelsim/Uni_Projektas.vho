@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "04/21/2023 22:10:51"
+-- DATE "04/22/2023 18:31:57"
 
 -- 
 -- Device: Altera EP2C5T144C8 Package TQFP144
@@ -797,6 +797,12 @@ SIGNAL \UART_Controller_1|uart_tx_1|Mux0~3_combout\ : std_logic;
 SIGNAL \UART_Controller_1|uart_tx_1|Mux0~4_combout\ : std_logic;
 SIGNAL \UART_Controller_1|uart_tx_1|tx_curr_state.start~_wirecell_combout\ : std_logic;
 SIGNAL \UART_Controller_1|uart_tx_1|TX~regout\ : std_logic;
+SIGNAL \adc_spi_controller|cs_up_counter\ : std_logic_vector(4 DOWNTO 0);
+SIGNAL \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|safe_q\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b\ : std_logic_vector(15 DOWNTO 0);
+SIGNAL \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|rd_ptr_count|safe_q\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \adc_spi_controller|spi_tx_component|clk_counter\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \adc_spi_controller|spi_tx_component|bits_sent\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|q_b\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_tx_1|data_index\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_tx_1|data_send\ : std_logic_vector(7 DOWNTO 0);
@@ -815,12 +821,6 @@ SIGNAL \this_read_adc_manager|read_counter\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \this_read_adc_manager|address_counter\ : std_logic_vector(6 DOWNTO 0);
 SIGNAL \this_read_adc_manager|MRAM_DATA_OUT\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL \this_write_out_mram_manager|address_counter\ : std_logic_vector(6 DOWNTO 0);
-SIGNAL \adc_spi_controller|cs_up_counter\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|safe_q\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|rd_ptr_count|safe_q\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \adc_spi_controller|spi_tx_component|clk_counter\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \adc_spi_controller|spi_tx_component|bits_sent\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \this_mram_controller|ALT_INV_MRAM_D[15]~en_regout\ : std_logic;
 SIGNAL \this_mram_controller|ALT_INV_MRAM_D[14]~en_regout\ : std_logic;
 SIGNAL \this_mram_controller|ALT_INV_MRAM_D[13]~en_regout\ : std_logic;

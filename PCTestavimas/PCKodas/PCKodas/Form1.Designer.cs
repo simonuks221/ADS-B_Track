@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.ConnectionStatusLabel = new System.Windows.Forms.Label();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.ConnectButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.VoltageChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.SaveToFileButton = new System.Windows.Forms.Button();
+            this.DataAmountLabel = new System.Windows.Forms.Label();
+            this.UpdateChartButton = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VoltageChart)).BeginInit();
@@ -86,26 +89,58 @@
             // 
             // VoltageChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.VoltageChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.VoltageChart.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.VoltageChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.VoltageChart.Legends.Add(legend3);
             this.VoltageChart.Location = new System.Drawing.Point(45, 84);
             this.VoltageChart.Name = "VoltageChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Įtampa";
-            this.VoltageChart.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Įtampa";
+            this.VoltageChart.Series.Add(series3);
             this.VoltageChart.Size = new System.Drawing.Size(722, 300);
             this.VoltageChart.TabIndex = 8;
             this.VoltageChart.Text = "chart1";
+            // 
+            // SaveToFileButton
+            // 
+            this.SaveToFileButton.Location = new System.Drawing.Point(623, 391);
+            this.SaveToFileButton.Name = "SaveToFileButton";
+            this.SaveToFileButton.Size = new System.Drawing.Size(124, 23);
+            this.SaveToFileButton.TabIndex = 9;
+            this.SaveToFileButton.Text = "Save to file";
+            this.SaveToFileButton.UseVisualStyleBackColor = true;
+            this.SaveToFileButton.Click += new System.EventHandler(this.SaveToFileButton_Click);
+            // 
+            // DataAmountLabel
+            // 
+            this.DataAmountLabel.AutoSize = true;
+            this.DataAmountLabel.Location = new System.Drawing.Point(549, 397);
+            this.DataAmountLabel.Name = "DataAmountLabel";
+            this.DataAmountLabel.Size = new System.Drawing.Size(44, 16);
+            this.DataAmountLabel.TabIndex = 10;
+            this.DataAmountLabel.Text = "label1";
+            // 
+            // UpdateChartButton
+            // 
+            this.UpdateChartButton.AutoSize = true;
+            this.UpdateChartButton.Location = new System.Drawing.Point(45, 58);
+            this.UpdateChartButton.Name = "UpdateChartButton";
+            this.UpdateChartButton.Size = new System.Drawing.Size(106, 20);
+            this.UpdateChartButton.TabIndex = 11;
+            this.UpdateChartButton.Text = "Update chart";
+            this.UpdateChartButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.UpdateChartButton);
+            this.Controls.Add(this.DataAmountLabel);
+            this.Controls.Add(this.SaveToFileButton);
             this.Controls.Add(this.VoltageChart);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.ConnectionStatusLabel);
@@ -127,6 +162,9 @@
         private System.Windows.Forms.Button ConnectButton;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataVisualization.Charting.Chart VoltageChart;
+        private System.Windows.Forms.Button SaveToFileButton;
+        private System.Windows.Forms.Label DataAmountLabel;
+        private System.Windows.Forms.CheckBox UpdateChartButton;
     }
 }
 

@@ -1,5 +1,5 @@
 Fitter report for Uni_Projektas
-Fri Apr 21 22:10:44 2023
+Sat Apr 22 18:31:51 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Apr 21 22:10:44 2023           ;
+; Fitter Status                      ; Successful - Sat Apr 22 18:31:51 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
@@ -1998,9 +1998,6 @@ Info (176045): Design uses memory blocks. Violating setup or hold times of memor
 Critical Warning (169085): No exact pin location assignment(s) for 1 pins of 77 total pins
     Info (169086): Pin UART_RX not assigned to an exact location on the device
 Info (332104): Reading SDC File: 'Uni_Projektas.sdc'
-Warning (332174): Ignored filter at Uni_Projektas.sdc(4): UART_Controller_1|uart_clk_divider|clock_out could not be matched with a net
-Warning (332049): Ignored create_clock at Uni_Projektas.sdc(4): Argument <targets> is an empty collection
-    Info (332050): create_clock -name UART_CLK -period 8680.5 [get_nets {UART_Controller_1|uart_clk_divider|clock_out}]
 Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
 Info (332111): Found 3 clocks
     Info (332111):   Period   Clock Name
@@ -2045,12 +2042,12 @@ Info (128002): Starting physical synthesis algorithm logic and register replicat
 Info (128003): Physical synthesis algorithm logic and register replication complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm fanout splitting
 Info (128003): Physical synthesis algorithm fanout splitting complete: estimated slack improvement of 0 ps
-Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:00
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X14_Y0 to location X28_Y14
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.47 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 50 output pins without output pin load capacitance assignment
     Info (306007): Pin "SPI_MOSI" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2114,11 +2111,11 @@ Warning (169064): Following 4 pins have no output enable or a GND or VCC output 
     Info (169065): Pin SPI_SCLK has a permanently disabled output enable
     Info (169065): Pin SPI_CS has a permanently disabled output enable
 Info (144001): Generated suppressed messages file C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/output_files/Uni_Projektas.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Fri Apr 21 22:10:45 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4807 megabytes
+    Info: Processing ended: Sat Apr 22 18:31:52 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +----------------------------+
