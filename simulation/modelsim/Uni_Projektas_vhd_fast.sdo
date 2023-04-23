@@ -24,7 +24,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "UNI_Projektas")
-  (DATE "04/23/2023 09:41:03")
+  (DATE "04/23/2023 14:08:45")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition")
@@ -1807,7 +1807,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_pll")
-    (INSTANCE \\pll1\|altpll_component\|pll\\)
+    (INSTANCE \\pl\|altpll_component\|pll\\)
     (DELAY
       (ABSOLUTE
         (PORT inclk[0] (1485:1485:1485) (1485:1485:1485))
@@ -1816,7 +1816,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_clkctrl")
-    (INSTANCE \\pll1\|altpll_component\|_clk0\~clkctrl\\)
+    (INSTANCE \\pl\|altpll_component\|_clk0\~clkctrl\\)
     (DELAY
       (ABSOLUTE
         (PORT inclk[0] (467:467:467) (467:467:467))
@@ -1825,7 +1825,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_ena_reg")
-    (INSTANCE \\pll1\|altpll_component\|_clk0\~clkctrl\\.extena0_reg)
+    (INSTANCE \\pl\|altpll_component\|_clk0\~clkctrl\\.extena0_reg)
     (DELAY
       (ABSOLUTE
         (PORT d (140:140:140) (140:140:140))

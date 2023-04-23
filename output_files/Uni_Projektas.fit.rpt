@@ -1,5 +1,5 @@
 Fitter report for Uni_Projektas
-Sun Apr 23 09:40:58 2023
+Sun Apr 23 14:08:40 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Sun Apr 23 09:40:57 2023           ;
+; Fitter Status                      ; Successful - Sun Apr 23 14:08:40 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
@@ -577,46 +577,46 @@ The pin-out file can be found in C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/o
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+--------------------------------------------------------------------------------+
-; PLL Summary                                                                    ;
-+----------------------------------+---------------------------------------------+
-; Name                             ; wizard_pll:pll1|altpll:altpll_component|pll ;
-+----------------------------------+---------------------------------------------+
-; SDC pin name                     ; pll1|altpll_component|pll                   ;
-; PLL mode                         ; Normal                                      ;
-; Compensate clock                 ; clock0                                      ;
-; Compensated input/output pins    ; --                                          ;
-; Self reset on gated loss of lock ; Off                                         ;
-; Gate lock counter                ; --                                          ;
-; Input frequency 0                ; 50.0 MHz                                    ;
-; Input frequency 1                ; --                                          ;
-; Nominal PFD frequency            ; 50.0 MHz                                    ;
-; Nominal VCO frequency            ; 750.2 MHz                                   ;
-; VCO post scale K counter         ; --                                          ;
-; VCO multiply                     ; --                                          ;
-; VCO divide                       ; --                                          ;
-; Freq min lock                    ; 33.33 MHz                                   ;
-; Freq max lock                    ; 66.67 MHz                                   ;
-; M VCO Tap                        ; 0                                           ;
-; M Initial                        ; 1                                           ;
-; M value                          ; 15                                          ;
-; N value                          ; 1                                           ;
-; Preserve PLL counter order       ; Off                                         ;
-; PLL location                     ; PLL_1                                       ;
-; Inclk0 signal                    ; CLK                                         ;
-; Inclk1 signal                    ; --                                          ;
-; Inclk0 signal type               ; Dedicated Pin                               ;
-; Inclk1 signal type               ; --                                          ;
-+----------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------+
+; PLL Summary                                                                  ;
++----------------------------------+-------------------------------------------+
+; Name                             ; wizard_pll:pl|altpll:altpll_component|pll ;
++----------------------------------+-------------------------------------------+
+; SDC pin name                     ; pl|altpll_component|pll                   ;
+; PLL mode                         ; Normal                                    ;
+; Compensate clock                 ; clock0                                    ;
+; Compensated input/output pins    ; --                                        ;
+; Self reset on gated loss of lock ; Off                                       ;
+; Gate lock counter                ; --                                        ;
+; Input frequency 0                ; 50.0 MHz                                  ;
+; Input frequency 1                ; --                                        ;
+; Nominal PFD frequency            ; 50.0 MHz                                  ;
+; Nominal VCO frequency            ; 750.2 MHz                                 ;
+; VCO post scale K counter         ; --                                        ;
+; VCO multiply                     ; --                                        ;
+; VCO divide                       ; --                                        ;
+; Freq min lock                    ; 33.33 MHz                                 ;
+; Freq max lock                    ; 66.67 MHz                                 ;
+; M VCO Tap                        ; 0                                         ;
+; M Initial                        ; 1                                         ;
+; M value                          ; 15                                        ;
+; N value                          ; 1                                         ;
+; Preserve PLL counter order       ; Off                                       ;
+; PLL location                     ; PLL_1                                     ;
+; Inclk0 signal                    ; CLK                                       ;
+; Inclk1 signal                    ; --                                        ;
+; Inclk0 signal type               ; Dedicated Pin                             ;
+; Inclk1 signal type               ; --                                        ;
++----------------------------------+-------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; PLL Usage                                                                                                                                                                                                             ;
-+-----------------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+----------------------------------+
-; Name                                          ; Output Clock ; Mult ; Div ; Output Frequency ; Phase Shift ; Duty Cycle ; Counter ; Counter Value ; High / Low ; Initial ; VCO Tap ; SDC Pin Name                     ;
-+-----------------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+----------------------------------+
-; wizard_pll:pll1|altpll:altpll_component|_clk0 ; clock0       ; 3    ; 1   ; 150.0 MHz        ; 0 (0 ps)    ; 50/50      ; C0      ; 5             ; 3/2 Odd    ; 1       ; 0       ; pll1|altpll_component|pll|clk[0] ;
-+-----------------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+----------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; PLL Usage                                                                                                                                                                                                         ;
++---------------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+--------------------------------+
+; Name                                        ; Output Clock ; Mult ; Div ; Output Frequency ; Phase Shift ; Duty Cycle ; Counter ; Counter Value ; High / Low ; Initial ; VCO Tap ; SDC Pin Name                   ;
++---------------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+--------------------------------+
+; wizard_pll:pl|altpll:altpll_component|_clk0 ; clock0       ; 3    ; 1   ; 150.0 MHz        ; 0 (0 ps)    ; 50/50      ; C0      ; 5             ; 3/2 Odd    ; 1       ; 0       ; pl|altpll_component|pll|clk[0] ;
++---------------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+--------------------------------+
 
 
 +-------------------------------------------------------------------------------+
@@ -691,8 +691,8 @@ Note: User assignments will override these defaults. The user specified values a
 ;                      |altsyncram_0sj1:altsyncram2|      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2         ; work         ;
 ;       |UART_TX:uart_tx_1|                               ; 52 (52)     ; 30 (30)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 1 (1)             ; 29 (29)          ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1                                                                                                                                         ; work         ;
 ;    |Write_out_mram_manager:this_write_out_mram_manager| ; 14 (14)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 11 (11)          ; |UNI_Projektas|Write_out_mram_manager:this_write_out_mram_manager                                                                                                                                          ; work         ;
-;    |wizard_pll:pll1|                                    ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |UNI_Projektas|wizard_pll:pll1                                                                                                                                                                             ; work         ;
-;       |altpll:altpll_component|                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |UNI_Projektas|wizard_pll:pll1|altpll:altpll_component                                                                                                                                                     ; work         ;
+;    |wizard_pll:pl|                                      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |UNI_Projektas|wizard_pll:pl                                                                                                                                                                               ; work         ;
+;       |altpll:altpll_component|                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |UNI_Projektas|wizard_pll:pl|altpll:altpll_component                                                                                                                                                       ; work         ;
 +---------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -891,17 +891,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.data                                                                                                   ; LCFF_X24_Y8_N11   ; 8       ; Sync. load                            ; no     ; --                   ; --               ; --                        ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state.sync                                                                                                   ; LCFF_X25_Y9_N1    ; 20      ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
 ; Write_out_mram_manager:this_write_out_mram_manager|address_counter~9                                                                                                     ; LCCOMB_X22_Y6_N8  ; 7       ; Clock enable                          ; no     ; --                   ; --               ; --                        ;
-; wizard_pll:pll1|altpll:altpll_component|_clk0                                                                                                                            ; PLL_1             ; 261     ; Clock                                 ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; wizard_pll:pl|altpll:altpll_component|_clk0                                                                                                                              ; PLL_1             ; 261     ; Clock                                 ; yes    ; Global Clock         ; GCLK3            ; --                        ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+---------------------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                              ;
-+-----------------------------------------------+----------+---------+----------------------+------------------+---------------------------+
-; Name                                          ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------------------------+----------+---------+----------------------+------------------+---------------------------+
-; wizard_pll:pll1|altpll:altpll_component|_clk0 ; PLL_1    ; 261     ; Global Clock         ; GCLK3            ; --                        ;
-+-----------------------------------------------+----------+---------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                            ;
++---------------------------------------------+----------+---------+----------------------+------------------+---------------------------+
+; Name                                        ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------------------+----------+---------+----------------------+------------------+---------------------------+
+; wizard_pll:pl|altpll:altpll_component|_clk0 ; PLL_1    ; 261     ; Global Clock         ; GCLK3            ; --                        ;
++---------------------------------------------+----------+---------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1895,8 +1895,8 @@ Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device EP2C5T144C8 for design "Uni_Projektas"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Info (15535): Implemented PLL "wizard_pll:pll1|altpll:altpll_component|pll" as Cyclone II PLL type
-    Info (15099): Implementing clock multiplication of 3, clock division of 1, and phase shift of 0 degrees (0 ps) for wizard_pll:pll1|altpll:altpll_component|_clk0 port
+Info (15535): Implemented PLL "wizard_pll:pl|altpll:altpll_component|pll" as Cyclone II PLL type
+    Info (15099): Implementing clock multiplication of 3, clock division of 1, and phase shift of 0 degrees (0 ps) for wizard_pll:pl|altpll:altpll_component|_clk0 port
 Info (171004): Fitter is performing a Standard Fit compilation using maximum Fitter effort to optimize design performance
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
@@ -1909,11 +1909,11 @@ Info (169124): Fitter converted 2 user pins into dedicated programming pins
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Critical Warning (169085): No exact pin location assignment(s) for 1 pins of 77 total pins
     Info (169086): Pin UART_RX not assigned to an exact location on the device
-Info (176353): Automatically promoted node wizard_pll:pll1|altpll:altpll_component|_clk0 (placed in counter C0 of PLL_1)
+Info (176353): Automatically promoted node wizard_pll:pl|altpll:altpll_component|_clk0 (placed in counter C0 of PLL_1)
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
 Info (332104): Reading SDC File: 'Uni_Projektas.sdc'
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
-    Warning (332056): Node: pll1|altpll_component|pll|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
+    Warning (332056): Node: pl|altpll_component|pll|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
 Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
 Info (332111): Found 3 clocks
     Info (332111):   Period   Clock Name
@@ -1939,7 +1939,7 @@ Info (128003): Physical synthesis algorithm register retiming complete: estimate
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
 Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:00
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1959,7 +1959,7 @@ Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X14_Y0 to location X28_Y14
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 1.17 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.08 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 50 output pins without output pin load capacitance assignment
     Info (306007): Pin "SPI_MOSI" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2015,7 +2015,7 @@ Warning (306006): Found 50 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Warning (169064): Following 4 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
     Info (169065): Pin SPI_MOSI has a permanently disabled output enable
@@ -2024,9 +2024,9 @@ Warning (169064): Following 4 pins have no output enable or a GND or VCC output 
     Info (169065): Pin SPI_CS has a permanently disabled output enable
 Info (144001): Generated suppressed messages file C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/output_files/Uni_Projektas.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4802 megabytes
-    Info: Processing ended: Sun Apr 23 09:40:58 2023
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Sun Apr 23 14:08:40 2023
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 

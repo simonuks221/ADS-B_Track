@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "04/23/2023 09:41:03"
+-- DATE "04/23/2023 14:08:45"
 
 -- 
 -- Device: Altera EP2C5T144C8 Package TQFP144
@@ -174,8 +174,8 @@ SIGNAL ww_MRAM_UPPER_EN : std_logic;
 SIGNAL ww_MRAM_LOWER_EN : std_logic;
 SIGNAL ww_UART_RX : std_logic;
 SIGNAL ww_UART_TX : std_logic;
-SIGNAL \pll1|altpll_component|pll_INCLK_bus\ : std_logic_vector(1 DOWNTO 0);
-SIGNAL \pll1|altpll_component|pll_CLK_bus\ : std_logic_vector(2 DOWNTO 0);
+SIGNAL \pl|altpll_component|pll_INCLK_bus\ : std_logic_vector(1 DOWNTO 0);
+SIGNAL \pl|altpll_component|pll_CLK_bus\ : std_logic_vector(2 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|ram_block3a0_PORTADATAIN_bus\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|ram_block3a0_PORTAADDR_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|ram_block3a0_PORTBADDR_bus\ : std_logic_vector(3 DOWNTO 0);
@@ -184,9 +184,9 @@ SIGNAL \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dp
 SIGNAL \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTAADDR_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBADDR_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \pll1|altpll_component|_clk0~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \pll1|altpll_component|pll~CLK1\ : std_logic;
-SIGNAL \pll1|altpll_component|pll~CLK2\ : std_logic;
+SIGNAL \pl|altpll_component|_clk0~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \pl|altpll_component|pll~CLK1\ : std_logic;
+SIGNAL \pl|altpll_component|pll~CLK2\ : std_logic;
 SIGNAL \this_setup_manager|config_command_counter[6]~26_combout\ : std_logic;
 SIGNAL \this_setup_manager|config_command_counter[9]~32_combout\ : std_logic;
 SIGNAL \this_setup_manager|config_command_counter[11]~36_combout\ : std_logic;
@@ -261,8 +261,8 @@ SIGNAL \MRAM_D[5]~5\ : std_logic;
 SIGNAL \MRAM_D[6]~6\ : std_logic;
 SIGNAL \MRAM_D[7]~7\ : std_logic;
 SIGNAL \CLK~combout\ : std_logic;
-SIGNAL \pll1|altpll_component|_clk0\ : std_logic;
-SIGNAL \pll1|altpll_component|_clk0~clkctrl_outclk\ : std_logic;
+SIGNAL \pl|altpll_component|_clk0\ : std_logic;
+SIGNAL \pl|altpll_component|_clk0~clkctrl_outclk\ : std_logic;
 SIGNAL \adc_spi_controller|spi_tx_component|clk_counter[0]~5_combout\ : std_logic;
 SIGNAL \adc_spi_controller|spi_tx_component|clk_counter[0]~6\ : std_logic;
 SIGNAL \adc_spi_controller|spi_tx_component|clk_counter[1]~8\ : std_logic;
@@ -846,11 +846,11 @@ ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
-\pll1|altpll_component|pll_INCLK_bus\ <= (gnd & \CLK~combout\);
+\pl|altpll_component|pll_INCLK_bus\ <= (gnd & \CLK~combout\);
 
-\pll1|altpll_component|_clk0\ <= \pll1|altpll_component|pll_CLK_bus\(0);
-\pll1|altpll_component|pll~CLK1\ <= \pll1|altpll_component|pll_CLK_bus\(1);
-\pll1|altpll_component|pll~CLK2\ <= \pll1|altpll_component|pll_CLK_bus\(2);
+\pl|altpll_component|_clk0\ <= \pl|altpll_component|pll_CLK_bus\(0);
+\pl|altpll_component|pll~CLK1\ <= \pl|altpll_component|pll_CLK_bus\(1);
+\pl|altpll_component|pll~CLK2\ <= \pl|altpll_component|pll_CLK_bus\(2);
 
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|ram_block3a0_PORTADATAIN_bus\ <= (\this_mram_controller|data_out\(7) & \this_mram_controller|data_out\(6) & \this_mram_controller|data_out\(5) & 
 \this_mram_controller|data_out\(4) & \this_mram_controller|data_out\(3) & \this_mram_controller|data_out\(2) & \this_mram_controller|data_out\(1) & \this_mram_controller|data_out\(0));
@@ -901,7 +901,7 @@ ww_devpor <= devpor;
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b\(14) <= \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus\(14);
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|q_b\(15) <= \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTBDATAOUT_bus\(15);
 
-\pll1|altpll_component|_clk0~clkctrl_INCLK_bus\ <= (gnd & gnd & gnd & \pll1|altpll_component|_clk0\);
+\pl|altpll_component|_clk0~clkctrl_INCLK_bus\ <= (gnd & gnd & gnd & \pl|altpll_component|_clk0\);
 \this_mram_controller|ALT_INV_MRAM_D[15]~en_regout\ <= NOT \this_mram_controller|MRAM_D[15]~en_regout\;
 \this_mram_controller|ALT_INV_MRAM_D[14]~en_regout\ <= NOT \this_mram_controller|MRAM_D[14]~en_regout\;
 \this_mram_controller|ALT_INV_MRAM_D[13]~en_regout\ <= NOT \this_mram_controller|MRAM_D[13]~en_regout\;
@@ -924,7 +924,7 @@ ww_devpor <= devpor;
 -- Location: LCFF_X8_Y8_N11
 \this_setup_manager|config_command_counter[6]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[6]~26_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -934,7 +934,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N17
 \this_setup_manager|config_command_counter[9]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[9]~32_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -944,7 +944,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N21
 \this_setup_manager|config_command_counter[11]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[11]~36_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -954,7 +954,7 @@ PORT MAP (
 -- Location: LCFF_X15_Y8_N25
 \adc_spi_controller|spi_tx_component|clk_counter[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|clk_counter[1]~7_combout\,
 	sclr => \adc_spi_controller|spi_tx_component|Equal0~1_combout\,
 	ena => \adc_spi_controller|spi_tx_component|curr_state~regout\,
@@ -1041,7 +1041,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y6_N7
 \this_read_adc_manager|read_counter[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|read_counter~4_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.read_adc~regout\,
 	devclrn => ww_devclrn,
@@ -1092,8 +1092,8 @@ GENERIC MAP (
 PORT MAP (
 	portawe => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|valid_wreq~combout\,
 	portbrewe => VCC,
-	clk0 => \pll1|altpll_component|_clk0~clkctrl_outclk\,
-	clk1 => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk0 => \pl|altpll_component|_clk0~clkctrl_outclk\,
+	clk1 => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	ena0 => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|valid_wreq~combout\,
 	ena1 => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|valid_rreq~combout\,
 	portadatain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|ram_block3a0_PORTADATAIN_bus\,
@@ -1144,7 +1144,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y7_N13
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit1a[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~combout\,
 	ena => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout\,
 	devclrn => ww_devclrn,
@@ -1449,8 +1449,8 @@ GENERIC MAP (
 PORT MAP (
 	portawe => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|valid_wreq~combout\,
 	portbrewe => VCC,
-	clk0 => \pll1|altpll_component|_clk0~clkctrl_outclk\,
-	clk1 => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk0 => \pl|altpll_component|_clk0~clkctrl_outclk\,
+	clk1 => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	ena0 => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|valid_wreq~combout\,
 	ena1 => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|valid_rreq~combout\,
 	portadatain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram1|ram_block2a0_PORTADATAIN_bus\,
@@ -1495,7 +1495,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y7_N13
 \adc_spi_controller|curr_state.transmiting\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|Selector5~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1537,7 +1537,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y9_N27
 \UART_Controller_1|uart_tx_1|data_send[6]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|data_send[6]~1_combout\,
 	ena => \UART_Controller_1|uart_tx_1|tx_curr_state.sync~regout\,
 	devclrn => ww_devclrn,
@@ -1547,7 +1547,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y9_N5
 \UART_Controller_1|uart_tx_1|data_index[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector19~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1556,7 +1556,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y9_N25
 \UART_Controller_1|uart_tx_1|data_send[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|data_send[4]~2_combout\,
 	ena => \UART_Controller_1|uart_tx_1|tx_curr_state.sync~regout\,
 	devclrn => ww_devclrn,
@@ -1584,7 +1584,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y9_N23
 \UART_Controller_1|uart_tx_1|data_send[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|data_send[2]~3_combout\,
 	ena => \UART_Controller_1|uart_tx_1|tx_curr_state.sync~regout\,
 	devclrn => ww_devclrn,
@@ -1594,7 +1594,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y9_N7
 \UART_Controller_1|uart_tx_1|data_send[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|data_send[1]~4_combout\,
 	ena => \UART_Controller_1|uart_tx_1|tx_curr_state.sync~regout\,
 	devclrn => ww_devclrn,
@@ -1604,7 +1604,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y9_N1
 \UART_Controller_1|uart_tx_1|data_send[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	sdata => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|q_b\(0),
 	sload => VCC,
 	ena => \UART_Controller_1|uart_tx_1|tx_curr_state.sync~regout\,
@@ -1633,7 +1633,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y9_N31
 \UART_Controller_1|uart_tx_1|data_send[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	sdata => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|q_b\(3),
 	sload => VCC,
 	ena => \UART_Controller_1|uart_tx_1|tx_curr_state.sync~regout\,
@@ -1679,7 +1679,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y7_N21
 \adc_spi_controller|cs_up_counter[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|cs_up_counter~1_combout\,
 	ena => \adc_spi_controller|curr_state.cs_up~regout\,
 	devclrn => ww_devclrn,
@@ -1752,7 +1752,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y8_N13
 \UART_Controller_1|uart_tx_1|counter[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector15~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1761,7 +1761,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y8_N7
 \UART_Controller_1|uart_tx_1|counter[6]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector10~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1822,7 +1822,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y9_N21
 \UART_Controller_1|uart_tx_1|data_index[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector17~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1879,7 +1879,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y6_N17
 \this_state_manager|curr_state.setup\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|curr_state.setup~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1906,7 +1906,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y6_N17
 \this_state_manager|counter[8]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~16_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -1916,7 +1916,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y6_N7
 \this_state_manager|counter[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~6_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -1943,7 +1943,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N7
 \this_state_manager|counter[19]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~38_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -1970,7 +1970,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N11
 \this_state_manager|counter[21]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~42_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -1995,7 +1995,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N13
 \this_state_manager|counter[22]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~44_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -2170,7 +2170,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N11
 \adc_spi_controller|spi_tx_component|tx_buf[6]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~11_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -2180,7 +2180,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N29
 \adc_spi_controller|spi_tx_component|tx_buf[5]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~12_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -2207,7 +2207,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N7
 \adc_spi_controller|spi_tx_component|tx_buf[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~13_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -2234,7 +2234,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N1
 \adc_spi_controller|spi_tx_component|tx_buf[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~14_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -2261,7 +2261,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N13
 \adc_spi_controller|spi_tx_component|tx_buf[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~15_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -2288,7 +2288,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N21
 \adc_spi_controller|spi_tx_component|tx_buf[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~16_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -2315,7 +2315,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N3
 \adc_spi_controller|spi_tx_component|tx_buf[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~17_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -2653,7 +2653,7 @@ PORT MAP (
 	combout => \CLK~combout\);
 
 -- Location: PLL_1
-\pll1|altpll_component|pll\ : cycloneii_pll
+\pl|altpll_component|pll\ : cycloneii_pll
 -- pragma translate_off
 GENERIC MAP (
 	bandwidth => 0,
@@ -2702,21 +2702,21 @@ GENERIC MAP (
 	vco_min => 1000)
 -- pragma translate_on
 PORT MAP (
-	inclk => \pll1|altpll_component|pll_INCLK_bus\,
-	clk => \pll1|altpll_component|pll_CLK_bus\);
+	inclk => \pl|altpll_component|pll_INCLK_bus\,
+	clk => \pl|altpll_component|pll_CLK_bus\);
 
 -- Location: CLKCTRL_G3
-\pll1|altpll_component|_clk0~clkctrl\ : cycloneii_clkctrl
+\pl|altpll_component|_clk0~clkctrl\ : cycloneii_clkctrl
 -- pragma translate_off
 GENERIC MAP (
 	clock_type => "global clock",
 	ena_register_mode => "none")
 -- pragma translate_on
 PORT MAP (
-	inclk => \pll1|altpll_component|_clk0~clkctrl_INCLK_bus\,
+	inclk => \pl|altpll_component|_clk0~clkctrl_INCLK_bus\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	outclk => \pll1|altpll_component|_clk0~clkctrl_outclk\);
+	outclk => \pl|altpll_component|_clk0~clkctrl_outclk\);
 
 -- Location: LCCOMB_X15_Y8_N22
 \adc_spi_controller|spi_tx_component|clk_counter[0]~5\ : cycloneii_lcell_comb
@@ -2738,7 +2738,7 @@ PORT MAP (
 -- Location: LCFF_X15_Y8_N23
 \adc_spi_controller|spi_tx_component|clk_counter[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|clk_counter[0]~5_combout\,
 	sclr => \adc_spi_controller|spi_tx_component|Equal0~1_combout\,
 	ena => \adc_spi_controller|spi_tx_component|curr_state~regout\,
@@ -2768,7 +2768,7 @@ PORT MAP (
 -- Location: LCFF_X15_Y8_N27
 \adc_spi_controller|spi_tx_component|clk_counter[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|clk_counter[2]~9_combout\,
 	sclr => \adc_spi_controller|spi_tx_component|Equal0~1_combout\,
 	ena => \adc_spi_controller|spi_tx_component|curr_state~regout\,
@@ -2798,7 +2798,7 @@ PORT MAP (
 -- Location: LCFF_X15_Y8_N29
 \adc_spi_controller|spi_tx_component|clk_counter[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|clk_counter[3]~11_combout\,
 	sclr => \adc_spi_controller|spi_tx_component|Equal0~1_combout\,
 	ena => \adc_spi_controller|spi_tx_component|curr_state~regout\,
@@ -2824,7 +2824,7 @@ PORT MAP (
 -- Location: LCFF_X15_Y8_N31
 \adc_spi_controller|spi_tx_component|clk_counter[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|clk_counter[4]~13_combout\,
 	sclr => \adc_spi_controller|spi_tx_component|Equal0~1_combout\,
 	ena => \adc_spi_controller|spi_tx_component|curr_state~regout\,
@@ -2870,7 +2870,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y7_N27
 \adc_spi_controller|spi_tx_component|bits_sent[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|Add0~13_combout\,
 	sclr => \adc_spi_controller|spi_tx_component|ALT_INV_curr_state~regout\,
 	devclrn => ww_devclrn,
@@ -2897,7 +2897,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y7_N25
 \adc_spi_controller|spi_tx_component|bits_sent[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|Add0~11_combout\,
 	sclr => \adc_spi_controller|spi_tx_component|ALT_INV_curr_state~regout\,
 	devclrn => ww_devclrn,
@@ -2944,7 +2944,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y7_N19
 \adc_spi_controller|spi_tx_component|bits_sent[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|bits_sent~0_combout\,
 	sclr => \adc_spi_controller|spi_tx_component|ALT_INV_curr_state~regout\,
 	devclrn => ww_devclrn,
@@ -3005,7 +3005,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y7_N23
 \adc_spi_controller|spi_tx_component|bits_sent[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|Add0~10_combout\,
 	sclr => \adc_spi_controller|spi_tx_component|ALT_INV_curr_state~regout\,
 	devclrn => ww_devclrn,
@@ -3032,7 +3032,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y7_N21
 \adc_spi_controller|spi_tx_component|bits_sent[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|Add0~12_combout\,
 	sclr => \adc_spi_controller|spi_tx_component|ALT_INV_curr_state~regout\,
 	devclrn => ww_devclrn,
@@ -3124,7 +3124,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y7_N23
 \adc_spi_controller|cs_up_counter[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|cs_up_counter~2_combout\,
 	ena => \adc_spi_controller|curr_state.cs_up~regout\,
 	devclrn => ww_devclrn,
@@ -3152,7 +3152,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y7_N5
 \adc_spi_controller|cs_up_counter[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|Add0~2_combout\,
 	ena => \adc_spi_controller|curr_state.cs_up~regout\,
 	devclrn => ww_devclrn,
@@ -3162,7 +3162,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y7_N9
 \adc_spi_controller|cs_up_counter[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|Add0~6_combout\,
 	ena => \adc_spi_controller|curr_state.cs_up~regout\,
 	devclrn => ww_devclrn,
@@ -3187,7 +3187,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y7_N29
 \adc_spi_controller|cs_up_counter[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|cs_up_counter~0_combout\,
 	ena => \adc_spi_controller|curr_state.cs_up~regout\,
 	devclrn => ww_devclrn,
@@ -3229,7 +3229,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y7_N9
 \adc_spi_controller|spi_tx_component|SEND_DONE\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|SEND_DONE~0_combout\,
 	sclr => \adc_spi_controller|spi_tx_component|ALT_INV_curr_state~regout\,
 	devclrn => ww_devclrn,
@@ -3257,7 +3257,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y7_N19
 \adc_spi_controller|curr_state.cs_up\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|Selector6~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -3342,7 +3342,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N23
 \this_setup_manager|config_command_counter[12]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[12]~38_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3390,7 +3390,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N27
 \this_setup_manager|config_command_counter[14]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[14]~42_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3419,7 +3419,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N29
 \this_setup_manager|config_command_counter[15]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[15]~44_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3444,7 +3444,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N31
 \this_setup_manager|config_command_counter[16]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[16]~46_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3469,7 +3469,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N25
 \this_setup_manager|config_command_counter[13]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[13]~40_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3513,7 +3513,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N1
 \this_setup_manager|config_command_counter[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[1]~16_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3542,7 +3542,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N13
 \this_setup_manager|config_command_counter[7]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[7]~28_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3602,7 +3602,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N9
 \this_setup_manager|config_command_counter[5]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[5]~24_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3631,7 +3631,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N15
 \this_setup_manager|config_command_counter[8]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[8]~30_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3641,7 +3641,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N19
 \this_setup_manager|config_command_counter[10]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[10]~34_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3668,7 +3668,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y8_N21
 \this_setup_manager|config_command_counter[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[0]~48_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -3696,7 +3696,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N3
 \this_setup_manager|config_command_counter[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[2]~18_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3725,7 +3725,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N5
 \this_setup_manager|config_command_counter[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[3]~20_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3735,7 +3735,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y8_N7
 \this_setup_manager|config_command_counter[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|config_command_counter[4]~22_combout\,
 	ena => \this_setup_manager|ALT_INV_Equal12~1_combout\,
 	devclrn => ww_devclrn,
@@ -3875,7 +3875,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y8_N17
 \this_setup_manager|SPI_send_irq\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|Selector6~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -3921,7 +3921,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y7_N19
 \adc_spi_controller|fifo_rdreq\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|Selector2~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -3949,7 +3949,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y7_N23
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|b_full\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -4037,7 +4037,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y7_N15
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit1a[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~combout\,
 	ena => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout\,
 	devclrn => ww_devclrn,
@@ -4063,7 +4063,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y7_N17
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit1a[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~combout\,
 	ena => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout\,
 	devclrn => ww_devclrn,
@@ -4092,7 +4092,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y7_N11
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit1a[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~combout\,
 	ena => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout\,
 	devclrn => ww_devclrn,
@@ -4121,7 +4121,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y7_N1
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -4149,7 +4149,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y7_N25
 \adc_spi_controller|curr_state.idle\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|Selector3~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -4173,7 +4173,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y7_N31
 \adc_spi_controller|curr_state.reading_fifo\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|Selector4~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -4198,7 +4198,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y7_N3
 \adc_spi_controller|tx_send_irq\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|Selector1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -4207,7 +4207,7 @@ PORT MAP (
 -- Location: LCFF_X13_Y7_N31
 \adc_spi_controller|spi_tx_component|curr_state\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|curr_state~feeder_combout\,
 	sdata => \adc_spi_controller|tx_send_irq~regout\,
 	sload => \adc_spi_controller|spi_tx_component|ALT_INV_curr_state~regout\,
@@ -4267,7 +4267,7 @@ PORT MAP (
 -- Location: LCFF_X10_Y8_N7
 \this_setup_manager|SPI_send_data[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|Selector5~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -4293,7 +4293,7 @@ PORT MAP (
 -- Location: LCFF_X10_Y7_N19
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit4a[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~combout\,
 	ena => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|valid_wreq~combout\,
 	devclrn => ww_devclrn,
@@ -4324,7 +4324,7 @@ PORT MAP (
 -- Location: LCFF_X10_Y7_N21
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit4a[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~combout\,
 	ena => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|valid_wreq~combout\,
 	devclrn => ww_devclrn,
@@ -4355,7 +4355,7 @@ PORT MAP (
 -- Location: LCFF_X10_Y7_N23
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit4a[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~combout\,
 	ena => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|valid_wreq~combout\,
 	devclrn => ww_devclrn,
@@ -4381,7 +4381,7 @@ PORT MAP (
 -- Location: LCFF_X10_Y7_N25
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit4a[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~combout\,
 	ena => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|valid_wreq~combout\,
 	devclrn => ww_devclrn,
@@ -4408,7 +4408,7 @@ PORT MAP (
 -- Location: LCFF_X10_Y7_N5
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit4a[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~combout\,
 	ena => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|valid_rreq~combout\,
 	devclrn => ww_devclrn,
@@ -4439,7 +4439,7 @@ PORT MAP (
 -- Location: LCFF_X10_Y7_N7
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit4a[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~combout\,
 	ena => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|valid_rreq~combout\,
 	devclrn => ww_devclrn,
@@ -4470,7 +4470,7 @@ PORT MAP (
 -- Location: LCFF_X10_Y7_N9
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit4a[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~combout\,
 	ena => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|valid_rreq~combout\,
 	devclrn => ww_devclrn,
@@ -4496,7 +4496,7 @@ PORT MAP (
 -- Location: LCFF_X10_Y7_N11
 \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit4a[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~combout\,
 	ena => \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|valid_rreq~combout\,
 	devclrn => ww_devclrn,
@@ -4552,7 +4552,7 @@ PORT MAP (
 -- Location: LCFF_X10_Y8_N17
 \this_setup_manager|SPI_send_data[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|Selector3~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -4579,7 +4579,7 @@ PORT MAP (
 -- Location: LCFF_X10_Y8_N11
 \this_setup_manager|SPI_send_data[10]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|Selector1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -4653,7 +4653,7 @@ PORT MAP (
 -- Location: LCFF_X10_Y8_N23
 \this_setup_manager|SPI_send_data[15]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|Selector0~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -4698,7 +4698,7 @@ PORT MAP (
 -- Location: LCFF_X13_Y7_N1
 \adc_spi_controller|spi_tx_component|is_read\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|is_read~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -4759,7 +4759,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N9
 \adc_spi_controller|spi_tx_component|tx_buf[7]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~10_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -4786,7 +4786,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N19
 \adc_spi_controller|spi_tx_component|tx_buf[8]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~9_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -4813,7 +4813,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N27
 \adc_spi_controller|spi_tx_component|tx_buf[9]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~8_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -4840,7 +4840,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N5
 \adc_spi_controller|spi_tx_component|tx_buf[10]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~7_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -4867,7 +4867,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N25
 \adc_spi_controller|spi_tx_component|tx_buf[11]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~6_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -4894,7 +4894,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N17
 \adc_spi_controller|spi_tx_component|tx_buf[12]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~5_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -4921,7 +4921,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N31
 \adc_spi_controller|spi_tx_component|tx_buf[13]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~4_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -4948,7 +4948,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N15
 \adc_spi_controller|spi_tx_component|tx_buf[14]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~3_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -4975,7 +4975,7 @@ PORT MAP (
 -- Location: LCFF_X12_Y7_N23
 \adc_spi_controller|spi_tx_component|tx_buf[15]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|tx_buf~0_combout\,
 	ena => \adc_spi_controller|spi_tx_component|tx_buf~2_combout\,
 	devclrn => ww_devclrn,
@@ -5016,7 +5016,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y7_N11
 \adc_spi_controller|spi_tx_component|sclk\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|sclk~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -5059,7 +5059,7 @@ PORT MAP (
 -- Location: LCFF_X15_Y7_N13
 \adc_spi_controller|spi_tx_component|SPI_MOSI~reg0\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|SPI_MOSI~1_combout\,
 	ena => \adc_spi_controller|spi_tx_component|SPI_MOSI~2_combout\,
 	devclrn => ww_devclrn,
@@ -5099,7 +5099,7 @@ PORT MAP (
 -- Location: LCFF_X15_Y7_N7
 \adc_spi_controller|spi_tx_component|SPI_MOSI~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|spi_tx_component|SPI_MOSI~enfeeder_combout\,
 	ena => \adc_spi_controller|spi_tx_component|SPI_MOSI~2_combout\,
 	devclrn => ww_devclrn,
@@ -5189,7 +5189,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y8_N7
 \this_setup_manager|SETUP_DONE\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|SETUP_DONE~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -5250,7 +5250,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y6_N7
 \this_write_out_mram_manager|getting_data\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_write_out_mram_manager|getting_data~0_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.write_out_mram~regout\,
 	devclrn => ww_devclrn,
@@ -5278,7 +5278,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y6_N15
 \this_write_out_mram_manager|address_counter[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_write_out_mram_manager|address_counter[1]~10_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.write_out_mram~regout\,
 	ena => \this_write_out_mram_manager|address_counter~9_combout\,
@@ -5327,7 +5327,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y6_N19
 \this_write_out_mram_manager|address_counter[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_write_out_mram_manager|address_counter[3]~14_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.write_out_mram~regout\,
 	ena => \this_write_out_mram_manager|address_counter~9_combout\,
@@ -5338,7 +5338,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y6_N13
 \this_write_out_mram_manager|address_counter[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_write_out_mram_manager|address_counter[0]~7_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.write_out_mram~regout\,
 	ena => \this_write_out_mram_manager|address_counter~9_combout\,
@@ -5386,7 +5386,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y6_N21
 \this_write_out_mram_manager|address_counter[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_write_out_mram_manager|address_counter[4]~16_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.write_out_mram~regout\,
 	ena => \this_write_out_mram_manager|address_counter~9_combout\,
@@ -5416,7 +5416,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y6_N23
 \this_write_out_mram_manager|address_counter[5]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_write_out_mram_manager|address_counter[5]~18_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.write_out_mram~regout\,
 	ena => \this_write_out_mram_manager|address_counter~9_combout\,
@@ -5478,7 +5478,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y6_N1
 \this_state_manager|curr_state.read_adc\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Selector1~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -5528,7 +5528,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y6_N25
 \this_read_adc_manager|last_state\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|last_state~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -5600,7 +5600,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y6_N23
 \this_read_adc_manager|read_counter[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|read_counter~5_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.read_adc~regout\,
 	ena => \this_read_adc_manager|read_counter~2_combout\,
@@ -5629,7 +5629,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y6_N9
 \this_read_adc_manager|read_counter[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|read_counter~0_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.read_adc~regout\,
 	ena => \this_read_adc_manager|read_counter~2_combout\,
@@ -5658,7 +5658,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y6_N3
 \this_read_adc_manager|read_counter[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|read_counter~3_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.read_adc~regout\,
 	ena => \this_read_adc_manager|read_counter~2_combout\,
@@ -5703,7 +5703,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N19
 \this_read_adc_manager|address_counter[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|address_counter[1]~11_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.read_adc~regout\,
 	ena => \this_read_adc_manager|address_counter~10_combout\,
@@ -5752,7 +5752,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N23
 \this_read_adc_manager|address_counter[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|address_counter[3]~15_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.read_adc~regout\,
 	ena => \this_read_adc_manager|address_counter~10_combout\,
@@ -5801,7 +5801,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N27
 \this_read_adc_manager|address_counter[5]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|address_counter[5]~19_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.read_adc~regout\,
 	ena => \this_read_adc_manager|address_counter~10_combout\,
@@ -5827,7 +5827,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N29
 \this_read_adc_manager|address_counter[6]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|address_counter[6]~21_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.read_adc~regout\,
 	ena => \this_read_adc_manager|address_counter~10_combout\,
@@ -5838,7 +5838,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N21
 \this_read_adc_manager|address_counter[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|address_counter[2]~13_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.read_adc~regout\,
 	ena => \this_read_adc_manager|address_counter~10_combout\,
@@ -5901,7 +5901,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y6_N13
 \this_state_manager|curr_state.wait_1\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Selector3~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -5910,7 +5910,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y6_N25
 \this_state_manager|counter[5]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|counter~1_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -5952,7 +5952,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y6_N31
 \this_state_manager|counter[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|counter~3_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -5980,7 +5980,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y6_N3
 \this_state_manager|counter[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~2_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6023,7 +6023,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y6_N11
 \this_state_manager|counter[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|counter~2_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6051,7 +6051,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y6_N9
 \this_state_manager|counter[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~8_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6079,7 +6079,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y6_N15
 \this_state_manager|counter[7]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~14_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6107,7 +6107,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y6_N19
 \this_state_manager|counter[9]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~18_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6153,7 +6153,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y6_N23
 \this_state_manager|counter[11]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~22_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6199,7 +6199,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y6_N27
 \this_state_manager|counter[13]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~26_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6227,7 +6227,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y6_N29
 \this_state_manager|counter[14]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~28_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6255,7 +6255,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y6_N31
 \this_state_manager|counter[15]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~30_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6283,7 +6283,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N1
 \this_state_manager|counter[16]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~32_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6311,7 +6311,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N3
 \this_state_manager|counter[17]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~34_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6339,7 +6339,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N5
 \this_state_manager|counter[18]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~36_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6367,7 +6367,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N9
 \this_state_manager|counter[20]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~40_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6395,7 +6395,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N15
 \this_state_manager|counter[23]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~46_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6441,7 +6441,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N19
 \this_state_manager|counter[25]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~50_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6487,7 +6487,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N23
 \this_state_manager|counter[27]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~54_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6533,7 +6533,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N27
 \this_state_manager|counter[29]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~58_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6561,7 +6561,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N29
 \this_state_manager|counter[30]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~60_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6586,7 +6586,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N31
 \this_state_manager|counter[31]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~62_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6596,7 +6596,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N25
 \this_state_manager|counter[28]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~56_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6623,7 +6623,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N21
 \this_state_manager|counter[26]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~52_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6633,7 +6633,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y5_N17
 \this_state_manager|counter[24]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~48_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6675,7 +6675,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y6_N27
 \this_state_manager|counter[6]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|counter~0_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6702,7 +6702,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y6_N25
 \this_state_manager|counter[12]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~24_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6729,7 +6729,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y6_N21
 \this_state_manager|counter[10]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Add0~20_combout\,
 	ena => \this_state_manager|curr_state.wait_1~regout\,
 	devclrn => ww_devclrn,
@@ -6808,7 +6808,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y6_N15
 \this_state_manager|curr_state.write_out_mram\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_state_manager|Selector2~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -6817,7 +6817,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y6_N1
 \this_write_out_mram_manager|UART_DATA_IRQ\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_write_out_mram_manager|UART_DATA_IRQ~0_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.write_out_mram~regout\,
 	devclrn => ww_devclrn,
@@ -6903,7 +6903,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y9_N9
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit1a[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~combout\,
 	ena => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout\,
 	devclrn => ww_devclrn,
@@ -6935,7 +6935,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y9_N11
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit1a[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~combout\,
 	ena => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout\,
 	devclrn => ww_devclrn,
@@ -6982,7 +6982,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y9_N1
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|b_full\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|b_full~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -7022,7 +7022,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y9_N13
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit1a[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~combout\,
 	ena => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout\,
 	devclrn => ww_devclrn,
@@ -7032,7 +7032,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y9_N7
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit1a[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~combout\,
 	ena => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|_~0_combout\,
 	devclrn => ww_devclrn,
@@ -7095,7 +7095,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y9_N19
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|b_non_empty~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -7122,7 +7122,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y6_N29
 \this_write_out_mram_manager|have_data\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_write_out_mram_manager|have_data~0_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.write_out_mram~regout\,
 	devclrn => ww_devclrn,
@@ -7148,7 +7148,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y6_N11
 \this_write_out_mram_manager|MRAM_READ_DATA\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_write_out_mram_manager|address_counter~22_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.write_out_mram~regout\,
 	devclrn => ww_devclrn,
@@ -7174,7 +7174,7 @@ PORT MAP (
 -- Location: LCFF_X26_Y7_N1
 \this_mram_controller|counter[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|counter~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -7200,7 +7200,7 @@ PORT MAP (
 -- Location: LCFF_X26_Y7_N19
 \this_mram_controller|counter[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|counter~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -7226,7 +7226,7 @@ PORT MAP (
 -- Location: LCFF_X26_Y7_N21
 \this_mram_controller|counter[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|counter~3_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -7285,7 +7285,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y6_N19
 \this_mram_controller|curr_state.reading\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|curr_state~6_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -7327,7 +7327,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y6_N11
 \this_read_adc_manager|MRAM_WRITE_DATA\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|MRAM_WRITE_DATA~0_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.read_adc~regout\,
 	devclrn => ww_devclrn,
@@ -7355,7 +7355,7 @@ PORT MAP (
 -- Location: LCFF_X26_Y7_N17
 \this_mram_controller|curr_state.writing\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|curr_state~8_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -7400,7 +7400,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y6_N31
 \this_mram_controller|curr_state.idle\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|curr_state~10_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -7424,7 +7424,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y7_N17
 \this_mram_controller|counter[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|counter~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -7479,7 +7479,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N17
 \this_read_adc_manager|MRAM_DATA_OUT[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|MRAM_DATA_OUT[0]~2_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -7558,7 +7558,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N11
 \this_mram_controller|MRAM_D[0]~reg0\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Mux61~0_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -7603,7 +7603,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y10_N11
 \this_mram_controller|MRAM_D[0]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	sdata => \this_mram_controller|Selector24~0_combout\,
 	sload => VCC,
 	ena => \this_mram_controller|Selector39~0_combout\,
@@ -7661,7 +7661,7 @@ PORT MAP (
 -- Location: LCFF_X26_Y6_N25
 \this_read_adc_manager|real_data_counter[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|real_data_counter[1]~0_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -7685,7 +7685,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N31
 \this_read_adc_manager|MRAM_DATA_OUT[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|MRAM_DATA_OUT[1]~3_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -7710,7 +7710,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N13
 \this_mram_controller|MRAM_D[1]~reg0\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Mux64~0_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -7720,7 +7720,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y10_N23
 \this_mram_controller|MRAM_D[1]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	sdata => \this_mram_controller|Selector24~0_combout\,
 	sload => VCC,
 	ena => \this_mram_controller|Selector39~0_combout\,
@@ -7763,7 +7763,7 @@ PORT MAP (
 -- Location: LCFF_X26_Y6_N21
 \this_read_adc_manager|real_data_counter[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|real_data_counter[2]~1_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -7787,7 +7787,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N23
 \this_read_adc_manager|MRAM_DATA_OUT[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|MRAM_DATA_OUT[2]~4_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -7812,7 +7812,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N25
 \this_mram_controller|MRAM_D[2]~reg0\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Mux65~0_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -7822,7 +7822,7 @@ PORT MAP (
 -- Location: LCFF_X20_Y10_N5
 \this_mram_controller|MRAM_D[2]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	sdata => \this_mram_controller|Selector24~0_combout\,
 	sload => VCC,
 	ena => \this_mram_controller|Selector39~0_combout\,
@@ -7865,7 +7865,7 @@ PORT MAP (
 -- Location: LCFF_X26_Y6_N31
 \this_read_adc_manager|real_data_counter[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|real_data_counter[3]~2_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -7889,7 +7889,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N3
 \this_read_adc_manager|MRAM_DATA_OUT[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|MRAM_DATA_OUT[3]~5_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -7914,7 +7914,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N29
 \this_mram_controller|MRAM_D[3]~reg0\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Mux66~0_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -7938,7 +7938,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y10_N11
 \this_mram_controller|MRAM_D[3]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|MRAM_D[3]~enfeeder_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -7980,7 +7980,7 @@ PORT MAP (
 -- Location: LCFF_X26_Y6_N29
 \this_read_adc_manager|real_data_counter[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|real_data_counter[4]~3_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -8004,7 +8004,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N15
 \this_read_adc_manager|MRAM_DATA_OUT[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	sdata => \this_read_adc_manager|MRAM_DATA_OUT[4]~6_combout\,
 	sload => VCC,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
@@ -8030,7 +8030,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N9
 \this_mram_controller|MRAM_D[4]~reg0\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Mux67~0_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8054,7 +8054,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y10_N27
 \this_mram_controller|MRAM_D[4]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|MRAM_D[4]~enfeeder_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8096,7 +8096,7 @@ PORT MAP (
 -- Location: LCFF_X26_Y6_N23
 \this_read_adc_manager|real_data_counter[5]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|real_data_counter[5]~4_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -8120,7 +8120,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N21
 \this_read_adc_manager|MRAM_DATA_OUT[5]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|MRAM_DATA_OUT[5]~7_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -8145,7 +8145,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N27
 \this_mram_controller|MRAM_D[5]~reg0\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Mux68~0_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8169,7 +8169,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y10_N21
 \this_mram_controller|MRAM_D[5]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|MRAM_D[5]~enfeeder_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8211,7 +8211,7 @@ PORT MAP (
 -- Location: LCFF_X26_Y6_N27
 \this_read_adc_manager|real_data_counter[6]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|real_data_counter[6]~5_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -8235,7 +8235,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N5
 \this_read_adc_manager|MRAM_DATA_OUT[6]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|MRAM_DATA_OUT[6]~8_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -8260,7 +8260,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N19
 \this_mram_controller|MRAM_D[6]~reg0\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Mux69~0_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8284,7 +8284,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y10_N9
 \this_mram_controller|MRAM_D[6]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|MRAM_D[6]~enfeeder_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8323,7 +8323,7 @@ PORT MAP (
 -- Location: LCFF_X26_Y6_N3
 \this_read_adc_manager|real_data_counter[7]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|real_data_counter[7]~6_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -8347,7 +8347,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N1
 \this_read_adc_manager|MRAM_DATA_OUT[7]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|MRAM_DATA_OUT[7]~9_combout\,
 	ena => \this_read_adc_manager|MRAM_DATA_OUT[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -8372,7 +8372,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y6_N7
 \this_mram_controller|MRAM_D[7]~reg0\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Mux70~0_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8396,7 +8396,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y10_N5
 \this_mram_controller|MRAM_D[7]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|MRAM_D[7]~enfeeder_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8420,7 +8420,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y10_N1
 \this_mram_controller|MRAM_D[8]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|MRAM_D[8]~enfeeder_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8444,7 +8444,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y10_N19
 \this_mram_controller|MRAM_D[9]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|MRAM_D[9]~enfeeder_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8468,7 +8468,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y10_N23
 \this_mram_controller|MRAM_D[10]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|MRAM_D[10]~enfeeder_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8478,7 +8478,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y8_N7
 \this_mram_controller|MRAM_D[11]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	sdata => \this_mram_controller|Selector24~0_combout\,
 	sload => VCC,
 	ena => \this_mram_controller|Selector39~0_combout\,
@@ -8503,7 +8503,7 @@ PORT MAP (
 -- Location: LCFF_X14_Y10_N13
 \this_mram_controller|MRAM_D[12]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|MRAM_D[12]~enfeeder_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8527,7 +8527,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y9_N7
 \this_mram_controller|MRAM_D[13]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|MRAM_D[13]~enfeeder_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8537,7 +8537,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y8_N5
 \this_mram_controller|MRAM_D[14]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	sdata => \this_mram_controller|Selector24~0_combout\,
 	sload => VCC,
 	ena => \this_mram_controller|Selector39~0_combout\,
@@ -8562,7 +8562,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y9_N5
 \this_mram_controller|MRAM_D[15]~en\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|MRAM_D[15]~enfeeder_combout\,
 	ena => \this_mram_controller|Selector39~0_combout\,
 	devclrn => ww_devclrn,
@@ -8622,7 +8622,7 @@ PORT MAP (
 -- Location: LCFF_X9_Y8_N9
 \this_setup_manager|ADC_SYNC\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_setup_manager|Selector7~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -8648,7 +8648,7 @@ PORT MAP (
 -- Location: LCFF_X8_Y7_N27
 \adc_spi_controller|SPI_CS\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \adc_spi_controller|Selector0~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -8707,7 +8707,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y7_N15
 \this_mram_controller|MRAM_OUTPUT_EN\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Selector1~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -8716,7 +8716,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N17
 \this_read_adc_manager|address_counter[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|address_counter[0]~7_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.read_adc~regout\,
 	ena => \this_read_adc_manager|address_counter~10_combout\,
@@ -8777,7 +8777,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N15
 \this_mram_controller|MRAM_A[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Selector22~0_combout\,
 	ena => \this_mram_controller|Selector22~2_combout\,
 	devclrn => ww_devclrn,
@@ -8805,7 +8805,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N11
 \this_mram_controller|MRAM_A[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Selector21~0_combout\,
 	ena => \this_mram_controller|Selector22~2_combout\,
 	devclrn => ww_devclrn,
@@ -8815,7 +8815,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y6_N17
 \this_write_out_mram_manager|address_counter[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_write_out_mram_manager|address_counter[2]~12_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.write_out_mram~regout\,
 	ena => \this_write_out_mram_manager|address_counter~9_combout\,
@@ -8844,7 +8844,7 @@ PORT MAP (
 -- Location: LCFF_X26_Y6_N1
 \this_mram_controller|MRAM_A[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Selector20~0_combout\,
 	ena => \this_mram_controller|Selector22~2_combout\,
 	devclrn => ww_devclrn,
@@ -8872,7 +8872,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N13
 \this_mram_controller|MRAM_A[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Selector19~0_combout\,
 	ena => \this_mram_controller|Selector22~2_combout\,
 	devclrn => ww_devclrn,
@@ -8882,7 +8882,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N25
 \this_read_adc_manager|address_counter[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_read_adc_manager|address_counter[4]~17_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.read_adc~regout\,
 	ena => \this_read_adc_manager|address_counter~10_combout\,
@@ -8911,7 +8911,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N1
 \this_mram_controller|MRAM_A[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Selector18~0_combout\,
 	ena => \this_mram_controller|Selector22~2_combout\,
 	devclrn => ww_devclrn,
@@ -8939,7 +8939,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N9
 \this_mram_controller|MRAM_A[5]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Selector17~0_combout\,
 	ena => \this_mram_controller|Selector22~2_combout\,
 	devclrn => ww_devclrn,
@@ -8964,7 +8964,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y6_N25
 \this_write_out_mram_manager|address_counter[6]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_write_out_mram_manager|address_counter[6]~20_combout\,
 	sclr => \this_state_manager|ALT_INV_curr_state.write_out_mram~regout\,
 	ena => \this_write_out_mram_manager|address_counter~9_combout\,
@@ -8993,7 +8993,7 @@ PORT MAP (
 -- Location: LCFF_X27_Y6_N7
 \this_mram_controller|MRAM_A[6]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Selector16~0_combout\,
 	ena => \this_mram_controller|Selector22~2_combout\,
 	devclrn => ww_devclrn,
@@ -9055,7 +9055,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y7_N21
 \this_mram_controller|MRAM_EN\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Selector0~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9115,7 +9115,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y7_N19
 \this_mram_controller|MRAM_WRITE_EN\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Selector2~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9159,7 +9159,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y7_N1
 \this_mram_controller|MRAM_LOWER_EN\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|Selector4~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9203,7 +9203,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y8_N3
 \UART_Controller_1|uart_tx_1|tx_curr_state.stop\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector4~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9230,7 +9230,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y8_N23
 \UART_Controller_1|uart_tx_1|tx_curr_state.idle\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector0~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9257,7 +9257,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y8_N27
 \UART_Controller_1|uart_tx_1|counter[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector16~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9302,7 +9302,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y8_N29
 \UART_Controller_1|uart_tx_1|counter[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector14~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9343,7 +9343,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y9_N19
 \UART_Controller_1|uart_tx_1|TX_BUSY\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|TX_BUSY~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9388,7 +9388,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y9_N25
 \UART_Controller_1|next_state.reading_fifo2\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|Selector2~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9411,7 +9411,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y9_N23
 \UART_Controller_1|curr_state.reading_fifo2\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|curr_state.reading_fifo2~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9456,7 +9456,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y9_N13
 \UART_Controller_1|next_state.idle\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|Selector0~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9479,7 +9479,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y9_N21
 \UART_Controller_1|curr_state.idle\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|curr_state.idle~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9506,7 +9506,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y9_N7
 \UART_Controller_1|next_state.transmiting\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|Selector3~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9529,7 +9529,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y9_N11
 \UART_Controller_1|curr_state.transmiting\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|curr_state.transmiting~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9554,7 +9554,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y9_N1
 \UART_Controller_1|uart_tx_1|tx_curr_state.sync\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9579,7 +9579,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y8_N9
 \UART_Controller_1|uart_tx_1|counter[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector13~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9639,7 +9639,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y8_N1
 \UART_Controller_1|uart_tx_1|counter[5]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector11~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9682,7 +9682,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y8_N3
 \UART_Controller_1|uart_tx_1|counter[7]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector9~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9727,7 +9727,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y8_N17
 \UART_Controller_1|uart_tx_1|counter[8]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector8~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9770,7 +9770,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y8_N31
 \UART_Controller_1|uart_tx_1|counter[9]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector7~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9812,7 +9812,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y8_N25
 \UART_Controller_1|uart_tx_1|counter[10]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector6~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9854,7 +9854,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y8_N31
 \UART_Controller_1|uart_tx_1|counter[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector12~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9913,7 +9913,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y8_N7
 \UART_Controller_1|uart_tx_1|tx_curr_state.start\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector2~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9940,7 +9940,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y8_N11
 \UART_Controller_1|uart_tx_1|tx_curr_state.data\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector3~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -9967,7 +9967,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y9_N31
 \UART_Controller_1|uart_tx_1|data_index[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector18~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -10012,7 +10012,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y9_N29
 \UART_Controller_1|next_state.reading_fifo1\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|Selector1~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -10035,7 +10035,7 @@ PORT MAP (
 -- Location: LCFF_X21_Y9_N25
 \UART_Controller_1|curr_state.reading_fifo1\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|curr_state.reading_fifo1~feeder_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -10090,7 +10090,7 @@ PORT MAP (
 -- Location: LCFF_X19_Y10_N1
 \this_mram_controller|data_out[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|data_out[0]~feeder_combout\,
 	ena => \this_mram_controller|data_out[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -10117,7 +10117,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y9_N7
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit4a[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~combout\,
 	ena => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|valid_wreq~combout\,
 	devclrn => ww_devclrn,
@@ -10148,7 +10148,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y9_N9
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit4a[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~combout\,
 	ena => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|valid_wreq~combout\,
 	devclrn => ww_devclrn,
@@ -10179,7 +10179,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y9_N11
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit4a[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~combout\,
 	ena => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|valid_wreq~combout\,
 	devclrn => ww_devclrn,
@@ -10205,7 +10205,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y9_N13
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_reg_bit4a[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~combout\,
 	ena => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|valid_wreq~combout\,
 	devclrn => ww_devclrn,
@@ -10232,7 +10232,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y9_N21
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit4a[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~combout\,
 	ena => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|valid_rreq~combout\,
 	devclrn => ww_devclrn,
@@ -10263,7 +10263,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y9_N23
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit4a[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~combout\,
 	ena => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|valid_rreq~combout\,
 	devclrn => ww_devclrn,
@@ -10294,7 +10294,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y9_N25
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit4a[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~combout\,
 	ena => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|valid_rreq~combout\,
 	devclrn => ww_devclrn,
@@ -10320,7 +10320,7 @@ PORT MAP (
 -- Location: LCFF_X22_Y9_N27
 \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit4a[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~combout\,
 	ena => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|valid_rreq~combout\,
 	devclrn => ww_devclrn,
@@ -10344,7 +10344,7 @@ PORT MAP (
 -- Location: LCFF_X19_Y10_N5
 \this_mram_controller|data_out[1]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|data_out[1]~feeder_combout\,
 	ena => \this_mram_controller|data_out[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -10368,7 +10368,7 @@ PORT MAP (
 -- Location: LCFF_X19_Y10_N23
 \this_mram_controller|data_out[2]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|data_out[2]~feeder_combout\,
 	ena => \this_mram_controller|data_out[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -10392,7 +10392,7 @@ PORT MAP (
 -- Location: LCFF_X19_Y10_N19
 \this_mram_controller|data_out[3]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|data_out[3]~feeder_combout\,
 	ena => \this_mram_controller|data_out[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -10416,7 +10416,7 @@ PORT MAP (
 -- Location: LCFF_X19_Y10_N17
 \this_mram_controller|data_out[4]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|data_out[4]~feeder_combout\,
 	ena => \this_mram_controller|data_out[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -10426,7 +10426,7 @@ PORT MAP (
 -- Location: LCFF_X19_Y10_N11
 \this_mram_controller|data_out[5]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	sdata => \MRAM_D[5]~5\,
 	sload => VCC,
 	ena => \this_mram_controller|data_out[0]~1_combout\,
@@ -10451,7 +10451,7 @@ PORT MAP (
 -- Location: LCFF_X19_Y10_N21
 \this_mram_controller|data_out[6]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|data_out[6]~feeder_combout\,
 	ena => \this_mram_controller|data_out[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -10475,7 +10475,7 @@ PORT MAP (
 -- Location: LCFF_X19_Y10_N9
 \this_mram_controller|data_out[7]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \this_mram_controller|data_out[7]~feeder_combout\,
 	ena => \this_mram_controller|data_out[0]~1_combout\,
 	devclrn => ww_devclrn,
@@ -10499,7 +10499,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y9_N9
 \UART_Controller_1|uart_tx_1|data_send[5]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|data_send[5]~0_combout\,
 	ena => \UART_Controller_1|uart_tx_1|tx_curr_state.sync~regout\,
 	devclrn => ww_devclrn,
@@ -10509,7 +10509,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y9_N3
 \UART_Controller_1|uart_tx_1|data_send[7]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	sdata => \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|q_b\(7),
 	sload => VCC,
 	ena => \UART_Controller_1|uart_tx_1|tx_curr_state.sync~regout\,
@@ -10538,7 +10538,7 @@ PORT MAP (
 -- Location: LCFF_X24_Y9_N29
 \UART_Controller_1|uart_tx_1|data_index[0]\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Selector20~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -10595,7 +10595,7 @@ PORT MAP (
 -- Location: LCFF_X25_Y9_N9
 \UART_Controller_1|uart_tx_1|TX\ : cycloneii_lcell_ff
 PORT MAP (
-	clk => \pll1|altpll_component|_clk0~clkctrl_outclk\,
+	clk => \pl|altpll_component|_clk0~clkctrl_outclk\,
 	datain => \UART_Controller_1|uart_tx_1|Mux0~4_combout\,
 	sdata => \UART_Controller_1|uart_tx_1|tx_curr_state.start~_wirecell_combout\,
 	sload => \UART_Controller_1|uart_tx_1|ALT_INV_tx_curr_state.data~regout\,

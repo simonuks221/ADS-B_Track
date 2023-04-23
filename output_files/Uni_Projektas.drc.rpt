@@ -1,5 +1,5 @@
 Design Assistant report for Uni_Projektas
-Sun Apr 23 09:41:02 2023
+Sun Apr 23 14:08:44 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Design Assistant Summary                                                ;
 +-----------------------------------+-------------------------------------+
-; Design Assistant Status           ; Analyzed - Sun Apr 23 09:41:02 2023 ;
+; Design Assistant Status           ; Analyzed - Sun Apr 23 14:08:44 2023 ;
 ; Revision Name                     ; Uni_Projektas                       ;
 ; Top-level Entity Name             ; UNI_Projektas                       ;
 ; Family                            ; Cyclone II                          ;
@@ -100,10 +100,10 @@ applicable agreement for further details.
 +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Rule name                                                        ; Name                                                                                                                                                                             ; Fan-Out ;
 +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Rule T101: Nodes with more than the specified number of fan-outs ; wizard_pll:pll1|altpll:altpll_component|_clk0~clkctrl                                                                                                                            ; 263     ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; wizard_pll:pl|altpll:altpll_component|_clk0~clkctrl                                                                                                                              ; 263     ;
 ; Rule T101: Nodes with more than the specified number of fan-outs ; STATE_MANAGER:this_state_manager|curr_state.wait_1                                                                                                                               ; 34      ;
 ; Rule T101: Nodes with more than the specified number of fan-outs ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state                                                                                                             ; 35      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; wizard_pll:pll1|altpll:altpll_component|_clk0~clkctrl                                                                                                                            ; 263     ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; wizard_pll:pl|altpll:altpll_component|_clk0~clkctrl                                                                                                                              ; 263     ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state                                                                                                             ; 35      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; STATE_MANAGER:this_state_manager|curr_state.wait_1                                                                                                                               ; 34      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; MRAM_Controller:this_mram_controller|Selector39~0                                                                                                                                ; 24      ;
@@ -162,17 +162,17 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Design Assistant
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Apr 23 09:41:01 2023
+    Info: Processing started: Sun Apr 23 14:08:44 2023
 Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Info (332104): Reading SDC File: 'Uni_Projektas.sdc'
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
-    Warning (332056): Node: pll1|altpll_component|pll|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
+    Warning (332056): Node: pl|altpll_component|pll|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
 Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 3 node(s) with highest fan-out.
-    Info (308011): Node  "wizard_pll:pll1|altpll:altpll_component|_clk0~clkctrl"
+    Info (308011): Node  "wizard_pll:pl|altpll:altpll_component|_clk0~clkctrl"
     Info (308011): Node  "STATE_MANAGER:this_state_manager|curr_state.wait_1"
     Info (308011): Node  "SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state"
 Info (308044): (Information) Rule T102: Top nodes with the highest number of fan-outs. (Value defined:50). Found 50 node(s) with highest fan-out.
-    Info (308011): Node  "wizard_pll:pll1|altpll:altpll_component|_clk0~clkctrl"
+    Info (308011): Node  "wizard_pll:pl|altpll:altpll_component|_clk0~clkctrl"
     Info (308011): Node  "SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state"
     Info (308011): Node  "STATE_MANAGER:this_state_manager|curr_state.wait_1"
     Info (308011): Node  "MRAM_Controller:this_mram_controller|Selector39~0"
@@ -206,8 +206,8 @@ Info (308044): (Information) Rule T102: Top nodes with the highest number of fan
 Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 53 information messages and 0 warning messages
 Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4521 megabytes
-    Info: Processing ended: Sun Apr 23 09:41:02 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sun Apr 23 14:08:44 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

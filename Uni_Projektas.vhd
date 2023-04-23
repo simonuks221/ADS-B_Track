@@ -183,9 +183,6 @@ component wizard_pll IS
 	);
 end component;
 
-
-
-
 --Function ram signals
 --signal func_ram_address_bus : std_logic_vector(7 downto 0) := (others => '0');
 --signal func_ram_en : std_logic := '0';
@@ -365,7 +362,7 @@ signal UART_FIFO_EMPTY : std_logic := '0';
 
 begin
 
-pll1 : wizard_pll port map(inclk0 => CLK, c0 => CLK_160); --160MHz
+pl : wizard_pll port map(inclk0 => CLK, c0 => CLK_160); --160MHz
 ADC_SHDN <= '0';
 ADC_CLK <= CLK;
 

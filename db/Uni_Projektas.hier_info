@@ -1,5 +1,5 @@
 |Uni_Projektas
-CLK => wizard_pll:pll1.inclk0
+CLK => wizard_pll:pl.inclk0
 CLK => ADC_CLK.DATAIN
 BUTTON => ~NO_FANOUT~
 ADC_SHDN <= <GND>
@@ -79,12 +79,12 @@ UART_RX => ~NO_FANOUT~
 UART_TX <= UART_Controller:UART_Controller_1.TX
 
 
-|Uni_Projektas|wizard_pll:pll1
+|Uni_Projektas|wizard_pll:pl
 inclk0 => altpll:altpll_component.inclk[0]
 c0 <= altpll:altpll_component.clk[0]
 
 
-|Uni_Projektas|wizard_pll:pll1|altpll:altpll_component
+|Uni_Projektas|wizard_pll:pl|altpll:altpll_component
 inclk[0] => pll.CLK
 inclk[1] => ~NO_FANOUT~
 fbin => ~NO_FANOUT~
