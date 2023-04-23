@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Uni_Projektas
-Sat Apr 22 23:20:33 2023
+Sun Apr 23 09:40:52 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -70,15 +70,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 22 23:20:33 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 23 09:40:52 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 395                                             ;
-;     Total combinational functions  ; 355                                             ;
-;     Dedicated logic registers      ; 262                                             ;
-; Total registers                    ; 262                                             ;
+; Total logic elements               ; 400                                             ;
+;     Total combinational functions  ; 369                                             ;
+;     Dedicated logic registers      ; 259                                             ;
+; Total registers                    ; 259                                             ;
 ; Total pins                         ; 77                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 384                                             ;
@@ -231,20 +231,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------------------------------------+
 ; Resource                                    ; Usage                                         ;
 +---------------------------------------------+-----------------------------------------------+
-; Estimated Total logic elements              ; 395                                           ;
+; Estimated Total logic elements              ; 400                                           ;
 ;                                             ;                                               ;
-; Total combinational functions               ; 355                                           ;
+; Total combinational functions               ; 369                                           ;
 ; Logic element usage by number of LUT inputs ;                                               ;
-;     -- 4 input functions                    ; 132                                           ;
-;     -- 3 input functions                    ; 56                                            ;
-;     -- <=2 input functions                  ; 167                                           ;
+;     -- 4 input functions                    ; 126                                           ;
+;     -- 3 input functions                    ; 59                                            ;
+;     -- <=2 input functions                  ; 184                                           ;
 ;                                             ;                                               ;
 ; Logic elements by mode                      ;                                               ;
-;     -- normal mode                          ; 253                                           ;
-;     -- arithmetic mode                      ; 102                                           ;
+;     -- normal mode                          ; 264                                           ;
+;     -- arithmetic mode                      ; 105                                           ;
 ;                                             ;                                               ;
-; Total registers                             ; 262                                           ;
-;     -- Dedicated logic registers            ; 262                                           ;
+; Total registers                             ; 259                                           ;
+;     -- Dedicated logic registers            ; 259                                           ;
 ;     -- I/O registers                        ; 0                                             ;
 ;                                             ;                                               ;
 ; I/O pins                                    ; 77                                            ;
@@ -254,9 +254,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1                                             ;
 ;                                             ;                                               ;
 ; Maximum fan-out node                        ; wizard_pll:pll1|altpll:altpll_component|_clk0 ;
-; Maximum fan-out                             ; 286                                           ;
-; Total fan-out                               ; 2085                                          ;
-; Average fan-out                             ; 2.90                                          ;
+; Maximum fan-out                             ; 283                                           ;
+; Total fan-out                               ; 2078                                          ;
+; Average fan-out                             ; 2.85                                          ;
 +---------------------------------------------+-----------------------------------------------+
 
 
@@ -265,11 +265,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                        ; Library Name ;
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |UNI_Projektas                                          ; 355 (1)           ; 262 (0)      ; 384         ; 0            ; 0       ; 0         ; 77   ; 0            ; |UNI_Projektas                                                                                                                                                                                             ; work         ;
-;    |MRAM_Controller:this_mram_controller|               ; 46 (46)           ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|MRAM_Controller:this_mram_controller                                                                                                                                                        ; work         ;
-;    |Read_adc_manager:this_read_adc_manager|             ; 35 (35)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager                                                                                                                                                      ; work         ;
-;    |SPI_Controller:adc_spi_controller|                  ; 82 (18)           ; 57 (12)      ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller                                                                                                                                                           ; work         ;
-;       |SPI_TX:spi_tx_component|                         ; 43 (43)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component                                                                                                                                   ; work         ;
+; |UNI_Projektas                                          ; 369 (1)           ; 259 (0)      ; 384         ; 0            ; 0       ; 0         ; 77   ; 0            ; |UNI_Projektas                                                                                                                                                                                             ; work         ;
+;    |MRAM_Controller:this_mram_controller|               ; 48 (48)           ; 50 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|MRAM_Controller:this_mram_controller                                                                                                                                                        ; work         ;
+;    |Read_adc_manager:this_read_adc_manager|             ; 46 (46)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager                                                                                                                                                      ; work         ;
+;    |SPI_Controller:adc_spi_controller|                  ; 84 (18)           ; 58 (12)      ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller                                                                                                                                                           ; work         ;
+;       |SPI_TX:spi_tx_component|                         ; 45 (45)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component                                                                                                                                   ; work         ;
 ;       |wizard_spi_fifo:spi_fifo_component|              ; 21 (0)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component                                                                                                                        ; work         ;
 ;          |scfifo:scfifo_component|                      ; 21 (0)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component                                                                                                ; work         ;
 ;             |scfifo_3c21:auto_generated|                ; 21 (0)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated                                                                     ; work         ;
@@ -281,7 +281,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                   |dpram_bv01:FIFOram|                  ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram                             ; work         ;
 ;                      |altsyncram_0vj1:altsyncram1|      ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1 ; work         ;
 ;    |STATE_MANAGER:this_state_manager|                   ; 52 (52)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|STATE_MANAGER:this_state_manager                                                                                                                                                            ; work         ;
-;    |Setup_manager:this_setup_manager|                   ; 45 (45)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Setup_manager:this_setup_manager                                                                                                                                                            ; work         ;
+;    |Setup_manager:this_setup_manager|                   ; 44 (44)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Setup_manager:this_setup_manager                                                                                                                                                            ; work         ;
 ;    |UART_Controller:UART_Controller_1|                  ; 80 (8)            ; 52 (8)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1                                                                                                                                                           ; work         ;
 ;       |UART_FIFO_wizard:uart_fifo|                      ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo                                                                                                                                ; work         ;
 ;          |scfifo:scfifo_component|                      ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component                                                                                                        ; work         ;
@@ -400,27 +400,29 @@ Encoding Type:  One-Hot
 +--------------------+--------------------+--------------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                               ;
-+-----------------------------------------------------------------+----------------------------------------------------------------+
-; Register name                                                   ; Reason for Removal                                             ;
-+-----------------------------------------------------------------+----------------------------------------------------------------+
-; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[9..15]     ; Stuck at GND due to stuck port data_in                         ;
-; Setup_manager:this_setup_manager|SPI_send_data[2,3,5..8,11..14] ; Stuck at GND due to stuck port data_in                         ;
-; Setup_manager:this_setup_manager|SPI_send_data[1]               ; Merged with Setup_manager:this_setup_manager|SPI_send_data[0]  ;
-; Setup_manager:this_setup_manager|SPI_send_data[9]               ; Merged with Setup_manager:this_setup_manager|SPI_send_data[10] ;
-; MRAM_Controller:this_mram_controller|MRAM_A[7..9,11..17]        ; Merged with MRAM_Controller:this_mram_controller|MRAM_A[10]    ;
-; MRAM_Controller:this_mram_controller|MRAM_UPPER_EN              ; Merged with MRAM_Controller:this_mram_controller|MRAM_LOWER_EN ;
-; MRAM_Controller:this_mram_controller|MRAM_D[15]~reg0            ; Stuck at GND due to stuck port data_in                         ;
-; MRAM_Controller:this_mram_controller|MRAM_D[14]~reg0            ; Stuck at GND due to stuck port data_in                         ;
-; MRAM_Controller:this_mram_controller|MRAM_D[13]~reg0            ; Stuck at GND due to stuck port data_in                         ;
-; MRAM_Controller:this_mram_controller|MRAM_D[12]~reg0            ; Stuck at GND due to stuck port data_in                         ;
-; MRAM_Controller:this_mram_controller|MRAM_D[11]~reg0            ; Stuck at GND due to stuck port data_in                         ;
-; MRAM_Controller:this_mram_controller|MRAM_D[10]~reg0            ; Stuck at GND due to stuck port data_in                         ;
-; MRAM_Controller:this_mram_controller|MRAM_D[9]~reg0             ; Stuck at GND due to stuck port data_in                         ;
-; MRAM_Controller:this_mram_controller|MRAM_A[10]                 ; Stuck at GND due to stuck port data_in                         ;
-; Total Number of Removed Registers = 38                          ;                                                                ;
-+-----------------------------------------------------------------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                    ;
++-----------------------------------------------------------------+---------------------------------------------------------------------+
+; Register name                                                   ; Reason for Removal                                                  ;
++-----------------------------------------------------------------+---------------------------------------------------------------------+
+; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[8..15]     ; Stuck at GND due to stuck port data_in                              ;
+; Setup_manager:this_setup_manager|SPI_send_data[2,3,5..8,11..14] ; Stuck at GND due to stuck port data_in                              ;
+; Setup_manager:this_setup_manager|SPI_send_data[1]               ; Merged with Setup_manager:this_setup_manager|SPI_send_data[0]       ;
+; Setup_manager:this_setup_manager|SPI_send_data[9]               ; Merged with Setup_manager:this_setup_manager|SPI_send_data[10]      ;
+; MRAM_Controller:this_mram_controller|MRAM_A[7..9,11..17]        ; Merged with MRAM_Controller:this_mram_controller|MRAM_A[10]         ;
+; MRAM_Controller:this_mram_controller|MRAM_UPPER_EN              ; Merged with MRAM_Controller:this_mram_controller|MRAM_LOWER_EN      ;
+; MRAM_Controller:this_mram_controller|MRAM_D[15]~reg0            ; Stuck at GND due to stuck port data_in                              ;
+; MRAM_Controller:this_mram_controller|MRAM_D[14]~reg0            ; Stuck at GND due to stuck port data_in                              ;
+; MRAM_Controller:this_mram_controller|MRAM_D[13]~reg0            ; Stuck at GND due to stuck port data_in                              ;
+; MRAM_Controller:this_mram_controller|MRAM_D[12]~reg0            ; Stuck at GND due to stuck port data_in                              ;
+; MRAM_Controller:this_mram_controller|MRAM_D[11]~reg0            ; Stuck at GND due to stuck port data_in                              ;
+; MRAM_Controller:this_mram_controller|MRAM_D[10]~reg0            ; Stuck at GND due to stuck port data_in                              ;
+; MRAM_Controller:this_mram_controller|MRAM_D[9]~reg0             ; Stuck at GND due to stuck port data_in                              ;
+; MRAM_Controller:this_mram_controller|MRAM_D[8]~reg0             ; Stuck at GND due to stuck port data_in                              ;
+; MRAM_Controller:this_mram_controller|MRAM_A[10]                 ; Stuck at GND due to stuck port data_in                              ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[0]     ; Merged with Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[0] ;
+; Total Number of Removed Registers = 41                          ;                                                                     ;
++-----------------------------------------------------------------+---------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------+
@@ -428,6 +430,8 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------+---------------------------+------------------------------------------------------+
 ; Register name                                            ; Reason for Removal        ; Registers Removed due to This Register               ;
 +----------------------------------------------------------+---------------------------+------------------------------------------------------+
+; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[8]  ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[8]~reg0  ;
+;                                                          ; due to stuck port data_in ;                                                      ;
 ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[9]  ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[9]~reg0  ;
 ;                                                          ; due to stuck port data_in ;                                                      ;
 ; Read_adc_manager:this_read_adc_manager|MRAM_DATA_OUT[10] ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[10]~reg0 ;
@@ -450,12 +454,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 262   ;
-; Number of registers using Synchronous Clear  ; 33    ;
+; Total registers                              ; 259   ;
+; Number of registers using Synchronous Clear  ; 34    ;
 ; Number of registers using Synchronous Load   ; 2     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 183   ;
+; Number of registers using Clock Enable       ; 179   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -475,7 +479,14 @@ Encoding Type:  One-Hot
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_send[4] ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_send[2] ; 1       ;
 ; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_send[1] ; 1       ;
-; Total number of inverted registers = 10                          ;         ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[1]      ; 2       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[2]      ; 2       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[3]      ; 2       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[4]      ; 2       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[5]      ; 2       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[6]      ; 2       ;
+; Read_adc_manager:this_read_adc_manager|real_data_counter[7]      ; 2       ;
+; Total number of inverted registers = 17                          ;         ;
 +------------------------------------------------------------------+---------+
 
 
@@ -484,17 +495,17 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[2] ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |UNI_Projektas|Write_out_mram_manager:this_write_out_mram_manager|address_counter[1]  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager|read_counter[1]                 ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager|address_counter[1]              ;
-; 7:1                ; 15 bits   ; 60 LEs        ; 15 LEs               ; 45 LEs                 ; Yes        ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[8]    ;
-; 1:1                ; 9 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; Yes        ; |UNI_Projektas|MRAM_Controller:this_mram_controller|MRAM_D[0]~reg0                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[0] ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |UNI_Projektas|Write_out_mram_manager:this_write_out_mram_manager|address_counter[2]  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager|read_counter[0]                 ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager|address_counter[0]              ;
+; 7:1                ; 15 bits   ; 60 LEs        ; 15 LEs               ; 45 LEs                 ; Yes        ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[4]    ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; Yes        ; |UNI_Projektas|MRAM_Controller:this_mram_controller|MRAM_D[1]~reg0                    ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |UNI_Projektas|MRAM_Controller:this_mram_controller|curr_state                        ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|SPI_Controller:adc_spi_controller|Selector6                            ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|Selector3                            ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |UNI_Projektas|STATE_MANAGER:this_state_manager|Selector2                             ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector1          ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|SPI_Controller:adc_spi_controller|Selector4                            ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|Selector1                            ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |UNI_Projektas|STATE_MANAGER:this_state_manager|Selector3                             ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector4          ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector0          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 
@@ -519,12 +530,13 @@ Encoding Type:  One-Hot
 
 +-------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |Uni_Projektas ;
-+---------------------+-------+-------------------------------------------------+
-; Parameter Name      ; Value ; Type                                            ;
-+---------------------+-------+-------------------------------------------------+
-; BAUD_RATE_PRESCALER ; 1302  ; Signed Integer                                  ;
-; MAX_ADDRESS_COUNTS  ; 100   ; Signed Integer                                  ;
-+---------------------+-------+-------------------------------------------------+
++----------------------+-------+------------------------------------------------+
+; Parameter Name       ; Value ; Type                                           ;
++----------------------+-------+------------------------------------------------+
+; BAUD_RATE_PRESCALER  ; 1302  ; Signed Integer                                 ;
+; MAX_ADDRESS_COUNTS   ; 100   ; Signed Integer                                 ;
+; SEND_CLK_COUNTER_MAX ; 30    ; Signed Integer                                 ;
++----------------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -927,7 +939,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+-------------------------------------------------+
 ; Parameter Name       ; Value ; Type                                            ;
 +----------------------+-------+-------------------------------------------------+
-; send_clk_counter_max ; 10    ; Signed Integer                                  ;
+; send_clk_counter_max ; 30    ; Signed Integer                                  ;
 ; bits                 ; 16    ; Signed Integer                                  ;
 ; send_clk_wait_max    ; 20    ; Signed Integer                                  ;
 +----------------------+-------+-------------------------------------------------+
@@ -967,7 +979,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+-------------------------------------------------------------------------+
 ; Parameter Name       ; Value ; Type                                                                    ;
 +----------------------+-------+-------------------------------------------------------------------------+
-; send_clk_counter_max ; 10    ; Signed Integer                                                          ;
+; send_clk_counter_max ; 30    ; Signed Integer                                                          ;
 ; bits                 ; 16    ; Signed Integer                                                          ;
 +----------------------+-------+-------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -1091,7 +1103,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -1101,7 +1113,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Apr 22 23:20:30 2023
+    Info: Processing started: Sun Apr 23 09:40:49 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file wizard_pll.vhd
@@ -1177,9 +1189,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file mram_te
     Info (12022): Found design unit 1: MRAM_TEST-arc
     Info (12023): Found entity 1: MRAM_TEST
 Info (12127): Elaborating entity "Uni_Projektas" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(347): used explicit default value for signal "EN_SETUP" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(356): used explicit default value for signal "ADC_SPI_send_irq2" because signal was never assigned a value
-Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(358): object "button_active" assigned a value but never read
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(348): used explicit default value for signal "EN_SETUP" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(357): used explicit default value for signal "ADC_SPI_send_irq2" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(359): object "button_active" assigned a value but never read
 Info (12128): Elaborating entity "wizard_pll" for hierarchy "wizard_pll:pll1"
 Info (12128): Elaborating entity "altpll" for hierarchy "wizard_pll:pll1|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "wizard_pll:pll1|altpll:altpll_component"
@@ -1355,17 +1367,17 @@ Warning (21074): Design contains 25 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADC_BIT_A[8]"
     Warning (15610): No output dependent on input pin "ADC_BIT_A[9]"
     Warning (15610): No output dependent on input pin "UART_RX"
-Info (21057): Implemented 500 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 505 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 27 input pins
     Info (21059): Implemented 29 output pins
     Info (21060): Implemented 21 bidirectional pins
-    Info (21061): Implemented 398 logic cells
+    Info (21061): Implemented 403 logic cells
     Info (21064): Implemented 24 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Peak virtual memory: 4660 megabytes
-    Info: Processing ended: Sat Apr 22 23:20:33 2023
+    Info: Peak virtual memory: 4652 megabytes
+    Info: Processing ended: Sun Apr 23 09:40:52 2023
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 

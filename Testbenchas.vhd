@@ -76,10 +76,6 @@ signal adc_buffer_index : integer := 0;
 
 
 component UNI_Projektas is
-generic (
-	BAUD_RATE_PRESCALER : integer := 54; --434 kad 115200 baud reitui toki prescaleri naudojam --54 kad 921600 baud reitui  
-	MAX_ADDRESS_COUNTS : integer :=  100
-);
 port(
 	CLK : in std_logic := '0';
 	BUTTON : in std_logic := '0';

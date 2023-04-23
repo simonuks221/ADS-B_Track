@@ -85,14 +85,14 @@ begin
 						MRAM_D <= data_in;
 						--MRAM_D <= "1010101010101010";
 						--Idle, wait for 20ns
-					when 5 =>
+						when 5 => --Galima perkelti vienu anksčiau --Galimai neišlaikome EN signalo 15us
 						MRAM_EN <= '1';
 						MRAM_LOWER_EN <= '1';
 						MRAM_UPPER_EN <= '1';
 						MRAM_WRITE_EN <= '1';
 --						--MRAM_D <= data_in;
 --						--done <= '1'
-					when 7 =>
+					when 6 =>
 						MRAM_D <= (others => 'Z');
 					when others =>
 
@@ -137,7 +137,7 @@ begin
 				curr_state <= reading;
 			end if;
 		else
-			if(curr_state = writing and counter = 7) then
+			if(curr_state = writing and counter = 6) then
 				curr_state <= idle;
 			elsif(curr_state = reading and counter = 7) then
 				curr_state <= idle;
