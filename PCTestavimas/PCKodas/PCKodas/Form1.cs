@@ -106,7 +106,7 @@ namespace PCKodas
             {
                 try
                 {
-                    port = new SerialPort(selectedPort, 1000000, Parity.None, 8, StopBits.One);
+                    port = new SerialPort(selectedPort, 115200, Parity.None, 8, StopBits.One);
                     port.Open();
                     port.DiscardInBuffer();
                     port.DataReceived += new SerialDataReceivedEventHandler(Port_DataReceived);
@@ -170,6 +170,7 @@ namespace PCKodas
                         VoltageChart.Series[0].Points.RemoveAt(0);
                     }
                     VoltageChart.Series[0].Points.AddY(new_value);
+                    VoltageChart.Update();
                 }
                 else
                 {

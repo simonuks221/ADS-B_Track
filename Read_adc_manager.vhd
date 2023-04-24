@@ -6,7 +6,8 @@ use ieee.std_logic_textio.all;
 
 entity Read_adc_manager is
 generic(
-	MAX_ADDRESS_COUNTS : integer :=  100
+	MAX_ADDRESS_COUNTS : integer :=  100;
+	READ_COUNTER_MAX : integer := 1
 );
 port(
 	CLK : in std_logic := '0';
@@ -23,7 +24,7 @@ port(
 end entity;
 
 architecture arc of Read_adc_manager is
-	signal read_counter : integer range 0 to 10 := 0;
+	signal read_counter : integer range 0 to READ_COUNTER_MAX := 0;
 	signal last_state : std_logic := '0';
 	signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS := 0;
 	signal real_data_counter : integer range 0 to 255 := 255;
@@ -45,24 +46,25 @@ begin
 		else
 			last_state <= DCLK;
 			if(DCLK = '1' and last_state = '0') then
-				if(read_counter = 10) then
+				if(read_counter = READ_COUNTER_MAX) then
 					if(MRAM_DONE = '1') then
 						read_counter <= 0;
 						address_counter <= address_counter + 1;
-						--MRAM_DATA_OUT <= "000000" & ADC_BIT; --REALUS ADC
+						
 						if(real_data_counter = 0) then
 							real_data_counter <= 255;
 						else
 							real_data_counter <= real_data_counter - 1;
 						end if;
-						MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(real_data_counter, ADC_BIT'length));
+						MRAM_DATA_OUT <= "000000" & ADC_BIT; --REALUS ADC
+						--MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(real_data_counter, ADC_BIT'length)); --FAKE ADC
 						MRAM_WRITE_DATA <= '1';
 						--READ_ADC_DONE <= '1';
 					else
 						MRAM_WRITE_DATA <= '0';
 					end if;
 				else
-					if(read_counter /= 10) then
+					if(read_counter /= READ_COUNTER_MAX) then
 						read_counter <= read_counter + 1;
 					end if;
 					MRAM_WRITE_DATA <= '0';
@@ -71,41 +73,5 @@ begin
 		end if;
 	end if;
 end process;
-
-
---process(DCLK)
---begin
---	if rising_edge(DCLK) then
---		if(EN_READ_ADC = '0') then
---			read_counter <= 0;
---			--READ_ADC_DONE <= '0';
---			MRAM_WRITE_DATA <= '0';
---			address_counter <= 0;
---		else
---			if(read_counter = 10) then
---				if(MRAM_DONE = '1') then
---					read_counter <= 0;
---					address_counter <= address_counter + 1;
---					--MRAM_DATA_OUT <= "000000" & ADC_BIT;
---					if(real_data_counter = 255) then
---						real_data_counter <= 0;
---					else
---						real_data_counter <= real_data_counter + 1;
---					end if;
---					MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(real_data_counter, ADC_BIT'length));
---					MRAM_WRITE_DATA <= '1';
---					--READ_ADC_DONE <= '1';
---				else
---					MRAM_WRITE_DATA <= '0';
---				end if;
---			else
---				if(read_counter /= 10) then
---					read_counter <= read_counter + 1;
---				end if;
---				MRAM_WRITE_DATA <= '0';
---			end if;
---		end if;
---	end if;
---end process;
 
 end architecture;

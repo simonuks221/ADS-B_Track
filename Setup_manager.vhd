@@ -29,32 +29,32 @@ begin
 		if(EN_SETUP = '1') then
 			case config_command_counter is --1 read, 0 write
 				when 0 =>
-					SPI_send_data <= "0000000000000011"; 
+					SPI_send_data <= "0000000000000011"; --00h
 					SPI_send_irq <= '1';
 				when 1=>
 					SPI_send_irq <= '0';
 					
 				when 2 =>
-					SPI_send_data <= "1000000000000000"; --
+					SPI_send_data <= "1000000000000000"; --00h
 					SPI_send_irq <= '1';
 				when 3 =>
 					SPI_send_irq <= '0';
 					
 				when 4 =>
 					--SPI_send_data <= "0000011011000000"; --TEST PATTERN 
-					SPI_send_data <= "0000011000010000"; -- NORMAL WITH BIANRY OFFSET
+					SPI_send_data <= "0000011000010000"; -- NORMAL WITH BIANRY OFFSET 06h
 					SPI_send_irq <= '1';
 				when 5 =>
 					SPI_send_irq <= '0';
 					
 				when 6 =>
-					SPI_send_data <= "1000011000000000"; --
+					SPI_send_data <= "1000011000000000"; -- 06h
 					SPI_send_irq <= '1';
 				when 7 =>
 					SPI_send_irq <= '0';
 					
 				when 8 =>
-					SPI_send_data <= "1000000000000000"; --
+					SPI_send_data <= "0000100000001000"; -- 08h --0.9V common mode i virsu
 					SPI_send_irq <= '1';
 				when 9 =>
 					SPI_send_irq <= '0';

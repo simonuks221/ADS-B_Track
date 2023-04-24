@@ -34,7 +34,7 @@ signal getting_data : std_logic := '0';
 begin
 
 MRAM_ADDRESS_IN <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_IN'length));
-UART_SEND_DATA <= MRAM_DATA_OUT(7 downto 0);
+UART_SEND_DATA <= MRAM_DATA_OUT(9 downto 2);--MRAM_DATA_OUT(7 downto 0);
 
 WRITE_OUT_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
 
