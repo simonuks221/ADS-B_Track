@@ -3,10 +3,11 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
+use ieee.math_real.all;
 
 entity UART_Controller is
 generic(
-	baud_rate : integer := 9600
+	BAUD_RATE_PRESCALER : integer := 9600
 );
 port(
 	CLK: in std_logic;
@@ -18,18 +19,10 @@ end entity;
 
 architecture arc of UART_Controller is
 
-component Clock_divider is
-	port(
-	CLK: in std_logic;
-	Prescaler : in std_logic_vector(15 downto 0);
-
-	CLK_OUT: out std_logic
-	);
-end component;
 
 component UART_TX is
 generic(
-	baud_rate : integer := 9600
+	BAUD_RATE_PRESCALER : integer := 9600
 );
 port(
 	CLK: in std_logic;
@@ -67,9 +60,8 @@ signal fifo_read_req : std_Logic := '0';
 
 begin
 
-uart_clk_divider : Clock_divider port map(CLK => CLK, Prescaler => std_logic_vector(to_unsigned(baud_rate, 16)), CLK_OUT => UART_CLK);
-
-uart_tx_1 : UART_TX port map(CLk => CLK, UART_CLK => UART_CLK, SEND_DATA => SEND_DATA_OUT, START_SEND_DATA => START_SEND_DATA, TX => TX,
+uart_tx_1 : UART_TX generic map(BAUD_RATE_PRESCALER => BAUD_RATE_PRESCALER) 
+						port map(CLk => CLK, UART_CLK => UART_CLK, SEND_DATA => SEND_DATA_OUT, START_SEND_DATA => START_SEND_DATA, TX => TX,
 				TX_BUSY => TX_BUSY);
 				
 uart_fifo : UART_FIFO_wizard port map(clock => CLK, data => SEND_DATA_IN, rdreq => fifo_read_req, wrreq => SEND_DATA_IN_REQ, q => SEND_DATA_OUT, empty => fifo_empty);

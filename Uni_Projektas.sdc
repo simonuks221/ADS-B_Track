@@ -1,2 +1,4 @@
 create_clock -name CLK -period 20.000 [get_ports {CLK}]
-create_clock -name SYNC -period 40.000 [get_ports {SYNC}]
+create_clock -name ADC_DCLKA -period 20.000 [get_ports {ADC_DCLKA}]
+create_clock -name ADC_CLK -period 20.000 [get_ports {ADC_CLK}]
+set_clock_latency -source 5 [get_clocks *]
