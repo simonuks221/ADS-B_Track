@@ -193,4 +193,6 @@ set_global_assignment -name VHDL_FILE Read_adc_manager.vhd
 set_global_assignment -name VHDL_FILE Write_out_mram_manager.vhd
 set_global_assignment -name VHDL_FILE MRAM_TEST.vhd
 set_global_assignment -name QIP_FILE wizard_pll.qip
+set_global_assignment -name VHDL_FILE Corr_Buffer.vhd
+set_global_assignment -name VHDL_FILE Corr_Main.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

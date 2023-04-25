@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
+
+entity Corr_Buffer is
+	generic(
+		BUFFER_LENGTH: integer := 50
+	);
+	port (
+		CLK : in std_logic := '0'
+	);
+end entity;
+
+architecture arc of CORR_BUFFER is
+
+
+begin
+
+
+end architecture;

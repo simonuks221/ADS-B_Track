@@ -18,6 +18,8 @@ vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_pll.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd}
 
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd}
 

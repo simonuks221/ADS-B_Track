@@ -73,6 +73,7 @@ end function init;
 
 signal adc_buffer : b_data := init;
 signal adc_buffer_index : integer := 0;
+signal adc_buffer_counter : integer := 0;
 
 
 component UNI_Projektas is
@@ -125,7 +126,7 @@ BEGIN
 i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, ADC_SYNC => ADC_SYNC, ADC_CLK => ADC_CLK, ADC_SPI_SDIN => ADC_SPI_SDIN, ADC_SPI_SCLK => ADC_SPI_SCLK, ADC_SPI_CS => ADC_SPI_CS,
 									ADC_DCLKA => ADC_DCLKA, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,  MRAM_A => MRAM_A, MRAM_EN => MRAM_EN, MRAM_WRITE_EN => MRAM_WRITE_EN,
 									MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_D => MRAM_D, ADC_BIT_A => ADC_BIT_A, 
-									UART_RX => UART_RX, UART_TX => UART_TX);
+									UART_RX => UART_RX, UART_TX => UART_TX, SPI_CS => SPI_CS);
 	
 CLK <= not CLK after 10ns; --50MHz 20ns
 --ADC_DCLKA <= CLK when now > 40us else '0';
@@ -146,10 +147,15 @@ ADC_DCLKA <= transport ADC_CLK after 5ns; --50MHz 5ns, ketvirtadalis
 process(CLK)
 begin
 	if(falling_edge(CLK)) then
-		if now > 40us then
+		if now > 181us then
 			if(adc_buffer_index < VOLTAGE_DATA_LEN-1) then
-				adc_buffer_index <= adc_buffer_index + 1;
-				ADC_BIT_A <= adc_buffer(adc_buffer_index);
+				if(adc_buffer_counter = 4) then
+					adc_buffer_counter <= 0;
+					adc_buffer_index <= adc_buffer_index + 1;
+					ADC_BIT_A <= adc_buffer(adc_buffer_index);
+				else
+					adc_buffer_counter <= adc_buffer_counter + 1;
+				end if;
 			else
 				ADC_BIT_A <= (others => '0');
 			end if;

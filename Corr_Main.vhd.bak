@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
+
+entity Corr_Main is
+port(
+	CLK : in std_logic := '0';
+	ADC_BITS : in std_logic_vector(9 downto 0) := (others => '0')
+);
+end entity;
+
+architecture arc of Corr_Main is
+
+
+begin
+
+end architecture;

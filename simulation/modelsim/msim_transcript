@@ -122,6 +122,24 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity wizard_pll
 # -- Compiling architecture SYN of wizard_pll
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Corr_Buffer
+# -- Compiling architecture arc of CORR_BUFFER
+# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Corr_Main
+# -- Compiling architecture arc of Corr_Main
 # 
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -132,11 +150,11 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity Testbenchas
 # -- Compiling architecture UNI_Projektas_arch of Testbenchas
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(130): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(132): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(149): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(176): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(180): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(131): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(133): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(150): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(182): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(186): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Testbenchas
 # vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Testbenchas 
@@ -170,7 +188,9 @@
 # Loading work.uart_controller(arc)
 # Loading work.uart_tx(arc)
 # Loading work.uart_fifo_wizard(syn)
-# ** Warning: Design size of 28 instances exceeds ModelSim ALTERA recommended capacity.
+# Loading work.corr_main(arc)
+# Loading work.corr_buffer(arc)
+# ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 # 
@@ -179,10 +199,10 @@
 # 
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
 # 
-#           Attempting to use alternate WLF file "./wlftmrit13".
+#           Attempting to use alternate WLF file "./wlftamva5c".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftmrit13
+#           Using alternate file: ./wlftamva5c
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -193,6 +213,5 @@
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/ADC_BITS_VALID
 run
-# Break key hit 
-# Break in ForLoop loop at C:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/vhdl/src/altera_mf/altera_mf.vhd line 8355
