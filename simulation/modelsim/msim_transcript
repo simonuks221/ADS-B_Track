@@ -199,10 +199,10 @@
 # 
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
 # 
-#           Attempting to use alternate WLF file "./wlftamva5c".
+#           Attempting to use alternate WLF file "./wlftafm777".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftamva5c
+#           Using alternate file: ./wlftafm777
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -213,5 +213,3 @@
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/ADC_BITS_VALID
-run

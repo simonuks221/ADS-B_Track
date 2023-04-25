@@ -50,8 +50,11 @@ signal DATA_OUT_5 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '
 signal DATA_OUT_6 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '0');
 signal DATA_OUT_7 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '0');
 
+signal corr_value_0 : integer := 0;
+signal corr_value_1 : integer := 0;
 signal corr_value : integer := 0;
 signal preambule_coef : std_logic_vector(50-1 downto 0) := "11111000001111100000000000000000000111110000011111";
+signal test : std_logic_vector(1 downto 0) := (others => '0');
 
 begin
 
@@ -60,35 +63,74 @@ buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(corr_buffer
 
 DATA_IN <= 	ADC_BITS(7 downto 0);
 
-PREAMBULE_FOUND <= '1' when corr_value > 2000 else '0'; 
-									
-process(CLK)
+PREAMBULE_FOUND <= '1' when corr_value > 2000 else '0';
+corr_value <= corr_value_0 + corr_value_1;
+
+
+test <= DATA_OUT_0(0) & DATA_OUT_1(0);
+process(DATA_IN, DATA_OUT_0, DATA_OUT_1, DATA_OUT_2, DATA_OUT_3, DATA_OUT_4, DATA_OUT_5, DATA_OUT_6, DATA_OUT_7)
 variable corr_value_var : integer := 0;
 variable currByte : std_logic_vector(BUFFER_WIDTH-1 downto 0) := (others => '0');
+begin
+	--corr_value <= to_integer(unsigned(DATA_OUT_0(1 downto 0)));
+	corr_value_var := 0;
+	for i in 0 to BUFFER_LENGTH-1 loop
+		if(preambule_coef(i) = '1') then
+			currByte(0) := DATA_OUT_0(i);
+			currByte(1) := DATA_OUT_1(i);
+			currByte(2) := DATA_OUT_2(i);
+			currByte(3) := DATA_OUT_3(i);
+			currByte(4) := DATA_OUT_4(i);
+			currByte(5) := DATA_OUT_5(i);
+			currByte(6) := DATA_OUT_6(i);
+			currByte(7) := DATA_OUT_7(i);
+			corr_value_var := corr_value_var + to_integer(unsigned(currByte));
+			corr_value_0 <= corr_value_var;
+		end if;
+	end loop;
+end process;
+
+
+process(CLK)
 begin
 	if rising_edge(CLK) then
 		if(ADC_BITS_VALID = '1') then
 			corr_buffer_update <= '1';
-			corr_value_var := 0;
-			for i in 0 to 10 loop
-				currByte(0) := DATA_OUT_0(i);
-				currByte(1) := DATA_OUT_1(i);
-				currByte(2) := DATA_OUT_2(i);
-				currByte(3) := DATA_OUT_3(i);
-				currByte(4) := DATA_OUT_4(i);
-				currByte(5) := DATA_OUT_5(i);
-				currByte(6) := DATA_OUT_6(i);
-				currByte(7) := DATA_OUT_7(i);
-				
-				if(preambule_coef(i) = '1') then
-				corr_value_var := corr_value_var + to_integer(unsigned(currByte));
-				corr_value <= corr_value_var;
-				end if;
-			end loop;
 		else
 			corr_buffer_update <= '0';
 		end if;
 	end if;
+
 end process;
+									
+						
+--process(CLK)
+--variable corr_value_var : integer := 0;
+--variable currByte : std_logic_vector(BUFFER_WIDTH-1 downto 0) := (others => '0');
+--begin
+--	if rising_edge(CLK) then
+--		if(ADC_BITS_VALID = '1') then
+--			corr_buffer_update <= '1';
+--			corr_value_var := 0;
+--			for i in 0 to 49 loop
+--				if(preambule_coef(i) = '1') then
+--					currByte(0) := DATA_OUT_0(i);
+--					currByte(1) := DATA_OUT_1(i);
+--					currByte(2) := DATA_OUT_2(i);
+--					currByte(3) := DATA_OUT_3(i);
+--					currByte(4) := DATA_OUT_4(i);
+--					currByte(5) := DATA_OUT_5(i);
+--					currByte(6) := DATA_OUT_6(i);
+--					currByte(7) := DATA_OUT_7(i);
+--					corr_value_var := corr_value_var + to_integer(unsigned(currByte));
+--					corr_value <= corr_value_var;
+--				end if;
+--			end loop;
+--		else
+--			corr_buffer_update <= '0';
+--		end if;
+--	end if;
+--end process;
+
 									
 end architecture;

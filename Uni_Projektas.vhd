@@ -406,7 +406,7 @@ UART_Controller_1 : UART_Controller generic map(BAUD_RATE_PRESCALER => BAUD_RATE
 	SEND_DATA_IN_REQ => UART_DATA_IRQ,
 	TX => UART_TX, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
 							
-Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 50, BUFFER_WIDTH => 8) port map(CLK => CLK_160, ADC_BITS => MRAM_DATA_IN, 
+Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 25, BUFFER_WIDTH => 8) port map(CLK => CLK_160, ADC_BITS => MRAM_DATA_IN, 
 								ADC_BITS_VALID => MRAM_WRITE_DATA, PREAMBULE_FOUND => SPI_CS);		
 
 --adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => address_a_1, address_a_2 => address_a_2, address_b_1 => address_b_1,
