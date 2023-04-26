@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Uni_Projektas
-Tue Apr 25 22:59:53 2023
+Wed Apr 26 11:35:54 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -29,29 +29,31 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  21. Multiplexer Restructuring Statistics (No Restructuring Performed)
  22. Source assignments for SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1
  23. Source assignments for UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2
- 24. Source assignments for Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_e0m:auto_generated|altsyncram_k681:altsyncram2
- 25. Parameter Settings for User Entity Instance: Top-level Entity: |Uni_Projektas
- 26. Parameter Settings for User Entity Instance: wizard_pll:pl|altpll:altpll_component
- 27. Parameter Settings for User Entity Instance: Read_adc_manager:this_read_adc_manager
- 28. Parameter Settings for User Entity Instance: Write_out_mram_manager:this_write_out_mram_manager
- 29. Parameter Settings for User Entity Instance: SPI_Controller:adc_spi_controller
- 30. Parameter Settings for User Entity Instance: SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component
- 31. Parameter Settings for User Entity Instance: SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component
- 32. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1
- 33. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_TX:uart_tx_1
- 34. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component
- 35. Parameter Settings for User Entity Instance: Corr_Main:Corr_Main_1
- 36. Parameter Settings for User Entity Instance: Corr_Main:Corr_Main_1|Corr_Buffer:buff
- 37. Parameter Settings for Inferred Entity Instance: Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0
- 38. altpll Parameter Settings by Entity Instance
- 39. scfifo Parameter Settings by Entity Instance
- 40. altshift_taps Parameter Settings by Entity Instance
- 41. Port Connectivity Checks: "Corr_Main:Corr_Main_1|Corr_Buffer:buff"
- 42. Port Connectivity Checks: "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1"
- 43. Port Connectivity Checks: "Setup_manager:this_setup_manager"
- 44. Port Connectivity Checks: "STATE_MANAGER:this_state_manager"
- 45. Elapsed Time Per Partition
- 46. Analysis & Synthesis Messages
+ 24. Source assignments for Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_r1m:auto_generated|altsyncram_6a81:altsyncram2
+ 25. Source assignments for Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_t1m:auto_generated|altsyncram_i981:altsyncram2
+ 26. Parameter Settings for User Entity Instance: Top-level Entity: |Uni_Projektas
+ 27. Parameter Settings for User Entity Instance: wizard_pll:pl|altpll:altpll_component
+ 28. Parameter Settings for User Entity Instance: Read_adc_manager:this_read_adc_manager
+ 29. Parameter Settings for User Entity Instance: Write_out_mram_manager:this_write_out_mram_manager
+ 30. Parameter Settings for User Entity Instance: SPI_Controller:adc_spi_controller
+ 31. Parameter Settings for User Entity Instance: SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component
+ 32. Parameter Settings for User Entity Instance: SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component
+ 33. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1
+ 34. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_TX:uart_tx_1
+ 35. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component
+ 36. Parameter Settings for User Entity Instance: Corr_Main:Corr_Main_1
+ 37. Parameter Settings for User Entity Instance: Corr_Main:Corr_Main_1|Corr_Buffer:buff
+ 38. Parameter Settings for Inferred Entity Instance: Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0
+ 39. Parameter Settings for Inferred Entity Instance: Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1
+ 40. altpll Parameter Settings by Entity Instance
+ 41. scfifo Parameter Settings by Entity Instance
+ 42. altshift_taps Parameter Settings by Entity Instance
+ 43. Port Connectivity Checks: "Corr_Main:Corr_Main_1|Corr_Buffer:buff"
+ 44. Port Connectivity Checks: "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1"
+ 45. Port Connectivity Checks: "Setup_manager:this_setup_manager"
+ 46. Port Connectivity Checks: "STATE_MANAGER:this_state_manager"
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
 
 
 
@@ -77,18 +79,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 25 22:59:53 2023           ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 26 11:35:54 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 570                                             ;
-;     Total combinational functions  ; 456                                             ;
-;     Dedicated logic registers      ; 338                                             ;
-; Total registers                    ; 338                                             ;
+; Total logic elements               ; 746                                             ;
+;     Total combinational functions  ; 568                                             ;
+;     Dedicated logic registers      ; 410                                             ;
+; Total registers                    ; 410                                             ;
 ; Total pins                         ; 77                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 416                                             ;
+; Total memory bits                  ; 600                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 1                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -237,8 +239,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc        ;         ;
 ; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc        ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc       ;         ;
-; db/shift_taps_e0m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/shift_taps_e0m.tdf      ;         ;
-; db/altsyncram_k681.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/altsyncram_k681.tdf     ;         ;
+; db/shift_taps_r1m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/shift_taps_r1m.tdf      ;         ;
+; db/altsyncram_6a81.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/altsyncram_6a81.tdf     ;         ;
+; db/cntr_emf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/cntr_emf.tdf            ;         ;
+; db/cmpr_9cc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/cmpr_9cc.tdf            ;         ;
+; db/shift_taps_t1m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/shift_taps_t1m.tdf      ;         ;
+; db/altsyncram_i981.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/altsyncram_i981.tdf     ;         ;
 ; db/cntr_lkf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/cntr_lkf.tdf            ;         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
 
@@ -248,32 +254,32 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+---------------------------------------------+
 ; Resource                                    ; Usage                                       ;
 +---------------------------------------------+---------------------------------------------+
-; Estimated Total logic elements              ; 570                                         ;
+; Estimated Total logic elements              ; 746                                         ;
 ;                                             ;                                             ;
-; Total combinational functions               ; 456                                         ;
+; Total combinational functions               ; 568                                         ;
 ; Logic element usage by number of LUT inputs ;                                             ;
-;     -- 4 input functions                    ; 134                                         ;
-;     -- 3 input functions                    ; 135                                         ;
-;     -- <=2 input functions                  ; 187                                         ;
+;     -- 4 input functions                    ; 138                                         ;
+;     -- 3 input functions                    ; 223                                         ;
+;     -- <=2 input functions                  ; 207                                         ;
 ;                                             ;                                             ;
 ; Logic elements by mode                      ;                                             ;
-;     -- normal mode                          ; 267                                         ;
-;     -- arithmetic mode                      ; 189                                         ;
+;     -- normal mode                          ; 281                                         ;
+;     -- arithmetic mode                      ; 287                                         ;
 ;                                             ;                                             ;
-; Total registers                             ; 338                                         ;
-;     -- Dedicated logic registers            ; 338                                         ;
+; Total registers                             ; 410                                         ;
+;     -- Dedicated logic registers            ; 410                                         ;
 ;     -- I/O registers                        ; 0                                           ;
 ;                                             ;                                             ;
 ; I/O pins                                    ; 77                                          ;
-; Total memory bits                           ; 416                                         ;
+; Total memory bits                           ; 600                                         ;
 ; Embedded Multiplier 9-bit elements          ; 0                                           ;
 ; Total PLLs                                  ; 1                                           ;
 ;     -- PLLs                                 ; 1                                           ;
 ;                                             ;                                             ;
 ; Maximum fan-out node                        ; wizard_pll:pl|altpll:altpll_component|_clk0 ;
-; Maximum fan-out                             ; 288                                         ;
-; Total fan-out                               ; 2545                                        ;
-; Average fan-out                             ; 2.82                                        ;
+; Maximum fan-out                             ; 290                                         ;
+; Total fan-out                               ; 3088                                        ;
+; Average fan-out                             ; 2.80                                        ;
 +---------------------------------------------+---------------------------------------------+
 
 
@@ -282,15 +288,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                        ; Library Name ;
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |UNI_Projektas                                          ; 456 (1)           ; 338 (0)      ; 416         ; 0            ; 0       ; 0         ; 77   ; 0            ; |UNI_Projektas                                                                                                                                                                                             ; work         ;
-;    |Corr_Main:Corr_Main_1|                              ; 99 (97)           ; 75 (1)       ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1                                                                                                                                                                       ; work         ;
-;       |Corr_Buffer:buff|                                ; 2 (0)             ; 74 (72)      ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff                                                                                                                                                      ; work         ;
-;          |altshift_taps:buffer_0_rtl_0|                 ; 2 (0)             ; 2 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0                                                                                                                         ; work         ;
-;             |shift_taps_e0m:auto_generated|             ; 2 (0)             ; 2 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_e0m:auto_generated                                                                                           ; work         ;
-;                |altsyncram_k681:altsyncram2|            ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_e0m:auto_generated|altsyncram_k681:altsyncram2                                                               ; work         ;
-;                |cntr_lkf:cntr1|                         ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_e0m:auto_generated|cntr_lkf:cntr1                                                                            ; work         ;
+; |UNI_Projektas                                          ; 568 (1)           ; 410 (0)      ; 600         ; 0            ; 0       ; 0         ; 77   ; 0            ; |UNI_Projektas                                                                                                                                                                                             ; work         ;
+;    |Corr_Main:Corr_Main_1|                              ; 210 (200)         ; 145 (2)      ; 216         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1                                                                                                                                                                       ; work         ;
+;       |Corr_Buffer:buff|                                ; 10 (0)            ; 143 (136)    ; 216         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff                                                                                                                                                      ; work         ;
+;          |altshift_taps:buffer_0_rtl_0|                 ; 8 (0)             ; 5 (0)        ; 152         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0                                                                                                                         ; work         ;
+;             |shift_taps_r1m:auto_generated|             ; 8 (0)             ; 5 (0)        ; 152         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_r1m:auto_generated                                                                                           ; work         ;
+;                |altsyncram_6a81:altsyncram2|            ; 0 (0)             ; 0 (0)        ; 152         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_r1m:auto_generated|altsyncram_6a81:altsyncram2                                                               ; work         ;
+;                |cntr_emf:cntr1|                         ; 8 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_r1m:auto_generated|cntr_emf:cntr1                                                                            ; work         ;
+;                   |cmpr_9cc:cmpr5|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_r1m:auto_generated|cntr_emf:cntr1|cmpr_9cc:cmpr5                                                             ; work         ;
+;          |altshift_taps:buffer_0_rtl_1|                 ; 2 (0)             ; 2 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1                                                                                                                         ; work         ;
+;             |shift_taps_t1m:auto_generated|             ; 2 (0)             ; 2 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_t1m:auto_generated                                                                                           ; work         ;
+;                |altsyncram_i981:altsyncram2|            ; 0 (0)             ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_t1m:auto_generated|altsyncram_i981:altsyncram2                                                               ; work         ;
+;                |cntr_lkf:cntr1|                         ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_t1m:auto_generated|cntr_lkf:cntr1                                                                            ; work         ;
 ;    |MRAM_Controller:this_mram_controller|               ; 53 (53)           ; 55 (55)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|MRAM_Controller:this_mram_controller                                                                                                                                                        ; work         ;
-;    |Read_adc_manager:this_read_adc_manager|             ; 21 (21)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager                                                                                                                                                      ; work         ;
+;    |Read_adc_manager:this_read_adc_manager|             ; 24 (24)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager                                                                                                                                                      ; work         ;
 ;    |SPI_Controller:adc_spi_controller|                  ; 84 (18)           ; 58 (12)      ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller                                                                                                                                                           ; work         ;
 ;       |SPI_TX:spi_tx_component|                         ; 45 (45)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component                                                                                                                                   ; work         ;
 ;       |wizard_spi_fifo:spi_fifo_component|              ; 21 (0)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component                                                                                                                        ; work         ;
@@ -304,7 +315,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                   |dpram_bv01:FIFOram|                  ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram                             ; work         ;
 ;                      |altsyncram_0vj1:altsyncram1|      ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1 ; work         ;
 ;    |STATE_MANAGER:this_state_manager|                   ; 52 (52)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|STATE_MANAGER:this_state_manager                                                                                                                                                            ; work         ;
-;    |Setup_manager:this_setup_manager|                   ; 47 (47)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Setup_manager:this_setup_manager                                                                                                                                                            ; work         ;
+;    |Setup_manager:this_setup_manager|                   ; 45 (45)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Setup_manager:this_setup_manager                                                                                                                                                            ; work         ;
 ;    |UART_Controller:UART_Controller_1|                  ; 81 (8)            ; 52 (8)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1                                                                                                                                                           ; work         ;
 ;       |UART_FIFO_wizard:uart_fifo|                      ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo                                                                                                                                ; work         ;
 ;          |scfifo:scfifo_component|                      ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component                                                                                                        ; work         ;
@@ -329,7 +340,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 ; Name                                                                                                                                                                                                   ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_e0m:auto_generated|altsyncram_k681:altsyncram2|ALTSYNCRAM                                                               ; AUTO ; Simple Dual Port ; 4            ; 8            ; 4            ; 8            ; 32   ; None ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_r1m:auto_generated|altsyncram_6a81:altsyncram2|ALTSYNCRAM                                                               ; AUTO ; Simple Dual Port ; 19           ; 8            ; 19           ; 8            ; 152  ; None ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_t1m:auto_generated|altsyncram_i981:altsyncram2|ALTSYNCRAM                                                               ; AUTO ; Simple Dual Port ; 4            ; 16           ; 4            ; 16           ; 64   ; None ;
 ; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 16           ; 16           ; 16           ; 256  ; None ;
 ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2|ALTSYNCRAM         ; AUTO ; Simple Dual Port ; 16           ; 8            ; 16           ; 8            ; 128  ; None ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
@@ -472,9 +484,9 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 338   ;
-; Number of registers using Synchronous Clear  ; 37    ;
-; Number of registers using Synchronous Load   ; 2     ;
+; Total registers                              ; 410   ;
+; Number of registers using Synchronous Clear  ; 39    ;
+; Number of registers using Synchronous Load   ; 7     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 182   ;
@@ -501,20 +513,28 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                                                                                ;
-+--------------------------------------------------------+-------------------------------------------------------+------------+
-; Register Name                                          ; Megafunction                                          ; Type       ;
-+--------------------------------------------------------+-------------------------------------------------------+------------+
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0[5..10] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_1[5..10] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_2[5..10] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_3[5..10] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_4[5..10] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_5[5..10] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_6[5..10] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_7[5..10] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
-+--------------------------------------------------------+-------------------------------------------------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                                       ;
++---------------------------------------------------------------+-------------------------------------------------------+------------+
+; Register Name                                                 ; Megafunction                                          ; Type       ;
++---------------------------------------------------------------+-------------------------------------------------------+------------+
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0[15..35]       ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_1[15..35]       ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_2[15..35]       ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_3[15..35]       ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_4[15..35]       ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_5[15..35]       ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_6[15..35]       ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_7[15..35]       ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0[5..10,40..45] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_1 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_1[5..10,40..45] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_1 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_2[5..10,40..45] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_1 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_3[5..10,40..45] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_1 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_4[5..10,40..45] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_1 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_5[5..10,40..45] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_1 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_6[5..10,40..45] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_1 ; SHIFT_TAPS ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_7[5..10,40..45] ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_1 ; SHIFT_TAPS ;
++---------------------------------------------------------------+-------------------------------------------------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -522,13 +542,14 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[2] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |UNI_Projektas|Write_out_mram_manager:this_write_out_mram_manager|address_counter[3]  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager|address_counter[6]              ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[0] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |UNI_Projektas|Write_out_mram_manager:this_write_out_mram_manager|address_counter[2]  ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager|read_counter[0]                 ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager|address_counter[0]              ;
 ; 7:1                ; 15 bits   ; 60 LEs        ; 15 LEs               ; 45 LEs                 ; Yes        ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[7]    ;
-; 1:1                ; 10 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; Yes        ; |UNI_Projektas|MRAM_Controller:this_mram_controller|MRAM_D[8]~reg0                    ;
+; 1:1                ; 10 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; Yes        ; |UNI_Projektas|MRAM_Controller:this_mram_controller|MRAM_D[9]~reg0                    ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |UNI_Projektas|MRAM_Controller:this_mram_controller|curr_state                        ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|SPI_Controller:adc_spi_controller|Selector4                            ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|SPI_Controller:adc_spi_controller|Selector3                            ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|Selector0                            ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |UNI_Projektas|STATE_MANAGER:this_state_manager|Selector3                             ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector4          ;
@@ -555,7 +576,16 @@ Encoding Type:  One-Hot
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_e0m:auto_generated|altsyncram_k681:altsyncram2 ;
+; Source assignments for Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_r1m:auto_generated|altsyncram_6a81:altsyncram2 ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                     ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                      ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_t1m:auto_generated|altsyncram_i981:altsyncram2 ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                                     ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------------------------------+
@@ -955,7 +985,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name     ; Value ; Type                                                   ;
 +--------------------+-------+--------------------------------------------------------+
 ; max_address_counts ; 1000  ; Signed Integer                                         ;
-; READ_COUNTER_MAX   ; 1     ; Signed Integer                                         ;
+; READ_COUNTER_MAX   ; 4     ; Signed Integer                                         ;
 +--------------------+-------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1074,7 +1104,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------+
 ; Parameter Name ; Value ; Type                                      ;
 +----------------+-------+-------------------------------------------+
-; buffer_length  ; 25    ; Signed Integer                            ;
+; buffer_length  ; 50    ; Signed Integer                            ;
 ; buffer_width   ; 8     ; Signed Integer                            ;
 +----------------+-------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -1085,7 +1115,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                       ;
 +----------------+-------+------------------------------------------------------------+
-; buffer_length  ; 25    ; Signed Integer                                             ;
+; buffer_length  ; 50    ; Signed Integer                                             ;
 ; buffer_width   ; 8     ; Signed Integer                                             ;
 +----------------+-------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -1098,10 +1128,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+----------------+------------------------------------------------------------------------------------+
 ; WIDTH_BYTEENA  ; 1              ; Untyped                                                                            ;
 ; NUMBER_OF_TAPS ; 1              ; Untyped                                                                            ;
-; TAP_DISTANCE   ; 6              ; Untyped                                                                            ;
+; TAP_DISTANCE   ; 21             ; Untyped                                                                            ;
 ; WIDTH          ; 8              ; Untyped                                                                            ;
 ; POWER_UP_STATE ; CLEARED        ; Untyped                                                                            ;
-; CBXI_PARAMETER ; shift_taps_e0m ; Untyped                                                                            ;
+; CBXI_PARAMETER ; shift_taps_r1m ; Untyped                                                                            ;
++----------------+----------------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1 ;
++----------------+----------------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                                               ;
++----------------+----------------+------------------------------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                                            ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                                            ;
+; TAP_DISTANCE   ; 6              ; Untyped                                                                            ;
+; WIDTH          ; 16             ; Untyped                                                                            ;
+; POWER_UP_STATE ; CLEARED        ; Untyped                                                                            ;
+; CBXI_PARAMETER ; shift_taps_t1m ; Untyped                                                                            ;
 +----------------+----------------+------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1149,11 +1194,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------------+---------------------------------------------------------------------+
 ; Name                       ; Value                                                               ;
 +----------------------------+---------------------------------------------------------------------+
-; Number of entity instances ; 1                                                                   ;
+; Number of entity instances ; 2                                                                   ;
 ; Entity Instance            ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0 ;
 ;     -- NUMBER_OF_TAPS      ; 1                                                                   ;
-;     -- TAP_DISTANCE        ; 6                                                                   ;
+;     -- TAP_DISTANCE        ; 21                                                                  ;
 ;     -- WIDTH               ; 8                                                                   ;
+; Entity Instance            ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1 ;
+;     -- NUMBER_OF_TAPS      ; 1                                                                   ;
+;     -- TAP_DISTANCE        ; 6                                                                   ;
+;     -- WIDTH               ; 16                                                                  ;
 +----------------------------+---------------------------------------------------------------------+
 
 
@@ -1162,21 +1211,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port               ; Type   ; Severity ; Details                                                                             ;
 +--------------------+--------+----------+-------------------------------------------------------------------------------------+
-; data_out_0[24..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_0[44..40] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_0[34..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; data_out_0[9..5]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; data_out_1[24..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_1[44..40] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_1[34..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; data_out_1[9..5]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; data_out_2[24..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_2[44..40] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_2[34..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; data_out_2[9..5]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; data_out_3[24..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_3[44..40] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_3[34..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; data_out_3[9..5]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; data_out_4[24..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_4[44..40] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_4[34..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; data_out_4[9..5]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; data_out_5[24..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_5[44..40] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_5[34..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; data_out_5[9..5]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; data_out_6[24..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_6[44..40] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_6[34..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; data_out_6[9..5]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; data_out_7[24..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_7[44..40] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out_7[34..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; data_out_7[9..5]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------------------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -1223,7 +1280,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr 25 22:59:50 2023
+    Info: Processing started: Wed Apr 26 11:35:50 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file adc_manager.vhd
@@ -1440,20 +1497,37 @@ Warning (10540): VHDL Signal Declaration warning at Corr_Main.vhd(56): used expl
 Warning (10036): Verilog HDL or VHDL warning at Corr_Main.vhd(57): object "test" assigned a value but never read
 Warning (10492): VHDL Process Statement warning at Corr_Main.vhd(78): signal "preambule_coef" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "Corr_Buffer" for hierarchy "Corr_Main:Corr_Main_1|Corr_Buffer:buff"
-Info (19000): Inferred 1 megafunctions from design logic
+Info (19000): Inferred 2 megafunctions from design logic
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
-        Info (286033): Parameter TAP_DISTANCE set to 6
+        Info (286033): Parameter TAP_DISTANCE set to 21
         Info (286033): Parameter WIDTH set to 8
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "Corr_Main:Corr_Main_1|Corr_Buffer:buff|buffer_0_rtl_1"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 6
+        Info (286033): Parameter WIDTH set to 16
 Info (12130): Elaborated megafunction instantiation "Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0"
 Info (12133): Instantiated megafunction "Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
-    Info (12134): Parameter "TAP_DISTANCE" = "6"
+    Info (12134): Parameter "TAP_DISTANCE" = "21"
     Info (12134): Parameter "WIDTH" = "8"
-Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_e0m.tdf
-    Info (12023): Found entity 1: shift_taps_e0m
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_k681.tdf
-    Info (12023): Found entity 1: altsyncram_k681
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_r1m.tdf
+    Info (12023): Found entity 1: shift_taps_r1m
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6a81.tdf
+    Info (12023): Found entity 1: altsyncram_6a81
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_emf.tdf
+    Info (12023): Found entity 1: cntr_emf
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_9cc.tdf
+    Info (12023): Found entity 1: cmpr_9cc
+Info (12130): Elaborated megafunction instantiation "Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1"
+Info (12133): Instantiated megafunction "Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "6"
+    Info (12134): Parameter "WIDTH" = "16"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_t1m.tdf
+    Info (12023): Found entity 1: shift_taps_t1m
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_i981.tdf
+    Info (12023): Found entity 1: altsyncram_i981
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_lkf.tdf
     Info (12023): Found entity 1: cntr_lkf
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
@@ -1495,17 +1569,17 @@ Warning (21074): Design contains 15 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADC_BIT_B[8]"
     Warning (15610): No output dependent on input pin "ADC_BIT_B[9]"
     Warning (15610): No output dependent on input pin "UART_RX"
-Info (21057): Implemented 683 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 875 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 27 input pins
     Info (21059): Implemented 29 output pins
     Info (21060): Implemented 21 bidirectional pins
-    Info (21061): Implemented 573 logic cells
-    Info (21064): Implemented 32 RAM segments
+    Info (21061): Implemented 749 logic cells
+    Info (21064): Implemented 48 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 44 warnings
-    Info: Peak virtual memory: 4660 megabytes
-    Info: Processing ended: Tue Apr 25 22:59:53 2023
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4664 megabytes
+    Info: Processing ended: Wed Apr 26 11:35:54 2023
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

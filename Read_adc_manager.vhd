@@ -7,7 +7,7 @@ use ieee.std_logic_textio.all;
 entity Read_adc_manager is
 generic(
 	MAX_ADDRESS_COUNTS : integer :=  100;
-	READ_COUNTER_MAX : integer := 1
+	READ_COUNTER_MAX : integer := 4
 );
 port(
 	CLK : in std_logic := '0';

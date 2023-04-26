@@ -63,7 +63,7 @@ buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(corr_buffer
 
 DATA_IN <= 	ADC_BITS(7 downto 0);
 
-PREAMBULE_FOUND <= '1' when corr_value > 2000 else '0';
+--PREAMBULE_FOUND <= '1' when corr_value > 2000 else '0';
 corr_value <= corr_value_0 + corr_value_1;
 
 
@@ -90,6 +90,16 @@ begin
 	end loop;
 end process;
 
+process(ADC_BITS_VALID)
+begin
+	if rising_edge(ADC_BITS_VALID) then
+		if(corr_value > 2000) then
+				PREAMBULE_FOUND <= '1';
+		else
+			PREAMBULE_FOUND <= '0';
+		end if;
+	end if;
+end process;
 
 process(CLK)
 begin
@@ -100,7 +110,6 @@ begin
 			corr_buffer_update <= '0';
 		end if;
 	end if;
-
 end process;
 									
 						
