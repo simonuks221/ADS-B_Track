@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "04/27/2023 13:29:18"
+-- DATE "04/27/2023 13:59:56"
 
 -- 
 -- Device: Altera EP2C5T144C8 Package TQFP144
@@ -1544,15 +1544,15 @@ SIGNAL \UART_Controller_1|uart_tx_1|Mux0~3_combout\ : std_logic;
 SIGNAL \UART_Controller_1|uart_tx_1|Mux0~4_combout\ : std_logic;
 SIGNAL \UART_Controller_1|uart_tx_1|tx_curr_state.start~_wirecell_combout\ : std_logic;
 SIGNAL \UART_Controller_1|uart_tx_1|TX~regout\ : std_logic;
-SIGNAL \Corr_Main_1|buff|buffer_7\ : std_logic_vector(49 DOWNTO 0);
-SIGNAL \ADC_BIT_A~combout\ : std_logic_vector(9 DOWNTO 0);
-SIGNAL \Corr_Main_1|buff|buffer_1\ : std_logic_vector(49 DOWNTO 0);
-SIGNAL \Corr_Main_1|buff|buffer_6\ : std_logic_vector(49 DOWNTO 0);
-SIGNAL \Corr_Main_1|buff|buffer_5\ : std_logic_vector(49 DOWNTO 0);
 SIGNAL \Corr_Main_1|buff|buffer_2\ : std_logic_vector(49 DOWNTO 0);
 SIGNAL \Corr_Main_1|buff|buffer_0\ : std_logic_vector(49 DOWNTO 0);
 SIGNAL \Corr_Main_1|buff|buffer_3\ : std_logic_vector(49 DOWNTO 0);
+SIGNAL \Corr_Main_1|buff|buffer_5\ : std_logic_vector(49 DOWNTO 0);
 SIGNAL \Corr_Main_1|buff|buffer_4\ : std_logic_vector(49 DOWNTO 0);
+SIGNAL \Corr_Main_1|buff|buffer_7\ : std_logic_vector(49 DOWNTO 0);
+SIGNAL \Corr_Main_1|buff|buffer_6\ : std_logic_vector(49 DOWNTO 0);
+SIGNAL \Corr_Main_1|buff|buffer_1\ : std_logic_vector(49 DOWNTO 0);
+SIGNAL \ADC_BIT_A~combout\ : std_logic_vector(9 DOWNTO 0);
 SIGNAL \Corr_Main_1|buff|buffer_0_rtl_0|auto_generated|cntr1|safe_q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \adc_spi_controller|spi_fifo_component|scfifo_component|auto_generated|dpfifo|wr_ptr|safe_q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|safe_q\ : std_logic_vector(3 DOWNTO 0);
