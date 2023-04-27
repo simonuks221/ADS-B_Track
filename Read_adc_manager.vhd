@@ -56,7 +56,9 @@ begin
 						else
 							real_data_counter <= real_data_counter - 1;
 						end if;
-						MRAM_DATA_OUT <= "000000" & ADC_BIT; --REALUS ADC
+
+						MRAM_DATA_OUT <= "000000" & ADC_BIT;
+						
 						--MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(real_data_counter, ADC_BIT'length)); --FAKE ADC
 						MRAM_WRITE_DATA <= '1';
 						--READ_ADC_DONE <= '1';

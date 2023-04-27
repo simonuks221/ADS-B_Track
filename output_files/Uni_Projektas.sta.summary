@@ -2,100 +2,60 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'CORR_BUFFER_UPDATE_CLK'
-Slack : 1.191
-TNS   : 0.000
-
 Type  : Slow Model Setup 'CLK'
-Slack : 5.441
+Slack : 0.250
 TNS   : 0.000
 
 Type  : Slow Model Hold 'CLK'
 Slack : 0.499
 TNS   : 0.000
 
-Type  : Slow Model Hold 'CORR_BUFFER_UPDATE_CLK'
-Slack : 0.743
-TNS   : 0.000
-
-Type  : Slow Model Minimum Pulse Width 'CORR_BUFFER_UPDATE_CLK'
-Slack : 0.266
-TNS   : 0.000
-
-Type  : Slow Model Minimum Pulse Width 'PLL_CLK0'
-Slack : 2.091
-TNS   : 0.000
-
-Type  : Slow Model Minimum Pulse Width 'PLL_CLK2'
-Slack : 3.333
-TNS   : 0.000
-
-Type  : Slow Model Minimum Pulse Width 'PLL_CLK3'
-Slack : 3.333
-TNS   : 0.000
-
-Type  : Slow Model Minimum Pulse Width 'PLL_CLK5'
-Slack : 3.333
-TNS   : 0.000
-
 Type  : Slow Model Minimum Pulse Width 'CLK'
 Slack : 6.933
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'ADC_DCLKA'
+Slack : 10.000
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'ADC_CLK'
 Slack : 16.000
 TNS   : 0.000
 
-Type  : Slow Model Minimum Pulse Width 'ADC_DCLKA'
-Slack : 17.223
+Type  : Slow Model Minimum Pulse Width 'MRAM_WRITE_DATA_CLK2'
+Slack : 48.758
 TNS   : 0.000
 
-Type  : Fast Model Setup 'CORR_BUFFER_UPDATE_CLK'
-Slack : 1.914
+Type  : Slow Model Minimum Pulse Width 'MRAM_WRITE_DATA_CLK4'
+Slack : 50.000
 TNS   : 0.000
 
 Type  : Fast Model Setup 'CLK'
-Slack : 7.944
+Slack : 8.216
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLK'
-Slack : 0.215
-TNS   : 0.000
-
-Type  : Fast Model Hold 'CORR_BUFFER_UPDATE_CLK'
-Slack : 0.239
-TNS   : 0.000
-
-Type  : Fast Model Minimum Pulse Width 'CORR_BUFFER_UPDATE_CLK'
-Slack : 1.206
-TNS   : 0.000
-
-Type  : Fast Model Minimum Pulse Width 'PLL_CLK0'
-Slack : 2.333
-TNS   : 0.000
-
-Type  : Fast Model Minimum Pulse Width 'PLL_CLK2'
-Slack : 3.333
-TNS   : 0.000
-
-Type  : Fast Model Minimum Pulse Width 'PLL_CLK3'
-Slack : 3.333
-TNS   : 0.000
-
-Type  : Fast Model Minimum Pulse Width 'PLL_CLK5'
-Slack : 3.333
-TNS   : 0.000
+Slack : -0.463
+TNS   : -1.125
 
 Type  : Fast Model Minimum Pulse Width 'CLK'
 Slack : 7.873
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'ADC_DCLKA'
+Slack : 10.000
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'ADC_CLK'
 Slack : 17.223
 TNS   : 0.000
 
-Type  : Fast Model Minimum Pulse Width 'ADC_DCLKA'
-Slack : 17.778
+Type  : Fast Model Minimum Pulse Width 'MRAM_WRITE_DATA_CLK2'
+Slack : 49.000
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'MRAM_WRITE_DATA_CLK4'
+Slack : 50.000
 TNS   : 0.000
 
 ------------------------------------------------------------

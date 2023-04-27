@@ -30,7 +30,7 @@ architecture arc of Write_out_mram_manager is
 signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS := 0;
 signal have_data : std_logic := '0';
 signal getting_data : std_logic := '0';
-signal msb : std_logic := '0'; --SEND MSB FIRST
+signal msb : std_logic := '1'; --SEND MSB FIRST
 
 begin
 

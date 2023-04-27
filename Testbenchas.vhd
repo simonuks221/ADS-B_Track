@@ -177,14 +177,15 @@ end process;
 
 process --Read
 begin
+	MRAM_D <= (others => 'Z');
 	wait until MRAM_OUTPUT_EN'event;
 	if(MRAM_WRITE_EN = '1' and MRAM_OUTPUT_EN = '0') then
 		wait for 35ns;
-		--MRAM_D <= mram_data(to_integer(unsigned(MRAM_A)));
+		MRAM_D <= mram_data(to_integer(unsigned(MRAM_A)));
 		--MRAM_D <= "1011101011101011";
 	else
 		wait for 5ns;
-		--MRAM_D <= (others => 'Z');
+		MRAM_D <= (others => 'Z');
 	end if;
 	
 end process;

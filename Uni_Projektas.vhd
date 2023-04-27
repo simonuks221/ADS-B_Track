@@ -53,87 +53,6 @@ end entity;
 
 architecture arc of UNI_Projektas is
 
---Components
---component ADC_Manager is
---	port(
---	CLK : in std_logic;
---	DATA_OUT : out std_logic_vector(6-1 downto 0);
---	DATA_DONE : out std_logic := '0';
---
---	c_long_value_in : in std_logic_vector(20-1 downto 0) := (others => '0');
---	c_en : out std_logic := '0';
---	shift_en : out std_logic := '0';
---	
---	SYNC: in std_logic;
---	corr_func_rom_adress_a	: out STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0');
---	corr_func_rom_adress_b	: out STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0')
---	);
---end component;
-
---component Clock_divider is
---	port(
---	CLK: in std_logic;
---	Prescaler : in std_logic_vector(15 downto 0);
---
---	CLK_OUT: out std_logic
---	);
---end component;
-
---component wizard_ram IS
---	PORT
---	(
---		address	: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
---		clock		: IN STD_LOGIC  := '1';
---		data		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
---		wren		: IN STD_LOGIC ;
---		q			: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
---	);
---END component;
-
---component big_ram_wizard IS
---	PORT
---	(
---		address_a	: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
---		address_b	: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
---		clock			: IN STD_LOGIC  := '1';
---		data_a		: IN STD_LOGIC_VECTOR (127 DOWNTO 0);
---		data_b		: IN STD_LOGIC_VECTOR (127 DOWNTO 0);
---		wren_a		: IN STD_LOGIC  := '0';
---		wren_b		: IN STD_LOGIC  := '0';
---		q_a			: OUT STD_LOGIC_VECTOR (127 DOWNTO 0);
---		q_b			: OUT STD_LOGIC_VECTOR (127 DOWNTO 0)
---	);
---END component;
-
---component ADC_ram_shifter is
---	port (
---		CLK : in std_logic := '0';
---		address_a_1		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
---		address_b_1		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
---		
---		address_a_2		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
---		address_b_2		: out STD_LOGIC_VECTOR (2 DOWNTO 0) := (others => '0');
---		
---		new_adc_in : std_logic_vector(7 downto 0);
---		stop_shift : in std_logic := '0';
---		q : in std_logic_vector(511 downto 0);
---		data : out std_logic_vector(512 downto 0)
---	);
---end component;
-
---component Correlation_function is
---	generic(
---		function_length : integer := 50
---	);
---	port(
---		EN: in std_logic := '0';
---		CLK: in std_logic;
---		input_adc_values: in std_logic_vector(400-1 downto 0);
---		output_value : out std_logic_vector(19 downto 0);
---		input_function_ram : in std_logic_vector(255 downto 0)
---	);
---end component;
-
 component UART_Controller is
 generic(
 	BAUD_RATE_PRESCALER : integer := 9600
@@ -146,17 +65,6 @@ port(
 	TX : out std_logic := '1'
 );
 end component;
-
---component corr_func_rom_1 IS
---	PORT
---	(
---		address_a		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
---		address_b		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
---		clock		: IN STD_LOGIC  := '1';
---		q_a		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0);
---		q_b		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0)
---	);
---END component;
 
 component SPI_Controller is 
 generic(
@@ -182,62 +90,6 @@ component wizard_pll IS
 		c0		: OUT STD_LOGIC 
 	);
 end component;
-
---Function ram signals
---signal func_ram_address_bus : std_logic_vector(7 downto 0) := (others => '0');
---signal func_ram_en : std_logic := '0';
---signal func_ram_out : std_logic_vector(7 downto 0);
-
---Correlation signals
---signal c_en : std_logic := '0';
---signal c_long_value : std_logic_vector(20-1 downto 0) := (others => '0');
-
---Big ram for voltage shifting
---signal address_a_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
---signal address_b_1		: STD_LOGIC_VECTOR (2 DOWNTO 0);
---signal data_a_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
---signal data_b_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
---signal q_a_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
---signal q_b_1		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-
---signal address_a_2		: STD_LOGIC_VECTOR (2 DOWNTO 0);
---signal address_b_2		: STD_LOGIC_VECTOR (2 DOWNTO 0);
---signal data_a_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
---signal data_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
---signal q_a_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
---signal q_b_2		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-
---signal q : std_logic_vector(511 downto 0) := (others => '0');
---signal data : std_logic_vector(512 downto 0) := (others => '0');
-
-
-
---Big ram for correlation function
---signal address_a_3		: STD_LOGIC_VECTOR (2 DOWNTO 0);
---signal address_b_3		: STD_LOGIC_VECTOR (2 DOWNTO 0);
---signal data_a_3		: STD_LOGIC_VECTOR (127 DOWNTO 0);
---signal data_b_3		: STD_LOGIC_VECTOR (127 DOWNTO 0);
---signal q_a_3		: STD_LOGIC_VECTOR (127 DOWNTO 0);
---signal q_b_3		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-
---signal address_a_4		: STD_LOGIC_VECTOR (2 DOWNTO 0);
---signal address_b_4		: STD_LOGIC_VECTOR (2 DOWNTO 0);
---signal data_a_4		: STD_LOGIC_VECTOR (127 DOWNTO 0);
---signal data_b_4		: STD_LOGIC_VECTOR (127 DOWNTO 0);
---signal q_a_4		: STD_LOGIC_VECTOR (127 DOWNTO 0);
---signal q_b_4		: STD_LOGIC_VECTOR (127 DOWNTO 0);
-
---signal address_3_a		: STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0');
---signal address_3_b		: STD_LOGIC_VECTOR (4 DOWNTO 0) := (others => '0');
---signal q_a_3		: STD_LOGIC_VECTOR (287 DOWNTO 0) := (others => '0');
---signal q_b_3		: STD_LOGIC_VECTOR (287 DOWNTO 0) := (others => '0');
---signal q_3 : std_logic_vector(255 downto 0) := (others => '0');
-
---Misc
---signal RECEIVED_CODE : std_logic_vector(5 downto 0);
-
-
---signal shift_en : std_logic := '0';
 
 component MRAM_Controller is
 	port(
@@ -396,8 +248,6 @@ this_write_out_mram_manager : write_out_mram_manager generic map(MAX_ADDRESS_COU
 							MRAM_DATA_OUT => MRAM_DATA_OUT, MRAM_ADDRESS_IN => MRAM_ADDRESS_IN_READ, MRAM_READ_DATA => MRAM_READ_DATA, MRAM_DONE => MRAM_DONE,
 							WRITE_OUT_DONE => WRITE_OUT_DONE, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
 
---spi_send_data_multi_or : Multi_OR generic map (BITS => 16) port map(input1 => ADC_SPI_send_data1, input2 => ADC_SPI_send_data2, output => ADC_SPI_send_data);
---ADC_SPI_send_irq_multi_or : Multi_OR generic map(BITS => 1) port map (input1 => ADC_SPI_send_irq1,input2 => ADC_SPI_send_irq2, output => ADC_SPI_send_irq);
 ADC_SPI_send_irq <= ADC_SPI_Send_irq1 or ADC_SPI_send_irq2;
 adc_spi_controller : SPI_Controller generic map (SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => 16, SEND_CLK_WAIT_MAX => 20) port map(CLK => CLK_160, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK,
 							SPI_CS => ADC_SPI_CS, SPI_send_data => ADC_SPI_send_data, SPI_send_irq => ADC_SPI_Send_irq, SPI_FIFO_EMPTY => ADC_SPI_fifo_empty);
@@ -406,49 +256,8 @@ UART_Controller_1 : UART_Controller generic map(BAUD_RATE_PRESCALER => BAUD_RATE
 	SEND_DATA_IN_REQ => UART_DATA_IRQ,
 	TX => UART_TX, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
 							
-Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 50, BUFFER_WIDTH => 8) port map(CLK => CLK_160, ADC_BITS => MRAM_DATA_IN, 
+Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 16, BUFFER_WIDTH => 8) port map(CLK => CLK_160, ADC_BITS => MRAM_DATA_IN, 
 								ADC_BITS_VALID => MRAM_WRITE_DATA, PREAMBULE_FOUND => SPI_CS);		
-
---adc_ram_shifter_1 : adc_ram_shifter port map(CLK => sync_clk, address_a_1 => address_a_1, address_a_2 => address_a_2, address_b_1 => address_b_1,
---	address_b_2 => address_b_2,
---	new_adc_in => ADC_BIT_A(7 downto 0), stop_shift => shift_en, q => q, data => data);
-
-
---ADC_Manager1 : ADC_Manager port map(CLK => CLK, DATA_OUT => RECEIVED_CODE, SYNC => sync_clk,
---												c_long_value_in => c_long_value,
---												c_en => c_en, DATA_DONE => UART_CONTROLLER_DATA_REQ, shift_en => shift_en,
---												corr_func_rom_adress_a => address_3_a, corr_func_rom_adress_b => address_3_b);
---wizard_ram_1 : wizard_ram port map(address => func_ram_address_bus, clock => CLK, data => "00000000", wren => '0', q => func_ram_out);
-
-
-
---clock_divider1 : clock_divider port map(CLK => CLK, Prescaler => std_Logic_vector(to_unsigned(5, 16)), CLK_OUT => sync_clk);
---corr_long : Correlation_function generic map(function_length => 50) port map(EN => c_en, CLK => CLK, output_value => c_long_value, 
---											input_adc_values => q(399 downto 0), input_function_ram => q_3);
-
---Ram for shifting voltage
---ram1 : big_ram_wizard port map(clock => CLK, address_a => address_a_1, address_b => address_b_1, data_a => data_a_1,
---										data_b => data_b_1, wren_a => '1', wren_b => '1', q_a => q_a_1, q_b => q_b_1);
---ram2 : big_ram_wizard port map(clock => CLK, address_a => address_a_2, address_b => address_b_2, data_a => data_a_2,
---										data_b => data_b_2, wren_a => '1', wren_b => '1', q_a => q_a_2, q_b => q_b_2);
---Ram for correlation functions
---ram3 : big_ram_wizard port map(clock => CLK, address_a => address_a_3, address_b => address_b_3, data_a => data_a_3,
---										data_b => data_b_3, wren_a => '1', wren_b => '1', q_a => q_a_3, q_b => q_b_3);
---ram4 : big_ram_wizard port map(clock => CLK, address_a => address_a_4, address_b => address_b_4, data_a => data_a_4,
---										data_b => data_b_4, wren_a => '1', wren_b => '1', q_a => q_a_4, q_b => q_b_4);
---ram3 : corr_func_rom_1 port map(clock => CLK, address_a => address_3_a, address_b => address_3_b, q_a => q_3(255 downto 128), q_b => q_3(127 downto 0));						
-
-					
---DATA_OUT <= RECEIVED_CODE;
---ADC_SYNC <= sync_clk;
-
---q <= q_b_2 & q_a_2 & q_b_1 & q_a_1;
---data_a_1 <= data(128-1 downto 0);
---data_b_1 <= data(128*2-1 downto 128*1);
---data_a_2 <= data(128*3-1 downto 128*2);
---data_b_2 <= data(128*4-1 downto 128*3);
-
---UART_CONTROLLER_DATA_IN <= "00" & RECEIVED_CODE;
 
 process(CLK_160)
 begin

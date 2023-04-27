@@ -166,8 +166,6 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_30 -to MRAM_D[12]
 set_location_assignment PIN_28 -to MRAM_D[10]
-set_global_assignment -name VHDL_FILE ADC_Manager.vhd
-set_global_assignment -name MIF_FILE Conv_func_data.mif
 set_global_assignment -name VHDL_FILE Uni_Projektas.vhd
 set_global_assignment -name VHDL_FILE Clock_divider.vhd
 set_global_assignment -name VHDL_FILE UART_Controller.vhd
