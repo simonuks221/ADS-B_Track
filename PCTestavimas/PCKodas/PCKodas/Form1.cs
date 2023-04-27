@@ -154,29 +154,42 @@ namespace PCKodas
             }
         }
 
+        int last_MSB = 0;
+        int full_16bit = 0;
         void Update_Chart(int new_value)
         {
-            this.Invoke(new MethodInvoker(delegate ()
+            if(new_value <= 4) //Gautas MSB, pirmas baitas
             {
-                //Access controls
+                last_MSB = new_value;
+                Debug.WriteLine(last_MSB);
+            }
+            else //Gautas LSB, sudedam LSB ir MSB
+            {
+                full_16bit = last_MSB * 256 + new_value; //MSB i kaire per 8, max gali buti 1024 vertes
                 received_data_length++;
-                received_data.Add(new_value);
-                DataAmountLabel.Text = received_data_length.ToString();
+                received_data.Add(full_16bit);
 
-                if (UpdateChartButton.Checked)
+                this.Invoke(new MethodInvoker(delegate ()
                 {
-                    if (VoltageChart.Series[0].Points.Count == max_chart_elements) //Only leave some visible
+                    //Access controls
+
+                    DataAmountLabel.Text = received_data_length.ToString();
+
+                    if (UpdateChartButton.Checked)
                     {
-                        VoltageChart.Series[0].Points.RemoveAt(0);
+                        if (VoltageChart.Series[0].Points.Count == max_chart_elements) //Only leave some visible
+                        {
+                            VoltageChart.Series[0].Points.RemoveAt(0);
+                        }
+                        VoltageChart.Series[0].Points.AddY(new_value);
+                        VoltageChart.Update();
                     }
-                    VoltageChart.Series[0].Points.AddY(new_value);
-                    VoltageChart.Update();
-                }
-                else
-                {
+                    else
+                    {
 
-                }
-            }));
+                    }
+                }));
+            }
         }
 
         private void SaveToFileButton_Click(object sender, EventArgs e)

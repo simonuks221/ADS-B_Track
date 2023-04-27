@@ -30,11 +30,12 @@ architecture arc of Write_out_mram_manager is
 signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS := 0;
 signal have_data : std_logic := '0';
 signal getting_data : std_logic := '0';
+signal msb : std_logic := '0'; --SEND MSB FIRST
 
 begin
 
 MRAM_ADDRESS_IN <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_IN'length));
-UART_SEND_DATA <= MRAM_DATA_OUT(9 downto 2);--MRAM_DATA_OUT(7 downto 0);
+UART_SEND_DATA <= MRAM_DATA_OUT(15 downto 8) when msb = '1' else MRAM_DATA_OUT(7 downto 0);
 
 WRITE_OUT_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
 
@@ -65,7 +66,10 @@ begin
 				else
 					if(MRAM_DONE  = '1') then
 						MRAM_READ_DATA <= '1';
-						address_counter <= address_counter + 1;
+						if(msb = '0') then
+							address_counter <= address_counter + 1;
+						end if;
+						msb <= not msb;
 						getting_data <= '1';
 					end if;
 				end if;

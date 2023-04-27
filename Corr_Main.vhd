@@ -50,11 +50,11 @@ signal DATA_OUT_5 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '
 signal DATA_OUT_6 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '0');
 signal DATA_OUT_7 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '0');
 
-signal corr_value_0 : integer := 0;
-signal corr_value_1 : integer := 0;
 signal corr_value : integer := 0;
 signal preambule_coef : std_logic_vector(50-1 downto 0) := "11111000001111100000000000000000000111110000011111";
 signal test : std_logic_vector(1 downto 0) := (others => '0');
+
+signal byte : unsigned (7 downto 0) := (others => '0');
 
 begin
 
@@ -64,36 +64,64 @@ buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(corr_buffer
 DATA_IN <= 	ADC_BITS(7 downto 0);
 
 --PREAMBULE_FOUND <= '1' when corr_value > 2000 else '0';
-corr_value <= corr_value_0 + corr_value_1;
 
 
-test <= DATA_OUT_0(0) & DATA_OUT_1(0);
+
+--test <= DATA_OUT_0(0) & DATA_OUT_1(0);
 process(DATA_IN, DATA_OUT_0, DATA_OUT_1, DATA_OUT_2, DATA_OUT_3, DATA_OUT_4, DATA_OUT_5, DATA_OUT_6, DATA_OUT_7)
-variable corr_value_var : integer := 0;
-variable currByte : std_logic_vector(BUFFER_WIDTH-1 downto 0) := (others => '0');
+type size is array (0 to (BUFFER_LENGTH)-1) of unsigned(12 downto 0);
+type size1 is array (0 to (BUFFER_LENGTH/2)-1) of unsigned(12 downto 0);
+type size2 is array (0 to (BUFFER_LENGTH/4)-1) of unsigned(12 downto 0);
+type size3 is array (0 to (BUFFER_LENGTH/4)-1) of unsigned(12 downto 0);
+type size4 is array (0 to (BUFFER_LENGTH/4)-1) of unsigned(12 downto 0);
+type size5 is array (0 to (BUFFER_LENGTH/4)-1) of unsigned(12 downto 0);
+
+variable vacc : size; --50
+variable vacc1 : size1; --25
+variable vacc2 : size2; --12 --paliktas vienas
+variable vacc3 : size3; --6
+variable vacc4 : size4; --3
+
+variable a : unsigned(7 downto 0);
 begin
-	--corr_value <= to_integer(unsigned(DATA_OUT_0(1 downto 0)));
-	corr_value_var := 0;
+	--https://surf-vhdl.com/vhdl-for-loop-statement/ --Efficient Binary loop addition
 	for i in 0 to BUFFER_LENGTH-1 loop
-		if(preambule_coef(i) = '1') then
-			currByte(0) := DATA_OUT_0(i);
-			currByte(1) := DATA_OUT_1(i);
-			currByte(2) := DATA_OUT_2(i);
-			currByte(3) := DATA_OUT_3(i);
-			currByte(4) := DATA_OUT_4(i);
-			currByte(5) := DATA_OUT_5(i);
-			currByte(6) := DATA_OUT_6(i);
-			currByte(7) := DATA_OUT_7(i);
-			corr_value_var := corr_value_var + to_integer(unsigned(currByte));
-			corr_value_0 <= corr_value_var;
-		end if;
+		a := DATA_OUT_0(i)&DATA_OUT_1(i)&DATA_OUT_2(i)&DATA_OUT_3(i)&DATA_OUT_4(i)&DATA_OUT_5(i)&DATA_OUT_6(i)&DATA_OUT_7(i);
+		vacc(i) := to_unsigned(to_integer(unsigned(a)),13);
 	end loop;
+	
+	for i in 0 to (BUFFER_LENGTH/2)-1 loop
+		vacc1(i) := vacc(i*2)+vacc(i*2+1);
+	end loop; 
+	
+	for i in 0 to (BUFFER_LENGTH/4)-1 loop
+		vacc2(i) := vacc1(i*2)+vacc1(i*2+1);
+	end loop; --paliktas vienas 50tas
+	
+	for i in 0 to (BUFFER_LENGTH/8)-1 loop
+		vacc3(i) := vacc2(i*2)+vacc2(i*2+1);
+	end loop;
+	
+	for i in 0 to (BUFFER_LENGTH/16)-1 loop
+		vacc4(i) := vacc3(i*2)+vacc3(i*2+1);
+	end loop;
+	
+--	for i in 0 to (BUFFER_LENGTH/2)-1 loop
+--		if(preambule_coef(i) = '1') then
+--			currByte_0 := DATA_OUT_0(i*2)&DATA_OUT_1(i*2)&DATA_OUT_2(i*2)&DATA_OUT_3(i*2)&DATA_OUT_4(i*2)&DATA_OUT_5(i*2)&DATA_OUT_6(i*2)&DATA_OUT_7(i*2);
+--			currByte_1 := DATA_OUT_0(i*2+1)&DATA_OUT_1(i*2+1)&DATA_OUT_2(i*2+1)&DATA_OUT_3(i*2+1)&DATA_OUT_4(i*2+1)&DATA_OUT_5(i*2+1)&DATA_OUT_6(i*2+1)&DATA_OUT_7(i*2+1);
+--			corr_value_var_0 := corr_value_var_0 + to_integer(unsigned(currByte_0));--to_integer(unsigned(currByte));
+--			--corr_value_0 <= corr_value_var_0;
+--		end if;
+--	end loop;
+	
+	corr_value <= to_integer(vacc4(0)) + to_integer(vacc4(1)) + to_integer(vacc1(24));
 end process;
 
 process(ADC_BITS_VALID)
 begin
 	if rising_edge(ADC_BITS_VALID) then
-		if(corr_value > 2000) then
+		if(corr_value > 4500) then --2600 testavimui
 				PREAMBULE_FOUND <= '1';
 		else
 			PREAMBULE_FOUND <= '0';
