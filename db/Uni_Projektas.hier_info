@@ -1798,22 +1798,14 @@ sclr => _.IN0
 
 
 |Uni_Projektas|Corr_Main:Corr_Main_1
-CLK => ~NO_FANOUT~
-ADC_BITS[0] => LessThan0.IN16
+CLK => corr_buffer_update.CLK
 ADC_BITS[0] => Corr_Buffer:buff.DATA_IN[0]
-ADC_BITS[1] => LessThan0.IN15
 ADC_BITS[1] => Corr_Buffer:buff.DATA_IN[1]
-ADC_BITS[2] => LessThan0.IN14
 ADC_BITS[2] => Corr_Buffer:buff.DATA_IN[2]
-ADC_BITS[3] => LessThan0.IN13
 ADC_BITS[3] => Corr_Buffer:buff.DATA_IN[3]
-ADC_BITS[4] => LessThan0.IN12
 ADC_BITS[4] => Corr_Buffer:buff.DATA_IN[4]
-ADC_BITS[5] => LessThan0.IN11
 ADC_BITS[5] => Corr_Buffer:buff.DATA_IN[5]
-ADC_BITS[6] => LessThan0.IN10
 ADC_BITS[6] => Corr_Buffer:buff.DATA_IN[6]
-ADC_BITS[7] => LessThan0.IN9
 ADC_BITS[7] => Corr_Buffer:buff.DATA_IN[7]
 ADC_BITS[8] => ~NO_FANOUT~
 ADC_BITS[9] => ~NO_FANOUT~
@@ -1823,8 +1815,8 @@ ADC_BITS[12] => ~NO_FANOUT~
 ADC_BITS[13] => ~NO_FANOUT~
 ADC_BITS[14] => ~NO_FANOUT~
 ADC_BITS[15] => ~NO_FANOUT~
-ADC_BITS_VALID => ~NO_FANOUT~
-PREAMBULE_FOUND <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+ADC_BITS_VALID => corr_buffer_update.DATAIN
+PREAMBULE_FOUND <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Uni_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff

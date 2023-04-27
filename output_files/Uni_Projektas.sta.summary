@@ -3,11 +3,31 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'CLK'
-Slack : 0.250
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Slow Model Setup 'CORR_BUFFER_UPDATE_CLK0'
+Slack : 1.613
 TNS   : 0.000
 
 Type  : Slow Model Hold 'CLK'
 Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CORR_BUFFER_UPDATE_CLK0'
+Slack : 0.736
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CORR_BUFFER_UPDATE_CLK0'
+Slack : 2.091
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'PLL_CLK0'
+Slack : 2.091
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'PLL_CLK2'
+Slack : 3.333
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLK'
@@ -30,13 +50,33 @@ Type  : Slow Model Minimum Pulse Width 'MRAM_WRITE_DATA_CLK4'
 Slack : 50.000
 TNS   : 0.000
 
+Type  : Fast Model Setup 'CORR_BUFFER_UPDATE_CLK0'
+Slack : 2.054
+TNS   : 0.000
+
 Type  : Fast Model Setup 'CLK'
-Slack : 8.216
+Slack : 8.254
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLK'
-Slack : -0.463
-TNS   : -1.125
+Slack : -0.407
+TNS   : -1.047
+
+Type  : Fast Model Hold 'CORR_BUFFER_UPDATE_CLK0'
+Slack : 0.238
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CORR_BUFFER_UPDATE_CLK0'
+Slack : 2.333
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'PLL_CLK0'
+Slack : 2.333
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'PLL_CLK2'
+Slack : 3.333
+TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLK'
 Slack : 7.873

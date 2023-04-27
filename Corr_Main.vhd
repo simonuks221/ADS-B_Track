@@ -68,7 +68,7 @@ DATA_IN <= 	ADC_BITS(7 downto 0);
 
 
 --test <= DATA_OUT_0(0) & DATA_OUT_1(0);
-process(DATA_IN)
+process(CLK)
 type size is array (0 to (BUFFER_LENGTH)-1) of unsigned(12 downto 0);
 type size1 is array (0 to (BUFFER_LENGTH/2)-1) of unsigned(12 downto 0);
 type size2 is array (0 to (BUFFER_LENGTH/4)-1) of unsigned(12 downto 0);
@@ -90,7 +90,9 @@ begin
 		vacc(i) := to_unsigned(to_integer(unsigned(a)),13);
 	end loop;
 	
-	if(to_integer(unsigned(DATA_IN)) > 150) then
+	--250ns velinimas bandymas: 0
+	
+	if(to_integer(unsigned(vacc(0))) > 150 and to_integer(unsigned(vacc(1))) > 150 and to_integer(unsigned(vacc(3))) > 150) then
 		PREAMBULE_FOUND <= '1';
 	else
 		PREAMBULE_FOUND <= '0';
@@ -131,16 +133,16 @@ end process;
 --	end if;
 --end process;
 --
---process(CLK)
---begin
---	if rising_edge(CLK) then
---		if(ADC_BITS_VALID = '1') then
---			corr_buffer_update <= '1';
---		else
---			corr_buffer_update <= '0';
---		end if;
---	end if;
---end process;
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		if(ADC_BITS_VALID = '1') then
+			corr_buffer_update <= '1';
+		else
+			corr_buffer_update <= '0';
+		end if;
+	end if;
+end process;
 									
 						
 --process(CLK)

@@ -199,16 +199,26 @@
 # 
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
 # 
-#           Attempting to use alternate WLF file "./wlftxa6mh9".
+#           Attempting to use alternate WLF file "./wlfta2acdt".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftxa6mh9
+#           Using alternate file: ./wlfta2acdt
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 30 us
+# ** Note: Cyclone II PLL is enabled
+#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
+# ** Note: Cyclone II PLL locked to incoming clock
+#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/corr_buffer_update
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_0
+run
+add wave -position end  sim:/testbenchas/i1/SPI_CS
+restart
+run
 # ** Note: Cyclone II PLL is enabled
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
