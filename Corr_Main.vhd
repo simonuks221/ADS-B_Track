@@ -7,13 +7,21 @@ use ieee.std_logic_textio.all;
 entity Corr_Main is
 generic(
 	BUFFER_LENGTH : integer := 50;
-	BUFFER_WIDTH : integer := 8
+	BUFFER_WIDTH : integer := 8;
+	MAX_ADDRESS_COUNTS : integer :=  1000
 );
 port(
 	CLK : in std_logic := '0';
 	ADC_BITS : in std_logic_vector(15 downto 0) := (others => '0');
 	ADC_BITS_VALID : in std_logic := '0';
-	PREAMBULE_FOUND : out std_logic := '0'
+	PREAMBULE_FOUND : out std_logic := '0';
+	
+	EN_CORR : in std_logic := '0';
+	CORR_DONE : out std_logic := '0';
+	MRAM_DATA_OUT : out std_logic_vector(15 downto 0) := (others => '0');
+	MRAM_ADDRESS_OUT : out std_logic_vector(17 downto 0) := (others => '0');
+	MRAM_WRITE_DATA : out std_logic := '0';
+	MRAM_DONE : in std_logic := '0'
 );
 end entity;
 
@@ -52,22 +60,22 @@ signal DATA_OUT_7 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '
 
 signal corr_value : integer := 0;
 signal preambule_coef : std_logic_vector(50-1 downto 0) := "11111000001111100000000000000000000111110000011111";
-signal test : std_logic_vector(1 downto 0) := (others => '0');
 
-signal byte : unsigned (7 downto 0) := (others => '0');
+signal read_counter : integer range 0 to 15 := 0;
+signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS+5 := 0;
+signal real_data_counter : integer range 0 to 255 := 255;
 
 begin
 
 buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(corr_buffer_update, DATA_IN, DATA_OUT_0, DATA_OUT_1, DATA_OUT_2, DATA_OUT_3, DATA_OUT_4,
 									DATA_OUT_5, DATA_OUT_6, DATA_OUT_7);
+MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
 
+CORR_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
 DATA_IN <= 	ADC_BITS(9 downto 2);
 
---PREAMBULE_FOUND <= '1' when corr_value > 2000 else '0';
+PREAMBULE_FOUND <= '1' when corr_value > 600 else '0';
 
-
-
---test <= DATA_OUT_0(0) & DATA_OUT_1(0);
 process(CLK)
 type size is array (0 to (BUFFER_LENGTH)-1) of unsigned(12 downto 0);
 type size1 is array (0 to (BUFFER_LENGTH/2)-1) of unsigned(12 downto 0);
@@ -84,41 +92,76 @@ variable vacc4 : size4; --3
 
 variable a : unsigned(7 downto 0);
 begin
+	if(EN_CORR = '1') then
 	--https://surf-vhdl.com/vhdl-for-loop-statement/ --Efficient Binary loop addition
-	for i in 0 to BUFFER_LENGTH-1 loop
-		a := DATA_OUT_7(i)&DATA_OUT_6(i)&DATA_OUT_5(i)&DATA_OUT_4(i)&DATA_OUT_3(i)&DATA_OUT_2(i)&DATA_OUT_1(i)&DATA_OUT_0(i);--DATA_OUT_0(i)&DATA_OUT_1(i)&DATA_OUT_2(i)&DATA_OUT_3(i)&DATA_OUT_4(i)&DATA_OUT_5(i)&DATA_OUT_6(i)&DATA_OUT_7(i);
-		vacc(i) := to_unsigned(to_integer(unsigned(a)),13);
-	end loop;
-	
-	--250ns velinimas bandymas: 0
-	
---	if(to_integer(unsigned(vacc(0))) > 150 and to_integer(unsigned(vacc(1))) > 150 and to_integer(unsigned(vacc(2))) > 150 and to_integer(unsigned(vacc(3))) > 150 and to_integer(unsigned(vacc(4))) > 150) then
---		PREAMBULE_FOUND <= '1';
---	else
---		PREAMBULE_FOUND <= '0';
---	end if;
-	
-	for i in 0 to (BUFFER_LENGTH/2)-1 loop
-		vacc1(i) := vacc(i*2)+vacc(i*2+1);
-	end loop; 
-	
-	for i in 0 to (BUFFER_LENGTH/4)-1 loop
-		vacc2(i) := vacc1(i*2)+vacc1(i*2+1);
-	end loop; --paliktas vienas 50tas
-	
-	for i in 0 to (BUFFER_LENGTH/8)-1 loop
-		vacc3(i) := vacc2(i*2)+vacc2(i*2+1);
-	end loop;
-	
-	for i in 0 to (BUFFER_LENGTH/16)-1 loop
-		vacc4(i) := vacc3(i*2)+vacc3(i*2+1);
-	end loop;
---	
-	corr_value <= to_integer(vacc4(0)) + to_integer(vacc4(1));--+ to_integer(vacc1(24));
-	if(to_integer(vacc4(0)) + to_integer(vacc4(1)) > 2300) then
-		PREAMBULE_FOUND <= '1';
+		for i in 0 to BUFFER_LENGTH-1 loop
+			a := DATA_OUT_7(i)&DATA_OUT_6(i)&DATA_OUT_5(i)&DATA_OUT_4(i)&DATA_OUT_3(i)&DATA_OUT_2(i)&DATA_OUT_1(i)&DATA_OUT_0(i);--DATA_OUT_0(i)&DATA_OUT_1(i)&DATA_OUT_2(i)&DATA_OUT_3(i)&DATA_OUT_4(i)&DATA_OUT_5(i)&DATA_OUT_6(i)&DATA_OUT_7(i);
+			vacc(i) := to_unsigned(to_integer(unsigned(a)),13);
+		end loop;
+		
+		
+		
+		--250ns velinimas bandymas: 0
+		
+	--	if(to_integer(unsigned(vacc(0))) > 150 and to_integer(unsigned(vacc(1))) > 150 and to_integer(unsigned(vacc(2))) > 150 and to_integer(unsigned(vacc(3))) > 150 and to_integer(unsigned(vacc(4))) > 150) then
+	--		PREAMBULE_FOUND <= '1';
+	--	else
+	--		PREAMBULE_FOUND <= '0';
+	--	end if;
+		
+--		for i in 0 to (BUFFER_LENGTH/2)-1 loop
+--			vacc1(i) := vacc(i*2)+vacc(i*2+1);
+--		end loop; 
+--		
+--		for i in 0 to (BUFFER_LENGTH/4)-1 loop
+--			vacc2(i) := vacc1(i*2)+vacc1(i*2+1);
+--		end loop; --paliktas vienas 50tas
+--		
+--		for i in 0 to (BUFFER_LENGTH/8)-1 loop
+--			vacc3(i) := vacc2(i*2)+vacc2(i*2+1);
+--		end loop;
+--		
+--		for i in 0 to (BUFFER_LENGTH/16)-1 loop
+--			vacc4(i) := vacc3(i*2)+vacc3(i*2+1);
+--		end loop;
+--		corr_value <= to_integer(vacc4(0)) + to_integer(vacc4(1));--+ to_integer(vacc1(24));
+		
 	else
-		PREAMBULE_FOUND <= '0';
+		corr_value <= 0;
+	end if;
+end process;
+
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		if(EN_CORR = '0') then
+		read_counter <= 0;
+			MRAM_WRITE_DATA <= '0';
+			address_counter <= 0;
+		else
+			if(read_counter = 14) then
+				if(MRAM_DONE = '1') then
+					read_counter <= 0;
+					address_counter <= address_counter + 1;
+					
+					if(real_data_counter = 0) then
+						real_data_counter <= 255;
+					else
+						real_data_counter <= real_data_counter - 1;
+					end if;
+
+					MRAM_DATA_OUT <= "0000" & std_logic_vector(to_unsigned(corr_value, 12));
+					MRAM_WRITE_DATA <= '1';
+				else
+					MRAM_WRITE_DATA <= '0';
+				end if;
+			else
+				if(read_counter /= 14) then
+					read_counter <= read_counter + 1;	
+				end if;
+					MRAM_WRITE_DATA <= '0';
+			end if;
+		end if;
 	end if;
 end process;
 
@@ -145,33 +188,6 @@ begin
 end process;
 									
 						
---process(CLK)
---variable corr_value_var : integer := 0;
---variable currByte : std_logic_vector(BUFFER_WIDTH-1 downto 0) := (others => '0');
---begin
---	if rising_edge(CLK) then
---		if(ADC_BITS_VALID = '1') then
---			corr_buffer_update <= '1';
---			corr_value_var := 0;
---			for i in 0 to 49 loop
---				if(preambule_coef(i) = '1') then
---					currByte(0) := DATA_OUT_0(i);
---					currByte(1) := DATA_OUT_1(i);
---					currByte(2) := DATA_OUT_2(i);
---					currByte(3) := DATA_OUT_3(i);
---					currByte(4) := DATA_OUT_4(i);
---					currByte(5) := DATA_OUT_5(i);
---					currByte(6) := DATA_OUT_6(i);
---					currByte(7) := DATA_OUT_7(i);
---					corr_value_var := corr_value_var + to_integer(unsigned(currByte));
---					corr_value <= corr_value_var;
---				end if;
---			end loop;
---		else
---			corr_buffer_update <= '0';
---		end if;
---	end if;
---end process;
 
 									
 end architecture;

@@ -158,7 +158,7 @@ namespace PCKodas
         int full_16bit = 0;
         void Update_Chart(int new_value)
         {
-            if(new_value <= 4) //Gautas MSB, pirmas baitas
+            if(new_value <= 16) //Gautas MSB, pirmas baitas
             {
                 last_MSB = new_value;
                 Debug.WriteLine(last_MSB);

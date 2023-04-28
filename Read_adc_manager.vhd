@@ -13,6 +13,7 @@ port(
 	CLK : in std_logic := '0';
 	DCLK : in std_logic := '0';
 	ADC_BIT : in std_logic_vector(9 downto 0) := (others => 'Z');
+	ADC_BIT_VALID : out std_logic := '0';
 	MRAM_DATA_OUT : out std_logic_vector(15 downto 0) := (others => '0');
 	MRAM_ADDRESS_OUT : out std_logic_vector(17 downto 0) := (others => '0');
 	MRAM_WRITE_DATA : out std_logic := '0';
@@ -41,6 +42,7 @@ begin
 			read_counter <= 0;
 			--READ_ADC_DONE <= '0';
 			MRAM_WRITE_DATA <= '0';
+			ADC_BIT_VALID <= '0';
 			address_counter <= 0;
 			last_state <= '0';
 		else
@@ -61,15 +63,18 @@ begin
 						
 						--MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(real_data_counter, ADC_BIT'length)); --FAKE ADC
 						MRAM_WRITE_DATA <= '1';
+						ADC_BIT_VALID <= '1';
 						--READ_ADC_DONE <= '1';
 					else
 						MRAM_WRITE_DATA <= '0';
+						ADC_BIT_VALID <= '0';
 					end if;
 				else
 					if(read_counter /= READ_COUNTER_MAX) then
 						read_counter <= read_counter + 1;
 					end if;
 					MRAM_WRITE_DATA <= '0';
+					ADC_BIT_VALID <= '0';
 				end if;
 			end if;
 		end if;
