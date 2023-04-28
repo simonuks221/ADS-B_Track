@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Uni_Projektas
-Fri Apr 28 15:34:13 2023
+Fri Apr 28 15:54:04 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -81,13 +81,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 28 15:34:13 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 28 15:54:04 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 805                                             ;
-;     Total combinational functions  ; 621                                             ;
+; Total logic elements               ; 806                                             ;
+;     Total combinational functions  ; 630                                             ;
 ;     Dedicated logic registers      ; 461                                             ;
 ; Total registers                    ; 461                                             ;
 ; Total pins                         ; 77                                              ;
@@ -256,17 +256,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+---------------------------------------------+
 ; Resource                                    ; Usage                                       ;
 +---------------------------------------------+---------------------------------------------+
-; Estimated Total logic elements              ; 805                                         ;
+; Estimated Total logic elements              ; 806                                         ;
 ;                                             ;                                             ;
-; Total combinational functions               ; 621                                         ;
+; Total combinational functions               ; 630                                         ;
 ; Logic element usage by number of LUT inputs ;                                             ;
-;     -- 4 input functions                    ; 147                                         ;
-;     -- 3 input functions                    ; 238                                         ;
-;     -- <=2 input functions                  ; 236                                         ;
+;     -- 4 input functions                    ; 150                                         ;
+;     -- 3 input functions                    ; 239                                         ;
+;     -- <=2 input functions                  ; 241                                         ;
 ;                                             ;                                             ;
 ; Logic elements by mode                      ;                                             ;
-;     -- normal mode                          ; 313                                         ;
-;     -- arithmetic mode                      ; 308                                         ;
+;     -- normal mode                          ; 316                                         ;
+;     -- arithmetic mode                      ; 314                                         ;
 ;                                             ;                                             ;
 ; Total registers                             ; 461                                         ;
 ;     -- Dedicated logic registers            ; 461                                         ;
@@ -280,8 +280,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                                             ;
 ; Maximum fan-out node                        ; wizard_pll:pl|altpll:altpll_component|_clk0 ;
 ; Maximum fan-out                             ; 342                                         ;
-; Total fan-out                               ; 3415                                        ;
-; Average fan-out                             ; 2.83                                        ;
+; Total fan-out                               ; 3438                                        ;
+; Average fan-out                             ; 2.82                                        ;
 +---------------------------------------------+---------------------------------------------+
 
 
@@ -290,7 +290,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                        ; Library Name ;
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |UNI_Projektas                                          ; 621 (1)           ; 461 (0)      ; 600         ; 0            ; 0       ; 0         ; 77   ; 0            ; |UNI_Projektas                                                                                                                                                                                             ; work         ;
+; |UNI_Projektas                                          ; 630 (1)           ; 461 (0)      ; 600         ; 0            ; 0       ; 0         ; 77   ; 0            ; |UNI_Projektas                                                                                                                                                                                             ; work         ;
 ;    |Corr_Main:Corr_Main_1|                              ; 236 (226)         ; 175 (32)     ; 216         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1                                                                                                                                                                       ; work         ;
 ;       |Corr_Buffer:buff|                                ; 10 (0)            ; 143 (136)    ; 216         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff                                                                                                                                                      ; work         ;
 ;          |altshift_taps:buffer_0_rtl_0|                 ; 8 (0)             ; 5 (0)        ; 152         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0                                                                                                                         ; work         ;
@@ -303,7 +303,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                |altsyncram_i981:altsyncram2|            ; 0 (0)             ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_t1m:auto_generated|altsyncram_i981:altsyncram2                                                               ; work         ;
 ;                |cntr_lkf:cntr1|                         ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_t1m:auto_generated|cntr_lkf:cntr1                                                                            ; work         ;
 ;    |MRAM_Controller:this_mram_controller|               ; 57 (57)           ; 69 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|MRAM_Controller:this_mram_controller                                                                                                                                                        ; work         ;
-;    |Read_adc_manager:this_read_adc_manager|             ; 31 (31)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager                                                                                                                                                      ; work         ;
+;    |Read_adc_manager:this_read_adc_manager|             ; 39 (39)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager                                                                                                                                                      ; work         ;
 ;    |SPI_Controller:adc_spi_controller|                  ; 84 (18)           ; 58 (12)      ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller                                                                                                                                                           ; work         ;
 ;       |SPI_TX:spi_tx_component|                         ; 45 (45)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component                                                                                                                                   ; work         ;
 ;       |wizard_spi_fifo:spi_fifo_component|              ; 21 (0)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component                                                                                                                        ; work         ;
@@ -317,7 +317,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                   |dpram_bv01:FIFOram|                  ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram                             ; work         ;
 ;                      |altsyncram_0vj1:altsyncram1|      ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1 ; work         ;
 ;    |STATE_MANAGER:this_state_manager|                   ; 52 (52)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|STATE_MANAGER:this_state_manager                                                                                                                                                            ; work         ;
-;    |Setup_manager:this_setup_manager|                   ; 46 (46)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Setup_manager:this_setup_manager                                                                                                                                                            ; work         ;
+;    |Setup_manager:this_setup_manager|                   ; 47 (47)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Setup_manager:this_setup_manager                                                                                                                                                            ; work         ;
 ;    |UART_Controller:UART_Controller_1|                  ; 81 (8)            ; 52 (8)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1                                                                                                                                                           ; work         ;
 ;       |UART_FIFO_wizard:uart_fifo|                      ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo                                                                                                                                ; work         ;
 ;          |scfifo:scfifo_component|                      ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component                                                                                                        ; work         ;
@@ -485,7 +485,7 @@ Encoding Type:  One-Hot
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 231   ;
+; Number of registers using Clock Enable       ; 230   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1299,7 +1299,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Apr 28 15:34:09 2023
+    Info: Processing started: Fri Apr 28 15:54:00 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file uni_projektas.vhd
@@ -1571,16 +1571,16 @@ Warning (21074): Design contains 17 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADC_BIT_A[0]"
     Warning (15610): No output dependent on input pin "ADC_BIT_A[1]"
     Warning (15610): No output dependent on input pin "UART_RX"
-Info (21057): Implemented 945 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 946 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 27 input pins
     Info (21059): Implemented 29 output pins
     Info (21060): Implemented 21 bidirectional pins
-    Info (21061): Implemented 819 logic cells
+    Info (21061): Implemented 820 logic cells
     Info (21064): Implemented 48 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 48 warnings
     Info: Peak virtual memory: 4661 megabytes
-    Info: Processing ended: Fri Apr 28 15:34:13 2023
+    Info: Processing ended: Fri Apr 28 15:54:04 2023
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
