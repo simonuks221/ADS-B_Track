@@ -61,7 +61,7 @@ begin
 buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(corr_buffer_update, DATA_IN, DATA_OUT_0, DATA_OUT_1, DATA_OUT_2, DATA_OUT_3, DATA_OUT_4,
 									DATA_OUT_5, DATA_OUT_6, DATA_OUT_7);
 
-DATA_IN <= 	ADC_BITS(7 downto 0);
+DATA_IN <= 	ADC_BITS(9 downto 2);
 
 --PREAMBULE_FOUND <= '1' when corr_value > 2000 else '0';
 
@@ -86,40 +86,40 @@ variable a : unsigned(7 downto 0);
 begin
 	--https://surf-vhdl.com/vhdl-for-loop-statement/ --Efficient Binary loop addition
 	for i in 0 to BUFFER_LENGTH-1 loop
-		a := DATA_OUT_0(i)&DATA_OUT_1(i)&DATA_OUT_2(i)&DATA_OUT_3(i)&DATA_OUT_4(i)&DATA_OUT_5(i)&DATA_OUT_6(i)&DATA_OUT_7(i);
+		a := DATA_OUT_7(i)&DATA_OUT_6(i)&DATA_OUT_5(i)&DATA_OUT_4(i)&DATA_OUT_3(i)&DATA_OUT_2(i)&DATA_OUT_1(i)&DATA_OUT_0(i);--DATA_OUT_0(i)&DATA_OUT_1(i)&DATA_OUT_2(i)&DATA_OUT_3(i)&DATA_OUT_4(i)&DATA_OUT_5(i)&DATA_OUT_6(i)&DATA_OUT_7(i);
 		vacc(i) := to_unsigned(to_integer(unsigned(a)),13);
 	end loop;
 	
 	--250ns velinimas bandymas: 0
 	
-	if(to_integer(unsigned(vacc(0))) > 150 and to_integer(unsigned(vacc(1))) > 150 and to_integer(unsigned(vacc(3))) > 150) then
+--	if(to_integer(unsigned(vacc(0))) > 150 and to_integer(unsigned(vacc(1))) > 150 and to_integer(unsigned(vacc(2))) > 150 and to_integer(unsigned(vacc(3))) > 150 and to_integer(unsigned(vacc(4))) > 150) then
+--		PREAMBULE_FOUND <= '1';
+--	else
+--		PREAMBULE_FOUND <= '0';
+--	end if;
+	
+	for i in 0 to (BUFFER_LENGTH/2)-1 loop
+		vacc1(i) := vacc(i*2)+vacc(i*2+1);
+	end loop; 
+	
+	for i in 0 to (BUFFER_LENGTH/4)-1 loop
+		vacc2(i) := vacc1(i*2)+vacc1(i*2+1);
+	end loop; --paliktas vienas 50tas
+	
+	for i in 0 to (BUFFER_LENGTH/8)-1 loop
+		vacc3(i) := vacc2(i*2)+vacc2(i*2+1);
+	end loop;
+	
+	for i in 0 to (BUFFER_LENGTH/16)-1 loop
+		vacc4(i) := vacc3(i*2)+vacc3(i*2+1);
+	end loop;
+--	
+	corr_value <= to_integer(vacc4(0)) + to_integer(vacc4(1));--+ to_integer(vacc1(24));
+	if(to_integer(vacc4(0)) + to_integer(vacc4(1)) > 2300) then
 		PREAMBULE_FOUND <= '1';
 	else
 		PREAMBULE_FOUND <= '0';
 	end if;
---	if(vacc(0) > 100) then
---		corr_value <= 10000;
---	else
---		corr_value <= 0;
---	end if;
-	
---	for i in 0 to (BUFFER_LENGTH/2)-1 loop
---		vacc1(i) := vacc(i*2)+vacc(i*2+1);
---	end loop; 
---	
---	for i in 0 to (BUFFER_LENGTH/4)-1 loop
---		vacc2(i) := vacc1(i*2)+vacc1(i*2+1);
---	end loop; --paliktas vienas 50tas
---	
---	for i in 0 to (BUFFER_LENGTH/8)-1 loop
---		vacc3(i) := vacc2(i*2)+vacc2(i*2+1);
---	end loop;
---	
---	for i in 0 to (BUFFER_LENGTH/16)-1 loop
---		vacc4(i) := vacc3(i*2)+vacc3(i*2+1);
---	end loop;
---	
---	corr_value <= to_integer(vacc4(0)) + to_integer(vacc4(1));--+ to_integer(vacc1(24));
 end process;
 
 --process(ADC_BITS_VALID)

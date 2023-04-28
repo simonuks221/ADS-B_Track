@@ -165,8 +165,8 @@ namespace PCKodas
             }
             else //Gautas LSB, sudedam LSB ir MSB
             {
-                //full_16bit = last_MSB * 256 + new_value; //MSB i kaire per 8, max gali buti 1024 vertes
-                full_16bit = new_value;
+                full_16bit = last_MSB * 256 + new_value; //MSB i kaire per 8, max gali buti 1024 vertes
+                //full_16bit = new_value;
                 received_data_length++;
                 received_data.Add(full_16bit);
 

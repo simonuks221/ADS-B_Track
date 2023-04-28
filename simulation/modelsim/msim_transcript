@@ -1,145 +1,26 @@
 # Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
-# do Uni_Projektas_run_msim_rtl_vhdl.do 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
+# do Uni_Projektas_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
 # }
-# vlib rtl_work
-# vmap work rtl_work
+# vlib gate_work
+# vmap work gate_work
 # Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd}
+# vcom -93 -work work {Uni_Projektas.vho}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
 # -- Compiling entity UNI_Projektas
-# -- Compiling architecture arc of UNI_Projektas
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Loading package MATH_REAL
-# -- Compiling entity UART_Controller
-# -- Compiling architecture arc of UART_Controller
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UART_TX
-# -- Compiling architecture arc of UART_TX
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity UART_FIFO_wizard
-# -- Compiling architecture SYN of uart_fifo_wizard
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_Controller
-# -- Compiling architecture arc of SPI_Controller
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity SPI_TX
-# -- Compiling architecture arc of SPI_TX
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity wizard_spi_fifo
-# -- Compiling architecture SYN of wizard_spi_fifo
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_Controller.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity MRAM_Controller
-# -- Compiling architecture arc of MRAM_Controller
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/State_manager.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity STATE_MANAGER
-# -- Compiling architecture arc of STATE_MANAGER
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Setup_manager
-# -- Compiling architecture arc of Setup_manager
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Read_adc_manager
-# -- Compiling architecture arc of Read_adc_manager
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Write_out_mram_manager
-# -- Compiling architecture arc of Write_out_mram_manager
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_pll.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity wizard_pll
-# -- Compiling architecture SYN of wizard_pll
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Corr_Buffer
-# -- Compiling architecture arc of CORR_BUFFER
-# vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Corr_Main
-# -- Compiling architecture arc of Corr_Main
+# -- Compiling architecture structure of UNI_Projektas
 # 
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -156,70 +37,67 @@
 # ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(183): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # ** Warning: [4] C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(187): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Testbenchas
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Testbenchas 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /i1=Uni_Projektas_vhd.sdo -L cycloneii -L gate_work -L work -voptargs="+acc"  Testbenchas
+# vsim +transport_int_delays +transport_path_delays -L cycloneii -L gate_work -L work -voptargs=\"+acc\" -sdftyp /i1=Uni_Projektas_vhd.sdo -t 1ps Testbenchas 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
 # Loading ieee.std_logic_textio(body)
 # Loading work.testbenchas(uni_projektas_arch)
-# Loading work.uni_projektas(arc)
-# Loading work.wizard_pll(syn)
-# Loading altera_mf.altera_device_families(body)
-# Loading altera_mf.mf_pllpack(body)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.uni_projektas(structure)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_ram_block(block_arch)
+# Loading cycloneii.cycloneii_ram_register(reg_arch)
+# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
 # Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading altera_mf.altpll(behavior)
-# Loading altera_mf.mf_stratixii_pll(vital_pll)
-# Loading altera_mf.arm_m_cntr(behave)
-# Loading altera_mf.arm_n_cntr(behave)
-# Loading altera_mf.arm_scale_cntr(behave)
-# Loading work.mram_controller(arc)
-# Loading work.state_manager(arc)
-# Loading work.setup_manager(arc)
-# Loading work.read_adc_manager(arc)
-# Loading work.write_out_mram_manager(arc)
-# Loading work.spi_controller(arc)
-# Loading work.wizard_spi_fifo(syn)
-# Loading altera_mf.scfifo(behavior)
-# Loading work.spi_tx(arc)
-# Loading ieee.math_real(body)
-# Loading work.uart_controller(arc)
-# Loading work.uart_tx(arc)
-# Loading work.uart_fifo_wizard(syn)
-# Loading work.corr_main(arc)
-# Loading work.corr_buffer(arc)
-# ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_pllpack(body)
+# Loading cycloneii.cycloneii_pll(vital_pll)
+# Loading cycloneii.cycloneii_m_cntr(behave)
+# Loading cycloneii.cycloneii_n_cntr(behave)
+# Loading cycloneii.cycloneii_scale_cntr(behave)
+# Loading instances from Uni_Projektas_vhd.sdo
+# Loading timing data from Uni_Projektas_vhd.sdo
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchas File: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
 # 
-#           Attempting to use alternate WLF file "./wlfta2acdt".
+#           Attempting to use alternate WLF file "./wlft1r6n60".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlfta2acdt
+#           Using alternate file: ./wlft1r6n60
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 30 us
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/corr_buffer_update
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_0
-run
-add wave -position end  sim:/testbenchas/i1/SPI_CS
-restart
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
+# ** Note: CycloneII PLL is enabled
+#    Time: 0 ps  Iteration: 1  Instance: /testbenchas/i1/\pl|altpll_component|pll\
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5786 ps  Iteration: 1  Instance: /testbenchas
+# ** Note: CycloneII PLL locked to incoming clock
+#    Time: 113771 ps  Iteration: 0  Instance: /testbenchas/i1/\pl|altpll_component|pll\
+# Break key hit 
+# Simulation stop requested.
