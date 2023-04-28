@@ -3,11 +3,11 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'CLK'
-Slack : -0.840
-TNS   : -4.774
+Slack : 0.859
+TNS   : 0.000
 
 Type  : Slow Model Setup 'CORR_BUFFER_UPDATE_CLK0'
-Slack : 0.887
+Slack : 13.150
 TNS   : 0.000
 
 Type  : Slow Model Hold 'CLK'
@@ -15,11 +15,7 @@ Slack : 0.499
 TNS   : 0.000
 
 Type  : Slow Model Hold 'CORR_BUFFER_UPDATE_CLK0'
-Slack : 0.732
-TNS   : 0.000
-
-Type  : Slow Model Minimum Pulse Width 'CORR_BUFFER_UPDATE_CLK0'
-Slack : 2.091
+Slack : 0.743
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'PLL_CLK0'
@@ -42,24 +38,24 @@ Type  : Slow Model Minimum Pulse Width 'ADC_DCLKA'
 Slack : 17.223
 TNS   : 0.000
 
-Type  : Fast Model Setup 'CORR_BUFFER_UPDATE_CLK0'
-Slack : 1.832
+Type  : Slow Model Minimum Pulse Width 'CORR_BUFFER_UPDATE_CLK0'
+Slack : 46.933
 TNS   : 0.000
 
 Type  : Fast Model Setup 'CLK'
-Slack : 7.173
+Slack : 7.953
+TNS   : 0.000
+
+Type  : Fast Model Setup 'CORR_BUFFER_UPDATE_CLK0'
+Slack : 14.779
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLK'
-Slack : -1.855
-TNS   : -19.437
-
-Type  : Fast Model Hold 'CORR_BUFFER_UPDATE_CLK0'
-Slack : 0.235
+Slack : 0.215
 TNS   : 0.000
 
-Type  : Fast Model Minimum Pulse Width 'CORR_BUFFER_UPDATE_CLK0'
-Slack : 2.333
+Type  : Fast Model Hold 'CORR_BUFFER_UPDATE_CLK0'
+Slack : 0.239
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'PLL_CLK0'
@@ -80,6 +76,10 @@ TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'ADC_DCLKA'
 Slack : 17.778
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CORR_BUFFER_UPDATE_CLK0'
+Slack : 47.873
 TNS   : 0.000
 
 ------------------------------------------------------------

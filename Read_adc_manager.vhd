@@ -40,7 +40,6 @@ begin
 	if rising_edge(CLK) then
 		if(EN_READ_ADC = '0') then
 			read_counter <= 0;
-			--READ_ADC_DONE <= '0';
 			MRAM_WRITE_DATA <= '0';
 			ADC_BIT_VALID <= '0';
 			address_counter <= 0;

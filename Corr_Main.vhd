@@ -74,7 +74,7 @@ MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_O
 CORR_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
 DATA_IN <= 	ADC_BITS(9 downto 2);
 
-PREAMBULE_FOUND <= '1' when corr_value > 600 else '0';
+PREAMBULE_FOUND <= '1' when corr_value > 3000 else '0';
 
 process(CLK)
 type size is array (0 to (BUFFER_LENGTH)-1) of unsigned(12 downto 0);
@@ -98,11 +98,12 @@ begin
 			a := DATA_OUT_7(i)&DATA_OUT_6(i)&DATA_OUT_5(i)&DATA_OUT_4(i)&DATA_OUT_3(i)&DATA_OUT_2(i)&DATA_OUT_1(i)&DATA_OUT_0(i);--DATA_OUT_0(i)&DATA_OUT_1(i)&DATA_OUT_2(i)&DATA_OUT_3(i)&DATA_OUT_4(i)&DATA_OUT_5(i)&DATA_OUT_6(i)&DATA_OUT_7(i);
 			vacc(i) := to_unsigned(to_integer(unsigned(a)),13);
 		end loop;
-		
-		
-		
 		--250ns velinimas bandymas: 0
 		
+		corr_value <= to_integer(unsigned(vacc(0))) + to_integer(unsigned(vacc(1)))+ to_integer(unsigned(vacc(2))) + to_integer(unsigned(vacc(3))) + to_integer(unsigned(vacc(4))) + 
+		to_integer(unsigned(vacc(10))) + to_integer(unsigned(vacc(11)))+ to_integer(unsigned(vacc(12))) + to_integer(unsigned(vacc(13))) + to_integer(unsigned(vacc(14))) + 
+		to_integer(unsigned(vacc(35))) + to_integer(unsigned(vacc(36)))+ to_integer(unsigned(vacc(37))) + to_integer(unsigned(vacc(38))) + to_integer(unsigned(vacc(39))) + 
+		to_integer(unsigned(vacc(45))) + to_integer(unsigned(vacc(46)))+ to_integer(unsigned(vacc(47))) + to_integer(unsigned(vacc(48))) + to_integer(unsigned(vacc(49)));
 	--	if(to_integer(unsigned(vacc(0))) > 150 and to_integer(unsigned(vacc(1))) > 150 and to_integer(unsigned(vacc(2))) > 150 and to_integer(unsigned(vacc(3))) > 150 and to_integer(unsigned(vacc(4))) > 150) then
 	--		PREAMBULE_FOUND <= '1';
 	--	else
@@ -175,7 +176,7 @@ end process;
 --		end if;
 --	end if;
 --end process;
---
+
 process(CLK)
 begin
 	if rising_edge(CLK) then
