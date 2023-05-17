@@ -100,7 +100,7 @@ variable a : signed(8 downto 0);
 begin
 	if(EN_CORR = '1') then
 	--https://surf-vhdl.com/vhdl-for-loop-statement/ --Efficient Binary loop addition
-		suma := 0;
+		--suma := 0;
 		for i in 0 to BUFFER_LENGTH-1 loop
 			a := DATA_OUT_8(i)&DATA_OUT_7(i)&DATA_OUT_6(i)&DATA_OUT_5(i)&DATA_OUT_4(i)&DATA_OUT_3(i)&DATA_OUT_2(i)&DATA_OUT_1(i)&DATA_OUT_0(i);--DATA_OUT_0(i)&DATA_OUT_1(i)&DATA_OUT_2(i)&DATA_OUT_3(i)&DATA_OUT_4(i)&DATA_OUT_5(i)&DATA_OUT_6(i)&DATA_OUT_7(i);
 			vacc(i) := to_signed(to_integer(a) * preambule_coef(i), 13) ;

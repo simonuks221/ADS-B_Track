@@ -199,10 +199,10 @@
 # 
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
 # 
-#           Attempting to use alternate WLF file "./wlftq13hve".
+#           Attempting to use alternate WLF file "./wlftiwrwyb".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftq13hve
+#           Using alternate file: ./wlftiwrwyb
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -213,261 +213,56 @@
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-run
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 189136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 198836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 200436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 200936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 205036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 206836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 206936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 208236666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 208336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212236666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 218536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 224036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/corr_value
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/energy
 restart
 run
 # ** Note: Cyclone II PLL is enabled
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 189136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 198836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 200436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 200936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 205036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 206836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 206936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 208236666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 208336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212236666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 218536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 224036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/preambule_coef
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buf_b0
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buf_b1
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buf_b2
 restart
 run
 # ** Note: Cyclone II PLL is enabled
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 189136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 198836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 200436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 200936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 205036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 206836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 206936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 208236666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 208336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212236666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 218536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 224036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Corr_Buffer
+# -- Compiling architecture arc of CORR_BUFFER
+restart
+# Loading work.corr_buffer(arc)
+# ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+run
+# ** Note: Cyclone II PLL is enabled
+#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
+# ** Note: Cyclone II PLL locked to incoming clock
+#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_0
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_1
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_2
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_3
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_4
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_5
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_6
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_7
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_8
+restart
+run
+# ** Note: Cyclone II PLL is enabled
+#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
+# ** Note: Cyclone II PLL locked to incoming clock
+#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/diff
 restart
 run
@@ -475,181 +270,6 @@ run
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 189136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 198836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 200436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 200936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 205036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 206836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 206936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 208236666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 208336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212236666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 218536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 224036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/DATA_OUT_0
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/DATA_OUT_1
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/DATA_OUT_2
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/DATA_OUT_3
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/DATA_OUT_4
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/DATA_OUT_5
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/DATA_OUT_6
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/DATA_OUT_7
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/DATA_OUT_8
-restart
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 189136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 198836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 199936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 200436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 200936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 201936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 202536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 204936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 205036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 206836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 206936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 208236666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 208336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 211936666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212136666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212236666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212636666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 212736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 218536666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221336666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221436666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221736666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 221836666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
-# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-#    Time: 224036666 ps  Iteration: 9  Instance: /testbenchas/i1/Corr_Main_1
 vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -669,22 +289,17 @@ run
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/BUFFER_LENGTH
-run
-# Break key hit 
-# Simulation stop requested.
-add wave -position end  sim:/testbenchas/adc_buffer_index
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity Corr_Main
-# -- Compiling architecture arc of Corr_Main
+# -- Compiling entity Corr_Buffer
+# -- Compiling architecture arc of CORR_BUFFER
 restart
-# Loading work.corr_main(arc)
+# Loading work.corr_buffer(arc)
 # ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
@@ -693,17 +308,17 @@ run
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity Corr_Main
-# -- Compiling architecture arc of Corr_Main
+# -- Compiling entity Corr_Buffer
+# -- Compiling architecture arc of CORR_BUFFER
 restart
-# Loading work.corr_main(arc)
+# Loading work.corr_buffer(arc)
 # ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
@@ -712,17 +327,17 @@ run
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity Corr_Main
-# -- Compiling architecture arc of Corr_Main
+# -- Compiling entity Corr_Buffer
+# -- Compiling architecture arc of CORR_BUFFER
 restart
-# Loading work.corr_main(arc)
+# Loading work.corr_buffer(arc)
 # ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
@@ -731,18 +346,17 @@ run
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity Corr_Main
-# -- Compiling architecture arc of Corr_Main
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/PREAMBULE_FOUND
+# -- Compiling entity Corr_Buffer
+# -- Compiling architecture arc of CORR_BUFFER
 restart
-# Loading work.corr_main(arc)
+# Loading work.corr_buffer(arc)
 # ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
@@ -751,36 +365,38 @@ run
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity Corr_Main
-# -- Compiling architecture arc of Corr_Main
+# -- Compiling entity Corr_Buffer
+# -- Compiling architecture arc of CORR_BUFFER
 restart
-# Loading work.corr_main(arc)
+# Loading work.corr_buffer(arc)
 # ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/v1
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/v2
 run
 # ** Note: Cyclone II PLL is enabled
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity Corr_Main
-# -- Compiling architecture arc of Corr_Main
+# -- Compiling entity Corr_Buffer
+# -- Compiling architecture arc of CORR_BUFFER
 restart
-# Loading work.corr_main(arc)
+# Loading work.corr_buffer(arc)
 # ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.

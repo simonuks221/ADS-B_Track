@@ -39,6 +39,12 @@ architecture arc of CORR_BUFFER is
 	signal buffer_7 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '0');
 	signal buffer_8 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '0');
 	signal diff : signed(BUFFER_WIDTH-1 downto 0) := (others => '0');
+	signal energy : integer := 0;
+	
+	signal v1 : signed(BUFFER_WIDTH -1 downto 0) := (others => '0');
+	signal v2 : signed(BUFFER_WIDTH -1 downto 0) := (others => '0');
+	signal v22 : signed(BUFFER_WIDTH -1 downto 0) := (others => '0');
+	
 begin
 
 DATA_OUT_0 <= buffer_0;
@@ -53,6 +59,25 @@ DATA_OUT_8 <= buffer_8;
 
 --buffer_before  0, 0, 1, 5, 6,  2,  0,  0
 --buffer         0, 0, 1, 5, 5, -3, -6, -2
+
+process(CLK)
+
+begin
+	if rising_edge(CLK) then
+		v1 <= buffer_8(0)&buffer_7(0)&buffer_6(0)&
+						buffer_5(0)&buffer_4(0)&buffer_3(0)&buffer_2(0)&
+						buffer_1(0)&buffer_0(0);
+		v2 <= buffer_8(BUFFER_LENGTH-1)&buffer_7(BUFFER_LENGTH-1)&buffer_6(BUFFER_LENGTH-1)&
+						buffer_5(BUFFER_LENGTH-1)&buffer_4(BUFFER_LENGTH-1)&buffer_3(BUFFER_LENGTH-1)&buffer_2(BUFFER_LENGTH-1)&
+						buffer_1(BUFFER_LENGTH-1)&buffer_0(BUFFER_LENGTH-1);
+		v22 <= v2;
+		energy <= energy + to_integer(abs(v1)) - to_integer(abs(v22));
+		--energy <= energy - to_integer(abs(v2));
+		--energy <= energy - to_integer(signed(buffer_8(BUFFER_LENGTH-1)&buffer_7(BUFFER_LENGTH-1)&buffer_6(BUFFER_LENGTH-1)&
+		--							buffer_5(BUFFER_LENGTH-1)&buffer_4(BUFFER_LENGTH-1)&buffer_3(BUFFER_LENGTH-1)&buffer_2(BUFFER_LENGTH-1)&
+		--							buffer_1(BUFFER_LENGTH-1)&buffer_0(BUFFER_LENGTH-1)));
+	end if;
+end process;
 
 process(CLK)
 begin
@@ -71,15 +96,6 @@ begin
 		buffer_6 <= buffer_6(BUFFER_LENGTH - 2 downto 0) & diff(6);
 		buffer_7 <= buffer_7(BUFFER_LENGTH - 2 downto 0) & diff(7);
 		buffer_8 <= buffer_8(BUFFER_LENGTH - 2 downto 0) & diff(8);
-		
---		buffer_0 <= buffer_0(BUFFER_LENGTH - 2 downto 0) & DATA_IN(0);
---		buffer_1 <= buffer_1(BUFFER_LENGTH - 2 downto 0) & DATA_IN(1);
---		buffer_2 <= buffer_2(BUFFER_LENGTH - 2 downto 0) & DATA_IN(2);
---		buffer_3 <= buffer_3(BUFFER_LENGTH - 2 downto 0) & DATA_IN(3);
---		buffer_4 <= buffer_4(BUFFER_LENGTH - 2 downto 0) & DATA_IN(4);
---		buffer_5 <= buffer_5(BUFFER_LENGTH - 2 downto 0) & DATA_IN(5);
---		buffer_6 <= buffer_6(BUFFER_LENGTH - 2 downto 0) & DATA_IN(6);
---		buffer_7 <= buffer_7(BUFFER_LENGTH - 2 downto 0) & DATA_IN(7);
 	end if;
 end process;
 
