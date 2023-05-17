@@ -81,20 +81,20 @@ MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_O
 CORR_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
 DATA_IN <='0'&ADC_BITS(9 downto 2);
 
-PREAMBULE_FOUND <= '1' when corr_value > 3000 else '0';
+PREAMBULE_FOUND <= '1' when corr_value > 460 or corr_value = 460 else '0';
 
 process(CLK)
-type size is array (BUFFER_LENGTH-1 downto 0) of signed(12 downto 0);
---type size1 is array (0 to (BUFFER_LENGTH/2)-1) of signed(12 downto 0);
---type size2 is array (0 to (BUFFER_LENGTH/4)-1) of signed(12 downto 0);
---type size3 is array (0 to (BUFFER_LENGTH/8)-1) of signed(12 downto 0);
---type size4 is array (0 to (BUFFER_LENGTH/16)-1) of signed(12 downto 0);
+type size is array (0 to   BUFFER_LENGTH-1) of signed(12 downto 0);
+type size1 is array (0 to (BUFFER_LENGTH/2)-1) of signed(12 downto 0);
+type size2 is array (0 to (BUFFER_LENGTH/4)-1) of signed(12 downto 0);
+type size3 is array (0 to (BUFFER_LENGTH/8)-1) of signed(12 downto 0);
+type size4 is array (0 to (BUFFER_LENGTH/16)-1) of signed(12 downto 0);
 
 variable vacc : size; --50
---variable vacc1 : size1; --25
---variable vacc2 : size2; --12 --paliktas vienas
---variable vacc3 : size3; --6
---variable vacc4 : size4; --3
+variable vacc1 : size1; --25
+variable vacc2 : size2; --12 --paliktas vienas
+variable vacc3 : size3; --6
+variable vacc4 : size4; --3
 
 variable a : signed(8 downto 0);
 variable suma : integer range -50000 to 50000 := 0;
@@ -107,7 +107,7 @@ begin
 			vacc(i) := to_signed(to_integer(a) * preambule_coef(i), 13) ;
 			suma := suma + to_integer(vacc(i));
 		end loop;
-		corr_value <= suma;
+		--corr_value <= suma;
 		--250ns velinimas bandymas: 0
 		
 --		corr_value <= to_integer(unsigned(vacc(0))) + to_integer(unsigned(vacc(1)))+ to_integer(unsigned(vacc(2))) + to_integer(unsigned(vacc(3))) + to_integer(unsigned(vacc(4))) + 
@@ -120,23 +120,23 @@ begin
 	--		PREAMBULE_FOUND <= '0';
 	--	end if;
 		
---		for i in 0 to (BUFFER_LENGTH/2)-1 loop
---			vacc1(i) := vacc(i*2)+vacc(i*2+1);
---		end loop; 
---		
---		for i in 0 to (BUFFER_LENGTH/4)-1 loop
---			vacc2(i) := vacc1(i*2)+vacc1(i*2+1); --24 nepaimam
---		end loop; --paliktas vienas 50tas
---		
---		for i in 0 to (BUFFER_LENGTH/8)-1 loop
---			vacc3(i) := vacc2(i*2)+vacc2(i*2+1);
---		end loop;
---		
---		for i in 0 to (BUFFER_LENGTH/16)-1 loop
---			vacc4(i) := vacc3(i*2)+vacc3(i*2+1);
---		end loop;
+		for i in 0 to (BUFFER_LENGTH/2)-1 loop
+			vacc1(i) := vacc(i*2)+vacc(i*2+1);
+		end loop; 
 		
-		--corr_value <= to_integer(vacc4(0)) + to_integer(vacc4(1)) +  to_integer(vacc1(24));--+ to_integer(vacc2(11))+ to_integer(vacc3(6));
+		for i in 0 to (BUFFER_LENGTH/4)-1 loop
+			vacc2(i) := vacc1(i*2)+vacc1(i*2+1); --24 nepaimam
+		end loop; --paliktas vienas 50tas
+		
+		for i in 0 to (BUFFER_LENGTH/8)-1 loop
+			vacc3(i) := vacc2(i*2)+vacc2(i*2+1);
+		end loop;
+		
+		for i in 0 to (BUFFER_LENGTH/16)-1 loop
+			vacc4(i) := vacc3(i*2)+vacc3(i*2+1);
+		end loop;
+		
+		corr_value <= to_integer(vacc4(0)) + to_integer(vacc4(1)) + to_integer(vacc4(2))+ to_integer(vacc1(24));--+ to_integer(vacc2(11))+ to_integer(vacc3(6));
 		--corr_value <= to_integer(vacc(0)) + to_integer(vacc(1)) + to_integer(vacc(5))*(-1) + to_integer(vacc(6))* (-1) + to_integer(vacc(10)) + to_integer(vacc(11)) + 
 			--to_integer(vacc(15))* (-1) + to_integer(vacc(16))*(-1) + to_integer(vacc(33)) + to_integer(vacc(34)) + to_integer(vacc(38))*(-1) +  to_integer(vacc(39))*(-1) + 
 			--to_integer(vacc(43)) + to_integer(vacc(44)) + to_integer(vacc(48))*(-1) + to_integer(vacc(49))*(-1);
