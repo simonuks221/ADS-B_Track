@@ -119,8 +119,10 @@ port (
 	READ_ADC_DONE : in std_logic := '0';
 	WRITE_OUT_DONE : in std_logic := '0';
 	
+	EN_SETUP : out std_logic := '1';
 	EN_READ_ADC : out std_logic := '0';
-	EN_WRITE_OUT_MRAM : out std_logic := '0'
+	EN_WRITE_OUT_MRAM : out std_logic := '0';
+	EN_CORR : out std_logic := '0'
 	
 );
 end component;
@@ -221,7 +223,7 @@ signal READ_ADC_DONE : std_logic := '0';
 signal WRITE_OUT_DONE : std_logic := '0';
 signal CORR_DONE : std_logic := '0';
 
-signal EN_SETUP : std_logic := '1';
+signal EN_SETUP : std_logic := '0';
 signal EN_READ_ADC : std_logic := '0';
 signal EN_WRITE_OUT_MRAM : std_logic := '0';
 signal EN_CORR : std_logic := '0';
@@ -251,7 +253,7 @@ this_mram_controller : MRAM_Controller port map(CLK => CLK_160, data_in => MRAM_
 							MRAM_WRITE_EN => MRAM_WRITE_EN, MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_A => MRAM_A, MRAM_D => MRAM_D);
 
 this_state_manager : state_manager port map (CLK => CLK_160, SETUP_DONE => SETUP_DONE, READ_ADC_DONE => READ_ADC_DONE, WRITE_OUT_DONE => WRITE_OUT_DONE, 
-							EN_READ_ADC => EN_READ_ADC, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM);
+							EN_READ_ADC => EN_READ_ADC, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, EN_SETUP => EN_SETUP, EN_CORR => EN_CORR);
 this_setup_manager : setup_manager port map(CLK => CLK_160, EN_SETUP => EN_SETUP, SPI_send_data => ADC_SPI_Send_data, SPI_send_irq => ADC_SPI_Send_irq1, SETUP_DONE => SETUP_DONE,
 							SPI_FIFO_EMPTY => ADC_SPI_fifo_empty, ADC_SYNC => ADC_SYNC);
 --this_read_adc_manager : read_adc_manager generic map(MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS)
@@ -277,7 +279,7 @@ UART_Controller_1 : UART_Controller generic map(BAUD_RATE_PRESCALER => BAUD_RATE
 							
 Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 50, BUFFER_WIDTH => 9, MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS) port map(CLK => CLK_160, ADC_BITS => ADC_BITS_OUT, 
 								ADC_BITS_VALID => ADC_BIT_VALID, PREAMBULE_FOUND => SPI_CS, MRAM_DATA_OUT => MRAM_DATA_IN, 
-							MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA, MRAM_DONE => MRAM_DONE, EN_CORR => EN_READ_ADC, 
+							MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA, MRAM_DONE => MRAM_DONE, EN_CORR => EN_CORR, 
 							CORR_DONE => CORR_DONE);		
 
 process(CLK_160)

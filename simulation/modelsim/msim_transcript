@@ -199,10 +199,10 @@
 # 
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
 # 
-#           Attempting to use alternate WLF file "./wlftiwrwyb".
+#           Attempting to use alternate WLF file "./wlft8t5ac7".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftiwrwyb
+#           Using alternate file: ./wlft8t5ac7
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -213,193 +213,13 @@
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/energy
+add wave -position end  sim:/testbenchas/i1/EN_SETUP
+add wave -position end  sim:/testbenchas/i1/EN_READ_ADC
+add wave -position end  sim:/testbenchas/i1/EN_WRITE_OUT_MRAM
+add wave -position end  sim:/testbenchas/i1/EN_CORR
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/PREAMBULE_FOUND
+add wave -position end  sim:/testbenchas/i1/Corr_Main_1/corr_value
 restart
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buf_b0
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buf_b1
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buf_b2
-restart
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Corr_Buffer
-# -- Compiling architecture arc of CORR_BUFFER
-restart
-# Loading work.corr_buffer(arc)
-# ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_0
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_1
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_2
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_3
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_4
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_5
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_6
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_7
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/buffer_8
-restart
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/diff
-restart
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Corr_Main
-# -- Compiling architecture arc of Corr_Main
-restart
-# Loading work.corr_main(arc)
-# ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Corr_Buffer
-# -- Compiling architecture arc of CORR_BUFFER
-restart
-# Loading work.corr_buffer(arc)
-# ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Corr_Buffer
-# -- Compiling architecture arc of CORR_BUFFER
-restart
-# Loading work.corr_buffer(arc)
-# ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Corr_Buffer
-# -- Compiling architecture arc of CORR_BUFFER
-restart
-# Loading work.corr_buffer(arc)
-# ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Corr_Buffer
-# -- Compiling architecture arc of CORR_BUFFER
-restart
-# Loading work.corr_buffer(arc)
-# ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Corr_Buffer
-# -- Compiling architecture arc of CORR_BUFFER
-restart
-# Loading work.corr_buffer(arc)
-# ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/v1
-add wave -position end  sim:/testbenchas/i1/Corr_Main_1/buff/v2
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Corr_Buffer
-# -- Compiling architecture arc of CORR_BUFFER
-restart
-# Loading work.corr_buffer(arc)
-# ** Warning: Design size of 32 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
 run
 # ** Note: Cyclone II PLL is enabled
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3

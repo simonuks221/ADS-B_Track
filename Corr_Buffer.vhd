@@ -72,10 +72,6 @@ begin
 						buffer_1(BUFFER_LENGTH-1)&buffer_0(BUFFER_LENGTH-1);
 		v22 <= v2;
 		energy <= energy + to_integer(abs(v1)) - to_integer(abs(v22));
-		--energy <= energy - to_integer(abs(v2));
-		--energy <= energy - to_integer(signed(buffer_8(BUFFER_LENGTH-1)&buffer_7(BUFFER_LENGTH-1)&buffer_6(BUFFER_LENGTH-1)&
-		--							buffer_5(BUFFER_LENGTH-1)&buffer_4(BUFFER_LENGTH-1)&buffer_3(BUFFER_LENGTH-1)&buffer_2(BUFFER_LENGTH-1)&
-		--							buffer_1(BUFFER_LENGTH-1)&buffer_0(BUFFER_LENGTH-1)));
 	end if;
 end process;
 

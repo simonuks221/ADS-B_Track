@@ -10,15 +10,17 @@ port (
 	SETUP_DONE : in std_logic := '0';
 	READ_ADC_DONE : in std_logic := '0';
 	WRITE_OUT_DONE : in std_logic := '0';
+	CORR_DONE : in std_logic := '0';
 	
 	EN_SETUP : out std_logic := '1';
 	EN_READ_ADC : out std_logic := '0';
-	EN_WRITE_OUT_MRAM : out std_logic := '0'
+	EN_WRITE_OUT_MRAM : out std_logic := '0';
+	EN_CORR : out std_logic := '0'
 );
 end entity;
 
 architecture arc of STATE_MANAGER is
-type state is (setup, read_adc, write_out_mram, wait_1);
+type state is (setup, read_adc,wait_1, write_out_mram);
 signal curr_state : state := setup;
 signal counter : integer := 0;
 
@@ -26,23 +28,20 @@ begin
 
 process(curr_state)
 begin
+	EN_SETUP <= '0';
+	EN_CORR <= '0';
+	EN_READ_ADC <= '0';
+	EN_WRITE_OUT_MRAM <= '0';
 	case curr_state is
 		when setup =>
 			EN_SETUP <= '1';
-			EN_READ_ADC <= '0';
-			EN_WRITE_OUT_MRAM <= '0';
 		when read_adc =>
-			EN_SETUP <= '0';
 			EN_READ_ADC <= '1';
-			EN_WRITE_OUT_MRAM <= '0';
+			EN_CORR <= '1';
+		when wait_1 =>
+		
 		when write_out_mram =>
-			EN_SETUP <= '0';
-			EN_READ_ADC <= '0';
 			EN_WRITE_OUT_MRAM <= '1';
-		when others =>
-			EN_SETUP <= '0';
-			EN_READ_ADC <= '0';
-			EN_WRITE_OUT_MRAM <= '0';
 	end case;
 end process;
 
@@ -56,7 +55,7 @@ begin
 					--curr_state <= write_out_mram;
 				end if;
 			when read_adc =>
-				if(READ_ADC_DONE = '1') then
+				if(READ_ADC_DONE = '1' and CORR_DONE = '1') then
 					curr_state <= wait_1;
 				end if;
 			when wait_1 =>

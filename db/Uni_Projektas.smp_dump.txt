@@ -29,11 +29,11 @@ curr_state.transmiting 0 1 0 1
 curr_state.cs_up 1 0 0 1 
 
 State Machine - |UNI_Projektas|STATE_MANAGER:this_state_manager|curr_state
-Name curr_state.wait_1 curr_state.write_out_mram curr_state.read_adc curr_state.setup 
+Name curr_state.write_out_mram curr_state.wait_1 curr_state.read_adc curr_state.setup 
 curr_state.setup 0 0 0 0 
 curr_state.read_adc 0 0 1 1 
-curr_state.write_out_mram 0 1 0 1 
-curr_state.wait_1 1 0 0 1 
+curr_state.wait_1 0 1 0 1 
+curr_state.write_out_mram 1 0 0 1 
 
 State Machine - |UNI_Projektas|MRAM_Controller:this_mram_controller|curr_state
 Name curr_state.writing curr_state.reading curr_state.idle 
