@@ -71,6 +71,14 @@ signal read_counter : integer range 0 to 15 := 0;
 signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS+5 := 0;
 signal real_data_counter : integer range 0 to 255 := 255;
 
+type state is (corr_pream, corr_bit, corr_crc);
+signal curr_state : state := corr_pream;
+
+signal pream_found : std_logic := '0';
+signal pream_found2 : std_logic := '0';
+signal check_corr : integer range 0 to 10 := 0;
+--signal check_c : std_logic := '0';
+
 begin
 
 buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(corr_buffer_update, DATA_IN, DATA_OUT_0, DATA_OUT_1, DATA_OUT_2, DATA_OUT_3, DATA_OUT_4,
@@ -80,9 +88,44 @@ MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_O
 CORR_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
 DATA_IN <='0'&ADC_BITS(9 downto 2);
 
-PREAMBULE_FOUND <= '1' when corr_value > 460 or corr_value = 460 else '0';
+--PREAMBULE_FOUND <= '1' when (corr_value > 460 or corr_value = 460) else '0';
 
 process(CLK)
+begin
+	if rising_edge(CLK) then
+		if(ADC_BITS_VALID = '1') then
+			corr_buffer_update <= '1';
+		else
+			corr_buffer_update <= '0';
+		end if;
+	end if;
+end process;
+
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		PREAMBULE_FOUND <= '0';
+		if(check_corr = 0) then
+			if(corr_buffer_update = '1') then
+				check_corr <= 1;
+			else
+				check_corr <= 0;
+			end if;
+		else
+			check_corr <= check_corr +1;
+			if(check_corr = 2) then
+				check_corr <= 0;
+				if corr_value > 460 or corr_value = 460 then
+					PREAMBULE_FOUND <= '1';
+				else
+					PREAMBULE_FOUND <= '0';
+				end if;
+			end if;
+		end if;
+	end if;
+end process;
+
+process(DATA_OUT_8, DATA_OUT_7, DATA_OUT_6, DATA_OUT_5, DATA_OUT_4, DATA_OUT_3, DATA_OUT_2, DATA_OUT_1, DATA_OUT_0, EN_CORR)
 type size is array (0 to   BUFFER_LENGTH-1) of signed(12 downto 0);
 type size1 is array (0 to (BUFFER_LENGTH/2)-1) of signed(12 downto 0);
 type size2 is array (0 to (BUFFER_LENGTH/4)-1) of signed(12 downto 0);
@@ -95,11 +138,14 @@ variable vacc2 : size2; --12 --paliktas vienas
 variable vacc3 : size3; --6
 variable vacc4 : size4; --3
 
+variable vacc51 : signed(12 downto 0) := (others => '0');
+variable vacc52 : signed(12 downto 0) := (others => '0');
+
 variable a : signed(8 downto 0);
 --variable suma : integer range -50000 to 50000 := 0;
 begin
 	if(EN_CORR = '1') then
-	--https://surf-vhdl.com/vhdl-for-loop-statement/ --Efficient Binary loop addition
+		--https://surf-vhdl.com/vhdl-for-loop-statement/ --Efficient Binary loop addition
 		--suma := 0;
 		for i in 0 to BUFFER_LENGTH-1 loop
 			a := DATA_OUT_8(i)&DATA_OUT_7(i)&DATA_OUT_6(i)&DATA_OUT_5(i)&DATA_OUT_4(i)&DATA_OUT_3(i)&DATA_OUT_2(i)&DATA_OUT_1(i)&DATA_OUT_0(i);--DATA_OUT_0(i)&DATA_OUT_1(i)&DATA_OUT_2(i)&DATA_OUT_3(i)&DATA_OUT_4(i)&DATA_OUT_5(i)&DATA_OUT_6(i)&DATA_OUT_7(i);
@@ -122,8 +168,10 @@ begin
 		for i in 0 to (BUFFER_LENGTH/16)-1 loop
 			vacc4(i) := vacc3(i*2)+vacc3(i*2+1);
 		end loop;
-		
-		corr_value <= to_integer(vacc4(0)) + to_integer(vacc4(1)) + to_integer(vacc4(2))+ to_integer(vacc1(24));
+		vacc51 := vacc4(0) + vacc4(1);
+		vacc52 := vacc4(2) + vacc1(24);
+		--corr_value <= to_integer() + to_integer() + to_integer()+ to_integer();
+		corr_value <= to_integer(vacc51) + to_integer(vacc52);
 	else
 		corr_value <= 0;
 	end if;
@@ -132,8 +180,9 @@ end process;
 process(CLK)
 begin
 	if rising_edge(CLK) then
+		MRAM_DATA_OUT <= "0000" & std_logic_vector(to_signed(corr_value, 12));
 		if(EN_CORR = '0') then
-		read_counter <= 0;
+			read_counter <= 0;
 			MRAM_WRITE_DATA <= '0';
 			address_counter <= 0;
 		else
@@ -141,14 +190,11 @@ begin
 				if(MRAM_DONE = '1') then
 					read_counter <= 0;
 					address_counter <= address_counter + 1;
-					
 					if(real_data_counter = 0) then
 						real_data_counter <= 255;
 					else
 						real_data_counter <= real_data_counter - 1;
 					end if;
-
-					MRAM_DATA_OUT <= "0000" & std_logic_vector(to_signed(corr_value, 12));
 					MRAM_WRITE_DATA <= '1';
 				else
 					MRAM_WRITE_DATA <= '0';
@@ -174,16 +220,16 @@ end process;
 --	end if;
 --end process;
 
-process(CLK)
-begin
-	if rising_edge(CLK) then
-		if(ADC_BITS_VALID = '1') then
-			corr_buffer_update <= '1';
-		else
-			corr_buffer_update <= '0';
-		end if;
-	end if;
-end process;
+--process(CLK)
+--begin
+--	if rising_edge(CLK) then
+--		if(ADC_BITS_VALID = '1') then
+--			corr_buffer_update <= '1';
+--		else
+--			corr_buffer_update <= '0';
+--		end if;
+--	end if;
+--end process;
 									
 						
 
