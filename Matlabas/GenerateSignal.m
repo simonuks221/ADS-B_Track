@@ -50,7 +50,7 @@ function [idealSignal, noisySignal, discretizedSignal, ADCsignal, ADCpreambule] 
     
     triuksmasFiltruotas = filter(Hd, triuksmas);
     noisySignal = noisySignal1 + triuksmasFiltruotas;
-    snr(noisySignal1, triuksmasFiltruotas)
+    snr(noisySignal1, triuksmasFiltruotas);
 
     %Diskretizuotas
     discretizedSignal = DiscretizeSignal(noisySignal);
