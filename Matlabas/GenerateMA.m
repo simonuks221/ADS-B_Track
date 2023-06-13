@@ -1,13 +1,13 @@
 function y = GenerateMA(signal, amount)
-    naujas = [];
+    naujas = zeros(1, length(signal));
     for i = 1:amount
         naujasMA = sum(signal(1:i))/amount;
-        naujas = [naujas, naujasMA];
+        naujas(i) = naujasMA;
     end
 
     for i = amount+1:length(signal)
         naujasMA = sum(signal(i-amount+1:i))/amount;
-        naujas = [naujas, naujasMA];
+        naujas(i) = naujasMA;
     end
     y = naujas;
 end

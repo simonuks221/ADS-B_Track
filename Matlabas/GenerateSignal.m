@@ -12,8 +12,9 @@ function [idealSignal, noisySignal, discretizedSignal, ADCsignal, ADCpreambule, 
     idealSignal = [idealPreambule, zeros(1, round(3E-6/tdiskret*tprescaler)), zeros(1, length(idealZero)*(strlength(bits)-5))]; %500+300+100*strlen
     
     pridejimoVietaPradzia = 800;
+    bituSkaicius = strlength(bits);
 
-    for i = 1 : strlength(bits)
+    for i = 1 : bituSkaicius
         %random = round(1 + 10*randn(1)); %Jitteris
         %random = 0; %Be jitterio
         if(bits{1}(i) == "0")
@@ -52,18 +53,27 @@ function [idealSignal, noisySignal, discretizedSignal, ADCsignal, ADCpreambule, 
     nufiltruotasSignalas = filter(Hd, idealSignal);
     %Triuksmo generavimas
     vid = 0;
-    std = 1;
+    std = 2;
     %vid = 0;
     %std = 0;
     %triuksmas = vid + std*randn(1, N);
-    triuksmas = vid + std*randn(1, length(nufiltruotasSignalas));
+    %triuksmas = vid + std*rand(1, length(nufiltruotasSignalas));
+    triuksmas = rand(1, length(nufiltruotasSignalas))*2.5-1;
+    figure
     
+
+    naudingoSignaloPradzia = 2500;
+    naudingoSignaloPabaiga = naudingoSignaloPradzia+500+300+bituSkaicius*length(idealZero)+100; %pradzia+preambule+pauze+duomenys+uodega
+    
+    %naudingoSignaloPradzia = 1;
+    %naudingoSignaloPabaiga = length(nufiltruotasSignalas); %TESTAVIMUI
+
     triuksmasFiltruotas = filter(Hd, triuksmas);
     noisySignal = nufiltruotasSignalas + triuksmasFiltruotas;
-    signalSNR_db = snr(nufiltruotasSignalas(2500:4000), triuksmasFiltruotas(2500:4000));
+    signalSNR_db = snr(nufiltruotasSignalas(naudingoSignaloPradzia:naudingoSignaloPabaiga), triuksmasFiltruotas(naudingoSignaloPradzia:naudingoSignaloPabaiga));
     %signalSNR_db = snr(nufiltruotasSignalas, triuksmasFiltruotas(250:length(nufiltruotasSignalas)));
     %figure
-    %plot(nufiltruotasSignalas(2500:4000))
+    %plot(nufiltruotasSignalas(naudingoSignaloPradzia:naudingoSignaloPabaiga))
     %hold on
     %plot(triuksmasFiltruotas(2500:4000))
     
