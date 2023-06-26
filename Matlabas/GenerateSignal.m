@@ -60,13 +60,12 @@ function [idealSignal, noisySignal, discretizedSignal, ADCsignal, ADCpreambule, 
     %triuksmas = vid + std*rand(1, length(nufiltruotasSignalas));
     triuksmas = rand(1, length(nufiltruotasSignalas))*2.5-1;
     figure
-    
 
     naudingoSignaloPradzia = 2500;
     naudingoSignaloPabaiga = naudingoSignaloPradzia+500+300+bituSkaicius*length(idealZero)+100; %pradzia+preambule+pauze+duomenys+uodega
     
-    %naudingoSignaloPradzia = 1;
-    %naudingoSignaloPabaiga = length(nufiltruotasSignalas); %TESTAVIMUI
+    naudingoSignaloPradzia = 2500;
+    naudingoSignaloPabaiga = naudingoSignaloPradzia+500; %TESTAVIMUI
 
     triuksmasFiltruotas = filter(Hd, triuksmas);
     noisySignal = nufiltruotasSignalas + triuksmasFiltruotas;
