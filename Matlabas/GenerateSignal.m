@@ -53,12 +53,12 @@ function [idealSignal, noisySignal, discretizedSignal, ADCsignal, ADCpreambule, 
     nufiltruotasSignalas = filter(Hd, idealSignal);
     %Triuksmo generavimas
     vid = 0;
-    std = 2;
+    std = 1;
     %vid = 0;
     %std = 0;
     %triuksmas = vid + std*randn(1, N);
     %triuksmas = vid + std*rand(1, length(nufiltruotasSignalas));
-    triuksmas = rand(1, length(nufiltruotasSignalas))*2.5-1;
+    triuksmas = rand(1, length(nufiltruotasSignalas))*1.5-0.6;
     figure
 
     naudingoSignaloPradzia = 2500;
