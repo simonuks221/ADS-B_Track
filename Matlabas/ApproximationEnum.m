@@ -3,6 +3,6 @@ classdef ApproximationEnum < uint32
       mean (1)
       minQuantile (2)
       maxQuantile (3)
-        last(3)
+      last(3)
    end
 end

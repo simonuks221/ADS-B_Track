@@ -1,7 +1,8 @@
 classdef ApproximationType
    properties 
        name,
-       coeficients
+       coeficients,
+       minEnergy
    end
    methods
        function this = ApproximationType(name, coeficients)

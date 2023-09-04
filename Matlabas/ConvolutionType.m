@@ -3,7 +3,7 @@ classdef ConvolutionType
        name,
        convPreambule,
        expectedMaximum,
-       diffAmount
+       diffAmount,
    end
    methods
        function this = ConvolutionType(name, expectedMaximum, diffAmount)
