@@ -6,8 +6,8 @@ use ieee.std_logic_textio.all;
 
 entity UNI_Projektas is --Up to 260MHz operation
 generic (
-	BAUD_RATE_PRESCALER : integer := 1302; --434 arba  kad 115200 baud reitui toki prescaleri naudojam 
-	MAX_ADDRESS_COUNTS : integer :=  10000;
+	BAUD_RATE : integer := 115200;
+	MAX_ADDRESS_COUNTS : integer := 10;
 	SEND_CLK_COUNTER_MAX : integer := 30
 );
 port(
@@ -55,7 +55,7 @@ architecture arc of UNI_Projektas is
 
 component UART_Controller is
 generic(
-	BAUD_RATE_PRESCALER : integer := 9600
+	BAUD_RATE : integer := 9600
 );
 port(
 	CLK: in std_logic;
@@ -118,12 +118,12 @@ port (
 	SETUP_DONE : in std_logic := '0';
 	READ_ADC_DONE : in std_logic := '0';
 	WRITE_OUT_DONE : in std_logic := '0';
+	CORR_DONE : in std_logic := '0';
 	
 	EN_SETUP : out std_logic := '1';
 	EN_READ_ADC : out std_logic := '0';
 	EN_WRITE_OUT_MRAM : out std_logic := '0';
 	EN_CORR : out std_logic := '0'
-	
 );
 end component;
 
@@ -201,7 +201,7 @@ port(
 );
 end component;
 
-signal CLK_160 : std_logic  := '0';
+signal CLK_150 : std_logic  := '0';
 
 --ADC
 signal ADC_BIT_VALID : std_logic := '0';
@@ -244,47 +244,46 @@ signal UART_FIFO_EMPTY : std_logic := '0';
 
 begin
 
-pl : wizard_pll port map(inclk0 => CLK, c0 => CLK_160); --160MHz
+pl : wizard_pll port map(inclk0 => CLK, c0 => CLK_150); --160MHz
 ADC_SHDN <= '0';
 ADC_CLK <= CLK;
 
-this_mram_controller : MRAM_Controller port map(CLK => CLK_160, data_in => MRAM_DATA_IN, data_out => MRAM_DATA_OUT, address_in_write => MRAM_ADDRESS_IN_WRITE, address_in_read => MRAM_ADDRESS_IN_READ, 
+this_mram_controller : MRAM_Controller port map(CLK => CLK_150, data_in => MRAM_DATA_IN, data_out => MRAM_DATA_OUT, address_in_write => MRAM_ADDRESS_IN_WRITE, address_in_read => MRAM_ADDRESS_IN_READ, 
 							write_data => MRAM_WRITE_DATA, read_data => MRAM_READ_DATA, done => MRAM_DONE, MRAM_EN => MRAM_EN, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,
 							MRAM_WRITE_EN => MRAM_WRITE_EN, MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_A => MRAM_A, MRAM_D => MRAM_D);
 
-this_state_manager : state_manager port map (CLK => CLK_160, SETUP_DONE => SETUP_DONE, READ_ADC_DONE => READ_ADC_DONE, WRITE_OUT_DONE => WRITE_OUT_DONE, 
-							EN_READ_ADC => EN_READ_ADC, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, EN_SETUP => EN_SETUP, EN_CORR => EN_CORR);
-this_setup_manager : setup_manager port map(CLK => CLK_160, EN_SETUP => EN_SETUP, SPI_send_data => ADC_SPI_Send_data, SPI_send_irq => ADC_SPI_Send_irq1, SETUP_DONE => SETUP_DONE,
+this_state_manager : state_manager port map (CLK => CLK_150, SETUP_DONE => SETUP_DONE, READ_ADC_DONE => READ_ADC_DONE, WRITE_OUT_DONE => WRITE_OUT_DONE, EN_READ_ADC => EN_READ_ADC, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, EN_SETUP => EN_SETUP, EN_CORR => EN_CORR, CORR_DONE => CORR_DONE);
+this_setup_manager : setup_manager port map(CLK => CLK_150, EN_SETUP => EN_SETUP, SPI_send_data => ADC_SPI_Send_data, SPI_send_irq => ADC_SPI_Send_irq1, SETUP_DONE => SETUP_DONE,
 							SPI_FIFO_EMPTY => ADC_SPI_fifo_empty, ADC_SYNC => ADC_SYNC);
 --this_read_adc_manager : read_adc_manager generic map(MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS)
---							port map(CLK => CLK_160, DCLK => ADC_DCLKA, ADC_BIT => ADC_BIT_A, MRAM_DATA_OUT => MRAM_DATA_IN, 
+--							port map(CLK => CLK_150, DCLK => ADC_DCLKA, ADC_BIT => ADC_BIT_A, MRAM_DATA_OUT => MRAM_DATA_IN, 
 --							MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA, MRAM_DONE => MRAM_DONE, EN_READ_ADC => EN_READ_ADC,
 --							READ_ADC_DONE => READ_ADC_DONE, ADC_BIT_VALID => ADC_BIT_VALID);
 
 this_read_adc_manager : read_adc_manager generic map(MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS)
-							port map(CLK => CLK_160, DCLK => ADC_DCLKA, ADC_BIT => ADC_BIT_A, EN_READ_ADC => EN_READ_ADC,
+							port map(CLK => CLK_150, DCLK => ADC_DCLKA, ADC_BIT => ADC_BIT_A, EN_READ_ADC => EN_READ_ADC,
 							READ_ADC_DONE => READ_ADC_DONE, ADC_BIT_VALID => ADC_BIT_VALID, MRAM_DATA_OUT => ADC_BITS_OUT, MRAM_DONE => MRAM_DONE);
 this_write_out_mram_manager : write_out_mram_manager generic map(MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS)
-							port map (CLK => CLK_160,UART_SEND_DATA=>UART_SEND_DATA, UART_DATA_IRQ => UART_DATA_IRQ, 
+							port map (CLK => CLK_150,UART_SEND_DATA=>UART_SEND_DATA, UART_DATA_IRQ => UART_DATA_IRQ, 
 							MRAM_DATA_OUT => MRAM_DATA_OUT, MRAM_ADDRESS_IN => MRAM_ADDRESS_IN_READ, MRAM_READ_DATA => MRAM_READ_DATA, MRAM_DONE => MRAM_DONE,
 							WRITE_OUT_DONE => WRITE_OUT_DONE, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
 
 ADC_SPI_send_irq <= ADC_SPI_Send_irq1 or ADC_SPI_send_irq2;
-adc_spi_controller : SPI_Controller generic map (SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => 16, SEND_CLK_WAIT_MAX => 20) port map(CLK => CLK_160, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK,
+adc_spi_controller : SPI_Controller generic map (SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => 16, SEND_CLK_WAIT_MAX => 20) port map(CLK => CLK_150, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK,
 							SPI_CS => ADC_SPI_CS, SPI_send_data => ADC_SPI_send_data, SPI_send_irq => ADC_SPI_Send_irq, SPI_FIFO_EMPTY => ADC_SPI_fifo_empty);
-UART_Controller_1 : UART_Controller generic map(BAUD_RATE_PRESCALER => BAUD_RATE_PRESCALER) port map(CLK => CLK_160,
+UART_Controller_1 : UART_Controller generic map(BAUD_RATE => BAUD_RATE) port map(CLK => CLK_150,
 	SEND_DATA_IN => UART_SEND_DATA,
 	SEND_DATA_IN_REQ => UART_DATA_IRQ,
 	TX => UART_TX, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
 							
-Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 50, BUFFER_WIDTH => 9, MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS) port map(CLK => CLK_160, ADC_BITS => ADC_BITS_OUT, 
+Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 50, BUFFER_WIDTH => 9, MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS) port map(CLK => CLK_150, ADC_BITS => ADC_BITS_OUT, 
 								ADC_BITS_VALID => ADC_BIT_VALID, PREAMBULE_FOUND => SPI_CS, MRAM_DATA_OUT => MRAM_DATA_IN, 
-							MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA, MRAM_DONE => MRAM_DONE, EN_CORR => EN_CORR, 
-							CORR_DONE => CORR_DONE);		
+							MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA, MRAM_DONE => MRAM_DONE, EN_CORR => EN_CORR, CORR_DONE => CORR_DONE);	
+--CORR_DONE <= '1';	
 
-process(CLK_160)
+process(CLK_150)
 begin
-	if falling_edge(CLK_160) then
+	if falling_edge(CLK_150) then
 		if(BUTTON = '0') then
 			button_active <= '1';
 			end if;

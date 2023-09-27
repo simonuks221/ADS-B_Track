@@ -53,9 +53,7 @@ port(
 end component;
 
 signal fifo_clk : STD_LOGIC := '0';
-signal fifo_data : STD_LOGIC_VECTOR (15 DOWNTO 0) := (others => '0');
 signal fifo_rdreq : STD_LOGIC := '0';
-signal fifo_wrreq : STD_LOGIC := '0';
 signal fifo_empty : STD_LOGIC := '0';
 signal fifo_q : STD_LOGIC_VECTOR (15 DOWNTO 0) := (others => '0');
 
@@ -64,47 +62,35 @@ signal tx_send_data : std_logic_vector(BITS-1 downto 0);
 signal tx_send_irq : std_logic := '0';
 signal tx_send_done : std_logic := '0';
 
-type state is (idle, reading_fifo, transmiting, cs_up);
+type state is (idle, reading_fifo, waiting, transmiting, cs_up);
 signal curr_state : state := idle;
-
 signal cs_up_counter : integer range 0 to SEND_CLK_WAIT_MAX := 0;
-
 begin
 
 SPI_FIFO_EMPTY <= fifo_empty;
 
-spi_fifo_component : wizard_spi_fifo port map(clock => fifo_clk, data => fifo_data, rdreq => fifo_rdreq, wrreq => fifo_wrreq, empty => fifo_empty, q => fifo_q);
+spi_fifo_component : wizard_spi_fifo port map(clock => fifo_clk, data => SPI_send_data, rdreq => fifo_rdreq, wrreq => SPI_send_irq, empty => fifo_empty, q => fifo_q);
 
 spi_tx_component : spi_tx generic map(SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => BITS) 
 						port map(CLK => CLK, SPI_SCLK => SPI_SCLK, SPI_MOSI => SPI_MOSI, SEND_DATA => tx_send_data, SEND_IRQ => tx_send_irq, SEND_DONE => tx_send_done);
-
 tx_send_data <= fifo_q;
 fifo_clk <= CLK;
-fifo_data <= SPI_send_data;
-fifo_wrreq <= SPI_send_irq;
-						
+
 process(CLK)
 begin
-	if(rising_edge(CLK)) then
+	if rising_edge(CLK) then
 		case curr_state is
 			when idle =>
-				SPI_CS <= '1';
-				tx_send_irq <= '0';
 				if(fifo_empty = '0') then
-					fifo_rdreq <= '1';
 					curr_state <= reading_fifo;
 				end if;
-			when reading_fifo =>
-				fifo_rdreq <= '0';
-				tx_send_irq <= '1';
+			when  reading_fifo =>
 				curr_state <= transmiting;
 			when transmiting =>
-				SPI_CS <= '0';
-				fifo_rdreq <= '0';
-				tx_send_irq <= '0';
+				curr_state <= waiting;
+			when waiting =>
 				if(tx_send_done = '1') then
 					curr_state <= cs_up;
-					SPI_CS <= '1';
 				end if;
 			when cs_up =>
 				if(cs_up_counter = SEND_CLK_WAIT_MAX) then
@@ -116,5 +102,26 @@ begin
 		end case;
 	end if;
 end process;
-			
+
+process(CLK)
+begin
+	if(rising_edge(CLK)) then
+		case curr_state is
+			when idle =>
+				SPI_CS <= '1';
+				tx_send_irq <= '0';
+			when reading_fifo =>
+				fifo_rdreq <= '1';
+			when transmiting =>
+				tx_send_irq <= '1';
+				SPI_CS <= '0';
+				fifo_rdreq <= '0';
+			when waiting =>
+				tx_send_irq <= '0';
+			when cs_up =>
+				SPI_CS <= '1';
+				tx_send_irq <= '0';
+		end case;
+	end if;
+end process;
 end architecture;

@@ -147,7 +147,7 @@ ADC_DCLKA <= transport ADC_CLK after 5ns; --50MHz 5ns, ketvirtadalis
 process(CLK)
 begin
 	if(falling_edge(CLK)) then
-		if now > 181us then
+		if now > 173.7us then
 			if(adc_buffer_index < VOLTAGE_DATA_LEN-1) then
 				if(adc_buffer_counter = 4) then
 					adc_buffer_counter <= 0;
@@ -165,29 +165,19 @@ begin
 	end if;
 end process;                       
 
-
 process --WRite
 begin
-	wait until MRAM_WRITE_EN'event;
-		if(MRAM_WRITE_EN = '1') then
-			mram_data(to_integer(unsigned(MRAM_A))) <= MRAM_D;
-		end if;
-end process;
-
-
-process --Read
-begin
-	MRAM_D <= (others => 'Z');
-	wait until MRAM_OUTPUT_EN'event;
-	if(MRAM_WRITE_EN = '1' and MRAM_OUTPUT_EN = '0') then
-		wait for 35ns;
-		MRAM_D <= mram_data(to_integer(unsigned(MRAM_A)));
-		--MRAM_D <= "1011101011101011";
-	else
-		wait for 5ns;
+	wait until falling_edge(MRAM_EN);
 		MRAM_D <= (others => 'Z');
-	end if;
-	
+		if(MRAM_WRITE_EN = '0') then
+			wait until rising_edge(MRAM_WRITE_EN);
+			mram_data(to_integer(unsigned(MRAM_A))) <= MRAM_D;
+		else
+			wait for 10ns;
+			if(MRAM_OUTPUT_EN = '0') then
+				MRAM_D <= mram_data(to_integer(unsigned(MRAM_A)));
+			end if;
+		end if;
 end process;
 
 end architecture;

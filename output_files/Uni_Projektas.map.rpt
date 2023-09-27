@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Uni_Projektas
-Thu May 18 16:10:01 2023
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Sep 26 09:14:17 2023
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -15,46 +15,45 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|next_state
- 11. State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|curr_state
- 12. State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state
- 13. State Machine - |UNI_Projektas|SPI_Controller:adc_spi_controller|curr_state
+ 10. State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|curr_state
+ 11. State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|curr_state
+ 12. State Machine - |UNI_Projektas|SPI_Controller:adc_spi_controller|curr_state
+ 13. State Machine - |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state
  14. State Machine - |UNI_Projektas|STATE_MANAGER:this_state_manager|curr_state
  15. State Machine - |UNI_Projektas|MRAM_Controller:this_mram_controller|curr_state
- 16. Registers Removed During Synthesis
- 17. Removed Registers Triggering Further Register Optimizations
- 18. General Register Statistics
- 19. Inverted Register Statistics
- 20. Registers Packed Into Inferred Megafunctions
- 21. Multiplexer Restructuring Statistics (No Restructuring Performed)
- 22. Source assignments for SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1
- 23. Source assignments for UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2
- 24. Source assignments for Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_32m:auto_generated|altsyncram_4a81:altsyncram2
- 25. Source assignments for Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_v1m:auto_generated|altsyncram_g981:altsyncram2
- 26. Parameter Settings for User Entity Instance: Top-level Entity: |Uni_Projektas
- 27. Parameter Settings for User Entity Instance: wizard_pll:pl|altpll:altpll_component
- 28. Parameter Settings for User Entity Instance: Read_adc_manager:this_read_adc_manager
- 29. Parameter Settings for User Entity Instance: Write_out_mram_manager:this_write_out_mram_manager
- 30. Parameter Settings for User Entity Instance: SPI_Controller:adc_spi_controller
- 31. Parameter Settings for User Entity Instance: SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component
- 32. Parameter Settings for User Entity Instance: SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component
- 33. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1
- 34. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_TX:uart_tx_1
- 35. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component
- 36. Parameter Settings for User Entity Instance: Corr_Main:Corr_Main_1
- 37. Parameter Settings for User Entity Instance: Corr_Main:Corr_Main_1|Corr_Buffer:buff
- 38. Parameter Settings for Inferred Entity Instance: Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0
- 39. Parameter Settings for Inferred Entity Instance: Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1
- 40. altpll Parameter Settings by Entity Instance
- 41. scfifo Parameter Settings by Entity Instance
- 42. altshift_taps Parameter Settings by Entity Instance
- 43. Port Connectivity Checks: "Corr_Main:Corr_Main_1|Corr_Buffer:buff"
- 44. Port Connectivity Checks: "Corr_Main:Corr_Main_1"
+ 16. User-Specified and Inferred Latches
+ 17. Registers Removed During Synthesis
+ 18. Removed Registers Triggering Further Register Optimizations
+ 19. General Register Statistics
+ 20. Inverted Register Statistics
+ 21. Registers Packed Into Inferred Megafunctions
+ 22. Multiplexer Restructuring Statistics (No Restructuring Performed)
+ 23. Source assignments for SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram2
+ 24. Source assignments for UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram1
+ 25. Source assignments for Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_32m:auto_generated|altsyncram_4a81:altsyncram2
+ 26. Source assignments for Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_v1m:auto_generated|altsyncram_g981:altsyncram2
+ 27. Parameter Settings for User Entity Instance: Top-level Entity: |Uni_Projektas
+ 28. Parameter Settings for User Entity Instance: wizard_pll:pl|altpll:altpll_component
+ 29. Parameter Settings for User Entity Instance: Read_adc_manager:this_read_adc_manager
+ 30. Parameter Settings for User Entity Instance: Write_out_mram_manager:this_write_out_mram_manager
+ 31. Parameter Settings for User Entity Instance: SPI_Controller:adc_spi_controller
+ 32. Parameter Settings for User Entity Instance: SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component
+ 33. Parameter Settings for User Entity Instance: SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component
+ 34. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1
+ 35. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_TX:uart_tx_1
+ 36. Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component
+ 37. Parameter Settings for User Entity Instance: Corr_Main:Corr_Main_1
+ 38. Parameter Settings for User Entity Instance: Corr_Main:Corr_Main_1|Corr_Buffer:buff
+ 39. Parameter Settings for Inferred Entity Instance: Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0
+ 40. Parameter Settings for Inferred Entity Instance: Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1
+ 41. altpll Parameter Settings by Entity Instance
+ 42. scfifo Parameter Settings by Entity Instance
+ 43. altshift_taps Parameter Settings by Entity Instance
+ 44. Port Connectivity Checks: "Corr_Main:Corr_Main_1|Corr_Buffer:buff"
  45. Port Connectivity Checks: "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1"
  46. Port Connectivity Checks: "Read_adc_manager:this_read_adc_manager"
- 47. Port Connectivity Checks: "STATE_MANAGER:this_state_manager"
- 48. Elapsed Time Per Partition
- 49. Analysis & Synthesis Messages
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
 
 
 
@@ -80,18 +79,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 18 16:10:01 2023           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 26 09:14:17 2023           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 606                                             ;
-;     Total combinational functions  ; 488                                             ;
-;     Dedicated logic registers      ; 322                                             ;
-; Total registers                    ; 322                                             ;
+; Total logic elements               ; 694                                             ;
+;     Total combinational functions  ; 555                                             ;
+;     Dedicated logic registers      ; 362                                             ;
+; Total registers                    ; 362                                             ;
 ; Total pins                         ; 77                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 533                                             ;
+; Total memory bits                  ; 645                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 1                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -255,79 +254,84 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+---------------------------------------------+
 ; Resource                                    ; Usage                                       ;
 +---------------------------------------------+---------------------------------------------+
-; Estimated Total logic elements              ; 606                                         ;
+; Estimated Total logic elements              ; 694                                         ;
 ;                                             ;                                             ;
-; Total combinational functions               ; 488                                         ;
+; Total combinational functions               ; 555                                         ;
 ; Logic element usage by number of LUT inputs ;                                             ;
-;     -- 4 input functions                    ; 97                                          ;
-;     -- 3 input functions                    ; 199                                         ;
-;     -- <=2 input functions                  ; 192                                         ;
+;     -- 4 input functions                    ; 138                                         ;
+;     -- 3 input functions                    ; 220                                         ;
+;     -- <=2 input functions                  ; 197                                         ;
 ;                                             ;                                             ;
 ; Logic elements by mode                      ;                                             ;
-;     -- normal mode                          ; 251                                         ;
-;     -- arithmetic mode                      ; 237                                         ;
+;     -- normal mode                          ; 288                                         ;
+;     -- arithmetic mode                      ; 267                                         ;
 ;                                             ;                                             ;
-; Total registers                             ; 322                                         ;
-;     -- Dedicated logic registers            ; 322                                         ;
+; Total registers                             ; 362                                         ;
+;     -- Dedicated logic registers            ; 362                                         ;
 ;     -- I/O registers                        ; 0                                           ;
 ;                                             ;                                             ;
 ; I/O pins                                    ; 77                                          ;
-; Total memory bits                           ; 533                                         ;
+; Total memory bits                           ; 645                                         ;
 ; Embedded Multiplier 9-bit elements          ; 0                                           ;
 ; Total PLLs                                  ; 1                                           ;
 ;     -- PLLs                                 ; 1                                           ;
 ;                                             ;                                             ;
 ; Maximum fan-out node                        ; wizard_pll:pl|altpll:altpll_component|_clk0 ;
-; Maximum fan-out                             ; 244                                         ;
-; Total fan-out                               ; 2663                                        ;
-; Average fan-out                             ; 2.73                                        ;
+; Maximum fan-out                             ; 284                                         ;
+; Total fan-out                               ; 3075                                        ;
+; Average fan-out                             ; 2.84                                        ;
 +---------------------------------------------+---------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                        ;
-+----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                        ; Library Name ;
-+----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |UNI_Projektas                                     ; 488 (1)           ; 322 (0)      ; 533         ; 0            ; 0       ; 0         ; 77   ; 0            ; |UNI_Projektas                                                                                                                                                                                             ; work         ;
-;    |Corr_Main:Corr_Main_1|                         ; 244 (226)         ; 139 (37)     ; 261         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1                                                                                                                                                                       ; work         ;
-;       |Corr_Buffer:buff|                           ; 18 (9)            ; 102 (96)     ; 261         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff                                                                                                                                                      ; work         ;
-;          |altshift_taps:buffer_0_rtl_0|            ; 8 (0)             ; 5 (0)        ; 153         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0                                                                                                                         ; work         ;
-;             |shift_taps_32m:auto_generated|        ; 8 (0)             ; 5 (0)        ; 153         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_32m:auto_generated                                                                                           ; work         ;
-;                |altsyncram_4a81:altsyncram2|       ; 0 (0)             ; 0 (0)        ; 153         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_32m:auto_generated|altsyncram_4a81:altsyncram2                                                               ; work         ;
-;                |cntr_cmf:cntr1|                    ; 8 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_32m:auto_generated|cntr_cmf:cntr1                                                                            ; work         ;
-;                   |cmpr_9cc:cmpr5|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_32m:auto_generated|cntr_cmf:cntr1|cmpr_9cc:cmpr5                                                             ; work         ;
-;          |altshift_taps:buffer_0_rtl_1|            ; 1 (0)             ; 1 (0)        ; 108         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1                                                                                                                         ; work         ;
-;             |shift_taps_v1m:auto_generated|        ; 1 (0)             ; 1 (0)        ; 108         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_v1m:auto_generated                                                                                           ; work         ;
-;                |altsyncram_g981:altsyncram2|       ; 0 (0)             ; 0 (0)        ; 108         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_v1m:auto_generated|altsyncram_g981:altsyncram2                                                               ; work         ;
-;                |cntr_ikf:cntr1|                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_v1m:auto_generated|cntr_ikf:cntr1                                                                            ; work         ;
-;    |MRAM_Controller:this_mram_controller|          ; 44 (44)           ; 50 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|MRAM_Controller:this_mram_controller                                                                                                                                                        ; work         ;
-;    |Read_adc_manager:this_read_adc_manager|        ; 10 (10)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager                                                                                                                                                      ; work         ;
-;    |SPI_Controller:adc_spi_controller|             ; 84 (18)           ; 58 (12)      ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller                                                                                                                                                           ; work         ;
-;       |SPI_TX:spi_tx_component|                    ; 45 (45)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component                                                                                                                                   ; work         ;
-;       |wizard_spi_fifo:spi_fifo_component|         ; 21 (0)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component                                                                                                                        ; work         ;
-;          |scfifo:scfifo_component|                 ; 21 (0)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component                                                                                                ; work         ;
-;             |scfifo_3c21:auto_generated|           ; 21 (0)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated                                                                     ; work         ;
-;                |a_dpfifo_ai21:dpfifo|              ; 21 (2)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo                                                ; work         ;
-;                   |a_fefifo_76e:fifo_state|        ; 11 (7)            ; 6 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state                        ; work         ;
-;                      |cntr_pj7:count_usedw|        ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw   ; work         ;
-;                   |cntr_djb:rd_ptr_count|          ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count                          ; work         ;
-;                   |cntr_djb:wr_ptr|                ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr                                ; work         ;
-;                   |dpram_bv01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram                             ; work         ;
-;                      |altsyncram_0vj1:altsyncram1| ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1 ; work         ;
-;    |STATE_MANAGER:this_state_manager|              ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|STATE_MANAGER:this_state_manager                                                                                                                                                            ; work         ;
-;    |Setup_manager:this_setup_manager|              ; 46 (46)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Setup_manager:this_setup_manager                                                                                                                                                            ; work         ;
-;    |UART_Controller:UART_Controller_1|             ; 58 (6)            ; 36 (6)       ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1                                                                                                                                                           ; work         ;
-;       |UART_FIFO_wizard:uart_fifo|                 ; 0 (0)             ; 0 (0)        ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo                                                                                                                                ; work         ;
-;          |scfifo:scfifo_component|                 ; 0 (0)             ; 0 (0)        ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component                                                                                                        ; work         ;
-;             |scfifo_ka21:auto_generated|           ; 0 (0)             ; 0 (0)        ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated                                                                             ; work         ;
-;                |a_dpfifo_rg21:dpfifo|              ; 0 (0)             ; 0 (0)        ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo                                                        ; work         ;
-;                   |dpram_st01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram                                     ; work         ;
-;                      |altsyncram_0sj1:altsyncram2| ; 0 (0)             ; 0 (0)        ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2         ; work         ;
-;       |UART_TX:uart_tx_1|                          ; 52 (52)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1                                                                                                                                         ; work         ;
-;    |wizard_pll:pl|                                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|wizard_pll:pl                                                                                                                                                                               ; work         ;
-;       |altpll:altpll_component|                    ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|wizard_pll:pl|altpll:altpll_component                                                                                                                                                       ; work         ;
-+----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                             ;
++---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                        ; Library Name ;
++---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |UNI_Projektas                                          ; 555 (1)           ; 362 (0)      ; 645         ; 0            ; 0       ; 0         ; 77   ; 0            ; |UNI_Projektas                                                                                                                                                                                             ; work         ;
+;    |Corr_Main:Corr_Main_1|                              ; 222 (204)         ; 121 (19)     ; 261         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1                                                                                                                                                                       ; work         ;
+;       |Corr_Buffer:buff|                                ; 18 (9)            ; 102 (96)     ; 261         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff                                                                                                                                                      ; work         ;
+;          |altshift_taps:buffer_0_rtl_0|                 ; 8 (0)             ; 5 (0)        ; 153         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0                                                                                                                         ; work         ;
+;             |shift_taps_32m:auto_generated|             ; 8 (0)             ; 5 (0)        ; 153         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_32m:auto_generated                                                                                           ; work         ;
+;                |altsyncram_4a81:altsyncram2|            ; 0 (0)             ; 0 (0)        ; 153         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_32m:auto_generated|altsyncram_4a81:altsyncram2                                                               ; work         ;
+;                |cntr_cmf:cntr1|                         ; 8 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_32m:auto_generated|cntr_cmf:cntr1                                                                            ; work         ;
+;                   |cmpr_9cc:cmpr5|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_32m:auto_generated|cntr_cmf:cntr1|cmpr_9cc:cmpr5                                                             ; work         ;
+;          |altshift_taps:buffer_0_rtl_1|                 ; 1 (0)             ; 1 (0)        ; 108         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1                                                                                                                         ; work         ;
+;             |shift_taps_v1m:auto_generated|             ; 1 (0)             ; 1 (0)        ; 108         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_v1m:auto_generated                                                                                           ; work         ;
+;                |altsyncram_g981:altsyncram2|            ; 0 (0)             ; 0 (0)        ; 108         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_v1m:auto_generated|altsyncram_g981:altsyncram2                                                               ; work         ;
+;                |cntr_ikf:cntr1|                         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_v1m:auto_generated|cntr_ikf:cntr1                                                                            ; work         ;
+;    |MRAM_Controller:this_mram_controller|               ; 39 (39)           ; 49 (49)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|MRAM_Controller:this_mram_controller                                                                                                                                                        ; work         ;
+;    |Read_adc_manager:this_read_adc_manager|             ; 16 (16)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager                                                                                                                                                      ; work         ;
+;    |SPI_Controller:adc_spi_controller|                  ; 85 (18)           ; 60 (13)      ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller                                                                                                                                                           ; work         ;
+;       |SPI_TX:spi_tx_component|                         ; 46 (46)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component                                                                                                                                   ; work         ;
+;       |wizard_spi_fifo:spi_fifo_component|              ; 21 (0)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component                                                                                                                        ; work         ;
+;          |scfifo:scfifo_component|                      ; 21 (0)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component                                                                                                ; work         ;
+;             |scfifo_3c21:auto_generated|                ; 21 (0)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated                                                                     ; work         ;
+;                |a_dpfifo_ai21:dpfifo|                   ; 21 (2)            ; 14 (0)       ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo                                                ; work         ;
+;                   |a_fefifo_76e:fifo_state|             ; 11 (7)            ; 6 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state                        ; work         ;
+;                      |cntr_pj7:count_usedw|             ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw   ; work         ;
+;                   |cntr_djb:rd_ptr_count|               ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count                          ; work         ;
+;                   |cntr_djb:wr_ptr|                     ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:wr_ptr                                ; work         ;
+;                   |dpram_bv01:FIFOram|                  ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram                             ; work         ;
+;                      |altsyncram_0vj1:altsyncram2|      ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram2 ; work         ;
+;    |STATE_MANAGER:this_state_manager|                   ; 56 (56)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|STATE_MANAGER:this_state_manager                                                                                                                                                            ; work         ;
+;    |Setup_manager:this_setup_manager|                   ; 48 (48)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Setup_manager:this_setup_manager                                                                                                                                                            ; work         ;
+;    |UART_Controller:UART_Controller_1|                  ; 70 (4)            ; 45 (4)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1                                                                                                                                                           ; work         ;
+;       |UART_FIFO_wizard:uart_fifo|                      ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo                                                                                                                                ; work         ;
+;          |scfifo:scfifo_component|                      ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component                                                                                                        ; work         ;
+;             |scfifo_ka21:auto_generated|                ; 21 (0)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated                                                                             ; work         ;
+;                |a_dpfifo_rg21:dpfifo|                   ; 21 (2)            ; 14 (0)       ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo                                                        ; work         ;
+;                   |a_fefifo_76e:fifo_state|             ; 11 (7)            ; 6 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state                                ; work         ;
+;                      |cntr_pj7:count_usedw|             ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw           ; work         ;
+;                   |cntr_djb:rd_ptr_count|               ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:rd_ptr_count                                  ; work         ;
+;                   |cntr_djb:wr_ptr|                     ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:wr_ptr                                        ; work         ;
+;                   |dpram_st01:FIFOram|                  ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram                                     ; work         ;
+;                      |altsyncram_0sj1:altsyncram1|      ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram1         ; work         ;
+;       |UART_TX:uart_tx_1|                               ; 45 (45)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1                                                                                                                                         ; work         ;
+;    |Write_out_mram_manager:this_write_out_mram_manager| ; 18 (18)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|Write_out_mram_manager:this_write_out_mram_manager                                                                                                                                          ; work         ;
+;    |wizard_pll:pl|                                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|wizard_pll:pl                                                                                                                                                                               ; work         ;
+;       |altpll:altpll_component|                         ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UNI_Projektas|wizard_pll:pl|altpll:altpll_component                                                                                                                                                       ; work         ;
++---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -338,8 +342,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0|shift_taps_32m:auto_generated|altsyncram_4a81:altsyncram2|ALTSYNCRAM                                                               ; AUTO ; Simple Dual Port ; 17           ; 9            ; 17           ; 9            ; 153  ; None ;
 ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1|shift_taps_v1m:auto_generated|altsyncram_g981:altsyncram2|ALTSYNCRAM                                                               ; AUTO ; Simple Dual Port ; 2            ; 54           ; 2            ; 54           ; 108  ; None ;
-; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 16           ; 16           ; 16           ; 256  ; None ;
-; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2|ALTSYNCRAM         ; AUTO ; Simple Dual Port ; 16           ; 8            ; 16           ; 8            ; 128  ; None ;
+; SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 16           ; 16           ; 16           ; 256  ; None ;
+; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram1|ALTSYNCRAM         ; AUTO ; Simple Dual Port ; 16           ; 8            ; 16           ; 8            ; 128  ; None ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
@@ -355,56 +359,57 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|next_state                                               ;
-+--------------------------+------------------------+--------------------------+--------------------------+-----------------+
-; Name                     ; next_state.transmiting ; next_state.reading_fifo2 ; next_state.reading_fifo1 ; next_state.idle ;
-+--------------------------+------------------------+--------------------------+--------------------------+-----------------+
-; next_state.idle          ; 0                      ; 0                        ; 0                        ; 0               ;
-; next_state.reading_fifo1 ; 0                      ; 0                        ; 1                        ; 1               ;
-; next_state.reading_fifo2 ; 0                      ; 1                        ; 0                        ; 1               ;
-; next_state.transmiting   ; 1                      ; 0                        ; 0                        ; 1               ;
-+--------------------------+------------------------+--------------------------+--------------------------+-----------------+
++-------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|curr_state                                       ;
++-------------------------+--------------------+------------------------+-------------------------+-----------------+
+; Name                    ; curr_state.waiting ; curr_state.transmiting ; curr_state.reading_fifo ; curr_state.idle ;
++-------------------------+--------------------+------------------------+-------------------------+-----------------+
+; curr_state.idle         ; 0                  ; 0                      ; 0                       ; 0               ;
+; curr_state.reading_fifo ; 0                  ; 0                      ; 1                       ; 1               ;
+; curr_state.transmiting  ; 0                  ; 1                      ; 0                       ; 1               ;
+; curr_state.waiting      ; 1                  ; 0                      ; 0                       ; 1               ;
++-------------------------+--------------------+------------------------+-------------------------+-----------------+
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|curr_state                                               ;
-+--------------------------+------------------------+--------------------------+--------------------------+-----------------+
-; Name                     ; curr_state.transmiting ; curr_state.reading_fifo2 ; curr_state.reading_fifo1 ; curr_state.idle ;
-+--------------------------+------------------------+--------------------------+--------------------------+-----------------+
-; curr_state.idle          ; 0                      ; 0                        ; 0                        ; 0               ;
-; curr_state.reading_fifo1 ; 0                      ; 0                        ; 1                        ; 1               ;
-; curr_state.reading_fifo2 ; 0                      ; 1                        ; 0                        ; 1               ;
-; curr_state.transmiting   ; 1                      ; 0                        ; 0                        ; 1               ;
-+--------------------------+------------------------+--------------------------+--------------------------+-----------------+
++-------------------------------------------------------------------------------------------------------------+
+; State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|curr_state               ;
++------------------+-----------------+-----------------+------------------+-----------------+-----------------+
+; Name             ; curr_state.stop ; curr_state.data ; curr_state.start ; curr_state.sync ; curr_state.idle ;
++------------------+-----------------+-----------------+------------------+-----------------+-----------------+
+; curr_state.idle  ; 0               ; 0               ; 0                ; 0               ; 0               ;
+; curr_state.sync  ; 0               ; 0               ; 0                ; 1               ; 1               ;
+; curr_state.start ; 0               ; 0               ; 1                ; 0               ; 1               ;
+; curr_state.data  ; 0               ; 1               ; 0                ; 0               ; 1               ;
+; curr_state.stop  ; 1               ; 0               ; 0                ; 0               ; 1               ;
++------------------+-----------------+-----------------+------------------+-----------------+-----------------+
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state                              ;
-+---------------------+--------------------+--------------------+---------------------+--------------------+--------------------+
-; Name                ; tx_curr_state.stop ; tx_curr_state.data ; tx_curr_state.start ; tx_curr_state.sync ; tx_curr_state.idle ;
-+---------------------+--------------------+--------------------+---------------------+--------------------+--------------------+
-; tx_curr_state.idle  ; 0                  ; 0                  ; 0                   ; 0                  ; 0                  ;
-; tx_curr_state.sync  ; 0                  ; 0                  ; 0                   ; 1                  ; 1                  ;
-; tx_curr_state.start ; 0                  ; 0                  ; 1                   ; 0                  ; 1                  ;
-; tx_curr_state.data  ; 0                  ; 1                  ; 0                   ; 0                  ; 1                  ;
-; tx_curr_state.stop  ; 1                  ; 0                  ; 0                   ; 0                  ; 1                  ;
-+---------------------+--------------------+--------------------+---------------------+--------------------+--------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UNI_Projektas|SPI_Controller:adc_spi_controller|curr_state                                                          ;
++-------------------------+------------------+------------------------+--------------------+-------------------------+-----------------+
+; Name                    ; curr_state.cs_up ; curr_state.transmiting ; curr_state.waiting ; curr_state.reading_fifo ; curr_state.idle ;
++-------------------------+------------------+------------------------+--------------------+-------------------------+-----------------+
+; curr_state.idle         ; 0                ; 0                      ; 0                  ; 0                       ; 0               ;
+; curr_state.reading_fifo ; 0                ; 0                      ; 0                  ; 1                       ; 1               ;
+; curr_state.waiting      ; 0                ; 0                      ; 1                  ; 0                       ; 1               ;
+; curr_state.transmiting  ; 0                ; 1                      ; 0                  ; 0                       ; 1               ;
+; curr_state.cs_up        ; 1                ; 0                      ; 0                  ; 0                       ; 1               ;
++-------------------------+------------------+------------------------+--------------------+-------------------------+-----------------+
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------+
-; State Machine - |UNI_Projektas|SPI_Controller:adc_spi_controller|curr_state                                     ;
-+-------------------------+------------------+------------------------+-------------------------+-----------------+
-; Name                    ; curr_state.cs_up ; curr_state.transmiting ; curr_state.reading_fifo ; curr_state.idle ;
-+-------------------------+------------------+------------------------+-------------------------+-----------------+
-; curr_state.idle         ; 0                ; 0                      ; 0                       ; 0               ;
-; curr_state.reading_fifo ; 0                ; 0                      ; 1                       ; 1               ;
-; curr_state.transmiting  ; 0                ; 1                      ; 0                       ; 1               ;
-; curr_state.cs_up        ; 1                ; 0                      ; 0                       ; 1               ;
-+-------------------------+------------------+------------------------+-------------------------+-----------------+
++--------------------------------------------------------------------------------------------------------+
+; State Machine - |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state    ;
++-----------------------+-----------------+--------------------+-----------------------+-----------------+
+; Name                  ; curr_state.done ; curr_state.running ; curr_state.latch_data ; curr_state.idle ;
++-----------------------+-----------------+--------------------+-----------------------+-----------------+
+; curr_state.idle       ; 0               ; 0                  ; 0                     ; 0               ;
+; curr_state.latch_data ; 0               ; 0                  ; 1                     ; 1               ;
+; curr_state.running    ; 0               ; 1                  ; 0                     ; 1               ;
+; curr_state.done       ; 1               ; 0                  ; 0                     ; 1               ;
++-----------------------+-----------------+--------------------+-----------------------+-----------------+
 
 
 Encoding Type:  One-Hot
@@ -432,140 +437,81 @@ Encoding Type:  One-Hot
 +--------------------+--------------------+--------------------+-----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                                                                              ;
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------+
-; Register name                                                                                                                                                                                  ; Reason for Removal                                             ;
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------+
-; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[12..15]                                                                                                                                                    ; Stuck at GND due to stuck port data_in                         ;
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buf_b0[8]                                                                                                                                               ; Stuck at GND due to stuck port data_in                         ;
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buf_b1[8]                                                                                                                                               ; Stuck at GND due to stuck port data_in                         ;
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buf_b2[8]                                                                                                                                               ; Stuck at GND due to stuck port data_in                         ;
-; Read_adc_manager:this_read_adc_manager|address_counter[0..13]                                                                                                                                  ; Lost fanout                                                    ;
-; Setup_manager:this_setup_manager|SPI_send_data[2,5..8,12..14]                                                                                                                                  ; Stuck at GND due to stuck port data_in                         ;
-; Setup_manager:this_setup_manager|SPI_send_data[1]                                                                                                                                              ; Merged with Setup_manager:this_setup_manager|SPI_send_data[0]  ;
-; Setup_manager:this_setup_manager|SPI_send_data[3]                                                                                                                                              ; Merged with Setup_manager:this_setup_manager|SPI_send_data[11] ;
-; Setup_manager:this_setup_manager|SPI_send_data[9]                                                                                                                                              ; Merged with Setup_manager:this_setup_manager|SPI_send_data[10] ;
-; MRAM_Controller:this_mram_controller|MRAM_A[15..17]                                                                                                                                            ; Merged with MRAM_Controller:this_mram_controller|MRAM_A[14]    ;
-; MRAM_Controller:this_mram_controller|MRAM_UPPER_EN                                                                                                                                             ; Merged with MRAM_Controller:this_mram_controller|MRAM_LOWER_EN ;
-; MRAM_Controller:this_mram_controller|MRAM_D[15]~reg0                                                                                                                                           ; Stuck at GND due to stuck port data_in                         ;
-; MRAM_Controller:this_mram_controller|MRAM_D[14]~reg0                                                                                                                                           ; Stuck at GND due to stuck port data_in                         ;
-; MRAM_Controller:this_mram_controller|MRAM_D[13]~reg0                                                                                                                                           ; Stuck at GND due to stuck port data_in                         ;
-; MRAM_Controller:this_mram_controller|MRAM_D[12]~reg0                                                                                                                                           ; Stuck at GND due to stuck port data_in                         ;
-; MRAM_Controller:this_mram_controller|MRAM_A[14]                                                                                                                                                ; Stuck at GND due to stuck port data_in                         ;
-; STATE_MANAGER:this_state_manager|curr_state.wait_1                                                                                                                                             ; Stuck at GND due to stuck port data_in                         ;
-; STATE_MANAGER:this_state_manager|counter[0..31]                                                                                                                                                ; Stuck at GND due to stuck port clock_enable                    ;
-; STATE_MANAGER:this_state_manager|curr_state.write_out_mram                                                                                                                                     ; Stuck at GND due to stuck port data_in                         ;
-; Write_out_mram_manager:this_write_out_mram_manager|getting_data                                                                                                                                ; Stuck at GND due to stuck port sclear                          ;
-; Write_out_mram_manager:this_write_out_mram_manager|have_data                                                                                                                                   ; Stuck at GND due to stuck port sclear                          ;
-; Write_out_mram_manager:this_write_out_mram_manager|UART_DATA_IRQ                                                                                                                               ; Stuck at GND due to stuck port sclear                          ;
-; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:wr_ptr|safe_q[0..3]                              ; Stuck at GND due to stuck port clock                           ;
-; Write_out_mram_manager:this_write_out_mram_manager|address_counter[0..13]                                                                                                                      ; Stuck at GND due to stuck port data_in                         ;
-; Write_out_mram_manager:this_write_out_mram_manager|MRAM_READ_DATA                                                                                                                              ; Stuck at GND due to stuck port sclear                          ;
-; Write_out_mram_manager:this_write_out_mram_manager|msb                                                                                                                                         ; Stuck at VCC due to stuck port clock_enable                    ;
-; MRAM_Controller:this_mram_controller|curr_state.reading                                                                                                                                        ; Stuck at GND due to stuck port data_in                         ;
-; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|b_full                            ; Stuck at GND due to stuck port data_in                         ;
-; MRAM_Controller:this_mram_controller|data_out[0..15]                                                                                                                                           ; Stuck at GND due to stuck port clock_enable                    ;
-; MRAM_Controller:this_mram_controller|MRAM_LOWER_EN                                                                                                                                             ; Merged with MRAM_Controller:this_mram_controller|MRAM_WRITE_EN ;
-; MRAM_Controller:this_mram_controller|MRAM_OUTPUT_EN                                                                                                                                            ; Stuck at VCC due to stuck port data_in                         ;
-; STATE_MANAGER:this_state_manager|curr_state.read_adc                                                                                                                                           ; Merged with STATE_MANAGER:this_state_manager|curr_state.setup  ;
-; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|b_non_empty                       ; Stuck at GND due to stuck port data_in                         ;
-; UART_Controller:UART_Controller_1|curr_state.reading_fifo1                                                                                                                                     ; Lost fanout                                                    ;
-; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:rd_ptr_count|safe_q[0..3]                        ; Stuck at GND due to stuck port clock                           ;
-; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[0..3] ; Stuck at GND due to stuck port clock                           ;
-; UART_Controller:UART_Controller_1|next_state.reading_fifo1                                                                                                                                     ; Lost fanout                                                    ;
-; Total Number of Removed Registers = 130                                                                                                                                                        ;                                                                ;
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                ;
++----------------------------------------------------+------------------------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                                  ; Free of Timing Hazards ;
++----------------------------------------------------+------------------------------------------------------+------------------------+
+; UART_Controller:UART_Controller_1|fifo_read_req    ; UART_Controller:UART_Controller_1|curr_state.waiting ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                                                      ;                        ;
++----------------------------------------------------+------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                                                                                                                                                                                         ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Register name                                                                                                                                                       ; Reason for Removal             ; Registers Removed due to This Register                                                                                                                                                       ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; STATE_MANAGER:this_state_manager|counter[11]                                                                                                                        ; Stuck at GND                   ; STATE_MANAGER:this_state_manager|counter[6],                                                                                                                                                 ;
-;                                                                                                                                                                     ; due to stuck port clock_enable ; STATE_MANAGER:this_state_manager|curr_state.write_out_mram,                                                                                                                                  ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|UART_DATA_IRQ,                                                                                                                            ;
-;                                                                                                                                                                     ;                                ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:wr_ptr|safe_q[1],                              ;
-;                                                                                                                                                                     ;                                ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:wr_ptr|safe_q[2],                              ;
-;                                                                                                                                                                     ;                                ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:wr_ptr|safe_q[3],                              ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[0],                                                                                                                       ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[1],                                                                                                                       ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[2],                                                                                                                       ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[3],                                                                                                                       ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[4],                                                                                                                       ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[5],                                                                                                                       ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[6],                                                                                                                       ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[7],                                                                                                                       ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[8],                                                                                                                       ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[9],                                                                                                                       ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[10],                                                                                                                      ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[11],                                                                                                                      ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[12],                                                                                                                      ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|address_counter[13],                                                                                                                      ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|MRAM_READ_DATA,                                                                                                                           ;
-;                                                                                                                                                                     ;                                ; Write_out_mram_manager:this_write_out_mram_manager|msb,                                                                                                                                      ;
-;                                                                                                                                                                     ;                                ; UART_Controller:UART_Controller_1|curr_state.reading_fifo1,                                                                                                                                  ;
-;                                                                                                                                                                     ;                                ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[3], ;
-;                                                                                                                                                                     ;                                ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[2], ;
-;                                                                                                                                                                     ;                                ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[1], ;
-;                                                                                                                                                                     ;                                ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|cntr_pj7:count_usedw|safe_q[0], ;
-;                                                                                                                                                                     ;                                ; UART_Controller:UART_Controller_1|next_state.reading_fifo1                                                                                                                                   ;
-; STATE_MANAGER:this_state_manager|curr_state.wait_1                                                                                                                  ; Stuck at GND                   ; STATE_MANAGER:this_state_manager|counter[5],                                                                                                                                                 ;
-;                                                                                                                                                                     ; due to stuck port data_in      ; STATE_MANAGER:this_state_manager|counter[4],                                                                                                                                                 ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[3],                                                                                                                                                 ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[2],                                                                                                                                                 ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[1],                                                                                                                                                 ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[0],                                                                                                                                                 ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[12],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[13],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[14],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[15],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[16],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[17],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[18],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[19],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[20],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[21],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[22],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[23],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[24],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[25],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[26],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[27],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[28],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[29],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[30],                                                                                                                                                ;
-;                                                                                                                                                                     ;                                ; STATE_MANAGER:this_state_manager|counter[31]                                                                                                                                                 ;
-; MRAM_Controller:this_mram_controller|curr_state.reading                                                                                                             ; Stuck at GND                   ; MRAM_Controller:this_mram_controller|data_out[7],                                                                                                                                            ;
-;                                                                                                                                                                     ; due to stuck port data_in      ; MRAM_Controller:this_mram_controller|data_out[6],                                                                                                                                            ;
-;                                                                                                                                                                     ;                                ; MRAM_Controller:this_mram_controller|data_out[5],                                                                                                                                            ;
-;                                                                                                                                                                     ;                                ; MRAM_Controller:this_mram_controller|data_out[4],                                                                                                                                            ;
-;                                                                                                                                                                     ;                                ; MRAM_Controller:this_mram_controller|data_out[3],                                                                                                                                            ;
-;                                                                                                                                                                     ;                                ; MRAM_Controller:this_mram_controller|data_out[11],                                                                                                                                           ;
-;                                                                                                                                                                     ;                                ; MRAM_Controller:this_mram_controller|data_out[2],                                                                                                                                            ;
-;                                                                                                                                                                     ;                                ; MRAM_Controller:this_mram_controller|data_out[10],                                                                                                                                           ;
-;                                                                                                                                                                     ;                                ; MRAM_Controller:this_mram_controller|data_out[1],                                                                                                                                            ;
-;                                                                                                                                                                     ;                                ; MRAM_Controller:this_mram_controller|data_out[9],                                                                                                                                            ;
-;                                                                                                                                                                     ;                                ; MRAM_Controller:this_mram_controller|data_out[0],                                                                                                                                            ;
-;                                                                                                                                                                     ;                                ; MRAM_Controller:this_mram_controller|data_out[8],                                                                                                                                            ;
-;                                                                                                                                                                     ;                                ; MRAM_Controller:this_mram_controller|MRAM_OUTPUT_EN                                                                                                                                          ;
-; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|b_full ; Stuck at GND                   ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|a_fefifo_76e:fifo_state|b_non_empty,                    ;
-;                                                                                                                                                                     ; due to stuck port data_in      ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:rd_ptr_count|safe_q[0],                        ;
-;                                                                                                                                                                     ;                                ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:rd_ptr_count|safe_q[1],                        ;
-;                                                                                                                                                                     ;                                ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:rd_ptr_count|safe_q[2],                        ;
-;                                                                                                                                                                     ;                                ; UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|cntr_djb:rd_ptr_count|safe_q[3]                         ;
-; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[15]                                                                                                                             ; Stuck at GND                   ; MRAM_Controller:this_mram_controller|MRAM_D[15]~reg0,                                                                                                                                        ;
-;                                                                                                                                                                     ; due to stuck port data_in      ; MRAM_Controller:this_mram_controller|data_out[15]                                                                                                                                            ;
-; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[14]                                                                                                                             ; Stuck at GND                   ; MRAM_Controller:this_mram_controller|MRAM_D[14]~reg0,                                                                                                                                        ;
-;                                                                                                                                                                     ; due to stuck port data_in      ; MRAM_Controller:this_mram_controller|data_out[14]                                                                                                                                            ;
-; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[13]                                                                                                                             ; Stuck at GND                   ; MRAM_Controller:this_mram_controller|MRAM_D[13]~reg0,                                                                                                                                        ;
-;                                                                                                                                                                     ; due to stuck port data_in      ; MRAM_Controller:this_mram_controller|data_out[13]                                                                                                                                            ;
-; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[12]                                                                                                                             ; Stuck at GND                   ; MRAM_Controller:this_mram_controller|MRAM_D[12]~reg0,                                                                                                                                        ;
-;                                                                                                                                                                     ; due to stuck port data_in      ; MRAM_Controller:this_mram_controller|data_out[12]                                                                                                                                            ;
-; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buf_b0[8]                                                                                                                    ; Stuck at GND                   ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buf_b1[8],                                                                                                                                            ;
-;                                                                                                                                                                     ; due to stuck port data_in      ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buf_b2[8]                                                                                                                                             ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                             ;
++---------------------------------------------------------------+----------------------------------------------------------------+
+; Register name                                                 ; Reason for Removal                                             ;
++---------------------------------------------------------------+----------------------------------------------------------------+
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[4..15]                    ; Stuck at GND due to stuck port data_in                         ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buf_b0[8]              ; Stuck at GND due to stuck port data_in                         ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buf_b1[8]              ; Stuck at GND due to stuck port data_in                         ;
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buf_b2[8]              ; Stuck at GND due to stuck port data_in                         ;
+; Setup_manager:this_setup_manager|SPI_send_data[2,5..8,12..14] ; Stuck at GND due to stuck port data_in                         ;
+; Setup_manager:this_setup_manager|SPI_send_data[1]             ; Merged with Setup_manager:this_setup_manager|SPI_send_data[0]  ;
+; Setup_manager:this_setup_manager|SPI_send_data[3]             ; Merged with Setup_manager:this_setup_manager|SPI_send_data[11] ;
+; Setup_manager:this_setup_manager|SPI_send_data[9]             ; Merged with Setup_manager:this_setup_manager|SPI_send_data[10] ;
+; MRAM_Controller:this_mram_controller|MRAM_A[4..9,11..17]      ; Merged with MRAM_Controller:this_mram_controller|MRAM_A[10]    ;
+; MRAM_Controller:this_mram_controller|MRAM_UPPER_EN            ; Merged with MRAM_Controller:this_mram_controller|MRAM_LOWER_EN ;
+; MRAM_Controller:this_mram_controller|MRAM_D[15]~reg0          ; Stuck at GND due to stuck port data_in                         ;
+; MRAM_Controller:this_mram_controller|MRAM_D[14]~reg0          ; Stuck at GND due to stuck port data_in                         ;
+; MRAM_Controller:this_mram_controller|MRAM_D[13]~reg0          ; Stuck at GND due to stuck port data_in                         ;
+; MRAM_Controller:this_mram_controller|MRAM_D[12]~reg0          ; Stuck at GND due to stuck port data_in                         ;
+; MRAM_Controller:this_mram_controller|MRAM_D[11]~reg0          ; Stuck at GND due to stuck port data_in                         ;
+; MRAM_Controller:this_mram_controller|MRAM_D[10]~reg0          ; Stuck at GND due to stuck port data_in                         ;
+; MRAM_Controller:this_mram_controller|MRAM_D[9]~reg0           ; Stuck at GND due to stuck port data_in                         ;
+; MRAM_Controller:this_mram_controller|MRAM_D[8]~reg0           ; Stuck at GND due to stuck port data_in                         ;
+; MRAM_Controller:this_mram_controller|MRAM_D[7]~reg0           ; Stuck at GND due to stuck port data_in                         ;
+; MRAM_Controller:this_mram_controller|MRAM_D[6]~reg0           ; Stuck at GND due to stuck port data_in                         ;
+; MRAM_Controller:this_mram_controller|MRAM_D[5]~reg0           ; Stuck at GND due to stuck port data_in                         ;
+; MRAM_Controller:this_mram_controller|MRAM_D[4]~reg0           ; Stuck at GND due to stuck port data_in                         ;
+; MRAM_Controller:this_mram_controller|MRAM_A[10]               ; Stuck at GND due to stuck port data_in                         ;
+; Total Number of Removed Registers = 53                        ;                                                                ;
++---------------------------------------------------------------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                         ;
++--------------------------------------------------+---------------------------+------------------------------------------------------+
+; Register name                                    ; Reason for Removal        ; Registers Removed due to This Register               ;
++--------------------------------------------------+---------------------------+------------------------------------------------------+
+; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buf_b0[8] ; Stuck at GND              ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buf_b1[8],    ;
+;                                                  ; due to stuck port data_in ; Corr_Main:Corr_Main_1|Corr_Buffer:buff|buf_b2[8]     ;
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[15]          ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[15]~reg0 ;
+;                                                  ; due to stuck port data_in ;                                                      ;
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[14]          ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[14]~reg0 ;
+;                                                  ; due to stuck port data_in ;                                                      ;
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[13]          ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[13]~reg0 ;
+;                                                  ; due to stuck port data_in ;                                                      ;
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[12]          ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[12]~reg0 ;
+;                                                  ; due to stuck port data_in ;                                                      ;
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[11]          ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[11]~reg0 ;
+;                                                  ; due to stuck port data_in ;                                                      ;
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[10]          ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[10]~reg0 ;
+;                                                  ; due to stuck port data_in ;                                                      ;
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[9]           ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[9]~reg0  ;
+;                                                  ; due to stuck port data_in ;                                                      ;
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[8]           ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[8]~reg0  ;
+;                                                  ; due to stuck port data_in ;                                                      ;
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[7]           ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[7]~reg0  ;
+;                                                  ; due to stuck port data_in ;                                                      ;
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[6]           ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[6]~reg0  ;
+;                                                  ; due to stuck port data_in ;                                                      ;
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[5]           ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[5]~reg0  ;
+;                                                  ; due to stuck port data_in ;                                                      ;
+; Corr_Main:Corr_Main_1|MRAM_DATA_OUT[4]           ; Stuck at GND              ; MRAM_Controller:this_mram_controller|MRAM_D[4]~reg0  ;
+;                                                  ; due to stuck port data_in ;                                                      ;
++--------------------------------------------------+---------------------------+------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -573,31 +519,29 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 322   ;
-; Number of registers using Synchronous Clear  ; 34    ;
-; Number of registers using Synchronous Load   ; 7     ;
+; Total registers                              ; 362   ;
+; Number of registers using Synchronous Clear  ; 33    ;
+; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 139   ;
+; Number of registers using Clock Enable       ; 173   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------+
-; Inverted Register Statistics                                               ;
-+------------------------------------------------------------------+---------+
-; Inverted Register                                                ; Fan out ;
-+------------------------------------------------------------------+---------+
-; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|sclk   ; 7       ;
-; MRAM_Controller:this_mram_controller|MRAM_EN                     ; 2       ;
-; MRAM_Controller:this_mram_controller|MRAM_WRITE_EN               ; 4       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_send[5] ; 1       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_send[6] ; 1       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_send[4] ; 1       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_send[2] ; 1       ;
-; UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_send[1] ; 1       ;
-; Total number of inverted registers = 8                           ;         ;
-+------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------+
+; Inverted Register Statistics                                             ;
++----------------------------------------------------------------+---------+
+; Inverted Register                                              ; Fan out ;
++----------------------------------------------------------------+---------+
+; SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|sclk ; 4       ;
+; MRAM_Controller:this_mram_controller|MRAM_OUTPUT_EN            ; 2       ;
+; MRAM_Controller:this_mram_controller|MRAM_EN                   ; 3       ;
+; MRAM_Controller:this_mram_controller|MRAM_WRITE_EN             ; 3       ;
+; MRAM_Controller:this_mram_controller|MRAM_LOWER_EN             ; 4       ;
+; Write_out_mram_manager:this_write_out_mram_manager|msb         ; 10      ;
+; Total number of inverted registers = 6                         ;         ;
++----------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -626,30 +570,33 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------+-------------------------------------------------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |UNI_Projektas|Corr_Main:Corr_Main_1|check_corr[1]                                    ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |UNI_Projektas|Corr_Main:Corr_Main_1|read_counter[1]                                  ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |UNI_Projektas|Corr_Main:Corr_Main_1|address_counter[12]                              ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|bits_sent[4] ;
-; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |UNI_Projektas|Write_out_mram_manager:this_write_out_mram_manager|address_counter[10] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager|read_counter[2]                 ;
-; 7:1                ; 15 bits   ; 60 LEs        ; 15 LEs               ; 45 LEs                 ; Yes        ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[12]   ;
-; 1:1                ; 12 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; Yes        ; |UNI_Projektas|MRAM_Controller:this_mram_controller|MRAM_D[1]~reg0                    ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |UNI_Projektas|MRAM_Controller:this_mram_controller|curr_state                        ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|SPI_Controller:adc_spi_controller|Selector6                            ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |UNI_Projektas|STATE_MANAGER:this_state_manager|Selector3                             ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|Selector0                            ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector4          ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector0          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |UNI_Projektas|Corr_Main:Corr_Main_1|check_corr[1]                                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |UNI_Projektas|Corr_Main:Corr_Main_1|read_counter[0]                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |UNI_Projektas|Corr_Main:Corr_Main_1|address_counter[1]                              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|Write_out_mram_manager:this_write_out_mram_manager|address_counter[2] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager|read_counter[0]                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |UNI_Projektas|Read_adc_manager:this_read_adc_manager|address_counter[0]             ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|tx_buf[6]   ;
+; 1:1                ; 4 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; Yes        ; |UNI_Projektas|MRAM_Controller:this_mram_controller|MRAM_D[2]~reg0                   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|data_index        ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |UNI_Projektas|MRAM_Controller:this_mram_controller|curr_state                       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|Selector4                           ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|Selector2   ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |UNI_Projektas|SPI_Controller:adc_spi_controller|Selector4                           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |UNI_Projektas|SPI_Controller:adc_spi_controller|Selector2                           ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |UNI_Projektas|STATE_MANAGER:this_state_manager|Selector2                            ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector1         ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|Selector0         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1 ;
+; Source assignments for SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram2 ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                                                                                                   ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -658,7 +605,7 @@ Encoding Type:  One-Hot
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2 ;
+; Source assignments for UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram1 ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                                                                                           ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -686,13 +633,13 @@ Encoding Type:  One-Hot
 
 +-------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |Uni_Projektas ;
-+----------------------+-------+------------------------------------------------+
-; Parameter Name       ; Value ; Type                                           ;
-+----------------------+-------+------------------------------------------------+
-; BAUD_RATE_PRESCALER  ; 1302  ; Signed Integer                                 ;
-; MAX_ADDRESS_COUNTS   ; 10000 ; Signed Integer                                 ;
-; SEND_CLK_COUNTER_MAX ; 30    ; Signed Integer                                 ;
-+----------------------+-------+------------------------------------------------+
++----------------------+--------+-----------------------------------------------+
+; Parameter Name       ; Value  ; Type                                          ;
++----------------------+--------+-----------------------------------------------+
+; BAUD_RATE            ; 115200 ; Signed Integer                                ;
+; MAX_ADDRESS_COUNTS   ; 10     ; Signed Integer                                ;
+; SEND_CLK_COUNTER_MAX ; 30     ; Signed Integer                                ;
++----------------------+--------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1075,7 +1022,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+-------+--------------------------------------------------------+
 ; Parameter Name     ; Value ; Type                                                   ;
 +--------------------+-------+--------------------------------------------------------+
-; max_address_counts ; 10000 ; Signed Integer                                         ;
+; max_address_counts ; 10    ; Signed Integer                                         ;
 ; READ_COUNTER_MAX   ; 4     ; Signed Integer                                         ;
 +--------------------+-------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -1086,7 +1033,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+-------+--------------------------------------------------------------------+
 ; Parameter Name     ; Value ; Type                                                               ;
 +--------------------+-------+--------------------------------------------------------------------+
-; max_address_counts ; 10000 ; Signed Integer                                                     ;
+; max_address_counts ; 10    ; Signed Integer                                                     ;
 +--------------------+-------+--------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1144,21 +1091,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +--------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1 ;
-+---------------------+-------+--------------------------------------------------+
-; Parameter Name      ; Value ; Type                                             ;
-+---------------------+-------+--------------------------------------------------+
-; baud_rate_prescaler ; 1302  ; Signed Integer                                   ;
-+---------------------+-------+--------------------------------------------------+
++----------------+--------+------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                 ;
++----------------+--------+------------------------------------------------------+
+; baud_rate      ; 115200 ; Signed Integer                                       ;
++----------------+--------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: UART_Controller:UART_Controller_1|UART_TX:uart_tx_1 ;
-+---------------------+-------+--------------------------------------------------------------------+
-; Parameter Name      ; Value ; Type                                                               ;
-+---------------------+-------+--------------------------------------------------------------------+
-; baud_rate_prescaler ; 1302  ; Signed Integer                                                     ;
-+---------------------+-------+--------------------------------------------------------------------+
++----------------+--------+------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                   ;
++----------------+--------+------------------------------------------------------------------------+
+; baud_rate      ; 115200 ; Signed Integer                                                         ;
++----------------+--------+------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1197,7 +1144,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+-------+---------------------------------------+
 ; buffer_length      ; 50    ; Signed Integer                        ;
 ; buffer_width       ; 9     ; Signed Integer                        ;
-; max_address_counts ; 10000 ; Signed Integer                        ;
+; max_address_counts ; 10    ; Signed Integer                        ;
 +--------------------+-------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1370,15 +1317,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Corr_Main:Corr_Main_1"                                                                   ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; corr_done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1" ;
 +----------+-------+----------+---------------------------------------------------+
@@ -1398,21 +1336,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "STATE_MANAGER:this_state_manager"                                                                                                                ;
-+-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                      ;
-+-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; corr_done ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1420,9 +1349,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 18 16:09:57 2023
+    Info: Processing started: Tue Sep 26 09:14:08 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uni_Projektas -c Uni_Projektas
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file uni_projektas.vhd
@@ -1482,8 +1411,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file corr_bu
 Info (12021): Found 2 design units, including 1 entities, in source file corr_main.vhd
     Info (12022): Found design unit 1: Corr_Main-arc
     Info (12023): Found entity 1: Corr_Main
+Info (12021): Found 2 design units, including 1 entities, in source file spi_testbench.vhd
+    Info (12022): Found design unit 1: SPI_Testbench-arc
+    Info (12023): Found entity 1: SPI_Testbench
+Info (12021): Found 2 design units, including 1 entities, in source file uart_testbench.vhd
+    Info (12022): Found design unit 1: UART_Testbench-arc
+    Info (12023): Found entity 1: UART_Testbench
 Info (12127): Elaborating entity "Uni_Projektas" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(224): object "CORR_DONE" assigned a value but never read
 Warning (10540): VHDL Signal Declaration warning at Uni_Projektas.vhd(236): used explicit default value for signal "ADC_SPI_send_irq2" because signal was never assigned a value
 Warning (10036): Verilog HDL or VHDL warning at Uni_Projektas.vhd(238): object "button_active" assigned a value but never read
 Info (12128): Elaborating entity "wizard_pll" for hierarchy "wizard_pll:pl"
@@ -1578,13 +1512,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/dpra
 Info (12128): Elaborating entity "dpram_bv01" for hierarchy "SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0vj1.tdf
     Info (12023): Found entity 1: altsyncram_0vj1
-Info (12128): Elaborating entity "altsyncram_0vj1" for hierarchy "SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram1"
+Info (12128): Elaborating entity "altsyncram_0vj1" for hierarchy "SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|dpram_bv01:FIFOram|altsyncram_0vj1:altsyncram2"
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_djb.tdf
     Info (12023): Found entity 1: cntr_djb
 Info (12128): Elaborating entity "cntr_djb" for hierarchy "SPI_Controller:adc_spi_controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component|scfifo_3c21:auto_generated|a_dpfifo_ai21:dpfifo|cntr_djb:rd_ptr_count"
 Info (12128): Elaborating entity "SPI_TX" for hierarchy "SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component"
 Info (12128): Elaborating entity "UART_Controller" for hierarchy "UART_Controller:UART_Controller_1"
-Warning (10540): VHDL Signal Declaration warning at UART_Controller.vhd(55): used explicit default value for signal "UART_CLK" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at UART_Controller.vhd(52): used explicit default value for signal "UART_CLK" because signal was never assigned a value
+Warning (10631): VHDL Process Statement warning at UART_Controller.vhd(89): inferring latch(es) for signal or variable "fifo_read_req", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "fifo_read_req" at UART_Controller.vhd(89)
 Info (12128): Elaborating entity "UART_TX" for hierarchy "UART_Controller:UART_Controller_1|UART_TX:uart_tx_1"
 Info (12128): Elaborating entity "UART_FIFO_wizard" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo"
 Info (12128): Elaborating entity "scfifo" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component"
@@ -1611,7 +1547,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/dpra
 Info (12128): Elaborating entity "dpram_st01" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0sj1.tdf
     Info (12023): Found entity 1: altsyncram_0sj1
-Info (12128): Elaborating entity "altsyncram_0sj1" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2"
+Info (12128): Elaborating entity "altsyncram_0sj1" for hierarchy "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram1"
 Info (12128): Elaborating entity "Corr_Main" for hierarchy "Corr_Main:Corr_Main_1"
 Info (12128): Elaborating entity "Corr_Buffer" for hierarchy "Corr_Main:Corr_Main_1|Corr_Buffer:buff"
 Info (19000): Inferred 2 megafunctions from design logic
@@ -1647,8 +1583,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_g981
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ikf.tdf
     Info (12023): Found entity 1: cntr_ikf
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (17026): Resynthesizing 0 WYSIWYG logic cells and I/Os using "speed" technology mapper which leaves 24 WYSIWYG logic cells and I/Os untouched
+Info (17026): Resynthesizing 0 WYSIWYG logic cells and I/Os using "speed" technology mapper which leaves 48 WYSIWYG logic cells and I/Os untouched
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "SPI_CS" and its non-tri-state driver.
 Warning (13039): The following bidir pins have no drivers
@@ -1659,14 +1594,21 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "SPI_CS~synth"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ADC_SHDN" is stuck at GND
-    Warning (13410): Pin "MRAM_OUTPUT_EN" is stuck at VCC
+    Warning (13410): Pin "MRAM_A[4]" is stuck at GND
+    Warning (13410): Pin "MRAM_A[5]" is stuck at GND
+    Warning (13410): Pin "MRAM_A[6]" is stuck at GND
+    Warning (13410): Pin "MRAM_A[7]" is stuck at GND
+    Warning (13410): Pin "MRAM_A[8]" is stuck at GND
+    Warning (13410): Pin "MRAM_A[9]" is stuck at GND
+    Warning (13410): Pin "MRAM_A[10]" is stuck at GND
+    Warning (13410): Pin "MRAM_A[11]" is stuck at GND
+    Warning (13410): Pin "MRAM_A[12]" is stuck at GND
+    Warning (13410): Pin "MRAM_A[13]" is stuck at GND
     Warning (13410): Pin "MRAM_A[14]" is stuck at GND
     Warning (13410): Pin "MRAM_A[15]" is stuck at GND
     Warning (13410): Pin "MRAM_A[16]" is stuck at GND
     Warning (13410): Pin "MRAM_A[17]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 16 registers lost all their fanouts during netlist optimizations.
-Info (17036): Removed 3 MSB VCC or GND address nodes from RAM block "UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component|scfifo_ka21:auto_generated|a_dpfifo_rg21:dpfifo|dpram_st01:FIFOram|altsyncram_0sj1:altsyncram2|ALTSYNCRAM"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 17 input pin(s) that do not drive logic
@@ -1687,17 +1629,17 @@ Warning (21074): Design contains 17 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADC_BIT_A[0]"
     Warning (15610): No output dependent on input pin "ADC_BIT_A[1]"
     Warning (15610): No output dependent on input pin "UART_RX"
-Info (21057): Implemented 774 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 862 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 27 input pins
     Info (21059): Implemented 29 output pins
     Info (21060): Implemented 21 bidirectional pins
-    Info (21061): Implemented 609 logic cells
+    Info (21061): Implemented 697 logic cells
     Info (21064): Implemented 87 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 4672 megabytes
-    Info: Processing ended: Thu May 18 16:10:01 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 47 warnings
+    Info: Peak virtual memory: 412 megabytes
+    Info: Processing ended: Tue Sep 26 09:14:17 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:04
 
 

@@ -1,32 +1,33 @@
 
-State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|next_state
-Name next_state.transmiting next_state.reading_fifo2 next_state.reading_fifo1 next_state.idle 
-next_state.idle 0 0 0 0 
-next_state.reading_fifo1 0 0 1 1 
-next_state.reading_fifo2 0 1 0 1 
-next_state.transmiting 1 0 0 1 
-
 State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|curr_state
-Name curr_state.transmiting curr_state.reading_fifo2 curr_state.reading_fifo1 curr_state.idle 
-curr_state.idle 0 0 0 0 
-curr_state.reading_fifo1 0 0 1 1 
-curr_state.reading_fifo2 0 1 0 1 
-curr_state.transmiting 1 0 0 1 
-
-State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|tx_curr_state
-Name tx_curr_state.stop tx_curr_state.data tx_curr_state.start tx_curr_state.sync tx_curr_state.idle 
-tx_curr_state.idle 0 0 0 0 0 
-tx_curr_state.sync 0 0 0 1 1 
-tx_curr_state.start 0 0 1 0 1 
-tx_curr_state.data 0 1 0 0 1 
-tx_curr_state.stop 1 0 0 0 1 
-
-State Machine - |UNI_Projektas|SPI_Controller:adc_spi_controller|curr_state
-Name curr_state.cs_up curr_state.transmiting curr_state.reading_fifo curr_state.idle 
+Name curr_state.waiting curr_state.transmiting curr_state.reading_fifo curr_state.idle 
 curr_state.idle 0 0 0 0 
 curr_state.reading_fifo 0 0 1 1 
 curr_state.transmiting 0 1 0 1 
-curr_state.cs_up 1 0 0 1 
+curr_state.waiting 1 0 0 1 
+
+State Machine - |UNI_Projektas|UART_Controller:UART_Controller_1|UART_TX:uart_tx_1|curr_state
+Name curr_state.stop curr_state.data curr_state.start curr_state.sync curr_state.idle 
+curr_state.idle 0 0 0 0 0 
+curr_state.sync 0 0 0 1 1 
+curr_state.start 0 0 1 0 1 
+curr_state.data 0 1 0 0 1 
+curr_state.stop 1 0 0 0 1 
+
+State Machine - |UNI_Projektas|SPI_Controller:adc_spi_controller|curr_state
+Name curr_state.cs_up curr_state.transmiting curr_state.waiting curr_state.reading_fifo curr_state.idle 
+curr_state.idle 0 0 0 0 0 
+curr_state.reading_fifo 0 0 0 1 1 
+curr_state.waiting 0 0 1 0 1 
+curr_state.transmiting 0 1 0 0 1 
+curr_state.cs_up 1 0 0 0 1 
+
+State Machine - |UNI_Projektas|SPI_Controller:adc_spi_controller|SPI_TX:spi_tx_component|curr_state
+Name curr_state.done curr_state.running curr_state.latch_data curr_state.idle 
+curr_state.idle 0 0 0 0 
+curr_state.latch_data 0 0 1 1 
+curr_state.running 0 1 0 1 
+curr_state.done 1 0 0 1 
 
 State Machine - |UNI_Projektas|STATE_MANAGER:this_state_manager|curr_state
 Name curr_state.write_out_mram curr_state.wait_1 curr_state.read_adc curr_state.setup 

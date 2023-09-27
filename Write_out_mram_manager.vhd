@@ -35,9 +35,9 @@ signal msb : std_logic := '1'; --SEND MSB FIRST
 begin
 
 MRAM_ADDRESS_IN <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_IN'length));
-UART_SEND_DATA <= MRAM_DATA_OUT(15 downto 8) when msb = '1' else MRAM_DATA_OUT(7 downto 0);
+UART_SEND_DATA <= '1' & MRAM_DATA_OUT(13 downto 7) when msb = '1' else '0' & MRAM_DATA_OUT(6 downto 0); --MSB su 1, LSB su 0
 
-WRITE_OUT_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
+WRITE_OUT_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS - 1 else '0';
 
 process(CLK)
 begin

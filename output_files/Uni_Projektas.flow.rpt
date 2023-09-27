@@ -1,6 +1,6 @@
 Flow report for Uni_Projektas
-Thu May 18 16:10:13 2023
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Sep 26 09:14:46 2023
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu May 18 16:10:13 2023           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Flow Status                        ; Successful - Tue Sep 26 09:14:46 2023           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Uni_Projektas                                   ;
 ; Top-level Entity Name              ; UNI_Projektas                                   ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 571 / 4,608 ( 12 % )                            ;
-;     Total combinational functions  ; 488 / 4,608 ( 11 % )                            ;
-;     Dedicated logic registers      ; 322 / 4,608 ( 7 % )                             ;
-; Total registers                    ; 322                                             ;
+; Total logic elements               ; 653 / 4,608 ( 14 % )                            ;
+;     Total combinational functions  ; 555 / 4,608 ( 12 % )                            ;
+;     Dedicated logic registers      ; 362 / 4,608 ( 8 % )                             ;
+; Total registers                    ; 362                                             ;
 ; Total pins                         ; 77 / 89 ( 87 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 533 / 119,808 ( < 1 % )                         ;
+; Total memory bits                  ; 645 / 119,808 ( < 1 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
 ; Total PLLs                         ; 1 / 2 ( 50 % )                                  ;
 +------------------------------------+-------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/18/2023 16:09:58 ;
+; Start date & time ; 09/26/2023 09:14:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Uni_Projektas       ;
 +-------------------+---------------------+
@@ -78,10 +78,12 @@ applicable agreement for further details.
 ; ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP     ; On                                    ; Off                            ; --          ; --             ;
 ; AUTO_PACKED_REGISTERS_STRATIXII         ; Normal                                ; Auto                           ; --          ; --             ;
 ; AUTO_SHIFT_REGISTER_RECOGNITION         ; Always                                ; Auto                           ; --          ; --             ;
-; COMPILER_SIGNATURE_ID                   ; 134660531873041.168441539808660       ; --                             ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                   ; 134660531873041.169570884910900       ; --                             ; --          ; --             ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE        ; Speed                                 ; Balanced                       ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME                ; i1                                    ; --                             ; --          ; Testbenchas    ;
 ; EDA_DESIGN_INSTANCE_NAME                ; NA                                    ; --                             ; --          ; new_testbench  ;
+; EDA_DESIGN_INSTANCE_NAME                ; NA                                    ; --                             ; --          ; SPI_Testbench  ;
+; EDA_DESIGN_INSTANCE_NAME                ; NA                                    ; --                             ; --          ; UART_Testbench ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST         ; Off                                   ; --                             ; --          ; eda_simulation ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH    ; Testbenchas                           ; --                             ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT                  ; Vhdl                                  ; --                             ; --          ; eda_simulation ;
@@ -89,12 +91,19 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_ENABLE_STATUS            ; TEST_BENCH_MODE                       ; --                             ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_FILE                     ; Testbenchas.vhd                       ; --                             ; --          ; Testbenchas    ;
 ; EDA_TEST_BENCH_FILE                     ; new_testbench.vhd                     ; --                             ; --          ; new_testbench  ;
+; EDA_TEST_BENCH_FILE                     ; SPI_Testbench.vhd                     ; --                             ; --          ; SPI_Testbench  ;
+; EDA_TEST_BENCH_FILE                     ; UART_Testbench.vhd                    ; --                             ; --          ; UART_Testbench ;
 ; EDA_TEST_BENCH_MODULE_NAME              ; Testbenchas                           ; --                             ; --          ; Testbenchas    ;
 ; EDA_TEST_BENCH_MODULE_NAME              ; new_testbench                         ; --                             ; --          ; new_testbench  ;
+; EDA_TEST_BENCH_MODULE_NAME              ; SPI_Testbench                         ; --                             ; --          ; SPI_Testbench  ;
+; EDA_TEST_BENCH_MODULE_NAME              ; UART_Testbench                        ; --                             ; --          ; UART_Testbench ;
 ; EDA_TEST_BENCH_NAME                     ; Testbenchas                           ; --                             ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                     ; new_testbench                         ; --                             ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                     ; SPI_Testbench                         ; --                             ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                     ; UART_Testbench                        ; --                             ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR              ; 30 us                                 ; --                             ; --          ; Testbenchas    ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR              ; 10 us                                 ; --                             ; --          ; new_testbench  ;
+; EDA_TEST_BENCH_RUN_SIM_FOR              ; 200 us                                ; --                             ; --          ; SPI_Testbench  ;
 ; EDA_TIME_SCALE                          ; 1 ps                                  ; --                             ; --          ; eda_simulation ;
 ; ENABLE_DRC_SETTINGS                     ; On                                    ; Off                            ; --          ; --             ;
 ; FITTER_EFFORT                           ; Standard Fit                          ; Auto Fit                       ; --          ; --             ;
@@ -132,13 +141,13 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4662 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:05     ; 1.0                     ; 4811 MB             ; 00:00:05                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4551 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4548 MB             ; 00:00:01                           ;
-; Design Assistant          ; 00:00:01     ; 1.0                     ; 4526 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4521 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:13     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 407 MB              ; 00:00:04                           ;
+; Fitter                    ; 00:00:15     ; 1.0                     ; 449 MB              ; 00:00:09                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 350 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 340 MB              ; 00:00:01                           ;
+; Design Assistant          ; 00:00:01     ; 1.0                     ; 331 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 324 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:30     ; --                      ; --                  ; 00:00:17                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -32,7 +32,6 @@ architecture arc of Read_adc_manager is
 begin
 
 MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
-
 READ_ADC_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
 
 process(CLK)

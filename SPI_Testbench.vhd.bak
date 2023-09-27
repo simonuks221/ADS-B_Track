@@ -1,0 +1,96 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
+
+entity SPI_Testbench is --Up to 260MHz operation
+generic (
+	BAUD_RATE_PRESCALER : integer := 1302; --434 arba  kad 115200 baud reitui toki prescaleri naudojam 
+	MAX_ADDRESS_COUNTS : integer :=  10000;
+	SEND_CLK_COUNTER_MAX : integer := 30
+);
+port(
+	CLK : in std_logic;
+	--ADC SPI
+	ADC_SPI_SDIN : inout std_logic := 'Z';
+	ADC_SPI_SCLK : out std_logic := 'Z';
+	ADC_SPI_CS : out std_logic := 'Z';
+);
+end entity;
+
+architecture arc of SPI_Testbench is
+
+component SPI_Controller is 
+generic(
+	SEND_CLK_COUNTER_MAX : integer := 500;
+	BITS : integer := 16;
+	SEND_CLK_WAIT_MAX : integer := 100 * 10
+);
+port(
+	CLK : in std_logic;
+	SPI_MOSI : inout std_logic;
+	SPI_SCLK : out std_logic;
+	SPI_CS : out std_logic;
+	SPI_send_data : in std_logic_vector(BITS-1 downto 0) := (others => '0');
+	SPI_send_irq : in std_logic := '0';
+	SPI_FIFO_EMPTY : out std_logic := '0'
+);
+end component;
+
+component wizard_pll IS
+	PORT
+	(
+		inclk0		: IN STD_LOGIC  := '0';
+		c0		: OUT STD_LOGIC 
+	);
+end component;
+
+end component;
+
+signal CLK_160 : std_logic  := '0';
+
+--SPI
+signal ADC_SPI_send_data : std_logic_vector(16-1 downto 0) := (others => '0');
+signal ADC_SPI_send_irq : std_logic := '0';
+signal ADC_SPI_send_irq1 : std_logic := '0';
+signal ADC_SPI_send_irq2 : std_logic := '0';
+signal ADC_SPI_fifo_empty : std_logic := '0';
+signal button_active : std_logic := '0';
+
+begin
+
+pl : wizard_pll port map(inclk0 => CLK, c0 => CLK_160); --160MHz
+
+this_read_adc_manager : read_adc_manager generic map(MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS)
+							port map(CLK => CLK_160, DCLK => ADC_DCLKA, ADC_BIT => ADC_BIT_A, EN_READ_ADC => EN_READ_ADC,
+							READ_ADC_DONE => READ_ADC_DONE, ADC_BIT_VALID => ADC_BIT_VALID, MRAM_DATA_OUT => ADC_BITS_OUT, MRAM_DONE => MRAM_DONE);
+this_write_out_mram_manager : write_out_mram_manager generic map(MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS)
+							port map (CLK => CLK_160,UART_SEND_DATA=>UART_SEND_DATA, UART_DATA_IRQ => UART_DATA_IRQ, 
+							MRAM_DATA_OUT => MRAM_DATA_OUT, MRAM_ADDRESS_IN => MRAM_ADDRESS_IN_READ, MRAM_READ_DATA => MRAM_READ_DATA, MRAM_DONE => MRAM_DONE,
+							WRITE_OUT_DONE => WRITE_OUT_DONE, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
+
+ADC_SPI_send_irq <= ADC_SPI_Send_irq1 or ADC_SPI_send_irq2;
+adc_spi_controller : SPI_Controller generic map (SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => 16, SEND_CLK_WAIT_MAX => 20) port map(CLK => CLK_160, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK,
+							SPI_CS => ADC_SPI_CS, SPI_send_data => ADC_SPI_send_data, SPI_send_irq => ADC_SPI_Send_irq, SPI_FIFO_EMPTY => ADC_SPI_fifo_empty);
+UART_Controller_1 : UART_Controller generic map(BAUD_RATE_PRESCALER => BAUD_RATE_PRESCALER) port map(CLK => CLK_160,
+	SEND_DATA_IN => UART_SEND_DATA,
+	SEND_DATA_IN_REQ => UART_DATA_IRQ,
+	TX => UART_TX, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
+							
+Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 50, BUFFER_WIDTH => 9, MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS) port map(CLK => CLK_160, ADC_BITS => ADC_BITS_OUT, 
+								ADC_BITS_VALID => ADC_BIT_VALID, PREAMBULE_FOUND => SPI_CS, MRAM_DATA_OUT => MRAM_DATA_IN, 
+							MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA, MRAM_DONE => MRAM_DONE, EN_CORR => EN_CORR, 
+							CORR_DONE => CORR_DONE);		
+
+process(CLK_160)
+begin
+	if falling_edge(CLK_160) then
+		if(BUTTON = '0') then
+			button_active <= '1';
+			end if;
+		end if;
+end process;
+
+
+end architecture;

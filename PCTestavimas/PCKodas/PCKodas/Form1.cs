@@ -156,20 +156,45 @@ namespace PCKodas
 
         int last_MSB = 0;
         int full_16bit = 0;
+        bool is_MSB = false;
         void Update_Chart(int new_value)
         {
-            if(new_value <= 16) //Gautas MSB, pirmas baitas
+            /*
+            Debug.WriteLine(new_value);
+            received_data_length++;
+            this.Invoke(new MethodInvoker(delegate ()
             {
-                last_MSB = new_value;
-                Debug.WriteLine(last_MSB);
+                //Access controls
+
+                DataAmountLabel.Text = received_data_length.ToString();
+
+                if (UpdateChartButton.Checked)
+                {
+                    if (VoltageChart.Series[0].Points.Count == max_chart_elements) //Only leave some visible
+                    {
+                        VoltageChart.Series[0].Points.RemoveAt(0);
+                    }
+                    VoltageChart.Series[0].Points.AddY(new_value);
+                    VoltageChart.Update();
+                }
+                else
+                {
+
+                }
+            }));
+            return;
+            */
+            if (new_value >= 128) //Gautas MSB, pirmas baitas
+             {
+                last_MSB = new_value / 128 - 1;
+                Debug.Write("MSB: " + last_MSB.ToString() + "\n");
             }
             else //Gautas LSB, sudedam LSB ir MSB
             {
-                full_16bit = last_MSB * 256 + new_value; //MSB i kaire per 8, max gali buti 1024 vertes
-                //full_16bit = new_value;
+                Debug.Write("LSB: " + new_value.ToString() + "\n");
+                full_16bit = last_MSB*127 + new_value; //MSB i kaire per 8, max gali buti 1024 vertes
                 received_data_length++;
                 received_data.Add(full_16bit);
-
                 this.Invoke(new MethodInvoker(delegate ()
                 {
                     //Access controls
@@ -191,6 +216,9 @@ namespace PCKodas
                     }
                 }));
             }
+            is_MSB = !is_MSB;
+          //  }
+
         }
 
         private void SaveToFileButton_Click(object sender, EventArgs e)

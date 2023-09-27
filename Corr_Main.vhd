@@ -180,7 +180,9 @@ end process;
 process(CLK)
 begin
 	if rising_edge(CLK) then
-		MRAM_DATA_OUT <= "0000" & std_logic_vector(to_signed(corr_value, 12));
+		--MRAM_DATA_OUT <= "0000" & std_logic_vector(to_signed(corr_value, 12));
+		--MRAM_DATA_OUT <= "0100010101000101";
+		MRAM_DATA_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_DATA_OUT'length));
 		if(EN_CORR = '0') then
 			read_counter <= 0;
 			MRAM_WRITE_DATA <= '0';
@@ -230,8 +232,4 @@ end process;
 --		end if;
 --	end if;
 --end process;
-									
-						
-
-									
 end architecture;

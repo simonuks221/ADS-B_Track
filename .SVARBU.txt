@@ -19,3 +19,8 @@ Nulis omu rezistoriai ant
 73 PULLUPA ir KONDIKA TURI NUIMTI
 
 LEDAI ANT PINU 3 7 9 PAJUNGTI I ISVADUS MRAM_A13 11 10
+
+P25 - rudas į ADC_SPI_CS
+P27 - juodas į ADC_SPI_SCLK
+P26 - violetinis yea UART_TX
+Pilkas - GND
