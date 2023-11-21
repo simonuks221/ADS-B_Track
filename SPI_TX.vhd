@@ -13,20 +13,21 @@ port(
 	CLK: in std_logic;
 	SPI_SCLK: out std_logic := '0';
 	SPI_MOSI: inout std_logic := '0';
+	SPI_CS: out std_logic := '1';
 	SEND_DATA: in std_logic_vector(BITS-1 downto 0) := (others => '0');
 	SEND_IRQ: in std_logic := '0';
-	SEND_DONE: out std_logic := '0'
+	SEND_DONE: out std_logic := '1'
 );
 end entity;
 
 architecture arc of SPI_TX is
-type state is (idle, latch_data, running, done);
+type state is (idle, latch_data, running, cs_up);
 signal curr_state : state := idle;
 signal tx_buf : std_logic_vector(BITS-1 downto 0) := (others => '0');
 signal rx_buf : std_logic_vector(BITS-1 downto 0) := (others => '0');
 signal bits_sent : integer range 0 to BITS + 1 := 0;
-signal sclk : std_logic := '1';
-signal clk_counter : integer range 0 to SEND_CLK_COUNTER_MAX := 0;
+signal sclk : std_logic := '0';
+signal clk_counter : integer range 0 to SEND_CLK_COUNTER_MAX*2+1 := 0;
 signal is_read : std_logic := '0'; --Read 1, write - 0
 begin
 
@@ -44,23 +45,27 @@ begin
 				curr_state <= running;
 			when running =>
 				if(bits_sent = BITS) then
-					curr_state <= done;
+					curr_state <= cs_up;
 				end if;
-			when done =>
-				curr_state <= idle;
+			when cs_up =>
+				if(clk_counter = SEND_CLK_COUNTER_MAX*2) then
+					curr_state <= idle;
+				end if;
 		end case;
 	end if;
 end process;
 
 SPI_MOSI <= 'Z' when bits_sent >= 8 and is_read = '1' else tx_buf(BITS-1);
+SPI_CS <= '1' when curr_state = idle or curr_state = cs_up else '0';
+SEND_DONE <= '1' when curr_state = idle else '0';
 
 process(CLK) 
 begin
 	if(rising_edge(CLK)) then
 		case curr_state is
 			when idle =>
+				clk_counter <= 0;
 				sclk <= '0';
-				SEND_DONE <= '0';
 				bits_sent <= 0;
 			when latch_data =>
 				tx_buf <= SEND_DATA;
@@ -80,8 +85,8 @@ begin
 				else
 					clk_counter <= clk_counter + 1;
 				end if;
-			when done =>
-				SEND_DONE <= '1';
+			when cs_up =>
+				clk_counter <= clk_counter + 1;
 		end case;
 	end if;
 end process;

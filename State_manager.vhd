@@ -12,7 +12,7 @@ port (
 	WRITE_OUT_DONE : in std_logic := '0';
 	CORR_DONE : in std_logic := '0';
 	
-	EN_SETUP : out std_logic := '1';
+	EN_SETUP : out std_logic := '0';
 	EN_READ_ADC : out std_logic := '0';
 	EN_WRITE_OUT_MRAM : out std_logic := '0';
 	EN_CORR : out std_logic := '0'
@@ -20,9 +20,9 @@ port (
 end entity;
 
 architecture arc of STATE_MANAGER is
-type state is (setup, read_adc,wait_1, write_out_mram);
-signal curr_state : state := setup;
-signal counter : integer := 0;
+type state is (wait_0, setup, read_adc,wait_1, write_out_mram);
+signal curr_state : state := wait_0;
+signal counter : integer range 0 to 1000+1 := 0;
 
 begin
 
@@ -33,6 +33,8 @@ begin
 	EN_READ_ADC <= '0';
 	EN_WRITE_OUT_MRAM <= '0';
 	case curr_state is
+		when wait_0 =>
+			
 		when setup =>
 			EN_SETUP <= '1';
 		when read_adc =>
@@ -49,6 +51,12 @@ process(CLK)
 begin
 	if(rising_edge(CLK)) then
 		case curr_state is
+			when wait_0 =>
+				counter <= counter + 1;
+				if(counter = 1000) then
+					counter <= 0;
+					curr_state <= setup;
+				end if;
 			when setup =>
 				if(SETUP_DONE = '1') then
 					curr_state <= read_adc;

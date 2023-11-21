@@ -1,6 +1,8 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Uni_Projektas">
-		<CBX_INST_ENTRY INSTANCE_NAME="|SPI_Controller|wizard_spi_fifo:spi_fifo_component|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_3c21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_0" CBX_FILE_NAME="shift_taps_bjl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|UNI_Projektas|Corr_Main:Corr_Main_1|Corr_Buffer:buff|altshift_taps:buffer_0_rtl_1" CBX_FILE_NAME="shift_taps_5jl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Uni_Projektas|UART_Controller:UART_Controller_1|UART_FIFO_wizard:uart_fifo|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ka21.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

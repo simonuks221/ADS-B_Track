@@ -12,53 +12,51 @@ end entity;
 
 architecture arc of SPI_Testbench is
 
-component SPI_Controller is 
+component SPI_TX is 
 generic(
-	SEND_CLK_COUNTER_MAX : integer := 500;
-	BITS : integer := 16;
-	SEND_CLK_WAIT_MAX : integer := 100 * 10
+	SEND_CLK_COUNTER_MAX : integer := 100;
+	BITS : integer := 8
 );
 port(
-	CLK : in std_logic;
-	SPI_MOSI : inout std_logic;
-	SPI_SCLK : out std_logic;
-	SPI_CS : out std_logic;
-	SPI_send_data : in std_logic_vector(BITS-1 downto 0) := (others => '0');
-	SPI_send_irq : in std_logic := '0';
-	SPI_FIFO_EMPTY : out std_logic := '0'
+	CLK: in std_logic := '0';
+	SPI_SCLK: out std_logic := '0';
+	SPI_MOSI: inout std_logic := '0';
+	SPI_CS : out std_logic := '1';
+	SEND_DATA: in std_logic_vector(BITS-1 downto 0) := (others => '0');
+	SEND_IRQ: in std_logic := '0';
+	SEND_DONE: out std_logic := '0'
 );
 end component;
 
 signal CLK : std_logic := '1';
 
 --SPI
-signal ADC_SPI_send_data : std_logic_vector(16-1 downto 0) := (others => '0');
-signal ADC_SPI_send_irq : std_logic := '0';
-signal ADC_SPI_fifo_empty : std_logic := '0';
-signal button_active : std_logic := '0';
+signal SPI_send_data : std_logic_vector(16-1 downto 0) := (others => '0');
+signal SPI_send_irq : std_logic := '0';
+signal SPI_send_done : std_logic := '0';
 
-signal adc_spi_test_counter : integer := 0;
-signal ADC_SPI_SDIN : std_logic := 'Z';
-signal ADC_SPI_SCLK : std_logic := 'Z';
-signal ADC_SPI_CS :  std_logic := 'Z';
+signal SPI_SDIN : std_logic := 'Z';
+signal SPI_SCLK : std_logic := 'Z';
+signal SPI_CS :  std_logic := 'Z';
 
 begin
 
-adc_spi_controller : SPI_Controller generic map (SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => 16, SEND_CLK_WAIT_MAX => 20) port map(CLK => CLK, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK,
-							SPI_CS => ADC_SPI_CS, SPI_send_data => ADC_SPI_send_data, SPI_send_irq => ADC_SPI_Send_irq, SPI_FIFO_EMPTY => ADC_SPI_fifo_empty);
+spi_tx_component : spi_tx generic map(SEND_CLK_COUNTER_MAX => 500, BITS => 16) 
+						port map(CLK => CLK, SPI_SCLK => SPI_SCLK,SPI_CS =>SPI_CS, SPI_MOSI => SPI_SDIN, SEND_DATA => SPI_send_data, SEND_IRQ => SPI_send_irq, SEND_DONE => SPI_send_done);
 
 CLK <= not CLK after 10ns; --50MHz 20ns
 
 process
 begin
-	wait for 100ns;
+	wait for 100us;
 	wait until falling_edge(CLK);
-	ADC_SPI_send_Data <= "0101010101010101";
-	ADC_SPI_send_irq <= '1';
+	SPI_send_data <= "0000011000010000";
+	SPI_send_irq <= '1';
+	wait until rising_edge(SPI_send_done);
+	SPI_send_data <= "1000011000000000";
 	wait until falling_edge(CLK);
-	ADC_SPI_send_Data <= "1111000000000000";
 	wait until falling_edge(CLK);
-	ADC_SPI_send_irq <= '0';
+	SPI_send_irq <= '0';
 	wait;
 end process;
 

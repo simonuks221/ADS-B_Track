@@ -66,20 +66,19 @@ port(
 );
 end component;
 
-component SPI_Controller is 
+component SPI_TX is 
 generic(
 	SEND_CLK_COUNTER_MAX : integer := 500;
-	BITS : integer := 16;
-	SEND_CLK_WAIT_MAX : integer := 100 * 10
+	BITS : integer := 16
 );
 port(
-	CLK : in std_logic;
-	SPI_MOSI : inout std_logic;
-	SPI_SCLK : out std_logic;
-	SPI_CS : out std_logic;
-	SPI_send_data : in std_logic_vector(BITS-1 downto 0) := (others => '0');
-	SPI_send_irq : in std_logic := '0';
-	SPI_FIFO_EMPTY : out std_logic := '0'
+	CLK: in std_logic;
+	SPI_SCLK: out std_logic := '0';
+	SPI_MOSI: inout std_logic := '0';
+	SPI_CS: out std_logic := '1';
+	SEND_DATA: in std_logic_vector(BITS-1 downto 0) := (others => '0');
+	SEND_IRQ: in std_logic := '0';
+	SEND_DONE: out std_logic := '0'
 );
 end component;
 
@@ -229,12 +228,11 @@ signal EN_WRITE_OUT_MRAM : std_logic := '0';
 signal EN_CORR : std_logic := '0';
 
 --SPI
-
 signal ADC_SPI_send_data : std_logic_vector(16-1 downto 0) := (others => '0');
 signal ADC_SPI_send_irq : std_logic := '0';
 signal ADC_SPI_send_irq1 : std_logic := '0';
 signal ADC_SPI_send_irq2 : std_logic := '0';
-signal ADC_SPI_fifo_empty : std_logic := '0';
+signal ADC_SPI_DONE : std_logic := '0';
 signal button_active : std_logic := '0';
 
 --UART
@@ -244,7 +242,7 @@ signal UART_FIFO_EMPTY : std_logic := '0';
 
 begin
 
-pl : wizard_pll port map(inclk0 => CLK, c0 => CLK_150); --160MHz
+pl : wizard_pll port map(inclk0 => CLK, c0 => CLK_150); --150MHz
 ADC_SHDN <= '0';
 ADC_CLK <= CLK;
 
@@ -254,7 +252,7 @@ this_mram_controller : MRAM_Controller port map(CLK => CLK_150, data_in => MRAM_
 
 this_state_manager : state_manager port map (CLK => CLK_150, SETUP_DONE => SETUP_DONE, READ_ADC_DONE => READ_ADC_DONE, WRITE_OUT_DONE => WRITE_OUT_DONE, EN_READ_ADC => EN_READ_ADC, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, EN_SETUP => EN_SETUP, EN_CORR => EN_CORR, CORR_DONE => CORR_DONE);
 this_setup_manager : setup_manager port map(CLK => CLK_150, EN_SETUP => EN_SETUP, SPI_send_data => ADC_SPI_Send_data, SPI_send_irq => ADC_SPI_Send_irq1, SETUP_DONE => SETUP_DONE,
-							SPI_FIFO_EMPTY => ADC_SPI_fifo_empty, ADC_SYNC => ADC_SYNC);
+							SPI_FIFO_EMPTY => ADC_SPI_DONE, ADC_SYNC => ADC_SYNC);
 --this_read_adc_manager : read_adc_manager generic map(MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS)
 --							port map(CLK => CLK_150, DCLK => ADC_DCLKA, ADC_BIT => ADC_BIT_A, MRAM_DATA_OUT => MRAM_DATA_IN, 
 --							MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA, MRAM_DONE => MRAM_DONE, EN_READ_ADC => EN_READ_ADC,
@@ -269,8 +267,8 @@ this_write_out_mram_manager : write_out_mram_manager generic map(MAX_ADDRESS_COU
 							WRITE_OUT_DONE => WRITE_OUT_DONE, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
 
 ADC_SPI_send_irq <= ADC_SPI_Send_irq1 or ADC_SPI_send_irq2;
-adc_spi_controller : SPI_Controller generic map (SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => 16, SEND_CLK_WAIT_MAX => 20) port map(CLK => CLK_150, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK,
-							SPI_CS => ADC_SPI_CS, SPI_send_data => ADC_SPI_send_data, SPI_send_irq => ADC_SPI_Send_irq, SPI_FIFO_EMPTY => ADC_SPI_fifo_empty);
+adc_spi : SPI_TX generic map (SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => 16) port map(CLK => CLK_150, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK,
+							SPI_CS => ADC_SPI_CS, SEND_DATA => ADC_SPI_send_data, SEND_IRQ => ADC_SPI_Send_irq, SEND_DONE => ADC_SPI_DONE);
 UART_Controller_1 : UART_Controller generic map(BAUD_RATE => BAUD_RATE) port map(CLK => CLK_150,
 	SEND_DATA_IN => UART_SEND_DATA,
 	SEND_DATA_IN_REQ => UART_DATA_IRQ,
