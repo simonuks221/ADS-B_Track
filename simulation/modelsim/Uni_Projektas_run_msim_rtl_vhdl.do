@@ -5,27 +5,15 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Controller.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd}
 vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_spi_fifo.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_Controller.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/State_manager.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_pll.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd}
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd}
 
-vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd}
+vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Testbench.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Testbenchas
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  SPI_Testbench
 
 add wave *
 view structure
 view signals
-run 30 us
+run 200 us

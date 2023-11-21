@@ -1,20 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using System.Threading;
 using System.IO.Ports;
 using System.Diagnostics;
 using System.IO;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Windows.Forms.VisualStyles;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace PCKodas
 {
@@ -130,17 +119,10 @@ namespace PCKodas
             int count = port.BytesToRead;
             byte[] ByteArray = new byte[count];
             port.Read(ByteArray, 0, count);
-            //Debug.WriteLine("Got data length: " + ByteArray.Length);
-
             if (ByteArray.Length > 0) {
                 for (int i = 0; i < ByteArray.Length; i++)
                 {
                     Update_Chart(ByteArray[i]);
-                    if (ByteArray[i] != 0)
-                    {
-                        //Debug.WriteLine("ADded diff: " + ByteArray[i]);
-                    }
-                    //Debug.WriteLine("Added: " + ByteArray[i]);
                 }
             }
         }

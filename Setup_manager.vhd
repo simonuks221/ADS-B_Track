@@ -29,13 +29,13 @@ begin
 		if(EN_SETUP = '1') then
 			case config_command_counter is --1 read, 0 write
 				when 0 =>
-					SPI_send_data <= "0000000000000011"; --00h
+					SPI_send_data <= "0000000000000011"; --
 					SPI_send_irq <= '1';
 				when 1=>
 					SPI_send_irq <= '0';
 					
 				when 2 =>
-					SPI_send_data <= "1000000000000000"; --00h
+					SPI_send_data <= "1000000000000000"; --
 					SPI_send_irq <= '1';
 				when 3 =>
 					SPI_send_irq <= '0';

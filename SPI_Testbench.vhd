@@ -56,7 +56,6 @@ begin
 	ADC_SPI_send_Data <= "0101010101010101";
 	ADC_SPI_send_irq <= '1';
 	wait until falling_edge(CLK);
-	ADC_SPI_send_irq <= '1';
 	ADC_SPI_send_Data <= "1111000000000000";
 	wait until falling_edge(CLK);
 	ADC_SPI_send_irq <= '0';
