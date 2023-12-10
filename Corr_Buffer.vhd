@@ -78,11 +78,11 @@ end process;
 process(CLK)
 begin
 	if rising_edge(CLK) then
-		buf_b0 <= DATA_IN;
-		buf_b1 <= buf_b0;
-		buf_b2 <= buf_b1;
-		diff <= to_signed(to_integer(unsigned(buf_b0)) - to_integer(unsigned(buf_b2)), BUFFER_WIDTH);
-		
+		--buf_b0 <= DATA_IN;
+		--buf_b1 <= buf_b0;
+		--buf_b2 <= buf_b1;
+		--diff <= to_signed(to_integer(unsigned(buf_b0)) - to_integer(unsigned(buf_b2)), BUFFER_WIDTH);
+		diff <= to_signed(to_integer(unsigned(DATA_IN)), BUFFER_WIDTH);
 		buffer_0 <= buffer_0(BUFFER_LENGTH - 2 downto 0) & diff(0);
 		buffer_1 <= buffer_1(BUFFER_LENGTH - 2 downto 0) & diff(1);
 		buffer_2 <= buffer_2(BUFFER_LENGTH - 2 downto 0) & diff(2);

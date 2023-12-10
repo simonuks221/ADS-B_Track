@@ -7,7 +7,7 @@ use ieee.std_logic_textio.all;
 entity UNI_Projektas is --Up to 260MHz operation
 generic (
 	BAUD_RATE : integer := 115200;
-	MAX_ADDRESS_COUNTS : integer := 10;
+	MAX_ADDRESS_COUNTS : integer := 100;
 	SEND_CLK_COUNTER_MAX : integer := 30
 );
 port(
@@ -47,7 +47,6 @@ port(
 	--UART
 	UART_RX : in std_logic := 'Z';
 	UART_TX : out std_logic := '1'
-	
 );
 end entity;
 
@@ -211,6 +210,7 @@ signal MRAM_DATA_IN : std_logic_vector(15 downto 0) := (others => '0');
 signal MRAM_DATA_OUT : std_logic_vector(15 downto 0) := (others => '0');
 signal MRAM_ADDRESS_IN_READ : std_logic_vector(17 downto 0) := (others => '0');
 signal MRAM_ADDRESS_IN_WRITE : std_logic_vector(17 downto 0) := (others => '0');
+signal MRAM_ADDRESS_IN_COMBINED : std_logic_vector(17 downto 0) := (others => '0');
 signal MRAM_WRITE_DATA : std_logic := '0';
 signal MRAM_READ_DATA : std_logic := '0';
 signal MRAM_DONE : std_logic := '0';
@@ -245,9 +245,9 @@ pl : wizard_pll port map(inclk0 => CLK, c0 => CLK_150); --150MHz
 ADC_SHDN <= '0';
 ADC_CLK <= CLK;
 
-this_mram_controller : MRAM_Controller port map(CLK => CLK_150, data_in => MRAM_DATA_IN, data_out => MRAM_DATA_OUT, address_in => MRAM_ADDRESS_IN_WRITE or MRAM_ADDRESS_IN_READ, 
-							write_data => MRAM_WRITE_DATA, read_data => MRAM_READ_DATA, done => MRAM_DONE, MRAM_EN => MRAM_EN, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,
-							MRAM_WRITE_EN => MRAM_WRITE_EN, MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_A => MRAM_A, MRAM_D => MRAM_D);
+MRAM_ADDRESS_IN_COMBINED <= MRAM_ADDRESS_IN_WRITE or MRAM_ADDRESS_IN_READ;
+
+this_mram_controller : MRAM_Controller port map(CLK => CLK_150, data_in => MRAM_DATA_IN, data_out => MRAM_DATA_OUT, address_in => MRAM_ADDRESS_IN_COMBINED, write_data => MRAM_WRITE_DATA, read_data => MRAM_READ_DATA, done => MRAM_DONE, MRAM_EN => MRAM_EN, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN, MRAM_WRITE_EN => MRAM_WRITE_EN, MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_A => MRAM_A, MRAM_D => MRAM_D);
 
 this_state_manager : state_manager port map (CLK => CLK_150, SETUP_DONE => SETUP_DONE, READ_ADC_DONE => READ_ADC_DONE, WRITE_OUT_DONE => WRITE_OUT_DONE, EN_READ_ADC => EN_READ_ADC, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, EN_SETUP => EN_SETUP, EN_CORR => EN_CORR, CORR_DONE => CORR_DONE);
 this_setup_manager : setup_manager port map(CLK => CLK_150, EN_SETUP => EN_SETUP, SPI_send_data => ADC_SPI_Send_data, SPI_send_irq => ADC_SPI_Send_irq1, SETUP_DONE => SETUP_DONE,

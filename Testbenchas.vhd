@@ -45,7 +45,7 @@ signal MRAM_EN : std_logic;
 signal MRAM_WRITE_EN : std_logic;
 signal MRAM_UPPER_EN : std_logic;
 signal MRAM_LOWER_EN : std_logic;
-signal MRAM_D : std_logic_vector(15 downto 0);
+signal MRAM_D : std_logic_vector(15 downto 0) :=  (others =>'0');
 
 --UART
 --UART
@@ -80,7 +80,6 @@ component UNI_Projektas is
 port(
 	CLK : in std_logic := '0';
 	BUTTON : in std_logic := '0';
-	
 	--ADC SIGNALS
 	ADC_SHDN : out std_logic := '0'; --1 - ADC OFF, 0 - ADC ON
 	ADC_SYNC : out std_logic := '0'; --Sinchronizacija tarp FPGA CLk ir ADC vidinio CLK
@@ -121,12 +120,8 @@ end component;
 type mram_data_type is array(0 to 25600) of std_logic_vector(15 downto 0);
 signal mram_data : mram_data_type := (others => (others => '0'));
 
-
 BEGIN
-i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, ADC_SYNC => ADC_SYNC, ADC_CLK => ADC_CLK, ADC_SPI_SDIN => ADC_SPI_SDIN, ADC_SPI_SCLK => ADC_SPI_SCLK, ADC_SPI_CS => ADC_SPI_CS,
-									ADC_DCLKA => ADC_DCLKA, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,  MRAM_A => MRAM_A, MRAM_EN => MRAM_EN, MRAM_WRITE_EN => MRAM_WRITE_EN,
-									MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_D => MRAM_D, ADC_BIT_A => ADC_BIT_A, 
-									UART_RX => UART_RX, UART_TX => UART_TX, SPI_CS => SPI_CS);
+i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, ADC_SYNC => ADC_SYNC, ADC_CLK => ADC_CLK, ADC_SPI_SDIN => ADC_SPI_SDIN, ADC_SPI_SCLK => ADC_SPI_SCLK, ADC_SPI_CS => ADC_SPI_CS,ADC_DCLKA => ADC_DCLKA, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,  MRAM_A => MRAM_A, MRAM_EN => MRAM_EN, MRAM_WRITE_EN => MRAM_WRITE_EN, MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_D => MRAM_D,ADC_BIT_A => ADC_BIT_A, UART_RX => UART_RX, UART_TX => UART_TX, SPI_CS => SPI_CS);
 	
 CLK <= not CLK after 10ns; --50MHz 20ns
 --ADC_DCLKA <= CLK when now > 40us else '0';
@@ -147,7 +142,7 @@ ADC_DCLKA <= transport ADC_CLK after 5ns; --50MHz 5ns, ketvirtadalis
 process(CLK)
 begin
 	if(falling_edge(CLK)) then
-		if now > 173.7us then
+		if now > 44us then
 			if(adc_buffer_index < VOLTAGE_DATA_LEN-1) then
 				if(adc_buffer_counter = 4) then
 					adc_buffer_counter <= 0;
