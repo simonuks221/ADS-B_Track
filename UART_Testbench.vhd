@@ -8,7 +8,7 @@ end entity;
 architecture arc of UART_Testbench is
 component UART_Controller is
 generic(
-	BAUD_RATE : integer := 115200
+	BAUD_RATE : integer := 921600
 );
 port(
 	CLK: in std_logic;
@@ -27,7 +27,7 @@ signal UART_DATA_IRQ : std_logic := '0';
 signal UART_FIFO_EMPTY : std_logic := '0';
 
 begin
-UART_Controller_1 : UART_Controller generic map(BAUD_RATE => 115200) port map(CLK => CLK,
+UART_Controller_1 : UART_Controller generic map(BAUD_RATE => 921600) port map(CLK => CLK,
 	SEND_DATA_IN => UART_SEND_DATA,
 	SEND_DATA_IN_REQ => UART_DATA_IRQ,
 	TX => UART_TX, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
@@ -37,12 +37,12 @@ process
 begin
 	wait for 100ns;
 	wait until falling_edge(CLK);
-	UART_SEND_DATA <= "10101010";
+	UART_SEND_DATA <= "00101011";
 	UART_DATA_IRQ <= '1';
 	wait until falling_edge(CLK);
 	UART_SEND_DATA <= "11101110";
 	wait until falling_edge(CLK);
-	UART_SEND_DATA <= "00110011";
+	UART_SEND_DATA <= "10110011";
 	wait until falling_edge(CLK);
 	UART_DATA_IRQ <= '0';
 	wait;

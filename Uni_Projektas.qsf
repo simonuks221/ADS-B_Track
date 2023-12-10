@@ -52,7 +52,7 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH UART_Testbench -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH SPI_Testbench -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
@@ -168,13 +168,11 @@ set_global_assignment -name QIP_FILE UART_FIFO_wizard.qip
 set_global_assignment -name VHDL_FILE Testbenchas.vhd
 set_global_assignment -name SDC_FILE Uni_Projektas.sdc
 set_global_assignment -name VHDL_FILE UART_RX.vhd
-set_global_assignment -name QIP_FILE wizard_spi_fifo.qip
 set_global_assignment -name VHDL_FILE MRAM_Controller.vhd
 set_global_assignment -name VHDL_FILE State_manager.vhd
 set_global_assignment -name VHDL_FILE Setup_manager.vhd
 set_global_assignment -name VHDL_FILE Read_adc_manager.vhd
 set_global_assignment -name VHDL_FILE Write_out_mram_manager.vhd
-set_global_assignment -name VHDL_FILE MRAM_TEST.vhd
 set_global_assignment -name QIP_FILE wizard_pll.qip
 set_global_assignment -name VHDL_FILE Corr_Buffer.vhd
 set_global_assignment -name VHDL_FILE Corr_Main.vhd
@@ -187,13 +185,19 @@ set_global_assignment -name VHDL_FILE UART_Testbench.vhd
 set_global_assignment -name EDA_TEST_BENCH_NAME UART_Testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id UART_Testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME UART_Testbench -section_id UART_Testbench
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BUTTON
 set_global_assignment -name VHDL_FILE SPI_TX.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BUTTON
+set_global_assignment -name VHDL_FILE MRAM_Testbench.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME MRAM_Testbench -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id MRAM_Testbench
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 us" -section_id MRAM_Testbench
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME MRAM_Testbench -section_id MRAM_Testbench
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE Testbenchas.vhd -section_id Testbenchas
 set_global_assignment -name EDA_TEST_BENCH_FILE new_testbench.vhd -section_id new_testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE SPI_Testbench.vhd -section_id SPI_Testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE UART_Testbench.vhd -section_id UART_Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE MRAM_Testbench.vhd -section_id MRAM_Testbench

@@ -165,7 +165,7 @@ begin
 	end if;
 end process;                       
 
-process --WRite
+process --MRAM WRITE/READ emulation
 begin
 	wait until falling_edge(MRAM_EN);
 		MRAM_D <= (others => 'Z');
@@ -176,6 +176,9 @@ begin
 			wait for 10ns;
 			if(MRAM_OUTPUT_EN = '0') then
 				MRAM_D <= mram_data(to_integer(unsigned(MRAM_A)));
+				wait until rising_edge(MRAM_EN);
+				wait for 15ns;
+				MRAM_D <= (others => 'Z');
 			end if;
 		end if;
 end process;
