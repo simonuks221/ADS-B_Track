@@ -95,8 +95,7 @@ component MRAM_Controller is
 	CLK : in std_logic := '0';
 	data_in : in std_logic_vector(15 downto 0) := (others => '0');
 	data_out : out std_logic_vector(15 downto 0) := (others => '0');
-	address_in_write : in std_logic_vector(17 downto 0) := (others => '0');
-	address_in_read : in std_logic_vector(17 downto 0) := (others => '0');
+	address_in : in std_logic_vector(17 downto 0) := (others => '0');
 	write_data : in std_logic := '0';
 	read_data : in std_logic := '0';
 	done : out std_logic := '0';
@@ -246,7 +245,7 @@ pl : wizard_pll port map(inclk0 => CLK, c0 => CLK_150); --150MHz
 ADC_SHDN <= '0';
 ADC_CLK <= CLK;
 
-this_mram_controller : MRAM_Controller port map(CLK => CLK_150, data_in => MRAM_DATA_IN, data_out => MRAM_DATA_OUT, address_in_write => MRAM_ADDRESS_IN_WRITE, address_in_read => MRAM_ADDRESS_IN_READ, 
+this_mram_controller : MRAM_Controller port map(CLK => CLK_150, data_in => MRAM_DATA_IN, data_out => MRAM_DATA_OUT, address_in => MRAM_ADDRESS_IN_WRITE or MRAM_ADDRESS_IN_READ, 
 							write_data => MRAM_WRITE_DATA, read_data => MRAM_READ_DATA, done => MRAM_DONE, MRAM_EN => MRAM_EN, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,
 							MRAM_WRITE_EN => MRAM_WRITE_EN, MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_A => MRAM_A, MRAM_D => MRAM_D);
 
