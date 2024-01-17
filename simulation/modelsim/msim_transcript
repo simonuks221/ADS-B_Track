@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:07 on Dec 10,2023
+# Start time: 18:01:59 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -21,11 +21,11 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity UNI_Projektas
 # -- Compiling architecture arc of UNI_Projektas
-# End time: 23:21:07 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:01:59 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:07 on Dec 10,2023
+# Start time: 18:01:59 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -35,11 +35,11 @@
 # -- Loading package MATH_REAL
 # -- Compiling entity UART_Controller
 # -- Compiling architecture arc of UART_Controller
-# End time: 23:21:07 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:01:59 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:07 on Dec 10,2023
+# Start time: 18:01:59 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_TX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -48,22 +48,22 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity UART_TX
 # -- Compiling architecture arc of UART_TX
-# End time: 23:21:07 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:01:59 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:07 on Dec 10,2023
+# Start time: 18:01:59 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_FIFO_wizard.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity UART_FIFO_wizard
 # -- Compiling architecture SYN of uart_fifo_wizard
-# End time: 23:21:07 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:01:59 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_Controller.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:07 on Dec 10,2023
+# Start time: 18:01:59 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_Controller.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -72,11 +72,11 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity MRAM_Controller
 # -- Compiling architecture arc of MRAM_Controller
-# End time: 23:21:07 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:01:59 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/State_manager.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:07 on Dec 10,2023
+# Start time: 18:01:59 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/State_manager.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -85,11 +85,11 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity STATE_MANAGER
 # -- Compiling architecture arc of STATE_MANAGER
-# End time: 23:21:07 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:01:59 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:07 on Dec 10,2023
+# Start time: 18:01:59 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Setup_manager.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -98,11 +98,11 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity Setup_manager
 # -- Compiling architecture arc of Setup_manager
-# End time: 23:21:07 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:01:59 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:07 on Dec 10,2023
+# Start time: 18:01:59 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Read_adc_manager.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -111,11 +111,11 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity Read_adc_manager
 # -- Compiling architecture arc of Read_adc_manager
-# End time: 23:21:07 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:01:59 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:07 on Dec 10,2023
+# Start time: 18:01:59 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Write_out_mram_manager.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -124,22 +124,22 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity Write_out_mram_manager
 # -- Compiling architecture arc of Write_out_mram_manager
-# End time: 23:21:07 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:01:59 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_pll.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:07 on Dec 10,2023
+# Start time: 18:01:59 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/wizard_pll.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity wizard_pll
 # -- Compiling architecture SYN of wizard_pll
-# End time: 23:21:07 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:02:00 on Dec 20,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:07 on Dec 10,2023
+# Start time: 18:02:00 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -148,11 +148,11 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity Corr_Buffer
 # -- Compiling architecture arc of CORR_BUFFER
-# End time: 23:21:07 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:02:00 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:07 on Dec 10,2023
+# Start time: 18:02:00 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -161,11 +161,11 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity Corr_Main
 # -- Compiling architecture arc of Corr_Main
-# End time: 23:21:07 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:02:00 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:08 on Dec 10,2023
+# Start time: 18:02:00 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -174,12 +174,12 @@
 # -- Loading package std_logic_textio
 # -- Compiling entity SPI_TX
 # -- Compiling architecture arc of SPI_TX
-# End time: 23:21:08 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:02:00 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:21:08 on Dec 10,2023
+# Start time: 18:02:00 on Dec 20,2023
 # vcom -reportprogress 300 -93 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -193,12 +193,12 @@
 # ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(145): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(171): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(175): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 23:21:08 on Dec 10,2023, Elapsed time: 0:00:00
+# End time: 18:02:00 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 5
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Testbenchas
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=""+acc"" Testbenchas 
-# Start time: 23:21:08 on Dec 10,2023
+# Start time: 18:02:00 on Dec 20,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -235,9 +235,9 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: simon  Hostname: DESKTOP-5JRNHLO  ProcessID: 3440
-#           Attempting to use alternate WLF file "./wlft85zjza".
+#           Attempting to use alternate WLF file "./wlft9663c3".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft85zjza
+#           Using alternate file: ./wlft9663c3
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -247,138 +247,206 @@
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-add wave -position end  sim:/testbenchas/i1/this_state_manager/SETUP_DONE
-add wave -position end  sim:/testbenchas/i1/this_state_manager/READ_ADC_DONE
-add wave -position end  sim:/testbenchas/i1/this_state_manager/WRITE_OUT_DONE
-add wave -position end  sim:/testbenchas/i1/this_state_manager/CORR_DONE
-add wave -position end  sim:/testbenchas/i1/this_state_manager/EN_SETUP
-add wave -position end  sim:/testbenchas/i1/this_state_manager/EN_READ_ADC
-add wave -position end  sim:/testbenchas/i1/this_state_manager/EN_WRITE_OUT_MRAM
-add wave -position end  sim:/testbenchas/i1/this_state_manager/EN_CORR
-restart
+add wave -position end  sim:/testbenchas/mram_data
 run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd
+# Break key hit
+vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:23:40 on Dec 10,2023
-# vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd 
+# Start time: 18:07:36 on Dec 20,2023
+# vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
-# -- Compiling entity UNI_Projektas
-# -- Compiling architecture arc of UNI_Projektas
-# End time: 23:23:41 on Dec 10,2023, Elapsed time: 0:00:01
+# -- Compiling entity Corr_Main
+# -- Compiling architecture arc of Corr_Main
+# End time: 18:07:36 on Dec 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 restart
-# Loading work.uni_projektas(arc)
-# ** Warning: Design size of 11289 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Loading work.corr_main(arc)
+# ** Warning: Design size of 11333 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 run
 # ** Note: Cyclone II PLL is enabled
 #    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
 # ** Note: Cyclone II PLL locked to incoming clock
 #    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-run
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:26:04 on Dec 10,2023
-# vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Testbenchas
-# -- Compiling architecture UNI_Projektas_arch of Testbenchas
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(126): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(128): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(145): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(171): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(175): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 23:26:04 on Dec 10,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 5
-restart
-# Loading work.testbenchas(uni_projektas_arch)
-# ** Warning: Design size of 11331 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:29:21 on Dec 10,2023
-# vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Testbenchas
-# -- Compiling architecture UNI_Projektas_arch of Testbenchas
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(126): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(128): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(145): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(171): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(175): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 23:29:21 on Dec 10,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 5
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:29:24 on Dec 10,2023
-# vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity UNI_Projektas
-# -- Compiling architecture arc of UNI_Projektas
-# End time: 23:29:24 on Dec 10,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading work.testbenchas(uni_projektas_arch)
-# Loading work.uni_projektas(arc)
-# ** Warning: Design size of 11338 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:30:30 on Dec 10,2023
-# vcom -reportprogress 300 -work work C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Compiling entity Testbenchas
-# -- Compiling architecture UNI_Projektas_arch of Testbenchas
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(126): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(128): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(145): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(171): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Testbenchas.vhd(175): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 23:30:30 on Dec 10,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 5
-restart
-# Loading work.testbenchas(uni_projektas_arch)
-# ** Warning: Design size of 11331 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-run
-# ** Note: Cyclone II PLL is enabled
-#    Time: 0 ps  Iteration: 2  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# ** Note: Cyclone II PLL locked to incoming clock
-#    Time: 110 ns  Iteration: 4  Instance: /testbenchas/i1/pl/altpll_component/CYCLONEII_ALTPLL/M3
-# End time: 23:32:28 on Dec 10,2023, Elapsed time: 0:11:20
-# Errors: 0, Warnings: 22
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 71523333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 71623333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 72323333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 72423333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 72523333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 72623333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 72723333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 72823333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 73523333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 73623333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 75923333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 76023333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 76123333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 76223333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 77123333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 79023333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 79123333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 79223333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 80423333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 80523333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 80623333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 80723333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 80823333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 80923333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 81023333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 81123333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 81223333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 81323333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 81423333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 81523333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 81623333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 81723333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 81823333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 81923333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 82023333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 82123333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 82223333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 82323333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 82423333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 82523333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 82623333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 123023333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 123123333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 123223333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 125523333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 125623333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 126323333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 126423333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 126523333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 126623333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 126723333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 126823333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 127523333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 127623333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 130023333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 130123333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 130223333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 130323333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 131323333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 131423333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 131523333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 131623333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 132523333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 132623333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 132723333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 133523333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 133623333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 133723333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 133823333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 133923333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 134023333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 134123333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 134223333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 134823333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 134923333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 135023333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 135123333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 135223333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 135323333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 135923333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 136023333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 136123333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 136223333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 136323333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 136923333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 137023333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 137123333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 137223333 ps  Iteration: 14  Instance: /testbenchas/i1/Corr_Main_1
+# End time: 18:51:01 on Dec 20,2023, Elapsed time: 0:49:01
+# Errors: 0, Warnings: 92

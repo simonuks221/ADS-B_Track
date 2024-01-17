@@ -62,9 +62,9 @@ signal DATA_OUT_8 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '
 signal corr_value : integer range -50000 to 50000 := 0;
 
 --Preambules arrayus
-type coef_array is array(49 downto 0) of integer range -2 to 2;
-constant preambule_coef : coef_array := (1, 1, 0, 0, 0, -1, -1, 0, 0, 0, 1, 1, 0, 0, 0, -1, -1,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
-	0,	0, 0, 0, 1, 1, 0, 0, 0, -1, -1, 0, 0, 0, 1, 1, 0, 0, 0);
+type coef_array is array(49 downto 0) of integer range -1 to 1;
+constant preambule_coef : coef_array := (1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0,	0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1);
 
 signal mram_write_cnt : integer range 0 to 15 := 0;
 signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS+5 := 0;
@@ -128,8 +128,6 @@ begin
 	corr_value <= to_integer(vacc51) + to_integer(vacc52);
 end process;
 
-
-
 process(CLK)
 begin
 	if rising_edge(CLK) then
@@ -167,27 +165,4 @@ begin
 		end if;
 	end if;
 end process;
-
---process(CLK)
---begin
---	if rising_edge(CLK) then
---		if(EN_CORR = '0') then
---			mram_write_cnt <= 0;
---			MRAM_WRITE_DATA <= '0';
---			address_counter <= 0;
---		else
---			if(mram_write_cnt = 5) then
---				if(MRAM_DONE = '1') then
---					mram_write_cnt <= 0;
---					address_counter <= address_counter + 1;
---					MRAM_WRITE_DATA <= '1';
---				else
---					MRAM_WRITE_DATA <= '0';
---				end if;
---			else
---				mram_write_cnt <= mram_write_cnt + 1;	
---			end if;
---		end if;
---	end if;
---end process;
 end architecture;

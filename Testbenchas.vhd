@@ -6,7 +6,7 @@ use ieee.std_logic_textio.all;
 
 ENTITY Testbenchas IS
 generic(
-VOLTAGE_DATA_LEN: integer := 440
+VOLTAGE_DATA_LEN: integer := 1079
 );
 
 END Testbenchas;
@@ -142,7 +142,7 @@ ADC_DCLKA <= transport ADC_CLK after 5ns; --50MHz 5ns, ketvirtadalis
 process(CLK)
 begin
 	if(falling_edge(CLK)) then
-		if now > 44us then
+		if now > 42.2us then
 			if(adc_buffer_index < VOLTAGE_DATA_LEN-1) then
 				if(adc_buffer_counter = 4) then
 					adc_buffer_counter <= 0;

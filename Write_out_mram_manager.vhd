@@ -48,7 +48,6 @@ begin
 			address_counter <= 0;
 			getting_data <= '0';
 			have_data <= '0';
-			--WRITE_OUT_DONE <= '0';
 		else --Enabled write
 			if(have_data = '1') then
 				if(UART_FIFO_EMPTY = '1') then
@@ -74,17 +73,6 @@ begin
 					end if;
 				end if;
 			end if;
---			if(MRAM_DONE = '1') then
---				if(UART_FIFO_EMPTY = '1') then
---					MRAM_READ_DATA <= '1';
---					UART_DATA_IRQ <= '1';
---					address_counter <= address_counter + 1;
---					--WRITE_OUT_DONE <= '1';
---				end if;
---			else
---				MRAM_READ_DATA <= '0';
---			end if;
-			
 		end if;
 	end if;
 end process;
