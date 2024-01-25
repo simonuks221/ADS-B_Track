@@ -200,10 +200,10 @@ set_global_assignment -name EDA_TEST_BENCH_NAME CORR_Testbench -section_id eda_s
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CORR_Testbench
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "200 us" -section_id CORR_Testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME CORR_Testbench -section_id CORR_Testbench
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE Testbenchas.vhd -section_id Testbenchas
 set_global_assignment -name EDA_TEST_BENCH_FILE new_testbench.vhd -section_id new_testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE SPI_Testbench.vhd -section_id SPI_Testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE UART_Testbench.vhd -section_id UART_Testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE MRAM_Testbench.vhd -section_id MRAM_Testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE CORR_Testbench.vhd -section_id CORR_Testbench
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
