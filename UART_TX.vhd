@@ -1,6 +1,3 @@
---INspiracija:
---https://github.com/jakubcabal/uart-for-fpga/blob/master/rtl/comp/uart_tx.vhd
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -9,7 +6,7 @@ use ieee.std_logic_textio.all;
 
 entity UART_TX is
 generic(
-	baud_rate : integer := 9600
+	BAUD_RATE : integer := 9600
 );
 port(
 	CLK: in std_logic;
@@ -20,80 +17,77 @@ port(
 	TX : out std_logic
 );
 end entity;
-
+--
 architecture arc of UART_TX is
+	constant BAUD_RATE_COUNTER_MAX : integer := 150000000/BAUD_RATE;
 	type state is (idle, sync, start, data, stop);
-	signal tx_curr_state : state := idle;
-	signal tx_next_state : state := idle;
-	
+	signal curr_state : state := idle;
 	signal data_index : integer range 0 to 7 := 0;
 	signal data_send : std_logic_vector(7 downto 0) := (others => '0');
+	signal counter : integer range 0 to BAUD_RATE_COUNTER_MAX+1 := 0;
 begin
 
---Set TX output
+TX <= '0' when curr_state = start else data_send(data_index) when curr_state = data else '1';
+TX_BUSY <= '0' when curr_state = idle else '1';
+
 process(CLK)
 begin
-	if(rising_edge(CLK)) then
-		case tx_curr_state is
-			when start =>
-				TX <= '0';
-			when data =>
-				TX <= data_send(data_index);
-			when others => 
-				--Stop sync and idle
-				TX <= '1';
-		end case;
-	end if;
-end process;
-
---Set next state
-process(CLK)
-begin
-	if(rising_edge(CLK)) then
-		tx_curr_state <= tx_next_state;
-	end if;
-end process;
-
---State management
-process(UART_CLK)
-begin
-	if(rising_edge(UART_CLK)) then
-		case tx_curr_state is
+	if rising_edge(CLK) then
+		case curr_state is
 			when idle =>
-				TX_BUSY <= '0';
 				if(START_SEND_DATA = '1') then
-					tx_next_state <= sync;
-					TX_BUSY <= '1';
+					curr_state <= sync;
 				end if;
 			when sync =>
-				data_send <= SEND_DATA; --Isirasom duomenis
-				TX_BUSY <= '1';
-				if(UART_CLK = '1') then
-					tx_next_state <= start;
-				end if;
+				curr_state <= start;
 			when start =>
-				if(UART_CLK = '1') then
-					tx_next_state <= data;
-					data_index <= 0;
+				if(counter = BAUD_RATE_COUNTER_MAX) then
+					curr_state <= data;
 				end if;
 			when data =>
-				if(UART_CLK = '1') then
+				if(counter = BAUD_RATE_COUNTER_MAX) then
 					if(data_index = 7) then
-						tx_next_state <= stop;
-					else
-						data_index <= data_index + 1;
+						curr_state <= stop;
 					end if;
 				end if;
 			when stop =>
-				if(UART_CLK = '1') then
-					tx_next_state <= idle;
+				if(counter = BAUD_RATE_COUNTER_MAX) then
+					curr_state <= idle;
 				end if;
-			when others =>
-				tx_next_state <= idle;
-				TX_BUSY <= '0';
 		end case;
 	end if;
 end process;
 
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		counter <= counter + 1;
+		case curr_state is
+			when idle =>
+				counter <= 0;
+				data_index <= 0;
+			when sync =>
+				data_send <= SEND_DATA; --Isirasom duomenis
+				counter <= 0;
+			when start =>
+				if(counter = BAUD_RATE_COUNTER_MAX) then
+					counter <= 0;
+				end if;
+			when data =>
+				if(counter = BAUD_RATE_COUNTER_MAX) then
+					if(data_index = 7) then
+						
+					else
+						data_index <= data_index + 1;
+					end if;
+					counter <= 0;
+				end if;
+			when stop =>
+				if(counter = BAUD_RATE_COUNTER_MAX) then
+					counter <= 0;
+				end if;
+		end case;
+	end if;
+end process;
 
 end architecture;

@@ -6,24 +6,52 @@ use ieee.std_logic_textio.all;
 
 ENTITY Testbenchas IS
 generic(
-VOLTAGE_DATA_LEN: integer := 436
+VOLTAGE_DATA_LEN: integer := 1079
 );
 
 END Testbenchas;
 
-ARCHITECTURE UNI_Projektas_arch OF Testbenchas IS
--- constants                                                 
+ARCHITECTURE UNI_Projektas_arch OF Testbenchas IS                                              
+
 -- signals                                                   
-SIGNAL ADC_IN : STD_LOGIC_VECTOR(9 DOWNTO 0) := (others => '0');
 SIGNAL CLK : STD_LOGIC := '0';
-SIGNAL DATA_OUT : STD_LOGIC_VECTOR(5 DOWNTO 0);
-SIGNAL SYNC : STD_LOGIC;
-signal arrIndex : integer := 0;
-SIGNAL UART_TX: std_logic := '0';
-SIGNAL UART_RX: std_logic := '0';
-SIGNAL SPI_SCLK: std_logic := '0';
-SIGNAL SPI_MOSI: std_logic := '0';
-SIGNAL SPI_CS: std_logic := '0';
+signal BUTTON : std_logic := '1';
+
+--ADC SIGNALS
+signal ADC_SHDN : std_logic; --1 - ADC OFF, 0 - ADC ON
+signal ADC_SYNC : std_logic; --Sinchronizacija tarp FPGA CLk ir ADC vidinio CLK
+signal ADC_CLK : std_logic;
+signal ADC_DORB : std_logic; --Data over range
+signal ADC_DORA : std_logic;
+signal ADC_DCLKB : std_logic; --Valid data on rising edge
+signal ADC_DCLKA : std_logic;
+signal ADC_BIT_B : std_logic_vector(9 downto 0);
+signal ADC_BIT_A : std_logic_vector(9 downto 0);
+--ADC SPI
+signal ADC_SPI_SDIN : std_logic;
+signal ADC_SPI_SCLK : std_logic;
+signal ADC_SPI_CS : std_logic;
+
+--SPI TO FPGA
+signal SPI_MOSI : std_logic;
+signal SPI_MISO : std_logic;
+signal SPI_SCLK : std_logic;
+signal SPI_CS : std_logic;
+
+--MRAM
+signal MRAM_OUTPUT_EN : std_logic;
+signal MRAM_A : std_logic_vector(17 downto 0);
+signal MRAM_EN : std_logic;
+signal MRAM_WRITE_EN : std_logic;
+signal MRAM_UPPER_EN : std_logic;
+signal MRAM_LOWER_EN : std_logic;
+signal MRAM_D : std_logic_vector(15 downto 0) :=  (others =>'0');
+
+--UART
+--UART
+signal UART_RX : std_logic := 'Z';
+signal UART_TX : std_logic := '1';
+
 
 --Functions
 --Read from file
@@ -42,51 +70,112 @@ begin
 	end loop;
 	return r;
 end function init;
+
 signal adc_buffer : b_data := init;
+signal adc_buffer_index : integer := 0;
+signal adc_buffer_counter : integer := 0;
 
 
-COMPONENT UNI_Projektas
-	PORT (
-	ADC_IN : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-	CLK : IN STD_LOGIC;
-	DATA_OUT : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
-	SYNC : OUT STD_LOGIC;
-	UART_TX: out std_logic;
-	UART_RX_RX: in std_logic;
-	SPI_SCLK: out std_logic;
-	SPI_MOSI: out std_logic;
-	SPI_CS: out std_logic
-	);
-END COMPONENT;
-BEGIN
-i1 : UNI_Projektas
-	PORT MAP (
-	ADC_IN => ADC_IN(9 downto 2),
-	CLK => CLK,
-	DATA_OUT => DATA_OUT,
-	SYNC => SYNC,
-	UART_RX_RX => UART_RX,
-	UART_TX => UART_TX,
-	SPI_SCLK => SPI_SCLK,
-	SPI_MOSI => SPI_MOSI,
-	SPI_CS => SPI_CS
-);
+component UNI_Projektas is
+port(
+	CLK : in std_logic := '0';
+	BUTTON : in std_logic := '0';
+	--ADC SIGNALS
+	ADC_SHDN : out std_logic := '0'; --1 - ADC OFF, 0 - ADC ON
+	ADC_SYNC : out std_logic := '0'; --Sinchronizacija tarp FPGA CLk ir ADC vidinio CLK
+	ADC_CLK : out std_logic := '0';
+	ADC_DORB : in std_logic := '0'; --Data over range
+	ADC_DORA : in std_logic := '0';
+	ADC_DCLKB : in std_logic := '0'; --Valid data on rising edge
+	ADC_DCLKA : in std_logic := '0';
+	ADC_BIT_B : in std_logic_vector(9 downto 0) := (others => '0');
+	ADC_BIT_A : in std_logic_vector(9 downto 0) := (others => '0');
+	--ADC SPI
+	ADC_SPI_SDIN : inout std_logic := 'Z';
+	ADC_SPI_SCLK : out std_logic := '0';
+	ADC_SPI_CS : out std_logic := '1';
 	
-CLK <= not CLK after 0.01us; --50MHz 0.01us 50MHz
+	--SPI TO FPGA
+	SPI_MOSI : inout std_logic := 'Z';
+	SPI_MISO : inout std_logic := 'Z';
+	SPI_SCLK : inout std_logic := 'Z';
+	SPI_CS : inout std_logic := 'Z';
+	
+	--MRAM
+	MRAM_OUTPUT_EN : out std_logic := '0';
+	MRAM_A : out std_logic_vector(17 downto 0) := (others => '0');
+	MRAM_EN : out std_logic := '0';
+	MRAM_WRITE_EN : out std_logic := '0';
+	MRAM_UPPER_EN : out std_logic := '0';
+	MRAM_LOWER_EN : out std_logic := '0';
+	MRAM_D : inout std_logic_vector(15 downto 0) := (others => '0');
+	
+	--UART
+	UART_RX : in std_logic := 'Z';
+	UART_TX : out std_logic := '1'
+	
+);
+end component;
 
-process(SYNC)
+type mram_data_type is array(0 to 25600) of std_logic_vector(15 downto 0);
+signal mram_data : mram_data_type := (others => (others => '0'));
+
+BEGIN
+i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, ADC_SYNC => ADC_SYNC, ADC_CLK => ADC_CLK, ADC_SPI_SDIN => ADC_SPI_SDIN, ADC_SPI_SCLK => ADC_SPI_SCLK, ADC_SPI_CS => ADC_SPI_CS,ADC_DCLKA => ADC_DCLKA, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,  MRAM_A => MRAM_A, MRAM_EN => MRAM_EN, MRAM_WRITE_EN => MRAM_WRITE_EN, MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_D => MRAM_D,ADC_BIT_A => ADC_BIT_A, UART_RX => UART_RX, UART_TX => UART_TX, SPI_CS => SPI_CS);
+	
+CLK <= not CLK after 10ns; --50MHz 20ns
+--ADC_DCLKA <= CLK when now > 40us else '0';
+ADC_DCLKA <= transport ADC_CLK after 5ns; --50MHz 5ns, ketvirtadalis
+--ADC_DCLKA <= '0';
+
+--process
+--begin
+--	wait until rising_edge(CLK);
+--	if(now > 40us) then
+--		wait for 10ns;
+--		ADC_DCLKA <= '1';
+--		wait for 10ns;
+--		ADC_DCLKA <= '0';
+--	end if;
+--end process;
+
+process(CLK)
 begin
-	if(rising_edge(SYNC)) then
-		if now > 10us then
-			if(arrIndex < VOLTAGE_DATA_LEN-1) then
-				arrIndex <= arrIndex + 1;
-				adc_in <= adc_buffer(arrIndex);
+	if(falling_edge(CLK)) then
+		if now > 42.2us then
+			if(adc_buffer_index < VOLTAGE_DATA_LEN-1) then
+				if(adc_buffer_counter = 4) then
+					adc_buffer_counter <= 0;
+					adc_buffer_index <= adc_buffer_index + 1;
+					ADC_BIT_A <= adc_buffer(adc_buffer_index);
+				else
+					adc_buffer_counter <= adc_buffer_counter + 1;
+				end if;
 			else
-				adc_in <= (others => '0');
+				ADC_BIT_A <= (others => '0');
 			end if;
 		else
-			adc_in <= (others => '0');
+			ADC_BIT_A <= (others => '0');
 		end if;
 	end if;
-end process;                                          
-END UNI_Projektas_arch;
+end process;                       
+
+process --MRAM WRITE/READ emulation
+begin
+	wait until falling_edge(MRAM_EN);
+		MRAM_D <= (others => 'Z');
+		if(MRAM_WRITE_EN = '0') then
+			wait until rising_edge(MRAM_WRITE_EN);
+			mram_data(to_integer(unsigned(MRAM_A))) <= MRAM_D;
+		else
+			wait for 10ns;
+			if(MRAM_OUTPUT_EN = '0') then
+				MRAM_D <= mram_data(to_integer(unsigned(MRAM_A)));
+				wait until rising_edge(MRAM_EN);
+				wait for 15ns;
+				MRAM_D <= (others => 'Z');
+			end if;
+		end if;
+end process;
+
+end architecture;
