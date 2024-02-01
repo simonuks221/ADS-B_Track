@@ -28,7 +28,7 @@ begin
 		internal_send_data_latch <= '0';
 		if SEND_DONE = '1' and internal_send_data_latch = '0' then
 			SEND_DATA <= internal_packet(7 downto 0);
-			internal_packet <= internal_packet(15 downto 8);
+			internal_packet <= "00000000" & internal_packet(15 downto 8);
 			internal_send_data_latch <= '1';
 		end if;
 	end if;
