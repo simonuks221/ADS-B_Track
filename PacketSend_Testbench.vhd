@@ -7,52 +7,37 @@ end entity;
 
 architecture arc of PacketSend_Testbench is
 
-component SPI_SLAVE is 
-generic(
-	BITS : integer := 8
-);
+component DATA_INTERFACE is
 port(
-	CLK: in std_logic;
+	CLK: in std_Logic := '0';
+	PACKET_IN : in std_logic_vector(15 downto 0) := (others => '0');
+	PACKET_IN_LATCH : in std_logic := '0';
 	SPI_SCLK: in std_logic := '0';
 	SPI_MOSI: in std_logic := '0';
 	SPI_MISO: inout std_logic := '0';
-	SPI_CS: in std_logic := '1';
-	SLAVE_DATA: in std_logic_vector(8-1 downto 0) := (others => '0');
-	SLAVE_DATA_LATCH: in std_logic := '0';
-	DATA_EMPTY: out std_logic := '1'
-);
-end component;
-
-component Packet_Storage is 
-port(
-	CLK: in std_logic;
-	PACKET_IN : in std_logic_vector(15 downto 0) := (others => '0');
-	PACKET_IN_LATCH : in std_logic := '0';
-	SEND_DONE : in std_logic := '0';
-	SEND_DATA : out std_logic_vector(7 downto 0) := (others => '0');
-	SEND_DATA_LATCH : out std_logic := '0'
+	SPI_CS: in std_logic := '1'
 );
 end component;
 
 
 signal CLK : std_logic := '1';
-signal PACKET_IN : std_logic_vector(15 downto 0) := (others => '0');
-signal PACKET_IN_LATCH : std_logic := '0';
-signal SEND_DONE : std_logic := '0';
-signal SEND_DATA : std_logic_vector(7 downto 0) := (others => '0');
-signal SEND_DATA_LATCH : std_logic := '0';
+
 
 signal SPI_SCLK: std_logic := '0';
 signal SPI_MOSI: std_logic := '0';
 signal SPI_MISO: std_logic := '0';
 signal SPI_CS: std_logic := '1';
 
+signal PACKET_IN : std_logic_vector(15 downto 0) := (others => '0');
+signal PACKET_IN_LATCH : std_logic := '0';
+
+signal mosi_data : std_logic_vector(7 downto 0) := "11001100";
+
 begin
 
 CLK <= not CLK after 3.33ns; --50MHz 20ns 150Mhz 6.66ns
 
-stor : Packet_Storage port map (CLK, PACKET_IN, PACKET_IN_LATCH, SEND_DONE, SEND_DATA, SEND_DATA_LATCH);
-spi : SPI_SLAVE port map(CLK, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, SEND_DATA, SEND_DATA_LATCH, SEND_DONE);
+intf : DATA_INTERFACE port map(CLK, PACKET_IN, PACKET_IN_LATCH, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS);
 
 process
 begin
@@ -69,11 +54,16 @@ process
 begin
 	wait for 50ns;
 	SPI_CS <= '0';
+	SPI_SCLK <= '0';
+	SPI_MOSI <= mosi_data(0);
+	mosi_data <= '0' & mosi_data(7 downto 1);
 	wait for 5ns;
 	for i in 0 to 15 loop
 		SPI_SCLK <= '1';
 		wait for 50ns;
 		SPI_SCLK <= '0';
+		SPI_MOSI <= mosi_data(0);
+		mosi_data <= '0' & mosi_data(7 downto 1);
 		wait for 50ns;
 	end loop;
 	wait for 5ns;
