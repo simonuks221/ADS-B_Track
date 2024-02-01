@@ -65,7 +65,7 @@ port(
 );
 end component;
 
-component SPI_TX is 
+component SPI_MASTER is 
 generic(
 	SEND_CLK_COUNTER_MAX : integer := 500;
 	BITS : integer := 16
@@ -256,7 +256,7 @@ this_write_out_mram_manager : write_out_mram_manager generic map(MAX_ADDRESS_COU
 							port map (CLK => CLK_150,UART_SEND_DATA=>UART_SEND_DATA, UART_DATA_IRQ => UART_DATA_IRQ, MRAM_DATA_OUT => MRAM_DATA_OUT,MRAM_ADDRESS_IN => MRAM_ADDRESS_IN_READ, MRAM_READ_DATA => MRAM_READ_DATA, MRAM_DONE => MRAM_DONE, WRITE_OUT_DONE => WRITE_OUT_DONE, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
 
 ADC_SPI_send_irq <= ADC_SPI_Send_irq1 or ADC_SPI_send_irq2;
-adc_spi : SPI_TX generic map (SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => 16) port map(CLK => CLK_150, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK, SPI_CS => ADC_SPI_CS, SEND_DATA => ADC_SPI_send_data, SEND_IRQ => ADC_SPI_Send_irq, SEND_DONE => ADC_SPI_DONE);
+adc_spi : SPI_MASTER generic map (SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => 16) port map(CLK => CLK_150, SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK, SPI_CS => ADC_SPI_CS, SEND_DATA => ADC_SPI_send_data, SEND_IRQ => ADC_SPI_Send_irq, SEND_DONE => ADC_SPI_DONE);
 UART_Controller_1 : UART_Controller generic map(BAUD_RATE => BAUD_RATE) port map(CLK => CLK_150, SEND_DATA_IN => UART_SEND_DATA, SEND_DATA_IN_REQ => UART_DATA_IRQ, TX => UART_TX, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
 
 Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 50, BUFFER_WIDTH => 9, MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS) port map(CLK => CLK_150, ADC_BITS => ADC_BITS_OUT, ADC_BITS_VALID => ADC_BIT_VALID, PREAMBULE_FOUND => SPI_CS, MRAM_DATA_OUT => MRAM_DATA_IN, MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA, MRAM_DONE => MRAM_DONE, EN_CORR => EN_CORR, CORR_DONE => CORR_DONE);
@@ -266,8 +266,8 @@ begin
 	if falling_edge(CLK_150) then
 		if(BUTTON = '0') then
 			button_active <= '1';
-			end if;
 		end if;
+	end if;
 end process;
 
 end architecture;

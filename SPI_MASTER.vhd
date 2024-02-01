@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
-entity SPI_TX is 
+entity SPI_MASTER is 
 generic(
 	SEND_CLK_COUNTER_MAX : integer := 100;
 	BITS : integer := 16
@@ -20,7 +20,7 @@ port(
 );
 end entity;
 
-architecture arc of SPI_TX is
+architecture arc of SPI_MASTER is
 type state is (idle, latch_data, running, cs_up);
 signal curr_state : state := idle;
 signal tx_buf : std_logic_vector(BITS-1 downto 0) := (others => '0');

@@ -12,7 +12,7 @@ end entity;
 
 architecture arc of SPI_Testbench is
 
-component SPI_TX is 
+component SPI_MASTER is 
 generic(
 	SEND_CLK_COUNTER_MAX : integer := 100;
 	BITS : integer := 8
@@ -41,7 +41,7 @@ signal SPI_CS :  std_logic := 'Z';
 
 begin
 
-spi_tx_component : spi_tx generic map(SEND_CLK_COUNTER_MAX => 500, BITS => 16) 
+spi_tx_component : SPI_MASTER generic map(SEND_CLK_COUNTER_MAX => 500, BITS => 16) 
 						port map(CLK => CLK, SPI_SCLK => SPI_SCLK,SPI_CS =>SPI_CS, SPI_MOSI => SPI_SDIN, SEND_DATA => SPI_send_data, SEND_IRQ => SPI_send_irq, SEND_DONE => SPI_send_done);
 
 CLK <= not CLK after 10ns; --50MHz 20ns
