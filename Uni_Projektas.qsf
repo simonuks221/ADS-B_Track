@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C5T144C8
-set_global_assignment -name TOP_LEVEL_ENTITY Uni_Projektas
+set_global_assignment -name TOP_LEVEL_ENTITY SPI_SLAVE
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:31:19  DECEMBER 06, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -167,10 +167,6 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME SPI_Testbench -section_id
 set_global_assignment -name EDA_TEST_BENCH_NAME UART_Testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id UART_Testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME UART_Testbench -section_id UART_Testbench
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BUTTON
 set_global_assignment -name EDA_TEST_BENCH_NAME MRAM_Testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id MRAM_Testbench
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 us" -section_id MRAM_Testbench
@@ -214,4 +210,8 @@ set_global_assignment -name VHDL_FILE SPI_Testbench.vhd
 set_global_assignment -name VHDL_FILE UART_Testbench.vhd
 set_global_assignment -name VHDL_FILE MRAM_Testbench.vhd
 set_global_assignment -name VHDL_FILE CORR_Testbench.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BUTTON
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
