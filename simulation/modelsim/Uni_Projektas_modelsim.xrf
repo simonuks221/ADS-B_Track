@@ -1,4 +1,6 @@
 vendor_name = ModelSim
+source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_SLAVE.vhd
+source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_MASTER.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Uni_Projektas.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Clock_divider.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Controller.vhd
@@ -19,7 +21,6 @@ source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Buffer.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Corr_Main.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_Testbench.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/UART_Testbench.vhd
-source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/SPI_TX.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/MRAM_Testbench.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/CORR_Testbench.vhd
 source_file = 1, C:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/db/Uni_Projektas.cbx.xml

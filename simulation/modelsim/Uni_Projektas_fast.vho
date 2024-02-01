@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "01/17/2024 19:25:36"
+-- DATE "02/01/2024 20:37:07"
 
 -- 
 -- Device: Altera EP2C5T144C8 Package TQFP144
@@ -1269,19 +1269,28 @@ SIGNAL \UART_Controller_1|uart_tx_1|Mux0~0_combout\ : std_logic;
 SIGNAL \UART_Controller_1|uart_tx_1|Mux0~1_combout\ : std_logic;
 SIGNAL \UART_Controller_1|uart_tx_1|TX~2_combout\ : std_logic;
 SIGNAL \UART_Controller_1|uart_tx_1|TX~3_combout\ : std_logic;
+SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|wr_ptr|safe_q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL MRAM_ADDRESS_IN_COMBINED : std_logic_vector(17 DOWNTO 0);
+SIGNAL \this_mram_controller|data_out\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL \this_mram_controller|counter\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \this_state_manager|counter\ : std_logic_vector(9 DOWNTO 0);
 SIGNAL \this_setup_manager|spi_command_index\ : std_logic_vector(2 DOWNTO 0);
+SIGNAL \this_setup_manager|SPI_send_data\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL \this_read_adc_manager|read_counter\ : std_logic_vector(2 DOWNTO 0);
+SIGNAL \this_read_adc_manager|address_counter\ : std_logic_vector(16 DOWNTO 0);
 SIGNAL \this_read_adc_manager|MRAM_DATA_OUT\ : std_logic_vector(15 DOWNTO 0);
+SIGNAL \this_write_out_mram_manager|address_counter\ : std_logic_vector(16 DOWNTO 0);
 SIGNAL \adc_spi|tx_buf\ : std_logic_vector(15 DOWNTO 0);
+SIGNAL \adc_spi|clk_counter\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \adc_spi|bits_sent\ : std_logic_vector(4 DOWNTO 0);
+SIGNAL \UART_Controller_1|uart_tx_1|data_send\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_tx_1|data_index\ : std_logic_vector(2 DOWNTO 0);
+SIGNAL \UART_Controller_1|uart_tx_1|counter\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \Corr_Main_1|buff|buffer_0_rtl_0|auto_generated|cntr1|safe_q\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \Corr_Main_1|buff|buffer_0_rtl_1|auto_generated|cntr1|safe_q\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|fifo_state|count_usedw|safe_q\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|rd_ptr_count|safe_q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|FIFOram|altsyncram2|q_b\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|rd_ptr_count|safe_q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \Corr_Main_1|cnt\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \Corr_Main_1|address_counter\ : std_logic_vector(16 DOWNTO 0);
 SIGNAL \Corr_Main_1|buff|diff\ : std_logic_vector(8 DOWNTO 0);
@@ -1294,15 +1303,6 @@ SIGNAL \Corr_Main_1|buff|buffer_2\ : std_logic_vector(49 DOWNTO 0);
 SIGNAL \Corr_Main_1|buff|buffer_1\ : std_logic_vector(49 DOWNTO 0);
 SIGNAL \Corr_Main_1|buff|buffer_0\ : std_logic_vector(49 DOWNTO 0);
 SIGNAL \ADC_BIT_A~combout\ : std_logic_vector(9 DOWNTO 0);
-SIGNAL \UART_Controller_1|uart_fifo|scfifo_component|auto_generated|dpfifo|wr_ptr|safe_q\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \this_mram_controller|data_out\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \this_setup_manager|SPI_send_data\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \this_read_adc_manager|address_counter\ : std_logic_vector(16 DOWNTO 0);
-SIGNAL \this_write_out_mram_manager|address_counter\ : std_logic_vector(16 DOWNTO 0);
-SIGNAL \adc_spi|clk_counter\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \UART_Controller_1|uart_tx_1|data_send\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \UART_Controller_1|uart_tx_1|counter\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \Corr_Main_1|buff|buffer_0_rtl_0|auto_generated|cntr1|safe_q\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \adc_spi|ALT_INV_curr_state.idle~clkctrl_outclk\ : std_logic;
 SIGNAL \this_mram_controller|ALT_INV_MRAM_D[15]~en_regout\ : std_logic;
 SIGNAL \this_mram_controller|ALT_INV_MRAM_D[14]~en_regout\ : std_logic;
