@@ -19,7 +19,7 @@ port(
 	SPI_CS: in std_logic := '1';
 	SLAVE_DATA: in std_logic_vector(8-1 downto 0) := (others => '0');
 	SLAVE_DATA_LATCH: in std_logic := '0';
-	SLAVE_DONE: out std_logic := '1'
+	DATA_EMPTY: out std_logic := '1'
 );
 end component;
 
@@ -68,12 +68,16 @@ end process;
 process
 begin
 	wait for 50ns;
+	SPI_CS <= '0';
+	wait for 5ns;
 	for i in 0 to 15 loop
 		SPI_SCLK <= '1';
 		wait for 50ns;
 		SPI_SCLK <= '0';
 		wait for 50ns;
 	end loop;
+	wait for 5ns;
+	SPI_CS <= '1';
 	wait;
 end process;
 
