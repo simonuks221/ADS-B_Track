@@ -14,7 +14,8 @@ port(
 	
 	RESP_DATA: in std_logic_vector(7 downto 0) := (others => '0');
 	CMD_DATA : out std_logic_vector(7 downto 0) := (others => '0');
-	SPI_CYCLE_DONE : out std_logic := '0'
+	SPI_CYCLE_DONE : out std_logic := '0';
+	SPI_RESET : out std_Logic := '0'
 	
 );
 end entity;
@@ -22,7 +23,7 @@ end entity;
 architecture arc of SPI_SLAVE is
 
 signal cmd_buffer : std_logic_vector(7 downto 0) := (others => '0');
-signal miso_bit_idx : integer range 0 to 7 := 0;
+signal miso_bit_idx : integer range 0 to 8 := 0;
 signal bit_idx : integer range 0 to 7 := 0;
 signal miso_bit : std_logic := '0';
 
@@ -37,6 +38,7 @@ signal spi_mosi_buf2 : std_logic := '0';
 begin
 
 SPI_MISO <= miso_bit when SPI_CS = '0' else 'Z';
+SPI_RESET <= '0' when SPI_CS = '0' else '1'; 
 CMD_DATA <= cmd_buffer;
 
 --Deal with metastability of SPI signals
@@ -58,6 +60,7 @@ begin
 	if rising_edge(CLK) then
 		if SPI_CS = '1' then
 			bit_idx <= 0;
+			miso_bit_idx <= 0;
 			SPI_CYCLE_DONE <= '0';
 		else
 			SPI_CYCLE_DONE <= '0';
@@ -68,13 +71,14 @@ begin
 				if bit_idx = 7 then
 					SPI_CYCLE_DONE <= '1';
 					bit_idx <= 0;
+					miso_bit_idx <= 0;
 				else
 					bit_idx <= bit_idx + 1; --TODO: might need to change depending on SPI timing
 				end if;
 			elsif spi_sclk_buf3 = '1' and spi_sclk_buf2 = '0' then
 				--Falling SPI_SCLK edge
 				miso_bit <= RESP_DATA(miso_bit_idx);
-				
+				miso_bit_idx <= miso_bit_idx + 1;
 			end if;
 		end if;
 	end if;

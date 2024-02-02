@@ -26,7 +26,8 @@ port(
 	
 	RESP_DATA: in std_logic_vector(7 downto 0) := (others => '0');
 	CMD_DATA : out std_logic_vector(7 downto 0) := (others => '0');
-	SPI_CYCLE_DONE : out std_logic := '0'
+	SPI_CYCLE_DONE : out std_logic := '0';
+	SPI_RESET : out std_logic := '0'
 );
 end component;
 
@@ -35,19 +36,20 @@ port(
 	CLK: in std_logic;
 	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
-	SPI_CYCLE_DONE : in std_logic := '0'
+	SPI_CYCLE_DONE : in std_logic := '0';
+	SPI_RESET : in std_logic := '0'
 );
 end component;
 
 
 signal RESP_DATA: std_logic_vector(7 downto 0) := (others => '0');
-	
 signal CMD_DATA : std_logic_vector(7 downto 0) := (others => '0');
 signal SPI_CYCLE_DONE : std_logic := '0';
+signal SPI_RESET : std_logic := '0';
 
 begin
 
-stor : Packet_Storage port map (CLK, CMD_DATA, RESP_DATA, SPI_CYCLE_DONE);
-spi : SPI_SLAVE port map(CLK, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, RESP_DATA, CMD_DATA, SPI_CYCLE_DONE);
+stor : Packet_Storage port map (CLK, CMD_DATA, RESP_DATA, SPI_CYCLE_DONE, SPI_RESET);
+spi : SPI_SLAVE port map(CLK, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, RESP_DATA, CMD_DATA, SPI_CYCLE_DONE, SPI_RESET);
 
 end architecture;
