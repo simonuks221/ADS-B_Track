@@ -6,15 +6,14 @@ use ieee.std_logic_textio.all;
 
 entity SPI_SLAVE is 
 port(
-	CLK: in std_logic;
+	CLK: in std_logic := '0';
 	SPI_SCLK: in std_logic := '0';
 	SPI_MOSI: in std_logic := '0';
 	SPI_MISO: inout std_logic := '0';
 	SPI_CS: in std_logic := '1';
 	
 	RESP_DATA: in std_logic_vector(7 downto 0) := (others => '0');
-	RESP_DATA_LATCH: in std_logic := '0';
-	RESP_DATA_EMPTY: out std_logic := '1';
+	RESP_DATA_EMPTY: out std_logic := '0';
 	
 	CMD_DATA : out std_logic_vector(7 downto 0) := (others => '0');
 	CMD_DATA_LATCH : out std_logic := '0'
@@ -23,94 +22,67 @@ port(
 end entity;
 
 architecture arc of SPI_SLAVE is
-type state is (idle, got_data, cs_down, action); --TODO: unused, incorporate rx capability
-signal curr_state : state := idle;
-signal SPI_SCLK_LAST : std_logic := '0';
-signal slave_buf : std_logic_vector(7 downto 0) := (others => '0');
-signal bits_sent : integer range 0 to 9 := 9;
-signal bit_to_send : std_logic := '0';
 
+signal resp_idx : integer range 0 to 7 := 0;
+signal cmd_idx : integer range 0 to 7 := 0;
 signal cmd_buffer : std_logic_vector(7 downto 0) := (others => '0');
-signal cmd_buffer_idx : integer range 0 to 9 := 0;
+
+--Signals for SPI SCLK metastability
+signal spi_sclk_buf1 : std_logic := '0';
+signal spi_sclk_buf2 : std_logic := '0';
+signal spi_sclk_buf3 : std_logic := '0';
+
+signal spi_mosi_buf1 : std_logic := '0';
+signal spi_mosi_buf2 : std_logic := '0';
+
 begin
 
-SPI_MISO <= 'Z' when SPI_CS = '1' else bit_to_send;
+--SPI_MISO <= 'Z' when SPI_CS = '1' else bit_to_send;
+CMD_DATA <= cmd_buffer;
+
+--Deal with metastability of SPI signals
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		spi_sclk_buf1 <= SPI_SCLK;
+		spi_sclk_buf2 <= spi_sclk_buf1;
+		spi_sclk_buf3 <= spi_sclk_buf2;
+		
+		spi_mosi_buf1 <= SPI_MOSI;
+		spi_mosi_buf2 <= spi_mosi_buf1;
+	end if;
+
+end process;
 
 process(CLK)
 begin
 	if rising_edge(CLK) then
---		--if SPI_CS = '1' then
---		--	curr_state <= idle;
---		--else
---			case curr_state is
---			when idle =>
---				if SLAVE_DATA_LATCH = '1' then
---					curr_state <= got_data;
---				end if;
---			when got_data=>
---				if SPI_CS = '0' then
---					curr_state <= cs_down;
---				end if;
---			when cs_down =>
---				curr_state <= action;
---			when action =>
---				if bits_sent = 9 then
---					curr_state <= idle;
---				end if;
---			end case;
---		--end if;
-	end if;
-end process;
-
-process(CLK) 
-begin
-	if rising_edge(CLK) then
-		CMD_DATA_LATCH <= '0';
-		SPI_SCLK_LAST <= SPI_SCLK;
 		if SPI_CS = '1' then
-			cmd_buffer_idx <= 0;
-			cmd_buffer <= (others => '0');
+			cmd_idx <= 0;
+			resp_idx <= 0;
+			CMD_DATA_LATCH <= '0';
+			RESP_DATA_EMPTY <= '0';
 		else
-			if SPI_SCLK_LAST = '1' and SPI_SCLK = '0' then
-				--Falling edge
-				bit_to_send <= '1';
-			elsif SPI_SCLK_LAST = '0' and SPI_SCLK = '1' then
-				--Rising edge
-				cmd_buffer <= SPI_MOSI & cmd_buffer(7 downto 1);
-				cmd_buffer_idx <= cmd_buffer_idx + 1;
-				if cmd_buffer_idx = 8 then
-					cmd_buffer_idx <= 0;
-					CMD_DATA_LATCH <= '1';
-					CMD_DATA <= cmd_buffer;
+			if spi_sclk_buf3 = '1' and spi_sclk_buf2 = '0' then
+				--Rising SPI_SCLK edge
+				cmd_buffer <= spi_mosi_buf2 & cmd_buffer(7 downto 1);
+				if cmd_idx = 6 then
+					CMD_DATA_LATCH <= '1'; --TODO: RESET
+				else
+					cmd_idx <= cmd_idx + 1;
 				end if;
+			elsif spi_sclk_buf3 = '0' and spi_sclk_buf2 = '1' then
+				--Falling SPI_SCLK edge
+				SPI_MISO <= RESP_DATA(resp_idx);
+				if resp_idx = 6 then
+					RESP_DATA_EMPTY <= '1'; --TODO: reset
+				else
+				resp_idx <= resp_idx + 1;
+			end if;
 			end if;
 		end if;
-	end if;
-	
---		case curr_state is
---			when idle =>
---				DATA_EMPTY <= '1';
---				if SLAVE_DATA_LATCH = '1' then
---					slave_buf <= SLAVE_DATA;
---					DATA_EMPTY <= '0';
---				end if;
---			when got_data=>
---				DATA_EMPTY <= '0';
---			when cs_down => --For the first bit to register
---				bit_to_send <= slave_buf(0);
---				slave_buf <= "0" & slave_buf(7 downto 1);
---				bits_sent <= 1;
---			when action =>
---				SPI_SCLK_LAST <= SPI_SCLK;
---				if SPI_SCLK_LAST = '1' and SPI_SCLK = '0' then
---					--Falling edge
---					bit_to_send <= slave_buf(0); --Left as this for metastability when changing signals
---					slave_buf <= "0" & slave_buf(7 downto 1);
---					bits_sent <= bits_sent + 1;
---				end if;
---		end case;
 		
-	--end if;
+	end if;
 end process;
 
 end architecture;

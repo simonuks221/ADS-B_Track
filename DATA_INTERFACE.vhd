@@ -25,8 +25,7 @@ port(
 	SPI_CS: in std_logic := '1';
 	
 	RESP_DATA: in std_logic_vector(7 downto 0) := (others => '0');
-	RESP_DATA_LATCH: in std_logic := '0';
-	RESP_DATA_EMPTY: out std_logic := '1';
+	RESP_DATA_EMPTY: out std_logic := '0';
 	
 	CMD_DATA : out std_logic_vector(7 downto 0) := (others => '0');
 	CMD_DATA_LATCH : out std_logic := '0'
@@ -49,7 +48,6 @@ signal SEND_DATA : std_logic_vector(7 downto 0) := (others => '0');
 signal SEND_DATA_LATCH : std_logic := '0';
 
 signal RESP_DATA: std_logic_vector(7 downto 0) := (others => '0');
-signal RESP_DATA_LATCH: std_logic := '0';
 signal RESP_DATA_EMPTY: std_logic := '1';
 	
 signal CMD_DATA : std_logic_vector(7 downto 0) := (others => '0');
@@ -58,6 +56,6 @@ signal CMD_DATA_LATCH : std_logic := '0';
 begin
 
 --stor : Packet_Storage port map (CLK, PACKET_IN, PACKET_IN_LATCH, SEND_DONE, SEND_DATA, SEND_DATA_LATCH);
-spi : SPI_SLAVE port map(CLK, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, RESP_DATA, RESP_DATA_LATCH, RESP_DATA_EMPTY, CMD_DATA, CMD_DATA_LATCH);
+spi : SPI_SLAVE port map(CLK, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, RESP_DATA, RESP_DATA_EMPTY, CMD_DATA, CMD_DATA_LATCH);
 
 end architecture;
