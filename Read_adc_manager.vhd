@@ -26,13 +26,31 @@ end entity;
 
 architecture arc of Read_adc_manager is
 	signal read_counter : integer range 0 to READ_COUNTER_MAX := 0;
-	signal last_state : std_logic := '0';
 	signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS := 0;
 	signal real_data_counter : integer range 0 to 255 := 255;
+	
+	--Synchronisation --TODO: could make fifo instead
+	signal DCLK_sync_1 : std_logic := '0';
+	signal DCLK_sync_2 : std_logic := '0';
+	signal DCLK_sync_3 : std_logic := '0';
+	signal ADC_BIT_sync_1 : std_logic_vector(9 downto 0) := (others => '0');
+	signal ADC_BIT_sync_2 : std_logic_vector(9 downto 0) := (others => '0');
 begin
 
 MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
 READ_ADC_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
+
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		DCLK_sync_1 <= DCLK;
+		DCLK_sync_2 <= DCLK_sync_1;
+		DCLK_sync_3 <= DCLK_sync_2;
+		
+		ADC_BIT_sync_1 <= ADC_BIT;
+		ADC_BIT_sync_2 <= ADC_BIT_sync_1;
+	end if;
+end process;
 
 process(CLK)
 begin
@@ -42,10 +60,9 @@ begin
 			MRAM_WRITE_DATA <= '0';
 			ADC_BIT_VALID <= '0';
 			address_counter <= 0;
-			last_state <= '0';
 		else
-			last_state <= DCLK;
-			if(DCLK = '1' and last_state = '0') then
+			if(DCLK_sync_2 = '1' and DCLK_sync_3 = '0') then
+				--Rising DCLK edge
 				if(read_counter = READ_COUNTER_MAX) then
 					if(MRAM_DONE = '1') then
 						read_counter <= 0;
@@ -57,8 +74,8 @@ begin
 							real_data_counter <= real_data_counter - 1;
 						end if;
 						--MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(to_integer(unsigned(ADC_BIT))-300, 10));
-						MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(to_integer(unsigned(ADC_BIT)), 10));
-						--MRAM_DATA_OUT <= "000000" & ADC_BIT;
+						MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(to_integer(unsigned(ADC_BIT_sync_2)), 10));
+						--MRAM_DATA_OUT <= "000000" & ADC_BIT_sync_2;
 						--MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(real_data_counter, ADC_BIT'length)); --FAKE ADC
 						MRAM_WRITE_DATA <= '1';
 						ADC_BIT_VALID <= '1';

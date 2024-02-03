@@ -222,4 +222,6 @@ set_global_assignment -name EDA_TEST_BENCH_FILE MRAM_Testbench.vhd -section_id M
 set_global_assignment -name EDA_TEST_BENCH_FILE CORR_Testbench.vhd -section_id CORR_Testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE PacketSend_Testbench.vhd -section_id PacketSend_Testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE CRC_Testbench.vhd -section_id CRC_Testbench
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to "wizard_pll:pll_1|altpll:altpll_component|_clk0"
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to "wizard_pll:pll_1|altpll:altpll_component|_clk0~clkctrl"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

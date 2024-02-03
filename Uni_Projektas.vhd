@@ -240,7 +240,7 @@ signal UART_FIFO_EMPTY : std_logic := '0';
 
 begin
 
-pl : wizard_pll port map(inclk0 => CLK, c0 => CLK_150); --150MHz
+pll_1 : wizard_pll port map(inclk0 => CLK, c0 => CLK_150); --150MHz
 ADC_SHDN <= '0';
 ADC_CLK <= CLK;
 

@@ -106,8 +106,8 @@ buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(buffer_latc
 
 --buffer_latch <= '1' when cnt = 1 else '0';
 MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
---MRAM_DATA_OUT <= "0000" & std_logic_vector(to_unsigned(corr_value, 12)); --For debuging correlation value
-MRAM_DATA_OUT <= "0000000000" & bits_data; --For debugging correlated bit value
+MRAM_DATA_OUT <= "0000" & std_logic_vector(to_unsigned(corr_value, 12)); --For debuging correlation value
+--MRAM_DATA_OUT <= "0000000000" & bits_data; --For debugging correlated bit values
 
 CORR_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
 DATA_IN <='0'&ADC_BITS(7 downto 0);
