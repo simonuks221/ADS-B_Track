@@ -27,7 +27,6 @@ end entity;
 architecture arc of Read_adc_manager is
 	signal read_counter : integer range 0 to READ_COUNTER_MAX := 0;
 	signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS := 0;
-	signal real_data_counter : integer range 0 to 255 := 255;
 	
 	--Synchronisation --TODO: could make fifo instead
 	signal DCLK_sync_1 : std_logic := '0';
@@ -68,15 +67,9 @@ begin
 						read_counter <= 0;
 						address_counter <= address_counter + 1;
 						
-						if(real_data_counter = 0) then
-							real_data_counter <= 255;
-						else
-							real_data_counter <= real_data_counter - 1;
-						end if;
 						--MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(to_integer(unsigned(ADC_BIT))-300, 10));
 						MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(to_integer(unsigned(ADC_BIT_sync_2)), 10));
 						--MRAM_DATA_OUT <= "000000" & ADC_BIT_sync_2;
-						--MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(real_data_counter, ADC_BIT'length)); --FAKE ADC
 						MRAM_WRITE_DATA <= '1';
 						ADC_BIT_VALID <= '1';
 						--READ_ADC_DONE <= '1';
