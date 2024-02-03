@@ -31,7 +31,7 @@ signal SPI_CS: std_logic := '1';
 signal PACKET_IN : std_logic_vector(15 downto 0) := (others => '0');
 signal PACKET_IN_LATCH : std_logic := '0';
 
-signal mosi_data : std_logic_vector(7 downto 0) := "00000001";
+signal mosi_data : std_logic_vector(5*8-1 downto 0) := x"0100000100";
 
 begin
 
@@ -56,18 +56,27 @@ begin
 	SPI_CS <= '0';
 	SPI_SCLK <= '0';
 	SPI_MOSI <= mosi_data(0);
-	mosi_data <= '0' & mosi_data(7 downto 1);
+	mosi_data <= '0' & mosi_data(5*8-1 downto 1);
 	wait for 5ns;
 	for i in 0 to 3*8-1 loop
 		SPI_SCLK <= '1';
 		wait for 50ns;
 		SPI_SCLK <= '0';
 		SPI_MOSI <= mosi_data(0);
-		mosi_data <= '0' & mosi_data(7 downto 1);
+		mosi_data <= '0' & mosi_data(5*8-1 downto 1);
 		wait for 50ns;
 	end loop;
 	wait for 5ns;
 	SPI_CS <= '1';
+	wait for 1200ns;
+	for i in 0 to 2*8-1 loop
+		SPI_SCLK <= '1';
+		wait for 50ns;
+		SPI_SCLK <= '0';
+		SPI_MOSI <= mosi_data(0);
+		mosi_data <= '0' & mosi_data(5*8-1 downto 1);
+		wait for 50ns;
+	end loop;
 	wait;
 end process;
 
