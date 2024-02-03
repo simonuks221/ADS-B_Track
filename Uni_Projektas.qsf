@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C5T144C8
-set_global_assignment -name TOP_LEVEL_ENTITY CRC_24_Calc
+set_global_assignment -name TOP_LEVEL_ENTITY Uni_Projektas
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:31:19  DECEMBER 06, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -52,7 +52,7 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH CRC_Testbench -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH Testbenchas -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
@@ -205,15 +205,15 @@ set_global_assignment -name VHDL_FILE MRAM_Testbench.vhd
 set_global_assignment -name VHDL_FILE CORR_Testbench.vhd
 set_global_assignment -name VHDL_FILE DATA_INTERFACE.vhd
 set_global_assignment -name VHDL_FILE CRC_24_Calc.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BUTTON
 set_global_assignment -name VHDL_FILE CRC_Testbench.vhd
 set_global_assignment -name EDA_TEST_BENCH_NAME CRC_Testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CRC_Testbench
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "10 us" -section_id CRC_Testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME CRC_Testbench -section_id CRC_Testbench
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BUTTON
 set_global_assignment -name EDA_TEST_BENCH_FILE Testbenchas.vhd -section_id Testbenchas
 set_global_assignment -name EDA_TEST_BENCH_FILE new_testbench.vhd -section_id new_testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE SPI_Testbench.vhd -section_id SPI_Testbench
