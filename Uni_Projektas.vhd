@@ -148,7 +148,6 @@ port(
 	ADC_BIT : in std_logic_vector(9 downto 0) := (others => 'Z');
 	MRAM_DATA_OUT : out std_logic_vector(15 downto 0) := (others => '0');
 	MRAM_ADDRESS_OUT : out std_logic_vector(17 downto 0) := (others => '0');
-	MRAM_WRITE_DATA : out std_logic := '0';
 	MRAM_DONE : in std_logic := '0';
 	ADC_BIT_VALID : out std_logic := '0';
 	
@@ -256,9 +255,11 @@ this_state_manager : state_manager port map (CLK => CLK_150, SETUP_DONE => SETUP
 							EN_SETUP => EN_SETUP, EN_CORR => EN_CORR, CORR_DONE => CORR_DONE);
 this_setup_manager : setup_manager port map(CLK => CLK_150, EN_SETUP => EN_SETUP, SPI_send_data => ADC_SPI_Send_data, 
 							SPI_send_irq => ADC_SPI_Send_irq1, SETUP_DONE => SETUP_DONE, SPI_DONE => ADC_SPI_DONE, ADC_SYNC => ADC_SYNC);
+
 this_read_adc_manager : read_adc_manager generic map(MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS)
-							port map(CLK => CLK_150, DCLK => ADC_DCLKA, ADC_BIT => ADC_BIT_A, EN_READ_ADC => EN_READ_ADC,
-							READ_ADC_DONE => READ_ADC_DONE, ADC_BIT_VALID => ADC_BIT_VALID, MRAM_DATA_OUT => ADC_BITS_OUT, MRAM_DONE => MRAM_DONE);
+							port map(CLK => CLK_150, DCLK => ADC_DCLKA, ADC_BIT => ADC_BIT_A, ADC_BIT_VALID => ADC_BIT_VALID, 
+							MRAM_DATA_OUT => ADC_BITS_OUT, EN_READ_ADC => EN_READ_ADC, READ_ADC_DONE => READ_ADC_DONE, MRAM_DONE => MRAM_DONE);
+
 this_write_out_mram_manager : write_out_mram_manager generic map(MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS)
 							port map (CLK => CLK_150,UART_SEND_DATA=>UART_SEND_DATA, UART_DATA_IRQ => UART_DATA_IRQ,
 							MRAM_DATA_OUT => MRAM_DATA_OUT,MRAM_ADDRESS_IN => MRAM_ADDRESS_IN_READ, MRAM_READ_DATA => MRAM_READ_DATA,

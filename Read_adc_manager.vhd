@@ -15,8 +15,7 @@ port(
 	ADC_BIT : in std_logic_vector(9 downto 0) := (others => 'Z');
 	ADC_BIT_VALID : out std_logic := '0';
 	MRAM_DATA_OUT : out std_logic_vector(15 downto 0) := (others => '0');
-	MRAM_ADDRESS_OUT : out std_logic_vector(17 downto 0) := (others => '0');
-	MRAM_WRITE_DATA : out std_logic := '0';
+	MRAM_ADDRESS_OUT : out std_logic_vector(17 downto 0) := (others => '0'); --Unused
 	MRAM_DONE : in std_logic := '0';
 	
 	EN_READ_ADC : in std_logic := '0';
@@ -25,6 +24,29 @@ port(
 end entity;
 
 architecture arc of Read_adc_manager is
+	
+	component adc_sync_fifo IS
+	port(
+		data		: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
+		rdclk		: IN STD_LOGIC ;
+		rdreq		: IN STD_LOGIC ;
+		wrclk		: IN STD_LOGIC ;
+		wrreq		: IN STD_LOGIC ;
+		q		: OUT STD_LOGIC_VECTOR (9 DOWNTO 0);
+		rdempty		: OUT STD_LOGIC ;
+		wrfull		: OUT STD_LOGIC
+	);
+	end component;
+	
+	signal fifo_data : std_logic_vector(9 downto 0) := (others => '0');
+	signal rdclk : std_logic := '0';
+	signal rdreq : std_logic := '0';
+	signal wrclk : std_logic := '0';
+	signal wrreq : std_logic := '0';
+	signal fifo_q : std_logic_vector(9 downto 0) := (others => '0');
+	signal rdempty : std_logic := '0';
+	signal wrfull : std_logic := '0';
+
 	signal read_counter : integer range 0 to READ_COUNTER_MAX := 0;
 	signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS := 0;
 	
@@ -36,57 +58,44 @@ architecture arc of Read_adc_manager is
 	signal ADC_BIT_sync_2 : std_logic_vector(9 downto 0) := (others => '0');
 begin
 
-MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
-READ_ADC_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
+adc_fifo_1 : adc_sync_fifo port map(fifo_data, rdclk, rdreq, wrclk, wrreq, fifo_q, rdempty, wrfull);
 
-process(CLK)
-begin
-	if rising_edge(CLK) then
-		DCLK_sync_1 <= DCLK;
-		DCLK_sync_2 <= DCLK_sync_1;
-		DCLK_sync_3 <= DCLK_sync_2;
-		
-		ADC_BIT_sync_1 <= ADC_BIT;
-		ADC_BIT_sync_2 <= ADC_BIT_sync_1;
-	end if;
-end process;
+wrclk <= DCLK;
+rdclk <= CLK;
 
-process(CLK)
+process(DCLK)
 begin
-	if rising_edge(CLK) then
-		if(EN_READ_ADC = '0') then
-			read_counter <= 0;
-			MRAM_WRITE_DATA <= '0';
-			ADC_BIT_VALID <= '0';
-			address_counter <= 0;
-		else
-			if(DCLK_sync_2 = '1' and DCLK_sync_3 = '0') then
-				--Rising DCLK edge
-				if(read_counter = READ_COUNTER_MAX) then
-					if(MRAM_DONE = '1') then
-						read_counter <= 0;
-						address_counter <= address_counter + 1;
-						
-						--MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(to_integer(unsigned(ADC_BIT))-300, 10));
-						MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(to_integer(unsigned(ADC_BIT_sync_2)), 10));
-						--MRAM_DATA_OUT <= "000000" & ADC_BIT_sync_2;
-						MRAM_WRITE_DATA <= '1';
-						ADC_BIT_VALID <= '1';
-						--READ_ADC_DONE <= '1';
-					else
-						MRAM_WRITE_DATA <= '0';
-						ADC_BIT_VALID <= '0';
-					end if;
-				else
-					if(read_counter /= READ_COUNTER_MAX) then
-						read_counter <= read_counter + 1;
-					end if;
-					MRAM_WRITE_DATA <= '0';
-					ADC_BIT_VALID <= '0';
-				end if;
+	if rising_edge(DCLK) then
+		if EN_READ_ADC = '1' then
+			if(read_counter = READ_COUNTER_MAX) then
+				read_counter <= 0;
+				fifo_data <= ADC_BIT;
+				wrreq <= not wrfull; --Protect against writing to full FIFO
+			else
+				read_counter <= read_counter + 1;
+				wrreq <= '0';
 			end if;
+		else
+			wrreq <= '0';
+			read_counter <= 0;
 		end if;
 	end if;
 end process;
+
+MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(to_integer(unsigned(fifo_q)), 10));
+
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		if EN_READ_ADC = '1' then
+			rdreq <= not rdempty; --Read when data present in FIFO
+			ADC_BIT_VALID <= rdreq;
+		end if;
+	end if;
+end process;
+
+--Signals for debugging
+--MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
+--READ_ADC_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
 
 end architecture;

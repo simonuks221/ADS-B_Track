@@ -87,7 +87,6 @@ constant bit_0_coef : bit_coef_vector := (0, 0, 0, 0, 0, 1, 1, 1, 1, 1);
 --signal table_coef : coef_array := (preambule_coef, coef_00, coef_01, coef_10, coef_11);
 --signal table_coef_idx : integer range 0 to 3 := 0;
 
-signal mram_write_cnt : integer range 0 to 15 := 0;
 signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS+5 := 0;
 
 signal curr_corr_state : corr_state := preambule;
@@ -210,7 +209,6 @@ variable corr_11 : integer := 0;
 begin
 	if rising_edge(CLK) then
 		if(EN_CORR = '0') then
-			mram_write_cnt <= 0;
 			MRAM_WRITE_DATA <= '0';
 			address_counter <= 0;
 			PREAMBULE_FOUND <= '0';

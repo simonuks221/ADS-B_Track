@@ -32,8 +32,10 @@ SETUP_DONE <= '1' when spi_command_index = 5 else '0';
 
 process(SPI_DONE)
 begin
-	if rising_edge(SPI_DONE) and EN_SETUP = '1' then
-		spi_command_index <= spi_command_index + 1;
+	if rising_edge(SPI_DONE) then
+		if EN_SETUP = '1' then
+			spi_command_index <= spi_command_index + 1;
+		end if;
 	end if;
 end process;
 
