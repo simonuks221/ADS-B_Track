@@ -66,18 +66,13 @@ rdclk <= CLK;
 process(DCLK)
 begin
 	if rising_edge(DCLK) then
-		if EN_READ_ADC = '1' then
-			if(read_counter = READ_COUNTER_MAX) then
-				read_counter <= 0;
-				fifo_data <= ADC_BIT;
-				wrreq <= not wrfull; --Protect against writing to full FIFO
-			else
-				read_counter <= read_counter + 1;
-				wrreq <= '0';
-			end if;
-		else
-			wrreq <= '0';
+		if(read_counter = READ_COUNTER_MAX) then
 			read_counter <= 0;
+			fifo_data <= ADC_BIT;
+			wrreq <= not wrfull; --Protect against writing to full FIFO
+		else
+			read_counter <= read_counter + 1;
+			wrreq <= '0';
 		end if;
 	end if;
 end process;

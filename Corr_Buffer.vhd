@@ -11,6 +11,7 @@ entity Corr_Buffer is
 	);
 	port (
 		CLK : in std_logic := '0';
+		LATCH : in std_Logic := '0';
 		DATA_IN : in std_logic_vector(BUFFER_WIDTH - 1 downto 0) := (others => '0');
 		DATA_OUT_0 : out std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '0');
 		DATA_OUT_1 : out std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '0');
@@ -61,37 +62,40 @@ DATA_OUT_8 <= buffer_8;
 --buffer         0, 0, 1, 5, 5, -3, -6, -2
 
 process(CLK)
-
 begin
 	if rising_edge(CLK) then
-		v1 <= buffer_8(0)&buffer_7(0)&buffer_6(0)&
-						buffer_5(0)&buffer_4(0)&buffer_3(0)&buffer_2(0)&
-						buffer_1(0)&buffer_0(0);
-		v2 <= buffer_8(BUFFER_LENGTH-1)&buffer_7(BUFFER_LENGTH-1)&buffer_6(BUFFER_LENGTH-1)&
-						buffer_5(BUFFER_LENGTH-1)&buffer_4(BUFFER_LENGTH-1)&buffer_3(BUFFER_LENGTH-1)&buffer_2(BUFFER_LENGTH-1)&
-						buffer_1(BUFFER_LENGTH-1)&buffer_0(BUFFER_LENGTH-1);
-		v22 <= v2;
-		energy <= energy + to_integer(abs(v1)) - to_integer(abs(v22));
+		if LATCH = '1' then
+			v1 <= buffer_8(0)&buffer_7(0)&buffer_6(0)&
+							buffer_5(0)&buffer_4(0)&buffer_3(0)&buffer_2(0)&
+							buffer_1(0)&buffer_0(0);
+			v2 <= buffer_8(BUFFER_LENGTH-1)&buffer_7(BUFFER_LENGTH-1)&buffer_6(BUFFER_LENGTH-1)&
+							buffer_5(BUFFER_LENGTH-1)&buffer_4(BUFFER_LENGTH-1)&buffer_3(BUFFER_LENGTH-1)&buffer_2(BUFFER_LENGTH-1)&
+							buffer_1(BUFFER_LENGTH-1)&buffer_0(BUFFER_LENGTH-1);
+			v22 <= v2;
+			energy <= energy + to_integer(abs(v1)) - to_integer(abs(v22));
+		end if;
 	end if;
 end process;
 
 process(CLK)
 begin
 	if rising_edge(CLK) then
-		--buf_b0 <= DATA_IN;
-		--buf_b1 <= buf_b0;
-		--buf_b2 <= buf_b1;
-		--diff <= to_signed(to_integer(unsigned(buf_b0)) - to_integer(unsigned(buf_b2)), BUFFER_WIDTH);
-		diff <= to_signed(to_integer(unsigned(DATA_IN)), BUFFER_WIDTH);
-		buffer_0 <= buffer_0(BUFFER_LENGTH - 2 downto 0) & diff(0);
-		buffer_1 <= buffer_1(BUFFER_LENGTH - 2 downto 0) & diff(1);
-		buffer_2 <= buffer_2(BUFFER_LENGTH - 2 downto 0) & diff(2);
-		buffer_3 <= buffer_3(BUFFER_LENGTH - 2 downto 0) & diff(3);
-		buffer_4 <= buffer_4(BUFFER_LENGTH - 2 downto 0) & diff(4);
-		buffer_5 <= buffer_5(BUFFER_LENGTH - 2 downto 0) & diff(5);
-		buffer_6 <= buffer_6(BUFFER_LENGTH - 2 downto 0) & diff(6);
-		buffer_7 <= buffer_7(BUFFER_LENGTH - 2 downto 0) & diff(7);
-		buffer_8 <= buffer_8(BUFFER_LENGTH - 2 downto 0) & diff(8);
+		if LATCH = '1' then
+			--buf_b0 <= DATA_IN;
+			--buf_b1 <= buf_b0;
+			--buf_b2 <= buf_b1;
+			--diff <= to_signed(to_integer(unsigned(buf_b0)) - to_integer(unsigned(buf_b2)), BUFFER_WIDTH);
+			diff <= to_signed(to_integer(unsigned(DATA_IN)), BUFFER_WIDTH);
+			buffer_0 <= buffer_0(BUFFER_LENGTH - 2 downto 0) & diff(0);
+			buffer_1 <= buffer_1(BUFFER_LENGTH - 2 downto 0) & diff(1);
+			buffer_2 <= buffer_2(BUFFER_LENGTH - 2 downto 0) & diff(2);
+			buffer_3 <= buffer_3(BUFFER_LENGTH - 2 downto 0) & diff(3);
+			buffer_4 <= buffer_4(BUFFER_LENGTH - 2 downto 0) & diff(4);
+			buffer_5 <= buffer_5(BUFFER_LENGTH - 2 downto 0) & diff(5);
+			buffer_6 <= buffer_6(BUFFER_LENGTH - 2 downto 0) & diff(6);
+			buffer_7 <= buffer_7(BUFFER_LENGTH - 2 downto 0) & diff(7);
+			buffer_8 <= buffer_8(BUFFER_LENGTH - 2 downto 0) & diff(8);
+		end if;
 	end if;
 end process;
 

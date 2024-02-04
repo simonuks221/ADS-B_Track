@@ -253,6 +253,7 @@ this_mram_controller : MRAM_Controller port map(CLK => CLK_150, data_in => MRAM_
 this_state_manager : state_manager port map (CLK => CLK_150, SETUP_DONE => SETUP_DONE, READ_ADC_DONE => READ_ADC_DONE,
 							WRITE_OUT_DONE => WRITE_OUT_DONE, EN_READ_ADC => EN_READ_ADC, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM,
 							EN_SETUP => EN_SETUP, EN_CORR => EN_CORR, CORR_DONE => CORR_DONE);
+
 this_setup_manager : setup_manager port map(CLK => CLK_150, EN_SETUP => EN_SETUP, SPI_send_data => ADC_SPI_Send_data, 
 							SPI_send_irq => ADC_SPI_Send_irq1, SETUP_DONE => SETUP_DONE, SPI_DONE => ADC_SPI_DONE, ADC_SYNC => ADC_SYNC);
 
