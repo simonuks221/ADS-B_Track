@@ -18,12 +18,12 @@ port(
 	ADC_SHDN : out std_logic := 'Z'; --1 - ADC OFF, 0 - ADC ON
 	ADC_SYNC : out std_logic := 'Z'; --Sinchronizacija tarp FPGA CLk ir ADC vidinio CLK
 	ADC_CLK : out std_logic := 'Z';
-	ADC_DORB : in std_logic := 'Z'; --Data over range
-	ADC_DORA : in std_logic := 'Z';
-	ADC_DCLKB : in std_logic := 'Z'; --Valid data on rising edge
-	ADC_DCLKA : in std_logic := 'Z';
-	ADC_BIT_B : in std_logic_vector(9 downto 0) := (others => 'Z');
-	ADC_BIT_A : in std_logic_vector(9 downto 0) := (others => 'Z');
+	ADC_DORB : in std_logic := '0'; --Data over range
+	ADC_DORA : in std_logic := '0';
+	ADC_DCLKB : in std_logic := '0'; --Valid data on rising edge
+	ADC_DCLKA : in std_logic := '0';
+	ADC_BIT_B : in std_logic_vector(9 downto 0) := (others => '0');
+	ADC_BIT_A : in std_logic_vector(9 downto 0) := (others => '0');
 	--ADC SPI
 	ADC_SPI_SDIN : inout std_logic := 'Z';
 	ADC_SPI_SCLK : out std_logic := 'Z';
@@ -45,7 +45,7 @@ port(
 	MRAM_D : inout std_logic_vector(15 downto 0) := (others => 'Z');
 	
 	--UART
-	UART_RX : in std_logic := 'Z';
+	UART_RX : in std_logic := '0';
 	UART_TX : out std_logic := '1'
 );
 end entity;
@@ -145,7 +145,7 @@ generic(
 port(
 	CLK : in std_logic := '0';
 	DCLK : in std_logic := '0';
-	ADC_BIT : in std_logic_vector(9 downto 0) := (others => 'Z');
+	ADC_BIT : in std_logic_vector(9 downto 0) := (others => '0');
 	MRAM_DATA_OUT : out std_logic_vector(15 downto 0) := (others => '0');
 	MRAM_ADDRESS_OUT : out std_logic_vector(17 downto 0) := (others => '0');
 	MRAM_DONE : in std_logic := '0';

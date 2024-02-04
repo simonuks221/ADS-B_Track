@@ -12,7 +12,7 @@ generic(
 port(
 	CLK : in std_logic := '0';
 	DCLK : in std_logic := '0';
-	ADC_BIT : in std_logic_vector(9 downto 0) := (others => 'Z');
+	ADC_BIT : in std_logic_vector(9 downto 0) := (others => '0');
 	ADC_BIT_VALID : out std_logic := '0';
 	MRAM_DATA_OUT : out std_logic_vector(15 downto 0) := (others => '0');
 	MRAM_ADDRESS_OUT : out std_logic_vector(17 downto 0) := (others => '0'); --Unused

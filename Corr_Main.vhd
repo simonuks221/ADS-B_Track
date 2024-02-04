@@ -105,10 +105,10 @@ type size2 is array (0 to (BUFFER_LENGTH/4)-1) of unsigned(12 downto 0);
 type size3 is array (0 to (BUFFER_LENGTH/8)-1) of unsigned(12 downto 0);
 type size4 is array (0 to (BUFFER_LENGTH/16)-1) of unsigned(12 downto 0);
 
-signal p_corr_pipeline_1 : size1; --25
-signal p_corr_pipeline_2 : size2; --12 --Left one
-signal p_corr_pipeline_3 : size3; --6
-signal p_corr_pipeline_4 : size4; --3
+signal p_corr_pipeline_1 : size1 := (others => (others => '0')); --25
+signal p_corr_pipeline_2 : size2 := (others => (others => '0')); --12 --Left one
+signal p_corr_pipeline_3 : size3 := (others => (others => '0')); --6
+signal p_corr_pipeline_4 : size4 := (others => (others => '0')); --3
 signal p_corr_pipeline_51 : unsigned(12 downto 0) := (others => '0');
 signal p_corr_pipeline_52 : unsigned(12 downto 0) := (others => '0');
 
