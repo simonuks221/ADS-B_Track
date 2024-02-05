@@ -25,25 +25,27 @@ architecture arc of Setup_manager is
 	"1000011000000000", --06h
 	"0000100000001000"); --08h --0.9V common mode pullup
 	signal spi_command_index : integer range 0 to 5 := 0;
+	signal SPI_DONE_last : std_logic := '0';
 begin
-
-SPI_send_irq <= '1' when spi_command_index /= 5 and EN_SETUP = '1' else '0';
-SETUP_DONE <= '1' when spi_command_index = 5 else '0';
-
-process(SPI_DONE)
-begin
-	if rising_edge(SPI_DONE) and EN_SETUP = '1' then
-		spi_command_index <= spi_command_index + 1;
-	end if;
-end process;
 
 process(CLK)
 begin
 	if rising_edge(CLK) then
 		if EN_SETUP = '1' then
-			if spi_command_index /= 5 then
-				SPI_send_data <= spi_commands(spi_command_index);
+			SPI_DONE_last <= SPI_DONE;
+			if SPI_DONE_last <= '0' and SPI_DONE = '1' then
+				if spi_command_index = 5 then
+					SETUP_DONE <= '1';
+				else
+					spi_command_index <= spi_command_index + 1;
+					SPI_send_data <= spi_commands(spi_command_index);
+					SPI_send_irq <= '1';
+				end if;
+			else
+				SPI_send_irq <= '0';
 			end if;
+		else
+			SPI_send_irq <= '0';
 		end if;
 	end if;
 end process;

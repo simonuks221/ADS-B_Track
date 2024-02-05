@@ -15,8 +15,7 @@ port(
 	RESP_DATA: in std_logic_vector(7 downto 0) := (others => '0');
 	CMD_DATA : out std_logic_vector(7 downto 0) := (others => '0');
 	SPI_CYCLE_DONE : out std_logic := '0';
-	SPI_RESET : out std_Logic := '0'
-	
+	SPI_RESET : out std_logic := '0'
 );
 end entity;
 

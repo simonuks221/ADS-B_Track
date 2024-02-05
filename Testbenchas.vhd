@@ -18,38 +18,38 @@ SIGNAL CLK : STD_LOGIC := '0';
 signal BUTTON : std_logic := '1';
 
 --ADC SIGNALS
-signal ADC_SHDN : std_logic; --1 - ADC OFF, 0 - ADC ON
-signal ADC_SYNC : std_logic; --Sinchronizacija tarp FPGA CLk ir ADC vidinio CLK
-signal ADC_CLK : std_logic;
-signal ADC_DORB : std_logic; --Data over range
-signal ADC_DORA : std_logic;
-signal ADC_DCLKB : std_logic; --Valid data on rising edge
-signal ADC_DCLKA : std_logic;
-signal ADC_BIT_B : std_logic_vector(9 downto 0);
-signal ADC_BIT_A : std_logic_vector(9 downto 0);
+signal ADC_SHDN : std_logic := '0'; --1 - ADC OFF, 0 - ADC ON
+signal ADC_SYNC : std_logic := '0'; --Sinchronizacija tarp FPGA CLk ir ADC vidinio CLK
+signal ADC_CLK : std_logic := '0';
+signal ADC_DORB : std_logic := '0'; --Data over range
+signal ADC_DORA : std_logic := '0';
+signal ADC_DCLKB : std_logic := '0'; --Valid data on rising edge
+signal ADC_DCLKA : std_logic := '0';
+signal ADC_BIT_B : std_logic_vector(9 downto 0) :=  (others =>'0');
+signal ADC_BIT_A : std_logic_vector(9 downto 0) :=  (others =>'0');
 --ADC SPI
-signal ADC_SPI_SDIN : std_logic;
-signal ADC_SPI_SCLK : std_logic;
-signal ADC_SPI_CS : std_logic;
+signal ADC_SPI_SDIN : std_logic := '0';
+signal ADC_SPI_SCLK : std_logic := '0';
+signal ADC_SPI_CS : std_logic := '0';
 
 --SPI TO FPGA
-signal SPI_MOSI : std_logic;
-signal SPI_MISO : std_logic;
-signal SPI_SCLK : std_logic;
-signal SPI_CS : std_logic;
+signal SPI_MOSI : std_logic := '0';
+signal SPI_MISO : std_logic := '0';
+signal SPI_SCLK : std_logic := '0';
+signal SPI_CS : std_logic := '0';
 
 --MRAM
-signal MRAM_OUTPUT_EN : std_logic;
-signal MRAM_A : std_logic_vector(17 downto 0);
-signal MRAM_EN : std_logic;
-signal MRAM_WRITE_EN : std_logic;
-signal MRAM_UPPER_EN : std_logic;
-signal MRAM_LOWER_EN : std_logic;
+signal MRAM_OUTPUT_EN : std_logic := '0';
+signal MRAM_A : std_logic_vector(17 downto 0) :=  (others =>'0');
+signal MRAM_EN : std_logic := '0';
+signal MRAM_WRITE_EN : std_logic := '0';
+signal MRAM_UPPER_EN : std_logic := '0';
+signal MRAM_LOWER_EN : std_logic := '0';
 signal MRAM_D : std_logic_vector(15 downto 0) :=  (others =>'0');
 
 --UART
 --UART
-signal UART_RX : std_logic := 'Z';
+signal UART_RX : std_logic := '0';
 signal UART_TX : std_logic := '1';
 
 
@@ -111,7 +111,7 @@ port(
 	MRAM_D : inout std_logic_vector(15 downto 0) := (others => '0');
 	
 	--UART
-	UART_RX : in std_logic := 'Z';
+	UART_RX : in std_logic := '0';
 	UART_TX : out std_logic := '1'
 	
 );
@@ -123,9 +123,9 @@ signal mram_data : mram_data_type := (others => (others => '0'));
 BEGIN
 i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, ADC_SYNC => ADC_SYNC, ADC_CLK => ADC_CLK, ADC_SPI_SDIN => ADC_SPI_SDIN, ADC_SPI_SCLK => ADC_SPI_SCLK, ADC_SPI_CS => ADC_SPI_CS,ADC_DCLKA => ADC_DCLKA, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,  MRAM_A => MRAM_A, MRAM_EN => MRAM_EN, MRAM_WRITE_EN => MRAM_WRITE_EN, MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_D => MRAM_D,ADC_BIT_A => ADC_BIT_A, UART_RX => UART_RX, UART_TX => UART_TX, SPI_CS => SPI_CS);
 	
-CLK <= not CLK after 10ns; --50MHz 20ns
+CLK <= not CLK after 10 ns; --50MHz 20ns
 --ADC_DCLKA <= CLK when now > 40us else '0';
-ADC_DCLKA <= transport ADC_CLK after 5ns; --50MHz 5ns, ketvirtadalis
+ADC_DCLKA <= transport ADC_CLK after 5 ns; --50MHz 5ns, ketvirtadalis
 --ADC_DCLKA <= '0';
 
 --process
@@ -142,7 +142,7 @@ ADC_DCLKA <= transport ADC_CLK after 5ns; --50MHz 5ns, ketvirtadalis
 process(CLK)
 begin
 	if(falling_edge(CLK)) then
-		if now > 42.2us then
+		if now > 42.2 us then
 			if(adc_buffer_index < VOLTAGE_DATA_LEN-1) then
 				if(adc_buffer_counter = 4) then
 					adc_buffer_counter <= 0;
@@ -168,11 +168,11 @@ begin
 			wait until rising_edge(MRAM_WRITE_EN);
 			mram_data(to_integer(unsigned(MRAM_A))) <= MRAM_D;
 		else
-			wait for 10ns;
+			wait for 10 ns;
 			if(MRAM_OUTPUT_EN = '0') then
 				MRAM_D <= mram_data(to_integer(unsigned(MRAM_A)));
 				wait until rising_edge(MRAM_EN);
-				wait for 15ns;
+				wait for 15 ns;
 				MRAM_D <= (others => 'Z');
 			end if;
 		end if;

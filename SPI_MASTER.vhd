@@ -38,17 +38,17 @@ begin
 	if rising_edge(CLK) then
 		case curr_state is
 			when idle =>
-				if(SEND_IRQ = '1') then
+				if SEND_IRQ = '1' then
 					curr_state <= latch_data;
 				end if;
 			when latch_data =>
 				curr_state <= running;
 			when running =>
-				if(bits_sent = BITS) then
+				if bits_sent = BITS then
 					curr_state <= cs_up;
 				end if;
 			when cs_up =>
-				if(clk_counter = SEND_CLK_COUNTER_MAX*2) then
+				if clk_counter = SEND_CLK_COUNTER_MAX*2 then
 					curr_state <= idle;
 				end if;
 		end case;
@@ -56,21 +56,24 @@ begin
 end process;
 
 SPI_MOSI <= 'Z' when bits_sent >= 8 and is_read = '1' else tx_buf(BITS-1);
-SPI_CS <= '1' when curr_state = idle or curr_state = cs_up else '0';
-SEND_DONE <= '1' when curr_state = idle else '0';
 
 process(CLK) 
 begin
 	if(rising_edge(CLK)) then
+		SEND_DONE <= '0';
 		case curr_state is
 			when idle =>
+				SPI_CS <= '1';
+				SEND_DONE <= '1';
 				clk_counter <= 0;
 				sclk <= '0';
 				bits_sent <= 0;
 			when latch_data =>
+				SPI_CS <= '0';
 				tx_buf <= SEND_DATA;
 				is_read <= SEND_DATA(BITS - 1); 
 			when running =>
+				SPI_CS <= '0';
 				if(clk_counter = SEND_CLK_COUNTER_MAX) then --Pereiname i kita busena sclk
 					sclk <= not sclk;
 					if(sclk = '1') then --Pereiname i zema busena
@@ -86,6 +89,7 @@ begin
 					clk_counter <= clk_counter + 1;
 				end if;
 			when cs_up =>
+				SPI_CS <= '1';
 				clk_counter <= clk_counter + 1;
 		end case;
 	end if;
