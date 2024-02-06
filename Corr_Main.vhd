@@ -21,7 +21,10 @@ port(
 	MRAM_DATA_OUT : out std_logic_vector(15 downto 0) := (others => '0');
 	MRAM_ADDRESS_OUT : out std_logic_vector(17 downto 0) := (others => '0');
 	MRAM_WRITE_DATA : out std_logic := '0';
-	MRAM_DONE : in std_logic := '0'
+	MRAM_DONE : in std_logic := '0';
+	
+	PACKET_DATA : out std_logic_vector(7 downto 0) := (others => '0');
+	PACKET_VALID : out std_logic := '0'
 );
 end entity;
 
@@ -87,7 +90,7 @@ signal buffer_latch : std_logic := '0';
 signal waiting_cnt : integer range 0 to 30 := 0;--TODO: could use only one integer for counting? investigate
 signal bits_cnt : integer range 0 to 20 := 0; --For bit timing
 signal bits_idx : integer range 0 to 6 := 0;  --For bit tracking
-signal bits_data : std_logic_vector(5 downto 0) := (others => '0'); --Correlated bit value
+signal bits_data : std_logic_vector(7 downto 0) := (others => '0'); --Correlated bit value
 
 type p_size1 is array (0 to (BUFFER_LENGTH/2)-1) of unsigned(10 downto 0);
 type p_size2 is array (0 to (BUFFER_LENGTH/4)-1) of unsigned(11 downto 0);
@@ -127,7 +130,8 @@ buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(CLK, buffer
 --buffer_latch <= '1' when cnt = 1 else '0';
 MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
 --MRAM_DATA_OUT <= "0000" & std_logic_vector(to_unsigned(p_corr, 12)); --For debuging correlation value
-MRAM_DATA_OUT <= "0000000000" & bits_data; --For debugging correlated bit values
+MRAM_DATA_OUT <= "00000000" & bits_data; --For debugging correlated bit values
+PACKET_DATA <= bits_data; --For sending to DATA INTERFACE
 
 CORR_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
 DATA_IN <='0'&ADC_BITS(7 downto 0);
@@ -254,6 +258,7 @@ variable corr_10 : integer := 0;
 variable corr_11 : integer := 0;
 begin
 	if rising_edge(CLK) then
+		PACKET_VALID <= '0';
 		if(EN_CORR = '0') then
 			MRAM_WRITE_DATA <= '0';
 			address_counter <= 0;
@@ -302,19 +307,20 @@ begin
 									bits_cnt <= 0;
 									if bits_idx = 6 then
 										curr_corr_state <= preambule;
+										PACKET_VALID <= '1';
 									else
 										corr_00 := second_0_corr + first_0_corr;
 										corr_01 := second_0_corr + first_1_corr;
 										corr_10 := second_1_corr + first_0_corr;
 										corr_11 := second_1_corr + first_1_corr;
 										if corr_00 > corr_11 and corr_00 > corr_01 and corr_00 > corr_10 then
-											bits_data <= bits_data(3 downto 0) & "00";
+											bits_data <= bits_data(5 downto 0) & "00";
 										elsif corr_01 > corr_11 and corr_01 > corr_00 and corr_01 > corr_10 then
-											bits_data <= bits_data(3 downto 0) & "01";
+											bits_data <= bits_data(5 downto 0) & "01";
 										elsif corr_10 > corr_11 and corr_10 > corr_01 and corr_10 > corr_00 then
-											bits_data <= bits_data(3 downto 0) & "10";
+											bits_data <= bits_data(5 downto 0) & "10";
 										else
-											bits_data <= bits_data(3 downto 0) & "11";
+											bits_data <= bits_data(5 downto 0) & "11";
 										end if;
 	--									if p_corr_first_1 > p_corr_first_0 then
 	--										--Correlated 1

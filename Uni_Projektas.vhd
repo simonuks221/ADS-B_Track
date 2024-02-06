@@ -30,10 +30,10 @@ port(
 	ADC_SPI_CS : out std_logic := 'Z';
 	
 	--SPI TO FPGA
-	SPI_MOSI : inout std_logic := 'Z';
+	SPI_MOSI : in std_logic := '0';
 	SPI_MISO : inout std_logic := 'Z';
-	SPI_SCLK : inout std_logic := 'Z';
-	SPI_CS : inout std_logic := 'Z';
+	SPI_SCLK : in std_logic := '0';
+	SPI_CS : in std_logic := '0';
 	
 	--MRAM
 	MRAM_OUTPUT_EN : out std_logic := 'Z';
@@ -193,7 +193,23 @@ port(
 	MRAM_DATA_OUT : out std_logic_vector(15 downto 0) := (others => '0');
 	MRAM_ADDRESS_OUT : out std_logic_vector(17 downto 0) := (others => '0');
 	MRAM_WRITE_DATA : out std_logic := '0';
-	MRAM_DONE : in std_logic := '0'
+	MRAM_DONE : in std_logic := '0';
+	
+	PACKET_DATA : out std_logic_vector(7 downto 0) := (others => '0');
+	PACKET_VALID : out std_logic := '0'
+);
+end component;
+
+component DATA_INTERFACE is
+port(
+	CLK: in std_Logic := '0';
+	SPI_SCLK: in std_logic := '0';
+	SPI_MOSI: in std_logic := '0';
+	SPI_MISO: inout std_logic := '0';
+	SPI_CS: in std_logic := '1';
+	
+	PACKET_IN_DATA : in std_logic_vector(7 downto 0) := (others => '0');
+	PACKET_IN_VALID : in std_logic := '0'
 );
 end component;
 
@@ -218,7 +234,6 @@ signal SETUP_DONE : std_logic := '0';
 signal READ_ADC_DONE : std_logic := '0';
 signal WRITE_OUT_DONE : std_logic := '0';
 signal CORR_DONE : std_logic := '0';
-
 signal EN_SETUP : std_logic := '0';
 signal EN_READ_ADC : std_logic := '0';
 signal EN_WRITE_OUT_MRAM : std_logic := '0';
@@ -236,6 +251,12 @@ signal button_active : std_logic := '0';
 signal UART_SEND_DATA : std_logic_vector(7 downto 0);
 signal UART_DATA_IRQ : std_logic := '0';
 signal UART_FIFO_EMPTY : std_logic := '0';
+
+--DATA INTERFACE
+signal PACKET_DATA : std_logic_vector(7 downto 0) := (others => '0');
+signal PACKET_VALID : std_logic := '0';
+
+signal PREAMB_FOUND : std_logic := '0'; --For debugging
 
 begin
 
@@ -276,10 +297,12 @@ UART_Controller_1 : UART_Controller generic map(BAUD_RATE => BAUD_RATE) port map
 							SEND_DATA_IN_REQ => UART_DATA_IRQ, TX => UART_TX, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
 
 Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 50, BUFFER_WIDTH => 9, MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS) 
-							port map(CLK => CLK_150, ADC_BITS => ADC_BITS_OUT, ADC_BITS_VALID => ADC_BIT_VALID, PREAMBULE_FOUND => SPI_CS,
+							port map(CLK => CLK_150, ADC_BITS => ADC_BITS_OUT, ADC_BITS_VALID => ADC_BIT_VALID, PREAMBULE_FOUND => PREAMB_FOUND,
 							MRAM_DATA_OUT => MRAM_DATA_IN, MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA,
-							MRAM_DONE => MRAM_DONE, EN_CORR => EN_CORR, CORR_DONE => CORR_DONE);
+							MRAM_DONE => MRAM_DONE, EN_CORR => EN_CORR, CORR_DONE => CORR_DONE, PACKET_DATA => PACKET_DATA,
+							PACKET_VALID => PACKET_VALID);
 
+data_interface_1 : DATA_INTERFACE port map(CLK_150, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, PACKET_DATA, PACKET_VALID);
 process(CLK_150)
 begin
 	if falling_edge(CLK_150) then

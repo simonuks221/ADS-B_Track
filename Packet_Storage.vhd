@@ -33,12 +33,12 @@ architecture arc of Packet_Storage is
 	);
 	end component;
 
-	constant PRINTOUT_AMOUNT : integer := 2;
+	constant PACKET_LENGTH : integer := 2;
 	
-	signal printout_idx : integer range 0 to PRINTOUT_AMOUNT := 1;
-	signal printout_data : std_logic_vector(PRINTOUT_AMOUNT*8-1 downto 0) := x"0203";
+	signal printout_idx : integer range 0 to PACKET_LENGTH := 1;
+	--signal printout_data : std_logic_vector(PACKET_LENGTH*8-1 downto 0) := x"0203";
 	signal resp_data_buffer : std_logic_vector(7 downto 0) := (others => '0');
-	
+	signal first_printout_data : std_logic_vector(7 downto 0) := x"FF";
 	--Packet storage FIFO
 	signal fifo_data_in	: std_logic_vector (7 DOWNTO 0) := (others => '0');
 	signal fifo_read_rq	: std_logic := '0';
@@ -48,6 +48,7 @@ architecture arc of Packet_Storage is
 	signal fifo_q	: std_logic_vector (7 DOWNTO 0) := (others => '0');
 	signal fifo_curr_length	: std_logic_vector (9 DOWNTO 0) := (others => '0'); --Current FIFO length
 	
+	signal fifo_rd_delay : std_logic := '0';
 begin
 
 packet_fifo : PACKET_STORAGE_FIFO port map(CLK, fifo_data_in, fifo_read_rq, fifo_wr_rq, fifo_empty, fifo_full, fifo_q, fifo_curr_length);
@@ -74,17 +75,28 @@ process(CLK)
 begin
 	if rising_edge(CLK) then
 		SPI_RESET <= '0';
+		fifo_read_rq <= '0';
 		if EN = '0' then
-			resp_data_buffer <= printout_data(7 downto 0);
+			resp_data_buffer <= first_printout_data;
+			fifo_rd_delay <= '0';
 		else
+			fifo_rd_delay <= fifo_read_rq;
+			if fifo_rd_delay = '1' then
+				resp_data_buffer <= fifo_q;
+			end if;
 			if SPI_CYCLE_DONE = '1' then
 				--Check if printed everything out
-				if printout_idx = PRINTOUT_AMOUNT then
+				if printout_idx = PACKET_LENGTH then
 					printout_idx <= 1;
 					SPI_RESET <= '1';
 				else
 					printout_idx <= printout_idx + 1;
-					resp_data_buffer <= printout_data((printout_idx+1)*8-1 downto printout_idx*8);
+					if fifo_empty = '0' then
+						fifo_read_rq <= '1';
+					else
+						--FIFO empty
+						
+					end if;
 				end if;
 			end if;
 		end if;

@@ -36,7 +36,7 @@ signal ADC_SPI_CS : std_logic := '0';
 signal SPI_MOSI : std_logic := '0';
 signal SPI_MISO : std_logic := '0';
 signal SPI_SCLK : std_logic := '0';
-signal SPI_CS : std_logic := '0';
+signal SPI_CS : std_logic := '1';
 
 --MRAM
 signal MRAM_OUTPUT_EN : std_logic := '0';
@@ -48,10 +48,8 @@ signal MRAM_LOWER_EN : std_logic := '0';
 signal MRAM_D : std_logic_vector(15 downto 0) :=  (others =>'0');
 
 --UART
---UART
 signal UART_RX : std_logic := '0';
 signal UART_TX : std_logic := '1';
-
 
 --Functions
 --Read from file
@@ -70,6 +68,35 @@ begin
 	end loop;
 	return r;
 end function init;
+
+--Send SPI command
+procedure spi_send(constant FIRST_CMD : in std_logic_vector(7 downto 0);
+							constant CMD_AMOUNT : in integer;
+							signal P_SPI_MOSI : out std_logic;
+							signal P_SPI_MISO : in std_logic;
+							signal P_SPI_SCLK : out std_logic;
+							signal P_SPI_CS : out std_logic
+							) is
+begin
+	P_SPI_CS <= '0';
+	P_SPI_SCLK <= '0';
+	wait for 5 ns;
+	for k in 0 to CMD_AMOUNT loop
+		for i in 0 to 7 loop
+			P_SPI_SCLK <= '0';
+			if k = 0 then
+				P_SPI_MOSI <= FIRST_CMD(i);
+			end if;
+			wait for 50 ns;
+			P_SPI_SCLK <= '1';
+			wait for 50 ns;
+		end loop;
+	end loop;
+	P_SPI_SCLK <= '0';
+	wait for 5 ns;
+	P_SPI_CS <= '1';
+	
+end procedure ;
 
 signal adc_buffer : b_data := init;
 signal adc_buffer_index : integer := 0;
@@ -96,10 +123,10 @@ port(
 	ADC_SPI_CS : out std_logic := '1';
 	
 	--SPI TO FPGA
-	SPI_MOSI : inout std_logic := 'Z';
+	SPI_MOSI : in std_logic := '0';
 	SPI_MISO : inout std_logic := 'Z';
-	SPI_SCLK : inout std_logic := 'Z';
-	SPI_CS : inout std_logic := 'Z';
+	SPI_SCLK : in std_logic := '0';
+	SPI_CS : in std_logic := '0';
 	
 	--MRAM
 	MRAM_OUTPUT_EN : out std_logic := '0';
@@ -124,20 +151,17 @@ BEGIN
 i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, ADC_SYNC => ADC_SYNC, ADC_CLK => ADC_CLK, ADC_SPI_SDIN => ADC_SPI_SDIN, ADC_SPI_SCLK => ADC_SPI_SCLK, ADC_SPI_CS => ADC_SPI_CS,ADC_DCLKA => ADC_DCLKA, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,  MRAM_A => MRAM_A, MRAM_EN => MRAM_EN, MRAM_WRITE_EN => MRAM_WRITE_EN, MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_D => MRAM_D,ADC_BIT_A => ADC_BIT_A, UART_RX => UART_RX, UART_TX => UART_TX, SPI_CS => SPI_CS);
 	
 CLK <= not CLK after 10 ns; --50MHz 20ns
---ADC_DCLKA <= CLK when now > 40us else '0';
-ADC_DCLKA <= transport ADC_CLK after 5 ns; --50MHz 5ns, ketvirtadalis
---ADC_DCLKA <= '0';
 
---process
---begin
---	wait until rising_edge(CLK);
---	if(now > 40us) then
---		wait for 10ns;
---		ADC_DCLKA <= '1';
---		wait for 10ns;
---		ADC_DCLKA <= '0';
---	end if;
---end process;
+ADC_DCLKA <= transport ADC_CLK after 5 ns; --50MHz 5ns, 1/4
+
+--Process for FPGA SPI simulation
+process
+begin
+	SPI_CS <= '1';
+	wait for 1 us;
+	spi_send(x"01", 1, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	wait;
+end process;
 
 process(CLK)
 begin
