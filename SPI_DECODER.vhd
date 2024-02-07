@@ -12,12 +12,15 @@ port(
 	DECODED_CMD_VALID : out std_logic := '0';
 	SPI_CYCLE_DONE : in std_logic := '0';
 	RESET : in std_logic := '0';
-	PACKET_STORAGE_EN : out std_logic := '0'
+	PACKET_STORAGE_EN : out std_logic := '0';
+	STATUS_REGISTER_EN : out std_logic := '0'
 );
 end entity;
 
 architecture arc of SPI_DECODER is
-constant packet_storage_cmd : std_logic_vector(7 downto 0) := x"01";
+
+constant status_register_cmd : std_logic_vector(7 downto 0) := x"01";
+constant packet_storage_cmd : std_logic_vector(7 downto 0) := x"02";
 
 signal local_cmd : std_logic_vector(7 downto 0) := (others => '0');
 signal cmd_active : std_logic := '0';
@@ -27,7 +30,10 @@ process(CLK)
 begin
 	if rising_edge(CLK) then
 		PACKET_STORAGE_EN <= '0';
+		STATUS_REGISTER_EN <= '0';
 		case local_cmd is
+			when status_register_cmd =>
+				STATUS_REGISTER_EN <= '1';
 			when packet_storage_cmd =>
 				PACKET_STORAGE_EN <= '1';
 			when others =>

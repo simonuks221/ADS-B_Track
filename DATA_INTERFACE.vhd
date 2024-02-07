@@ -9,9 +9,11 @@ port(
 	SPI_MOSI: in std_logic := '0';
 	SPI_MISO: inout std_logic := '0';
 	SPI_CS: in std_logic := '1';
-	
+	--Packet storage
 	PACKET_IN_DATA : in std_logic_vector(7 downto 0) := (others => '0');
-	PACKET_IN_VALID : in std_logic := '0'
+	PACKET_IN_VALID : in std_logic := '0';
+	--Status register
+	STATUS_INIT_DONE : in std_logic := '0'
 );
 end entity;
 
@@ -40,7 +42,8 @@ port(
 	DECODED_CMD_VALID : out std_logic := '0';
 	SPI_CYCLE_DONE : in std_logic := '0';
 	RESET : in std_logic := '0';
-	PACKET_STORAGE_EN : out std_logic := '0'
+	PACKET_STORAGE_EN : out std_logic := '0';
+	STATUS_REGISTER_EN : out std_logic := '0'
 );
 end component;
 
@@ -57,6 +60,20 @@ port(
 	PACKET_IN_VALID : in std_logic := '0'
 );
 end component;
+
+component Status_Register is 
+port(
+	EN: in std_logic := '0';
+	CLK: in std_logic := '0';
+	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
+	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
+	SPI_CYCLE_DONE : in std_logic := '0';
+	SPI_RESET : out std_logic := '0';
+	--Status signals
+	INIT_DONE : in std_logic := '0'
+);
+end component;
+
 --Spi decoder
 signal raw_cmd_data : std_logic_vector(7 downto 0) := (others => '0');
 signal decoded_cmd_data : std_logic_vector(7 downto 0) := (others => '0');
@@ -65,23 +82,30 @@ signal spi_cycle_done : std_logic := '0';
 --Shared bus for responses, must be left as 0 if not enabled
 signal resp_data_bus: std_logic_vector(7 downto 0) := (others => '0'); --Shared bus
 signal storage_resp_data : std_logic_vector(7 downto 0) := (others => '0');
+signal status_resp_data : std_logic_vector(7 downto 0) := (others => '0');
 --Shared reset to reset decoder cmd
 signal reset_bus : std_logic := '0';
 signal spi_reset : std_logic := '0';
 signal storage_reset : std_logic := '0';
+signal status_reset : std_logic := '0';
 --Signals for controlling decoder peripherals
 signal packet_storage_en : std_logic := '0';
+signal status_register_en : std_logic := '0';
 
 begin
 
 spi : SPI_SLAVE port map(CLK, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, resp_data_bus, raw_cmd_data, spi_cycle_done, spi_reset);
 
-decoder : SPI_DECODER port map(CLK, raw_cmd_data, decoded_cmd_data, decoded_cmd_valid, spi_cycle_done, reset_bus, packet_storage_en);
+decoder : SPI_DECODER port map(CLK, raw_cmd_data, decoded_cmd_data, decoded_cmd_valid, spi_cycle_done, reset_bus, packet_storage_en,
+											status_register_en);
 
 stor : Packet_Storage port map (packet_storage_en, CLK, decoded_cmd_data, storage_resp_data, decoded_cmd_valid, storage_reset,
 											PACKET_IN_DATA, PACKET_IN_VALID);
 
-resp_data_bus <= storage_resp_data;
-reset_bus <= storage_reset or spi_reset;
+stat : Status_Register port map(status_register_en, CLK, decoded_cmd_data, status_resp_data, decoded_cmd_valid, status_reset,
+											STATUS_INIT_DONE);
+
+resp_data_bus <= storage_resp_data or status_resp_data;
+reset_bus <= storage_reset or spi_reset or status_reset;
 
 end architecture;

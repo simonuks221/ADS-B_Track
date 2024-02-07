@@ -171,9 +171,14 @@ begin
 	SPI_CS <= '1';
 	wait for 1 us;
 	spi_send(x"01", 2, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	wait for 36 us;
+	spi_send(x"01", 2, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	wait until rising_edge(PACKET_IRQ);
-	wait for 10us;
-	spi_send(x"01", 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	wait for 10 us;	
+	spi_send(x"02", 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	wait until rising_edge(PACKET_IRQ);
+	wait for 1 us;
+	spi_send(x"02", 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	wait;
 end process;
 
