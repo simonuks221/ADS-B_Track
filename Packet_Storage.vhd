@@ -11,34 +11,92 @@ port(
 	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
 	SPI_CYCLE_DONE : in std_logic := '0';
-	SPI_RESET : out std_Logic := '0'
+	SPI_RESET : out std_logic := '0';
+	--Packets in from correlator
+	PACKET_IN_DATA : in std_logic_vector(7 downto 0) := (others => '0');
+	PACKET_IN_VALID : in std_logic := '0'
 );
 end entity;
 
 architecture arc of Packet_Storage is
-	constant PRINTOUT_AMOUNT : integer := 2;
-	signal printout_idx : integer range 0 to PRINTOUT_AMOUNT := 1;
-	signal printout_data : std_logic_vector(PRINTOUT_AMOUNT*8-1 downto 0) := x"0203";
+	
+	component PACKET_STORAGE_FIFO is
+	PORT(
+		clock		: IN STD_LOGIC ;
+		data		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		rdreq		: IN STD_LOGIC ;
+		wrreq		: IN STD_LOGIC ;
+		empty		: OUT STD_LOGIC ;
+		full		: OUT STD_LOGIC ;
+		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+		usedw		: OUT STD_LOGIC_VECTOR (9 DOWNTO 0)
+	);
+	end component;
+
+	constant PACKET_LENGTH : integer := 2;
+	
+	signal printout_idx : integer range 0 to PACKET_LENGTH := 1;
+	--signal printout_data : std_logic_vector(PACKET_LENGTH*8-1 downto 0) := x"0203";
 	signal resp_data_buffer : std_logic_vector(7 downto 0) := (others => '0');
+	signal first_printout_data : std_logic_vector(7 downto 0) := x"FF";
+	--Packet storage FIFO
+	signal fifo_data_in	: std_logic_vector (7 DOWNTO 0) := (others => '0');
+	signal fifo_read_rq	: std_logic := '0';
+	signal fifo_wr_rq	: std_logic := '0';
+	signal fifo_empty	: std_logic := '0';
+	signal fifo_full	: std_logic := '0';
+	signal fifo_q	: std_logic_vector (7 DOWNTO 0) := (others => '0');
+	signal fifo_curr_length	: std_logic_vector (9 DOWNTO 0) := (others => '0'); --Current FIFO length
+	
+	signal fifo_rd_delay : std_logic := '0';
 begin
+
+packet_fifo : PACKET_STORAGE_FIFO port map(CLK, fifo_data_in, fifo_read_rq, fifo_wr_rq, fifo_empty, fifo_full, fifo_q, fifo_curr_length);
 
 RESP_DATA <= resp_data_buffer when EN = '1' else (others => '0');
 
 process(CLK)
 begin
 	if rising_edge(CLK) then
+		fifo_wr_rq <= '0';
+		if PACKET_IN_VALID = '1' then
+			if fifo_full = '0' then
+				fifo_wr_rq <= '1';
+				fifo_data_in <= PACKET_IN_DATA;
+			else 
+				--FIFO full, generate FIFO overrun flag
+				--TODO: DO IT
+			end if;
+		end if;
+	end if;
+end process;
+
+process(CLK)
+begin
+	if rising_edge(CLK) then
 		SPI_RESET <= '0';
+		fifo_read_rq <= '0';
 		if EN = '0' then
-			resp_data_buffer <= printout_data(7 downto 0);
+			resp_data_buffer <= first_printout_data;
+			fifo_rd_delay <= '0';
 		else
+			fifo_rd_delay <= fifo_read_rq;
+			if fifo_rd_delay = '1' then
+				resp_data_buffer <= fifo_q;
+			end if;
 			if SPI_CYCLE_DONE = '1' then
 				--Check if printed everything out
-				if printout_idx = PRINTOUT_AMOUNT then
+				if printout_idx = PACKET_LENGTH then
 					printout_idx <= 1;
 					SPI_RESET <= '1';
 				else
 					printout_idx <= printout_idx + 1;
-					resp_data_buffer <= printout_data((printout_idx+1)*8-1 downto printout_idx*8);
+					if fifo_empty = '0' then
+						fifo_read_rq <= '1';
+					else
+						--FIFO empty
+						
+					end if;
 				end if;
 			end if;
 		end if;

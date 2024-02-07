@@ -5,12 +5,13 @@ use ieee.numeric_std.all;
 entity DATA_INTERFACE is
 port(
 	CLK: in std_Logic := '0';
-	PACKET_IN : in std_logic_vector(15 downto 0) := (others => '0');
-	PACKET_IN_LATCH : in std_logic := '0';
 	SPI_SCLK: in std_logic := '0';
 	SPI_MOSI: in std_logic := '0';
 	SPI_MISO: inout std_logic := '0';
-	SPI_CS: in std_logic := '1'
+	SPI_CS: in std_logic := '1';
+	
+	PACKET_IN_DATA : in std_logic_vector(7 downto 0) := (others => '0');
+	PACKET_IN_VALID : in std_logic := '0'
 );
 end entity;
 
@@ -50,19 +51,21 @@ port(
 	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
 	SPI_CYCLE_DONE : in std_logic := '0';
-	SPI_RESET : out std_logic := '0'
+	SPI_RESET : out std_logic := '0';
+	--Packets in from correlator
+	PACKET_IN_DATA : in std_logic_vector(7 downto 0) := (others => '0');
+	PACKET_IN_VALID : in std_logic := '0'
 );
 end component;
---Spi decoder signals
+--Spi decoder
 signal raw_cmd_data : std_logic_vector(7 downto 0) := (others => '0');
 signal decoded_cmd_data : std_logic_vector(7 downto 0) := (others => '0');
 signal decoded_cmd_valid : std_logic := '0';
 signal spi_cycle_done : std_logic := '0';
-
 --Shared bus for responses, must be left as 0 if not enabled
 signal resp_data_bus: std_logic_vector(7 downto 0) := (others => '0'); --Shared bus
 signal storage_resp_data : std_logic_vector(7 downto 0) := (others => '0');
---Shared reset signals to reset decoder cmd
+--Shared reset to reset decoder cmd
 signal reset_bus : std_logic := '0';
 signal spi_reset : std_logic := '0';
 signal storage_reset : std_logic := '0';
@@ -75,7 +78,8 @@ spi : SPI_SLAVE port map(CLK, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, resp_data_bu
 
 decoder : SPI_DECODER port map(CLK, raw_cmd_data, decoded_cmd_data, decoded_cmd_valid, spi_cycle_done, reset_bus, packet_storage_en);
 
-stor : Packet_Storage port map (packet_storage_en, CLK, decoded_cmd_data, storage_resp_data, decoded_cmd_valid, storage_reset);
+stor : Packet_Storage port map (packet_storage_en, CLK, decoded_cmd_data, storage_resp_data, decoded_cmd_valid, storage_reset,
+											PACKET_IN_DATA, PACKET_IN_VALID);
 
 resp_data_bus <= storage_resp_data;
 reset_bus <= storage_reset or spi_reset;
