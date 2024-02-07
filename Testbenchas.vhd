@@ -51,6 +51,9 @@ signal MRAM_D : std_logic_vector(15 downto 0) :=  (others =>'0');
 signal UART_RX : std_logic := '0';
 signal UART_TX : std_logic := '1';
 
+--IRQ
+signal PACKET_IRQ : std_logic := '0';
+
 --Functions
 --Read from file
 file file_voltages: text;
@@ -71,12 +74,12 @@ end function init;
 
 --Send SPI command
 procedure spi_send(constant FIRST_CMD : in std_logic_vector(7 downto 0);
-							constant CMD_AMOUNT : in integer;
-							signal P_SPI_MOSI : out std_logic;
-							signal P_SPI_MISO : in std_logic;
-							signal P_SPI_SCLK : out std_logic;
-							signal P_SPI_CS : out std_logic
-							) is
+						constant CMD_AMOUNT : in integer;
+						signal P_SPI_MOSI : out std_logic;
+						signal P_SPI_MISO : in std_logic;
+						signal P_SPI_SCLK : out std_logic;
+						signal P_SPI_CS : out std_logic
+						) is
 begin
 	P_SPI_CS <= '0';
 	P_SPI_SCLK <= '0';
@@ -87,9 +90,9 @@ begin
 			if k = 0 then
 				P_SPI_MOSI <= FIRST_CMD(i);
 			end if;
-			wait for 50 ns;
+			wait for 500 ns;
 			P_SPI_SCLK <= '1';
-			wait for 50 ns;
+			wait for 500 ns;
 		end loop;
 	end loop;
 	P_SPI_SCLK <= '0';
@@ -139,7 +142,10 @@ port(
 	
 	--UART
 	UART_RX : in std_logic := '0';
-	UART_TX : out std_logic := '1'
+	UART_TX : out std_logic := '1';
+	
+	--IRQ
+	PACKET_IRQ : out std_logic := '0'
 	
 );
 end component;
@@ -148,7 +154,12 @@ type mram_data_type is array(0 to 25600) of std_logic_vector(15 downto 0);
 signal mram_data : mram_data_type := (others => (others => '0'));
 
 BEGIN
-i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, ADC_SYNC => ADC_SYNC, ADC_CLK => ADC_CLK, ADC_SPI_SDIN => ADC_SPI_SDIN, ADC_SPI_SCLK => ADC_SPI_SCLK, ADC_SPI_CS => ADC_SPI_CS,ADC_DCLKA => ADC_DCLKA, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,  MRAM_A => MRAM_A, MRAM_EN => MRAM_EN, MRAM_WRITE_EN => MRAM_WRITE_EN, MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_D => MRAM_D,ADC_BIT_A => ADC_BIT_A, UART_RX => UART_RX, UART_TX => UART_TX, SPI_CS => SPI_CS);
+i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, ADC_SYNC => ADC_SYNC, ADC_CLK => ADC_CLK,
+									ADC_SPI_SDIN => ADC_SPI_SDIN, ADC_SPI_SCLK => ADC_SPI_SCLK, ADC_SPI_CS => ADC_SPI_CS,ADC_DCLKA => ADC_DCLKA,
+									MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,  MRAM_A => MRAM_A, MRAM_EN => MRAM_EN, MRAM_WRITE_EN => MRAM_WRITE_EN,
+									MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_D => MRAM_D,ADC_BIT_A => ADC_BIT_A,
+									UART_RX => UART_RX, UART_TX => UART_TX, SPI_MOSI => SPI_MOSI, SPI_MISO => SPI_MISO, 
+									SPI_CS => SPI_CS, SPI_SCLK => SPI_SCLK, PACKET_IRQ => PACKET_IRQ);
 	
 CLK <= not CLK after 10 ns; --50MHz 20ns
 
@@ -159,10 +170,14 @@ process
 begin
 	SPI_CS <= '1';
 	wait for 1 us;
-	spi_send(x"01", 1, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	spi_send(x"01", 2, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	wait until rising_edge(PACKET_IRQ);
+	wait for 10us;
+	spi_send(x"01", 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	wait;
 end process;
 
+--ADC values simulation
 process(CLK)
 begin
 	if(falling_edge(CLK)) then
@@ -184,7 +199,8 @@ begin
 	end if;
 end process;                       
 
-process --MRAM WRITE/READ emulation
+--MRAM WRITE/READ emulation
+process
 begin
 	wait until falling_edge(MRAM_EN);
 		MRAM_D <= (others => 'Z');

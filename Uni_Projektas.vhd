@@ -46,7 +46,10 @@ port(
 	
 	--UART
 	UART_RX : in std_logic := '0';
-	UART_TX : out std_logic := '1'
+	UART_TX : out std_logic := '1';
+	
+	--IRQ
+	PACKET_IRQ : out std_logic := '0'
 );
 end entity;
 
@@ -196,7 +199,9 @@ port(
 	MRAM_DONE : in std_logic := '0';
 	
 	PACKET_DATA : out std_logic_vector(7 downto 0) := (others => '0');
-	PACKET_VALID : out std_logic := '0'
+	PACKET_VALID : out std_logic := '0';
+	
+	PACKET_IRQ : out std_logic := '0'
 );
 end component;
 
@@ -300,9 +305,10 @@ Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 50, BUFFER_WIDTH => 9, MAX
 							port map(CLK => CLK_150, ADC_BITS => ADC_BITS_OUT, ADC_BITS_VALID => ADC_BIT_VALID, PREAMBULE_FOUND => PREAMB_FOUND,
 							MRAM_DATA_OUT => MRAM_DATA_IN, MRAM_ADDRESS_OUT => MRAM_ADDRESS_IN_WRITE, MRAM_WRITE_DATA => MRAM_WRITE_DATA,
 							MRAM_DONE => MRAM_DONE, EN_CORR => EN_CORR, CORR_DONE => CORR_DONE, PACKET_DATA => PACKET_DATA,
-							PACKET_VALID => PACKET_VALID);
+							PACKET_VALID => PACKET_VALID, PACKET_IRQ => PACKET_IRQ);
 
 data_interface_1 : DATA_INTERFACE port map(CLK_150, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, PACKET_DATA, PACKET_VALID);
+
 process(CLK_150)
 begin
 	if falling_edge(CLK_150) then

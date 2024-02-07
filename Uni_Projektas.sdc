@@ -1,5 +1,6 @@
 create_clock -name CLK -period 20.000 [get_ports {CLK}]
 create_clock -name ADC_DCLKA -period 20.000 [get_ports {ADC_DCLKA}]
+create_clock -name SPI_SCLK -period 1000.000 [get_ports {SPI_SCLK}]
 create_clock -name ADC_CLK -period 20.000 [get_ports {ADC_CLK}]
 set_clock_latency -source 5 [get_clocks *]
 create_clock -name PLL_CLK -period 6.666 [get_nets {pll_1|altpll_component|_clk0 pll_1|altpll_component|_clk0~clkctrl}]
