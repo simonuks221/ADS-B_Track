@@ -9,15 +9,15 @@ function [idealSignal, noisySignal, discretizedSignal, ADCsignal, ADCpreambule, 
 
     idealPreambule = A*[ones(1, round(0.5E-6/tdiskret*tprescaler)), zeros(1, round(0.5E-6/tdiskret*tprescaler)), ones(1, round(0.5E-6/tdiskret*tprescaler)), zeros(1, round(2E-6/tdiskret*tprescaler)), ones(1, round(0.5E-6/tdiskret*tprescaler)), zeros(1, round(0.5E-6/tdiskret*tprescaler)), ones(1, round(0.5E-6/tdiskret*tprescaler))];
 
-    idealSignal = [idealPreambule, zeros(1, round(3E-6/tdiskret*tprescaler)), zeros(1, length(idealZero)*(strlength(bits)-5))]; %500+300+100*strlen
+    idealSignal = [idealPreambule, zeros(1, round(3E-6/tdiskret*tprescaler)), zeros(1, length(idealZero)*(length(bits)-5))]; %500+300+100*strlen
     
     pridejimoVietaPradzia = 800;
-    bituSkaicius = strlength(bits);
+    bituSkaicius = length(bits);
 
     for i = 1 : bituSkaicius
         %random = round(1 + 10*randn(1)); %Jitteris
         %random = 0; %Be jitterio
-        if(bits{1}(i) == "0")
+        if(bits(i) == 0)
              idealSignal(pridejimoVietaPradzia:pridejimoVietaPradzia+length(idealOne)-1) = idealZero;
              %{
              %JITERIS
