@@ -15,33 +15,10 @@ function [idealSignal, noisySignal, discretizedSignal, ADCsignal, ADCpreambule, 
     bituSkaicius = length(bits);
 
     for i = 1 : bituSkaicius
-        %random = round(1 + 10*randn(1)); %Jitteris
-        %random = 0; %Be jitterio
         if(bits(i) == 0)
              idealSignal(pridejimoVietaPradzia:pridejimoVietaPradzia+length(idealOne)-1) = idealZero;
-             %{
-             %JITERIS
-            if(random > 0)
-                idealSignal = [idealSignal, zeros(1, random), idealZero];
-            elseif(random < 0)
-                idealSignal = [idealSignal, idealZero(abs(random):length(idealZero))];
-            else
-                idealSignal = [idealSignal, idealZero];
-            end
-             %}
-            
         else
             idealSignal(pridejimoVietaPradzia:pridejimoVietaPradzia+length(idealZero)-1) = idealOne;
-            %{
-            %JITERIS
-            if(random > 0)
-                idealSignal = [idealSignal, zeros(1, random), idealOne];
-            elseif(random < 0)
-                idealSignal = [idealSignal, idealOne(1:(length(idealOne)-abs(random)))];
-            else
-                idealSignal = [idealSignal, idealOne];
-            end
-            %}
         end
         pridejimoVietaPradzia = pridejimoVietaPradzia+length(idealOne);
     end
