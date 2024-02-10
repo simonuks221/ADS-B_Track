@@ -10,7 +10,10 @@ port(
 	PPS_IRQ : in std_logic := '0';
 	CAPTURE_IRQ : in std_logic := '0';
 	CAPTURED_MS : out std_logic_vector(31 downto 0) := (others => '0');
-	CAPTURED_NS : out std_logic_vector(18 downto 0) := (others => '0')
+	CAPTURED_NS : out std_logic_vector(18 downto 0) := (others => '0');
+	INPUT_IRQ : in std_logic := '0';
+	INPUT_MS : in std_logic_vector(31 downto 0) := (others => '0');
+	INPUT_NS : in std_logic_vector(18 downto 0) := (others => '0')
 );
 end entity;
 
