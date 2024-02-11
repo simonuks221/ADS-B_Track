@@ -1,4 +1,4 @@
-function [konvSignalai, konvPavadinimai, konvLaikai] = SignaluKonvoliucija(pagrindinisSignalas, preambulesSignalas, grafikai)
+function [konvSignalai, konvPavadinimai, konvLaikai] = BitConvolution(pagrindinisSignalas, preambulesSignalas, grafikai)
     fdiskret = 10E6;
     tdiskret = 1/fdiskret;
     
