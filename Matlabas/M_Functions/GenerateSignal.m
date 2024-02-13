@@ -35,7 +35,7 @@ function [idealSignal, noisySignal, discretizedSignal, ADCsignal, ADCpreambule, 
     %std = 0;
     %triuksmas = vid + std*randn(1, N);
     %triuksmas = vid + std*rand(1, length(nufiltruotasSignalas));
-    triuksmas = rand(1, length(nufiltruotasSignalas))*1.5-0.6;
+    triuksmas = rand(1, length(nufiltruotasSignalas))*1.2-0.6; %Was 1.5-0.6
     figure
 
     naudingoSignaloPradzia = 2500;
