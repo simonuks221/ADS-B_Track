@@ -52,7 +52,7 @@ PrefsRevisionGUID=
 [Document1]
 DocumentPath=Connectors.SchDoc
 AnnotationEnabled=1
-AnnotateStartValue=1
+AnnotateStartValue=0
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All

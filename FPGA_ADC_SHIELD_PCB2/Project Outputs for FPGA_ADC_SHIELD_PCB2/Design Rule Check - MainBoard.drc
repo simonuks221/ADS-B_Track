@@ -1,26 +1,19 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\FPGA_ADC_SHIELD_PCB2\MainBoard.PcbDoc
-Date     : 2024-01-25
-Time     : 21:43:06
+Date     : 2024-02-25
+Time     : 13:55:11
 
 Processing Rule : Clearance Constraint (Gap=0.127mm) (All),(All)
-   Violation between Clearance Constraint: (Collision < 0.127mm) Between Pad P200-73(49.791mm,27.742mm) on Multi-Layer And Track (49.413mm,27.742mm)(49.791mm,27.742mm) on Top Layer 
-Rule Violations :1
+Rule Violations :0
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
-   Violation between Short-Circuit Constraint: Between Pad P200-73(49.791mm,27.742mm) on Multi-Layer And Track (49.413mm,27.742mm)(49.791mm,27.742mm) on Top Layer Location : [X = 81.695mm][Y = 44.585mm]
-Rule Violations :1
+Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Net GND Between Via (33.09mm,22.68mm) from Top Layer to Bottom Layer And Pad C1060-1(37.428mm,21.66mm) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad U400_2-5(17.384mm,24.402mm) on Top Layer And Pad C1080-2(25.147mm,26.207mm) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad C602-2(31.168mm,34.32mm) on Top Layer And Via (31.75mm,29.45mm) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad P200-29(11.682mm,53.158mm) on Multi-Layer And Via (28.751mm,50.54mm) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net ADC.SPI_CS Between Track (49.06mm,29.009mm)(50.39mm,29.009mm) on Top Layer And Pad P201-4(56.66mm,30.284mm) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad U600-12(31.439mm,48.159mm) on Top Layer And Pad U600-34(32.239mm,37.099mm) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net ADC.SPI_SCLK Between Track (33.654mm,28.3mm)(48.855mm,28.3mm) on Top Layer And Track (49.413mm,27.742mm)(49.791mm,27.742mm) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net ADC.SPI_SCLK Between Track (49.413mm,27.742mm)(49.791mm,27.742mm) on Top Layer And Track (51.058mm,29.009mm)(54.239mm,29.009mm) on Top Layer 
-Rule Violations :8
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad P5-1(4.25mm,52.42mm) on Multi-Layer And Pad P1-112(55.132mm,59.005mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Via (63.35mm,42.2mm) from Top Signal to Bottom Signal And Via (63.45mm,34.45mm) from Top Signal to Bottom Signal 
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Via (79.05mm,39.05mm) from Top Signal to Bottom Signal And Via (81.6mm,32.75mm) from Top Signal to Bottom Signal 
+Rule Violations :3
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
@@ -28,10 +21,10 @@ Rule Violations :0
 Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (OnLayer('Top Overlay'))
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=0.152mm) (Max=2.54mm) (Preferred=0.254mm) (All)
+Processing Rule : Width Constraint (Min=0.75mm) (Max=0.75mm) (Preferred=0.75mm) (InNetClass('RF'))
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=0.75mm) (Max=0.75mm) (Preferred=0.75mm) (InNetClass('RF'))
+Processing Rule : Width Constraint (Min=0.152mm) (Max=2.54mm) (Preferred=0.254mm) (All)
 Rule Violations :0
 
 Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
@@ -56,50 +49,15 @@ Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
 Rule Violations :0
 
 Processing Rule : Net Antennae (Tolerance=0mm) (All)
-   Violation between Net Antennae: Track (31.566mm,32.906mm)(47.167mm,32.906mm) on Bottom Layer 
-   Violation between Net Antennae: Track (33.654mm,28.3mm)(48.855mm,28.3mm) on Top Layer 
-   Violation between Net Antennae: Track (49.06mm,29.009mm)(50.39mm,29.009mm) on Top Layer 
-   Violation between Net Antennae: Track (49.279mm,34.084mm)(51.068mm,34.084mm) on Top Layer 
-   Violation between Net Antennae: Track (49.413mm,27.742mm)(49.791mm,27.742mm) on Top Layer 
-   Violation between Net Antennae: Track (49.413mm,27.742mm)(49.791mm,27.742mm) on Top Layer 
-   Violation between Net Antennae: Track (51.058mm,29.009mm)(54.239mm,29.009mm) on Top Layer 
-Rule Violations :7
+Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=0.1mm) (InNetClass('BIT579'))
 Rule Violations :0
-
-Processing Rule : Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation'))
-   Violation between Room Definition: Between Component IC100-MAX19516ETM+ (31.819mm,24.023mm) on Top Layer And Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C?-0.1uF (23.284mm,26.227mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C104-0.05uF (31.607mm,31.094mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C1040-0.05uF (32.533mm,32.037mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C105-0.1uF (29.286mm,30.912mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C106-0.05uF (38.374mm,20.704mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C1060-0.05uF (37.428mm,21.66mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C107-0.1uF (27.338mm,28.833mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C108-0.05uF (25.165mm,24.35mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C1080-0.05uF (24.228mm,25.287mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C109-0.05uF (30.443mm,16.487mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C1090-0.05uF (31.372mm,15.548mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R104-50Ohm (24.838mm,20.042mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R105-0402 (22.999mm,18.204mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R106-0402 (24.838mm,18.133mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R107-50Ohm (25.793mm,19.088mm) on Top Layer 
-Rule Violations :16
-
-Processing Rule : Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors'))
-   Violation between Room Definition: Between Component P200-FPGA_Shield_headers (0.013mm,3.377mm) on Top Layer And Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors')) 
-   Violation between Room Definition: Between Component P203-HEADER_GRID (10.286mm,54.003mm) on Top Layer And Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors')) 
-   Violation between Room Definition: Between Component P204-HEADER_GRID (51.594mm,75.097mm) on Top Layer And Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors')) 
-   Violation between Room Definition: Between Edge Component J200-CON-SMA-EDGE-S (5.097mm,74.461mm) on Top Layer And Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors')) 
-   Violation between Room Definition: Between Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors')) And SIP Component P201-61300411121 (56.66mm,26.474mm) on Top Layer 
-   Violation between Room Definition: Between Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors')) And SIP Component P202-61300511121 (17.968mm,3.592mm) on Top Layer 
-Rule Violations :6
 
 Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
 Rule Violations :0
 
 
-Violations Detected : 39
+Violations Detected : 3
 Waived Violations : 0
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:01
