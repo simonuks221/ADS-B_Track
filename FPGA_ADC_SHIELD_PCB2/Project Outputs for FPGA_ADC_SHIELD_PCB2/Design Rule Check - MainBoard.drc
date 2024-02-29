@@ -1,114 +1,63 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\FPGA_ADC_SHIELD_PCB2\MainBoard.PcbDoc
-Date     : 2024-02-27
-Time     : 22:04:05
+Date     : 2024-02-29
+Time     : 17:24:02
 
-Processing Rule : Clearance Constraint (Gap=0.127mm) (All),(All)
+Processing Rule : Clearance Constraint (Gap=5mil) (All),(All)
 Rule Violations :0
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Net GND Between Pad J?-G2(4.6mm,65.9mm) on Top Signal [Unplated] And Pad J?-G1(14.15mm,66.8mm) on Top Signal [Unplated] 
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad P5-1(4.25mm,51.15mm) on Multi-Layer And Pad P1-112(55.132mm,59.005mm) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Via (63.35mm,42.2mm) from Top Signal to Bottom Signal And Via (63.45mm,34.45mm) from Top Signal to Bottom Signal 
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Via (79.05mm,39.05mm) from Top Signal to Bottom Signal And Via (81.6mm,32.75mm) from Top Signal to Bottom Signal 
-Rule Violations :4
+   Violation between Un-Routed Net Constraint: Net GND Between Pad J?-G2(181.102mil,2594.488mil) on Top Signal [Unplated] And Pad J?-G1(557.087mil,2629.921mil) on Top Signal [Unplated] 
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Via (2494.095mil,1661.417mil) from Top Signal to Bottom Signal And Via (2498.032mil,1356.299mil) from Top Signal to Bottom Signal 
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Via (3112.205mil,1537.402mil) from Top Signal to Bottom Signal And Via (3212.598mil,1289.37mil) from Top Signal to Bottom Signal 
+Rule Violations :3
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (OnLayer('Top Overlay'))
+Processing Rule : Width Constraint (Min=6mil) (Max=10mil) (Preferred=6mil) (OnLayer('Top Overlay'))
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=0.152mm) (Max=2.54mm) (Preferred=0.254mm) (All)
+Processing Rule : Width Constraint (Min=29.528mil) (Max=29.528mil) (Preferred=29.528mil) (InNetClass('RF'))
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=0.75mm) (Max=0.75mm) (Preferred=0.75mm) (InNetClass('RF'))
+Processing Rule : Width Constraint (Min=6mil) (Max=100mil) (Preferred=10mil) (All)
 Rule Violations :0
 
-Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
 Rule Violations :0
 
-Processing Rule : Minimum Annular Ring (Minimum=0.13mm) (All)
+Processing Rule : Minimum Annular Ring (Minimum=5.118mil) (All)
 Rule Violations :0
 
-Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=2.54mm) (IsVia)
+Processing Rule : Hole Size Constraint (Min=7.874mil) (Max=100mil) (IsVia)
 Rule Violations :0
 
-Processing Rule : Hole To Hole Clearance (Gap=0.5mm) (All),(All)
+Processing Rule : Hole To Hole Clearance (Gap=19.685mil) (All),(All)
 Rule Violations :0
 
-Processing Rule : Minimum Solder Mask Sliver (Gap=0.2mm) (All),(All)
+Processing Rule : Minimum Solder Mask Sliver (Gap=7.874mil) (All),(All)
 Rule Violations :0
 
-Processing Rule : Silk To Solder Mask (Clearance=0.152mm) (IsPad),(All)
+Processing Rule : Silk To Solder Mask (Clearance=6mil) (IsPad),(All)
 Rule Violations :0
 
-Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
 Rule Violations :0
 
-Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
 Rule Violations :0
 
-Processing Rule : Matched Lengths(Tolerance=0.1mm) (InNetClass('BIT579'))
+Processing Rule : Matched Lengths(Tolerance=3.937mil) (InNetClass('BIT579'))
 Rule Violations :0
 
-Processing Rule : Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation'))
-   Violation between Room Definition: Between Component IC1-ESP32-S3-WROOM-1-N8R8 (6.25mm,31.3mm) on Top Signal And Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) 
-   Violation between Room Definition: Between Component IC2-MAX19516ETM+ (78.63mm,46.06mm) on Top Signal And Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) 
-   Violation between Room Definition: Between Component SW1-1825910-6 (3.45mm,8.8mm) on Top Signal And Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) 
-   Violation between Room Definition: Between DIP Component J4-2x3_Header (41.48mm,10.75mm) on Top Signal And Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SIP Component J?-MSD-4-A (8.3mm,73.65mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SIP Component P4-640456-4 (16.35mm,87.7mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SIP Component P5-640456-4 (4.25mm,54.96mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SIP Component P6-61300411121 (96.15mm,83.63mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SIP Component P7-ADS-B_GPS (36.4mm,31.7mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And Small Component Y1-ECS-.327-12.5-8X-C (10.515mm,17.112mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And Small Component J3-M20-9990246 (20.6mm,43.7mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C?-22pF (17.7mm,75.15mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C10-0.05uF (79.755mm,53.629mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C11-0.05uF (78.376mm,53.637mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C12-22pF (13.315mm,17.112mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C1-22uF (1.015mm,20.062mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C13-22pF (7.765mm,17.112mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C14-0.05uF (86.347mm,47.042mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C15-0.05uF (85.18mm,48.208mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C16-0.1uF (2.3mm,13.7mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C2-0.1uF (1.008mm,18.72mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C3-0.05uF (70.832mm,47.339mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C4-0.05uF (71.801mm,46.358mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C5-0.1uF (72.85mm,44.781mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C6-0.05uF (79.628mm,38.564mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C7-0.05uF (80.578mm,39.514mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C8-0.1uF (73.931mm,41.362mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component C9-0.1uF (76.061mm,38.643mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R10-0402 (3.615mm,15.037mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R1-10kOhm (22.715mm,24.312mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R2-0402 (33.5mm,15.15mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R3-10MOhm (9.765mm,19.912mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R4-0402 (33.55mm,10.7mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R5-0402 (32.28mm,12.126mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R6-0402 (82.2mm,39.05mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R7-0402 (83.462mm,38.43mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R8-0402 (90.919mm,28.131mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Computation (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Computation')) And SMT Small Component R9-0402 (89.955mm,31.937mm) on Top Signal 
-Rule Violations :38
-
-Processing Rule : Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors'))
-   Violation between Room Definition: Between Component *1-ADS-B_POWER_PCB (64.71mm,40.572mm) on Top Signal And Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors')) 
-   Violation between Room Definition: Between Component P1-FPGA_Shield_headers (99.818mm,65.585mm) on Top Signal And Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors')) 
-   Violation between Room Definition: Between Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors')) And Small Component J1-M20-9990246 (35.6mm,90.15mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors')) And Small Component J2-M20-9990246 (27.6mm,48.3mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors')) And SMT Small Component P2-636101112001 (-1212.35mm,1321.625mm) on Top Signal 
-   Violation between Room Definition: Between Room U_Connectors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('U_Connectors')) And SMT Small Component P3-636101112001 (1363.45mm,1285.775mm) on Top Signal 
-Rule Violations :6
-
-Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
 Rule Violations :0
 
 
-Violations Detected : 48
+Violations Detected : 3
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:02
