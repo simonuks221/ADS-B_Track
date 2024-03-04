@@ -1,60 +1,60 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\FPGA_ADC_SHIELD_PCB2\MainBoard.PcbDoc
 Date     : 2024-03-04
-Time     : 19:06:14
+Time     : 21:14:01
 
-Processing Rule : Clearance Constraint (Gap=5mil) (All),(All)
+Processing Rule : Clearance Constraint (Gap=0.127mm) (All),(All)
 Rule Violations :0
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Net GND Between Pad J?-G2(163.386mil,2566.929mil) on Top Signal [Unplated] And Pad J?-G1(539.37mil,2602.362mil) on Top Signal [Unplated] 
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Via (2408.633mil,1638.982mil) from Top Signal to Bottom Signal And Via (2529.528mil,1356.299mil) from Top Signal to Bottom Signal 
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Via (3112.205mil,1537.402mil) from Top Signal to Bottom Signal And Via (3354.687mil,985.112mil) from Top Signal to Bottom Signal 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad J7-G2(4.15mm,65.2mm) on Top Signal [Unplated] And Pad J7-G1(13.7mm,66.1mm) on Top Signal [Unplated] 
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Via (61.179mm,41.63mm) from Top Signal to Bottom Signal And Via (64.25mm,34.45mm) from Top Signal to Bottom Signal 
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Via (79.05mm,39.05mm) from Top Signal to Bottom Signal And Via (85.209mm,25.022mm) from Top Signal to Bottom Signal 
 Rule Violations :3
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=6mil) (Max=10mil) (Preferred=6mil) (OnLayer('Top Overlay'))
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (OnLayer('Top Overlay'))
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=7.116mil) (Max=10.391mil) (Preferred=10.391mil) (InNetClass('RF'))
+Processing Rule : Width Constraint (Min=0.181mm) (Max=0.264mm) (Preferred=0.264mm) (InNetClass('RF'))
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=6mil) (Max=100mil) (Preferred=10mil) (All)
+Processing Rule : Width Constraint (Min=0.152mm) (Max=2.54mm) (Preferred=0.254mm) (All)
 Rule Violations :0
 
-Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
 Rule Violations :0
 
-Processing Rule : Minimum Annular Ring (Minimum=5.118mil) (All)
+Processing Rule : Minimum Annular Ring (Minimum=0.13mm) (All)
 Rule Violations :0
 
-Processing Rule : Hole Size Constraint (Min=7.874mil) (Max=100mil) (IsVia)
+Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=2.54mm) (IsVia)
 Rule Violations :0
 
-Processing Rule : Hole To Hole Clearance (Gap=19.685mil) (All),(All)
+Processing Rule : Hole To Hole Clearance (Gap=0.5mm) (All),(All)
 Rule Violations :0
 
-Processing Rule : Minimum Solder Mask Sliver (Gap=7.874mil) (All),(All)
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.2mm) (All),(All)
 Rule Violations :0
 
-Processing Rule : Silk To Solder Mask (Clearance=6mil) (IsPad),(All)
+Processing Rule : Silk To Solder Mask (Clearance=0.152mm) (IsPad),(All)
 Rule Violations :0
 
-Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
 Rule Violations :0
 
-Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
 Rule Violations :0
 
-Processing Rule : Matched Lengths(Tolerance=3.937mil) (InNetClass('BIT579'))
+Processing Rule : Matched Lengths(Tolerance=0.1mm) (InNetClass('BIT579'))
 Rule Violations :0
 
-Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
 Rule Violations :0
 
 
