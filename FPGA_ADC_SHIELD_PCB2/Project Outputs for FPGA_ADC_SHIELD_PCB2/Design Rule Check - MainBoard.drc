@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\simon\Desktop\UNI\VHDL\Uni_Projektas\FPGA_ADC_SHIELD_PCB2\MainBoard.PcbDoc
-Date     : 2024-03-04
-Time     : 21:14:01
+Date     : 2024-03-05
+Time     : 19:27:17
 
 Processing Rule : Clearance Constraint (Gap=0.127mm) (All),(All)
 Rule Violations :0
@@ -11,9 +11,13 @@ Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
    Violation between Un-Routed Net Constraint: Net GND Between Pad J7-G2(4.15mm,65.2mm) on Top Signal [Unplated] And Pad J7-G1(13.7mm,66.1mm) on Top Signal [Unplated] 
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad P1-112(55.132mm,59.005mm) on Multi-Layer And Pad P1-111(55.132mm,61.545mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Polygon  (NONET_L-01_P-001) on PWR Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Track (54.522mm,55.1mm)(54.894mm,55.1mm) on Bottom Signal And Via (60.32mm,41.558mm) from Top Signal to Bottom Signal 
    Violation between Un-Routed Net Constraint: Net 3V3 Between Via (61.179mm,41.63mm) from Top Signal to Bottom Signal And Via (64.25mm,34.45mm) from Top Signal to Bottom Signal 
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Via (61.179mm,41.63mm) from Top Signal to Bottom Signal And Via (72.4mm,46.85mm) from Top Signal to Bottom Signal 
    Violation between Un-Routed Net Constraint: Net 3V3 Between Via (79.05mm,39.05mm) from Top Signal to Bottom Signal And Via (85.209mm,25.022mm) from Top Signal to Bottom Signal 
-Rule Violations :3
+Rule Violations :7
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
@@ -58,6 +62,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Al
 Rule Violations :0
 
 
-Violations Detected : 3
+Violations Detected : 7
 Waived Violations : 0
 Time Elapsed        : 00:00:01
