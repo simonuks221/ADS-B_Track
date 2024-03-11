@@ -3,5 +3,6 @@ function energy = GenerateEnergy(signal, window)
     
     for i = window + 1:length(signal)
         energy(i) = sum(abs(signal(i - window : i) .* signal(i - window : i)));
+        energy(i) =  energy(i) / window;
     end
 end

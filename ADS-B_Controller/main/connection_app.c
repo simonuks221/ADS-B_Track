@@ -59,6 +59,7 @@ bool Connection_APP_Init(void) {
     };
     esp_wifi_set_mode(WIFI_MODE_STA);
     esp_wifi_set_config(WIFI_IF_STA, &wifi_config);
+
     //esp_eap_client_set_identity((uint8_t *)WIFI_ID, strlen(WIFI_ID));
     //esp_eap_client_set_username((uint8_t *)WIFI_USERNAME, strlen(WIFI_USERNAME));
    // esp_eap_client_set_password((uint8_t *)WIFI_PASS, strlen(WIFI_PASS));
@@ -70,8 +71,9 @@ bool Connection_APP_Init(void) {
     //};
     //esp_eap_client_set_fast_params(eap_fast_config);
     //esp_wifi_sta_enterprise_enable();
-    esp_wifi_start();
-    esp_wifi_set_max_tx_power(5);
+    esp_wifi_set_max_tx_power(-1);
+    //esp_wifi_start();
+    esp_wifi_set_max_tx_power(-1);
 
 
     return true;

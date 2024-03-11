@@ -28,6 +28,10 @@
         "stdbool.h": "c",
         "connection_app.h": "c",
         "gps_app.h": "c",
-        "rtc_cntl_reg.h": "c"
-    }
+        "rtc_cntl_reg.h": "c",
+        "stdarg.h": "c",
+        "esp_event.h": "c",
+        "*.inc": "c"
+    },
+    "idf.flashType": "UART"
 }
