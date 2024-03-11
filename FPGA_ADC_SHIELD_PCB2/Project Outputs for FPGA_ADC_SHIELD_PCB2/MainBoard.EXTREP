@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: MainBoard.GBR   2023-03-17  12:03:04
+Gerber File Extension Report For: MainBoard.GBR   2024-03-07  20:30:42
 ------------------------------------------------------------------------------------------
 
 
@@ -7,12 +7,12 @@ Gerber File Extension Report For: MainBoard.GBR   2023-03-17  12:03:04
 Layer Extension     Layer Description                      
 ------------------------------------------------------------------------------------------
 .GTO                Top Overlay                             
-.GTP                Top Paste                               
 .GTS                Top Solder                              
-.GTL                Top Layer                               
-.GBL                Bottom Layer                            
+.GTL                Top Signal                              
+.G1                 GND                                     
+.G2                 PWR                                     
+.GBL                Bottom Signal                           
 .GBS                Bottom Solder                           
-.GBP                Bottom Paste                            
 .GBO                Bottom Overlay                          
 .GKO                Keep-Out Layer                          
 .GM                 Profile                                 
