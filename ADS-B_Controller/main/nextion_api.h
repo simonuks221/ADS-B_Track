@@ -1,5 +1,5 @@
-#ifndef NEXTION_APP_H
-#define NEXTION_APP_H
+#ifndef NEXTION_API_H
+#define NEXTION_API_H
 
 #include <stdbool.h>
 
@@ -17,7 +17,7 @@ typedef enum eNextionCmd {
     eNextionCmdLast
 } eNextionCmd_t;
 
-bool Nextion_APP_Init(void);
-bool Nextion_APP_SendCmd(eNextionCmd_t cmd, ...);
+bool Nextion_API_Init(void);
+bool Nextion_API_SendCmd(eNextionCmd_t cmd, ...);
 
-#endif // NEXTION_APP_H
+#endif // NEXTION_API_H

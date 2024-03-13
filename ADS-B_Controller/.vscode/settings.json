@@ -31,7 +31,16 @@
         "rtc_cntl_reg.h": "c",
         "stdarg.h": "c",
         "esp_event.h": "c",
-        "*.inc": "c"
+        "*.inc": "c",
+        "sd_api.h": "c",
+        "sdmmc_cmd.h": "c",
+        "esp_vfs_fat.h": "c",
+        "stdio.h": "c",
+        "led_api.h": "c",
+        "bitset": "c",
+        "string_view": "c",
+        "regex": "c",
+        "string.h": "c"
     },
     "idf.flashType": "UART"
 }

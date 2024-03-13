@@ -8,11 +8,12 @@
 #include "driver/gpio.h"
 #include "esp_log.h"
 
-#include "nextion_app.h"
+#include "nextion_api.h"
 #include "gps_app.h"
 #include "connection_app.h"
 #include "fpga_app.h"
-#include "sd_app.h"
+#include "sd_api.h"
+#include "led_api.h"
 
 const static char * LOG_TAG = "MAIN";
 
@@ -25,11 +26,13 @@ typedef struct sApp {
 }sApp_t;
 
 sApp_t app_lut[] = {
-    [0] = {"NEXTION", Nextion_APP_Init, NULL},
-    [1] = {"GPS", GPS_APP_Init, NULL},
-    [2] = {"FPGA", FPGA_APP_Init, NULL},
-    [3] = {"SD", SD_APP_Init, NULL}
-    //[2] = {"CONNECTION", Connection_APP_Init, NULL}
+    {"LED", LED_API_Init, NULL},
+    {"NEXTION", Nextion_API_Init, NULL},
+    {"SD", SD_API_Init, NULL},
+    {"GPS", GPS_APP_Init, NULL},
+    {"FPGA", FPGA_APP_Init, NULL},
+
+    //"CONNECTION", Connection_APP_Init, NULL}
 };
 
 void app_main(void) {

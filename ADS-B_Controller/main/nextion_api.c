@@ -4,7 +4,7 @@
 #include "driver/uart.h"
 #include "driver/gpio.h"
 #include "esp_log.h"
-#include "nextion_app.h"
+#include "nextion_api.h"
 
 #define NEXTION_TX_PIN GPIO_NUM_4 //TODO: CHANGE
 #define NEXTION_RX_PIN GPIO_NUM_5
@@ -26,7 +26,7 @@ static char *nextion_cmd_format_lut[eNextionCmdLast] = {
 };
 
 
-bool Nextion_APP_Init(void) {
+bool Nextion_API_Init(void) {
     /* Setup UART settings */
     const uart_config_t uart_config = {
         .baud_rate = 115200,
@@ -49,7 +49,7 @@ bool Nextion_APP_Init(void) {
 }
 
 /* Used for sending Nextion command packets with arguments */
-bool Nextion_APP_SendCmd(eNextionCmd_t cmd, ...) {
+bool Nextion_API_SendCmd(eNextionCmd_t cmd, ...) {
     if(cmd >= eNextionCmdLast) {
         return false;
     }

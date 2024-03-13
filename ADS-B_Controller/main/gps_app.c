@@ -5,6 +5,7 @@
 #include "driver/uart.h"
 #include "driver/gpio.h"
 #include "esp_log.h"
+#include "nextion_api.h"
 #include "gps_app.h"
 
 #define GPS_TX_PIN GPIO_NUM_6 //TODO: CHANGE
@@ -15,6 +16,12 @@
 #define GPS_IDENTIFIER_LENGTH 6
 
 static const char *LOG_TAG = "GPS";
+
+static sCoordinates_t good_coordinates = {
+    .latitude = 0,
+    .longitude = 0,
+    .altitude = 0
+};
 
 typedef bool (*GpsMessageHandler)(char*, size_t);
 typedef struct sGpsMessageDesc {
@@ -51,6 +58,23 @@ static inline bool HandleGpsMessage(char *message, size_t len) {
     return false;
 }
 
+static inline bool GPS_APP_SetGoodCoordinates(float new_latitude, float new_longitude, float new_altitude) {
+    /* Check if coordinates are new */
+    if((new_latitude == good_coordinates.latitude) || (new_longitude == good_coordinates.longitude) ||
+        (new_altitude == good_coordinates.altitude)) {
+            return true;
+    }
+    /* New coordinates, notify nextion and other */
+    good_coordinates.latitude = new_latitude;
+    good_coordinates.longitude = new_longitude;
+    good_coordinates.altitude = new_altitude;
+    Nextion_API_SendCmd(eNextionCmdStart, new_latitude, new_longitude, 0); //TODO: implement time
+    return true;
+}
+
+const sCoordinates_t *GPS_APP_GetCoordinates(void) {
+    return &good_coordinates;
+}
 
 static QueueHandle_t uart0_queue;
 
@@ -164,20 +188,8 @@ static bool GGA_Handler(char *message, size_t len) {
         ESP_LOGI(LOG_TAG, "Invalid GPGGA message");
         return false;
     }
+    GPS_APP_SetGoodCoordinates(latitude, longitude, altitude); //TODO: implement time
+
     ESP_LOGI(LOG_TAG, "Lat:%f, long:%f", latitude, longitude);
     return true;
 }
-
-/*
-static void rx_task(void *arg)
-{
-    uint8_t* data = (uint8_t*) malloc(RX_BUF_SIZE + 1);
-    while (1) {
-        const int rxBytes = uart_read_bytes(UART_NUM_2, data, RX_BUF_SIZE, 1000 / portTICK_PERIOD_MS);
-        if (rxBytes > 0) {
-            data[rxBytes] = 0;
-        }
-    }
-    free(data);
-}
-*/
