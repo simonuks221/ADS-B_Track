@@ -40,7 +40,10 @@
         "bitset": "c",
         "string_view": "c",
         "regex": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "nextion_api.h": "c",
+        "format": "c",
+        "thread": "c"
     },
     "idf.flashType": "UART"
 }
