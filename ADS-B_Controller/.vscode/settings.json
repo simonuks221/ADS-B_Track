@@ -43,7 +43,8 @@
         "string.h": "c",
         "nextion_api.h": "c",
         "format": "c",
-        "thread": "c"
+        "thread": "c",
+        "sockets.h": "c"
     },
     "idf.flashType": "UART"
 }

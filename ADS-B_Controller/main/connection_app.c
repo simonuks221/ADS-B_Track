@@ -12,23 +12,37 @@
 #include "lwip/netdb.h"
 #include "ping/ping_sock.h"
 #include "connection_app.h"
+#include "common.h"
 
 #define WIFI_SSID "137Festival"
 #define WIFI_ID "example@ktu.edu"
 #define WIFI_PASS "Festival137"
 #define WIFI_USERNAME "ESP-S3"
 
-#define FLAGS_WIFI_CONNECTED BIT0
-#define FLAGS_WIFI_FAIL BIT1
-
 #define SERVER_IP "192.168.137.1"
-#define SERVER_PORT 626
+#define SERVER_PORT 80
 
-static const char *payload = "Message from ESP32 ";
+static const char *payload = "GET /insert_data.php?data=9,9\r\n";
 
 static const char *LOG_TAG = "CONN";
 
+#define FLAGS_WIFI_CONNECTED BIT0
+#define FLAGS_WIFI_FAIL BIT1
+#define FLAGS_SEND_SOCKET BIT2
+
 static uint32_t flags = 0;
+static bool Connection_GetFlags(uint32_t new_flags, bool clear) {
+    bool return_val = false;
+    return_val = flags & new_flags;
+    if(clear) {
+        flags &= ~new_flags;
+    }
+    return return_val;
+}
+
+void Connection_SetFlags(uint32_t new_flags) {
+    flags |= new_flags;
+}
 
 static void Connection_SendSocket(void) {
     int addr_family = 0;
@@ -61,26 +75,25 @@ static void Connection_SendSocket(void) {
         return;
     }
 
-    /*
-    int len = recv(sock, rx_buffer, sizeof(rx_buffer) - 1, 0);
-            // Error occurred during receiving
-            if (len < 0) {
-                ESP_LOGE(TAG, "recv failed: errno %d", errno);
-                break;
-            }
-            // Data received
-            else {
-                rx_buffer[len] = 0; // Null-terminate whatever we received and treat like a string
-                ESP_LOGI(TAG, "Received %d bytes from %s:", len, host_ip);
-                ESP_LOGI(TAG, "%s", rx_buffer);
-            }
+    uint8_t socket_rx_buffer[100] = {0};
+    int len = recv(sock, socket_rx_buffer, sizeof(socket_rx_buffer) - 1, 0);
 
-    */
+    if (len < 0) {
+        ESP_LOGE(LOG_TAG, "recv failed: errno %d\n", errno);
+    } else {
+        socket_rx_buffer[len] = 0; // Null-terminate whatever we received and treat like a string
+        ESP_LOGI(LOG_TAG, "Received %d bytes\n", len);
+        ESP_LOGI(LOG_TAG, "%s", socket_rx_buffer);
+    }
+    if(strncmp("Success", (char *)socket_rx_buffer, sizeof("Success"))) {
+        ESP_LOGI(LOG_TAG, "RX SUCESS");
+    }
+    ESP_LOGI(LOG_TAG, "Socket end\n");
     shutdown(sock, 0);
     close(sock);
 }
 
-/* esp netif object representing the WIFI station */
+/* Esp netif object representing the WIFI station */
 static esp_netif_t *sta_netif = NULL;
 
 static void event_handler(void* arg, esp_event_base_t event_base,
@@ -99,7 +112,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
     } else if (event_base == IP_EVENT) {
         if(event_id == IP_EVENT_STA_GOT_IP) {
             //ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
-            flags |= FLAGS_WIFI_CONNECTED;
+            Connection_SetFlags(FLAGS_WIFI_CONNECTED);
         }
     }
 }
@@ -214,21 +227,17 @@ void Connection_Ping(void) {
 }
 
 bool Connection_APP_Run(void) {
-    if (flags & FLAGS_WIFI_CONNECTED) {
-		ESP_LOGI(LOG_TAG, "connected to aP");
-        /* Ping */
-        ESP_LOGI(LOG_TAG, "wifi_init_sta finished.");
-        if(false) {
-            Connection_Ping();
-        }
-        if(true) {
-            Connection_SendSocket();
-        }
-	}
-    if (flags & FLAGS_WIFI_FAIL) {
+    if (Connection_GetFlags(FLAGS_WIFI_CONNECTED, true)) {
+        ESP_LOGI(LOG_TAG, "connected to aP");
+        Connection_SetFlags(FLAGS_SEND_SOCKET);
+        //Connection_Ping();
+    }
+    if (Connection_GetFlags(FLAGS_WIFI_FAIL, true)) {
 		ESP_LOGE(LOG_TAG, "Failed to connect");
 		return true;
 	}
-
+    if(Connection_GetFlags(FLAGS_SEND_SOCKET, true)) {
+        Connection_SendSocket();
+    }
     return true;
 }
