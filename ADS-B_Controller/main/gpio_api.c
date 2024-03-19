@@ -1,4 +1,3 @@
-#include "driver/gpio.h"
 #include "esp_log.h"
 #include "esp_attr.h"
 
@@ -36,6 +35,7 @@ static void IRAM_ATTR gpio_isr_handler(void* arg) {
 
 bool GPIO_API_Init(void) {
     /* Setup gpio pins with/without external interrupts */
+    gpio_install_isr_service(0);
     for(eGpio_t gpio = eGpioFirst; gpio < eGpioLast; gpio++) {
         gpio_config_t new_config = {
             .pin_bit_mask = (0x1llu << gpio_lut[gpio].num),
@@ -54,7 +54,6 @@ bool GPIO_API_Init(void) {
         }
         /* Setup external interrupt */
         if(gpio_lut[gpio].interrupt != GPIO_INTR_DISABLE) {
-            gpio_install_isr_service(0);
             gpio_isr_handler_add(gpio_lut[gpio].num, gpio_isr_handler, (void *)&gpio_lut[gpio].num);
         }
     }

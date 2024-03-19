@@ -1,4 +1,3 @@
-#include "driver/gpio.h"
 #include "driver/spi_master.h"
 #include "esp_log.h"
 #include "fpga_app.h"

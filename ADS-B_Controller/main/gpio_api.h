@@ -2,6 +2,7 @@
 #define GPIO_API_H
 
 #include <stdbool.h>
+#include "driver/gpio.h"
 
 #define FPGA_MOSI_PIN GPIO_NUM_30
 #define FPGA_MISO_PIN GPIO_NUM_31

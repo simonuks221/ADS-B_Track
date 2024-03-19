@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "driver/uart.h"
-#include "driver/gpio.h"
 #include "esp_log.h"
 #include "nextion_api.h"
 #include "gpio_api.h"

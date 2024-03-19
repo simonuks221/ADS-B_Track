@@ -3,7 +3,6 @@
 #include <stdarg.h>
 #include <string.h>
 #include "driver/uart.h"
-#include "driver/gpio.h"
 #include "esp_log.h"
 #include "nextion_api.h"
 #include "gps_app.h"
@@ -167,7 +166,7 @@ bool GPS_APP_Init(void) {
     if(uart_param_config(UART_NUM_0, &new_uart_config) != ESP_OK) {
         return false;
     }
-    if(uart_set_pin(UART_NUM_0, GPIO_NUM_43, GPIO_NUM_44, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE) != ESP_OK) {
+    if(uart_set_pin(UART_NUM_0, GPS_TX_PIN, GPS_RX_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE) != ESP_OK) {
         return false;
     }
     uart_enable_pattern_det_baud_intr(UART_NUM_0, '\n', 1, 0xFFFF, 0, 0);

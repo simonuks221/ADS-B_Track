@@ -4,7 +4,6 @@
 #include "esp_log.h"
 #include "esp_vfs_fat.h"
 #include "sdmmc_cmd.h"
-#include "driver/gpio.h"
 #include "sd_api.h"
 
 #include "gpio_api.h"
