@@ -3,10 +3,16 @@
 
 #include "c_buff.h"
 
+struct CBuff {
+    void* data;
+    size_t capacity;
+    size_t tail;
+    size_t head;
+    size_t elem_size;
+};
 
-
-CBuff* CBuff_Create(size_t capacity, size_t elem_size) {
-    CBuff* buffer = (CBuff*)malloc(sizeof(CBuff));
+struct CBuff* CBuff_Create(size_t capacity, size_t elem_size) {
+    struct CBuff* buffer = (struct CBuff*)malloc(sizeof(struct CBuff));
     if (buffer == NULL) {
         return NULL;
     }
@@ -25,14 +31,14 @@ CBuff* CBuff_Create(size_t capacity, size_t elem_size) {
     return buffer;
 }
 
-void CBuff_Destroy(CBuff* buffer) {
+void CBuff_Destroy(struct CBuff* buffer) {
     if (buffer != NULL) {
         free(buffer->data);
         free(buffer);
     }
 }
 
-bool CBuff_Push(CBuff* buffer, const void* item) {
+bool CBuff_Push(struct CBuff* buffer, const void* item) {
     if ((buffer == NULL) || (item == NULL)) {
         return false;
     }
@@ -48,7 +54,7 @@ bool CBuff_Push(CBuff* buffer, const void* item) {
     return true;
 }
 
-bool CBuff_Pop(CBuff* buffer, void* item) {
+bool CBuff_Pop(struct CBuff* buffer, void* item) {
     if ((buffer == NULL) || (item == NULL)) {
         return NULL;
     }
