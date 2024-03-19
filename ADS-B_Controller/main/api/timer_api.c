@@ -10,7 +10,6 @@ static const char *LOG_TAG = "TIM";
 static void periodic_timer_callback(void* arg);
 
 bool Timer_API_Init(void) {
-    //ESP_LOGI(LOG_TAG, "Log");
     const esp_timer_create_args_t periodic_timer_args = {
         .callback = &periodic_timer_callback,
         /* name is optional, but may help identify the timer when debugging */
