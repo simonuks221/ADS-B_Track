@@ -2,13 +2,10 @@
 #include "driver/spi_master.h"
 #include "esp_log.h"
 #include "fpga_app.h"
+#include "gpio_api.h"
 
 static const char *LOG_TAG = "FPGA";
 
-#define MOSI_PIN GPIO_NUM_30
-#define MISO_PIN GPIO_NUM_31
-#define CLK_PIN GPIO_NUM_32
-#define CS_PIN GPIO_NUM_33
 
 static bool FPGA_API_Write() {
 
@@ -21,14 +18,11 @@ static bool FPGA_API_Read() {
 }
 
 bool FPGA_APP_Init(void) {
-    /* Setup CS pin*/
-    gpio_set_direction(CS_PIN, GPIO_MODE_OUTPUT_OD);
-    gpio_set_level(CS_PIN, true);
     /* Init SPI */
     spi_bus_config_t buscfg = {
-        .sclk_io_num = CLK_PIN,
-        .mosi_io_num = MOSI_PIN,
-        .miso_io_num = MISO_PIN,
+        .sclk_io_num = FPGA_CLK_PIN,
+        .mosi_io_num = FPGA_MOSI_PIN,
+        .miso_io_num = FPGA_MISO_PIN,
         .data2_io_num = -1,
         .data3_io_num = -1,
         .max_transfer_sz = 256,
@@ -44,7 +38,7 @@ bool FPGA_APP_Init(void) {
     spi_device_interface_config_t dev_config = {
         .mode = 0,
         .clock_speed_hz = 10000000,
-        .spics_io_num = CS_PIN,
+        .spics_io_num = FPGA_CS_PIN,
         //.queue_size = 10,
         .flags = SPI_DEVICE_HALFDUPLEX
     };
@@ -53,6 +47,7 @@ bool FPGA_APP_Init(void) {
         ESP_LOGE(LOG_TAG, "Failed registering device");
         return true;
     }
+
 
     /* Send/receive */
     uint8_t tx_buffer[5] = {0x00, 0x01, 0x02, 0x03, 0x04};

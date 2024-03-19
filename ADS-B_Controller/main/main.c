@@ -10,7 +10,7 @@
 #include "connection_app.h"
 #include "fpga_app.h"
 #include "sd_api.h"
-#include "led_api.h"
+#include "gpio_api.h"
 
 #include "common.h"
 
@@ -25,7 +25,7 @@ typedef struct sApp {
 } sApp_t;
 
 sApp_t app_lut[] = {
-    {"LED", LED_API_Init, NULL},
+    {"GPIO", GPIO_API_Init, NULL},
     {"NEXTION", Nextion_API_Init, NULL},
     {"SD", SD_API_Init, NULL},
     {"GPS", GPS_APP_Init, NULL},

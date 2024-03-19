@@ -5,9 +5,9 @@
 #include "driver/gpio.h"
 #include "esp_log.h"
 #include "nextion_api.h"
+#include "gpio_api.h"
 
-#define NEXTION_TX_PIN GPIO_NUM_4 //TODO: CHANGE
-#define NEXTION_RX_PIN GPIO_NUM_5
+
 #define TX_BUF_LEN 50
 #define TX_FIFO_LEN 0
 #define RX_FIFO_LEN 1024

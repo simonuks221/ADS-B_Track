@@ -7,9 +7,9 @@
 #include "esp_log.h"
 #include "nextion_api.h"
 #include "gps_app.h"
+#include "gpio_api.h"
 
-#define GPS_TX_PIN GPIO_NUM_6 //TODO: CHANGE
-#define GPS_RX_PIN GPIO_NUM_7
+
 #define TX_BUF_LEN 75
 #define TX_FIFO_LEN 0
 #define RX_FIFO_LEN 1024

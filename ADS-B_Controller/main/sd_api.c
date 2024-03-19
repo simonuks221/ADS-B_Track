@@ -7,11 +7,7 @@
 #include "driver/gpio.h"
 #include "sd_api.h"
 
-#define MISO_PIN GPIO_NUM_11 ///TODO: change
-#define MOSI_PIN GPIO_NUM_12
-#define CLK_PIN GPIO_NUM_13
-#define CS_PIN GPIO_NUM_14
-#define CARD_DETECT_PIN GPIO_NUM_15
+#include "gpio_api.h"
 
 #define EXAMPLE_MAX_CHAR_SIZE    64
 #define MOUNT_POINT "/sdcard"
@@ -65,9 +61,9 @@ bool SD_API_Init(void) {
     const char mount_point[] = MOUNT_POINT;
     sdmmc_host_t host = SDSPI_HOST_DEFAULT();
     spi_bus_config_t bus_cfg = {
-        .mosi_io_num = MOSI_PIN,
-        .miso_io_num = MISO_PIN,
-        .sclk_io_num = CLK_PIN,
+        .mosi_io_num = SD_MOSI_PIN,
+        .miso_io_num = SD_MISO_PIN,
+        .sclk_io_num = SD_CLK_PIN,
         .quadwp_io_num = -1,
         .quadhd_io_num = -1,
         .max_transfer_sz = 4000,
@@ -78,7 +74,7 @@ bool SD_API_Init(void) {
     }
     ESP_LOGI(LOG_TAG, "Initialised SPI");
     sdspi_device_config_t slot_config = SDSPI_DEVICE_CONFIG_DEFAULT();
-    slot_config.gpio_cs = CS_PIN;
+    slot_config.gpio_cs = SD_CS_PIN;
     //slot_config.gpio_cd = CARD_DETECT_PIN; //Experimental
     slot_config.host_id = host.slot;
     if(esp_vfs_fat_sdspi_mount(mount_point, &host, &slot_config, &mount_config, &card) != ESP_OK) {

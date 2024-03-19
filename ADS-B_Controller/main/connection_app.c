@@ -45,15 +45,12 @@ void Connection_SetFlags(uint32_t new_flags) {
 }
 
 static void Connection_SendSocket(void) {
-    int addr_family = 0;
-    int ip_protocol = 0;
-
     struct sockaddr_in dest_addr;
     inet_pton(AF_INET, SERVER_IP, &dest_addr.sin_addr);
     dest_addr.sin_family = AF_INET;
     dest_addr.sin_port = htons(SERVER_PORT);
-    addr_family = AF_INET;
-    ip_protocol = IPPROTO_IP;
+    int  addr_family = AF_INET;
+    int ip_protocol = IPPROTO_IP;
 
     int sock =  socket(addr_family, SOCK_STREAM, ip_protocol);
     if (sock < 0) {
@@ -217,7 +214,6 @@ void Connection_Ping(void) {
     cbs.on_ping_success = test_on_ping_success;
     cbs.on_ping_timeout = test_on_ping_timeout;
     cbs.on_ping_end = test_on_ping_end;
-    cbs.cb_args = "foo";  // arguments that feeds to all callback functions, can be NULL
 
     esp_ping_handle_t ping;
     ESP_LOGI(LOG_TAG, "PINGING SESSION");

@@ -44,7 +44,10 @@
         "nextion_api.h": "c",
         "format": "c",
         "thread": "c",
-        "sockets.h": "c"
+        "sockets.h": "c",
+        "spi_master.h": "c",
+        "fpga_app.h": "c",
+        "gpio_api.h": "c"
     },
     "idf.flashType": "UART"
 }
