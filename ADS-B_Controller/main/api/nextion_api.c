@@ -1,15 +1,12 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdarg.h>
-#include "driver/uart.h"
 #include "esp_log.h"
-#include "nextion_api.h"
-#include "gpio_api.h"
 
+#include "nextion_api.h"
+#include "uart_api.h"
 
 #define TX_BUF_LEN 50
-#define TX_FIFO_LEN 0
-#define RX_FIFO_LEN 1024
 
 /* Define cmd format */
 static char *nextion_cmd_format_lut[eNextionCmdLast] = {
@@ -26,24 +23,7 @@ static char *nextion_cmd_format_lut[eNextionCmdLast] = {
 
 
 bool Nextion_API_Init(void) {
-    /* Setup UART settings */
-    const uart_config_t uart_config = {
-        .baud_rate = 115200,
-        .data_bits = UART_DATA_8_BITS,
-        .parity = UART_PARITY_DISABLE,
-        .stop_bits = UART_STOP_BITS_1,
-        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
-        .source_clk = UART_SCLK_DEFAULT,
-    };
-    if(uart_driver_install(UART_NUM_1, RX_FIFO_LEN, TX_FIFO_LEN, 0, NULL, 0) != ESP_OK) {
-        return false;
-    }
-    if(uart_param_config(UART_NUM_1, &uart_config) != ESP_OK) {
-        return false;
-    }
-    if(uart_set_pin(UART_NUM_1, NEXTION_TX_PIN, NEXTION_RX_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE) != ESP_OK) {
-        return false;
-    }
+
     return true;
 }
 
@@ -60,6 +40,6 @@ bool Nextion_API_SendCmd(eNextionCmd_t cmd, ...) {
     va_end(args);
 
     /* Send data */
-    uint16_t sent_bytes = uart_write_bytes(UART_NUM_1, tx_buffer, tx_len);
-    return sent_bytes == tx_len;
+    uint32_t sent_bytes = UART_API_Send(eUartNextion, (uint8_t *)tx_buffer, tx_len);
+    return (sent_bytes == tx_len);
 }

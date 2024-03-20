@@ -48,7 +48,9 @@
         "spi_master.h": "c",
         "fpga_app.h": "c",
         "gpio_api.h": "c",
-        "c_buff.h": "c"
+        "c_buff.h": "c",
+        "uart_api.h": "c",
+        "queue.h": "c"
     },
     "idf.flashType": "UART"
 }

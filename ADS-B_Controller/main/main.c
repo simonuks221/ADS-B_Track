@@ -12,6 +12,7 @@
 #include "sd_api.h"
 #include "gpio_api.h"
 #include "timer_api.h"
+#include "api/uart_api.h"
 
 #include "common.h"
 
@@ -28,6 +29,7 @@ typedef struct sApp {
 sApp_t app_lut[] = {
     {"GPIO", GPIO_API_Init, NULL},
     {"TIM", Timer_API_Init, NULL},
+    {"UART", UART_API_Init, NULL},
     {"NEXTION", Nextion_API_Init, NULL},
     {"SD", SD_API_Init, NULL},
     {"GPS", GPS_APP_Init, NULL},
