@@ -50,7 +50,12 @@
         "gpio_api.h": "c",
         "c_buff.h": "c",
         "uart_api.h": "c",
-        "queue.h": "c"
+        "queue.h": "c",
+        "freertos.h": "c",
+        "time.h": "c",
+        "list.h": "c",
+        "stdlib.h": "c",
+        "chrono": "c"
     },
     "idf.flashType": "UART"
 }

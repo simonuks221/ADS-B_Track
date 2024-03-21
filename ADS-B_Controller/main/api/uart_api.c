@@ -41,8 +41,6 @@ static QueueHandle_t uart_queue_handlers[eUartLast] = {
     [eUartDebug] = NULL
 };
 
-static QueueHandle_t uart_queue;
-
 static BaseType_t event_handler_task = pdFALSE;
 
 bool UART_API_Init(void) {
@@ -57,14 +55,13 @@ bool UART_API_Init(void) {
         };
         /* Create new queue handler if needed */
         uint32_t queue_size = 0;
-        if(uart_lut[uart].need_queue) {
-            //uart_queue_handlers[uart] = malloc(sizeof(QueueHandle_t));
+        if(uart_lut[uart].need_queue) { //TODO: fix why this doesn't work normally
             queue_size = 20; //TODO: fix hardcode
-            if(uart_driver_install(uart_lut[uart].port, uart_lut[uart].rx_fifo_len, uart_lut[uart].tx_fifo_len, 20, &uart_queue, 0) != ESP_OK) {
+            if(uart_driver_install(uart_lut[uart].port, uart_lut[uart].rx_fifo_len, uart_lut[uart].tx_fifo_len, queue_size, &uart_queue_handlers[uart], 0) != ESP_OK) {
                 return false;
             }
         } else {
-            if(uart_driver_install(uart_lut[uart].port, uart_lut[uart].rx_fifo_len, uart_lut[uart].tx_fifo_len, 0, NULL, 0) != ESP_OK) {
+            if(uart_driver_install(uart_lut[uart].port, uart_lut[uart].rx_fifo_len, uart_lut[uart].tx_fifo_len, queue_size, NULL, 0) != ESP_OK) {
                 return false;
             }
         }
@@ -105,7 +102,7 @@ static void UART_API_Event_Handler(void *pvParameters) {
     static uint8_t rx_buffer[1024] = {0};
     while(true) {
         //Waiting for UART event.
-        if (xQueueReceive(uart_queue, (void *)&event, (TickType_t)portMAX_DELAY)) {
+        if (xQueueReceive(uart_queue_handlers[eUartDebug], (void *)&event, (TickType_t)portMAX_DELAY)) {
             //TODO: fix hardcoded value of eUartDebug
             ESP_LOGI(LOG_TAG, "uart[%d] event: %u", UART_NUM_0, event.type);
             switch (event.type) {

@@ -8,6 +8,7 @@
 #include "gps_app.h"
 #include "gpio_api.h"
 #include "uart_api.h"
+#include "timer_api.h"
 
 #define GPS_IDENTIFIER_LENGTH 6
 
@@ -54,7 +55,7 @@ static inline void HandleGpsMessage(uint8_t *message, size_t len) {
     ESP_LOGE(LOG_TAG, "%s", message);
 }
 
-static inline bool GPS_APP_SetGoodCoordinates(float new_latitude, float new_longitude, float new_altitude) {
+static bool GPS_APP_SetGoodCoordinates(float new_latitude, float new_longitude, float new_altitude) {
     /* Check if coordinates are new */
     if((new_latitude == good_coordinates.latitude) || (new_longitude == good_coordinates.longitude) ||
         (new_altitude == good_coordinates.altitude)) {
@@ -65,6 +66,18 @@ static inline bool GPS_APP_SetGoodCoordinates(float new_latitude, float new_long
     good_coordinates.longitude = new_longitude;
     good_coordinates.altitude = new_altitude;
     Nextion_API_SendCmd(eNextionCmdStart, new_latitude, new_longitude, 0); //TODO: implement time
+    return true;
+}
+
+static bool GPS_APP_SetGoodTime(char utc_time_string[10]) {
+    sDate_t utc_time;
+    /* Parsing of time string into decimals */
+    /* Doesn't use sscanf for speed */
+    utc_time.hours = (utc_time_string[0] - '0') * 10 + (utc_time_string[1] - '0');
+    utc_time.minutes = (utc_time_string[2] - '0') * 10 + (utc_time_string[3] - '0');
+    utc_time.seconds = (utc_time_string[4] - '0') * 10 + (utc_time_string[5] - '0');
+    utc_time.seconds_fraction = (utc_time_string[7] - '0') * 100 + (utc_time_string[8] - '0') * 10 + (utc_time_string[9] - '0');
+    Timer_API_SetRtc(utc_time);
     return true;
 }
 
@@ -80,16 +93,18 @@ static void GGA_Handler(uint8_t *message, size_t len) {
     if(message == NULL) {
         return;
     }
-    float utc_time, latitude, longitude, altitude;
+    char utc_time_string[10];
+    float latitude, longitude, altitude;
     char ns_indicator, ew_indicator;
 
-    int8_t scanned_items = sscanf((char *)message, ",%f,%f,%c,%f,%c,%*u,%*u,%*f,%f,%*c,%*f,%*c,,%*s", &utc_time, &latitude,
+    int8_t scanned_items = sscanf((char *)message, ",%10s,%f,%c,%f,%c,%*u,%*u,%*f,%f,%*c,%*f,%*c,,%*s", utc_time_string, &latitude,
                                                                &ns_indicator, &longitude, &ew_indicator, &altitude);
     if(scanned_items != 6) {
         ESP_LOGI(LOG_TAG, "Invalid GPGGA message");
         return;
     }
     GPS_APP_SetGoodCoordinates(latitude, longitude, altitude); //TODO: implement time
+    GPS_APP_SetGoodTime(utc_time_string);
 
     ESP_LOGI(LOG_TAG, "Lat:%f, long:%f", latitude, longitude);
     return;

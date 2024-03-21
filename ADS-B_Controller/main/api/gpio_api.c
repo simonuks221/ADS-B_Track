@@ -2,6 +2,7 @@
 #include "esp_attr.h"
 
 #include "gpio_api.h"
+#include "timer_api.h"
 #include "common.h"
 
 typedef struct sGpioDesc {
@@ -31,6 +32,11 @@ static void IRAM_ATTR gpio_isr_handler(void* arg) {
         return;
     }
     gpio_num_t gpio_num = (gpio_num_t) arg;
+    //TODO: make nicer (add all into callbacks) and test
+    if(gpio_num == gpio_lut[eGpioPPS].num) {
+        /* Got PPS */
+        Timer_API_SyncRtc();
+    }
 }
 
 bool GPIO_API_Init(void) {
