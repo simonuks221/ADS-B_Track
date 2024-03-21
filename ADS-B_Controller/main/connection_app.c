@@ -12,17 +12,56 @@
 #include "lwip/netdb.h"
 #include "ping/ping_sock.h"
 #include "connection_app.h"
-#include "common.h"
+#include "common/common.h"
+#include "c_buff.h"
 
+/* WiFi connection settings */
 #define WIFI_SSID "137Festival"
 #define WIFI_ID "example@ktu.edu"
 #define WIFI_PASS "Festival137"
 #define WIFI_USERNAME "ESP-S3"
 
+/* Unique device ID */
+#define THIS_DEVICE_ID 0
+
 #define SERVER_IP "192.168.137.1"
 #define SERVER_PORT 80
 
-static const char *payload = "GET /insert_data.php?data=9,9\r\n";
+#define MESSAGE_CBUF_CAPACITY 30
+#define TX_MESSAGE_MAX_LENGTH 200
+#define RX_MESSAGE_MAX_LENGTH 50
+
+/* Messages that can be sent from devide via WIFI */
+typedef enum eMessage {
+    eMessageFirst = 0,
+    eMessageRegister = eMessageFirst, /* Registers location and time for database of device */
+    eMessageNewPacket, /* Sends captured ADS-B packet with timestamp */
+    eMessageLast
+} eMessage_t;
+
+typedef struct sMessage {
+    eMessage_t type;
+    void *content;
+    //TODO: add IP?
+} sMessage_t;
+
+typedef struct sMessageRegister {
+    float latitude;
+    float longitude;
+    float altitude;
+    uint32_t timestamp_ms;
+}sMessageRegister_t;
+
+/* Format of messages to be sent via WiFi */
+static const char *messages_format[eMessageLast] = {
+    [eMessageRegister] = "GET /insert_data.php?data=0,%hhu,%.5f,%.5f,%.5f,%llu\r\n",
+    [eMessageNewPacket] = "GET /insert_data.php?data=9,9\r\n"
+};
+
+/* Circular buffer of messages to send */
+static struct CBuff *messages_cbuffer;
+
+//TODO: conenction FSM
 
 static const char *LOG_TAG = "CONN";
 
@@ -40,11 +79,28 @@ static bool Connection_GetFlags(uint32_t new_flags, bool clear) {
     return return_val;
 }
 
-void Connection_SetFlags(uint32_t new_flags) {
+static void Connection_SetFlags(uint32_t new_flags) {
     flags |= new_flags;
 }
 
 static void Connection_SendSocket(void) {
+    /* Get new message from circular buffer */
+    sMessage_t new_message;
+    if(!CBuff_Pop(messages_cbuffer, (void *)&new_message)) {
+        ESP_LOGE(LOG_TAG, "Failed cbuff pop");
+        return;
+    }
+    if(new_message.content == NULL) {
+        ESP_LOGE(LOG_TAG, "Invalid message content");
+        return;
+    }
+    if(new_message.type >= eMessageLast) {
+        ESP_LOGE(LOG_TAG, "Invalid message type");
+        free(new_message.content);
+        return;
+    }
+
+    /* Create socket */
     struct sockaddr_in dest_addr;
     inet_pton(AF_INET, SERVER_IP, &dest_addr.sin_addr);
     dest_addr.sin_family = AF_INET;
@@ -52,39 +108,66 @@ static void Connection_SendSocket(void) {
     int  addr_family = AF_INET;
     int ip_protocol = IPPROTO_IP;
 
-    int sock =  socket(addr_family, SOCK_STREAM, ip_protocol);
+    int sock = socket(addr_family, SOCK_STREAM, ip_protocol);
     if (sock < 0) {
         ESP_LOGE(LOG_TAG, "Unable to create socket: errno %d", errno);
         return;
     }
-    ESP_LOGI(LOG_TAG, "Socket created, connecting to %s:%d", SERVER_IP, SERVER_PORT);
 
-    int err = connect(sock, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
-    if (err != 0) {
+    /* Create message for socket */
+    char message_buffer[TX_MESSAGE_MAX_LENGTH] = {0};
+    uint32_t message_buffer_length = 0;
+    switch(new_message.type) {
+        case eMessageRegister: {
+            sMessageRegister_t *arguments = (sMessageRegister_t *)new_message.content;
+            message_buffer_length =
+                snprintf(message_buffer, TX_MESSAGE_MAX_LENGTH, messages_format[eMessageRegister],
+                        THIS_DEVICE_ID, arguments->latitude, arguments->longitude, arguments->altitude, arguments->timestamp_ms);
+        } break;
+        case eMessageNewPacket: {
+            //TODO: implement
+        } break;
+        default: {
+
+        } break;
+    }
+    free(new_message.content);
+    if(message_buffer_length == 0) {
+        return;
+    }
+
+    /* Connect to socket */
+    ESP_LOGI(LOG_TAG, "Socket created, connecting to %s:%d", SERVER_IP, SERVER_PORT);
+    if (connect(sock, (struct sockaddr *)&dest_addr, sizeof(dest_addr)) != 0) {
         ESP_LOGE(LOG_TAG, "Socket unable to connect: errno %d", errno);
         return;
     }
     ESP_LOGI(LOG_TAG, "Successfully connected");
 
-    err = send(sock, payload, strlen(payload), 0);
-    if (err < 0) {
+    /* Send using socket */
+    int32_t sent_bytes = send(sock, message_buffer, message_buffer_length, 0);
+    if (sent_bytes <= 0) {
         ESP_LOGE(LOG_TAG, "Error occurred during sending: errno %d", errno);
         return;
     }
 
-    uint8_t socket_rx_buffer[100] = {0};
-    int len = recv(sock, socket_rx_buffer, sizeof(socket_rx_buffer) - 1, 0);
-
-    if (len < 0) {
+    /* Receive from socket */
+    uint8_t socket_rx_buffer[RX_MESSAGE_MAX_LENGTH] = {0};
+    int rx_len = recv(sock, socket_rx_buffer, sizeof(socket_rx_buffer) - 1, 0);
+    if (rx_len < 0) {
         ESP_LOGE(LOG_TAG, "recv failed: errno %d\n", errno);
     } else {
-        socket_rx_buffer[len] = 0; // Null-terminate whatever we received and treat like a string
-        ESP_LOGI(LOG_TAG, "Received %d bytes\n", len);
+        socket_rx_buffer[rx_len] = 0; /* Null terminate */
+        ESP_LOGI(LOG_TAG, "Received %d bytes\n", rx_len);
         ESP_LOGI(LOG_TAG, "%s", socket_rx_buffer);
     }
+
+    /* Check if received SUCCESS confirmation */
     if(strncmp("Success", (char *)socket_rx_buffer, sizeof("Success"))) {
         ESP_LOGI(LOG_TAG, "RX SUCESS");
     }
+
+    /* Close socket */
     ESP_LOGI(LOG_TAG, "Socket end\n");
     shutdown(sock, 0);
     close(sock);
@@ -114,8 +197,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
     }
 }
 
-static void test_on_ping_success(esp_ping_handle_t hdl, void *args)
-{
+static void test_on_ping_success(esp_ping_handle_t hdl, void *args) {
     uint8_t ttl;
     uint16_t seqno;
     uint32_t elapsed_time, recv_len;
@@ -129,8 +211,7 @@ static void test_on_ping_success(esp_ping_handle_t hdl, void *args)
            recv_len, inet_ntoa(target_addr.u_addr.ip4), seqno, ttl, elapsed_time);
 }
 
-static void test_on_ping_timeout(esp_ping_handle_t hdl, void *args)
-{
+static void test_on_ping_timeout(esp_ping_handle_t hdl, void *args) {
     uint16_t seqno;
     ip_addr_t target_addr;
     esp_ping_get_profile(hdl, ESP_PING_PROF_SEQNO, &seqno, sizeof(seqno));
@@ -138,8 +219,7 @@ static void test_on_ping_timeout(esp_ping_handle_t hdl, void *args)
     printf("From %s icmp_seq=%d timeout\n", inet_ntoa(target_addr.u_addr.ip4), seqno);
 }
 
-static void test_on_ping_end(esp_ping_handle_t hdl, void *args)
-{
+static void test_on_ping_end(esp_ping_handle_t hdl, void *args) {
     uint32_t transmitted;
     uint32_t received;
     uint32_t total_time_ms;
@@ -190,6 +270,13 @@ bool Connection_APP_Init(void) {
     esp_wifi_start();
     ESP_LOGI(LOG_TAG, "WIFI STARTED");
     esp_wifi_set_max_tx_power(10);
+
+    /* Init circular buffer */
+    messages_cbuffer = CBuff_Create(MESSAGE_CBUF_CAPACITY, sizeof(sMessage_t));
+    if(messages_cbuffer == NULL) {
+        ESP_LOGE(LOG_TAG, "Failed creating c_buff");
+        return false;
+    }
     return true;
 }
 
@@ -225,15 +312,41 @@ void Connection_Ping(void) {
 bool Connection_APP_Run(void) {
     if (Connection_GetFlags(FLAGS_WIFI_CONNECTED, true)) {
         ESP_LOGI(LOG_TAG, "connected to aP");
-        Connection_SetFlags(FLAGS_SEND_SOCKET);
+        //Connection_SetFlags(FLAGS_SEND_SOCKET);
         //Connection_Ping();
     }
     if (Connection_GetFlags(FLAGS_WIFI_FAIL, true)) {
 		ESP_LOGE(LOG_TAG, "Failed to connect");
 		return true;
 	}
-    if(Connection_GetFlags(FLAGS_SEND_SOCKET, true)) {
+    if(Connection_GetFlags(FLAGS_SEND_SOCKET, true)) { //clearing flags could leave members hanging
         Connection_SendSocket();
     }
+    return true;
+}
+
+bool Connection_APP_SendMessageRegister(float latitude, float longitude, float altitude, uint32_t timestamp_ms) {
+    sMessageRegister_t *message_content = malloc(sizeof(sMessageRegister_t));
+    if(message_content == NULL) {
+        return false;
+    }
+    message_content->latitude = latitude;
+    message_content->longitude = longitude;
+    message_content->altitude = altitude;
+    message_content->timestamp_ms = timestamp_ms;
+    sMessage_t new_message = {.type = eMessageRegister, .content = message_content};
+    if(!CBuff_Push(messages_cbuffer, &new_message)) {
+        ESP_LOGE(LOG_TAG, "Failed push message");
+        free(message_content);
+        return false;
+    }
+    Connection_SetFlags(FLAGS_SEND_SOCKET);
+    return true;
+}
+
+bool Connection_APP_SendMessagePacket(sADSBPacket_t packet) {
+    //TODO: todo
+    Connection_SetFlags(FLAGS_SEND_SOCKET);
+
     return true;
 }

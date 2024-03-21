@@ -136,7 +136,7 @@ static void UART_API_Event_Handler(void *pvParameters) {
                     if (pos == -1) {
                         uart_flush_input(UART_NUM_0);
                     } else {
-                        uart_read_bytes(UART_NUM_0, rx_buffer, pos, 100 / portTICK_PERIOD_MS);
+                        uart_read_bytes(UART_NUM_0, rx_buffer, pos + 1, 100 / portTICK_PERIOD_MS); /* +1 - for including the delimiter TODO: should be procedural */
                         ESP_LOGI(LOG_TAG,"%s", (char *)rx_buffer);
                         //TODO: remove the include and handler
                         if(uart_delimiter_lut[eUartDebug].delimiter_callback == NULL) { //TODO: hardcoded

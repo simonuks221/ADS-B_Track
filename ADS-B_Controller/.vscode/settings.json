@@ -55,7 +55,9 @@
         "time.h": "c",
         "list.h": "c",
         "stdlib.h": "c",
-        "chrono": "c"
+        "chrono": "c",
+        "cstdio": "cpp",
+        "sstream": "c"
     },
     "idf.flashType": "UART"
 }

@@ -5,6 +5,6 @@
 
 bool Connection_APP_Init(void);
 bool Connection_APP_Run(void);
-void Connection_SetFlags(uint32_t new_flags) ;
+bool Connection_APP_SendMessageRegister(float latitude, float longitude, float altitude, uint32_t timestamp_ms);
 
 #endif // CONNECTION_APP_H

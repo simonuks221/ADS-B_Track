@@ -9,6 +9,7 @@
 #include "gpio_api.h"
 #include "uart_api.h"
 #include "timer_api.h"
+#include "connection_app.h"
 
 #define GPS_IDENTIFIER_LENGTH 6
 
@@ -57,7 +58,7 @@ static inline void HandleGpsMessage(uint8_t *message, size_t len) {
 
 static bool GPS_APP_SetGoodCoordinates(float new_latitude, float new_longitude, float new_altitude) {
     /* Check if coordinates are new */
-    if((new_latitude == good_coordinates.latitude) || (new_longitude == good_coordinates.longitude) ||
+    if((new_latitude == good_coordinates.latitude) && (new_longitude == good_coordinates.longitude) &&
         (new_altitude == good_coordinates.altitude)) {
             return true;
     }
@@ -66,6 +67,7 @@ static bool GPS_APP_SetGoodCoordinates(float new_latitude, float new_longitude, 
     good_coordinates.longitude = new_longitude;
     good_coordinates.altitude = new_altitude;
     Nextion_API_SendCmd(eNextionCmdStart, new_latitude, new_longitude, 0); //TODO: implement time
+    Connection_APP_SendMessageRegister(new_latitude, new_longitude, new_altitude, 0);
     return true;
 }
 
@@ -103,8 +105,9 @@ static void GGA_Handler(uint8_t *message, size_t len) {
         ESP_LOGI(LOG_TAG, "Invalid GPGGA message");
         return;
     }
-    GPS_APP_SetGoodCoordinates(latitude, longitude, altitude); //TODO: implement time
     GPS_APP_SetGoodTime(utc_time_string);
+    GPS_APP_SetGoodCoordinates(latitude, longitude, altitude); //TODO: implement time
+
 
     ESP_LOGI(LOG_TAG, "Lat:%f, long:%f", latitude, longitude);
     return;
