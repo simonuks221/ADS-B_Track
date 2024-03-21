@@ -1,3 +1,6 @@
+#ifndef COMMON_H
+#define COMMON_H
+
 #include <stdint.h>
 #include <string.h>
 
@@ -13,3 +16,7 @@ typedef struct sADSBPacket {
     uint32_t timestamp_ms;
     uint64_t timestamp_ns;
 } sADSBPacket_t;
+
+bool HexToString(const uint8_t *buffer, size_t length, char *out);
+
+#endif // COMMON_H

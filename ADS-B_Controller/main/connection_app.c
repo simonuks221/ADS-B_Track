@@ -12,7 +12,6 @@
 #include "lwip/netdb.h"
 #include "ping/ping_sock.h"
 #include "connection_app.h"
-#include "common/common.h"
 #include "c_buff.h"
 
 /* WiFi connection settings */
@@ -52,10 +51,15 @@ typedef struct sMessageRegister {
     uint32_t timestamp_ms;
 }sMessageRegister_t;
 
+typedef struct sMessagePacket {
+    uint8_t packet[10]; //TODO: maybe just pointer idk
+    uint32_t timestamp_ms;
+}sMessagePacket_t;
+
 /* Format of messages to be sent via WiFi */
 static const char *messages_format[eMessageLast] = {
     [eMessageRegister] = "GET /insert_data.php?data=0,%hhu,%.5f,%.5f,%.5f,%llu\r\n",
-    [eMessageNewPacket] = "GET /insert_data.php?data=9,9\r\n"
+    [eMessageNewPacket] = "GET /insert_data.php?data=1,%hhu,\"%s\",%llu\r\n"
 };
 
 /* Circular buffer of messages to send */
@@ -125,12 +129,22 @@ static void Connection_SendSocket(void) {
                         THIS_DEVICE_ID, arguments->latitude, arguments->longitude, arguments->altitude, arguments->timestamp_ms);
         } break;
         case eMessageNewPacket: {
-            //TODO: implement
+            sMessagePacket_t *arguments = (sMessagePacket_t *)new_message.content;
+            char packet_data_string[20] = {0}; //TODO: remove hardcode
+            if(!HexToString(arguments->packet, 10, packet_data_string)) {
+                ESP_LOGE(LOG_TAG, "Failed making hex string");
+                break;
+            }
+            message_buffer_length =
+                snprintf(message_buffer, TX_MESSAGE_MAX_LENGTH, messages_format[eMessageNewPacket],
+                        THIS_DEVICE_ID, packet_data_string, arguments->packet, arguments->timestamp_ms);
         } break;
         default: {
 
         } break;
     }
+
+    /* Free allocated message arguments */
     free(new_message.content);
     if(message_buffer_length == 0) {
         return;
@@ -145,6 +159,7 @@ static void Connection_SendSocket(void) {
     ESP_LOGI(LOG_TAG, "Successfully connected");
 
     /* Send using socket */
+    ESP_LOGI(LOG_TAG, "Sending:%s", message_buffer);
     int32_t sent_bytes = send(sock, message_buffer, message_buffer_length, 0);
     if (sent_bytes <= 0) {
         ESP_LOGE(LOG_TAG, "Error occurred during sending: errno %d", errno);
@@ -320,7 +335,7 @@ bool Connection_APP_Run(void) {
 		return true;
 	}
     if(Connection_GetFlags(FLAGS_SEND_SOCKET, true)) { //clearing flags could leave members hanging
-        Connection_SendSocket();
+        Connection_SendSocket(); //TODO: send only when connected to wifi
     }
     return true;
 }
@@ -345,8 +360,19 @@ bool Connection_APP_SendMessageRegister(float latitude, float longitude, float a
 }
 
 bool Connection_APP_SendMessagePacket(sADSBPacket_t packet) {
-    //TODO: todo
-    Connection_SetFlags(FLAGS_SEND_SOCKET);
+    sMessagePacket_t *message_content = malloc(sizeof(sMessagePacket_t));
+    if(message_content == NULL) {
+        return false;
+    }
+    memcpy(message_content->packet, packet.data, 10); //TODO: remove hardcode
+    message_content->timestamp_ms = packet.timestamp_ms; //TODO: add ns
 
+    sMessage_t new_message = {.type = eMessageNewPacket, .content = message_content};
+    if(!CBuff_Push(messages_cbuffer, &new_message)) {
+        ESP_LOGE(LOG_TAG, "Failed push message");
+        free(message_content);
+        return false;
+    }
+    Connection_SetFlags(FLAGS_SEND_SOCKET);
     return true;
 }
