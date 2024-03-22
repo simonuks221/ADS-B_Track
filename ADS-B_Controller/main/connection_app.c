@@ -70,6 +70,7 @@ static struct CBuff *messages_cbuffer;
 
 static const char *LOG_TAG = "CONN";
 
+/* COONECTION APP flags */
 #define FLAGS_CONNECTED BIT0
 #define FLAGS_MESSAGE_AVAILABLE BIT1
 
@@ -346,7 +347,7 @@ bool Connection_APP_SendMessagePacket(sADSBPacket_t packet) {
     if(message_content == NULL) {
         return false;
     }
-    memcpy(message_content->packet, packet.data, 10); //TODO: remove hardcode
+    memcpy(message_content->packet, packet.data, ADSB_PACKET_LEN);
     message_content->timestamp_ms = packet.timestamp_ms; //TODO: add ns
 
     sMessage_t new_message = {.type = eMessageNewPacket, .content = message_content};

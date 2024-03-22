@@ -1,20 +1,81 @@
 #include "driver/spi_master.h"
 #include "esp_log.h"
+
+
 #include "fpga_app.h"
 #include "gpio_api.h"
+#include "common/common.h"
+#include "connection_app.h"
+
+/* Types for register union packing */
+typedef union uStatusRegister {
+    uint8_t buffer;
+    struct {
+        unsigned int empty : 6; /* 6 bits empty */
+        unsigned int init : 1;  /* 1 bit for if init done */
+        unsigned int on : 1;    /* 1 bit always on */
+    } data;
+} uStatusRegister_t;
+
+/* FPGA inner registers */
+#define STATUS_REG 0x01         /* Holds status information: init successful, packet received.... Read only */
+#define PACKET_STORAGE_REG 0x02 /* Holds received packets. Read only */
+#define RTC_REG    0x03         /* FPGA RTC timer value register. Write only */
+
+/* FPGA APP flags */
+#define FLAG_INIT_DONE BIT0    /* FPGA ready to work */
+#define FLAG_PACKET_READY BIT1 /* FPGA has received packet in buffer, need to read it out */
+
+static uint32_t fpga_flags = 0;
 
 static const char *LOG_TAG = "FPGA";
 
+static spi_device_handle_t spi_handle;
 
-static bool FPGA_API_Write() {
+static bool FPGA_APP_ReadPacket(void) {
+    uint8_t tx_buffer = PACKET_STORAGE_REG;
+    sADSBPacket_t new_packet;
 
+    spi_transaction_t transaction = {
+        .tx_buffer = &tx_buffer,
+        .length = 1, /* Tx length */
+        .rx_buffer = new_packet.data,
+        .rxlength = ADSB_PACKET_LEN
+    };
+    //spi_device_acquire_bus(); //Call before polling for constant transmition
+    //spi_device_release_bus();
+    if(spi_device_polling_transmit(spi_handle, &transaction) != ESP_OK) {
+        ESP_LOGE(LOG_TAG, "Failed transmitting read packet");
+    }
+
+    return Connection_APP_SendMessagePacket(new_packet); //TODO: pointer or smth?
+}
+
+static bool FPGA_APP_ReadStatus(void) {
+    uint8_t tx_buffer = STATUS_REG;
+    uStatusRegister_t status_register = {.buffer = 0};
+
+    spi_transaction_t transaction = {
+        .tx_buffer = &tx_buffer,
+        .length = 1, /* Tx length */
+        .rx_buffer = status_register.buffer,
+        .rxlength = 1
+    };
+    //spi_device_acquire_bus(); //Call before polling for constant transmition
+    //spi_device_release_bus();
+    if(spi_device_polling_transmit(spi_handle, &transaction) != ESP_OK) {
+        ESP_LOGE(LOG_TAG, "Failed transmitting read status");
+    }
+    /* Unpack status register */
+    if(status_register.data.on != 1) {
+        ESP_LOGE(LOG_TAG, "Status register always ON invalid");
+        return true;
+    }
+    status_register.data.init == 1 ?  SET_FLAG(fpga_flags, FLAG_INIT_DONE) : CLEAR_FLAG(fpga_flags, FLAG_INIT_DONE);
     return true;
 }
 
-static bool FPGA_API_Read() {
 
-    return true;
-}
 
 bool FPGA_APP_Init(void) {
     /* Init SPI */
@@ -47,21 +108,26 @@ bool FPGA_APP_Init(void) {
         ESP_LOGE(LOG_TAG, "Failed registering device");
         return true;
     }
-
-
-    /* Send/receive */
-    uint8_t tx_buffer[5] = {0x00, 0x01, 0x02, 0x03, 0x04};
-    spi_transaction_t transaction = {
-        .tx_buffer = tx_buffer,
-        .length = 5*8,
-    };
-
-    if(spi_device_polling_transmit(handle, &transaction) != ESP_OK) {
-        ESP_LOGE(LOG_TAG, "Failed transmitting");
-    }
-
-    //spi_device_acquire_bus(); //Call before polling for constant transmition
-    //spi_device_release_bus();
-
     return true;
+}
+
+bool FPGA_APP_Run(void) {
+    if(GET_FLAG(fpga_flags, FLAG_INIT_DONE) && GET_FLAG(fpga_flags, FLAG_PACKET_READY)) {
+        FPGA_APP_ReadPacket();
+        /* Read status again if more packets are available */
+        FPGA_APP_ReadStatus();
+    } else if(!GET_FLAG(fpga_flags, FLAG_INIT_DONE)) {
+        /* FPGA not ready, continuously check status register */
+        FPGA_APP_ReadStatus();
+    }
+    return true;
+}
+
+void FPGA_APP_UpdateRtc(void) {
+    //TODO: implement periodic rtc updates
+
+}
+
+void FPGA_APP_DataIrq(void) {
+    SET_FLAG(fpga_flags, FLAG_PACKET_READY);
 }

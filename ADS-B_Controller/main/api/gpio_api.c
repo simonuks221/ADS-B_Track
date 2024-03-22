@@ -2,8 +2,9 @@
 #include "esp_attr.h"
 
 #include "gpio_api.h"
-#include "timer_api.h"
 #include "common.h"
+#include "timer_api.h"
+#include "../fpga_app.h"
 
 typedef struct sGpioDesc {
     gpio_num_t num;
@@ -14,17 +15,18 @@ typedef struct sGpioDesc {
     bool init_level; /* Starting voltage level */
 } sGpioDesc_t;
 
-#define GPIO(_enum, _gpio, _mode, _up, _down, _int, _lvl) [_enum] = {.num = _gpio, .mode = _mode, .pull_up = _up, .pull_down = _down, .interrupt = _int, .init_level = _lvl}
+#define GPIO(_enum, _gpio, _mode, _up, _down, _lvl) [_enum] = {.num = _gpio, .mode = _mode, .pull_up = _up, .pull_down = _down, .interrupt = GPIO_INTR_DISABLE, .init_level = _lvl}
+#define EXTI(_enum, _gpio, _up, _down, _int)  [_enum] = {.num = _gpio, .mode = GPIO_MODE_INPUT, .pull_up = _up, .pull_down = _down, .interrupt = _int, .init_level = false}
 
 static const char *LOG_TAG = "GPIO";
 
 static const sGpioDesc_t gpio_lut[eGpioLast] = {
-    GPIO(eGpioFpgaInt, FPGA_DATA_IRQ_PIN, GPIO_MODE_INPUT, false, false, GPIO_INTR_POSEDGE, false),
-    GPIO(eGpioPPS, GPS_PPS_PIN, GPIO_MODE_INPUT, false, false, GPIO_INTR_POSEDGE, false),
-    GPIO(eGpioFpgaCS, FPGA_CS_PIN, GPIO_MODE_OUTPUT_OD, false, false, GPIO_INTR_DISABLE, true),
-    GPIO(eGpioLEDOne, LED_0_PIN, GPIO_MODE_OUTPUT, false, false, GPIO_INTR_DISABLE, false),
-    GPIO(eGpioLEDTwo, LED_1_PIN, GPIO_MODE_OUTPUT, false, false, GPIO_INTR_DISABLE, false),
-    GPIO(eGpioLEDThree, LED_2_PIN, GPIO_MODE_OUTPUT, false, false, GPIO_INTR_DISABLE, false),
+    EXTI(eGpioFpgaInt, FPGA_DATA_IRQ_PIN, false, false, GPIO_INTR_POSEDGE),
+    EXTI(eGpioPPS, GPS_PPS_PIN, false, false, GPIO_INTR_POSEDGE),
+    GPIO(eGpioFpgaCS, FPGA_CS_PIN, GPIO_MODE_OUTPUT_OD, false, false, true),
+    GPIO(eGpioLEDOne, LED_0_PIN, GPIO_MODE_OUTPUT, false, false, false),
+    GPIO(eGpioLEDTwo, LED_1_PIN, GPIO_MODE_OUTPUT, false, false, false),
+    GPIO(eGpioLEDThree, LED_2_PIN, GPIO_MODE_OUTPUT, false, false, false),
 };
 
 static void IRAM_ATTR gpio_isr_handler(void* arg) {
@@ -36,6 +38,9 @@ static void IRAM_ATTR gpio_isr_handler(void* arg) {
     if(gpio_num == gpio_lut[eGpioPPS].num) {
         /* Got PPS */
         Timer_API_SyncRtc();
+    } else if (gpio_num == gpio_lut[eGpioFpgaInt].num) {
+        /* Got FPGA interrupt */
+        FPGA_APP_DataIrq();
     }
 }
 

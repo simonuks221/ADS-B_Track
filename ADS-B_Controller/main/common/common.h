@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <string.h>
 
+#define ADSB_PACKET_LEN 10
+
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
 
 #define SET_FLAG(src, flag) ((src) |= (flag))
@@ -16,7 +18,7 @@ typedef struct sString {
 } sString_t;
 
 typedef struct sADSBPacket {
-    uint8_t data[10];
+    uint8_t data[ADSB_PACKET_LEN];
     uint32_t timestamp_ms;
     uint64_t timestamp_ns;
 } sADSBPacket_t;

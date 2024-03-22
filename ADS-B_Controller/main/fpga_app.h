@@ -4,6 +4,9 @@
 #include <stdbool.h>
 
 bool FPGA_APP_Init(void);
+bool FPGA_APP_Run(void);
 
+void FPGA_APP_UpdateRtc(void);
+void FPGA_APP_DataIrq(void);
 
 #endif // FPGA_APP_H
