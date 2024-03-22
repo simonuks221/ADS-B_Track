@@ -2,9 +2,6 @@
 #include <stdio.h>
 #include "common.h"
 
-#include "esp_log.h"
-
-
 /* Turns hex array to hex string */
 /* OUTPUT BUFFER MUST BE PREALLOCATED AR LEAST 2 * length */
 bool HexToString(const uint8_t *buffer, size_t length, char *out) {

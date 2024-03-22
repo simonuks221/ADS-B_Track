@@ -70,3 +70,11 @@ bool CBuff_Pop(struct CBuff* buffer, void* item) {
 
     return true;
 }
+
+size_t CBuff_GetLength(struct CBuff* buffer) {
+    if (buffer == NULL) {
+        return 0;
+    }
+    size_t length = (buffer->head - buffer->tail + buffer->capacity) % buffer->capacity;
+    return length;
+}

@@ -59,7 +59,8 @@
         "cstdio": "cpp",
         "sstream": "c",
         "common.h": "c",
-        "*.tcc": "c"
+        "*.tcc": "c",
+        "ratio": "c"
     },
     "idf.flashType": "UART"
 }

@@ -6,6 +6,10 @@
 
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
 
+#define SET_FLAG(src, flag) ((src) |= (flag))
+#define GET_FLAG(src, flag) (((src) & (flag)) != 0)
+#define CLEAR_FLAG(src, flag) ((src) &= ~(flag))
+
 typedef struct sString {
     char *content;
     size_t length;

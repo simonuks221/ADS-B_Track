@@ -12,6 +12,7 @@
 #include "lwip/netdb.h"
 #include "ping/ping_sock.h"
 #include "connection_app.h"
+#include "common/common.h"
 #include "c_buff.h"
 
 /* WiFi connection settings */
@@ -69,23 +70,10 @@ static struct CBuff *messages_cbuffer;
 
 static const char *LOG_TAG = "CONN";
 
-#define FLAGS_WIFI_CONNECTED BIT0
-#define FLAGS_WIFI_FAIL BIT1
-#define FLAGS_SEND_SOCKET BIT2
+#define FLAGS_CONNECTED BIT0
+#define FLAGS_MESSAGE_AVAILABLE BIT1
 
-static uint32_t flags = 0;
-static bool Connection_GetFlags(uint32_t new_flags, bool clear) {
-    bool return_val = false;
-    return_val = flags & new_flags;
-    if(clear) {
-        flags &= ~new_flags;
-    }
-    return return_val;
-}
-
-static void Connection_SetFlags(uint32_t new_flags) {
-    flags |= new_flags;
-}
+static uint32_t connection_flags = 0;
 
 static void Connection_SendSocket(void) {
     /* Get new message from circular buffer */
@@ -197,9 +185,9 @@ static void event_handler(void* arg, esp_event_base_t event_base,
         switch(event_id) {
             case WIFI_EVENT_STA_START: {
                 esp_wifi_connect();
-
             } break;
             case WIFI_EVENT_STA_DISCONNECTED: {
+                CLEAR_FLAG(connection_flags, FLAGS_CONNECTED);
                 //https://github.com/nopnop2002/esp-idf-ping/blob/master/main/main.c#L51
                 esp_wifi_connect();
             } break;
@@ -207,7 +195,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
     } else if (event_base == IP_EVENT) {
         if(event_id == IP_EVENT_STA_GOT_IP) {
             //ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
-            Connection_SetFlags(FLAGS_WIFI_CONNECTED);
+            SET_FLAG(connection_flags, FLAGS_CONNECTED);
         }
     }
 }
@@ -325,17 +313,11 @@ void Connection_Ping(void) {
 }
 
 bool Connection_APP_Run(void) {
-    if (Connection_GetFlags(FLAGS_WIFI_CONNECTED, true)) {
-        ESP_LOGI(LOG_TAG, "connected to aP");
-        //Connection_SetFlags(FLAGS_SEND_SOCKET);
-        //Connection_Ping();
-    }
-    if (Connection_GetFlags(FLAGS_WIFI_FAIL, true)) {
-		ESP_LOGE(LOG_TAG, "Failed to connect");
-		return true;
-	}
-    if(Connection_GetFlags(FLAGS_SEND_SOCKET, true)) { //clearing flags could leave members hanging
+    if(GET_FLAG(connection_flags, FLAGS_CONNECTED) && GET_FLAG(connection_flags, FLAGS_MESSAGE_AVAILABLE)) {
         Connection_SendSocket(); //TODO: send only when connected to wifi
+        if(CBuff_GetLength(messages_cbuffer) == 0) {
+            CLEAR_FLAG(connection_flags, FLAGS_MESSAGE_AVAILABLE);
+        }
     }
     return true;
 }
@@ -355,7 +337,7 @@ bool Connection_APP_SendMessageRegister(float latitude, float longitude, float a
         free(message_content);
         return false;
     }
-    Connection_SetFlags(FLAGS_SEND_SOCKET);
+    SET_FLAG(connection_flags, FLAGS_MESSAGE_AVAILABLE);
     return true;
 }
 
@@ -373,6 +355,10 @@ bool Connection_APP_SendMessagePacket(sADSBPacket_t packet) {
         free(message_content);
         return false;
     }
-    Connection_SetFlags(FLAGS_SEND_SOCKET);
+    SET_FLAG(connection_flags, FLAGS_MESSAGE_AVAILABLE);
     return true;
+}
+
+bool Connection_APP_IsConnected(void) {
+    return GET_FLAG(connection_flags, FLAGS_CONNECTED);
 }

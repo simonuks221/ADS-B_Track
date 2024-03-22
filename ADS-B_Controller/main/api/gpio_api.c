@@ -19,12 +19,12 @@ typedef struct sGpioDesc {
 static const char *LOG_TAG = "GPIO";
 
 static const sGpioDesc_t gpio_lut[eGpioLast] = {
-    GPIO(eGpioFpgaInt, GPIO_NUM_34, GPIO_MODE_INPUT, false, false, GPIO_INTR_POSEDGE, false),
-    GPIO(eGpioPPS, GPIO_NUM_35, GPIO_MODE_INPUT, false, false, GPIO_INTR_POSEDGE, false),
-    GPIO(eGpioFpgaCS, GPIO_NUM_36, GPIO_MODE_OUTPUT_OD, false, false, GPIO_INTR_DISABLE, true),
-    GPIO(eGpioLEDOne, GPIO_NUM_37, GPIO_MODE_OUTPUT, false, false, GPIO_INTR_DISABLE, false),
-    GPIO(eGpioLEDTwo, GPIO_NUM_38, GPIO_MODE_OUTPUT, false, false, GPIO_INTR_DISABLE, false),
-    GPIO(eGpioLEDThree, GPIO_NUM_39, GPIO_MODE_OUTPUT, false, false, GPIO_INTR_DISABLE, false),
+    GPIO(eGpioFpgaInt, FPGA_DATA_IRQ_PIN, GPIO_MODE_INPUT, false, false, GPIO_INTR_POSEDGE, false),
+    GPIO(eGpioPPS, GPS_PPS_PIN, GPIO_MODE_INPUT, false, false, GPIO_INTR_POSEDGE, false),
+    GPIO(eGpioFpgaCS, FPGA_CS_PIN, GPIO_MODE_OUTPUT_OD, false, false, GPIO_INTR_DISABLE, true),
+    GPIO(eGpioLEDOne, LED_0_PIN, GPIO_MODE_OUTPUT, false, false, GPIO_INTR_DISABLE, false),
+    GPIO(eGpioLEDTwo, LED_1_PIN, GPIO_MODE_OUTPUT, false, false, GPIO_INTR_DISABLE, false),
+    GPIO(eGpioLEDThree, LED_2_PIN, GPIO_MODE_OUTPUT, false, false, GPIO_INTR_DISABLE, false),
 };
 
 static void IRAM_ATTR gpio_isr_handler(void* arg) {

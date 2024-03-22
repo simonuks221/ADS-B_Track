@@ -3,6 +3,7 @@
 #include "esp_sleep.h"
 #include "sdkconfig.h"
 
+#include "../connection_app.h"
 #include "timer_api.h"
 
 static const char *LOG_TAG = "TIM";
@@ -19,7 +20,7 @@ static uint32_t rtc_timer_ms = 0;
 
 static sTimDesc_t timers[eTimLast] = {
     [eTimRTC] = {1000, "RTC", RTC_callback},
-    [eTimPeriodicData] = {1000000, "Periodic", PeriodicData_Callback}
+    [eTimPeriodicData] = {5000000, "Periodic", PeriodicData_Callback}
 };
 
 bool Timer_API_Init(void) {
@@ -45,10 +46,11 @@ static void RTC_callback(void* arg) {
     rtc_timer_ms++;
 }
 
-/* Periodic 1s callback for time printout */
+/* Periodic 5s callback for time printout */
 static void PeriodicData_Callback(void* arg) {
     sDate_t curr_time = Timer_API_GetRtcTime();
     ESP_LOGI(LOG_TAG, "Curr time: %hhu:%hhu:%hhu.%hu", curr_time.hours, curr_time.minutes, curr_time.seconds, curr_time.seconds_fraction);
+    ESP_LOGI(LOG_TAG, "Wifi: %s", Connection_APP_IsConnected() ? "Ok" : "Fail" );
 }
 
 /* Get RTC time in miliseconds */

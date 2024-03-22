@@ -30,7 +30,8 @@ bool FPGA_APP_Init(void) {
         .data6_io_num = -1,
         .data7_io_num = -1
     };
-    if(spi_bus_initialize(SPI2_HOST, &buscfg, SPI_DMA_CH_AUTO) != ESP_OK) {
+
+    if(spi_bus_initialize(SPI1_HOST, &buscfg, SPI_DMA_CH_AUTO) != ESP_OK) {
         ESP_LOGE(LOG_TAG, "Failed init SPI bus");
         return true;
     }
@@ -39,10 +40,10 @@ bool FPGA_APP_Init(void) {
         .clock_speed_hz = 10000000,
         .spics_io_num = FPGA_CS_PIN,
         //.queue_size = 10,
-        .flags = SPI_DEVICE_HALFDUPLEX
+        .flags = SPI_DEVICE_HALFDUPLEX | SPI_DEVICE_TXBIT_LSBFIRST | SPI_DEVICE_RXBIT_LSBFIRST
     };
     spi_device_handle_t handle;
-    if(spi_bus_add_device(SPI2_HOST,  &dev_config, &handle) != ESP_OK) {
+    if(spi_bus_add_device(SPI1_HOST,  &dev_config, &handle) != ESP_OK) {
         ESP_LOGE(LOG_TAG, "Failed registering device");
         return true;
     }
