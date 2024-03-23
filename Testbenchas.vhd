@@ -84,7 +84,7 @@ begin
 	P_SPI_CS <= '0';
 	P_SPI_SCLK <= '0';
 	wait for 5 ns;
-	for k in 0 to CMD_AMOUNT loop
+	for k in 0 to CMD_AMOUNT - 1 loop
 		for i in 0 to 7 loop
 			P_SPI_SCLK <= '0';
 			if k = 0 then
@@ -171,11 +171,12 @@ begin
 	SPI_CS <= '1';
 	wait for 1 us;
 	spi_send(x"01", 2, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
-	wait for 36 us;
+	wait for 10 us;
 	spi_send(x"01", 2, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	--Wait until packet received
 	wait until rising_edge(PACKET_IRQ);
 	wait for 10 us;	
-	spi_send(x"02", 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	--spi_send(x"02", 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	wait until rising_edge(PACKET_IRQ);
 	wait for 1 us;
 	spi_send(x"02", 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);

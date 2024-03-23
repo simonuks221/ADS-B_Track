@@ -11,7 +11,6 @@ port(
 	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
 	SPI_CYCLE_DONE : in std_logic := '0';
-	SPI_RESET : out std_logic := '0';
 	--Packets in from correlator
 	PACKET_IN_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	PACKET_IN_VALID : in std_logic := '0'
@@ -36,9 +35,8 @@ architecture arc of Packet_Storage is
 	constant PACKET_LENGTH : integer := 2;
 	
 	signal printout_idx : integer range 0 to PACKET_LENGTH := 1;
-	--signal printout_data : std_logic_vector(PACKET_LENGTH*8-1 downto 0) := x"0203";
+	
 	signal resp_data_buffer : std_logic_vector(7 downto 0) := (others => '0');
-	signal first_printout_data : std_logic_vector(7 downto 0) := x"FF";
 	--Packet storage FIFO
 	signal fifo_data_in	: std_logic_vector (7 DOWNTO 0) := (others => '0');
 	signal fifo_read_rq	: std_logic := '0';
@@ -49,12 +47,14 @@ architecture arc of Packet_Storage is
 	signal fifo_curr_length	: std_logic_vector (9 DOWNTO 0) := (others => '0'); --Current FIFO length
 	
 	signal fifo_rd_delay : std_logic := '0';
+	signal fifo_loaded : std_logic := '0';
 begin
 
 packet_fifo : PACKET_STORAGE_FIFO port map(CLK, fifo_data_in, fifo_read_rq, fifo_wr_rq, fifo_empty, fifo_full, fifo_q, fifo_curr_length);
 
 RESP_DATA <= resp_data_buffer when EN = '1' else (others => '0');
 
+--Writing to FIFO packet data
 process(CLK)
 begin
 	if rising_edge(CLK) then
@@ -71,37 +71,38 @@ begin
 	end if;
 end process;
 
+--Preload any received fifo data into send register
 process(CLK)
 begin
 	if rising_edge(CLK) then
-		SPI_RESET <= '0';
 		fifo_read_rq <= '0';
-		if EN = '0' then
-			resp_data_buffer <= first_printout_data;
-			fifo_rd_delay <= '0';
-		else
-			fifo_rd_delay <= fifo_read_rq;
+		fifo_rd_delay <= fifo_read_rq;
+		if fifo_loaded = '0' then
+			--Try load fifo
 			if fifo_rd_delay = '1' then
+				--Already reading, latch data
 				resp_data_buffer <= fifo_q;
-			end if;
-			if SPI_CYCLE_DONE = '1' then
-				--Check if printed everything out
-				if printout_idx = PACKET_LENGTH then
-					printout_idx <= 1;
-					SPI_RESET <= '1';
-				else
-					printout_idx <= printout_idx + 1;
+				fifo_loaded <= '1';
+			else
+				if fifo_read_rq = '0' then
 					if fifo_empty = '0' then
 						fifo_read_rq <= '1';
 					else
-						--FIFO empty
-						
+						resp_data_buffer <= (others => '0');
 					end if;
 				end if;
 			end if;
 		end if;
+		
+		if EN = '0' then
+		
+		else 
+			if SPI_CYCLE_DONE = '1' then
+				--Request another read from fifo
+				fifo_loaded <= '0';
+			end if;
+		end if;
 	end if;
 end process;
-
 
 end architecture;

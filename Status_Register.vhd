@@ -11,7 +11,6 @@ port(
 	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
 	SPI_CYCLE_DONE : in std_logic := '0';
-	SPI_RESET : out std_logic := '0';
 	--Status signals
 	INIT_DONE : in std_logic := '0'
 );
@@ -37,15 +36,7 @@ resp_data_buffer <= status_reg; --TODO: left this as only one register made
 process(CLK)
 begin
 	if rising_edge(CLK) then
-		SPI_RESET <= '0';
 		status_reg <= "000000" & INIT_DONE & '1';
-		if EN = '0' then
-			
-		else
-			if SPI_CYCLE_DONE = '1' then
-				SPI_RESET <= '1';
-			end if;
-		end if;
 	end if;
 end process;
 

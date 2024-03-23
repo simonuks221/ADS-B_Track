@@ -30,7 +30,7 @@ port(
 );
 end entity;
 
-architecture arc of Corr_Main is --TestVoltage signals "101101" ir "000010"
+architecture arc of Corr_Main is --TestVoltage signals "101101" and "000010"
 
 component Corr_Buffer is
 	generic(

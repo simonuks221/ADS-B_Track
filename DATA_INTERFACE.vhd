@@ -55,7 +55,6 @@ port(
 	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
 	SPI_CYCLE_DONE : in std_logic := '0';
-	SPI_RESET : out std_logic := '0';
 	--Packets in from correlator
 	PACKET_IN_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	PACKET_IN_VALID : in std_logic := '0'
@@ -69,7 +68,6 @@ port(
 	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
 	SPI_CYCLE_DONE : in std_logic := '0';
-	SPI_RESET : out std_logic := '0';
 	--Status signals
 	INIT_DONE : in std_logic := '0'
 );
@@ -81,8 +79,7 @@ port(
 	CLK: in std_logic := '0';
 	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
-	SPI_CYCLE_DONE : in std_logic := '0';
-	SPI_RESET : out std_logic := '0'
+	SPI_CYCLE_DONE : in std_logic := '0'
 	--
 	
 );
@@ -99,11 +96,7 @@ signal storage_resp_data : std_logic_vector(7 downto 0) := (others => '0');
 signal status_resp_data : std_logic_vector(7 downto 0) := (others => '0');
 signal rtc_resp_data : std_logic_vector(7 downto 0) := (others => '0');
 --Shared reset to reset decoder cmd
-signal reset_bus : std_logic := '0';
 signal spi_reset : std_logic := '0';
-signal storage_reset : std_logic := '0';
-signal status_reset : std_logic := '0';
-signal rtc_reset : std_logic := '0';
 --Signals for controlling decoder peripherals
 signal packet_storage_en : std_logic := '0';
 signal status_register_en : std_logic := '0';
@@ -113,18 +106,17 @@ begin
 
 spi : SPI_SLAVE port map(CLK, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, resp_data_bus, raw_cmd_data, spi_cycle_done, spi_reset);
 
-decoder : SPI_DECODER port map(CLK, raw_cmd_data, decoded_cmd_data, decoded_cmd_valid, spi_cycle_done, reset_bus, packet_storage_en,
+decoder : SPI_DECODER port map(CLK, raw_cmd_data, decoded_cmd_data, decoded_cmd_valid, spi_cycle_done, spi_reset, packet_storage_en,
 											status_register_en, rtc_register_en);
 
-stor : Packet_Storage port map (packet_storage_en, CLK, decoded_cmd_data, storage_resp_data, decoded_cmd_valid, storage_reset,
+stor : Packet_Storage port map (packet_storage_en, CLK, decoded_cmd_data, storage_resp_data, decoded_cmd_valid,
 											PACKET_IN_DATA, PACKET_IN_VALID);
 
-stat : Status_Register port map(status_register_en, CLK, decoded_cmd_data, status_resp_data, decoded_cmd_valid, status_reset,
+stat : Status_Register port map(status_register_en, CLK, decoded_cmd_data, status_resp_data, decoded_cmd_valid,
 											STATUS_INIT_DONE);
 
-rtc : RTC_Register port map(rtc_register_en, CLK, decoded_cmd_data, rtc_resp_data, decoded_cmd_valid, rtc_reset);
+rtc : RTC_Register port map(rtc_register_en, CLK, decoded_cmd_data, rtc_resp_data, decoded_cmd_valid);
 
 resp_data_bus <= storage_resp_data or status_resp_data or rtc_resp_data;
-reset_bus <= storage_reset or spi_reset or status_reset or rtc_reset;
 
 end architecture;
