@@ -48,6 +48,9 @@ port(
 	UART_RX : in std_logic := '0';
 	UART_TX : out std_logic := '1';
 	
+	--RTC
+	PPS : in std_logic := '0';
+	
 	--IRQ
 	PACKET_IRQ : out std_logic := '0'
 );
@@ -216,7 +219,8 @@ port(
 	PACKET_IN_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	PACKET_IN_VALID : in std_logic := '0';
 	
-	STATUS_INIT_DONE : in std_logic := '0'
+	STATUS_INIT_DONE : in std_logic := '0';
+	PREAMBULE_FOUND : in std_Logic := '0'
 );
 end component;
 
@@ -268,7 +272,7 @@ signal PREAMB_FOUND : std_logic := '0'; --For debugging
 
 begin
 
-pll_1 : wizard_pll port map(inclk0 => CLK, c0 => CLK_150); --150MHz
+pll_1 : wizard_pll port map(inclk0 => CLK, c0 => CLK_150); --50 MHz -> 150 MHz
 ADC_SHDN <= '0';
 ADC_CLK <= CLK;
 
@@ -310,7 +314,8 @@ Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 50, BUFFER_WIDTH => 9, MAX
 							MRAM_DONE => MRAM_DONE, EN_CORR => EN_CORR, CORR_DONE => CORR_DONE, PACKET_DATA => PACKET_DATA,
 							PACKET_VALID => PACKET_VALID, PACKET_IRQ => PACKET_IRQ);
 
-data_interface_1 : DATA_INTERFACE port map(CLK_150, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, PACKET_DATA, PACKET_VALID, SETUP_DONE);
+data_interface_1 : DATA_INTERFACE port map(CLK_150, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, PACKET_DATA, PACKET_VALID, SETUP_DONE, 
+                                           PREAMB_FOUND);
 
 process(CLK_150)
 begin

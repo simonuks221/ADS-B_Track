@@ -179,6 +179,26 @@ set_global_assignment -name EDA_TEST_BENCH_NAME PacketSend_Testbench -section_id
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id PacketSend_Testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME PacketSend_Testbench -section_id PacketSend_Testbench
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 us" -section_id PacketSend_Testbench
+set_global_assignment -name EDA_TEST_BENCH_NAME CRC_Testbench -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CRC_Testbench
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "10 us" -section_id CRC_Testbench
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME CRC_Testbench -section_id CRC_Testbench
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BUTTON
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to "wizard_pll:pll_1|altpll:altpll_component|_clk0"
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to "wizard_pll:pll_1|altpll:altpll_component|_clk0~clkctrl"
+set_location_assignment PIN_43 -to PACKET_IRQ
+set_global_assignment -name EDA_TEST_BENCH_FILE Testbenchas.vhd -section_id Testbenchas
+set_global_assignment -name EDA_TEST_BENCH_FILE new_testbench.vhd -section_id new_testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE SPI_Testbench.vhd -section_id SPI_Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE UART_Testbench.vhd -section_id UART_Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE MRAM_Testbench.vhd -section_id MRAM_Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE CORR_Testbench.vhd -section_id CORR_Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE PacketSend_Testbench.vhd -section_id PacketSend_Testbench
+set_global_assignment -name EDA_TEST_BENCH_FILE CRC_Testbench.vhd -section_id CRC_Testbench
+set_global_assignment -name VHDL_FILE RTC_Set_Register.vhd
 set_global_assignment -name VHDL_FILE PacketSend_Testbench.vhd
 set_global_assignment -name VHDL_FILE Packet_Storage.vhd
 set_global_assignment -name VHDL_FILE SPI_SLAVE.vhd
@@ -206,29 +226,10 @@ set_global_assignment -name VHDL_FILE CORR_Testbench.vhd
 set_global_assignment -name VHDL_FILE DATA_INTERFACE.vhd
 set_global_assignment -name VHDL_FILE CRC_24_Calc.vhd
 set_global_assignment -name VHDL_FILE CRC_Testbench.vhd
-set_global_assignment -name EDA_TEST_BENCH_NAME CRC_Testbench -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CRC_Testbench
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "10 us" -section_id CRC_Testbench
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME CRC_Testbench -section_id CRC_Testbench
 set_global_assignment -name QIP_FILE adc_sync_fifo.qip
 set_global_assignment -name VHDL_FILE SPI_DECODER.vhd
 set_global_assignment -name QIP_FILE PACKET_STORAGE_FIFO.qip
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BUTTON
-set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to "wizard_pll:pll_1|altpll:altpll_component|_clk0"
-set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to "wizard_pll:pll_1|altpll:altpll_component|_clk0~clkctrl"
 set_global_assignment -name VHDL_FILE Status_Register.vhd
 set_global_assignment -name VHDL_FILE RTC.vhd
-set_location_assignment PIN_43 -to PACKET_IRQ
-set_global_assignment -name VHDL_FILE RTC_Register.vhd
-set_global_assignment -name EDA_TEST_BENCH_FILE Testbenchas.vhd -section_id Testbenchas
-set_global_assignment -name EDA_TEST_BENCH_FILE new_testbench.vhd -section_id new_testbench
-set_global_assignment -name EDA_TEST_BENCH_FILE SPI_Testbench.vhd -section_id SPI_Testbench
-set_global_assignment -name EDA_TEST_BENCH_FILE UART_Testbench.vhd -section_id UART_Testbench
-set_global_assignment -name EDA_TEST_BENCH_FILE MRAM_Testbench.vhd -section_id MRAM_Testbench
-set_global_assignment -name EDA_TEST_BENCH_FILE CORR_Testbench.vhd -section_id CORR_Testbench
-set_global_assignment -name EDA_TEST_BENCH_FILE PacketSend_Testbench.vhd -section_id PacketSend_Testbench
-set_global_assignment -name EDA_TEST_BENCH_FILE CRC_Testbench.vhd -section_id CRC_Testbench
+set_global_assignment -name VHDL_FILE RTC_Read_Register.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

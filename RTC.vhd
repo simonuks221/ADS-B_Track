@@ -12,8 +12,7 @@ port(
 	CAPTURED_MS : out std_logic_vector(31 downto 0) := (others => '0');
 	CAPTURED_NS : out std_logic_vector(18 downto 0) := (others => '0');
 	INPUT_IRQ : in std_logic := '0';
-	INPUT_MS : in std_logic_vector(31 downto 0) := (others => '0');
-	INPUT_NS : in std_logic_vector(18 downto 0) := (others => '0')
+	INPUT_MS : in std_logic_vector(31 downto 0) := (others => '0')
 );
 end entity;
 
@@ -24,6 +23,7 @@ architecture arc of RTC is
 	signal ns_counter : integer range 0 to 262143 := 0; --18 bits
 begin
 
+--Output timestamp
 process(CLK)
 begin
 	if rising_edge(CLK) then
@@ -39,7 +39,19 @@ variable remainder : integer := 0;
 variable rounded_number : integer := 0;
 begin
 	if rising_edge(CLK) then
-		if PPS_IRQ = '1' then
+		if INPUT_IRQ = '1' then
+			--Write in value from SPI input
+			ms_counter <= unsigned(INPUT_MS);
+			
+			if ns_counter = 149999 then
+				--Increment ms counter
+				ms_counter <= to_unsigned(to_integer(ms_counter) + 1, ms_counter'length);
+				ns_counter <= 0;
+			else
+				--Increment ns counter
+				ns_counter <= ns_counter + 1;
+			end if;
+		elsif PPS_IRQ = '1' then
 			--Synchronize to 1s period PPS
 			--Round up to upper 1000ms
 			--TODO: find if near 1000ms and dont increment

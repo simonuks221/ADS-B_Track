@@ -54,6 +54,9 @@ signal UART_TX : std_logic := '1';
 --IRQ
 signal PACKET_IRQ : std_logic := '0';
 
+--RTC
+signal PPS : std_logic := '0';
+
 --Functions
 --Read from file
 file file_voltages: text;
@@ -98,7 +101,37 @@ begin
 	P_SPI_SCLK <= '0';
 	wait for 5 ns;
 	P_SPI_CS <= '1';
-	
+end procedure ;
+
+--Send SPI command
+procedure spi_send_time(constant CMD : in std_logic_vector(31 downto 0);
+						constant CMD_AMOUNT : in integer; --INcluding first register data
+						signal P_SPI_MOSI : out std_logic;
+						signal P_SPI_MISO : in std_logic;
+						signal P_SPI_SCLK : out std_logic;
+						signal P_SPI_CS : out std_logic
+						) is
+	constant time_cmd : std_logic_vector(7 downto 0) := x"03";
+begin
+	P_SPI_CS <= '0';
+	P_SPI_SCLK <= '0';
+	wait for 5 ns;
+	for k in 0 to CMD_AMOUNT - 1 loop
+		for i in 0 to 7 loop
+			P_SPI_SCLK <= '0';
+			if k = 0 then
+				P_SPI_MOSI <= time_cmd(i);
+			else
+				P_SPI_MOSI <= CMD(i+(k-1)*8);
+			end if;
+			wait for 500 ns;
+			P_SPI_SCLK <= '1';
+			wait for 500 ns;
+		end loop;
+	end loop;
+	P_SPI_SCLK <= '0';
+	wait for 5 ns;
+	P_SPI_CS <= '1';
 end procedure ;
 
 signal adc_buffer : b_data := init;
@@ -145,7 +178,10 @@ port(
 	UART_TX : out std_logic := '1';
 	
 	--IRQ
-	PACKET_IRQ : out std_logic := '0'
+	PACKET_IRQ : out std_logic := '0';
+	
+	--RTC
+	PPS : in std_logic := '0'
 	
 );
 end component;
@@ -153,13 +189,18 @@ end component;
 type mram_data_type is array(0 to 25600) of std_logic_vector(15 downto 0);
 signal mram_data : mram_data_type := (others => (others => '0'));
 
+constant status_register_cmd : std_logic_vector(7 downto 0) := x"01";
+constant packet_storage_cmd : std_logic_vector(7 downto 0) := x"02";
+constant rtc_register_set_cmd : std_logic_vector(7 downto 0) := x"03";
+constant rtc_register_read_cmd : std_logic_vector(7 downto 0) := x"04";
+
 BEGIN
 i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, ADC_SYNC => ADC_SYNC, ADC_CLK => ADC_CLK,
 									ADC_SPI_SDIN => ADC_SPI_SDIN, ADC_SPI_SCLK => ADC_SPI_SCLK, ADC_SPI_CS => ADC_SPI_CS,ADC_DCLKA => ADC_DCLKA,
 									MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,  MRAM_A => MRAM_A, MRAM_EN => MRAM_EN, MRAM_WRITE_EN => MRAM_WRITE_EN,
 									MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_D => MRAM_D,ADC_BIT_A => ADC_BIT_A,
 									UART_RX => UART_RX, UART_TX => UART_TX, SPI_MOSI => SPI_MOSI, SPI_MISO => SPI_MISO, 
-									SPI_CS => SPI_CS, SPI_SCLK => SPI_SCLK, PACKET_IRQ => PACKET_IRQ);
+									SPI_CS => SPI_CS, SPI_SCLK => SPI_SCLK, PACKET_IRQ => PACKET_IRQ, PPS => PPS);
 	
 CLK <= not CLK after 10 ns; --50MHz 20ns
 
@@ -170,16 +211,21 @@ process
 begin
 	SPI_CS <= '1';
 	wait for 1 us;
-	spi_send(x"01", 2, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	spi_send(status_register_cmd, 2, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	wait for 10 us;
-	spi_send(x"01", 2, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	spi_send(status_register_cmd, 2, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	--wait for 5 us;
+	--spi_send(x"04", 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	wait for 5 us;
+	spi_send_time(x"10203040", 5, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	--Wait until packet received
 	wait until rising_edge(PACKET_IRQ);
-	wait for 10 us;	
-	--spi_send(x"02", 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
-	wait until rising_edge(PACKET_IRQ);
-	wait for 1 us;
-	spi_send(x"02", 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	wait for 10 us;
+	spi_send(rtc_register_read_cmd, 7, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	--spi_send(packet_storage_cmd, 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	--wait until rising_edge(PACKET_IRQ);
+	--wait for 1 us;
+	--spi_send(packet_storage_cmd, 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	wait;
 end process;
 
