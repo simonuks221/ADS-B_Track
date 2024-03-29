@@ -8,7 +8,7 @@ typedef enum eUart {
     eUartFirst = 0,
     eUartNextion = eUartFirst,
     eUartGps,
-    eUartDebug, /* Uart debug port */
+    //eUartDebug, /* Uart debug port */
     eUartLast
 }eUart_t;
 

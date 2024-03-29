@@ -66,8 +66,9 @@ static bool GPS_APP_SetGoodCoordinates(float new_latitude, float new_longitude, 
     good_coordinates.latitude = new_latitude;
     good_coordinates.longitude = new_longitude;
     good_coordinates.altitude = new_altitude;
-    Nextion_API_SendCmd(eNextionCmdStart, new_latitude, new_longitude, 0); //TODO: implement time
+    //Nextion_API_SendCmd(eNextionCmdStart, new_latitude, new_longitude, 0); //TODO: implement time
     Connection_APP_SendMessageRegister(new_latitude, new_longitude, new_altitude, 0);
+    Nextion_API_SendCmd(eNextionCmdGpsOk);
     return true;
 }
 
@@ -88,7 +89,7 @@ const sCoordinates_t *GPS_APP_GetCoordinates(void) {
 }
 
 bool GPS_APP_Init(void) {
-    return UART_API_RegisterDelimiter(eUartDebug, '\n', HandleGpsMessage); //TODO: change from debug
+    return UART_API_RegisterDelimiter(eUartGps, '\n', HandleGpsMessage); //TODO: change from debug
 }
 
 static void GGA_Handler(uint8_t *message, size_t len) {

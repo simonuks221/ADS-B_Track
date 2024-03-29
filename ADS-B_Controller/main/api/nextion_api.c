@@ -23,7 +23,7 @@ static char *nextion_cmd_format_lut[eNextionCmdLast] = {
 
 
 bool Nextion_API_Init(void) {
-
+    //Nextion_API_SendCmd(eNextionCmdGpsOk);
     return true;
 }
 

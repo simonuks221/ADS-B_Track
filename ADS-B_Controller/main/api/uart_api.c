@@ -25,20 +25,20 @@ typedef struct sUartDelimDesc {
 
 static const sUartDesc_t uart_lut[eUartLast] = {
     [eUartNextion] = {UART_NUM_1, 115200, NEXTION_RX_PIN, NEXTION_TX_PIN, 1024, 0, false},
-    [eUartGps] = {UART_NUM_2, 115200, GPS_RX_PIN, GPS_TX_PIN, 1024, 0, false},
-    [eUartDebug] = {UART_NUM_0, 115200, GPS_RX_PIN, GPS_TX_PIN, 1024, 0, true}
+    [eUartGps] = {UART_NUM_2, 4800, GPS_RX_PIN, GPS_TX_PIN, 1024, 0, true},
+    //[eUartDebug] = {UART_NUM_0, 115200, GPS_RX_PIN, GPS_TX_PIN, 1024, 0, true}
 };
 
 static sUartDelimDesc_t uart_delimiter_lut[eUartLast] = { //TODO: add delimiter length
     [eUartNextion] = {' ', NULL},
     [eUartGps] = {' ', NULL},
-    [eUartDebug] = {' ', NULL}
+    //[eUartDebug] = {' ', NULL}
 };
 
 static QueueHandle_t uart_queue_handlers[eUartLast] = {
     [eUartNextion] = NULL,
     [eUartGps] = NULL,
-    [eUartDebug] = NULL
+    //[eUartDebug] = NULL
 };
 
 static BaseType_t event_handler_task = pdFALSE;
@@ -69,7 +69,7 @@ bool UART_API_Init(void) {
         if(uart_param_config(uart_lut[uart].port, &uart_config) != ESP_OK) {
             return false;
         }
-        if(uart_set_pin(UART_NUM_1, uart_lut[uart].tx_pin, uart_lut[uart].rx_pin, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE) != ESP_OK) {
+        if(uart_set_pin(uart_lut[uart].port, uart_lut[uart].tx_pin, uart_lut[uart].rx_pin, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE) != ESP_OK) {
             return false;
         }
     }
@@ -102,25 +102,26 @@ static void UART_API_Event_Handler(void *pvParameters) {
     static uint8_t rx_buffer[1024] = {0};
     while(true) {
         //Waiting for UART event.
-        if (xQueueReceive(uart_queue_handlers[eUartDebug], (void *)&event, (TickType_t)portMAX_DELAY)) {
+        eUart_t uart = eUartGps;
+        if (xQueueReceive(uart_queue_handlers[uart], (void *)&event, (TickType_t)portMAX_DELAY)) {
             //TODO: fix hardcoded value of eUartDebug
-            ESP_LOGI(LOG_TAG, "uart[%d] event: %u", UART_NUM_0, event.type);
+            ESP_LOGI(LOG_TAG, "uart[%d] event: %u", uart_lut[uart].port, event.type);
             switch (event.type) {
                 case UART_DATA:
-                    //ESP_LOGI(LOG_TAG, "[UART DATA]: %d", event.size);
-                    //uart_read_bytes(UART_NUM_0, rx_buffer, event.size, portMAX_DELAY);
-                    //ESP_LOGI(LOG_TAG, "[DATA EVT]:");
-                    //ESP_LOGI(LOG_TAG, "%s", (char *)rx_buffer);
+                    ESP_LOGI(LOG_TAG, "[UART DATA]: %d", event.size);
+                    uart_read_bytes(uart_lut[uart].port, rx_buffer, event.size, portMAX_DELAY);
+                    ESP_LOGI(LOG_TAG, "[DATA EVT]:");
+                    ESP_LOGI(LOG_TAG, "%s", (char *)rx_buffer);
                     break;
                 case UART_FIFO_OVF:
                     //ESP_LOGI(LOG_TAG, "hw fifo overflow");
-                    uart_flush_input(UART_NUM_0); //TODO: hardcoded
-                    xQueueReset(uart_queue_handlers[eUartDebug]);
+                    uart_flush_input(uart_lut[uart].port); //TODO: hardcoded
+                    xQueueReset(uart_queue_handlers[uart]);
                     break;
                 case UART_BUFFER_FULL:
                     //ESP_LOGI(LOG_TAG, "ring buffer full");
-                    uart_flush_input(UART_NUM_0); //TODO: hardcoded
-                    xQueueReset(uart_queue_handlers[eUartDebug]);
+                    uart_flush_input(uart_lut[uart].port); //TODO: hardcoded
+                    xQueueReset(uart_queue_handlers[uart]);
                     break;
                 case UART_BREAK:
                     break;
@@ -129,20 +130,20 @@ static void UART_API_Event_Handler(void *pvParameters) {
                 case UART_FRAME_ERR:
                     break;
                 case UART_PATTERN_DET:
-                    uart_get_buffered_data_len(UART_NUM_0, &buffered_size);
-                    int pos = uart_pattern_pop_pos(UART_NUM_0);
+                    uart_get_buffered_data_len(uart_lut[uart].port, &buffered_size);
+                    int pos = uart_pattern_pop_pos(uart_lut[uart].port);
                     ESP_LOGI(LOG_TAG, "[UART PATTERN DETECTED] pos: %d, buffered size: %d", pos, buffered_size);
 
                     if (pos == -1) {
-                        uart_flush_input(UART_NUM_0);
+                        uart_flush_input(uart_lut[uart].port);
                     } else {
-                        uart_read_bytes(UART_NUM_0, rx_buffer, pos + 1, 100 / portTICK_PERIOD_MS); /* +1 - for including the delimiter TODO: should be procedural */
+                        uart_read_bytes(uart_lut[uart].port, rx_buffer, pos + 1, 100 / portTICK_PERIOD_MS); /* +1 - for including the delimiter TODO: should be procedural */
                         ESP_LOGI(LOG_TAG,"%s", (char *)rx_buffer);
                         //TODO: remove the include and handler
-                        if(uart_delimiter_lut[eUartDebug].delimiter_callback == NULL) { //TODO: hardcoded
+                        if(uart_delimiter_lut[uart].delimiter_callback == NULL) { //TODO: hardcoded
                             break;
                         }
-                        (*uart_delimiter_lut[eUartDebug].delimiter_callback)(rx_buffer, pos);
+                        (*uart_delimiter_lut[uart].delimiter_callback)(rx_buffer, pos);
                     }
                     break;
                 default:
