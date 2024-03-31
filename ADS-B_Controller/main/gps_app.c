@@ -66,20 +66,20 @@ static bool GPS_APP_SetGoodCoordinates(float new_latitude, float new_longitude, 
     good_coordinates.latitude = new_latitude;
     good_coordinates.longitude = new_longitude;
     good_coordinates.altitude = new_altitude;
-    //Nextion_API_SendCmd(eNextionCmdStart, new_latitude, new_longitude, 0); //TODO: implement time
+    //Nextion_API_SendCmd(eNextionCmdStart, 0, new_latitude, new_longitude); //TODO: implement time
     Connection_APP_SendMessageRegister(new_latitude, new_longitude, new_altitude, 0);
     Nextion_API_SendCmd(eNextionCmdGpsOk);
     return true;
 }
 
-static bool GPS_APP_SetGoodTime(char utc_time_string[10]) {
+static bool GPS_APP_SetGoodTime(char *utc_time_string) {
     sDate_t utc_time;
     /* Parsing of time string into decimals */
     /* Doesn't use sscanf for speed */
-    utc_time.hours = (utc_time_string[0] - '0') * 10 + (utc_time_string[1] - '0');
-    utc_time.minutes = (utc_time_string[2] - '0') * 10 + (utc_time_string[3] - '0');
-    utc_time.seconds = (utc_time_string[4] - '0') * 10 + (utc_time_string[5] - '0');
-    utc_time.seconds_fraction = (utc_time_string[7] - '0') * 100 + (utc_time_string[8] - '0') * 10 + (utc_time_string[9] - '0');
+    utc_time.hours = (*utc_time_string - '0') * 10 + (*(utc_time_string + 1) - '0');
+    utc_time.minutes = (*(utc_time_string + 2) - '0') * 10 + (*(utc_time_string + 3) - '0');
+    utc_time.seconds = (*(utc_time_string + 4) - '0') * 10 + (*(utc_time_string + 5) - '0');
+    utc_time.seconds_fraction = (*(utc_time_string + 7) - '0') * 100 + (*(utc_time_string + 8) - '0') * 10 + (*(utc_time_string + 9) - '0');
     Timer_API_SetRtc(utc_time);
     return true;
 }

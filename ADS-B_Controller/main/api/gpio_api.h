@@ -25,9 +25,9 @@
 #define NEXTION_TX_PIN GPIO_NUM_1
 #define NEXTION_RX_PIN GPIO_NUM_2
 
-#define LED_0_PIN GPIO_NUM_4
-#define LED_1_PIN GPIO_NUM_6
-#define LED_2_PIN GPIO_NUM_5
+#define LED_0_PIN GPIO_NUM_5
+#define LED_1_PIN GPIO_NUM_4
+#define LED_2_PIN GPIO_NUM_6
 
 typedef enum eGpio {
     eGpioFirst = 0,

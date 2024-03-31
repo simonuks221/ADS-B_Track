@@ -34,7 +34,7 @@ sApp_t app_lut[] = {
     //{"SD", SD_API_Init, NULL},
     {"GPS", GPS_APP_Init, NULL},
     //{"FPGA", FPGA_APP_Init, FPGA_APP_Run},
-    //{"CONNECTION", Connection_APP_Init, Connection_APP_Run}
+    {"CONNECTION", Connection_APP_Init, Connection_APP_Run}
 };
 
 void app_main(void) {
