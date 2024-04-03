@@ -16,9 +16,9 @@ static char *nextion_cmd_format_lut[eNextionCmdLast] = {
     [eNextionCmdGpsError] = "\x0D\x02",
     [eNextionCmdRegressionOk] = "\x0E\x01",
     [eNextionCmdRegressionError] = "\x0E\x02",
-    [eNextionCmdPOk] = "\x0F\x01",                     //TODO: check if need extra nulls at end
-    [eNextionCmdStart] = "\x0A%6.0f%2.6f%2.6f\x00\x00" /* Arguments: globaltime float? Latitude float, longitude float  */,
-    [eNextionCmdInfo] = "\x0B%6.0f\x00\x00"            /* Arguments: float globaltime? */
+    [eNextionCmdPOk] = "\x0F\x01",
+    [eNextionCmdStart] = "\x0A%02u%02u%02u%09.6f%09.6f\x00\x00" /* Arguments:hours, minutes, seconds, latitude, longitude */,
+    [eNextionCmdInfo] = "\x0B%02u%02u%02u\x00\x00"              /* Arguments: hours, minutes, seconds */
 };
 
 

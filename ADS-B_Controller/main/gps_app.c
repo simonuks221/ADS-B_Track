@@ -89,7 +89,8 @@ const sCoordinates_t *GPS_APP_GetCoordinates(void) {
 }
 
 bool GPS_APP_Init(void) {
-    return UART_API_RegisterDelimiter(eUartGps, '\n', HandleGpsMessage); //TODO: change from debug
+    UART_API_RegisterDelimiter(eUartDebug, '\n', HandleGpsMessage); //TODO: change from debug
+    return UART_API_RegisterDelimiter(eUartGps, '\n', HandleGpsMessage);
 }
 
 static void GGA_Handler(uint8_t *message, size_t len) {

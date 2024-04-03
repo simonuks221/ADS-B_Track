@@ -61,8 +61,7 @@ static bool FPGA_APP_ReadStatus(void) {
         .rx_buffer = status_register.buffer,
         .rxlength = 1
     };
-    //spi_device_acquire_bus(); //Call before polling for constant transmition
-    //spi_device_release_bus();
+
     if(spi_device_polling_transmit(spi_handle, &transaction) != ESP_OK) {
         ESP_LOGE(LOG_TAG, "Failed transmitting read status");
     }
@@ -74,8 +73,6 @@ static bool FPGA_APP_ReadStatus(void) {
     status_register.data.init == 1 ?  SET_FLAG(fpga_flags, FLAG_INIT_DONE) : CLEAR_FLAG(fpga_flags, FLAG_INIT_DONE);
     return true;
 }
-
-
 
 bool FPGA_APP_Init(void) {
     /* Init SPI */
@@ -125,7 +122,6 @@ bool FPGA_APP_Run(void) {
 
 void FPGA_APP_UpdateRtc(void) {
     //TODO: implement periodic rtc updates
-
 }
 
 void FPGA_APP_DataIrq(void) {

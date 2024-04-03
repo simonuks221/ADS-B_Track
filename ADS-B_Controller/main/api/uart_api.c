@@ -26,24 +26,22 @@ typedef struct sUartDelimiterDesc {
 
 static const sUartDesc_t uart_lut[eUartLast] = {
     [eUartNextion] = {UART_NUM_1, 115200, NEXTION_RX_PIN, NEXTION_TX_PIN, 1024, 0, 0},
-    [eUartGps] = {UART_NUM_2, 4800, GPS_RX_PIN, GPS_TX_PIN, 1024, 0, 20},
-    //[eUartDebug] = {UART_NUM_0, 115200, GPS_RX_PIN, GPS_TX_PIN, 1024, 0, true}
+    [eUartGps] = {UART_NUM_2, 4800, GPS_RX_PIN, GPS_TX_PIN, 1024, 0, 50},
+    [eUartDebug] = {UART_NUM_0, 115200, PROG_RX_PIN, PROG_TX_PIN, 1024, 0, 50}
 };
 
 /* Saves dalimiter to use for UART event queue */
 static sUartDelimiterDesc_t uart_delimiter_lut[eUartLast] = { //TODO: add delimiter length
     [eUartNextion] = {' ', NULL},
     [eUartGps] = {' ', NULL},
-    //[eUartDebug] = {' ', NULL}
+    [eUartDebug] = {' ', NULL}
 };
 
 static QueueHandle_t uart_queue_handlers[eUartLast] = {
     [eUartNextion] = NULL,
     [eUartGps] = NULL,
-    //[eUartDebug] = NULL
+    [eUartDebug] = NULL
 };
-
-
 
 bool UART_API_Init(void) {
     for(eUart_t uart = eUartFirst; uart < eUartLast; uart++) {
@@ -99,19 +97,19 @@ static void UART_API_HandleEvent(eUart_t uart, uart_event_t *event) {
     ESP_LOGI(LOG_TAG, "uart[%d] event: %u", uart_lut[uart].port, event->type);
     switch (event->type) {
         case UART_DATA:
-            ESP_LOGI(LOG_TAG, "[UART DATA]: %d", event->size);
-            uart_read_bytes(uart_lut[uart].port, rx_buffer, event->size, portMAX_DELAY);
-            ESP_LOGI(LOG_TAG, "[DATA EVT]:");
-            ESP_LOGI(LOG_TAG, "%s", (char *)rx_buffer);
+            ESP_LOGI(LOG_TAG, "[UART DATA]: %d", event->size); //TODO: doesn't read uart because pattern isn't found yet
+            //uart_read_bytes(uart_lut[uart].port, rx_buffer, event->size, portMAX_DELAY);
+            //ESP_LOGI(LOG_TAG, "[DATA EVT]:");
+            //ESP_LOGI(LOG_TAG, "%s", (char *)rx_buffer);
             break;
         case UART_FIFO_OVF:
             //ESP_LOGI(LOG_TAG, "hw fifo overflow");
-            uart_flush_input(uart_lut[uart].port); //TODO: hardcoded
+            uart_flush_input(uart_lut[uart].port);
             xQueueReset(uart_queue_handlers[uart]);
             break;
         case UART_BUFFER_FULL:
             //ESP_LOGI(LOG_TAG, "ring buffer full");
-            uart_flush_input(uart_lut[uart].port); //TODO: hardcoded
+            uart_flush_input(uart_lut[uart].port);
             xQueueReset(uart_queue_handlers[uart]);
             break;
         case UART_BREAK:
@@ -131,7 +129,7 @@ static void UART_API_HandleEvent(eUart_t uart, uart_event_t *event) {
                 uart_read_bytes(uart_lut[uart].port, rx_buffer, pos + 1, 100 / portTICK_PERIOD_MS); /* +1 - for including the delimiter TODO: should be procedural */
                 ESP_LOGI(LOG_TAG,"%s", (char *)rx_buffer);
                 //TODO: remove the include and handler
-                if(uart_delimiter_lut[uart].delimiter_callback == NULL) { //TODO: hardcoded
+                if(uart_delimiter_lut[uart].delimiter_callback == NULL) {
                     break;
                 }
                 (*uart_delimiter_lut[uart].delimiter_callback)(rx_buffer, pos);

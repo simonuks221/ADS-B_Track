@@ -29,6 +29,8 @@
 #define LED_1_PIN GPIO_NUM_4
 #define LED_2_PIN GPIO_NUM_6
 
+#define PROG_RX_PIN GPIO_NUM_44
+#define PROG_TX_PIN GPIO_NUM_43
 typedef enum eGpio {
     eGpioFirst = 0,
     eGpioFpgaInt = eGpioFirst,

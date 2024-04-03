@@ -51,7 +51,12 @@ static void PeriodicData_Callback(void* arg) {
     sDate_t curr_time = Timer_API_GetRtcTime();
     ESP_LOGI(LOG_TAG, "Curr time: %hhu:%hhu:%hhu.%hu", curr_time.hours, curr_time.minutes, curr_time.seconds, curr_time.seconds_fraction);
     ESP_LOGI(LOG_TAG, "Wifi: %s", Connection_APP_IsConnected() ? "Ok" : "Fail" );
-}
+    #include "nextion_api.h"
+    static uint8_t time = 0;
+    //Nextion_API_SendCmd(eNextionCmdInfo, time, 20, 30);
+    Nextion_API_SendCmd(eNextionCmdStart, time, 20, 30, 55.255555f, 2.4f);
+    time++;
+}//TODO: implement time
 
 /* Get RTC time in miliseconds */
 uint32_t Timer_API_GetRtcMs(void) {
