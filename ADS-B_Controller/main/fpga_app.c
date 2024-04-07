@@ -59,10 +59,10 @@ static bool FPGA_APP_ReadStatus(void) {
 
     spi_transaction_t transaction = {
         .tx_buffer = empty_buf, //TODO: remove this and make half duplex
-        .length = 1, /* Tx length */
+        .length = 8, /* Tx length in bits */
         .addr = tx_buffer,
         .rx_buffer = (void *)&status_register.buffer,
-        .rxlength = 1
+        .rxlength = 8
     };
     if(spi_device_polling_transmit(spi_handle, &transaction) != ESP_OK) {
         ESP_LOGE(LOG_TAG, "Failed transmitting read status");
@@ -100,7 +100,7 @@ bool FPGA_APP_Init(void) {
     }
     spi_device_interface_config_t dev_config = {
         .mode = 0,
-        .clock_speed_hz = 10000000,
+        .clock_speed_hz = 1000000,
         .spics_io_num = FPGA_CS_PIN,
         .queue_size = 10,
         .flags = SPI_DEVICE_BIT_LSBFIRST,
