@@ -11,9 +11,9 @@
 typedef union uStatusRegister {
     uint8_t buffer;
     struct {
-        unsigned int empty : 6; /* 6 bits empty */
-        unsigned int init : 1;  /* 1 bit for if init done */
         unsigned int on : 1;    /* 1 bit always on */
+        unsigned int init : 1;  /* 1 bit for if init done */
+        unsigned int empty : 6; /* 6 bits empty */
     } data;
 } uStatusRegister_t;
 
@@ -51,25 +51,30 @@ static bool FPGA_APP_ReadPacket(void) {
     return Connection_APP_SendMessagePacket(new_packet); //TODO: pointer or smth?
 }
 
+uint8_t empty_buf[100] = {0};
+
 static bool FPGA_APP_ReadStatus(void) {
     uint8_t tx_buffer = STATUS_REG;
     uStatusRegister_t status_register = {.buffer = 0};
 
     spi_transaction_t transaction = {
-        .tx_buffer = &tx_buffer,
+        .tx_buffer = empty_buf, //TODO: remove this and make half duplex
         .length = 1, /* Tx length */
-        .rx_buffer = status_register.buffer,
+        .addr = tx_buffer,
+        .rx_buffer = (void *)&status_register.buffer,
         .rxlength = 1
     };
-
     if(spi_device_polling_transmit(spi_handle, &transaction) != ESP_OK) {
         ESP_LOGE(LOG_TAG, "Failed transmitting read status");
+        return false;
     }
+    ESP_LOGI(LOG_TAG, "Read status: 0x%x", status_register.buffer);
     /* Unpack status register */
     if(status_register.data.on != 1) {
         ESP_LOGE(LOG_TAG, "Status register always ON invalid");
         return true;
     }
+
     status_register.data.init == 1 ?  SET_FLAG(fpga_flags, FLAG_INIT_DONE) : CLEAR_FLAG(fpga_flags, FLAG_INIT_DONE);
     return true;
 }
@@ -89,7 +94,7 @@ bool FPGA_APP_Init(void) {
         .data7_io_num = -1
     };
 
-    if(spi_bus_initialize(SPI1_HOST, &buscfg, SPI_DMA_CH_AUTO) != ESP_OK) {
+    if(spi_bus_initialize(SPI2_HOST, &buscfg, SPI_DMA_CH_AUTO) != ESP_OK) {
         ESP_LOGE(LOG_TAG, "Failed init SPI bus");
         return true;
     }
@@ -97,11 +102,11 @@ bool FPGA_APP_Init(void) {
         .mode = 0,
         .clock_speed_hz = 10000000,
         .spics_io_num = FPGA_CS_PIN,
-        //.queue_size = 10,
-        .flags = SPI_DEVICE_HALFDUPLEX | SPI_DEVICE_TXBIT_LSBFIRST | SPI_DEVICE_RXBIT_LSBFIRST
+        .queue_size = 10,
+        .flags = SPI_DEVICE_BIT_LSBFIRST,
+        .address_bits = 8,
     };
-    spi_device_handle_t handle;
-    if(spi_bus_add_device(SPI1_HOST,  &dev_config, &handle) != ESP_OK) {
+    if(spi_bus_add_device(SPI2_HOST,  &dev_config, &spi_handle) != ESP_OK) {
         ESP_LOGE(LOG_TAG, "Failed registering device");
         return true;
     }

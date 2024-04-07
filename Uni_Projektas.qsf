@@ -79,87 +79,16 @@ set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
 set_global_assignment -name AUTO_PACKED_REGISTERS_STRATIXII NORMAL
 set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
 set_location_assignment PIN_17 -to CLK
-set_location_assignment PIN_44 -to SPI_CS
-set_location_assignment PIN_41 -to SPI_MOSI
-set_location_assignment PIN_42 -to SPI_SCLK
+set_location_assignment PIN_81 -to SPI_CS
+set_location_assignment PIN_79 -to SPI_MOSI
+set_location_assignment PIN_76 -to SPI_SCLK
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED WITH BUS-HOLD"
-set_location_assignment PIN_3 -to MRAM_A[13]
-set_location_assignment PIN_7 -to MRAM_A[11]
-set_location_assignment PIN_9 -to MRAM_A[10]
-set_location_assignment PIN_4 -to MRAM_A[14]
-set_location_assignment PIN_8 -to MRAM_A[12]
-set_location_assignment PIN_24 -to ADC_SHDN
-set_location_assignment PIN_143 -to MRAM_D[8]
-set_location_assignment PIN_141 -to MRAM_A[9]
-set_location_assignment PIN_137 -to MRAM_A[7]
-set_location_assignment PIN_135 -to MRAM_A[5]
-set_location_assignment PIN_133 -to MRAM_D[7]
-set_location_assignment PIN_129 -to MRAM_D[5]
-set_location_assignment PIN_125 -to MRAM_D[3]
-set_location_assignment PIN_121 -to MRAM_D[1]
-set_location_assignment PIN_118 -to MRAM_EN
-set_location_assignment PIN_114 -to MRAM_A[3]
-set_location_assignment PIN_112 -to MRAM_A[1]
-set_location_assignment PIN_142 -to MRAM_D[9]
-set_location_assignment PIN_139 -to MRAM_A[8]
-set_location_assignment PIN_136 -to MRAM_A[6]
-set_location_assignment PIN_134 -to MRAM_WRITE_EN
-set_location_assignment PIN_132 -to MRAM_D[6]
-set_location_assignment PIN_126 -to MRAM_D[4]
-set_location_assignment PIN_122 -to MRAM_D[2]
-set_location_assignment PIN_120 -to MRAM_D[0]
-set_location_assignment PIN_119 -to MRAM_A[4]
-set_location_assignment PIN_115 -to MRAM_A[2]
-set_location_assignment PIN_113 -to MRAM_A[0]
-set_location_assignment PIN_103 -to MRAM_UPPER_EN
-set_location_assignment PIN_100 -to MRAM_A[15]
-set_location_assignment PIN_97 -to MRAM_A[17]
-set_location_assignment PIN_94 -to MRAM_D[13]
-set_location_assignment PIN_92 -to MRAM_D[11]
-set_location_assignment PIN_86 -to ADC_DCLKA
-set_location_assignment PIN_80 -to ADC_BIT_A[9]
-set_location_assignment PIN_76 -to ADC_BIT_A[7]
-set_location_assignment PIN_74 -to ADC_BIT_A[5]
-set_location_assignment PIN_104 -to MRAM_LOWER_EN
-set_location_assignment PIN_101 -to MRAM_OUTPUT_EN
-set_location_assignment PIN_99 -to MRAM_A[16]
-set_location_assignment PIN_96 -to MRAM_D[15]
-set_location_assignment PIN_93 -to MRAM_D[14]
-set_location_assignment PIN_87 -to ADC_SPI_SDIN
-set_location_assignment PIN_81 -to ADC_DORA
-set_location_assignment PIN_79 -to ADC_BIT_A[8]
-set_location_assignment PIN_75 -to ADC_BIT_A[6]
-set_location_assignment PIN_73 -to ADC_BIT_A[4]
-set_location_assignment PIN_40 -to SPI_MISO
-set_location_assignment PIN_45 -to ADC_SYNC
-set_location_assignment PIN_52 -to ADC_DORB
-set_location_assignment PIN_55 -to ADC_BIT_B[0]
-set_location_assignment PIN_58 -to ADC_BIT_B[2]
-set_location_assignment PIN_60 -to ADC_BIT_B[4]
-set_location_assignment PIN_64 -to ADC_BIT_B[6]
-set_location_assignment PIN_67 -to ADC_BIT_B[8]
-set_location_assignment PIN_70 -to ADC_BIT_A[1]
-set_location_assignment PIN_72 -to ADC_BIT_A[3]
-set_location_assignment PIN_71 -to ADC_BIT_A[2]
-set_location_assignment PIN_69 -to ADC_BIT_A[0]
-set_location_assignment PIN_65 -to ADC_BIT_B[9]
-set_location_assignment PIN_63 -to ADC_BIT_B[7]
-set_location_assignment PIN_59 -to ADC_BIT_B[5]
-set_location_assignment PIN_57 -to ADC_BIT_B[3]
-set_location_assignment PIN_53 -to ADC_BIT_B[1]
-set_location_assignment PIN_51 -to ADC_DCLKB
-set_location_assignment PIN_48 -to ADC_CLK
+set_location_assignment PIN_75 -to SPI_MISO
 set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
 set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "USE AS REGULAR IO"
-set_location_assignment PIN_144 -to BUTTON
-set_location_assignment PIN_25 -to ADC_SPI_CS
-set_location_assignment PIN_27 -to ADC_SPI_SCLK
-set_location_assignment PIN_26 -to UART_TX
 set_global_assignment -name MUX_RESTRUCTURE OFF
 set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
-set_location_assignment PIN_30 -to MRAM_D[12]
-set_location_assignment PIN_28 -to MRAM_D[10]
 set_global_assignment -name EDA_TEST_BENCH_NAME SPI_Testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id SPI_Testbench
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "200 us" -section_id SPI_Testbench
@@ -189,7 +118,6 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BUTTON
 set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to "wizard_pll:pll_1|altpll:altpll_component|_clk0"
 set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to "wizard_pll:pll_1|altpll:altpll_component|_clk0~clkctrl"
-set_location_assignment PIN_43 -to PACKET_IRQ
 set_global_assignment -name EDA_TEST_BENCH_FILE Testbenchas.vhd -section_id Testbenchas
 set_global_assignment -name EDA_TEST_BENCH_FILE new_testbench.vhd -section_id new_testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE SPI_Testbench.vhd -section_id SPI_Testbench
@@ -232,4 +160,65 @@ set_global_assignment -name QIP_FILE PACKET_STORAGE_FIFO.qip
 set_global_assignment -name VHDL_FILE Status_Register.vhd
 set_global_assignment -name VHDL_FILE RTC.vhd
 set_global_assignment -name VHDL_FILE RTC_Read_Register.vhd
+set_location_assignment PIN_58 -to ADC_BIT_A[9]
+set_location_assignment PIN_57 -to ADC_BIT_A[8]
+set_location_assignment PIN_55 -to ADC_BIT_A[7]
+set_location_assignment PIN_53 -to ADC_BIT_A[6]
+set_location_assignment PIN_52 -to ADC_BIT_A[5]
+set_location_assignment PIN_51 -to ADC_BIT_A[4]
+set_location_assignment PIN_48 -to ADC_BIT_A[3]
+set_location_assignment PIN_47 -to ADC_BIT_A[2]
+set_location_assignment PIN_44 -to ADC_BIT_A[1]
+set_location_assignment PIN_45 -to ADC_BIT_A[0]
+set_location_assignment PIN_42 -to ADC_BIT_B[9]
+set_location_assignment PIN_43 -to ADC_BIT_B[8]
+set_location_assignment PIN_40 -to ADC_BIT_B[7]
+set_location_assignment PIN_41 -to ADC_BIT_B[6]
+set_location_assignment PIN_32 -to ADC_BIT_B[5]
+set_location_assignment PIN_31 -to ADC_BIT_B[4]
+set_location_assignment PIN_28 -to ADC_BIT_B[3]
+set_location_assignment PIN_30 -to ADC_BIT_B[2]
+set_location_assignment PIN_27 -to ADC_BIT_B[1]
+set_location_assignment PIN_26 -to ADC_BIT_B[0]
+set_location_assignment PIN_8 -to ADC_CLK
+set_location_assignment PIN_60 -to ADC_DCLKA
+set_location_assignment PIN_25 -to ADC_DCLKB
+set_location_assignment PIN_59 -to ADC_DORA
+set_location_assignment PIN_24 -to ADC_DORB
+set_location_assignment PIN_70 -to ADC_SHDN
+set_location_assignment PIN_67 -to ADC_SPI_CS
+set_location_assignment PIN_64 -to ADC_SPI_SCLK
+set_location_assignment PIN_63 -to ADC_SPI_SDIN
+set_location_assignment PIN_7 -to ADC_SYNC
+set_location_assignment PIN_129 -to MRAM_A[16]
+set_location_assignment PIN_122 -to MRAM_A[15]
+set_location_assignment PIN_125 -to MRAM_A[14]
+set_location_assignment PIN_120 -to MRAM_A[13]
+set_location_assignment PIN_112 -to MRAM_A[12]
+set_location_assignment PIN_113 -to MRAM_A[11]
+set_location_assignment PIN_103 -to MRAM_A[10]
+set_location_assignment PIN_101 -to MRAM_A[9]
+set_location_assignment PIN_104 -to MRAM_A[8]
+set_location_assignment PIN_99 -to MRAM_A[7]
+set_location_assignment PIN_100 -to MRAM_A[6]
+set_location_assignment PIN_97 -to MRAM_A[5]
+set_location_assignment PIN_96 -to MRAM_A[4]
+set_location_assignment PIN_134 -to MRAM_A[3]
+set_location_assignment PIN_135 -to MRAM_A[2]
+set_location_assignment PIN_136 -to MRAM_A[1]
+set_location_assignment PIN_137 -to MRAM_A[0]
+set_location_assignment PIN_118 -to MRAM_D[7]
+set_location_assignment PIN_119 -to MRAM_D[6]
+set_location_assignment PIN_114 -to MRAM_D[5]
+set_location_assignment PIN_115 -to MRAM_D[4]
+set_location_assignment PIN_93 -to MRAM_D[3]
+set_location_assignment PIN_92 -to MRAM_D[2]
+set_location_assignment PIN_126 -to MRAM_D[1]
+set_location_assignment PIN_132 -to MRAM_D[0]
+set_location_assignment PIN_133 -to MRAM_EN
+set_location_assignment PIN_121 -to MRAM_OUTPUT_EN
+set_location_assignment PIN_94 -to MRAM_WRITE_EN
+set_location_assignment PIN_73 -to PACKET_IRQ
+set_location_assignment PIN_86 -to PPS
+set_location_assignment PIN_144 -to BUTTON
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
