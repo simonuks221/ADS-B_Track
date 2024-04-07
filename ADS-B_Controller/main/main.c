@@ -29,11 +29,11 @@ typedef struct sApp {
 sApp_t app_lut[] = {
     {"GPIO", GPIO_API_Init, NULL},
     {"TIM", Timer_API_Init, NULL},
-    {"UART", UART_API_Init, NULL},
-    {"NEXTION", Nextion_API_Init, NULL},
+    //{"UART", UART_API_Init, NULL},
+    //{"NEXTION", Nextion_API_Init, NULL},
     //{"SD", SD_API_Init, NULL},
-    {"GPS", GPS_APP_Init, NULL},
-    //{"FPGA", FPGA_APP_Init, FPGA_APP_Run},
+    //{"GPS", GPS_APP_Init, NULL},
+    {"FPGA", FPGA_APP_Init, FPGA_APP_Run},
     //{"CONNECTION", Connection_APP_Init, Connection_APP_Run}
 };
 
@@ -62,6 +62,6 @@ void app_main(void) {
             }
             app_lut[i].run();
         }
-        vTaskDelay(1); /* Needed for watchdog */
+        vTaskDelay(100); /* Needed for watchdog */
     }
 }

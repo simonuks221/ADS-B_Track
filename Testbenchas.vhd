@@ -217,8 +217,10 @@ begin
 	--wait for 5 us;
 	--spi_send(x"04", 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	wait for 5 us;
-	spi_send_time(x"10203040", 5, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	spi_send_time(x"10230400", 5, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	--Wait until packet received
+	wait for 0.5 us;
+	spi_send(status_register_cmd, 2, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	wait until rising_edge(PACKET_IRQ);
 	wait for 10 us;
 	spi_send(rtc_register_read_cmd, 7, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);

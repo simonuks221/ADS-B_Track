@@ -54,7 +54,7 @@ static void PeriodicData_Callback(void* arg) {
     #include "nextion_api.h"
     static uint8_t time = 0;
     //Nextion_API_SendCmd(eNextionCmdInfo, time, 20, 30);
-    Nextion_API_SendCmd(eNextionCmdStart, time, 20, 30, 55.255555f, 2.4f);
+    //Nextion_API_SendCmd(eNextionCmdStart, time, 20, 30, 55.255555f, 2.4f);
     time++;
 }//TODO: implement time
 

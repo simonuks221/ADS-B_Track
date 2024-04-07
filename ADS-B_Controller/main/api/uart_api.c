@@ -73,6 +73,7 @@ bool UART_API_Init(void) {
 
 /* Register callback for uart delimiter found event */
 bool UART_API_RegisterDelimiter(eUart_t uart, char delimiter, void (*callback)(uint8_t *, size_t) ) {
+    return false;
     if((uart_delimiter_lut[uart].delimiter_callback != NULL) || (uart >= eUartLast) || (callback == NULL)) {
         return false;
     }
@@ -147,9 +148,16 @@ static void UART_API_Event_Handler(void *pvParameters) {
 
     if(pvParameters == NULL) {
         ESP_LOGE(LOG_TAG, "Invalid UART queue handler");
+        vTaskDelete(NULL);
         return;
     }
     eUart_t current_uart = *((eUart_t *)pvParameters);
+    if(uart_queue_handlers[current_uart] == NULL) {
+        ESP_LOGE(LOG_TAG, "Invalid UART queue");
+        vTaskDelete(NULL);
+        return;
+    }
+
     while(true) {
         /* Waiting for uart event */
         if (xQueueReceive(uart_queue_handlers[current_uart], (void *)&event, (TickType_t)portMAX_DELAY)) {
