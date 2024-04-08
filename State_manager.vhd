@@ -8,7 +8,6 @@ entity STATE_MANAGER is
 port (
 	CLK : in std_logic := '0';
 	SETUP_DONE : in std_logic := '0';
-	READ_ADC_DONE : in std_logic := '0';
 	WRITE_OUT_DONE : in std_logic := '0';
 	CORR_DONE : in std_logic := '0';
 	
@@ -53,27 +52,27 @@ begin
 		case curr_state is
 			when wait_0 =>
 				counter <= counter + 1;
-				if(counter = 1000) then
+				if counter = 1000 then
 					counter <= 0;
 					curr_state <= setup;
 				end if;
 			when setup =>
-				if(SETUP_DONE = '1') then
+				if SETUP_DONE = '1' then
 					curr_state <= read_adc;
 					--curr_state <= write_out_mram;
 				end if;
 			when read_adc =>
-				if(READ_ADC_DONE = '1' and CORR_DONE = '1') then
+				if CORR_DONE = '1' then
 					curr_state <= wait_1;
 				end if;
 			when wait_1 =>
 				counter <= counter + 1;
-				if(counter = 100) then
+				if counter = 100 then
 					counter <= 0;
 					curr_state <= write_out_mram;
 				end if;
 			when write_out_mram =>
-				if(WRITE_OUT_DONE = '1') then
+				if WRITE_OUT_DONE = '1' then
 					curr_state <= read_adc;
 				end if;
 			

@@ -40,12 +40,12 @@ signal SPI_CS : std_logic := '1';
 
 --MRAM
 signal MRAM_OUTPUT_EN : std_logic := '0';
-signal MRAM_A : std_logic_vector(17 downto 0) :=  (others =>'0');
+signal MRAM_A : std_logic_vector(15 downto 0) :=  (others =>'0');
 signal MRAM_EN : std_logic := '0';
 signal MRAM_WRITE_EN : std_logic := '0';
 signal MRAM_UPPER_EN : std_logic := '0';
 signal MRAM_LOWER_EN : std_logic := '0';
-signal MRAM_D : std_logic_vector(15 downto 0) :=  (others =>'0');
+signal MRAM_D : std_logic_vector(7 downto 0) :=  (others =>'0');
 
 --UART
 signal UART_RX : std_logic := '0';
@@ -166,12 +166,12 @@ port(
 	
 	--MRAM
 	MRAM_OUTPUT_EN : out std_logic := '0';
-	MRAM_A : out std_logic_vector(17 downto 0) := (others => '0');
+	MRAM_A : out std_logic_vector(15 downto 0) := (others => '0');
 	MRAM_EN : out std_logic := '0';
 	MRAM_WRITE_EN : out std_logic := '0';
 	MRAM_UPPER_EN : out std_logic := '0';
 	MRAM_LOWER_EN : out std_logic := '0';
-	MRAM_D : inout std_logic_vector(15 downto 0) := (others => '0');
+	MRAM_D : inout std_logic_vector(7 downto 0) := (others => '0');
 	
 	--UART
 	UART_RX : in std_logic := '0';
@@ -186,7 +186,7 @@ port(
 );
 end component;
 
-type mram_data_type is array(0 to 25600) of std_logic_vector(15 downto 0);
+type mram_data_type is array(0 to 25600) of std_logic_vector(7 downto 0);
 signal mram_data : mram_data_type := (others => (others => '0'));
 
 constant status_register_cmd : std_logic_vector(7 downto 0) := x"01";

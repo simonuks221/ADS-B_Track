@@ -11,9 +11,9 @@ use ieee.std_logic_textio.all;
 entity MRAM_Controller is
 	port(
 	CLK : in std_logic := '0';
-	data_in : in std_logic_vector(15 downto 0) := (others => '0');
-	data_out : out std_logic_vector(15 downto 0) := (others => '0');
-	address_in : in std_logic_vector(17 downto 0) := (others => '0');
+	data_in : in std_logic_vector(7 downto 0) := (others => '0');
+	data_out : out std_logic_vector(7 downto 0) := (others => '0');
+	address_in : in std_logic_vector(15 downto 0) := (others => '0');
 	write_data : in std_logic := '0';
 	read_data : in std_logic := '0';
 	done : out std_logic := '1';
@@ -23,8 +23,8 @@ entity MRAM_Controller is
 	MRAM_WRITE_EN : out std_logic := '1';
 	MRAM_UPPER_EN : out std_logic := '1';
 	MRAM_LOWER_EN : out std_logic := '1';
-	MRAM_A : out std_logic_vector(17 downto 0) := (others => '0');
-	MRAM_D : inout std_logic_vector(15 downto 0) := (others => 'Z')
+	MRAM_A : out std_logic_vector(15 downto 0) := (others => '0');
+	MRAM_D : inout std_logic_vector(7 downto 0) := (others => 'Z')
 	);
 end entity;
 
@@ -35,7 +35,7 @@ signal counter : integer range 0 to 8 := 0;
 begin
 
 done <= '1' when curr_state = idle else '0';
-MRAM_A <= address_in;
+MRAM_A <= address_in(15 downto 0);
 
 process(CLK)
 begin
@@ -62,7 +62,7 @@ begin
 						MRAM_LOWER_EN <= '0';
 						MRAM_UPPER_EN <= '0';
 						MRAM_EN <= '0';
-						MRAM_D <= data_in;
+						MRAM_D <= data_in(7 downto 0);
 					when 3 =>
 						MRAM_EN <= '1';
 						MRAM_LOWER_EN <= '1';

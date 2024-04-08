@@ -14,8 +14,8 @@ port(
 	UART_DATA_IRQ : out std_logic := '0';
 	UART_FIFO_EMPTY : in std_logic := '0';
 	
-	MRAM_DATA_OUT : in std_logic_vector(15 downto 0) := (others => '0');
-	MRAM_ADDRESS_IN : out std_logic_vector(17 downto 0) := (others => '0');
+	MRAM_DATA_OUT : in std_logic_vector(7 downto 0) := (others => '0');
+	MRAM_ADDRESS_IN : out std_logic_vector(15 downto 0) := (others => '0');
 	MRAM_READ_DATA : out std_logic := '0';
 	MRAM_DONE : in std_logic := '0';
 
@@ -30,13 +30,14 @@ architecture arc of Write_out_mram_manager is
 signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS := 0;
 signal have_data : std_logic := '0';
 signal getting_data : std_logic := '0';
-signal msb : std_logic := '1'; --SEND MSB FIRST
+--signal msb : std_logic := '1'; --SEND MSB FIRST
 
 begin
 
 MRAM_ADDRESS_IN <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_IN'length));
-UART_SEND_DATA <= '1' & MRAM_DATA_OUT(13 downto 7) when msb = '1' else '0' & MRAM_DATA_OUT(6 downto 0); --MSB su 1, LSB su 0
 
+--UART_SEND_DATA <= '1' & MRAM_DATA_OUT(13 downto 7) when msb = '1' else '0' & MRAM_DATA_OUT(6 downto 0); --MSB su 1, LSB su 0
+UART_SEND_DATA <= MRAM_DATA_OUT(7 downto 0);
 WRITE_OUT_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS - 1 else '0';
 
 process(CLK)
@@ -65,10 +66,10 @@ begin
 				else
 					if(MRAM_DONE  = '1') then
 						MRAM_READ_DATA <= '1';
-						if(msb = '0') then
+						--if(msb = '0') then
 							address_counter <= address_counter + 1;
-						end if;
-						msb <= not msb;
+						--end if;
+						--msb <= not msb;
 						getting_data <= '1';
 					end if;
 				end if;

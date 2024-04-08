@@ -5,21 +5,14 @@ use STD.textio.all;
 use ieee.std_logic_textio.all;
 
 entity Read_adc_manager is
-generic(
-	MAX_ADDRESS_COUNTS : integer :=  100;
-	READ_COUNTER_MAX : integer := 4
-);
 port(
 	CLK : in std_logic := '0';
 	DCLK : in std_logic := '0';
 	ADC_BIT : in std_logic_vector(9 downto 0) := (others => '0');
 	ADC_BIT_VALID : out std_logic := '0';
-	MRAM_DATA_OUT : out std_logic_vector(15 downto 0) := (others => '0');
-	MRAM_ADDRESS_OUT : out std_logic_vector(17 downto 0) := (others => '0'); --Unused
-	MRAM_DONE : in std_logic := '0';
+	BITS_OUT : out std_logic_vector(9 downto 0) := (others => '0');
 	
-	EN_READ_ADC : in std_logic := '0';
-	READ_ADC_DONE : out std_logic := '0'
+	EN_READ_ADC : in std_logic := '0'
 );
 end entity;
 
@@ -38,6 +31,8 @@ architecture arc of Read_adc_manager is
 	);
 	end component;
 	
+	constant READ_COUNTER_MAX : integer := 4;
+	
 	signal fifo_data : std_logic_vector(9 downto 0) := (others => '0');
 	signal rdclk : std_logic := '0';
 	signal rdreq : std_logic := '0';
@@ -48,7 +43,6 @@ architecture arc of Read_adc_manager is
 	signal wrfull : std_logic := '0';
 
 	signal read_counter : integer range 0 to READ_COUNTER_MAX := 0;
-	signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS := 0;
 	
 	--Synchronisation --TODO: could make fifo instead
 	signal DCLK_sync_1 : std_logic := '0';
@@ -77,7 +71,7 @@ begin
 	end if;
 end process;
 
-MRAM_DATA_OUT <= "000000" & std_logic_vector(to_unsigned(to_integer(unsigned(fifo_q)), 10));
+BITS_OUT <= std_logic_vector(to_unsigned(to_integer(unsigned(fifo_q)), 10));
 
 process(CLK)
 begin
@@ -88,9 +82,5 @@ begin
 		end if;
 	end if;
 end process;
-
---Signals for debugging
---MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
---READ_ADC_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
 
 end architecture;

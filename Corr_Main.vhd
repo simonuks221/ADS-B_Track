@@ -12,14 +12,14 @@ generic(
 );
 port(
 	CLK : in std_logic := '0';
-	ADC_BITS : in std_logic_vector(15 downto 0) := (others => '0');
+	ADC_BITS : in std_logic_vector(9 downto 0) := (others => '0');
 	ADC_BITS_VALID : in std_logic := '0';
 	PREAMBULE_FOUND : out std_logic := '0';
 	
 	EN_CORR : in std_logic := '0';
 	CORR_DONE : out std_logic := '0';
-	MRAM_DATA_OUT : out std_logic_vector(15 downto 0) := (others => '0');
-	MRAM_ADDRESS_OUT : out std_logic_vector(17 downto 0) := (others => '0');
+	MRAM_DATA_OUT : out std_logic_vector(7 downto 0) := (others => '0');
+	MRAM_ADDRESS_OUT : out std_logic_vector(15 downto 0) := (others => '0');
 	MRAM_WRITE_DATA : out std_logic := '0';
 	MRAM_DONE : in std_logic := '0';
 	
@@ -131,7 +131,8 @@ buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(CLK, buffer
 
 MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
 --MRAM_DATA_OUT <= "0000" & std_logic_vector(to_unsigned(p_corr, 12)); --For debuging correlation value
-MRAM_DATA_OUT <= "00000000" & bits_data; --For debugging correlated bit values
+--MRAM_DATA_OUT <= "00000000" & bits_data; --For debugging correlated bit values
+MRAM_DATA_OUT <= ADC_BITS(9 downto 2); --For debugging adc data
 PACKET_DATA <= bits_data; --For sending to DATA INTERFACE
 
 CORR_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
