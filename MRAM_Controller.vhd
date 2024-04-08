@@ -21,8 +21,6 @@ entity MRAM_Controller is
 	MRAM_EN : out std_logic := '1';
 	MRAM_OUTPUT_EN : out std_logic := '1';
 	MRAM_WRITE_EN : out std_logic := '1';
-	MRAM_UPPER_EN : out std_logic := '1';
-	MRAM_LOWER_EN : out std_logic := '1';
 	MRAM_A : out std_logic_vector(15 downto 0) := (others => '0');
 	MRAM_D : inout std_logic_vector(7 downto 0) := (others => 'Z')
 	);
@@ -51,22 +49,16 @@ begin
 				MRAM_EN <= '1';
 				MRAM_OUTPUT_EN <= '1';
 				MRAM_WRITE_EN <= '1';
-				MRAM_UPPER_EN <= '1';
-				MRAM_LOWER_EN <= '1';
 				MRAM_D <= (others => 'Z');
 			when writing =>
 				case counter is
 					when 0 =>
 						--Set data
 						MRAM_WRITE_EN <= '0';
-						MRAM_LOWER_EN <= '0';
-						MRAM_UPPER_EN <= '0';
 						MRAM_EN <= '0';
 						MRAM_D <= data_in(7 downto 0);
 					when 3 =>
 						MRAM_EN <= '1';
-						MRAM_LOWER_EN <= '1';
-						MRAM_UPPER_EN <= '1';
 						MRAM_WRITE_EN <= '1';
 					when others =>
 				end case;
@@ -77,15 +69,11 @@ begin
 						MRAM_D <= (others => 'Z');
 						MRAM_EN <= '0';
 						MRAM_OUTPUT_EN <= '0';
-						MRAM_UPPER_EN <= '0';
-						MRAM_LOWER_EN <= '0';
 					when 6 =>
 						data_out <= MRAM_D;
 						MRAM_EN <= '1';
 						MRAM_OUTPUT_EN <= '1';
-						MRAM_UPPER_EN <= '1';
 						MRAM_WRITE_EN <= '1';
-						MRAM_LOWER_EN <= '1';
 					when others =>
 				end case;
 		end case;

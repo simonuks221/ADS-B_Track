@@ -40,12 +40,9 @@ port(
 	MRAM_A : out std_logic_vector(15 downto 0) := (others => 'Z');
 	MRAM_EN : out std_logic := 'Z';
 	MRAM_WRITE_EN : out std_logic := 'Z';
-	MRAM_UPPER_EN : out std_logic := 'Z';
-	MRAM_LOWER_EN : out std_logic := 'Z';
 	MRAM_D : inout std_logic_vector(7 downto 0) := (others => 'Z');
 	
 	--UART
-	UART_RX : in std_logic := '0';
 	UART_TX : out std_logic := '1';
 	
 	--RTC
@@ -108,8 +105,6 @@ component MRAM_Controller is
 	MRAM_EN : out std_logic := '1';
 	MRAM_OUTPUT_EN : out std_logic := '1';
 	MRAM_WRITE_EN : out std_logic := '1';
-	MRAM_UPPER_EN : out std_logic := '1';
-	MRAM_LOWER_EN : out std_logic := '1';
 	MRAM_A : out std_logic_vector(15 downto 0) := (others => '0');
 	MRAM_D : inout std_logic_vector(7 downto 0) := (others => 'Z')
 	);
@@ -273,7 +268,7 @@ MRAM_ADDRESS_IN_COMBINED <= MRAM_ADDRESS_IN_WRITE or MRAM_ADDRESS_IN_READ;
 this_mram_controller : MRAM_Controller port map(CLK => CLK_150, data_in => MRAM_DATA_IN, data_out => MRAM_DATA_OUT,
 							address_in => MRAM_ADDRESS_IN_COMBINED, write_data => MRAM_WRITE_DATA, read_data => MRAM_READ_DATA,
 							done => MRAM_DONE, MRAM_EN => MRAM_EN, MRAM_OUTPUT_EN => MRAM_OUTPUT_EN, MRAM_WRITE_EN => MRAM_WRITE_EN,
-							MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_A => MRAM_A, MRAM_D => MRAM_D);
+							MRAM_A => MRAM_A, MRAM_D => MRAM_D);
 
 this_state_manager : state_manager port map (CLK => CLK_150, SETUP_DONE => SETUP_DONE,
 							WRITE_OUT_DONE => WRITE_OUT_DONE, EN_READ_ADC => EN_READ_ADC, EN_WRITE_OUT_MRAM => EN_WRITE_OUT_MRAM,

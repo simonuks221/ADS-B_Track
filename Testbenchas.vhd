@@ -43,8 +43,6 @@ signal MRAM_OUTPUT_EN : std_logic := '0';
 signal MRAM_A : std_logic_vector(15 downto 0) :=  (others =>'0');
 signal MRAM_EN : std_logic := '0';
 signal MRAM_WRITE_EN : std_logic := '0';
-signal MRAM_UPPER_EN : std_logic := '0';
-signal MRAM_LOWER_EN : std_logic := '0';
 signal MRAM_D : std_logic_vector(7 downto 0) :=  (others =>'0');
 
 --UART
@@ -169,12 +167,9 @@ port(
 	MRAM_A : out std_logic_vector(15 downto 0) := (others => '0');
 	MRAM_EN : out std_logic := '0';
 	MRAM_WRITE_EN : out std_logic := '0';
-	MRAM_UPPER_EN : out std_logic := '0';
-	MRAM_LOWER_EN : out std_logic := '0';
 	MRAM_D : inout std_logic_vector(7 downto 0) := (others => '0');
 	
 	--UART
-	UART_RX : in std_logic := '0';
 	UART_TX : out std_logic := '1';
 	
 	--IRQ
@@ -198,8 +193,8 @@ BEGIN
 i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, ADC_SYNC => ADC_SYNC, ADC_CLK => ADC_CLK,
 									ADC_SPI_SDIN => ADC_SPI_SDIN, ADC_SPI_SCLK => ADC_SPI_SCLK, ADC_SPI_CS => ADC_SPI_CS,ADC_DCLKA => ADC_DCLKA,
 									MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,  MRAM_A => MRAM_A, MRAM_EN => MRAM_EN, MRAM_WRITE_EN => MRAM_WRITE_EN,
-									MRAM_UPPER_EN => MRAM_UPPER_EN, MRAM_LOWER_EN => MRAM_LOWER_EN, MRAM_D => MRAM_D,ADC_BIT_A => ADC_BIT_A,
-									UART_RX => UART_RX, UART_TX => UART_TX, SPI_MOSI => SPI_MOSI, SPI_MISO => SPI_MISO, 
+									MRAM_D => MRAM_D,ADC_BIT_A => ADC_BIT_A,
+									UART_TX => UART_TX, SPI_MOSI => SPI_MOSI, SPI_MISO => SPI_MISO, 
 									SPI_CS => SPI_CS, SPI_SCLK => SPI_SCLK, PACKET_IRQ => PACKET_IRQ, PPS => PPS);
 	
 CLK <= not CLK after 10 ns; --50MHz 20ns
