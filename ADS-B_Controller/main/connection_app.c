@@ -347,7 +347,7 @@ bool Connection_APP_SendMessagePacket(sADSBPacket_t packet) {
     if(message_content == NULL) {
         return false;
     }
-    memcpy(message_content->packet, packet.data, ADSB_PACKET_LEN);
+    memcpy(message_content->packet, packet.data, ADSB_PACKET_LEN_BYTES);
     message_content->timestamp_ms = packet.timestamp_ms; //TODO: add ns
 
     sMessage_t new_message = {.type = eMessageNewPacket, .content = message_content};

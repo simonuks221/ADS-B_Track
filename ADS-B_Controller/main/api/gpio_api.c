@@ -30,15 +30,16 @@ static const sGpioDesc_t gpio_lut[eGpioLast] = {
 };
 
 static void IRAM_ATTR gpio_isr_handler(void* arg) {
-    if((uint32_t)arg >= GPIO_NUM_MAX) {
+    gpio_num_t *gpio_num = (gpio_num_t *) arg;
+    if(*gpio_num >= GPIO_NUM_MAX) {
         return;
     }
-    gpio_num_t gpio_num = (gpio_num_t) arg;
+
     //TODO: make nicer (add all into callbacks) and test
-    if(gpio_num == gpio_lut[eGpioPPS].num) {
+    if(*gpio_num == gpio_lut[eGpioPPS].num) {
         /* Got PPS */
         Timer_API_SyncRtc();
-    } else if (gpio_num == gpio_lut[eGpioFpgaInt].num) {
+    } else if (*gpio_num == gpio_lut[eGpioFpgaInt].num) {
         /* Got FPGA interrupt */
         FPGA_APP_DataIrq();
     }

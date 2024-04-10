@@ -32,26 +32,28 @@ static const char *LOG_TAG = "FPGA";
 
 static spi_device_handle_t spi_handle;
 
+uint8_t empty_buf[100] = {0};
+
 static bool FPGA_APP_ReadPacket(void) {
+    ESP_LOGI(LOG_TAG, "Reading packet");
     uint8_t tx_buffer = PACKET_STORAGE_REG;
     sADSBPacket_t new_packet;
 
     spi_transaction_t transaction = {
-        .tx_buffer = &tx_buffer,
-        .length = 1, /* Tx length */
-        .rx_buffer = new_packet.data,
-        .rxlength = ADSB_PACKET_LEN
+        .tx_buffer = empty_buf,
+        .addr = tx_buffer,
+        .length = ADSB_PACKET_LEN_BYTES * 8, /* Tx length bits */
+        .rx_buffer = (void *)new_packet.data,
+        .rxlength = ADSB_PACKET_LEN_BYTES * 8
     };
     //spi_device_acquire_bus(); //Call before polling for constant transmition
     //spi_device_release_bus();
     if(spi_device_polling_transmit(spi_handle, &transaction) != ESP_OK) {
         ESP_LOGE(LOG_TAG, "Failed transmitting read packet");
     }
-
+    ESP_LOGI(LOG_TAG, "PAcket 0x%x", new_packet.data[0]);
     return Connection_APP_SendMessagePacket(new_packet); //TODO: pointer or smth?
 }
-
-uint8_t empty_buf[100] = {0};
 
 static bool FPGA_APP_ReadStatus(void) {
     uint8_t tx_buffer = STATUS_REG;
@@ -100,7 +102,7 @@ bool FPGA_APP_Init(void) {
     }
     spi_device_interface_config_t dev_config = {
         .mode = 0,
-        .clock_speed_hz = 1000000,
+        .clock_speed_hz = 1000000, //TODO: check max freq
         .spics_io_num = FPGA_CS_PIN,
         .queue_size = 10,
         .flags = SPI_DEVICE_BIT_LSBFIRST,
