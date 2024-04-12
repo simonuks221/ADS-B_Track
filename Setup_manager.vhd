@@ -18,13 +18,44 @@ port(
 end entity;
 
 architecture arc of Setup_manager is
-	type spi_command is array (0 to 4) of std_logic_vector(15 downto 0);
-	constant spi_commands : spi_command  := ("0000000000000011",
-	"1000000000000000",
-	"0000011000010000",-- NORMAL WITH BIANRY OFFSET 06h --0000011011000000 TEST PATTERN
-	"1000011000000000", --06h
-	"0000100000001000"); --08h --0.9V common mode pullup
-	signal spi_command_index : integer range 0 to 5 := 0;
+	constant spi_cmd_amount : integer := 5;
+	subtype spi_cmd is std_logic_vector(15 downto 0);
+	type spi_cmds is array (0 to spi_cmd_amount - 1) of spi_cmd;
+	
+	constant read_cmd : spi_cmd := x"8000";
+	constant write_cmd : spi_cmd := x"0000";
+	
+	--Register 00h power
+	constant pwr_reg : spi_cmd := x"0000";
+	constant ch_A_on : spi_cmd := x"0002";
+	constant ch_B_on : spi_cmd := x"0001";
+	
+	--Register 06h clock divide/data format/test pattern
+	constant format_reg : spi_cmd := x"0600";
+	constant format_two_complement : spi_cmd := x"0000";
+	constant format_offset_binary : spi_cmd := x"0010";
+	constant format_gray_code : spi_cmd := x"0020";
+	
+	--Register 08h common mode
+	constant common_mode_reg : spi_cmd := x"0800";
+	constant pullup_A_en : spi_cmd := x"0008"; --Pull up voltage enable
+	constant pullup_A_900mV : spi_cmd := x"0000"; -- 900mV
+	constant pullup_A_1050mV : spi_cmd := x"0001"; --1050mV
+	constant pullup_A_1200mV : spi_cmd := x"0002"; --1200mV
+	constant pullup_A_1350mV : spi_cmd := x"0003"; --1350mV
+	constant pullup_A_750mV : spi_cmd := x"0005"; -- 750mV
+	constant pullup_A_600mV : spi_cmd := x"0006"; -- 600mV
+	constant pullup_A_450mV : spi_cmd := x"0007"; -- 450mV
+	
+	constant init_cmds : spi_cmds := (
+		write_cmd or pwr_reg or ch_A_on or ch_B_on,
+		read_cmd or pwr_reg,
+		write_cmd or format_reg or format_offset_binary,
+		read_cmd or format_reg,
+		common_mode_reg or pullup_A_en or pullup_A_900mV
+	);
+		
+	signal spi_cmd_idx : integer range 0 to spi_cmd_amount := 0;
 	signal SPI_DONE_last : std_logic := '0';
 begin
 
@@ -34,11 +65,11 @@ begin
 		if EN_SETUP = '1' then
 			SPI_DONE_last <= SPI_DONE;
 			if SPI_DONE_last <= '0' and SPI_DONE = '1' then
-				if spi_command_index = 5 then
+				if spi_cmd_idx = spi_cmd_amount then
 					SETUP_DONE <= '1';
 				else
-					spi_command_index <= spi_command_index + 1;
-					SPI_send_data <= spi_commands(spi_command_index);
+					spi_cmd_idx <= spi_cmd_idx + 1;
+					SPI_send_data <= init_cmds(spi_cmd_idx);
 					SPI_send_irq <= '1';
 				end if;
 			else

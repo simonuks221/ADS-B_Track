@@ -7,7 +7,7 @@ use ieee.std_logic_textio.all;
 entity UNI_Projektas is --Up to 260MHz operation
 generic (
 	BAUD_RATE : integer := 921600;
-	MAX_ADDRESS_COUNTS : integer := 1000;
+	MAX_ADDRESS_COUNTS : integer := 32000;
 	SEND_CLK_COUNTER_MAX : integer := 30
 );
 port(
@@ -37,7 +37,7 @@ port(
 	
 	--MRAM
 	MRAM_OUTPUT_EN : out std_logic := 'Z';
-	MRAM_A : out std_logic_vector(15 downto 0) := (others => 'Z');
+	MRAM_A : out std_logic_vector(16 downto 0) := (others => 'Z');
 	MRAM_EN : out std_logic := 'Z';
 	MRAM_WRITE_EN : out std_logic := 'Z';
 	MRAM_D : inout std_logic_vector(7 downto 0) := (others => 'Z');
@@ -49,7 +49,10 @@ port(
 	PPS : in std_logic := '0';
 	
 	--IRQ
-	PACKET_IRQ : out std_logic := '0'
+	PACKET_IRQ : out std_logic := '0';
+	
+	--DEBUG
+	DEBUG_1 : out std_logic := '0'
 );
 end entity;
 
@@ -97,7 +100,7 @@ component MRAM_Controller is
 	CLK : in std_logic := '0';
 	data_in : in std_logic_vector(7 downto 0) := (others => '0');
 	data_out : out std_logic_vector(7 downto 0) := (others => '0');
-	address_in : in std_logic_vector(15 downto 0) := (others => '0');
+	address_in : in std_logic_vector(16 downto 0) := (others => '0');
 	write_data : in std_logic := '0';
 	read_data : in std_logic := '0';
 	done : out std_logic := '0';
@@ -105,7 +108,7 @@ component MRAM_Controller is
 	MRAM_EN : out std_logic := '1';
 	MRAM_OUTPUT_EN : out std_logic := '1';
 	MRAM_WRITE_EN : out std_logic := '1';
-	MRAM_A : out std_logic_vector(15 downto 0) := (others => '0');
+	MRAM_A : out std_logic_vector(16 downto 0) := (others => '0');
 	MRAM_D : inout std_logic_vector(7 downto 0) := (others => 'Z')
 	);
 end component;
@@ -161,7 +164,7 @@ port(
 	UART_FIFO_EMPTY : in std_logic := '0';
 	
 	MRAM_DATA_OUT : in std_logic_vector(7 downto 0) := (others => '0');
-	MRAM_ADDRESS_IN : out std_logic_vector(15 downto 0) := (others => '0');
+	MRAM_ADDRESS_IN : out std_logic_vector(16 downto 0) := (others => '0');
 	MRAM_READ_DATA : out std_logic := '0';
 	MRAM_DONE : in std_logic := '0';
 
@@ -185,7 +188,7 @@ port(
 	EN_CORR : in std_logic := '0';
 	CORR_DONE : out std_logic := '0';
 	MRAM_DATA_OUT : out std_logic_vector(7 downto 0) := (others => '0');
-	MRAM_ADDRESS_OUT : out std_logic_vector(15 downto 0) := (others => '0');
+	MRAM_ADDRESS_OUT : out std_logic_vector(16 downto 0) := (others => '0');
 	MRAM_WRITE_DATA : out std_logic := '0';
 	MRAM_DONE : in std_logic := '0';
 	
@@ -221,9 +224,9 @@ signal ADC_BITS_OUT : std_logic_vector(9 downto 0) := (others => '0');
 --MRAM
 signal MRAM_DATA_IN : std_logic_vector(7 downto 0) := (others => '0');
 signal MRAM_DATA_OUT : std_logic_vector(7 downto 0) := (others => '0');
-signal MRAM_ADDRESS_IN_READ : std_logic_vector(15 downto 0) := (others => '0');
-signal MRAM_ADDRESS_IN_WRITE : std_logic_vector(15 downto 0) := (others => '0');
-signal MRAM_ADDRESS_IN_COMBINED : std_logic_vector(15 downto 0) := (others => '0');
+signal MRAM_ADDRESS_IN_READ : std_logic_vector(16 downto 0) := (others => '0');
+signal MRAM_ADDRESS_IN_WRITE : std_logic_vector(16 downto 0) := (others => '0');
+signal MRAM_ADDRESS_IN_COMBINED : std_logic_vector(16 downto 0) := (others => '0');
 signal MRAM_WRITE_DATA : std_logic := '0';
 signal MRAM_READ_DATA : std_logic := '0';
 signal MRAM_DONE : std_logic := '0';
@@ -258,6 +261,7 @@ signal STATUS_INIT_DONE : std_logic := '0';
 signal PREAMB_FOUND : std_logic := '0'; --For debugging
 
 begin
+DEBUG_1 <= PREAMB_FOUND;
 
 pll_1 : wizard_pll port map(inclk0 => CLK, c0 => CLK_150); --50 MHz -> 150 MHz
 ADC_SHDN <= '0';

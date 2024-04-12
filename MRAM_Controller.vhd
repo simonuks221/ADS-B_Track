@@ -13,7 +13,7 @@ entity MRAM_Controller is
 	CLK : in std_logic := '0';
 	data_in : in std_logic_vector(7 downto 0) := (others => '0');
 	data_out : out std_logic_vector(7 downto 0) := (others => '0');
-	address_in : in std_logic_vector(15 downto 0) := (others => '0');
+	address_in : in std_logic_vector(16 downto 0) := (others => '0');
 	write_data : in std_logic := '0';
 	read_data : in std_logic := '0';
 	done : out std_logic := '1';
@@ -21,7 +21,7 @@ entity MRAM_Controller is
 	MRAM_EN : out std_logic := '1';
 	MRAM_OUTPUT_EN : out std_logic := '1';
 	MRAM_WRITE_EN : out std_logic := '1';
-	MRAM_A : out std_logic_vector(15 downto 0) := (others => '0');
+	MRAM_A : out std_logic_vector(16 downto 0) := (others => '0');
 	MRAM_D : inout std_logic_vector(7 downto 0) := (others => 'Z')
 	);
 end entity;
@@ -33,7 +33,7 @@ signal counter : integer range 0 to 8 := 0;
 begin
 
 done <= '1' when curr_state = idle else '0';
-MRAM_A <= address_in(15 downto 0);
+MRAM_A <= address_in;
 
 process(CLK)
 begin
@@ -56,10 +56,13 @@ begin
 						--Set data
 						MRAM_WRITE_EN <= '0';
 						MRAM_EN <= '0';
+					when 1 =>
 						MRAM_D <= data_in(7 downto 0);
 					when 3 =>
 						MRAM_EN <= '1';
 						MRAM_WRITE_EN <= '1';
+					when 4 =>
+						MRAM_D <= (others => 'Z');
 					when others =>
 				end case;
 			when reading =>
@@ -69,8 +72,9 @@ begin
 						MRAM_D <= (others => 'Z');
 						MRAM_EN <= '0';
 						MRAM_OUTPUT_EN <= '0';
-					when 6 =>
+					when 5 =>
 						data_out <= MRAM_D;
+					when 6 =>
 						MRAM_EN <= '1';
 						MRAM_OUTPUT_EN <= '1';
 						MRAM_WRITE_EN <= '1';

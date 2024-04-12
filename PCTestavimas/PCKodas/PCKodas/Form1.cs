@@ -6,6 +6,7 @@ using System.IO;
 using System.Threading;
 using System.Reflection;
 using System.Diagnostics;
+using System.Linq;
 
 namespace PCKodas
 {
@@ -187,8 +188,8 @@ namespace PCKodas
             if (ByteArray.Length > 0) {
                 //for (int i = 0; i < ByteArray.Length; i++)
                 //{
-                    update_chart_evt.Set(ByteArray);
-                    //Update_Chart(ByteArray[i]);
+                    //update_chart_evt.Set(ByteArray);
+                    Update_Chart(ByteArray);
                 //}
             }
         }
@@ -202,6 +203,7 @@ namespace PCKodas
         void Update_Chart(byte[] new_values)
         {
             received_data_total += new_values.Length;
+            Console.WriteLine(new_values.Count());
 
             for(int i = 0; i < new_values.Length; i++)
             {
@@ -250,11 +252,9 @@ namespace PCKodas
                 {
                     return;
                 }
-               
                 VoltageChart.ChartAreas[0].AxisY.Minimum = min_chart_val;
                 VoltageChart.ChartAreas[0].AxisY.Maximum = max_chart_val;
                 VoltageChart.Update();
-
             }));
         }
 

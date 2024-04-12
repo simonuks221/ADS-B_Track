@@ -40,7 +40,7 @@ signal SPI_CS : std_logic := '1';
 
 --MRAM
 signal MRAM_OUTPUT_EN : std_logic := '0';
-signal MRAM_A : std_logic_vector(15 downto 0) :=  (others =>'0');
+signal MRAM_A : std_logic_vector(16 downto 0) :=  (others =>'0');
 signal MRAM_EN : std_logic := '0';
 signal MRAM_WRITE_EN : std_logic := '0';
 signal MRAM_D : std_logic_vector(7 downto 0) :=  (others =>'0');
@@ -54,6 +54,9 @@ signal PACKET_IRQ : std_logic := '0';
 
 --RTC
 signal PPS : std_logic := '0';
+
+--DEBUG
+signal DEBUG_1 : std_logic := '0';
 
 --Functions
 --Read from file
@@ -164,7 +167,7 @@ port(
 	
 	--MRAM
 	MRAM_OUTPUT_EN : out std_logic := '0';
-	MRAM_A : out std_logic_vector(15 downto 0) := (others => '0');
+	MRAM_A : out std_logic_vector(16 downto 0) := (others => '0');
 	MRAM_EN : out std_logic := '0';
 	MRAM_WRITE_EN : out std_logic := '0';
 	MRAM_D : inout std_logic_vector(7 downto 0) := (others => '0');
@@ -176,8 +179,10 @@ port(
 	PACKET_IRQ : out std_logic := '0';
 	
 	--RTC
-	PPS : in std_logic := '0'
+	PPS : in std_logic := '0';
 	
+	--DEBUG
+	DEBUG_1 : out std_logic := '0'
 );
 end component;
 
@@ -195,7 +200,7 @@ i1 : UNI_Projektas port map(CLK => CLK, BUTTON => BUTTON, ADC_SHDN => ADC_SHDN, 
 									MRAM_OUTPUT_EN => MRAM_OUTPUT_EN,  MRAM_A => MRAM_A, MRAM_EN => MRAM_EN, MRAM_WRITE_EN => MRAM_WRITE_EN,
 									MRAM_D => MRAM_D,ADC_BIT_A => ADC_BIT_A,
 									UART_TX => UART_TX, SPI_MOSI => SPI_MOSI, SPI_MISO => SPI_MISO, 
-									SPI_CS => SPI_CS, SPI_SCLK => SPI_SCLK, PACKET_IRQ => PACKET_IRQ, PPS => PPS);
+									SPI_CS => SPI_CS, SPI_SCLK => SPI_SCLK, PACKET_IRQ => PACKET_IRQ, PPS => PPS, DEBUG_1 => DEBUG_1);
 	
 CLK <= not CLK after 10 ns; --50MHz 20ns
 

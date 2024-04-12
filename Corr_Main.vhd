@@ -19,7 +19,7 @@ port(
 	EN_CORR : in std_logic := '0';
 	CORR_DONE : out std_logic := '0';
 	MRAM_DATA_OUT : out std_logic_vector(7 downto 0) := (others => '0');
-	MRAM_ADDRESS_OUT : out std_logic_vector(15 downto 0) := (others => '0');
+	MRAM_ADDRESS_OUT : out std_logic_vector(16 downto 0) := (others => '0');
 	MRAM_WRITE_DATA : out std_logic := '0';
 	MRAM_DONE : in std_logic := '0';
 	
@@ -283,10 +283,10 @@ begin
 				buffer_latch <= '0';
 				case cnt is 
 					when 1 =>
-					buffer_latch <= '1';
-						--Left empty for addition delay
+						buffer_latch <= '1';
+						--Left empty for additional correlation delay
 					when 2 =>
-						--Left empty for addition delay
+						--Left empty for additional correlation delay
 					when 3=>
 						cnt <= 0;
 						address_counter <= address_counter + 1;
@@ -297,7 +297,8 @@ begin
 								bits_cnt <= 0;
 								bits_idx <= 0;
 								bits_data <= (others => '0');
-								if p_corr > 3655 or p_corr = 3655 then
+								--if p_corr > 3655 or p_corr = 3655 then
+								if p_corr > 20 then
 									PREAMBULE_FOUND <= '1';
 									curr_corr_state <= waiting;
 								end if;
