@@ -153,7 +153,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.ConnectionStatusLabel);
             this.Name = "Form1";
-            this.Text = "Kompaso programa";
+            this.Text = "ADS-B receiver";
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VoltageChart)).EndInit();

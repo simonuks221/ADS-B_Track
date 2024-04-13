@@ -30,7 +30,7 @@ namespace PCKodas
 
         SREvent<string> change_status_text_evt;
         SREvent<String[]> change_status_ports_evt;
-        SREvent<byte[]> update_chart_evt;
+        SREvent<string> update_total_amount_evt;
 
 
         private Thread reading_data_thread;
@@ -47,7 +47,7 @@ namespace PCKodas
             /* Setup shared events */
             change_status_text_evt = new SREvent<string>(ChangeDisplayedStatusText);
             change_status_ports_evt = new SREvent<String[]>(ChangeDisplayedPorts);
-            update_chart_evt = new SREvent<byte[]>(Update_Chart);
+            update_total_amount_evt = new SREvent<string>(UpdateChartTotalAmount);
             /* Start application */
             InitUiLogic();
             InitDataReading();
@@ -83,7 +83,13 @@ namespace PCKodas
             }));
         }
 
-
+        void UpdateChartTotalAmount(string amount)
+        {
+            this.DataAmountLabel.Invoke(new MethodInvoker(delegate ()
+            {
+                DataAmountLabel.Text = amount;
+            }));
+        }
         private void InitUiLogic()
         {
             reading_data_thread = new Thread(new ThreadStart(UIManagerThread));
@@ -105,8 +111,18 @@ namespace PCKodas
         private void UIManagerThread()
         {
             
-            Object[] change_status_evts = { change_status_text_evt, change_status_ports_evt, update_chart_evt };
-            WaitHandle[] change_status_events = { change_status_text_evt.Event, change_status_ports_evt.Event, update_chart_evt.Event};
+            Object[] change_status_evts = { change_status_text_evt, change_status_ports_evt, update_total_amount_evt };
+
+            WaitHandle[] change_status_events = new WaitHandle[change_status_evts.Length];
+            for(int i = 0; i < change_status_evts.Length; i++)
+            {
+                PropertyInfo evt_property = change_status_evts[i].GetType().GetProperty("Event");
+                if(evt_property != null)
+                {
+                    AutoResetEvent autoResetEvent = (AutoResetEvent)evt_property.GetValue(change_status_evts[i]);
+                    change_status_events[i] = autoResetEvent;
+                }
+            }
             while (true)
             {
                 int i = WaitHandle.WaitAny(change_status_events);
@@ -186,11 +202,7 @@ namespace PCKodas
             byte[] ByteArray = new byte[count];
             port.Read(ByteArray, 0, count);
             if (ByteArray.Length > 0) {
-                //for (int i = 0; i < ByteArray.Length; i++)
-                //{
-                    //update_chart_evt.Set(ByteArray);
-                    Update_Chart(ByteArray);
-                //}
+                Update_Chart(ByteArray);
             }
         }
 
@@ -198,54 +210,68 @@ namespace PCKodas
         {
             ConnectController(comboBox1.GetItemText(comboBox1.SelectedItem));
         }
-        static int max_chart_val = 1;
-        static int min_chart_val = 1000;
+        static int max_chart_val = -1000000;
+        static int min_chart_val = 1000000;
+        static bool got_lsb = false;
+        static int full_value = 0;
         void Update_Chart(byte[] new_values)
         {
-            received_data_total += new_values.Length;
-            Console.WriteLine(new_values.Count());
+            
+            //Console.WriteLine(new_values.Count());
 
             for(int i = 0; i < new_values.Length; i++)
             {
-                received_data[current_data_index] = new_values[i];
-                if (current_data_index >= received_data_max - 1)
+                //Console.WriteLine(new_values[i]);
+                if ((new_values[i] & 0x80) == 0)
                 {
-                    SaveToFileData();
-                    current_data_index = 0;
-                } else
-                {
-                    current_data_index++;
+                    /* Got LSB */
+                    /* First get LSB then MSB */
+                    full_value = new_values[i];
                 }
-
-                this.VoltageChart.Invoke(new MethodInvoker(delegate ()
+                else
                 {
-                    if (!UpdateChartButton.Checked)
+                    /* Got MSB */
+                    /* End conversion as got LSB and MSB */
+                    full_value += (new_values[i] & 0x7F)*128;
+                    received_data_total++;
+                    /* Check if needed save to file */
+                    received_data[current_data_index] = full_value;
+                    if (current_data_index >= received_data_max - 1)
                     {
-                        return;
-                    }
-                    if (VoltageChart.Series[0].Points.Count == max_chart_elements)
+                        SaveToFileData();
+                        current_data_index = 0;
+                    } else
                     {
-                        VoltageChart.Series[0].Points.RemoveAt(0);
+                        current_data_index++;
                     }
-                    VoltageChart.Series[0].Points.AddY(new_values[i]);
-                }));
 
-                if (max_chart_val < new_values[i])
-                {
-                     max_chart_val = new_values[i];
-                 }
+                    /* Determine max/min chart Y values */
+                    if (max_chart_val < full_value)
+                    {
+                        max_chart_val = full_value;
+                    }
 
-                if(min_chart_val > new_values[i])
-                {
-                    min_chart_val = new_values[i];
+                    if (min_chart_val > full_value)
+                    {
+                        min_chart_val = full_value;
+                    }
+
+                    this.VoltageChart.Invoke(new MethodInvoker(delegate ()
+                    {
+                        if (!UpdateChartButton.Checked)
+                        {
+                            return;
+                        }
+                        if (VoltageChart.Series[0].Points.Count == max_chart_elements)
+                        {
+                            VoltageChart.Series[0].Points.RemoveAt(0);
+                        }
+                        VoltageChart.Series[0].Points.AddY(full_value);
+                    }));
+
+                    
                 }
             }
-
-            this.DataAmountLabel.Invoke(new MethodInvoker(delegate ()
-            {
-                DataAmountLabel.Text = received_data_total.ToString();
-            }));
-
             this.VoltageChart.Invoke(new MethodInvoker(delegate ()
             {
                 if (!UpdateChartButton.Checked)
@@ -254,8 +280,8 @@ namespace PCKodas
                 }
                 VoltageChart.ChartAreas[0].AxisY.Minimum = min_chart_val;
                 VoltageChart.ChartAreas[0].AxisY.Maximum = max_chart_val;
-                VoltageChart.Update();
             }));
+            update_total_amount_evt.Set("Total: " + received_data_total.ToString());
         }
 
         private void SaveToFileData()

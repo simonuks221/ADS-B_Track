@@ -30,7 +30,7 @@ port(
 );
 end entity;
 
-architecture arc of Corr_Main is --TestVoltage signals "101101" and "000010"
+architecture arc of Corr_Main is
 
 component Corr_Buffer is
 	generic(
@@ -64,7 +64,7 @@ signal DATA_OUT_6 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '
 signal DATA_OUT_7 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '0');
 signal DATA_OUT_8 : std_logic_vector(BUFFER_LENGTH - 1 downto 0) := (others => '0');
 --Peambule correlation
-signal p_corr : integer range -50000 to 50000 := 0;
+signal p_corr : integer range -100000 to 100000 := 0;
 --Correlations for first/newer bit
 signal first_1_corr : integer range -50000 to 50000 := 0;
 signal first_0_corr : integer range -50000 to 50000 := 0;
@@ -87,7 +87,6 @@ constant BIT_LENGTH : integer := 10;
 signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS+5 := 0;
 signal curr_corr_state : corr_state := preambule;
 signal cnt : integer := 0;
-signal buffer_latch : std_logic := '0';
 
 signal waiting_cnt : integer range 0 to 30 := 0;--TODO: could use only one integer for counting? investigate
 signal bits_cnt : integer range 0 to 20 := 0; --For bit timing
@@ -125,27 +124,36 @@ signal second_1_corr_pipeline_1 : b_size1 := (others => (others => '0'));
 signal second_1_corr_pipeline_2 : b_size2 := (others => (others => '0'));
 signal second_1_corr_pipeline_31 : unsigned(12 downto 0) := (others => '0');
 
+signal p_corr_unsigned : std_logic_vector(13 downto 0) := (others => '0');
+
+signal adc_bits_valid_last : std_logic := '0';
+
+signal corr_buffer_latch : std_logic := '0';
+
 begin
-buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(CLK, buffer_latch, DATA_IN, DATA_OUT_0, DATA_OUT_1, DATA_OUT_2, 
+--Write to corr buffer when new bits arrive on rising edge
+corr_buffer_latch <= '1' when adc_bits_valid_last = '0' and ADC_BITS_VALID = '1' else '0';
+
+buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(CLK, corr_buffer_latch, DATA_IN, DATA_OUT_0, DATA_OUT_1, DATA_OUT_2, 
                                                             DATA_OUT_3, DATA_OUT_4, DATA_OUT_5, DATA_OUT_6, DATA_OUT_7, DATA_OUT_8);
 
 MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
---MRAM_DATA_OUT <= "0000" & std_logic_vector(to_unsigned(p_corr, 12)); --For debuging correlation value
---MRAM_DATA_OUT <= "00000000" & bits_data; --For debugging correlated bit values
-MRAM_DATA_OUT <= ADC_BITS(9 downto 2); --For debugging adc data
+p_corr_unsigned <= std_logic_vector(to_unsigned(p_corr, p_corr_unsigned'length));
+
 PACKET_DATA <= bits_data; --For sending to DATA INTERFACE
 
 CORR_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
-DATA_IN <='0'&ADC_BITS(7 downto 0);
+DATA_IN <= ADC_BITS(8 downto 0);
 
---Efficient Binary loop addition
---https://surf-vhdl.com/vhdl-for-loop-statement
+--Correlating preambule
 process(CLK)
 type size is array (0 to BUFFER_LENGTH-1) of unsigned(9 downto 0);
 variable vacc : size; --50
 variable temp : unsigned(8 downto 0);
 begin
 	if rising_edge(CLK) then
+		--Efficient Binary loop addition
+		--https://surf-vhdl.com/vhdl-for-loop-statement
 		for i in 0 to BUFFER_LENGTH-1 loop
 			temp := DATA_OUT_8(i)&DATA_OUT_7(i)&DATA_OUT_6(i)&DATA_OUT_5(i)&DATA_OUT_4(i)&DATA_OUT_3(i)&DATA_OUT_2(i)&DATA_OUT_1(i)&DATA_OUT_0(i);
 			vacc(i) := to_unsigned(to_integer(temp) * preambule_coef(i), vacc(0)'length);--table_coef(table_coef_idx)(i), 13);
@@ -252,7 +260,52 @@ begin
 	end if;
 end process;
 
+--CNT tracking process
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		adc_bits_valid_last <= ADC_BITS_VALID;
+		if adc_bits_valid_last = '0' and ADC_BITS_VALID = '1' then
+			cnt <= 1;
+		else 
+			cnt <= cnt + 1;
+		end if;
+	end if;
+end process;
 
+--MRAM writeout process
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		if EN_CORR = '0' then
+			MRAM_DATA_OUT <= (others => '0');
+			MRAM_WRITE_DATA <= '0';
+		else
+			MRAM_WRITE_DATA <= '0';
+			case cnt is
+				when 1 =>
+					--Write out LSB of whole value, indicate it with 0 in 8 bit MSB spot
+					--MRAM_DATA_OUT <= "0" & p_corr_unsigned(6 downto 0); --Preambule correlation value
+					--MRAM_DATA_OUT <= "0" & ADC_BITS(6 downto 0); --ADC data
+					--MRAM_DATA_OUT <= ADC_BITS(9 downto 2); --Regular ADC data
+					MRAM_DATA_OUT <= p_corr_unsigned(11 downto 4); --Regular corr data
+					MRAM_WRITE_DATA <= '1';
+					--MRAM_DATA_OUT <= "00000000" & bits_data; --For debugging correlated bit values
+					address_counter <= address_counter + 1;
+				when 9 =>
+				   --Write out MSB of whole value, inciate with 1 in 8 bit MSB spot
+					--MRAM_DATA_OUT <= "1" & p_corr_unsigned(13 downto 7); --Preambule correlation value
+					--MRAM_DATA_OUT <= "1" & "0000" & ADC_BITS(9 downto 7); --ADC data
+					--MRAM_WRITE_DATA <= '1';
+					address_counter <= address_counter + 1;
+				when others =>
+					
+			end case;
+		end if;
+	end if;
+end process;
+
+--Correlating process
 process(CLK)
 variable corr_00 : integer := 0;
 variable corr_01 : integer := 0;
@@ -263,86 +316,66 @@ begin
 		PACKET_VALID <= '0';
 		PACKET_IRQ <= '0';
 		if(EN_CORR = '0') then
-			MRAM_WRITE_DATA <= '0';
-			address_counter <= 0;
 			PREAMBULE_FOUND <= '0';
 			curr_corr_state <= preambule;
-			--table_coef_idx <= 0;
 			waiting_cnt <= 0;
 			bits_data <= (others => '0');
 			bits_cnt <= 0;
 			bits_idx <= 0;
-			buffer_latch <= '0';
 		else
 			PREAMBULE_FOUND <= '0';
-			MRAM_WRITE_DATA <= '0';
-			if ADC_BITS_VALID = '1' then
-				cnt <= 1;
-			else
-				cnt <= cnt + 1;
-				buffer_latch <= '0';
-				case cnt is 
-					when 1 =>
-						buffer_latch <= '1';
-						--Left empty for additional correlation delay
-					when 2 =>
-						--Left empty for additional correlation delay
-					when 3=>
-						cnt <= 0;
-						address_counter <= address_counter + 1;
-						MRAM_WRITE_DATA <= '1';
-						case curr_corr_state is
-							when preambule =>
+			case cnt is 
+				when 3=>
+					case curr_corr_state is
+						when preambule =>
+							waiting_cnt <= 0;
+							bits_cnt <= 0;
+							bits_idx <= 0;
+							bits_data <= (others => '0');
+							--if p_corr > 3655 or p_corr = 3655 then
+							--if p_corr > 0 then
+							--	PREAMBULE_FOUND <= '1';
+							--	curr_corr_state <= waiting;
+							--end if;
+						when waiting =>
+							if waiting_cnt = 29 then
+								curr_corr_state <= bits;
 								waiting_cnt <= 0;
+							else
+								waiting_cnt <= waiting_cnt + 1;
+							end if;
+						when bits => 
+							if bits_cnt = 19 then
+								--Two bit period over, correlate last 20 values
 								bits_cnt <= 0;
-								bits_idx <= 0;
-								bits_data <= (others => '0');
-								--if p_corr > 3655 or p_corr = 3655 then
-								if p_corr > 20 then
-									PREAMBULE_FOUND <= '1';
-									curr_corr_state <= waiting;
-								end if;
-							when waiting =>
-								if waiting_cnt = 29 then
-									curr_corr_state <= bits;
-									waiting_cnt <= 0;
+								if bits_idx = 6 then
+									--8 bit correlation done
+									curr_corr_state <= preambule;
+									PACKET_VALID <= '1';
+									PACKET_IRQ <= '1';
 								else
-									waiting_cnt <= waiting_cnt + 1;
-								end if;
-							when bits => 
-								if bits_cnt = 19 then
-									--Two bit period over, correlate last 20 values
-									bits_cnt <= 0;
-									if bits_idx = 6 then
-										--8 bit correlation done
-										curr_corr_state <= preambule;
-										PACKET_VALID <= '1';
-										PACKET_IRQ <= '1';
+									--Correlate bits
+									corr_00 := second_0_corr + first_0_corr;
+									corr_01 := second_0_corr + first_1_corr;
+									corr_10 := second_1_corr + first_0_corr;
+									corr_11 := second_1_corr + first_1_corr;
+									if corr_00 > corr_11 and corr_00 > corr_01 and corr_00 > corr_10 then
+										bits_data <= bits_data(5 downto 0) & "00";
+									elsif corr_01 > corr_11 and corr_01 > corr_00 and corr_01 > corr_10 then
+										bits_data <= bits_data(5 downto 0) & "01";
+									elsif corr_10 > corr_11 and corr_10 > corr_01 and corr_10 > corr_00 then
+										bits_data <= bits_data(5 downto 0) & "10";
 									else
-										--Correlate bits
-										corr_00 := second_0_corr + first_0_corr;
-										corr_01 := second_0_corr + first_1_corr;
-										corr_10 := second_1_corr + first_0_corr;
-										corr_11 := second_1_corr + first_1_corr;
-										if corr_00 > corr_11 and corr_00 > corr_01 and corr_00 > corr_10 then
-											bits_data <= bits_data(5 downto 0) & "00";
-										elsif corr_01 > corr_11 and corr_01 > corr_00 and corr_01 > corr_10 then
-											bits_data <= bits_data(5 downto 0) & "01";
-										elsif corr_10 > corr_11 and corr_10 > corr_01 and corr_10 > corr_00 then
-											bits_data <= bits_data(5 downto 0) & "10";
-										else
-											bits_data <= bits_data(5 downto 0) & "11";
-										end if;
-										bits_idx <= bits_idx + 2; --Because correlating 2 bits at a time
+										bits_data <= bits_data(5 downto 0) & "11";
 									end if;
-								else
-									bits_cnt <= bits_cnt + 1;
+									bits_idx <= bits_idx + 2; --Because correlating 2 bits at a time
 								end if;
-						end case;
-					when others =>
-						cnt <= 0;
-				end case;
-			end if;
+							else
+								bits_cnt <= bits_cnt + 1;
+							end if;
+					end case;
+				when others =>
+			end case;
 		end if;
 	end if;
 end process;

@@ -71,7 +71,7 @@ begin
 	end if;
 end process;
 
-BITS_OUT <= std_logic_vector(to_unsigned(to_integer(unsigned(fifo_q)), 10));
+BITS_OUT <= std_logic_vector(to_unsigned(to_integer(unsigned(fifo_q))-100, 10));
 
 process(CLK)
 begin
