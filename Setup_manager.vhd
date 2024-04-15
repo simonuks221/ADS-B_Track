@@ -38,21 +38,21 @@ architecture arc of Setup_manager is
 	
 	--Register 08h common mode
 	constant common_mode_reg : spi_cmd := x"0800";
-	constant pullup_A_en : spi_cmd := x"0008"; --Pull up voltage enable
-	constant pullup_A_900mV : spi_cmd := x"0000"; -- 900mV
-	constant pullup_A_1050mV : spi_cmd := x"0001"; --1050mV
-	constant pullup_A_1200mV : spi_cmd := x"0002"; --1200mV
-	constant pullup_A_1350mV : spi_cmd := x"0003"; --1350mV
-	constant pullup_A_750mV : spi_cmd := x"0005"; -- 750mV
-	constant pullup_A_600mV : spi_cmd := x"0006"; -- 600mV
-	constant pullup_A_450mV : spi_cmd := x"0007"; -- 450mV
+	constant pullup_A_en : spi_cmd := x"0008"; --Common mode pull up voltage enable
+	constant pullup_A_900mV : spi_cmd := x"0000";
+	constant pullup_A_1050mV : spi_cmd := x"0001";
+	constant pullup_A_1200mV : spi_cmd := x"0002";
+	constant pullup_A_1350mV : spi_cmd := x"0003";
+	constant pullup_A_750mV : spi_cmd := x"0005";
+	constant pullup_A_600mV : spi_cmd := x"0006";
+	constant pullup_A_450mV : spi_cmd := x"0007";
 	
 	constant init_cmds : spi_cmds := (
 		write_cmd or pwr_reg or ch_A_on or ch_B_on,
 		read_cmd or pwr_reg,
 		write_cmd or format_reg or format_offset_binary,
 		read_cmd or format_reg,
-		common_mode_reg or pullup_A_en or pullup_A_900mV
+		write_cmd or common_mode_reg --or pullup_A_en or pullup_A_900mV
 	);
 		
 	signal spi_cmd_idx : integer range 0 to spi_cmd_amount := 0;

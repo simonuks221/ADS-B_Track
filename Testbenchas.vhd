@@ -6,7 +6,7 @@ use ieee.std_logic_textio.all;
 
 ENTITY Testbenchas IS
 generic(
-VOLTAGE_DATA_LEN: integer := 1079
+VOLTAGE_DATA_LEN: integer := 1300
 );
 
 END Testbenchas;
@@ -61,13 +61,13 @@ signal DEBUG_1 : std_logic := '0';
 --Functions
 --Read from file
 file file_voltages: text;
-type b_data is array(0 to VOLTAGE_DATA_LEN) of std_logic_vector(9 downto 0);
+type b_data is array(0 to VOLTAGE_DATA_LEN) of integer;
 impure function init return b_data is
-variable r : b_data := (others => (others => '0'));
+variable r : b_data := (others => 0);
 variable iline: line;
-variable temp_data : std_logic_vector(9 downto 0);
+variable temp_data : integer;
 begin
-	file_open(file_voltages, "testVoltage.txt",  read_mode);
+	file_open(file_voltages, "test_voltage.txt",  read_mode);
 	 for i in 0 to VOLTAGE_DATA_LEN-1 loop --Iskaitant 9
 		readline(file_voltages, iline);
 		read(iline, temp_data);
@@ -240,7 +240,7 @@ begin
 				if(adc_buffer_counter = 4) then
 					adc_buffer_counter <= 0;
 					adc_buffer_index <= adc_buffer_index + 1;
-					ADC_BIT_A <= adc_buffer(adc_buffer_index);
+					ADC_BIT_A <= std_logic_vector(to_unsigned(adc_buffer(adc_buffer_index), ADC_BIT_A'length));
 				else
 					adc_buffer_counter <= adc_buffer_counter + 1;
 				end if;
