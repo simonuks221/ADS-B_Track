@@ -37,7 +37,7 @@ begin
 MRAM_ADDRESS_IN <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_IN'length));
 
 UART_SEND_DATA <= MRAM_DATA_OUT;
-WRITE_OUT_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS - 1 else '0';
+WRITE_OUT_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
 
 process(CLK)
 begin

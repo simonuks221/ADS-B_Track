@@ -4,21 +4,20 @@ use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
-entity UART_TX is
+entity UART_TX_DRIVER is
 generic(
 	BAUD_RATE : integer := 9600
 );
 port(
 	CLK: in std_logic;
-	UART_CLK : in std_logic;
 	SEND_DATA : in std_logic_vector(7 downto 0);
 	START_SEND_DATA : in std_logic;
-	TX_BUSY : out std_logic := '0';
+	TX_BUSY : out std_logic := '0'; --TODO: rename to inverse
 	TX : out std_logic
 );
 end entity;
 --
-architecture arc of UART_TX is
+architecture arc of UART_TX_DRIVER is
 	constant BAUD_RATE_COUNTER_MAX : integer := 150000000/BAUD_RATE;
 	type state is (idle, sync, start, data, stop);
 	signal curr_state : state := idle;
@@ -28,7 +27,7 @@ architecture arc of UART_TX is
 begin
 
 TX <= '0' when curr_state = start else data_send(data_index) when curr_state = data else '1';
-TX_BUSY <= '0' when curr_state = idle else '1';
+TX_BUSY <= '1' when curr_state = idle else '0';
 
 process(CLK)
 begin

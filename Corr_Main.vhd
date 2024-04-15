@@ -280,23 +280,24 @@ begin
 		if EN_CORR = '0' then
 			MRAM_DATA_OUT <= (others => '0');
 			MRAM_WRITE_DATA <= '0';
+			address_counter <= 0;
 		else
 			MRAM_WRITE_DATA <= '0';
 			case cnt is
 				when 1 =>
 					--Write out LSB of whole value, indicate it with 0 in 8 bit MSB spot
 					--MRAM_DATA_OUT <= "0" & p_corr_unsigned(6 downto 0); --Preambule correlation value
-					--MRAM_DATA_OUT <= "0" & ADC_BITS(6 downto 0); --ADC data
+					MRAM_DATA_OUT <= "0" & ADC_BITS(6 downto 0); --ADC data
 					--MRAM_DATA_OUT <= ADC_BITS(9 downto 2); --Regular ADC data
-					MRAM_DATA_OUT <= p_corr_unsigned(11 downto 4); --Regular corr data
+					--MRAM_DATA_OUT <= p_corr_unsigned(11 downto 4); --Regular corr data
 					MRAM_WRITE_DATA <= '1';
 					--MRAM_DATA_OUT <= "00000000" & bits_data; --For debugging correlated bit values
 					address_counter <= address_counter + 1;
 				when 9 =>
 				   --Write out MSB of whole value, inciate with 1 in 8 bit MSB spot
 					--MRAM_DATA_OUT <= "1" & p_corr_unsigned(13 downto 7); --Preambule correlation value
-					--MRAM_DATA_OUT <= "1" & "0000" & ADC_BITS(9 downto 7); --ADC data
-					--MRAM_WRITE_DATA <= '1';
+					MRAM_DATA_OUT <= "1" & "0000" & ADC_BITS(9 downto 7); --ADC data
+					MRAM_WRITE_DATA <= '1';
 					address_counter <= address_counter + 1;
 				when others =>
 					
@@ -332,11 +333,11 @@ begin
 							bits_cnt <= 0;
 							bits_idx <= 0;
 							bits_data <= (others => '0');
-							--if p_corr > 3655 or p_corr = 3655 then
+							if p_corr > 3655 or p_corr = 3655 then
 							--if p_corr > 0 then
-							--	PREAMBULE_FOUND <= '1';
-							--	curr_corr_state <= waiting;
-							--end if;
+								PREAMBULE_FOUND <= '1';
+								curr_corr_state <= waiting;
+							end if;
 						when waiting =>
 							if waiting_cnt = 29 then
 								curr_corr_state <= bits;

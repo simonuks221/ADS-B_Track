@@ -7,13 +7,12 @@ use ieee.std_logic_textio.all;
 entity UNI_Projektas is --Up to 260MHz operation
 generic (
 	BAUD_RATE : integer := 921600;
-	MAX_ADDRESS_COUNTS : integer := 32000;
+	MAX_ADDRESS_COUNTS : integer := 20000;
 	SEND_CLK_COUNTER_MAX : integer := 30
 );
 port(
 	CLK : in std_logic;
 	BUTTON : in std_logic;
-	
 	--ADC SIGNALS
 	ADC_SHDN : out std_logic := 'Z'; --1 - ADC OFF, 0 - ADC ON
 	ADC_SYNC : out std_logic := 'Z'; --Sinchronizacija tarp FPGA CLk ir ADC vidinio CLK
@@ -58,16 +57,16 @@ end entity;
 
 architecture arc of UNI_Projektas is
 
-component UART_Controller is
+component UART_TX_DRIVER is
 generic(
 	BAUD_RATE : integer := 9600
 );
 port(
 	CLK: in std_logic;
-	SEND_DATA_IN: in std_logic_vector(7 downto 0) := (others => '0');
-	UART_FIFO_EMPTY: out std_logic := '0';
-	SEND_DATA_IN_REQ: in std_logic := '0';
-	TX : out std_logic := '1'
+	SEND_DATA : in std_logic_vector(7 downto 0);
+	START_SEND_DATA : in std_logic;
+	TX_BUSY : out std_logic := '0';
+	TX : out std_logic
 );
 end component;
 
@@ -295,8 +294,8 @@ ADC_SPI_send_irq <= ADC_SPI_Send_irq1 or ADC_SPI_send_irq2;
 adc_spi : SPI_MASTER generic map (SEND_CLK_COUNTER_MAX => SEND_CLK_COUNTER_MAX, BITS => 16) port map(CLK => CLK_150,
 							SPI_MOSI => ADC_SPI_SDIN, SPI_SCLK => ADC_SPI_SCLK, SPI_CS => ADC_SPI_CS, SEND_DATA => ADC_SPI_send_data,
 							SEND_IRQ => ADC_SPI_Send_irq, SEND_DONE => ADC_SPI_DONE);
-UART_Controller_1 : UART_Controller generic map(BAUD_RATE => BAUD_RATE) port map(CLK => CLK_150, SEND_DATA_IN => UART_SEND_DATA,
-							SEND_DATA_IN_REQ => UART_DATA_IRQ, TX => UART_TX, UART_FIFO_EMPTY => UART_FIFO_EMPTY);
+UART_TX_1 : UART_TX_DRIVER generic map(BAUD_RATE => BAUD_RATE) port map(CLK => CLK_150, SEND_DATA => UART_SEND_DATA,
+							START_SEND_DATA => UART_DATA_IRQ, TX => UART_TX, TX_BUSY => UART_FIFO_EMPTY);
 
 Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 50, BUFFER_WIDTH => 9, MAX_ADDRESS_COUNTS => MAX_ADDRESS_COUNTS) 
 							port map(CLK => CLK_150, ADC_BITS => ADC_BITS_OUT, ADC_BITS_VALID => ADC_BIT_VALID, PREAMBULE_FOUND => PREAMB_FOUND,

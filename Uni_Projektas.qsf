@@ -133,7 +133,6 @@ set_global_assignment -name VHDL_FILE SPI_SLAVE.vhd
 set_global_assignment -name VHDL_FILE SPI_MASTER.vhd
 set_global_assignment -name VHDL_FILE Uni_Projektas.vhd
 set_global_assignment -name VHDL_FILE Clock_divider.vhd
-set_global_assignment -name VHDL_FILE UART_Controller.vhd
 set_global_assignment -name VHDL_FILE UART_TX.vhd
 set_global_assignment -name QIP_FILE UART_FIFO_wizard.qip
 set_global_assignment -name VHDL_FILE Testbenchas.vhd
