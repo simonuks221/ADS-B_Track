@@ -286,8 +286,8 @@ begin
 			case cnt is
 				when 1 =>
 					--Write out LSB of whole value, indicate it with 0 in 8 bit MSB spot
-					--MRAM_DATA_OUT <= "0" & p_corr_unsigned(6 downto 0); --Preambule correlation value
-					MRAM_DATA_OUT <= "0" & ADC_BITS(6 downto 0); --ADC data
+					MRAM_DATA_OUT <= "0" & p_corr_unsigned(6 downto 0); --Preambule correlation value 16 bits
+					--MRAM_DATA_OUT <= "0" & ADC_BITS(6 downto 0); --ADC data 16 bits
 					--MRAM_DATA_OUT <= ADC_BITS(9 downto 2); --Regular ADC data
 					--MRAM_DATA_OUT <= p_corr_unsigned(11 downto 4); --Regular corr data
 					MRAM_WRITE_DATA <= '1';
@@ -295,8 +295,8 @@ begin
 					address_counter <= address_counter + 1;
 				when 9 =>
 				   --Write out MSB of whole value, inciate with 1 in 8 bit MSB spot
-					--MRAM_DATA_OUT <= "1" & p_corr_unsigned(13 downto 7); --Preambule correlation value
-					MRAM_DATA_OUT <= "1" & "0000" & ADC_BITS(9 downto 7); --ADC data
+					MRAM_DATA_OUT <= "1" & p_corr_unsigned(13 downto 7); --Preambule correlation value 16 bits
+					--MRAM_DATA_OUT <= "1" & "0000" & ADC_BITS(9 downto 7); --ADC data 16 bits
 					MRAM_WRITE_DATA <= '1';
 					address_counter <= address_counter + 1;
 				when others =>

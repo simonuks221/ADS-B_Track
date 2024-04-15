@@ -11,7 +11,6 @@ port(
 	ADC_BIT : in std_logic_vector(9 downto 0) := (others => '0');
 	ADC_BIT_VALID : out std_logic := '0';
 	BITS_OUT : out std_logic_vector(9 downto 0) := (others => '0');
-	
 	EN_READ_ADC : in std_logic := '0'
 );
 end entity;
@@ -71,7 +70,7 @@ begin
 	end if;
 end process;
 
-BITS_OUT <= std_logic_vector(to_unsigned(to_integer(unsigned(fifo_q)), 10));
+BITS_OUT <= std_logic_vector(to_unsigned(to_integer(unsigned(fifo_q))-300, 10));
 
 process(CLK)
 begin

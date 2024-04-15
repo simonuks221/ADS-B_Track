@@ -7,6 +7,7 @@ using System.Threading;
 using System.Reflection;
 using System.Diagnostics;
 using System.Linq;
+using System.Diagnostics.Eventing.Reader;
 
 namespace PCKodas
 {
@@ -214,6 +215,9 @@ namespace PCKodas
         static int min_chart_val = 1000000;
         static bool got_lsb = false;
         static int full_value = 0;
+
+        static byte lsb = 0;
+        static byte msb = 0;
         void Update_Chart(byte[] new_values)
         {
             
@@ -226,13 +230,25 @@ namespace PCKodas
                 {
                     /* Got LSB */
                     /* First get LSB then MSB */
-                    full_value = new_values[i];
+                    lsb = new_values[i];
                 }
                 else
                 {
                     /* Got MSB */
                     /* End conversion as got LSB and MSB */
-                    full_value += (new_values[i] & 0x7F)*128;
+                    msb = (byte)(new_values[i] & 0x7F);
+
+                    full_value = (ushort)((msb << 7) | lsb);
+                    /* If signed 10bit number received */
+                    if(SignedNumberCheckBox.Checked)
+                    {
+                        /* Check if negative value */
+                        if ((full_value & 0x200) != 0)
+                        {
+                            // Convert to negative
+                            full_value -= 1024;
+                        }
+                    }
                     received_data_total++;
                     /* Check if needed save to file */
                     received_data[current_data_index] = full_value;
@@ -267,10 +283,15 @@ namespace PCKodas
                             VoltageChart.Series[0].Points.RemoveAt(0);
                         }
                         VoltageChart.Series[0].Points.AddY(full_value);
+                        /* Update chart Y range every 10 values */
+                        if(received_data_total % 10 == 0)
+                        {
+                            VoltageChart.ChartAreas[0].AxisY.Minimum = min_chart_val;
+                            VoltageChart.ChartAreas[0].AxisY.Maximum = max_chart_val;
+                        }
                     }));
-
-                    
                 }
+
             }
             this.VoltageChart.Invoke(new MethodInvoker(delegate ()
             {
@@ -278,8 +299,7 @@ namespace PCKodas
                 {
                     return;
                 }
-                VoltageChart.ChartAreas[0].AxisY.Minimum = min_chart_val;
-                VoltageChart.ChartAreas[0].AxisY.Maximum = max_chart_val;
+               
             }));
             update_total_amount_evt.Set("Total: " + received_data_total.ToString());
         }

@@ -40,6 +40,7 @@
             this.SaveToFileButton = new System.Windows.Forms.Button();
             this.DataAmountLabel = new System.Windows.Forms.Label();
             this.UpdateChartButton = new System.Windows.Forms.CheckBox();
+            this.SignedNumberCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VoltageChart)).BeginInit();
@@ -94,6 +95,8 @@
             this.VoltageChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.AxisX.Title = "Atskaitos";
+            chartArea1.AxisY.Title = "Įtampos vertės";
             chartArea1.Name = "ChartArea1";
             this.VoltageChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -124,7 +127,7 @@
             // 
             this.DataAmountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.DataAmountLabel.AutoSize = true;
-            this.DataAmountLabel.Location = new System.Drawing.Point(549, 397);
+            this.DataAmountLabel.Location = new System.Drawing.Point(549, 405);
             this.DataAmountLabel.Name = "DataAmountLabel";
             this.DataAmountLabel.Size = new System.Drawing.Size(44, 16);
             this.DataAmountLabel.TabIndex = 10;
@@ -141,11 +144,25 @@
             this.UpdateChartButton.Text = "Update chart";
             this.UpdateChartButton.UseVisualStyleBackColor = true;
             // 
+            // SignedNumberCheckBox
+            // 
+            this.SignedNumberCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.SignedNumberCheckBox.AutoSize = true;
+            this.SignedNumberCheckBox.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.SignedNumberCheckBox.Location = new System.Drawing.Point(187, 401);
+            this.SignedNumberCheckBox.Name = "SignedNumberCheckBox";
+            this.SignedNumberCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.SignedNumberCheckBox.Size = new System.Drawing.Size(72, 20);
+            this.SignedNumberCheckBox.TabIndex = 12;
+            this.SignedNumberCheckBox.Text = "Signed";
+            this.SignedNumberCheckBox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SignedNumberCheckBox);
             this.Controls.Add(this.UpdateChartButton);
             this.Controls.Add(this.DataAmountLabel);
             this.Controls.Add(this.SaveToFileButton);
@@ -173,6 +190,7 @@
         private System.Windows.Forms.Button SaveToFileButton;
         private System.Windows.Forms.Label DataAmountLabel;
         private System.Windows.Forms.CheckBox UpdateChartButton;
+        private System.Windows.Forms.CheckBox SignedNumberCheckBox;
     }
 }
 
