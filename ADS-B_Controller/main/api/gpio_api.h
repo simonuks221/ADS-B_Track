@@ -39,10 +39,12 @@ typedef enum eGpio {
     eGpioLEDOne,
     eGpioLEDTwo,
     eGpioLEDThree,
+    eGpioSdDetect,
     eGpioLast
 } eGpio_t;
 
 bool GPIO_API_Init(void);
 bool GPIO_API_Set(eGpio_t gpio, bool state); /* Set gpio level */
+bool GPIO_API_Read(eGpio_t gpio); /* Read GPIO level */
 
 #endif // GPIO_API_H

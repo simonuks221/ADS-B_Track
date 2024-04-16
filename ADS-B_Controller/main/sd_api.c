@@ -13,6 +13,12 @@
 
 const static char * LOG_TAG = "SD";
 
+/* Checks if card is inserted using CardDetect pin */
+static bool SP_API_IsCardConnected() {
+    /* Card inserted if low level */
+    return !GPIO_API_Read(eGpioSdDetect);
+}
+
 static esp_err_t SD_API_Write(const char *path, char *data)
 {
     ESP_LOGI(LOG_TAG, "Opening file %s", path);
@@ -51,6 +57,7 @@ static esp_err_t SD_API_Read(const char *path)
 }
 
 bool SD_API_Init(void) {
+    /* Initialise SPI */
     esp_vfs_fat_sdmmc_mount_config_t mount_config = {
         .format_if_mount_failed = true,
         .max_files = 5,
@@ -72,9 +79,14 @@ bool SD_API_Init(void) {
         return true;
     }
     ESP_LOGI(LOG_TAG, "Initialised SPI");
+    /* Check if card connected */
+    if(!SP_API_IsCardConnected()) {
+        ESP_LOGI(LOG_TAG, "Card not detected");
+        return true;
+    }
     sdspi_device_config_t slot_config = SDSPI_DEVICE_CONFIG_DEFAULT();
     slot_config.gpio_cs = SD_CS_PIN;
-    //slot_config.gpio_cd = CARD_DETECT_PIN; //Experimental
+    //slot_config.gpio_cd =  SD_CARD_DETECT_PIN; //Experimental, returns errors if no sd card - useless
     slot_config.host_id = host.slot;
     if(esp_vfs_fat_sdspi_mount(mount_point, &host, &slot_config, &mount_config, &card) != ESP_OK) {
         ESP_LOGI(LOG_TAG, "Failed mounting card");
@@ -111,6 +123,7 @@ bool SD_API_Init(void) {
     }
 
     // Format FATFS
+    /*
     if(esp_vfs_fat_sdcard_format(mount_point, card) != ESP_OK) {
         ESP_LOGE(LOG_TAG, "Failed to format FATFS");
         return true;
@@ -122,6 +135,7 @@ bool SD_API_Init(void) {
     } else {
         ESP_LOGI(LOG_TAG, "file doesnt exist, format done");
     }
+    */
 
     // All done, unmount partition and disable SPI peripheral
     esp_vfs_fat_sdcard_unmount(mount_point, card);

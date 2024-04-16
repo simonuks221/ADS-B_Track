@@ -96,7 +96,7 @@ bool FPGA_APP_Init(void) {
         .data7_io_num = -1
     };
 
-    if(spi_bus_initialize(SPI2_HOST, &buscfg, SPI_DMA_CH_AUTO) != ESP_OK) {
+    if(spi_bus_initialize(SPI3_HOST, &buscfg, SPI_DMA_CH_AUTO) != ESP_OK) {
         ESP_LOGE(LOG_TAG, "Failed init SPI bus");
         return true;
     }
@@ -108,7 +108,7 @@ bool FPGA_APP_Init(void) {
         .flags = SPI_DEVICE_BIT_LSBFIRST,
         .address_bits = 8,
     };
-    if(spi_bus_add_device(SPI2_HOST,  &dev_config, &spi_handle) != ESP_OK) {
+    if(spi_bus_add_device(SPI3_HOST,  &dev_config, &spi_handle) != ESP_OK) {
         ESP_LOGE(LOG_TAG, "Failed registering device");
         return true;
     }

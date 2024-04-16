@@ -31,7 +31,7 @@ sApp_t app_lut[] = {
     {"TIM", Timer_API_Init, NULL},
     //{"UART", UART_API_Init, NULL},
     //{"NEXTION", Nextion_API_Init, NULL},
-    //{"SD", SD_API_Init, NULL},
+    {"SD", SD_API_Init, NULL},
     //{"GPS", GPS_APP_Init, NULL},
     {"FPGA", FPGA_APP_Init, FPGA_APP_Run},
     //{"CONNECTION", Connection_APP_Init, Connection_APP_Run}

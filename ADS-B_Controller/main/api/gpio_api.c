@@ -17,6 +17,7 @@ typedef struct sGpioDesc {
 
 #define GPIO(_enum, _gpio, _mode, _up, _down, _lvl) [_enum] = {.num = _gpio, .mode = _mode, .pull_up = _up, .pull_down = _down, .interrupt = GPIO_INTR_DISABLE, .init_level = _lvl}
 #define EXTI(_enum, _gpio, _up, _down, _int)  [_enum] = {.num = _gpio, .mode = GPIO_MODE_INPUT, .pull_up = _up, .pull_down = _down, .interrupt = _int, .init_level = false}
+//TODO: GPIO_INPUT/OUTPUT to another macro
 
 static const char *LOG_TAG = "GPIO";
 
@@ -27,6 +28,7 @@ static const sGpioDesc_t gpio_lut[eGpioLast] = {
     GPIO(eGpioLEDOne, LED_0_PIN, GPIO_MODE_OUTPUT, false, false, false),
     GPIO(eGpioLEDTwo, LED_1_PIN, GPIO_MODE_OUTPUT, false, false, false),
     GPIO(eGpioLEDThree, LED_2_PIN, GPIO_MODE_OUTPUT, false, false, false),
+    GPIO(eGpioSdDetect, SD_CARD_DETECT_PIN, GPIO_MODE_INPUT, true, false, false)
 };
 
 static void IRAM_ATTR gpio_isr_handler(void* arg) {
@@ -77,4 +79,11 @@ bool GPIO_API_Set(eGpio_t gpio, bool state) {
         return false;
     }
     return (gpio_set_level(gpio_lut[gpio].num, (uint32_t)state) == ESP_OK);
+}
+
+bool GPIO_API_Read(eGpio_t gpio) {
+    if(gpio >= eGpioLast) {
+        return false;
+    }
+    return gpio_get_level(gpio_lut[gpio].num) == 1;
 }
