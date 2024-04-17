@@ -6,7 +6,7 @@ use ieee.std_logic_textio.all;
 
 entity Corr_Main is
 generic(
-	BUFFER_LENGTH : integer := 50;
+	BUFFER_LENGTH : integer := 80;
 	BUFFER_WIDTH : integer := 9;
 	MAX_ADDRESS_COUNTS : integer :=  1000
 );
@@ -34,7 +34,7 @@ architecture arc of Corr_Main is
 
 component Corr_Buffer is
 	generic(
-		BUFFER_LENGTH: integer := 50;
+		BUFFER_LENGTH: integer := 80;
 		BUFFER_WIDTH : integer := 8
 	);
 	port (
@@ -73,12 +73,20 @@ signal second_1_corr : integer range -50000 to 50000 := 0;
 signal second_0_corr : integer range -50000 to 50000 := 0;
 
 --Coefficients array
-type preambule_coef_vector is array(49 downto 0) of integer range 0 to 1;
+type preambule_coef_vector is array(BUFFER_LENGTH-1 downto 0) of integer range -1 to 1;
 type bit_coef_vector is array(9 downto 0) of integer range 0 to 1;
 type corr_state is (preambule, waiting, bits);
 
-constant preambule_coef : preambule_coef_vector := (1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 
-																	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,	0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1);
+--Regular preambule
+--constant preambule_coef : preambule_coef_vector := (1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 
+--																	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,	0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1);
+--Preambule negative
+constant preambule_coef : preambule_coef_vector := (1, 1, 1, 1, 1, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 
+																	-1, -1, -1, -1, -1, -1, -1, -1, -1, -1,	-1, -1, -1, 1, 1, 1, 1, 1, -1, -1, -1,
+																	-1, -1, 1, 1, 1, 1, 1,
+																	-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
+																	-1, -1, -1, -1, -1, -1, -1, -1, -1, -1);
+
 constant bit_1_coef : bit_coef_vector := (1, 1, 1, 1, 1, 0, 0, 0, 0, 0);
 constant bit_0_coef : bit_coef_vector := (0, 0, 0, 0, 0, 1, 1, 1, 1, 1);
 
@@ -93,10 +101,10 @@ signal bits_cnt : integer range 0 to 20 := 0; --For bit timing
 signal bits_idx : integer range 0 to 6 := 0;  --For bit tracking
 signal bits_data : std_logic_vector(7 downto 0) := (others => '0'); --Correlated bit value
 
-type p_size1 is array (0 to (BUFFER_LENGTH/2)-1) of unsigned(10 downto 0);
-type p_size2 is array (0 to (BUFFER_LENGTH/4)-1) of unsigned(11 downto 0);
-type p_size3 is array (0 to (BUFFER_LENGTH/8)-1) of unsigned(12 downto 0);
-type p_size4 is array (0 to (BUFFER_LENGTH/16)-1) of unsigned(13 downto 0);
+type p_size1 is array (0 to (BUFFER_LENGTH/2)-1) of signed(10 downto 0);
+type p_size2 is array (0 to (BUFFER_LENGTH/4)-1) of signed(11 downto 0);
+type p_size3 is array (0 to (BUFFER_LENGTH/8)-1) of signed(12 downto 0);
+type p_size4 is array (0 to (BUFFER_LENGTH/16)-1) of signed(13 downto 0);
 
 type b_size1 is array (0 to (BIT_LENGTH/2)-1) of unsigned(10 downto 0); --10
 type b_size2 is array (0 to (BIT_LENGTH/4)-1) of unsigned(11 downto 0); --5
@@ -105,24 +113,24 @@ signal p_corr_pipeline_1 : p_size1 := (others => (others => '0')); --25
 signal p_corr_pipeline_2 : p_size2 := (others => (others => '0')); --12 --Left one
 signal p_corr_pipeline_3 : p_size3 := (others => (others => '0')); --6
 signal p_corr_pipeline_4 : p_size4 := (others => (others => '0')); --3
-signal p_corr_pipeline_51 : unsigned(14 downto 0) := (others => '0');
-signal p_corr_pipeline_52 : unsigned(14 downto 0) := (others => '0');
+signal p_corr_pipeline_51 : signed(14 downto 0) := (others => '0');
+signal p_corr_pipeline_52 : signed(14 downto 0) := (others => '0');
 
 signal first_0_corr_pipeline_1 : b_size1 := (others => (others => '0')); --TODO: OPTIMISE, dont need that many stages here
 signal first_0_corr_pipeline_2 : b_size2 := (others => (others => '0'));
-signal first_0_corr_pipeline_31 : unsigned(12 downto 0) := (others => '0');
+signal first_0_corr_pipeline_31 : signed(12 downto 0) := (others => '0');
 
 signal first_1_corr_pipeline_1 : b_size1 := (others => (others => '0'));
 signal first_1_corr_pipeline_2 : b_size2 := (others => (others => '0'));
-signal first_1_corr_pipeline_31 : unsigned(12 downto 0) := (others => '0');
+signal first_1_corr_pipeline_31 : signed(12 downto 0) := (others => '0');
 
 signal second_0_corr_pipeline_1 : b_size1 := (others => (others => '0'));
 signal second_0_corr_pipeline_2 : b_size2 := (others => (others => '0'));
-signal second_0_corr_pipeline_31 : unsigned(12 downto 0) := (others => '0');
+signal second_0_corr_pipeline_31 : signed(12 downto 0) := (others => '0');
 
 signal second_1_corr_pipeline_1 : b_size1 := (others => (others => '0'));
 signal second_1_corr_pipeline_2 : b_size2 := (others => (others => '0'));
-signal second_1_corr_pipeline_31 : unsigned(12 downto 0) := (others => '0');
+signal second_1_corr_pipeline_31 : signed(12 downto 0) := (others => '0');
 
 signal p_corr_unsigned : std_logic_vector(13 downto 0) := (others => '0');
 
@@ -138,7 +146,7 @@ buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(CLK, corr_b
                                                             DATA_OUT_3, DATA_OUT_4, DATA_OUT_5, DATA_OUT_6, DATA_OUT_7, DATA_OUT_8);
 
 MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
-p_corr_unsigned <= std_logic_vector(to_unsigned(p_corr, p_corr_unsigned'length));
+p_corr_unsigned <= std_logic_vector(to_signed(p_corr, p_corr_unsigned'length));
 
 PACKET_DATA <= bits_data; --For sending to DATA INTERFACE
 
@@ -147,8 +155,8 @@ DATA_IN <= ADC_BITS(8 downto 0);
 
 --Correlating preambule
 process(CLK)
-type size is array (0 to BUFFER_LENGTH-1) of unsigned(9 downto 0);
-variable vacc : size; --50
+type size is array (0 to BUFFER_LENGTH-1) of signed(9 downto 0);
+variable vacc : size; --80
 variable temp : unsigned(8 downto 0);
 begin
 	if rising_edge(CLK) then
@@ -156,7 +164,7 @@ begin
 		--https://surf-vhdl.com/vhdl-for-loop-statement
 		for i in 0 to BUFFER_LENGTH-1 loop
 			temp := DATA_OUT_8(i)&DATA_OUT_7(i)&DATA_OUT_6(i)&DATA_OUT_5(i)&DATA_OUT_4(i)&DATA_OUT_3(i)&DATA_OUT_2(i)&DATA_OUT_1(i)&DATA_OUT_0(i);
-			vacc(i) := to_unsigned(to_integer(temp) * preambule_coef(i), vacc(0)'length);--table_coef(table_coef_idx)(i), 13);
+			vacc(i) := to_signed(to_integer(temp) * preambule_coef(i), vacc(0)'length);--table_coef(table_coef_idx)(i), 13);
 		end loop;
 		
 		for i in 0 to (BUFFER_LENGTH/2)-1 loop
@@ -214,11 +222,11 @@ begin
 													resize(first_1_corr_pipeline_1(i*2+1), first_1_corr_pipeline_2(0)'length);
 		end loop;
 		
-		first_0_corr_pipeline_31 <= resize(first_0_corr_pipeline_2(0), first_0_corr_pipeline_31'length) + 
-											resize(first_0_corr_pipeline_2(1), first_0_corr_pipeline_31'length);
-		first_0_corr <= to_integer(first_0_corr_pipeline_31) + to_integer(first_0_corr_pipeline_1(4));
-		first_1_corr_pipeline_31 <= resize(first_1_corr_pipeline_2(0), first_1_corr_pipeline_31'length) + 
-										resize(first_1_corr_pipeline_2(1), first_1_corr_pipeline_31'length);
+		--first_0_corr_pipeline_31 <= resize(first_0_corr_pipeline_2(0), first_0_corr_pipeline_31'length) + 
+		--									resize(first_0_corr_pipeline_2(1), first_0_corr_pipeline_31'length);
+		--first_0_corr <= to_integer(first_0_corr_pipeline_31) + to_integer(first_0_corr_pipeline_1(4));
+		--first_1_corr_pipeline_31 <= resize(first_1_corr_pipeline_2(0), first_1_corr_pipeline_31'length) + 
+		--								resize(first_1_corr_pipeline_2(1), first_1_corr_pipeline_31'length);
 		first_1_corr <= to_integer(first_1_corr_pipeline_31) + to_integer(first_1_corr_pipeline_1(4));
 	end if;
 end process;
@@ -251,11 +259,11 @@ begin
 														resize(second_1_corr_pipeline_1(i*2+1), second_0_corr_pipeline_2(0)'length);
 		end loop;
 		
-		second_0_corr_pipeline_31 <= resize(second_0_corr_pipeline_2(0), second_0_corr_pipeline_31'length)+
-												resize(second_0_corr_pipeline_2(1), second_0_corr_pipeline_31'length);
-		second_0_corr <= to_integer(second_0_corr_pipeline_31) + to_integer(second_0_corr_pipeline_1(4));
-		second_1_corr_pipeline_31 <= resize(second_1_corr_pipeline_2(0), second_1_corr_pipeline_31'length)+
-												resize(second_1_corr_pipeline_2(1), second_1_corr_pipeline_31'length);
+		--second_0_corr_pipeline_31 <= resize(second_0_corr_pipeline_2(0), second_0_corr_pipeline_31'length)+
+		--										resize(second_0_corr_pipeline_2(1), second_0_corr_pipeline_31'length);
+		--second_0_corr <= to_integer(second_0_corr_pipeline_31) + to_integer(second_0_corr_pipeline_1(4));
+		--second_1_corr_pipeline_31 <= resize(second_1_corr_pipeline_2(0), second_1_corr_pipeline_31'length)+
+		--										resize(second_1_corr_pipeline_2(1), second_1_corr_pipeline_31'length);
 		second_1_corr <= to_integer(second_1_corr_pipeline_31) + to_integer(second_1_corr_pipeline_1(4));
 	end if;
 end process;

@@ -70,7 +70,7 @@ begin
 	end if;
 end process;
 
-BITS_OUT <= std_logic_vector(to_unsigned(to_integer(unsigned(fifo_q))-300, 10));
+BITS_OUT <= std_logic_vector(to_unsigned(to_integer(unsigned(fifo_q))-100, 10)); --Was 300 in real life
 
 process(CLK)
 begin
