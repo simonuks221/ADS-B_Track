@@ -301,7 +301,7 @@ node_modules/
 *.dsw
 *.dsp
 
-# Visual Studio 6 technical files 
+# Visual Studio 6 technical files
 *.ncb
 *.aps
 
@@ -484,3 +484,7 @@ _output_files/
 PLLJ_PLLSPE_INFO.txt
 
 simulation/*
+
+Matlab/Grafikai/*
+PC_Code/PCKodas/bin/*
+PCB/Project Outputs for FPGA_ADC_SHIELD_PCB2/*

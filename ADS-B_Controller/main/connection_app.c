@@ -119,8 +119,8 @@ static void Connection_SendSocket(void) {
         } break;
         case eMessageNewPacket: {
             sMessagePacket_t *arguments = (sMessagePacket_t *)new_message.content;
-            char packet_data_string[20] = {0}; //TODO: remove hardcode
-            if(!HexToString(arguments->packet, 10, packet_data_string)) {
+            char packet_data_string[ADSB_PACKET_LEN_BYTES*2] = {0}; //TODO: remove hardcode
+            if(!HexToString(arguments->packet, ADSB_PACKET_LEN_BYTES, packet_data_string)) {
                 ESP_LOGE(LOG_TAG, "Failed making hex string");
                 break;
             }

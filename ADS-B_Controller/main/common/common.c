@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "common.h"
 
-/* Turns hex array to hex string */
+/* Turns hex array to hex string, length in bytes */
 /* OUTPUT BUFFER MUST BE PREALLOCATED AR LEAST 2 * length */
 bool HexToString(const uint8_t *buffer, size_t length, char *out) {
     if((buffer == NULL) || (length == 0) || (out == NULL)) {
