@@ -61,10 +61,11 @@ DATA_OUT_7 <= buffer_7;
 DATA_OUT_8 <= buffer_8;
 DATA_OUT_9 <= buffer_9;
 
-process(CLK)
-begin
-	if rising_edge(CLK) then
-		if LATCH = '1' then
+--For energy calculations
+--process(CLK)
+--begin
+--	if rising_edge(CLK) then
+--		if LATCH = '1' then
 --			v1 <= buffer_9(0)&buffer_8(0)&buffer_7(0)&buffer_6(0)&
 --							buffer_5(0)&buffer_4(0)&buffer_3(0)&buffer_2(0)&
 --							buffer_1(0)&buffer_0(0);
@@ -73,9 +74,9 @@ begin
 --							buffer_1(BUFFER_LENGTH-1)&buffer_0(BUFFER_LENGTH-1);
 --			v22 <= v2;
 --			energy <= energy + to_integer(abs(v1)) - to_integer(abs(v22));
-		end if;
-	end if;
-end process;
+--		end if;
+--	end if;
+--end process;
 
 process(CLK)
 begin

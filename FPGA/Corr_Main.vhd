@@ -86,8 +86,8 @@ type corr_state is (preambule, waiting, bits);
 --Preambule negative
 constant preambule_coef : preambule_coef_vector := (
 1, 1, 1, 1, 1, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 
-																	-1, -1, -1, -1, -1, -1, -1, -1, -1, -1,	-1, -1, -1, 1, 1, 1, 1, 1, -1, -1, -1,
-																	-1, -1, 1, 1, 1, 1, 1,-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
+																	-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, -1, -1, -1,
+																	-1, -1, 1, 1, 1, 1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
 																	-1, -1, -1, -1, -1, -1, -1, -1, -1, -1);
 
 constant bit_1_coef : bit_coef_vector := (1, 1, 1, 1, 1, 0, 0, 0, 0, 0);
@@ -160,7 +160,7 @@ p_corr_unsigned <= std_logic_vector(to_signed(p_corr/16, p_corr_unsigned'length)
 PACKET_DATA <= bits_data; --For sending to DATA INTERFACE
 
 CORR_DONE <= '1' when address_counter = MAX_ADDRESS_COUNTS else '0';
-DATA_IN <= ADC_BITS;
+DATA_IN <= ADC_BITS(ADC_BITS'length - 1 downto ADC_BITS'length - BUFFER_WIDTH);
 
 --PREAMBULE_FOUND <= '1' when p_corr > -1000 else '0';
 
