@@ -16,7 +16,6 @@ port(
 end entity;
 
 architecture arc of Read_adc_manager is
-	
 	component adc_sync_fifo IS
 	port(
 		data		: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
@@ -41,14 +40,8 @@ architecture arc of Read_adc_manager is
 	signal rdempty : std_logic := '0';
 	signal wrfull : std_logic := '0';
 
-	signal read_counter : integer range 0 to READ_COUNTER_MAX := 0;
-	
-	--Synchronisation --TODO: could make fifo instead
-	signal DCLK_sync_1 : std_logic := '0';
-	signal DCLK_sync_2 : std_logic := '0';
-	signal DCLK_sync_3 : std_logic := '0';
-	signal ADC_BIT_sync_1 : std_logic_vector(9 downto 0) := (others => '0');
-	signal ADC_BIT_sync_2 : std_logic_vector(9 downto 0) := (others => '0');
+	signal read_counter : integer range 0 to READ_COUNTER_MAX + 1 := 0;
+	signal read_buffer : integer := 0;
 begin
 
 adc_fifo_1 : adc_sync_fifo port map(fifo_data, rdclk, rdreq, wrclk, wrreq, fifo_q, rdempty, wrfull);
@@ -59,24 +52,32 @@ rdclk <= CLK;
 process(DCLK)
 begin
 	if rising_edge(DCLK) then
-		if(read_counter = READ_COUNTER_MAX) then
-			read_counter <= 0;
-			fifo_data <= ADC_BIT;
-			wrreq <= not wrfull; --Protect against writing to full FIFO
-		else
-			read_counter <= read_counter + 1;
-			wrreq <= '0';
-		end if;
+		read_counter <= read_counter + 1;
+		wrreq <= '0';
+		case read_counter is
+			when READ_COUNTER_MAX =>
+				--End of reading, calculate average and write gotten value to FIFO
+				fifo_data <= std_logic_vector(to_unsigned(read_buffer / 4, fifo_data'length));
+				--Write to FIFO if only it is not full
+				wrreq <= not wrfull;
+				--Reset averaging variables
+				read_counter <= 0;
+				read_buffer <= 0;
+			when others =>
+				--Add to the avaraging value
+				read_buffer <= read_buffer + to_integer(unsigned(ADC_BIT));
+		end case;
 	end if;
 end process;
 
-BITS_OUT <= std_logic_vector(to_unsigned(to_integer(unsigned(fifo_q))-400, 10)); --300 IRL and 100 in current simulation
+BITS_OUT <= std_logic_vector(to_unsigned(to_integer(unsigned(fifo_q))-400, 10)); -- -400 for constant offset voltage
 
 process(CLK)
 begin
 	if rising_edge(CLK) then
 		if EN_READ_ADC = '1' then
-			rdreq <= not rdempty; --Read when data present in FIFO
+			--Read when FIFO not empty
+			rdreq <= not rdempty;
 			ADC_BIT_VALID <= rdreq;
 		end if;
 	end if;
