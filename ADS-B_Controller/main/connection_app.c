@@ -52,15 +52,10 @@ typedef struct sMessageRegister {
     uint32_t timestamp_ms;
 }sMessageRegister_t;
 
-typedef struct sMessagePacket {
-    uint8_t packet[10]; //TODO: maybe just pointer idk
-    uint32_t timestamp_ms;
-}sMessagePacket_t;
-
 /* Format of messages to be sent via WiFi */
 static const char *messages_format[eMessageLast] = {
-    [eMessageRegister] = "GET /insert_data.php?data=0,%hhu,%.5f,%.5f,%.5f,%llu\r\n",
-    [eMessageNewPacket] = "GET /insert_data.php?data=1,%hhu,\"%s\",%llu\r\n"
+    [eMessageRegister] = "GET /insert_data.php?data=0,%hhu,%.5f,%.5f,%.5f,%lu\r\n",
+    [eMessageNewPacket] = "GET /insert_data.php?data=1,%hhu,\"%s\",%lu,%lu\r\n"
 };
 
 /* Circular buffer of messages to send */
@@ -118,15 +113,15 @@ static void Connection_SendSocket(void) {
                         THIS_DEVICE_ID, arguments->latitude, arguments->longitude, arguments->altitude, arguments->timestamp_ms);
         } break;
         case eMessageNewPacket: {
-            sMessagePacket_t *arguments = (sMessagePacket_t *)new_message.content;
-            char packet_data_string[20] = {0}; //TODO: remove hardcode
-            if(!HexToString(arguments->packet, 10, packet_data_string)) {
+            sADSBPacket_t *arguments = (sADSBPacket_t *)new_message.content;
+            char packet_data_string[ADSB_PACKET_LEN_BYTES*2] = {0}; //TODO: remove hardcode
+            if(!HexToString(arguments->data, ADSB_PACKET_LEN_BYTES, packet_data_string)) {
                 ESP_LOGE(LOG_TAG, "Failed making hex string");
                 break;
             }
             message_buffer_length =
                 snprintf(message_buffer, TX_MESSAGE_MAX_LENGTH, messages_format[eMessageNewPacket],
-                        THIS_DEVICE_ID, packet_data_string, arguments->packet, arguments->timestamp_ms);
+                        THIS_DEVICE_ID, packet_data_string, arguments->data, arguments->timestamp_s, arguments->timestamp_ns);
         } break;
         default: {
 
@@ -201,39 +196,6 @@ static void event_handler(void* arg, esp_event_base_t event_base,
     }
 }
 
-static void test_on_ping_success(esp_ping_handle_t hdl, void *args) {
-    uint8_t ttl;
-    uint16_t seqno;
-    uint32_t elapsed_time, recv_len;
-    ip_addr_t target_addr;
-    esp_ping_get_profile(hdl, ESP_PING_PROF_SEQNO, &seqno, sizeof(seqno));
-    esp_ping_get_profile(hdl, ESP_PING_PROF_TTL, &ttl, sizeof(ttl));
-    esp_ping_get_profile(hdl, ESP_PING_PROF_IPADDR, &target_addr, sizeof(target_addr));
-    esp_ping_get_profile(hdl, ESP_PING_PROF_SIZE, &recv_len, sizeof(recv_len));
-    esp_ping_get_profile(hdl, ESP_PING_PROF_TIMEGAP, &elapsed_time, sizeof(elapsed_time));
-    printf("%lu bytes from %s icmp_seq=%d ttl=%d time=%lu ms\n",
-           recv_len, inet_ntoa(target_addr.u_addr.ip4), seqno, ttl, elapsed_time);
-}
-
-static void test_on_ping_timeout(esp_ping_handle_t hdl, void *args) {
-    uint16_t seqno;
-    ip_addr_t target_addr;
-    esp_ping_get_profile(hdl, ESP_PING_PROF_SEQNO, &seqno, sizeof(seqno));
-    esp_ping_get_profile(hdl, ESP_PING_PROF_IPADDR, &target_addr, sizeof(target_addr));
-    printf("From %s icmp_seq=%d timeout\n", inet_ntoa(target_addr.u_addr.ip4), seqno);
-}
-
-static void test_on_ping_end(esp_ping_handle_t hdl, void *args) {
-    uint32_t transmitted;
-    uint32_t received;
-    uint32_t total_time_ms;
-
-    esp_ping_get_profile(hdl, ESP_PING_PROF_REQUEST, &transmitted, sizeof(transmitted));
-    esp_ping_get_profile(hdl, ESP_PING_PROF_REPLY, &received, sizeof(received));
-    esp_ping_get_profile(hdl, ESP_PING_PROF_DURATION, &total_time_ms, sizeof(total_time_ms));
-    printf("%lu packets transmitted, %lu received, time %lums\n", transmitted, received, total_time_ms);
-}
-
 bool Connection_APP_Init(void) {
     /* Init flash beforehand */
     if(nvs_flash_init() != ESP_OK) {
@@ -284,35 +246,6 @@ bool Connection_APP_Init(void) {
     return true;
 }
 
-void Connection_Ping(void) {
-    ESP_LOGI(LOG_TAG, "PINGING INIT");
-    ip_addr_t target_addr;
-    struct addrinfo hint;
-    struct addrinfo *res = NULL;
-    memset(&hint, 0, sizeof(hint));
-    memset(&target_addr, 0, sizeof(target_addr));
-    getaddrinfo("www.espressif.com", NULL, &hint, &res);
-    struct in_addr addr4 = ((struct sockaddr_in *) (res->ai_addr))->sin_addr;
-    inet_addr_to_ip4addr(ip_2_ip4(&target_addr), &addr4);
-    freeaddrinfo(res);
-
-    esp_ping_config_t ping_config = ESP_PING_DEFAULT_CONFIG();
-    ping_config.target_addr = target_addr;          // target IP address
-    ping_config.count = ESP_PING_COUNT_INFINITE;    // ping in infinite mode, esp_ping_stop can stop it
-
-
-    esp_ping_callbacks_t cbs;
-    cbs.on_ping_success = test_on_ping_success;
-    cbs.on_ping_timeout = test_on_ping_timeout;
-    cbs.on_ping_end = test_on_ping_end;
-
-    esp_ping_handle_t ping;
-    ESP_LOGI(LOG_TAG, "PINGING SESSION");
-    esp_ping_new_session(&ping_config, &cbs, &ping);
-    ESP_LOGI(LOG_TAG, "PINGING START");
-    esp_ping_start(ping);
-}
-
 bool Connection_APP_Run(void) {
     if(GET_FLAG(connection_flags, FLAGS_CONNECTED) && GET_FLAG(connection_flags, FLAGS_MESSAGE_AVAILABLE)) {
         Connection_SendSocket(); //TODO: send only when connected to wifi
@@ -343,12 +276,11 @@ bool Connection_APP_SendMessageRegister(float latitude, float longitude, float a
 }
 
 bool Connection_APP_SendMessagePacket(sADSBPacket_t packet) {
-    sMessagePacket_t *message_content = malloc(sizeof(sMessagePacket_t));
+    sADSBPacket_t *message_content = malloc(sizeof(sADSBPacket_t));
     if(message_content == NULL) {
         return false;
     }
-    memcpy(message_content->packet, packet.data, ADSB_PACKET_LEN_BYTES);
-    message_content->timestamp_ms = packet.timestamp_ms; //TODO: add ns
+    memcpy(message_content, &packet, sizeof(sADSBPacket_t));
 
     sMessage_t new_message = {.type = eMessageNewPacket, .content = message_content};
     if(!CBuff_Push(messages_cbuffer, &new_message)) {
