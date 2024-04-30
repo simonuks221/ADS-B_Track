@@ -105,8 +105,7 @@ begin
 end procedure ;
 
 --Send SPI command
-procedure spi_send_time(constant CMD : in std_logic_vector(31 downto 0);
-						constant CMD_AMOUNT : in integer; --INcluding first register data
+procedure spi_send_time(constant CMD : in std_logic_vector(24-1 downto 0);
 						signal P_SPI_MOSI : out std_logic;
 						signal P_SPI_MISO : in std_logic;
 						signal P_SPI_SCLK : out std_logic;
@@ -117,7 +116,7 @@ begin
 	P_SPI_CS <= '0';
 	P_SPI_SCLK <= '0';
 	wait for 5 ns;
-	for k in 0 to CMD_AMOUNT - 1 loop
+	for k in 0 to 4 - 1 loop
 		for i in 0 to 7 loop
 			P_SPI_SCLK <= '0';
 			if k = 0 then
@@ -217,13 +216,14 @@ begin
 	--wait for 5 us;
 	--spi_send(x"04", 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	wait for 5 us;
-	spi_send_time(x"10230400", 5, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	spi_send_time(x"100000", SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	--Wait until packet received
 	wait for 0.5 us;
 	spi_send(status_register_cmd, 2, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	wait until rising_edge(PACKET_IRQ);
-	wait for 10 us;
-	spi_send(packet_storage_cmd, 8, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	wait for 1 us;
+	--spi_send(packet_storage_cmd, 8, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	spi_send(rtc_register_read_cmd, 7, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	--spi_send(packet_storage_cmd, 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	--wait until rising_edge(PACKET_IRQ);
 	--wait for 1 us;

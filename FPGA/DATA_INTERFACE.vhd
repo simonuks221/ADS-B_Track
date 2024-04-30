@@ -3,8 +3,13 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity DATA_INTERFACE is
+generic(
+	RTC_IMPULSE_LENGTH_BITS : integer := 28;
+	RTC_SECONDS_LENGTH_BITS : integer := 17;
+	RTC_TIME_LENGTH_BYTES : integer := 6
+);
 port(
-	CLK: in std_Logic := '0';
+	CLK: in std_logic := '0';
 	SPI_SCLK: in std_logic := '0';
 	SPI_MOSI: in std_logic := '0';
 	SPI_MISO: inout std_logic := '0';
@@ -15,7 +20,8 @@ port(
 	--Status register
 	STATUS_INIT_DONE : in std_logic := '0';
 	--RTC
-	PREAMBULE_FOUND : in std_Logic := '0' --TODO: rtc discard signal
+	PREAMBULE_FOUND : in std_Logic := '0'; --TODO: rtc discard signal
+	DEBUG_2 : out std_logic := '0'
 );
 end entity;
 
@@ -60,7 +66,8 @@ port(
 	SPI_CYCLE_DONE : in std_logic := '0';
 	--Packets in from correlator
 	PACKET_IN_DATA : in std_logic_vector(7 downto 0) := (others => '0');
-	PACKET_IN_VALID : in std_logic := '0'
+	PACKET_IN_VALID : in std_logic := '0';
+	PACKET_READY : out std_logic := '0'
 );
 end component;
 
@@ -72,11 +79,16 @@ port(
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
 	SPI_CYCLE_DONE : in std_logic := '0';
 	--Status signals
-	INIT_DONE : in std_logic := '0'
+	INIT_DONE : in std_logic := '0';
+	PACKET_READY : in std_logic := '0'
 );
 end component;
 
-component RTC_Set_Register is 
+component RTC_Set_Register is
+generic(
+	RTC_IMPULSE_LENGTH_BITS : integer := 24;
+	RTC_SECONDS_LENGTH_BITS : integer := 17
+);
 port(
 	EN: in std_logic := '0';
 	CLK: in std_logic := '0';
@@ -85,11 +97,16 @@ port(
 	SPI_CYCLE_DONE : in std_logic := '0';
 	
 	RTC_INPUT_IRQ : out std_logic := '0';
-	RTC_INPUT_MS : out std_logic_vector(31 downto 0) := (others => '0')
+	RTC_INPUT_SECONDS : out std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0')
 );
 end component;
 
-component RTC_Read_Register is 
+component RTC_Read_Register is
+generic(
+	RTC_IMPULSE_LENGTH_BITS : integer := 24;
+	RTC_SECONDS_LENGTH_BITS : integer := 17;
+	RTC_TIME_LENGTH_BYTES : integer := 6
+);
 port(
 	EN: in std_logic := '0';
 	CLK: in std_logic := '0';
@@ -98,20 +115,26 @@ port(
 	SPI_CYCLE_DONE : in std_logic := '0';
 	
 	RTC_CAPTURE_IRQ : std_logic := '0';
-   RTC_CAPTURED_MS : std_logic_vector(31 downto 0) := (others => '0');
-   RTC_CAPTURED_NS : std_logic_vector(18 downto 0) := (others => '0')
+   RTC_CAPTURED_IMPULSES : std_logic_vector(RTC_IMPULSE_LENGTH_BITS - 1 downto 0) := (others => '0');
+   RTC_CAPTURED_SECONDS : std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0')
 );
 end component;
 
 component RTC is
+generic(
+	RTC_IMPULSE_LENGTH_BITS : integer := 24;
+	RTC_SECONDS_LENGTH_BITS : integer := 17;
+	RTC_TIME_LENGTH_BYTES : integer := 6
+);
 port(
 	CLK: in std_logic;
 	PPS_IRQ : in std_logic := '0';
 	CAPTURE_IRQ : in std_logic := '0';
-	CAPTURED_MS : out std_logic_vector(31 downto 0) := (others => '0');
-	CAPTURED_NS : out std_logic_vector(18 downto 0) := (others => '0');
+	CAPTURED_SECONDS : out std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0');
+	CAPTURED_IMPULSES : out std_logic_vector(RTC_IMPULSE_LENGTH_BITS - 1 downto 0) := (others => '0');
 	INPUT_IRQ : in std_logic := '0';
-	INPUT_MS : in std_logic_vector(31 downto 0) := (others => '0')
+	INPUT_SECONDS : in std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0');
+	DEBUG_2 : out std_logic := '0'
 );
 end component;
 
@@ -121,7 +144,7 @@ signal decoded_cmd_data : std_logic_vector(7 downto 0) := (others => '0');
 signal decoded_cmd_valid : std_logic := '0';
 signal spi_cycle_done : std_logic := '0';
 --Shared bus for responses, must be left as 0 if not enabled
-signal resp_data_bus: std_logic_vector(7 downto 0) := (others => '0'); --Shared bus
+signal resp_data_bus: std_logic_vector(7 downto 0) := (others => '0');
 signal storage_resp_data : std_logic_vector(7 downto 0) := (others => '0');
 signal status_resp_data : std_logic_vector(7 downto 0) := (others => '0');
 signal rtc_set_resp_data : std_logic_vector(7 downto 0) := (others => '0');
@@ -133,13 +156,14 @@ signal packet_storage_en : std_logic := '0';
 signal status_register_en : std_logic := '0';
 signal rtc_register_set_en : std_logic := '0';
 signal rtc_register_read_en : std_logic := '0';
-
+--Packet storage signals
+signal PACKET_READY : std_Logic := '0';
 --RTC
-signal PPS : std_logic := '0'; --TODO: implement
-signal RTC_CAPTURED_MS : std_logic_vector(31 downto 0) := (others => '0');
-signal RTC_CAPTURED_NS : std_logic_vector(18 downto 0) := (others => '0');
-signal RTC_INPUT_IRQ : std_logic := '0';
-signal RTC_INPUT_MS : std_logic_vector(31 downto 0) := (others => '0');
+signal pps : std_logic := '0'; --TODO: implement
+signal rtc_captured_impulses : std_logic_vector(RTC_IMPULSE_LENGTH_BITS - 1 downto 0) := (others => '0');
+signal rtc_captured_seconds : std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0');
+signal rtc_input_irq : std_logic := '0';
+signal rtc_input_seconds : std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0');
 
 begin
 
@@ -149,17 +173,21 @@ decoder : SPI_DECODER port map(CLK, raw_cmd_data, decoded_cmd_data, decoded_cmd_
 											status_register_en, rtc_register_set_en, rtc_register_read_en);
 
 stor : Packet_Storage port map (packet_storage_en, CLK, decoded_cmd_data, storage_resp_data, decoded_cmd_valid,
-											PACKET_IN_DATA, PACKET_IN_VALID);
+											PACKET_IN_DATA, PACKET_IN_VALID, PACKET_READY);
 
 stat : Status_Register port map(status_register_en, CLK, decoded_cmd_data, status_resp_data, decoded_cmd_valid,
-											STATUS_INIT_DONE);
+											STATUS_INIT_DONE, PACKET_READY);
 
-rtc_timer : RTC port map(CLK, PPS, PREAMBULE_FOUND, RTC_CAPTURED_MS, RTC_CAPTURED_NS, RTC_INPUT_IRQ, RTC_INPUT_MS);
+rtc_timer : RTC generic map (RTC_IMPULSE_LENGTH_BITS, RTC_SECONDS_LENGTH_BITS, RTC_TIME_LENGTH_BYTES) 
+					 port map(CLK, PPS, PREAMBULE_FOUND, RTC_CAPTURED_SECONDS, RTC_CAPTURED_IMPULSES, RTC_INPUT_IRQ, RTC_INPUT_SECONDS,
+						       DEBUG_2);
 
-rtc_set : RTC_Set_Register port map(rtc_register_set_en, CLK, decoded_cmd_data, rtc_set_resp_data, decoded_cmd_valid, 
-                                    RTC_INPUT_IRQ, RTC_INPUT_MS);
-rtc_read : RTC_Read_Register port map(rtc_register_read_en, CLK, decoded_cmd_data, rtc_read_resp_data, decoded_cmd_valid,
-                                      PREAMBULE_FOUND, RTC_CAPTURED_MS, RTC_CAPTURED_NS);
+rtc_set : RTC_Set_Register generic map (RTC_IMPULSE_LENGTH_BITS, RTC_SECONDS_LENGTH_BITS)
+				               port map(rtc_register_set_en, CLK, decoded_cmd_data, rtc_set_resp_data, decoded_cmd_valid, 
+                                    RTC_INPUT_IRQ, RTC_INPUT_SECONDS);
+rtc_read : RTC_Read_Register generic map (RTC_IMPULSE_LENGTH_BITS, RTC_SECONDS_LENGTH_BITS, RTC_TIME_LENGTH_BYTES)
+								     port map(rtc_register_read_en, CLK, decoded_cmd_data, rtc_read_resp_data, decoded_cmd_valid,
+                                      PREAMBULE_FOUND, RTC_CAPTURED_IMPULSES, RTC_CAPTURED_SECONDS);
 resp_data_bus <= storage_resp_data or status_resp_data or rtc_set_resp_data or rtc_read_resp_data;
 
 end architecture;

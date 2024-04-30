@@ -5,74 +5,71 @@ use STD.textio.all;
 use ieee.std_logic_textio.all;
 
 entity RTC is
+generic(
+	RTC_IMPULSE_LENGTH_BITS : integer := 24;
+	RTC_SECONDS_LENGTH_BITS : integer := 17;
+	RTC_TIME_LENGTH_BYTES : integer := 6
+);
 port(
 	CLK: in std_logic; --150MHz in
 	PPS_IRQ : in std_logic := '0';
 	CAPTURE_IRQ : in std_logic := '0';
-	CAPTURED_MS : out std_logic_vector(31 downto 0) := (others => '0');
-	CAPTURED_NS : out std_logic_vector(18 downto 0) := (others => '0');
+	CAPTURED_SECONDS : out std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0');
+	CAPTURED_IMPULSES : out std_logic_vector(RTC_IMPULSE_LENGTH_BITS - 1 downto 0) := (others => '0');
 	INPUT_IRQ : in std_logic := '0';
-	INPUT_MS : in std_logic_vector(31 downto 0) := (others => '0')
+	INPUT_SECONDS : in std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0');
+	DEBUG_2 : out std_logic := '0'
 );
 end entity;
 
 architecture arc of RTC is
-	--18 bits 262,143 counter range for ns resolution
-	--32 bits UNIX time for ms since 1970-01-01
-	signal ms_counter : unsigned(31 downto 0) := to_unsigned(1, 32); --32 bits
-	signal ns_counter : integer range 0 to 262143 := 0; --18 bits
+	constant impulses_in_a_second : integer := 150000000;
+
+	signal seconds_counter : integer range 0 to 24*60*60 := 0;
+	signal impulse_counter : integer range 0 to impulses_in_a_second := 0;
 begin
+
+DEBUG_2 <= '1' when impulse_counter > 100000000 else '0';
 
 --Output timestamp
 process(CLK)
 begin
 	if rising_edge(CLK) then
 		if CAPTURE_IRQ = '1' then
-			CAPTURED_MS <= std_logic_vector(ms_counter);
-			CAPTURED_NS <= std_logic_vector(to_unsigned(ns_counter, CAPTURED_NS'length));
+			CAPTURED_SECONDS <= std_logic_vector(to_unsigned(seconds_counter, CAPTURED_SECONDS'length));
+			CAPTURED_IMPULSES <= std_logic_vector(to_unsigned(impulse_counter, CAPTURED_IMPULSES'length));
 		end if;
 	end if;
 end process;
 
 process(CLK)
-variable remainder : integer := 0;
-variable rounded_number : integer := 0;
+variable remainder : integer range 0 to impulses_in_a_second := 0;
 begin
 	if rising_edge(CLK) then
 		if INPUT_IRQ = '1' then
 			--Write in value from SPI input
-			ms_counter <= unsigned(INPUT_MS);
-			
-			if ns_counter = 149999 then
-				--Increment ms counter
-				ms_counter <= to_unsigned(to_integer(ms_counter) + 1, ms_counter'length);
-				ns_counter <= 0;
-			else
-				--Increment ns counter
-				ns_counter <= ns_counter + 1;
-			end if;
+			seconds_counter <= to_integer(unsigned(INPUT_SECONDS));
+			impulse_counter <= 0;
 		elsif PPS_IRQ = '1' then
 			--Synchronize to 1s period PPS
-			--Round up to upper 1000ms
-			--TODO: find if near 1000ms and dont increment
-			remainder := to_integer(ms_counter) mod 1000;
-        
-			if remainder < 500 then
-				rounded_number := to_integer(ms_counter) - remainder;
+			remainder := seconds_counter mod impulses_in_a_second;
+			if remainder < impulses_in_a_second / 2 then
+				--Round the second down
+				seconds_counter <= seconds_counter - 1;
 			else
-            rounded_number := to_integer(ms_counter) + (1000 - remainder);
+				--Round the second up
+            seconds_counter <= seconds_counter + 1;
 			end if;
-			ms_counter <= to_unsigned(rounded_number, ms_counter'length);
-			ns_counter <= 0;
+			impulse_counter <= 0;
 		else
 			--No PPS present
-			if ns_counter = 149999 then
-				--Increment ms counter
-				ms_counter <= to_unsigned(to_integer(ms_counter) + 1, ms_counter'length);
-				ns_counter <= 0;
+			if impulse_counter = impulses_in_a_second - 1 then
+				--Increment impulse counter
+				seconds_counter <= seconds_counter + 1;
+				impulse_counter <= 0;
 			else
 				--Increment ns counter
-				ns_counter <= ns_counter + 1;
+				impulse_counter <= impulse_counter + 1;
 			end if;
 		end if;
 	end if;

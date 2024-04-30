@@ -51,7 +51,8 @@ port(
 	PACKET_IRQ : out std_logic := '0';
 	
 	--DEBUG
-	DEBUG_1 : out std_logic := '0'
+	DEBUG_1 : out std_logic := '0';
+	DEBUG_2 : out std_logic := '0'
 );
 end entity;
 
@@ -210,7 +211,8 @@ port(
 	PACKET_IN_VALID : in std_logic := '0';
 	
 	STATUS_INIT_DONE : in std_logic := '0';
-	PREAMBULE_FOUND : in std_Logic := '0'
+	PREAMBULE_FOUND : in std_Logic := '0';
+	DEBUG_2 : out std_logic := '0'
 );
 end component;
 
@@ -305,7 +307,7 @@ Corr_Main_1 : Corr_Main generic map (BUFFER_LENGTH => 80, BUFFER_WIDTH => 10, MA
 							PACKET_VALID => PACKET_VALID, PACKET_IRQ => PACKET_IRQ);
 
 data_interface_1 : DATA_INTERFACE port map(CLK_150, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, PACKET_DATA, PACKET_VALID, SETUP_DONE, 
-                                           PREAMB_FOUND);
+                                           PREAMB_FOUND, DEBUG_2);
 
 process(CLK_150)
 begin

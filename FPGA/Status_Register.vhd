@@ -12,7 +12,8 @@ port(
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
 	SPI_CYCLE_DONE : in std_logic := '0';
 	--Status signals
-	INIT_DONE : in std_logic := '0'
+	INIT_DONE : in std_logic := '0';
+	PACKET_READY : in std_logic := '0'
 );
 end entity;
 
@@ -24,7 +25,7 @@ architecture arc of Status_Register is
 																								--5 - 
 																								--4 - 
 																								--3 - 
-																								--2 - 
+																								--2 - Packet ready
 																								--1 - Init done
 																								--0 - Always ON
 begin

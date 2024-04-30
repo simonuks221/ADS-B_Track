@@ -5,6 +5,10 @@ use STD.textio.all;
 use ieee.std_logic_textio.all;
 
 entity RTC_Set_Register is 
+generic(
+	RTC_IMPULSE_LENGTH_BITS : integer := 24;
+	RTC_SECONDS_LENGTH_BITS : integer := 17
+);
 port(
 	EN: in std_logic := '0';
 	CLK: in std_logic := '0';
@@ -13,19 +17,16 @@ port(
 	SPI_CYCLE_DONE : in std_logic := '0';
 	
 	RTC_INPUT_IRQ : out std_logic := '0';
-	RTC_INPUT_MS : out std_logic_vector(31 downto 0) := (others => '0')
+	RTC_INPUT_SECONDS : out std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0')
 );
 end entity;
 
 architecture arc of RTC_Set_Register is
-	constant MS_LENGTH : integer := 32;
-	constant MS_BYTES : integer := MS_LENGTH / 8;
-	
 	signal received_idx : integer := 0;
-	signal input_ms : std_logic_vector(MS_LENGTH - 1 downto 0) := (others => '0');
+	signal input_seconds : std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0');
 begin
 
-RTC_INPUT_MS <= input_ms(RTC_INPUT_MS'length - 1 downto 0);
+RTC_INPUT_SECONDS <= input_seconds(RTC_INPUT_SECONDS'length - 1 downto 0);
 
 process(CLK)
 begin
@@ -36,9 +37,9 @@ begin
 		else
 			RTC_INPUT_IRQ <= '0';
 			if SPI_CYCLE_DONE = '1' then
-				input_ms <= cmd_data & input_ms(MS_LENGTH - 1 downto 8);
+				input_seconds <= cmd_data & input_seconds(RTC_SECONDS_LENGTH_BITS - 1 downto 8);
 				received_idx <= received_idx + 1;
-				if received_idx = MS_BYTES - 1 then
+				if received_idx = RTC_SECONDS_LENGTH_BITS / 8 + 1 - 1 then
 					--End transaction, write rtc value
 					RTC_INPUT_IRQ <= '1';
 				end if;

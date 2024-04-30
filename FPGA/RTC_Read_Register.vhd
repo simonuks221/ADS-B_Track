@@ -4,7 +4,12 @@ use ieee.numeric_std.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
-entity RTC_Read_Register is 
+entity RTC_Read_Register is
+generic(
+	RTC_IMPULSE_LENGTH_BITS : integer := 24;
+	RTC_SECONDS_LENGTH_BITS : integer := 17;
+	RTC_TIME_LENGTH_BYTES : integer := 6
+);
 port(
 	EN: in std_logic := '0';
 	CLK: in std_logic := '0';
@@ -13,8 +18,8 @@ port(
 	SPI_CYCLE_DONE : in std_logic := '0';
 	
 	RTC_CAPTURE_IRQ : std_logic := '0';
-   RTC_CAPTURED_MS : std_logic_vector(31 downto 0) := (others => '0');
-   RTC_CAPTURED_NS : std_logic_vector(18 downto 0) := (others => '0')
+   RTC_CAPTURED_IMPULSES : std_logic_vector(RTC_IMPULSE_LENGTH_BITS - 1 downto 0) := (others => '0');
+   RTC_CAPTURED_SECONDS : std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0')
 );
 end entity;
 
@@ -33,10 +38,9 @@ architecture arc of RTC_Read_Register is
 	);
 	end component;
 	
-	constant MS_LENGTH : integer := 32;
-	constant NS_LENGTH : integer := 19;
-	constant COMBINED_TIME_LENGTH : integer := MS_LENGTH + NS_LENGTH; --51
-	constant TIME_BYTES : integer := 56 / 8; --7 bytes in total, 56 bits, have 5 empty
+	--Determine how many bits/bytes the timestamp consists of
+	constant COMBINED_TIME_LENGTH_BITS : integer := RTC_IMPULSE_LENGTH_BITS + RTC_SECONDS_LENGTH_BITS;
+	constant COMBINED_TIME_BYTES : integer := COMBINED_TIME_LENGTH_BITS / 8 + 1;
 	
 	--Packet storage FIFO
 	signal fifo_data_in	: std_logic_vector (7 DOWNTO 0) := (others => '0');
@@ -52,9 +56,9 @@ architecture arc of RTC_Read_Register is
 	
 	signal resp_data_buffer : std_logic_vector(7 downto 0) := (others => '0');
 	
-	signal captured_ms : std_logic_vector(MS_LENGTH - 1 downto 0) := (others => '0');
-   signal captured_ns : std_logic_vector(NS_LENGTH - 1 downto 0) := (others => '0');
-	signal captured_combined_time : std_Logic_vector(TIME_BYTES*8 - 1 downto 0) := (others => '0');
+	signal captured_impulses : std_logic_vector(RTC_IMPULSE_LENGTH_BITS - 1 downto 0) := (others => '0');
+   signal captured_seconds : std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0');
+	signal captured_combined_time : std_logic_vector(COMBINED_TIME_BYTES*8 - 1 downto 0) := (others => '0');
 	signal rtc_capture_irq_delay : std_logic := '0';
 	signal fifo_write_idx : integer := 0;
 	signal fifo_writing : std_logic := '0';
@@ -64,8 +68,9 @@ time_fifo : PACKET_STORAGE_FIFO port map(CLK, fifo_data_in, fifo_read_rq, fifo_w
 
 RESP_DATA <= resp_data_buffer when EN = '1' else (others => '0');
 
---Stores combined ms and ns timestamp
-captured_combined_time <= "00000" & captured_ms & captured_ns;
+--Stores combined seconds and impulses timestamp, add "000" to make a round byte from 45 to 48, total - 6 bytes
+--captured_combined_time <= "000" & captured_impulses & captured_seconds;
+captured_combined_time <= "0000000000000000000000000000000" & captured_seconds;
 
 --Writing to FIFO packet data
 process(CLK)
@@ -75,15 +80,15 @@ begin
 		rtc_capture_irq_delay <= RTC_CAPTURE_IRQ;
 		if rtc_capture_irq_delay = '1' and fifo_writing = '0' then --Don't receive new time stamp if previous is writing
 			--Received time capture interrupt, start writing to fifo
-			captured_ms <= RTC_CAPTURED_MS;
-			captured_ns <= RTC_CAPTURED_NS;
+			captured_impulses <= RTC_CAPTURED_IMPULSES;
+			captured_seconds <= RTC_CAPTURED_SECONDS;
 			fifo_writing <= '1';
 			fifo_write_idx <= 0;
 		end if;
 		
 		if fifo_writing = '1' then --TODO: test if full fifo
 			--Writing to FIFO
-			if fifo_write_idx = TIME_BYTES then
+			if fifo_write_idx = COMBINED_TIME_BYTES then
 				--End FIFO writing sequence
 				fifo_writing <= '0';
 				fifo_wr_rq <= '0';

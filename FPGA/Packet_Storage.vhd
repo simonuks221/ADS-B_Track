@@ -13,7 +13,8 @@ port(
 	SPI_CYCLE_DONE : in std_logic := '0';
 	--Packets in from correlator
 	PACKET_IN_DATA : in std_logic_vector(7 downto 0) := (others => '0');
-	PACKET_IN_VALID : in std_logic := '0'
+	PACKET_IN_VALID : in std_logic := '0';
+	PACKET_READY : out std_logic := '0'
 );
 end entity;
 
@@ -44,7 +45,7 @@ architecture arc of Packet_Storage is
 	signal fifo_empty	: std_logic := '0';
 	signal fifo_full	: std_logic := '0';
 	signal fifo_q	: std_logic_vector (7 DOWNTO 0) := (others => '0');
-	signal fifo_curr_length	: std_logic_vector (9 DOWNTO 0) := (others => '0'); --Current FIFO length
+	signal fifo_curr_length	: std_logic_vector (9 DOWNTO 0) := (others => '0');
 	
 	signal fifo_rd_delay : std_logic := '0';
 	signal fifo_loaded : std_logic := '0';
@@ -53,6 +54,9 @@ begin
 packet_fifo : PACKET_STORAGE_FIFO port map(CLK, fifo_data_in, fifo_read_rq, fifo_wr_rq, fifo_empty, fifo_full, fifo_q, fifo_curr_length);
 
 RESP_DATA <= resp_data_buffer when EN = '1' else (others => '0');
+
+--Packet is ready if 7 bytes are inside
+PACKET_READY <= '1' when to_integer(unsigned(fifo_curr_length)) > 6 else '0'; 
 
 --Writing to FIFO packet data
 process(CLK)

@@ -360,6 +360,7 @@ begin
 								curr_corr_state <= bits;
 							end if;
 						when waiting =>
+							--This state is if using mask of 50 and need to wait 3us for bit phase
 							--if waiting_cnt = 29 then
 							--	curr_corr_state <= bits;
 							---	waiting_cnt <= 0;
@@ -367,31 +368,33 @@ begin
 							--	waiting_cnt <= waiting_cnt + 1;
 							--end if;
 						when bits => 
-							if bits_cnt = 19 then
 								--Two bit period over, correlate last 20 values
-								bits_cnt <= 0;
 								--Correlate bits
 								corr_00 := second_0_corr + first_0_corr;
 								corr_01 := second_0_corr + first_1_corr;
 								corr_10 := second_1_corr + first_0_corr;
 								corr_11 := second_1_corr + first_1_corr;
-								if corr_00 > corr_11 and corr_00 > corr_01 and corr_00 > corr_10 then
-									bits_data <= bits_data(5 downto 0) & "00";
-								elsif corr_01 > corr_11 and corr_01 > corr_00 and corr_01 > corr_10 then
-									bits_data <= bits_data(5 downto 0) & "01";
-								elsif corr_10 > corr_11 and corr_10 > corr_01 and corr_10 > corr_00 then
-									bits_data <= bits_data(5 downto 0) & "10";
-								else
-									bits_data <= bits_data(5 downto 0) & "11";
-								end if;
-								bits_byte_cnt <= bits_byte_cnt + 2;
-								bits_idx <= bits_idx + 2; --Because correlating 2 bits at a time
-								
-							else
-								bits_cnt <= bits_cnt + 1;
-							end if;
 					end case;
 				when 9 =>
+					if curr_corr_state = bits then
+						if bits_cnt = 19 then
+							bits_cnt <= 0;
+							if corr_00 > corr_11 and corr_00 > corr_01 and corr_00 > corr_10 then
+								bits_data <= bits_data(5 downto 0) & "00";
+							elsif corr_01 > corr_11 and corr_01 > corr_00 and corr_01 > corr_10 then
+								bits_data <= bits_data(5 downto 0) & "01";
+							elsif corr_10 > corr_11 and corr_10 > corr_01 and corr_10 > corr_00 then
+								bits_data <= bits_data(5 downto 0) & "10";
+							else
+								bits_data <= bits_data(5 downto 0) & "11";
+							end if;
+							bits_byte_cnt <= bits_byte_cnt + 2;
+							bits_idx <= bits_idx + 2; --Because correlating 2 bits at a time
+						else
+							bits_cnt <= bits_cnt + 1;
+						end if;
+					end if;
+				when 10 =>
 					--Check if all bits received
 					if bits_byte_cnt = 8 then
 						--8 bit correlation done

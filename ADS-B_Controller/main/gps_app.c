@@ -10,6 +10,7 @@
 #include "uart_api.h"
 #include "timer_api.h"
 #include "connection_app.h"
+#include "fpga_app.h"
 
 #define GPS_IDENTIFIER_LENGTH 6
 
@@ -80,6 +81,10 @@ static bool GPS_APP_SetGoodTime(char *utc_time_string) {
     utc_time.minutes = (*(utc_time_string + 2) - '0') * 10 + (*(utc_time_string + 3) - '0');
     utc_time.seconds = (*(utc_time_string + 4) - '0') * 10 + (*(utc_time_string + 5) - '0');
     utc_time.seconds_fraction = (*(utc_time_string + 7) - '0') * 100 + (*(utc_time_string + 8) - '0') * 10 + (*(utc_time_string + 9) - '0');
+    /* Every 5 seconds if under 200ms update time to FPGA */
+    if((utc_time.seconds % 5 == 0) && ( utc_time.seconds_fraction < 200)) {
+        FPGA_APP_UpdateRtc(utc_time.seconds);
+    }
     Timer_API_SetRtc(utc_time);
     return true;
 }
@@ -108,8 +113,7 @@ static void GGA_Handler(uint8_t *message, size_t len) {
         return;
     }
     GPS_APP_SetGoodTime(utc_time_string);
-    GPS_APP_SetGoodCoordinates(latitude, longitude, altitude); //TODO: implement time
-
+    GPS_APP_SetGoodCoordinates(latitude, longitude, altitude);
 
     ESP_LOGI(LOG_TAG, "Lat:%f, long:%f", latitude, longitude);
     return;
