@@ -293,6 +293,12 @@ namespace PCKodas
                         /* Update chart Y range every 10 values */
                         if(received_data_total % 10 == 0)
                         {
+                            /* Check if min/max point values are valid */
+                            if(min_chart_val == max_chart_val)
+                            {
+                                min_chart_val = min_chart_val - 1;
+                                max_chart_val = max_chart_val + 1;
+                            }
                             VoltageChart.ChartAreas[0].AxisY.Minimum = min_chart_val;
                             VoltageChart.ChartAreas[0].AxisY.Maximum = max_chart_val;
                         }

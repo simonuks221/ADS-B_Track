@@ -50,6 +50,7 @@ wrclk <= DCLK;
 rdclk <= CLK;
 
 process(DCLK)
+variable temp_read_buffer : integer := 0;
 begin
 	if rising_edge(DCLK) then
 		read_counter <= read_counter + 1;
@@ -57,7 +58,9 @@ begin
 		case read_counter is
 			when READ_COUNTER_MAX =>
 				--End of reading, calculate average and write gotten value to FIFO
-				fifo_data <= std_logic_vector(to_unsigned(read_buffer / 4, fifo_data'length));
+				temp_read_buffer := read_buffer + to_integer(unsigned(ADC_BIT));
+				fifo_data <= std_logic_vector(to_unsigned(205 * temp_read_buffer / 1024, fifo_data'length));
+				--fifo_data <= std_logic_vector(to_unsigned(read_buffer / 4, fifo_data'length));
 				--Write to FIFO if only it is not full
 				wrreq <= not wrfull;
 				--Reset averaging variables
