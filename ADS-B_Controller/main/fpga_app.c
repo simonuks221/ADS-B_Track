@@ -4,6 +4,7 @@
 
 #include "fpga_app.h"
 #include "gpio_api.h"
+#include "sd_api.h"
 #include "common/common.h"
 #include "connection_app.h"
 
@@ -50,12 +51,11 @@ static bool FPGA_APP_ReadPacket(void) {
     };
     //spi_device_acquire_bus(); //Call before polling for constant transmition
     //spi_device_release_bus();
-    if(spi_device_polling_transmit(spi_handle, &transaction) != ESP_OK) {
-        ESP_LOGE(LOG_TAG, "Failed transmitting read data packet");
-        return false;
-    }
+    // if(spi_device_polling_transmit(spi_handle, &transaction) != ESP_OK) {
+    //     ESP_LOGE(LOG_TAG, "Failed transmitting read data packet");
+    //     return false;
+    // }
     ESP_LOGI(LOG_TAG, "Captured packet: %u", new_packet.data[0]);
-
     /* Read out timestamp */
     tx_buffer = RTC_READ_REG;
 
@@ -73,17 +73,23 @@ static bool FPGA_APP_ReadPacket(void) {
         ESP_LOGE(LOG_TAG, "Failed transmitting read timestamp packet");
         return false;
     }
-    char timestamp_char[ADSB_TIMESTAMP_LEN_BYTES*2] = {0}; //TODO: remove hardcode
-    if(!HexToString(timestamp.buffer, ADSB_TIMESTAMP_LEN_BYTES, timestamp_char)) {
-        ESP_LOGE(LOG_TAG, "Failed making hex string");
-        return false;
-    }
-    ESP_LOGI(LOG_TAG, "Timstamp: %s", timestamp_char);
+    // char timestamp_char[ADSB_TIMESTAMP_LEN_BYTES*2] = {0}; //TODO: remove hardcode
+    // if(!HexToString(timestamp.buffer, ADSB_TIMESTAMP_LEN_BYTES, timestamp_char)) {
+    //     ESP_LOGE(LOG_TAG, "Failed making hex string");
+    //     return false;
+    // }
+    // ESP_LOGI(LOG_TAG, "Timstamp: %s", timestamp_char);
+    ESP_LOGI(LOG_TAG, "Timstamp again: 0x%x%x%x%x%x%x", timestamp.buffer[0], timestamp.buffer[1], timestamp.buffer[2], timestamp.buffer[3], timestamp.buffer[4], timestamp.buffer[5]);
+
 
     new_packet.timestamp_s = timestamp.data.s;
     new_packet.timestamp_ns = (uint32_t)(timestamp.data.impulses * 6.66f); //6.66f - one period of FPGA clock
     uint32_t temp_impulses = timestamp.data.impulses;
     ESP_LOGI(LOG_TAG, "Captured time s: %lu, impulses: %lu, ns: %lu",  new_packet.timestamp_s, temp_impulses, new_packet.timestamp_ns);
+    /* Save to SD card */
+    char sd_buffer[200] = {0};
+    //snprintf(sd_buffer, 200, "%s", timestamp_char); /* "2024-04-17 17:07:05 fc75e5564d6bdc\n" */
+    SD_API_WriteNewPacket(sd_buffer);
 
     return Connection_APP_SendMessagePacket(new_packet); //TODO: pointer?
 }
@@ -139,7 +145,7 @@ bool FPGA_APP_Init(void) {
     }
     spi_device_interface_config_t dev_config = {
         .mode = 0,
-        .clock_speed_hz = 10000000, //TODO: check max freq
+        .clock_speed_hz = 1000000, //TODO: check max freq
         .spics_io_num = FPGA_CS_PIN,
         .queue_size = 10,
         .flags = SPI_DEVICE_BIT_LSBFIRST,

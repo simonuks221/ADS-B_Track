@@ -50,17 +50,17 @@ begin
 			--Write in value from SPI input
 			seconds_counter <= to_integer(unsigned(INPUT_SECONDS));
 			impulse_counter <= 0;
-		elsif PPS_IRQ = '1' then
-			--Synchronize to 1s period PPS
-			remainder := seconds_counter mod impulses_in_a_second;
-			if remainder < impulses_in_a_second / 2 then
-				--Round the second down
-				seconds_counter <= seconds_counter - 1;
-			else
-				--Round the second up
-            seconds_counter <= seconds_counter + 1;
-			end if;
-			impulse_counter <= 0;
+--		elsif PPS_IRQ = '1' then
+--			--Synchronize to 1s period PPS
+--			remainder := seconds_counter mod impulses_in_a_second;
+--			if remainder < impulses_in_a_second / 2 then
+--				--Round the second down
+--				seconds_counter <= seconds_counter - 1;
+--			else
+--				--Round the second up
+--            seconds_counter <= seconds_counter + 1;
+--			end if;
+--			impulse_counter <= 0;
 		else
 			--No PPS present
 			if impulse_counter = impulses_in_a_second - 1 then
@@ -68,7 +68,7 @@ begin
 				seconds_counter <= seconds_counter + 1;
 				impulse_counter <= 0;
 			else
-				--Increment ns counter
+				--Increment impulse counter
 				impulse_counter <= impulse_counter + 1;
 			end if;
 		end if;

@@ -8,7 +8,7 @@ entity Corr_Main is
 generic(
 	BUFFER_LENGTH : integer := 80;
 	BUFFER_WIDTH : integer := 9;
-	MAX_ADDRESS_COUNTS : integer :=  1000;
+	MAX_ADDRESS_COUNTS : integer := 1000;
 	BIT_AMOUNT : integer := 56
 );
 port(
@@ -97,7 +97,7 @@ constant BIT_LENGTH : integer := 10;
 
 signal address_counter : integer range 0 to MAX_ADDRESS_COUNTS+5 := 0;
 signal curr_corr_state : corr_state := preambule;
-signal cnt : integer := 0;
+signal cnt : integer range 0 to 30 := 0;
 
 signal waiting_cnt : integer range 0 to 30 := 0;--TODO: could use only one integer for counting? investigate
 signal bits_cnt : integer range 0 to 20 := 0; --For bit timing
@@ -284,7 +284,7 @@ end process;
 --CNT tracking process
 process(CLK)
 begin
-	if rising_edge(CLK) then
+	if rising_edge(CLK) and EN_CORR = '1' then
 		adc_bits_valid_last <= ADC_BITS_VALID;
 		if adc_bits_valid_last = '0' and ADC_BITS_VALID = '1' then
 			cnt <= 1;
@@ -295,37 +295,37 @@ begin
 end process;
 
 --MRAM writeout process
-process(CLK)
-begin
-	if rising_edge(CLK) then
-		if EN_CORR = '0' then
-			MRAM_DATA_OUT <= (others => '0');
-			MRAM_WRITE_DATA <= '0';
-			address_counter <= 0;
-		else
-			MRAM_WRITE_DATA <= '0';
-			case cnt is
-				when 1 =>
-					--Write out LSB of whole value, indicate it with 0 in 8 bit MSB spot
-					--MRAM_DATA_OUT <= "0" & p_corr_unsigned(6 downto 0); --Preambule correlation value 16 bits
-					MRAM_DATA_OUT <= "0" & ADC_BITS(6 downto 0); --ADC data 16 bits
-					--MRAM_DATA_OUT <= ADC_BITS(9 downto 2); --Regular ADC data
-					--MRAM_DATA_OUT <= p_corr_unsigned(11 downto 4); --Regular corr data
-					--MRAM_DATA_OUT <= "00000000" & bits_data; --For debugging correlated bit values
-					MRAM_WRITE_DATA <= '1';
-					address_counter <= address_counter + 1;
-				when 9 =>
-				   --Write out MSB of whole value, inciate with 1 in 8 bit MSB spot
-					--MRAM_DATA_OUT <= "1" & p_corr_unsigned(13 downto 7); --Preambule correlation value 16 bits
-					MRAM_DATA_OUT <= "1" & "0000" & ADC_BITS(9 downto 7); --ADC data 16 bits
-					MRAM_WRITE_DATA <= '1';
-					address_counter <= address_counter + 1;
-				when others =>
-					
-			end case;
-		end if;
-	end if;
-end process;
+--process(CLK)
+--begin
+--	if rising_edge(CLK) then
+--		if EN_CORR = '0' then
+--			MRAM_DATA_OUT <= (others => '0');
+--			MRAM_WRITE_DATA <= '0';
+--			address_counter <= 0;
+--		else
+--			MRAM_WRITE_DATA <= '0';
+--			case cnt is
+--				when 1 =>
+--					--Write out LSB of whole value, indicate it with 0 in 8 bit MSB spot
+--					--MRAM_DATA_OUT <= "0" & p_corr_unsigned(6 downto 0); --Preambule correlation value 16 bits
+--					MRAM_DATA_OUT <= "0" & ADC_BITS(6 downto 0); --ADC data 16 bits
+--					--MRAM_DATA_OUT <= ADC_BITS(9 downto 2); --Regular ADC data
+--					--MRAM_DATA_OUT <= p_corr_unsigned(11 downto 4); --Regular corr data
+--					--MRAM_DATA_OUT <= "00000000" & bits_data; --For debugging correlated bit values
+--					MRAM_WRITE_DATA <= '1';
+--					address_counter <= address_counter + 1;
+--				when 9 =>
+--				   --Write out MSB of whole value, inciate with 1 in 8 bit MSB spot
+--					--MRAM_DATA_OUT <= "1" & p_corr_unsigned(13 downto 7); --Preambule correlation value 16 bits
+--					MRAM_DATA_OUT <= "1" & "0000" & ADC_BITS(9 downto 7); --ADC data 16 bits
+--					MRAM_WRITE_DATA <= '1';
+--					address_counter <= address_counter + 1;
+--				when others =>
+--					
+--			end case;
+--		end if;
+--	end if;
+--end process;
 
 --Correlating process
 process(CLK)
@@ -337,7 +337,8 @@ begin
 	if rising_edge(CLK) then
 		PACKET_VALID <= '0';
 		PACKET_IRQ <= '0';
-		if(EN_CORR = '0') then
+		if EN_CORR = '0' then
+			--Correlator OFF
 			PREAMBULE_FOUND <= '0';
 			curr_corr_state <= preambule;
 			waiting_cnt <= 0;
@@ -345,6 +346,7 @@ begin
 			bits_cnt <= 0;
 			bits_idx <= 0;
 		else
+			--Correlator ON
 			PREAMBULE_FOUND <= '0';
 			case cnt is 
 				when 8=>
@@ -368,16 +370,16 @@ begin
 							--	waiting_cnt <= waiting_cnt + 1;
 							--end if;
 						when bits => 
-								--Two bit period over, correlate last 20 values
-								--Correlate bits
-								corr_00 := second_0_corr + first_0_corr;
-								corr_01 := second_0_corr + first_1_corr;
-								corr_10 := second_1_corr + first_0_corr;
-								corr_11 := second_1_corr + first_1_corr;
+							--Correlate bits
+							corr_00 := second_0_corr + first_0_corr;
+							corr_01 := second_0_corr + first_1_corr;
+							corr_10 := second_1_corr + first_0_corr;
+							corr_11 := second_1_corr + first_1_corr;
 					end case;
 				when 9 =>
 					if curr_corr_state = bits then
 						if bits_cnt = 19 then
+							--Bit timing counter end, correlate bit values
 							bits_cnt <= 0;
 							if corr_00 > corr_11 and corr_00 > corr_01 and corr_00 > corr_10 then
 								bits_data <= bits_data(5 downto 0) & "00";

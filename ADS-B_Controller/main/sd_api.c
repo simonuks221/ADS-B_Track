@@ -101,6 +101,10 @@ bool SD_API_CreateFile(sString_t *file_name) {
     return true;
 }
 
+bool SD_API_WriteNewPacket(char *string) { //TODO: remake into sString_t
+    return SD_API_Write(MOUNT_POINT"/"FILE_NAME, string);
+}
+
 bool SD_API_Init(void) {
     /* Initialise SPI */
     spi_bus_config_t bus_cfg = {
@@ -125,10 +129,6 @@ bool SD_API_Init(void) {
     if(!SD_API_MountCard()) {
         return false;
     }
-    SD_API_Write(MOUNT_POINT"/"FILE_NAME, "2024-04-17 17:07:05 fc75e5564d6bdc\n");
-    SD_API_Write(MOUNT_POINT"/"FILE_NAME, "2024-04-17 17:10:10 468ee7f48591ee\n");
-    SD_API_Write(MOUNT_POINT"/"FILE_NAME, "2024-04-17 17:13:49 0bdef451ea6f8b\n");
-    SD_API_Write(MOUNT_POINT"/"FILE_NAME, "2024-04-17 17:25:40 4eda99b94ded01\n");
 
     SD_API_UnmountCard();
     return true;

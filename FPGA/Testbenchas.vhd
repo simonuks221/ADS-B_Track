@@ -6,7 +6,7 @@ use ieee.std_logic_textio.all;
 
 ENTITY Testbenchas IS
 generic(
-VOLTAGE_DATA_LEN: integer := 2000
+VOLTAGE_DATA_LEN: integer := 4120
 );
 
 END Testbenchas;
@@ -68,7 +68,7 @@ variable iline: line;
 variable temp_data : integer;
 begin
 	file_open(file_voltages, "test_voltage.txt",  read_mode);
-	 for i in 0 to VOLTAGE_DATA_LEN-1 loop --Iskaitant 9
+	 for i in 0 to VOLTAGE_DATA_LEN-1 loop
 		readline(file_voltages, iline);
 		read(iline, temp_data);
 		r(i) := temp_data+400;
@@ -100,8 +100,9 @@ begin
 		end loop;
 	end loop;
 	P_SPI_SCLK <= '0';
-	wait for 5 ns;
+	wait for 1000 ns;
 	P_SPI_CS <= '1';
+	wait for 5 ns;
 end procedure ;
 
 --Send SPI command
@@ -130,7 +131,7 @@ begin
 		end loop;
 	end loop;
 	P_SPI_SCLK <= '0';
-	wait for 5 ns;
+	wait for 1000 ns;
 	P_SPI_CS <= '1';
 end procedure ;
 
@@ -221,8 +222,11 @@ begin
 	wait for 0.5 us;
 	spi_send(status_register_cmd, 2, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	wait until rising_edge(PACKET_IRQ);
-	wait for 1 us;
 	--spi_send(packet_storage_cmd, 8, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	--spi_send(rtc_register_read_cmd, 7, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	wait until rising_edge(PACKET_IRQ);
+	--spi_send(packet_storage_cmd, 8, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+	spi_send(rtc_register_read_cmd, 7, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	spi_send(rtc_register_read_cmd, 7, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	--spi_send(packet_storage_cmd, 3, SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
 	--wait until rising_edge(PACKET_IRQ);
@@ -245,6 +249,7 @@ begin
 					adc_buffer_counter <= adc_buffer_counter + 1;
 				end if;
 			else
+				adc_buffer_index <= 0;
 				ADC_BIT_A <= (others => '0');
 			end if;
 		else

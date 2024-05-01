@@ -355,6 +355,16 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VRFQWYZC
 
+[ProjectVariant1]
+UniqueID=58F0A6B9-1052-47F5-AA60-6DB2641FE57B
+Description=Variant of FPGA_ADC_SHIELD_PCB2
+AllowFabrication=0
+ParameterCount=0
+VariationCount=2
+Variation1=Designator=R11_1|UniqueId=\NVBFVJFQ\OWDDTWYH|Kind=1|AlternatePart= 
+Variation2=Designator=R11_2|UniqueId=\MEHBXJUH\OWDDTWYH|Kind=1|AlternatePart= 
+ParamVariationCount=0
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for FPGA_ADC_SHIELD_PCB2\Design Rule Check - MainBoard.html
 DItemRevisionGUID=
@@ -457,9 +467,9 @@ GlobalBookmarks=0
 ExportBOM=0
 TemplateFilename=
 TemplateStoreRelative=-1
-PCB_PrintColor=1
+PCB_PrintColor=0
 SCH_PrintColor=0
-PrintQuality=-3
+PrintQuality=-4
 SCH_ShowNoErc=-1
 SCH_ShowParameter=0
 SCH_ShowProbes=0
@@ -1695,6 +1705,12 @@ SelectedOnly=1
 UpdateVariants=1
 UpdateToLatestRevision=1
 PartTypes=0
+ComponentLibIdentifierKind0=Library Name And Type
+ComponentLibraryIdentifier0=Schlib1.SchLib
+ComponentDesignItemID0=FPGA_Shield_headers
+ComponentSymbolReference0=FPGA_Shield_headers
+ComponentUpdate0=1
+ComponentIsDeviceSheet0=0
 FullReplace=1
 UpdateDesignatorLock=1
 UpdatePartIDLock=1
@@ -1708,6 +1724,19 @@ RemoveParameters=0
 AddModels=1
 RemoveModels=1
 UpdateCurrentModels=1
+ParameterName0=Comment
+ParameterUpdate0=1
+ParameterName1=Component Kind
+ParameterUpdate1=1
+ParameterName2=Description
+ParameterUpdate2=1
+ParameterName3=Library Reference
+ParameterUpdate3=1
+ModelTypeGroup0=PCBLIB
+ModelTypeUpdate0=1
+ModelType0=PCBLIB
+ModelName0=FPGA_SHIELD_HEADER_FOOTPRINT
+ModelUpdate0=1
 
 [DatabaseUpdateOptions]
 SelectedOnly=0
