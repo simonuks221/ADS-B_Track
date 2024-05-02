@@ -23,7 +23,7 @@ function [idealSignal, noisySignal, discretizedSignal, ADCsignal, ADCpreambule, 
         pridejimoVietaPradzia = pridejimoVietaPradzia+length(idealOne);
     end
 
-    idealSignal = [zeros(1, round(25E-6/tdiskret*tprescaler)), idealSignal, zeros(1, round(15E-6/tdiskret*tprescaler))];
+    idealSignal = [zeros(1, round(25E-6/tdiskret*tprescaler)), idealSignal, zeros(1, round(15E-6/tdiskret*tprescaler)), zeros(1, 1)];
 
     %Noisy signalas
     load 'FiltroKoef.mat';

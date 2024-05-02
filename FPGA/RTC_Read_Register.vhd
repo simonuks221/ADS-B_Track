@@ -67,9 +67,9 @@ begin
 time_fifo : PACKET_STORAGE_FIFO port map(CLK, fifo_data_in, fifo_read_rq, fifo_wr_rq, fifo_empty, fifo_full, fifo_q, fifo_curr_length);
 
 --Stores combined seconds and impulses timestamp, add "000" to make a round byte from 45 to 48, total - 6 bytes
---captured_combined_time <= "000" & captured_impulses & captured_seconds;
+captured_combined_time <= "000" & captured_impulses & captured_seconds;
 --captured_combined_time <= "0000000000000000000000000000000" & captured_seconds;
-captured_combined_time <= x"123456789ABC";
+--captured_combined_time <= x"123456789ABC";
 --captured_combined_time <= std_logic_vector(to_unsigned(1000, captured_combined_time'length));
 
 process(CLK)
@@ -92,8 +92,8 @@ begin
 		if rtc_capture_irq_delay = '1' and fifo_writing = '0' and fifo_full = '0' then --Don't receive new time stamp if previous is writing
 			--Received time capture interrupt, start writing to fifo
 			captured_impulses <= RTC_CAPTURED_IMPULSES;
-			--captured_seconds <= RTC_CAPTURED_SECONDS;
-			captured_seconds <= std_logic_vector(to_unsigned(1000, captured_seconds'length));
+			captured_seconds <= RTC_CAPTURED_SECONDS;
+			--captured_seconds <= std_logic_vector(to_unsigned(1000, captured_seconds'length));
 			fifo_writing <= '1';
 			fifo_write_idx <= 0;
 		end if;

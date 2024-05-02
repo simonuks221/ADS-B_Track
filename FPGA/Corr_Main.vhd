@@ -155,7 +155,7 @@ buff : corr_buffer generic map(BUFFER_LENGTH, BUFFER_WIDTH) port map(CLK, corr_b
 																				DATA_OUT_9);
 
 MRAM_ADDRESS_OUT <= std_logic_vector(to_unsigned(address_counter, MRAM_ADDRESS_OUT'length));
-p_corr_unsigned <= std_logic_vector(to_signed(p_corr/16, p_corr_unsigned'length));
+p_corr_unsigned <= std_logic_vector(to_signed(p_corr/4, p_corr_unsigned'length));
 
 PACKET_DATA <= bits_data; --For sending to DATA INTERFACE
 
@@ -295,37 +295,37 @@ begin
 end process;
 
 --MRAM writeout process
---process(CLK)
---begin
---	if rising_edge(CLK) then
---		if EN_CORR = '0' then
---			MRAM_DATA_OUT <= (others => '0');
---			MRAM_WRITE_DATA <= '0';
---			address_counter <= 0;
---		else
---			MRAM_WRITE_DATA <= '0';
---			case cnt is
---				when 1 =>
---					--Write out LSB of whole value, indicate it with 0 in 8 bit MSB spot
---					--MRAM_DATA_OUT <= "0" & p_corr_unsigned(6 downto 0); --Preambule correlation value 16 bits
---					MRAM_DATA_OUT <= "0" & ADC_BITS(6 downto 0); --ADC data 16 bits
---					--MRAM_DATA_OUT <= ADC_BITS(9 downto 2); --Regular ADC data
---					--MRAM_DATA_OUT <= p_corr_unsigned(11 downto 4); --Regular corr data
---					--MRAM_DATA_OUT <= "00000000" & bits_data; --For debugging correlated bit values
---					MRAM_WRITE_DATA <= '1';
---					address_counter <= address_counter + 1;
---				when 9 =>
---				   --Write out MSB of whole value, inciate with 1 in 8 bit MSB spot
---					--MRAM_DATA_OUT <= "1" & p_corr_unsigned(13 downto 7); --Preambule correlation value 16 bits
---					MRAM_DATA_OUT <= "1" & "0000" & ADC_BITS(9 downto 7); --ADC data 16 bits
---					MRAM_WRITE_DATA <= '1';
---					address_counter <= address_counter + 1;
---				when others =>
---					
---			end case;
---		end if;
---	end if;
---end process;
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		if EN_CORR = '0' then
+			MRAM_DATA_OUT <= (others => '0');
+			MRAM_WRITE_DATA <= '0';
+			address_counter <= 0;
+		else
+			MRAM_WRITE_DATA <= '0';
+			case cnt is
+				when 1 =>
+					--Write out LSB of whole value, indicate it with 0 in 8 bit MSB spot
+					MRAM_DATA_OUT <= "0" & p_corr_unsigned(6 downto 0); --Preambule correlation value 16 bits
+					--MRAM_DATA_OUT <= "0" & ADC_BITS(6 downto 0); --ADC data 16 bits
+					--MRAM_DATA_OUT <= ADC_BITS(9 downto 2); --Regular ADC data
+					--MRAM_DATA_OUT <= p_corr_unsigned(11 downto 4); --Regular corr data
+					--MRAM_DATA_OUT <= "00000000" & bits_data; --For debugging correlated bit values
+					MRAM_WRITE_DATA <= '1';
+					address_counter <= address_counter + 1;
+				when 9 =>
+				   --Write out MSB of whole value, inciate with 1 in 8 bit MSB spot
+					MRAM_DATA_OUT <= "1" & p_corr_unsigned(13 downto 7); --Preambule correlation value 16 bits
+					--MRAM_DATA_OUT <= "1" & "0000" & ADC_BITS(9 downto 7); --ADC data 16 bits
+					MRAM_WRITE_DATA <= '1';
+					address_counter <= address_counter + 1;
+				when others =>
+					
+			end case;
+		end if;
+	end if;
+end process;
 
 --Correlating process
 process(CLK)

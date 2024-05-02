@@ -121,7 +121,7 @@ static void Connection_SendSocket(void) {
             }
             message_buffer_length =
                 snprintf(message_buffer, TX_MESSAGE_MAX_LENGTH, messages_format[eMessageNewPacket],
-                        THIS_DEVICE_ID, packet_data_string, arguments->data, arguments->timestamp_s, arguments->timestamp_ns);
+                        THIS_DEVICE_ID, packet_data_string, arguments->timestamp_s, arguments->timestamp_ns);
         } break;
         default: {
 

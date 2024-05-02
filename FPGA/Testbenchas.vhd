@@ -256,7 +256,18 @@ begin
 			ADC_BIT_A <= (others => '0');
 		end if;
 	end if;
-end process;                       
+end process;
+
+--PPS example
+process
+begin
+	PPS <= '0';
+	wait for 20us;
+	PPS <= '1';
+	wait for 1us;
+	PPS <= '0';
+	wait;
+end process;               
 
 --MRAM WRITE/READ emulation
 process

@@ -79,7 +79,7 @@ static bool FPGA_APP_ReadPacket(void) {
     //     return false;
     // }
     // ESP_LOGI(LOG_TAG, "Timstamp: %s", timestamp_char);
-    ESP_LOGI(LOG_TAG, "Timstamp again: 0x%x%x%x%x%x%x", timestamp.buffer[0], timestamp.buffer[1], timestamp.buffer[2], timestamp.buffer[3], timestamp.buffer[4], timestamp.buffer[5]);
+    ESP_LOGI(LOG_TAG, "Timstamp buffer: 0x%x%x%x%x%x%x", timestamp.buffer[0], timestamp.buffer[1], timestamp.buffer[2], timestamp.buffer[3], timestamp.buffer[4], timestamp.buffer[5]);
 
 
     new_packet.timestamp_s = timestamp.data.s;

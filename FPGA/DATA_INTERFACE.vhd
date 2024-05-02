@@ -20,7 +20,8 @@ port(
 	--Status register
 	STATUS_INIT_DONE : in std_logic := '0';
 	--RTC
-	PREAMBULE_FOUND : in std_Logic := '0'; --TODO: rtc discard signal
+	PPS : in std_logic := '0';
+	PREAMBULE_FOUND : in std_logic := '0'; --TODO: rtc discard signal
 	DEBUG_2 : out std_logic := '0'
 );
 end entity;
@@ -156,7 +157,6 @@ signal rtc_register_read_en : std_logic := '0';
 --Packet storage signals
 signal PACKET_READY : std_Logic := '0';
 --RTC
-signal pps : std_logic := '0'; --TODO: implement
 signal rtc_captured_impulses : std_logic_vector(RTC_IMPULSE_LENGTH_BITS - 1 downto 0) := (others => '0');
 signal rtc_captured_seconds : std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0');
 signal rtc_input_irq : std_logic := '0';
