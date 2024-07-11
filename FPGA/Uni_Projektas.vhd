@@ -7,7 +7,7 @@ use ieee.std_logic_textio.all;
 entity UNI_Projektas is --Up to 260MHz operation
 generic (
 	BAUD_RATE : integer := 921600;
-	MAX_ADDRESS_COUNTS : integer := 20000;
+	MAX_ADDRESS_COUNTS : integer := 20;
 	SEND_CLK_COUNTER_MAX : integer := 30
 );
 port(

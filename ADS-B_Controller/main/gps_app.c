@@ -67,9 +67,11 @@ static bool GPS_APP_SetGoodCoordinates(float new_latitude, float new_longitude, 
     good_coordinates.latitude = new_latitude;
     good_coordinates.longitude = new_longitude;
     good_coordinates.altitude = new_altitude;
-    //Nextion_API_SendCmd(eNextionCmdStart, 0, new_latitude, new_longitude); //TODO: implement time
+    sDate_t curr_time = Timer_API_GetRtcTime();
+    //Nextion_API_SendCmd(eNextionCmdGpsOk);
+    Nextion_API_SendCmd(eNextionCmdStart, curr_time.hours, curr_time.minutes, curr_time.seconds, new_latitude, new_longitude);
     Connection_APP_SendMessageRegister(new_latitude, new_longitude, new_altitude, 0);
-    Nextion_API_SendCmd(eNextionCmdGpsOk);
+    GPIO_API_Set(eGpioLEDTwo, true);
     return true;
 }
 
@@ -109,7 +111,7 @@ static void GGA_Handler(uint8_t *message, size_t len) {
     int8_t scanned_items = sscanf((char *)message, ",%10s,%f,%c,%f,%c,%*u,%*u,%*f,%f,%*c,%*f,%*c,,%*s", utc_time_string, &latitude,
                                                                &ns_indicator, &longitude, &ew_indicator, &altitude);
     if(scanned_items != 6) {
-        ESP_LOGI(LOG_TAG, "Invalid GPGGA message");
+        ESP_LOGI(LOG_TAG, "Invalid GPGGA message: %s", (char *)message);
         return;
     }
     GPS_APP_SetGoodTime(utc_time_string);

@@ -73,7 +73,6 @@ bool UART_API_Init(void) {
 
 /* Register callback for uart delimiter found event */
 bool UART_API_RegisterDelimiter(eUart_t uart, char delimiter, void (*callback)(uint8_t *, size_t) ) {
-    return false;
     if((uart_delimiter_lut[uart].delimiter_callback != NULL) || (uart >= eUartLast) || (callback == NULL)) {
         return false;
     }
@@ -98,7 +97,7 @@ static void UART_API_HandleEvent(eUart_t uart, uart_event_t *event) {
     ESP_LOGI(LOG_TAG, "uart[%d] event: %u", uart_lut[uart].port, event->type);
     switch (event->type) {
         case UART_DATA:
-            ESP_LOGI(LOG_TAG, "[UART DATA]: %d", event->size); //TODO: doesn't read uart because pattern isn't found yet
+            //ESP_LOGI(LOG_TAG, "[UART DATA]: %d", event->size); //TODO: doesn't read uart because pattern isn't found yet
             //uart_read_bytes(uart_lut[uart].port, rx_buffer, event->size, portMAX_DELAY);
             //ESP_LOGI(LOG_TAG, "[DATA EVT]:");
             //ESP_LOGI(LOG_TAG, "%s", (char *)rx_buffer);
@@ -122,7 +121,7 @@ static void UART_API_HandleEvent(eUart_t uart, uart_event_t *event) {
         case UART_PATTERN_DET:
             uart_get_buffered_data_len(uart_lut[uart].port, &buffered_size);
             int pos = uart_pattern_pop_pos(uart_lut[uart].port);
-            ESP_LOGI(LOG_TAG, "[UART PATTERN DETECTED] pos: %d, buffered size: %d", pos, buffered_size);
+            //ESP_LOGI(LOG_TAG, "[UART PATTERN DETECTED] pos: %d, buffered size: %d", pos, buffered_size);
 
             if (pos == -1) {
                 uart_flush_input(uart_lut[uart].port);
