@@ -10,15 +10,15 @@
 
 /* Define cmd format */
 static char *nextion_cmd_format_lut[eNextionCmdLast] = {
-    [eNextionCmdWifiOk] = "\x0C\x01\x00\x00",
-    [eNextionCmdWifiError] = "\x0C\x02\x00\x00",
+    [eNextionCmdWifiOk] = "\x0C\x01\xFF\xFF\xFF",
+    [eNextionCmdWifiError] = "\x0C\x00\xFF\xFF\xFF",
     [eNextionCmdGpsOk] = "\x0D\x01\xFF\xFF\xFF",
-    [eNextionCmdGpsError] = "\x0D\x02\x00\x00",
-    [eNextionCmdRegressionOk] = "\x0E\x01\x00\x00",
-    [eNextionCmdRegressionError] = "\x0E\x02\x00\x00",
-    [eNextionCmdPOk] = "\x0F\x01\x00\x00",
-    [eNextionCmdStart] = "\x0A%02u%02u%02u%09.6f%09.6f\x00\x00" /* Arguments:hours, minutes, seconds, latitude, longitude */,
-    [eNextionCmdInfo] = "\x0B%02u%02u%02u\x00\x00"              /* Arguments: hours, minutes, seconds */
+    [eNextionCmdGpsError] = "\x0D\x00\xFF\xFF\xFF",
+    [eNextionCmdRegressionOk] = "\x0E\x01\xFF\xFF\xFF",
+    [eNextionCmdRegressionError] = "\x0E\x00\xFF\xFF\xFF",
+    [eNextionCmdPOk] = "\x0F\x01\xFF\xFF\xFF",
+    [eNextionCmdStart] = "\x0A%02u%02u%02u%09.6f%09.6f\xFF\xFF\xFF" /* Arguments:hours, minutes, seconds, latitude, longitude */,
+    [eNextionCmdInfo] = "\x0B%02u%02u%02u\xFF\xFF\xFF"              /* Arguments: hours, minutes, seconds */
 };
 
 

@@ -1,3 +1,5 @@
+from crc import Calculator, Configuration
+
 def crc_remainder(input_bitstring, polynomial_bitstring, initial_filler):
     """Calculate the CRC remainder of a string of bits using a chosen polynomial.
     initial_filler should be '1' or '0'.
@@ -27,3 +29,18 @@ def crc_check(input_bitstring, polynomial_bitstring, check_value):
     return ('1' not in ''.join(input_padded_array)[len_input:])
 
 print(crc_remainder('1000110101000000011010111001000000100000000101011010011001111000110101001101001000100000', '1111111111111010000001001', '0'))
+
+def generate_adsb_crc(bytes: bytes):
+    config = Configuration(
+        width=24,
+        polynomial= 0x1FFF409,
+        init_value=0x00,
+        final_xor_value=0x00,
+        reverse_input=False,
+        reverse_output=False,
+    )
+
+    calculator = Calculator(config)
+    checksum = calculator.checksum(bytes)
+    checksum_bytes = checksum.to_bytes((config.width + 7) // 8, byteorder='big')
+    return checksum_bytes
