@@ -1,6 +1,7 @@
 import numpy as np
 import scipy.signal as signal
 import matplotlib.pyplot as plt
+from typing import Tuple
 
 signal_start_pause_length = 10
 fd = 10E6
@@ -10,7 +11,7 @@ t_prescaler = 10
 last_generated_signal_length = 0
 last_digitized_signal_length = 0
 
-def generate_ADSB(amplitude, bytes: bytes, pause = signal_start_pause_length):
+def generate_ADSB(amplitude: int, bytes: bytes, pause : int = signal_start_pause_length):
     global last_generated_signal_length
     # Assemble ideal signal
     ideal_one = amplitude*np.concatenate((np.ones(round(0.5E-6/td*t_prescaler)), np.zeros(round(0.5E-6/td*t_prescaler))))
@@ -65,7 +66,7 @@ def generate_ADSB(amplitude, bytes: bytes, pause = signal_start_pause_length):
 
     return ideal_adsb_signal, filtered_signal, noisy_ideal_signal
 
-def digitize_signal(signal, fs_original, fs_target, max, quant_levels):
+def digitize_signal(signal: np.ndarray, fs_original: int, fs_target: int, max: int, quant_levels: int) -> Tuple[np.ndarray, np.ndarray]:
     global last_digitized_signal_length
      # Create time vector for the original signal
     t_original = np.arange(0, len(signal) / fs_original, 1 / fs_original)
@@ -81,22 +82,22 @@ def digitize_signal(signal, fs_original, fs_target, max, quant_levels):
     last_digitized_signal_length = len(quantized_signal)
     return quantized_signal, t_digitized
 
-def correlate_signals(base_signal, mask):
+def correlate_signals(base_signal: np.ndarray, mask: np.ndarray) -> np.ndarray:
     result = np.zeros(len(base_signal))
     #Leave first mask amount of values uncorrelated
     for i in range(len(mask), len(base_signal)):
         result[i] = np.sum(base_signal[i - len(mask) : i] * mask)
     return result
 
-def normalize_signal(signal):
+def normalize_signal(signal: np.ndarray) -> np.ndarray:
     max = np.max(signal)
     signal /= max
     return signal
 
-def get_last_generated_signal_length():
+def get_last_generated_signal_length() -> int:
     global last_generated_signal_length
     return last_generated_signal_length
 
-def get_last_digitized_signal_length():
+def get_last_digitized_signal_length() -> int:
     global last_digitized_signal_length
     return last_digitized_signal_length
