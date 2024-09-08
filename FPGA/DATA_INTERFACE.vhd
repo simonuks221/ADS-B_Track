@@ -20,7 +20,8 @@ port(
 	--Status register
 	STATUS_INIT_DONE : in std_logic := '0';
 	--RTC
-	PREAMBULE_FOUND : in std_Logic := '0'; --TODO: rtc discard signal
+	PPS : in std_logic := '0';
+	PREAMBULE_FOUND : in std_logic := '0'; --TODO: rtc discard signal
 	DEBUG_2 : out std_logic := '0'
 );
 end entity;
@@ -36,6 +37,7 @@ port(
 	SPI_CS: in std_logic := '1';
 	
 	RESP_DATA: in std_logic_vector(7 downto 0) := (others => '0');
+	RESP_LATCH: in std_logic := '0';
 	CMD_DATA : out std_logic_vector(7 downto 0) := (others => '0');
 	SPI_CYCLE_DONE : out std_logic := '0';
 	SPI_RESET : out std_logic := '0'
@@ -47,7 +49,6 @@ port(
 	CLK: in std_logic := '0';
 	RAW_CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	DECODED_CMD_DATA : out std_logic_vector(7 downto 0) := (others => '0');
-	DECODED_CMD_VALID : out std_logic := '0';
 	SPI_CYCLE_DONE : in std_logic := '0';
 	RESET : in std_logic := '0';
 	PACKET_STORAGE_EN : out std_logic := '0';
@@ -63,7 +64,6 @@ port(
 	CLK: in std_logic := '0';
 	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
-	SPI_CYCLE_DONE : in std_logic := '0';
 	--Packets in from correlator
 	PACKET_IN_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	PACKET_IN_VALID : in std_logic := '0';
@@ -77,7 +77,6 @@ port(
 	CLK: in std_logic := '0';
 	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
-	SPI_CYCLE_DONE : in std_logic := '0';
 	--Status signals
 	INIT_DONE : in std_logic := '0';
 	PACKET_READY : in std_logic := '0'
@@ -94,7 +93,6 @@ port(
 	CLK: in std_logic := '0';
 	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
-	SPI_CYCLE_DONE : in std_logic := '0';
 	
 	RTC_INPUT_IRQ : out std_logic := '0';
 	RTC_INPUT_SECONDS : out std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0')
@@ -112,7 +110,6 @@ port(
 	CLK: in std_logic := '0';
 	CMD_DATA : in std_logic_vector(7 downto 0) := (others => '0');
 	RESP_DATA : out std_logic_vector(7 downto 0) := (others => '0');
-	SPI_CYCLE_DONE : in std_logic := '0';
 	
 	RTC_CAPTURE_IRQ : std_logic := '0';
    RTC_CAPTURED_IMPULSES : std_logic_vector(RTC_IMPULSE_LENGTH_BITS - 1 downto 0) := (others => '0');
@@ -141,8 +138,9 @@ end component;
 --Spi decoder
 signal raw_cmd_data : std_logic_vector(7 downto 0) := (others => '0');
 signal decoded_cmd_data : std_logic_vector(7 downto 0) := (others => '0');
-signal decoded_cmd_valid : std_logic := '0';
 signal spi_cycle_done : std_logic := '0';
+--Response lathces on any register enable
+signal resp_latch : std_logic := '0';
 --Shared bus for responses, must be left as 0 if not enabled
 signal resp_data_bus: std_logic_vector(7 downto 0) := (others => '0');
 signal storage_resp_data : std_logic_vector(7 downto 0) := (others => '0');
@@ -159,7 +157,6 @@ signal rtc_register_read_en : std_logic := '0';
 --Packet storage signals
 signal PACKET_READY : std_Logic := '0';
 --RTC
-signal pps : std_logic := '0'; --TODO: implement
 signal rtc_captured_impulses : std_logic_vector(RTC_IMPULSE_LENGTH_BITS - 1 downto 0) := (others => '0');
 signal rtc_captured_seconds : std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0) := (others => '0');
 signal rtc_input_irq : std_logic := '0';
@@ -167,15 +164,15 @@ signal rtc_input_seconds : std_logic_vector(RTC_SECONDS_LENGTH_BITS - 1 downto 0
 
 begin
 
-spi : SPI_SLAVE port map(CLK, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, resp_data_bus, raw_cmd_data, spi_cycle_done, spi_reset);
+spi : SPI_SLAVE port map(CLK, SPI_SCLK, SPI_MOSI, SPI_MISO, SPI_CS, resp_data_bus, resp_latch, raw_cmd_data, spi_cycle_done, spi_reset);
 
-decoder : SPI_DECODER port map(CLK, raw_cmd_data, decoded_cmd_data, decoded_cmd_valid, spi_cycle_done, spi_reset, packet_storage_en,
+decoder : SPI_DECODER port map(CLK, raw_cmd_data, decoded_cmd_data, spi_cycle_done, spi_reset, packet_storage_en,
 											status_register_en, rtc_register_set_en, rtc_register_read_en);
 
-stor : Packet_Storage port map (packet_storage_en, CLK, decoded_cmd_data, storage_resp_data, decoded_cmd_valid,
+stor : Packet_Storage port map (packet_storage_en, CLK, decoded_cmd_data, storage_resp_data,
 											PACKET_IN_DATA, PACKET_IN_VALID, PACKET_READY);
 
-stat : Status_Register port map(status_register_en, CLK, decoded_cmd_data, status_resp_data, decoded_cmd_valid,
+stat : Status_Register port map(status_register_en, CLK, decoded_cmd_data, status_resp_data,
 											STATUS_INIT_DONE, PACKET_READY);
 
 rtc_timer : RTC generic map (RTC_IMPULSE_LENGTH_BITS, RTC_SECONDS_LENGTH_BITS, RTC_TIME_LENGTH_BYTES) 
@@ -183,11 +180,18 @@ rtc_timer : RTC generic map (RTC_IMPULSE_LENGTH_BITS, RTC_SECONDS_LENGTH_BITS, R
 						       DEBUG_2);
 
 rtc_set : RTC_Set_Register generic map (RTC_IMPULSE_LENGTH_BITS, RTC_SECONDS_LENGTH_BITS)
-				               port map(rtc_register_set_en, CLK, decoded_cmd_data, rtc_set_resp_data, decoded_cmd_valid, 
+				               port map(rtc_register_set_en, CLK, decoded_cmd_data, rtc_set_resp_data, 
                                     RTC_INPUT_IRQ, RTC_INPUT_SECONDS);
 rtc_read : RTC_Read_Register generic map (RTC_IMPULSE_LENGTH_BITS, RTC_SECONDS_LENGTH_BITS, RTC_TIME_LENGTH_BYTES)
-								     port map(rtc_register_read_en, CLK, decoded_cmd_data, rtc_read_resp_data, decoded_cmd_valid,
+								     port map(rtc_register_read_en, CLK, decoded_cmd_data, rtc_read_resp_data,
                                       PREAMBULE_FOUND, RTC_CAPTURED_IMPULSES, RTC_CAPTURED_SECONDS);
 resp_data_bus <= storage_resp_data or status_resp_data or rtc_set_resp_data or rtc_read_resp_data;
+
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		resp_latch <= packet_storage_en or status_register_en or rtc_register_set_en or rtc_register_read_en;
+	end if;
+end process;
 
 end architecture;

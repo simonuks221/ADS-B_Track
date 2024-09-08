@@ -27,9 +27,25 @@ architecture arc of RTC is
 
 	signal seconds_counter : integer range 0 to 24*60*60 := 0;
 	signal impulse_counter : integer range 0 to impulses_in_a_second := 0;
+	
+	--For PPS metastability
+	signal pps_pipeline_1 : std_logic := '0';
+	signal pps_pipeline_2 : std_logic := '0';
+	signal pps_pipeline_3 : std_logic := '0';
 begin
 
 DEBUG_2 <= '1' when impulse_counter > 100000000 else '0';
+
+--Deal with metastability of PPS signal
+process(CLK)
+begin
+	if rising_edge(CLK) then
+		pps_pipeline_1 <= PPS_IRQ;
+		pps_pipeline_2 <= pps_pipeline_1;
+		pps_pipeline_3 <= pps_pipeline_2;
+	end if;
+
+end process;
 
 --Output timestamp
 process(CLK)
@@ -50,16 +66,17 @@ begin
 			--Write in value from SPI input
 			seconds_counter <= to_integer(unsigned(INPUT_SECONDS));
 			impulse_counter <= 0;
-		elsif PPS_IRQ = '1' then
-			--Synchronize to 1s period PPS
-			remainder := seconds_counter mod impulses_in_a_second;
-			if remainder < impulses_in_a_second / 2 then
-				--Round the second down
-				seconds_counter <= seconds_counter - 1;
-			else
-				--Round the second up
-            seconds_counter <= seconds_counter + 1;
-			end if;
+		end if;
+		if pps_pipeline_3 = '0' and pps_pipeline_2 = '1' then
+			--Synchronize to 1s period on rising edge of PPS
+--			remainder := seconds_counter mod impulses_in_a_second;
+--			if remainder < impulses_in_a_second / 2 then
+--				--Round the second down
+--				seconds_counter <= seconds_counter - 1;
+--			else
+--				--Round the second up
+--            seconds_counter <= seconds_counter + 1;
+--			end if;
 			impulse_counter <= 0;
 		else
 			--No PPS present
@@ -68,7 +85,7 @@ begin
 				seconds_counter <= seconds_counter + 1;
 				impulse_counter <= 0;
 			else
-				--Increment ns counter
+				--Increment impulse counter
 				impulse_counter <= impulse_counter + 1;
 			end if;
 		end if;

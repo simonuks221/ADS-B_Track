@@ -23,7 +23,7 @@ function [idealSignal, noisySignal, discretizedSignal, ADCsignal, ADCpreambule, 
         pridejimoVietaPradzia = pridejimoVietaPradzia+length(idealOne);
     end
 
-    idealSignal = [zeros(1, round(25E-6/tdiskret*tprescaler)), idealSignal, zeros(1, round(15E-6/tdiskret*tprescaler))];
+    idealSignal = [zeros(1, round(25E-6/tdiskret*tprescaler)), idealSignal, zeros(1, round(15E-6/tdiskret*tprescaler)), zeros(1, 1)];
 
     %Noisy signalas
     load 'FiltroKoef.mat';
@@ -36,6 +36,8 @@ function [idealSignal, noisySignal, discretizedSignal, ADCsignal, ADCpreambule, 
     %triuksmas = vid + std*randn(1, N);
     %triuksmas = vid + std*rand(1, length(nufiltruotasSignalas));
     triuksmas = rand(1, length(nufiltruotasSignalas))*0.5-0.2; %Was 1.5-0.6
+    %triuksmas = randn(1, length(nufiltruotasSignalas))*0.4; %Was 1.5-0.6
+
     figure
 
     naudingoSignaloPradzia = 2500;

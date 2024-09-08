@@ -29,10 +29,10 @@ typedef struct sApp {
 sApp_t app_lut[] = {
     {"GPIO", GPIO_API_Init, NULL},
     {"TIM", Timer_API_Init, NULL},
-    //{"UART", UART_API_Init, NULL},
-    //{"NEXTION", Nextion_API_Init, NULL},
+    {"UART", UART_API_Init, NULL},
+    {"NEXTION", Nextion_API_Init, NULL},
     {"SD", SD_API_Init, NULL},
-    //{"GPS", GPS_APP_Init, NULL},
+    {"GPS", GPS_APP_Init, NULL},
     {"FPGA", FPGA_APP_Init, FPGA_APP_Run},
     {"CONNECTION", Connection_APP_Init, Connection_APP_Run}
 };
@@ -49,12 +49,7 @@ void app_main(void) {
     }
     ESP_LOGI(LOG_TAG, "Init finished");
     /* Start main task loop */
-    vTaskDelay(100);
     GPIO_API_Set(eGpioLEDOne, true);
-    vTaskDelay(100);
-    GPIO_API_Set(eGpioLEDTwo, true);
-    vTaskDelay(100);
-    GPIO_API_Set(eGpioLEDThree, true);
     while(true) {
         for(uint8_t i = 0; i < ARRAY_SIZE(app_lut); i++) {
             if(app_lut[i].run == NULL) {
