@@ -1,0 +1,71 @@
+import numpy as np
+import time
+from M_Functions.signal_generator import generate_ADSB, digitize_signal, get_signal_energy
+from M_Functions.crc import generate_adsb_crc
+from preambules_list import preambule_list
+
+start_time = time.time()
+
+def print_loading_bar(iteration, total, length=50):
+    global start_time
+    percent = ("{0:.1f}").format(100 * (iteration / float(total)))
+    filled_length = int(length * iteration // total)
+    bar = '█' * filled_length + '-' * (length - filled_length)
+    elapsed_time = time.time() - start_time
+    print(f'\rProgress: |{bar}| {percent}% Complete {"{:.2f}".format(elapsed_time)}s')
+
+print('Start')
+
+#Configuration
+amplitude = 1
+data_bits = bytes([0x8D, 0x40, 0x6B, 0x90, 0x20, 0x15, 0xA6, 0x78, 0xD4, 0xD2, 0x20])
+crc_bits = generate_adsb_crc(data_bits)
+full_bits = data_bits + crc_bits
+
+step_amount = 10 #How many steps thru amplitude
+min_generation_amplitude = 0.2
+max_generation_amplitude = 1.1
+step_generation_amount = 30 #How many ADS-B signals to generate each step
+
+total_generations = step_generation_amount * step_amount
+all_amplitudes = np.linspace(min_generation_amplitude, max_generation_amplitude, step_amount)
+
+all_energies = np.zeros((len(preambule_list), step_amount, step_generation_amount))
+all_points = np.zeros((len(preambule_list), step_amount, step_generation_amount))
+
+for amplitude_i in range(step_amount):
+    curr_amplitude = all_amplitudes[amplitude_i]
+    for generation_i in range(step_generation_amount):
+        print_loading_bar(amplitude_i * step_generation_amount + generation_i, step_amount * step_generation_amount)
+        curr_signal = generate_ADSB(curr_amplitude, full_bits)[2]
+        digitized_signal = digitize_signal(curr_signal, 100E6, 10E6, 1.4, 2**10)[0]
+        for preambule_i in range(len(preambule_list)):
+            curr_preambule = preambule_list[preambule_i]
+            curr_corr = curr_preambule.get_correlation(curr_signal)
+            all_points[preambule_i, amplitude_i, generation_i] = curr_corr[curr_preambule.get_expected_maximum()]
+            #Get all energy
+            curr_energy = get_signal_energy(digitized_signal, len(curr_preambule.get_coefficients()))
+            all_energies[preambule_i, amplitude_i, generation_i] = curr_energy[curr_preambule.get_expected_maximum()]
+
+# Calculate energy metrics
+mean_energies = np.zeros((len(preambule_list), step_amount))
+mean_points = np.zeros((len(preambule_list), step_amount))
+lower_quantile_points = np.zeros((len(preambule_list), step_amount))
+higher_quantile_points = np.zeros((len(preambule_list), step_amount))
+
+for amplitude_i in range(step_amount):
+    for preambule_i in range(len(preambule_list)):
+        mean_energies[preambule_i, amplitude_i] = np.mean(all_energies[preambule_i, amplitude_i, :])
+        mean_points[preambule_i, amplitude_i] = np.mean(all_points[preambule_i, amplitude_i, :])
+        lower_quantile_points[preambule_i, amplitude_i] = np.quantile(all_points[preambule_i, amplitude_i, :], 0.25)
+        higher_quantile_points[preambule_i, amplitude_i] = np.quantile(all_points[preambule_i, amplitude_i, :], 0.75)
+
+# Train
+
+# Save generated data to file
+np.savez('python_simulations.npz', all_energies=all_energies, all_points=all_points, mean_energies=mean_energies,
+        mean_points=mean_points, lower_quantile_points=lower_quantile_points, higher_quantile_points=higher_quantile_points)
+# data = np.load('array.npz')
+# loaded_array = data['array']
+# print(loaded_array)
+print('Success')

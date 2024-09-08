@@ -89,6 +89,13 @@ def correlate_signals(base_signal: np.ndarray, mask: np.ndarray) -> np.ndarray:
         result[i] = np.sum(base_signal[i - len(mask) : i] * mask)
     return result
 
+def get_signal_energy(signal: np.ndarray, mask_length: int) -> np.ndarray:
+    energy = np.zeros(len(signal))
+    for i in range(mask_length, len(signal)):
+        energy[i] = np.sum(np.abs(signal[i - mask_length : i] * signal[i - mask_length : i]))
+        energy[i] /= mask_length
+    return energy
+
 def normalize_signal(signal: np.ndarray) -> np.ndarray:
     max = np.max(signal)
     signal /= max

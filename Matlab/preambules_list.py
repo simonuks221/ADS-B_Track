@@ -1,4 +1,7 @@
-from M_Functions.preambule_variant import *
+import numpy as np
+from enum import Enum
+from M_Functions.preambule_variant import PreambuleVariant, PreambuleVariantDifferentiated
+from M_Functions.signal_generator import td
 
 def normalize_coefficients(array):
     total_sum = np.sum(array)
@@ -34,6 +37,15 @@ normalize_coefficients(extended_normalized_preambule)
 #Differentiated
 diff_amount = 2
 differentiated_preambule = np.concatenate((ideal_preambule, np.zeros(diff_amount))) - np.concatenate((np.zeros(diff_amount), ideal_preambule))
+
+class Preambule(Enum):
+    Ideal = 0
+    Negative = 1
+    NegativeNormalized = 2
+    Extended = 3
+    ExtendedNegative = 4
+    ExtendedNormalized = 5
+    Differentiated = 6
 
 preambule_list = [
     PreambuleVariant("Ideal", ideal_preambule),

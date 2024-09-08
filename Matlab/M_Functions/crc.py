@@ -28,8 +28,6 @@ def crc_check(input_bitstring, polynomial_bitstring, check_value):
             = str(int(polynomial_bitstring[i] != input_padded_array[cur_shift + i]))
     return ('1' not in ''.join(input_padded_array)[len_input:])
 
-print(crc_remainder('1000110101000000011010111001000000100000000101011010011001111000110101001101001000100000', '1111111111111010000001001', '0'))
-
 def generate_adsb_crc(bytes: bytes):
     config = Configuration(
         width=24,

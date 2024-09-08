@@ -19,7 +19,6 @@ class PreambuleVariant:
     def get_expected_maximum(self):
         return len(self.__coefficients)
 
-import matplotlib.pyplot as plt
 class PreambuleVariantDifferentiated(PreambuleVariant):
     def __init__(self, name, preambule, diff_amount):
         super().__init__(name, preambule)
