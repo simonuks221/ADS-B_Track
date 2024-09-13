@@ -1,32 +1,18 @@
 import numpy as np
 import time
 import multiprocessing
-from M_Functions.signal_generator import generate_ADSB, digitize_signal, get_signal_energy
+from M_Functions.signal_generator import generate_ADSB, digitize_signal, get_signal_energy, signal_start_pause_length
 from M_Functions.crc import generate_adsb_crc
 from preambules_list import preambule_list
 
 step_amount = 10 # How many steps thru amplitude
 min_generation_amplitude = 0.2
 max_generation_amplitude = 1.1
-step_generation_amount = 30 # How many ADS-B signals to generate each step (same amplitude and different preambule masks)
+step_generation_amount = 100 # How many ADS-B signals to generate each step (same amplitude and different preambule masks)
 
 total_generations = step_generation_amount * step_amount
 all_amplitudes = np.linspace(min_generation_amplitude, max_generation_amplitude, step_amount)
 total_work = len(all_amplitudes) * step_generation_amount
-
-def monitor_completion_process(result_queue: multiprocessing.Queue, total_work: int, processes_limit_semaphore):
-    work_done = 0
-    start_time = time.time()
-    print_loading_bar(0, total_work, start_time)
-    while(True):
-        # Wait for all work to be done
-        result = result_queue.get()
-        work_done += 1
-        print_loading_bar(work_done, total_work, start_time)
-        # result_queue.task_done()
-        processes_limit_semaphore.release()
-        if work_done == total_work:
-            break
 
 def print_loading_bar(iteration: int, total: int, start_time: time, length: int = 50):
     percent = ("{0:.1f}").format(100 * (iteration / float(total)))
@@ -42,11 +28,12 @@ def adsb_values_generator_process(amplitude_i: int, this_step: int, full_bits: b
     digitized_signal = digitize_signal(curr_signal, 100E6, 10E6, 1.4, 2**10)[0]
     for preambule_i in range(len(preambule_list)):
         curr_preambule = preambule_list[preambule_i]
-        curr_corr = curr_preambule.get_correlation(curr_signal)
-        process_points[preambule_i] = curr_corr[curr_preambule.get_expected_maximum()]
+        expected_maximum = signal_start_pause_length + curr_preambule.get_expected_maximum()
+        curr_corr = curr_preambule.get_correlation(digitized_signal)
+        process_points[preambule_i] = curr_corr[expected_maximum]
         # Get all energy
         curr_energy = get_signal_energy(digitized_signal, len(curr_preambule.get_coefficients()))
-        process_energies[preambule_i] = curr_energy[curr_preambule.get_expected_maximum()]
+        process_energies[preambule_i] = curr_energy[expected_maximum]
     return (amplitude_i, this_step, process_points, process_energies)
 
 if __name__ == "__main__":
