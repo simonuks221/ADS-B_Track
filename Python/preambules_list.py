@@ -1,11 +1,11 @@
 import numpy as np
 from enum import Enum
-from M_Functions.preambule_variant import (
+from Functions.preambule_variant import (
     PreambuleVariant,
     PreambuleVariantDifferentiated,
     Correlation,
 )
-from M_Functions.signal_generator import td
+from Functions.signal_generator import td
 
 
 def normalize_coefficients(array):

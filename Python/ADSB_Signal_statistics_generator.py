@@ -1,14 +1,14 @@
 import numpy as np
 import time
 import multiprocessing
-from M_Functions.signal_generator import (
+from Functions.signal_generator import (
     generate_ADSB,
     digitize_signal,
     get_signal_energy,
     signal_start_pause_length,
 )
-from M_Functions.crc import generate_adsb_crc
-from M_Functions.preambule_variant import Correlation
+from Functions.crc import generate_adsb_crc
+from Functions.preambule_variant import Correlation
 from preambules_list import preambule_list
 
 step_amount = 10  # How many steps thru amplitude

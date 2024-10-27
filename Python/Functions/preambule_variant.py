@@ -1,6 +1,6 @@
 import numpy as np
 from enum import Enum
-from M_Functions.signal_generator import correlate_signals, correlate_khintchine
+from Functions.signal_generator import correlate_signals, correlate_khintchine
 
 
 class Correlation(Enum):
