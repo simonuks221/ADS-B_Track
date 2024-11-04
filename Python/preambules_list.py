@@ -30,7 +30,7 @@ ideal_one = amplitude * np.concatenate(
 )
 ideal_zero = amplitude * np.concatenate(
     (np.zeros(round(0.5e-6 / fd_real)), np.ones(round(0.5e-6 / fd_real)))
-)  # 100 ilgis
+)
 
 # Regular
 ideal_preambule = amplitude * np.concatenate(
@@ -44,6 +44,8 @@ ideal_preambule = amplitude * np.concatenate(
         np.ones(round(0.5e-6 / fd_real)),
     )
 )
+
+# Negative
 negative_preambule = amplitude * np.concatenate(
     (
         np.ones(round(0.5e-6 / fd_real)),
@@ -58,10 +60,12 @@ negative_preambule = amplitude * np.concatenate(
 normalized_preambule = np.copy(negative_preambule)
 normalize_coefficients(normalized_preambule)
 
-# Extended
+# Regular extended
 extended_preambule = np.concatenate(
     (np.copy(ideal_preambule), np.zeros(round(3e-6 / fd_real)))
 )
+
+# Regular negative
 extended_negative_preambule = np.concatenate(
     (np.copy(negative_preambule), -1 * np.ones(round(3e-6 / fd_real)))
 )
@@ -74,6 +78,9 @@ differentiated_preambule = np.concatenate(
     (ideal_preambule, np.zeros(diff_amount))
 ) - np.concatenate((np.zeros(diff_amount), ideal_preambule))
 
+# Ideal expanded
+ideal_expanded_preambule = np.concatenate((np.zeros(1), ideal_preambule, np.zeros(1)))
+
 
 class Preambule(Enum):
     Ideal = 0
@@ -83,6 +90,7 @@ class Preambule(Enum):
     ExtendedNegative = 4
     ExtendedNormalized = 5
     Differentiated = 6
+    IdealExpanded = 7
 
 
 preambule_list = [
@@ -95,4 +103,5 @@ preambule_list = [
     PreambuleVariantDifferentiated(
         "Differentiated", differentiated_preambule, diff_amount
     ),
+    PreambuleVariant("Ideal expanded", ideal_expanded_preambule),
 ]

@@ -3,7 +3,7 @@ import scipy.signal as signal
 import matplotlib.pyplot as plt
 from typing import Tuple
 
-signal_start_pause_length = 10
+signal_start_pause_length = 50
 fd = 10e6
 td = 1 / fd
 t_prescaler = 10
@@ -132,7 +132,8 @@ def correlate_khintchine(base_signal: np.ndarray, mask: np.ndarray) -> np.ndarra
 
     cross_corr = np.fft.ifft(fft_signal * fft_replica_conj)
     cross_corr = np.concatenate((np.zeros(len(mask)), cross_corr))
-    return cross_corr
+    altered_corr = np.flip(np.abs(cross_corr))
+    return altered_corr
 
 
 def get_signal_energy(signal: np.ndarray, mask_length: int) -> np.ndarray:
@@ -172,11 +173,32 @@ def get_signal_history(signal: np.ndarray, point: int, length: int) -> np.ndarra
     return signal[point - length : point]
 
 
-def generate_fft(
+def generate_fft_raw(
     signal: np.ndarray, sampling_rate_hz: int, padding: int = 0
 ) -> Tuple[np.ndarray, np.ndarray]:
     padded_signal = np.concatenate((signal, np.zeros(padding)))
-    S = np.abs(np.fft.fft(padded_signal))
+    S = np.fft.fft(padded_signal)
+    N = len(S)
+    n = np.arange(N)
+    T = N / sampling_rate_hz
+    freq = n / T
+    return (freq, S)
+
+
+def generate_fft_db(
+    signal: np.ndarray, sampling_rate_hz: int, padding: int = 0
+) -> Tuple[np.ndarray, np.ndarray]:
+    freq, raw_S = generate_fft_raw(signal, sampling_rate_hz, padding)
+    abs_S = np.abs(raw_S)
+    S = 20 * np.log10(abs_S / max(abs_S))
+    return (freq, S)
+
+
+def generate_ifft(
+    signal: np.ndarray, sampling_rate_hz: int
+) -> Tuple[np.ndarray, np.ndarray]:
+    # S = np.abs(np.fft.ifft(signal))
+    S = np.fft.ifft(signal)
     N = len(S)
     n = np.arange(N)
     T = N / sampling_rate_hz
