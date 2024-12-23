@@ -23,14 +23,19 @@ all_amplitudes = np.linspace(
 total_work = len(all_amplitudes) * step_generation_amount
 
 
+# Prints the loading bar of completed processes
 def print_loading_bar(iteration: int, total: int, start_time: time, length: int = 50):
     percent = ("{0:.1f}").format(100 * (iteration / float(total)))
     filled_length = int(length * iteration // total)
     bar = "█" * filled_length + "-" * (length - filled_length)
     elapsed_time = time.time() - start_time
-    print(f'\rProgress: |{bar}| {percent}% Complete {"{:.2f}".format(elapsed_time)}s')
+    print(f"\rProgress: |{bar}| {percent}% Complete {elapsed_time:.2f}s")
 
 
+# Single process of generating ADSB statistical data depending on provided:
+# ADSB amplituide index
+#
+# ADSB bits
 def adsb_values_generator_process(amplitude_i: int, this_step: int, full_bits: bytes):
     process_points = np.zeros(len(preambule_list))
     process_energies = np.zeros(len(preambule_list))
@@ -54,7 +59,6 @@ def adsb_values_generator_process(amplitude_i: int, this_step: int, full_bits: b
 if __name__ == "__main__":
     print("Start")
     # Configuration
-    amplitude = 1
     data_bits = bytes(
         [0x8D, 0x40, 0x6B, 0x90, 0x20, 0x15, 0xA6, 0x78, 0xD4, 0xD2, 0x20]
     )
@@ -68,7 +72,7 @@ if __name__ == "__main__":
         for step_i in range(step_generation_amount):
             result = pool.apply_async(
                 adsb_values_generator_process, (amplitude_i, step_i, full_bits)
-            )  # evaluate "f(10)" asynchronously
+            )
             results.append(result)
     pool.close()
     # Processes are running
@@ -118,6 +122,7 @@ if __name__ == "__main__":
     # Save generated data to file
     np.savez(
         "python_simulations.npz",
+        test_amplitudes=all_amplitudes,
         all_energies=all_energies,
         all_points=all_points,
         mean_energies=mean_energies,

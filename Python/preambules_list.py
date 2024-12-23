@@ -91,6 +91,7 @@ class Preambule(Enum):
     ExtendedNormalized = 5
     Differentiated = 6
     IdealExpanded = 7
+    Last = 8
 
 
 preambule_list = [

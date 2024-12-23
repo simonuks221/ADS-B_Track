@@ -97,6 +97,20 @@ def generate_ADSB(amplitude: int, bytes: bytes, pause: int = signal_start_pause_
     return ideal_adsb_signal, filtered_signal, noisy_ideal_signal
 
 
+def generate_ADSB_multiple(amplitudes: np.ndarray, full_bits: bytes) -> np.ndarray:
+    signal_amount = len(amplitudes)
+    multiple_signal_gaps = 200  # TODO: remove hardcode
+    full_multiple_signal = np.zeros(0)
+    for i in range(signal_amount):
+        full_multiple_signal = np.concatenate(
+            (
+                full_multiple_signal,
+                generate_ADSB(amplitudes[i], full_bits, multiple_signal_gaps)[2],
+            )
+        )
+    return full_multiple_signal
+
+
 def digitize_signal(
     signal: np.ndarray, fs_original: int, fs_target: int, max: int, quant_levels: int
 ) -> Tuple[np.ndarray, np.ndarray]:
