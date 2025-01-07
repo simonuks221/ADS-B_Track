@@ -11,22 +11,23 @@ t_prescaler = 10
 last_generated_signal_length = 0
 last_digitized_signal_length = 0
 
+ideal_one = np.concatenate(
+    (
+        np.ones(round(0.5e-6 / td * t_prescaler)),
+        np.zeros(round(0.5e-6 / td * t_prescaler)),
+    )
+)
+ideal_zero = np.concatenate(
+    (
+        np.zeros(round(0.5e-6 / td * t_prescaler)),
+        np.ones(round(0.5e-6 / td * t_prescaler)),
+    )
+)  # 100ilgis
+
 
 def generate_ADSB(amplitude: int, bytes: bytes, pause: int = signal_start_pause_length):
     global last_generated_signal_length
     # Assemble ideal signal
-    ideal_one = amplitude * np.concatenate(
-        (
-            np.ones(round(0.5e-6 / td * t_prescaler)),
-            np.zeros(round(0.5e-6 / td * t_prescaler)),
-        )
-    )
-    ideal_zero = amplitude * np.concatenate(
-        (
-            np.zeros(round(0.5e-6 / td * t_prescaler)),
-            np.ones(round(0.5e-6 / td * t_prescaler)),
-        )
-    )  # 100ilgis
 
     ideal_preambule = amplitude * np.concatenate(
         (
@@ -51,11 +52,11 @@ def generate_ADSB(amplitude: int, bytes: bytes, pause: int = signal_start_pause_
             if ((byte >> i) & 0x01) == 0:
                 ideal_adsb_signal[
                     bit_start_index : bit_start_index + len(ideal_zero)
-                ] = ideal_zero
+                ] = (ideal_zero * amplitude)
             else:
                 ideal_adsb_signal[
                     bit_start_index : bit_start_index + len(ideal_zero)
-                ] = ideal_one
+                ] = (ideal_one * amplitude)
             bit_start_index += len(ideal_zero)
 
     # Filter ideal signal with 2 MHz filter
