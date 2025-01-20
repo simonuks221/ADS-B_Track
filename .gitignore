@@ -485,6 +485,9 @@ PLLJ_PLLSPE_INFO.txt
 
 simulation/*
 
+!PC_Code/PCKodas/bin/
+!PC_Code/PCKodas/bin/Debug/
+PC_Code/PCKodas/bin/Debug/*.txt
+
 Matlab/Grafikai/*
-PC_Code/PCKodas/bin/*
 PCB/Project Outputs for FPGA_ADC_SHIELD_PCB2/*
