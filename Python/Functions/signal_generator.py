@@ -22,13 +22,13 @@ ideal_zero = np.concatenate(
         np.zeros(round(0.5e-6 / td * t_prescaler)),
         np.ones(round(0.5e-6 / td * t_prescaler)),
     )
-)  # 100ilgis
+)  # 100 length
 
 
 def generate_ADSB(amplitude: int, bytes: bytes, pause: int = signal_start_pause_length):
     global last_generated_signal_length
-    # Assemble ideal signal
 
+    # Assemble ideal signal
     ideal_preambule = amplitude * np.concatenate(
         (
             np.zeros(pause * t_prescaler),
@@ -44,7 +44,7 @@ def generate_ADSB(amplitude: int, bytes: bytes, pause: int = signal_start_pause_
     ideal_pause = amplitude * np.zeros(round(3e-6 / td * t_prescaler))
     ideal_adsb_signal = np.concatenate(
         (ideal_preambule, ideal_pause, np.zeros(len(ideal_zero) * (len(bytes) * 8)))
-    )  # was -h on len(bits_array)#%500+300+100*strlen
+    )
 
     bit_start_index = len(ideal_preambule) + len(ideal_pause)
     for byte in bytes:
