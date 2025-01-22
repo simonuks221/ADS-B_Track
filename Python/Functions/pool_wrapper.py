@@ -38,6 +38,9 @@ class PoolWrapper:
         self._registered_processes.append(ProcessDesc(function, args))
 
     def start_pool(self):
+        print(
+            f"Starting pool with {len(self._registered_processes)} tasks with {self._max_processes} processes"
+        )
         raw_results = []
         pool = multiprocessing.Pool(processes=self._max_processes)
         self._start_time = time.time()
