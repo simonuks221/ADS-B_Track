@@ -25,10 +25,16 @@ class OptimizationTracker:
     def __init__(self):
         self.history = []
         self.f_values = []
+        self.iterations = []
+        self._save_interval = 100
+        self._save_counter = 0
 
     def callback(self, intermediate_result: OptimizeResult):
-        self.history.append(intermediate_result.x)
-        self.f_values.append(intermediate_result.fun)
+        self._save_counter += 1
+        if self._save_counter % self._save_interval == 0:
+            self.history.append(intermediate_result.x)
+            self.f_values.append(intermediate_result.fun)
+            self.iterations.append(self._save_counter)
 
 
 class CorrelationOptimisationMinimize:
@@ -57,7 +63,7 @@ class CorrelationOptimisationMinimize:
         return self._result
 
     def get_history(self):
-        return (self._tracker.history, self._tracker.f_values)
+        return (self._tracker.history, self._tracker.f_values, self._tracker.iterations)
 
     def get_name(self) -> str:
         assert False, "This should be implemented in children"
