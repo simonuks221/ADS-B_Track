@@ -1,6 +1,12 @@
 import numpy as np
 from Functions.signal_generator import correlate_signals
 from scipy.optimize import minimize, OptimizeResult
+from enum import Enum
+
+
+class MaskType(Enum):
+    REGULAR = 0
+    MIDDLE_ZEROS = 1
 
 
 def find_integral_error(sig1: np.ndarray, sig2: np.ndarray) -> int:
@@ -21,6 +27,20 @@ def find_max_error(sig1: np.ndarray, sig2: np.ndarray) -> int:
     return max
 
 
+def make_mask_with_middle_zeros(mask) -> np.ndarray:
+    new_mask = np.concatenate((mask[:15], np.zeros(20), mask[15:]))
+    return new_mask
+
+
+def make_mask_from_type(mask: np.ndarray, mask_type: MaskType) -> np.ndarray:
+    if mask_type == MaskType.REGULAR:
+        return mask
+    elif mask_type == MaskType.MIDDLE_ZEROS:
+        return make_mask_with_middle_zeros(mask)
+    else:
+        assert False, "Unknown mask type"
+
+
 class OptimizationTracker:
     def __init__(self):
         self.history = []
@@ -38,16 +58,26 @@ class OptimizationTracker:
 
 
 class CorrelationOptimisationMinimize:
-    def __init__(self, target_corr, target):
+    def __init__(
+        self, target_corr, target, mask_type: MaskType = MaskType.MIDDLE_ZEROS
+    ):
         self._target_corr = target_corr
         self._target = target
         self._tracker = OptimizationTracker()
+        self._mask_type = mask_type
 
+    # Gets a mask and correlates to the target signal
+    # Used in children classes to compare the results
     def objective_function(self, mask) -> np.ndarray:
-        # target_noise = np.random.rand(len(target))/500
+        actual_mask = make_mask_from_type(mask, self._mask_type)
+
+        # noise_amplitude = 0.1
+        # target_noise = np.random.normal(
+        #     -noise_amplitude, noise_amplitude, len(self._target)
+        # )
         target_noise = np.zeros(len(self._target))
         target_to_correlate = self._target + target_noise
-        correlation = correlate_signals(target_to_correlate, mask)
+        correlation = correlate_signals(target_to_correlate, actual_mask)
         return correlation
 
     def optimize(self, initial_guess: np.ndarray, max_iterations: int):
@@ -64,6 +94,9 @@ class CorrelationOptimisationMinimize:
 
     def get_history(self):
         return (self._tracker.history, self._tracker.f_values, self._tracker.iterations)
+
+    def get_mask_type(self) -> MaskType:
+        return self._mask_type
 
     def get_name(self) -> str:
         assert False, "This should be implemented in children"
@@ -100,7 +133,12 @@ class CorrelationOptimisationMinimize2MaxFraction(CorrelationOptimisationMinimiz
             correlation[: (original_max_point_idx - 5)]
         )
         new_second_max_point_value = correlation[new_second_max_point_idx]
-        fraction = new_second_max_point_value / new_max_point_value
+
+        if new_max_point_value != 0:
+            fraction = new_second_max_point_value / new_max_point_value
+        else:
+            fraction = new_second_max_point_value
+
         return fraction
 
     def get_name() -> str:

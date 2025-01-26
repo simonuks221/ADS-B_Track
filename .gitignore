@@ -491,3 +491,5 @@ PC_Code/PCKodas/bin/Debug/*.txt
 
 Matlab/Grafikai/*
 PCB/Project Outputs for FPGA_ADC_SHIELD_PCB2/*
+
+Python/ADS_B_ENV/*
