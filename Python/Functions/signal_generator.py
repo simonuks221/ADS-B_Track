@@ -8,19 +8,21 @@ fd = 10e6
 td = 1 / fd
 t_prescaler = 10
 
-last_generated_signal_length = 0
-last_digitized_signal_length = 0
+_last_generated_signal_length = 0
+_last_digitized_signal_length = 0
+
+_fd_real = td / t_prescaler
 
 IDEAL_ONE = np.concatenate(
     (
-        np.ones(round(0.5e-6 / td * t_prescaler)),
-        np.zeros(round(0.5e-6 / td * t_prescaler)),
+        np.ones(round(0.5e-6 / _fd_real)),
+        np.zeros(round(0.5e-6 / _fd_real)),
     )
 )
 IDEAL_ZERO = np.concatenate(
     (
-        np.zeros(round(0.5e-6 / td * t_prescaler)),
-        np.ones(round(0.5e-6 / td * t_prescaler)),
+        np.zeros(round(0.5e-6 / _fd_real)),
+        np.ones(round(0.5e-6 / _fd_real)),
     )
 )  # 100 length
 
@@ -28,7 +30,7 @@ IDEAL_PREAMBLE = np.concatenate(
     (
         IDEAL_ONE,
         IDEAL_ONE,
-        np.zeros(round(1.5e-6 / td * t_prescaler)),
+        np.zeros(round(1.5e-6 / _fd_real)),
         IDEAL_ONE,
         IDEAL_ONE,
     )
@@ -41,7 +43,7 @@ def generate_ADSB(
     pause: int = signal_start_pause_length,
     generate_bits: bool = True,
 ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
-    global last_generated_signal_length
+    global _last_generated_signal_length
 
     # Assemble ideal signal
     # Assemble full 8us preamble
@@ -49,7 +51,7 @@ def generate_ADSB(
         (
             np.zeros(pause * t_prescaler),
             IDEAL_PREAMBLE,
-            np.zeros(round(2.5e-6 / td * t_prescaler)),
+            np.zeros(round(2.5e-6 / _fd_real)),
         )
     )
     # Assemble full signal - preamle + data bits
@@ -105,7 +107,7 @@ def generate_ADSB(
     # Clip signal so no negative values remain
     noisy_ideal_signal = np.clip(noisy_ideal_signal, 0, max(noisy_ideal_signal))
 
-    last_generated_signal_length = len(noisy_ideal_signal)
+    _last_generated_signal_length = len(noisy_ideal_signal)
 
     return ideal_adsb_signal, filtered_signal, noisy_ideal_signal
 
@@ -127,7 +129,7 @@ def generate_ADSB_multiple(amplitudes: np.ndarray, full_bits: bytes) -> np.ndarr
 def digitize_signal(
     signal: np.ndarray, fs_original: int, fs_target: int, max: int, quant_levels: int
 ) -> Tuple[np.ndarray, np.ndarray]:
-    global last_digitized_signal_length
+    global _last_digitized_signal_length
     # Create time vector for the original signal
     t_original = np.arange(0, len(signal) / fs_original, 1 / fs_original)
 
@@ -139,7 +141,7 @@ def digitize_signal(
 
     quantized_signal = np.clip(digitized_signal, 0, max)
     quantized_signal = np.round(quantized_signal / max * (quant_levels))
-    last_digitized_signal_length = len(quantized_signal)
+    _last_digitized_signal_length = len(quantized_signal)
     return quantized_signal, t_digitized
 
 
@@ -180,13 +182,13 @@ def normalize_signal(signal: np.ndarray) -> np.ndarray:
 
 
 def get_last_generated_signal_length() -> int:
-    global last_generated_signal_length
-    return last_generated_signal_length
+    global _last_generated_signal_length
+    return _last_generated_signal_length
 
 
 def get_last_digitized_signal_length() -> int:
-    global last_digitized_signal_length
-    return last_digitized_signal_length
+    global _last_digitized_signal_length
+    return _last_digitized_signal_length
 
 
 def generate_approx(energy: np.ndarray, coeff: np.ndarray) -> np.ndarray:
