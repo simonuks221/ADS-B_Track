@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Python",
+      "program": "c:/Users/simon/Desktop/UNI/VHDL/Uni_Projektas/Python/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

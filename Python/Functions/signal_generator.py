@@ -11,53 +11,65 @@ t_prescaler = 10
 last_generated_signal_length = 0
 last_digitized_signal_length = 0
 
-ideal_one = np.concatenate(
+IDEAL_ONE = np.concatenate(
     (
         np.ones(round(0.5e-6 / td * t_prescaler)),
         np.zeros(round(0.5e-6 / td * t_prescaler)),
     )
 )
-ideal_zero = np.concatenate(
+IDEAL_ZERO = np.concatenate(
     (
         np.zeros(round(0.5e-6 / td * t_prescaler)),
         np.ones(round(0.5e-6 / td * t_prescaler)),
     )
 )  # 100 length
 
+IDEAL_PREAMBLE = np.concatenate(
+    (
+        IDEAL_ONE,
+        IDEAL_ONE,
+        np.zeros(round(1.5e-6 / td * t_prescaler)),
+        IDEAL_ONE,
+        IDEAL_ONE,
+    )
+)
 
-def generate_ADSB(amplitude: int, bytes: bytes, pause: int = signal_start_pause_length):
+
+def generate_ADSB(
+    amplitude: int,
+    bytes: bytes,
+    pause: int = signal_start_pause_length,
+    generate_bits: bool = True,
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
     global last_generated_signal_length
 
     # Assemble ideal signal
-    ideal_preambule = amplitude * np.concatenate(
+    # Assemble full 8us preamble
+    full_preamble = amplitude * np.concatenate(
         (
             np.zeros(pause * t_prescaler),
-            np.ones(round(0.5e-6 / td * t_prescaler)),
-            np.zeros(round(0.5e-6 / td * t_prescaler)),
-            np.ones(round(0.5e-6 / td * t_prescaler)),
-            np.zeros(round(2e-6 / td * t_prescaler)),
-            np.ones(round(0.5e-6 / td * t_prescaler)),
-            np.zeros(round(0.5e-6 / td * t_prescaler)),
-            np.ones(round(0.5e-6 / td * t_prescaler)),
+            IDEAL_PREAMBLE,
+            np.zeros(round(2.5e-6 / td * t_prescaler)),
         )
     )
-    ideal_pause = amplitude * np.zeros(round(3e-6 / td * t_prescaler))
+    # Assemble full signal - preamle + data bits
     ideal_adsb_signal = np.concatenate(
-        (ideal_preambule, ideal_pause, np.zeros(len(ideal_zero) * (len(bytes) * 8)))
+        (full_preamble, np.zeros(len(IDEAL_ZERO) * (len(bytes) * 8)))
     )
-
-    bit_start_index = len(ideal_preambule) + len(ideal_pause)
-    for byte in bytes:
-        for i in range(0, 8):
-            if ((byte >> i) & 0x01) == 0:
-                ideal_adsb_signal[
-                    bit_start_index : bit_start_index + len(ideal_zero)
-                ] = (ideal_zero * amplitude)
-            else:
-                ideal_adsb_signal[
-                    bit_start_index : bit_start_index + len(ideal_zero)
-                ] = (ideal_one * amplitude)
-            bit_start_index += len(ideal_zero)
+    # Populate data bit fields with ideal ones/zeros
+    if generate_bits:
+        bit_start_index = len(full_preamble)
+        for byte in bytes:
+            for i in range(0, 8):
+                if ((byte >> i) & 0x01) == 0:
+                    ideal_adsb_signal[
+                        bit_start_index : bit_start_index + len(IDEAL_ZERO)
+                    ] = (IDEAL_ZERO * amplitude)
+                else:
+                    ideal_adsb_signal[
+                        bit_start_index : bit_start_index + len(IDEAL_ZERO)
+                    ] = (IDEAL_ONE * amplitude)
+                bit_start_index += len(IDEAL_ZERO)
 
     # Filter ideal signal with 2 MHz filter
     f_cutoff = 2e6
