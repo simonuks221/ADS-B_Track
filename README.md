@@ -28,7 +28,7 @@ Some images of high speed PCB:
 ## Setup
 
 ### Python research files
-Project made using Python 3.12.2 version.
+Project made using [Python 3.12.2 version](https://www.python.org/downloads/release/python-3122/).
 Python uses dependencies for critical functions, they can be installed in two ways:
 
 #### 1. Using local environment

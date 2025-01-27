@@ -4,7 +4,7 @@ import sys
 sys.path.append("../Python")
 import numpy as np
 import time
-import multiprocessing
+from Functions.pool_wrapper import PoolWrapper
 from Functions.signal_generator import (
     generate_ADSB,
     digitize_signal,
@@ -24,23 +24,14 @@ total_generations = step_generation_amount * step_amount
 all_amplitudes = np.linspace(
     min_generation_amplitude, max_generation_amplitude, step_amount
 )
-total_work = len(all_amplitudes) * step_generation_amount
-
-
-# Prints the loading bar of completed processes
-def print_loading_bar(iteration: int, total: int, start_time: time, length: int = 50):
-    percent = ("{0:.1f}").format(100 * (iteration / float(total)))
-    filled_length = int(length * iteration // total)
-    bar = "█" * filled_length + "-" * (length - filled_length)
-    elapsed_time = time.time() - start_time
-    print(f"\rProgress: |{bar}| {percent}% Complete {elapsed_time:.2f}s")
 
 
 # Single process of generating ADSB statistical data depending on provided:
 # ADSB amplituide index
 #
 # ADSB bits
-def adsb_values_generator_process(amplitude_i: int, this_step: int, full_bits: bytes):
+def adsb_values_generator_process(args):
+    amplitude_i, this_step, full_bits = args
     process_points = np.zeros(len(preambule_list))
     process_energies = np.zeros(len(preambule_list))
     curr_signal = generate_ADSB(all_amplitudes[amplitude_i], full_bits)[2]
@@ -69,34 +60,20 @@ if __name__ == "__main__":
     crc_bits = generate_adsb_crc(data_bits)
     full_bits = data_bits + crc_bits
 
-    pool = multiprocessing.Pool(processes=multiprocessing.cpu_count())
-    results = []
-    start_time = time.time()
+    pool_wrapper = PoolWrapper()
     for amplitude_i in range(len(all_amplitudes)):
         for step_i in range(step_generation_amount):
-            result = pool.apply_async(
+            pool_wrapper.register_process(
                 adsb_values_generator_process, (amplitude_i, step_i, full_bits)
             )
-            results.append(result)
-    pool.close()
-    # Processes are running
-    last_results_len = -1
-    while True:
-        results_len = sum(1 for r in results if r.ready())
-        if results_len != last_results_len:
-            last_results_len = results_len
-            print_loading_bar(last_results_len, total_work, start_time)
-            if last_results_len == total_work:
-                break
-        time.sleep(1)
+    all_results = pool_wrapper.start_pool()
 
-    pool.join()
     # Get all results and append them together
     print("Calculating results")
     all_energies = np.zeros((len(preambule_list), step_amount, step_generation_amount))
     all_points = np.zeros((len(preambule_list), step_amount, step_generation_amount))
-    for result in results:
-        result_amplitude_i, result_step, result_points, result_energies = result.get()
+    for result in all_results:
+        result_amplitude_i, result_step, result_points, result_energies = result
         all_energies[:, result_amplitude_i, result_step] = result_energies
         all_points[:, result_amplitude_i, result_step] = result_points
 
