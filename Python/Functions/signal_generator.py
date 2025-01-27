@@ -8,56 +8,70 @@ fd = 10e6
 td = 1 / fd
 t_prescaler = 10
 
-last_generated_signal_length = 0
-last_digitized_signal_length = 0
+_last_generated_signal_length = 0
+_last_digitized_signal_length = 0
 
-ideal_one = np.concatenate(
+_fd_real = td / t_prescaler
+
+IDEAL_ONE = np.concatenate(
     (
-        np.ones(round(0.5e-6 / td * t_prescaler)),
-        np.zeros(round(0.5e-6 / td * t_prescaler)),
+        np.ones(round(0.5e-6 / _fd_real)),
+        np.zeros(round(0.5e-6 / _fd_real)),
     )
 )
-ideal_zero = np.concatenate(
+IDEAL_ZERO = np.concatenate(
     (
-        np.zeros(round(0.5e-6 / td * t_prescaler)),
-        np.ones(round(0.5e-6 / td * t_prescaler)),
+        np.zeros(round(0.5e-6 / _fd_real)),
+        np.ones(round(0.5e-6 / _fd_real)),
     )
-)  # 100ilgis
+)  # 100 length
+
+IDEAL_PREAMBLE = np.concatenate(
+    (
+        IDEAL_ONE,
+        IDEAL_ONE,
+        np.zeros(round(1.5e-6 / _fd_real)),
+        IDEAL_ONE,
+        IDEAL_ONE,
+    )
+)
 
 
-def generate_ADSB(amplitude: int, bytes: bytes, pause: int = signal_start_pause_length):
-    global last_generated_signal_length
+def generate_ADSB(
+    amplitude: int,
+    bytes: bytes,
+    pause: int = signal_start_pause_length,
+    generate_bits: bool = True,
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+    global _last_generated_signal_length
+
     # Assemble ideal signal
-
-    ideal_preambule = amplitude * np.concatenate(
+    # Assemble full 8us preamble
+    full_preamble = amplitude * np.concatenate(
         (
             np.zeros(pause * t_prescaler),
-            np.ones(round(0.5e-6 / td * t_prescaler)),
-            np.zeros(round(0.5e-6 / td * t_prescaler)),
-            np.ones(round(0.5e-6 / td * t_prescaler)),
-            np.zeros(round(2e-6 / td * t_prescaler)),
-            np.ones(round(0.5e-6 / td * t_prescaler)),
-            np.zeros(round(0.5e-6 / td * t_prescaler)),
-            np.ones(round(0.5e-6 / td * t_prescaler)),
+            IDEAL_PREAMBLE,
+            np.zeros(round(2.5e-6 / _fd_real)),
         )
     )
-    ideal_pause = amplitude * np.zeros(round(3e-6 / td * t_prescaler))
+    # Assemble full signal - preamle + data bits
     ideal_adsb_signal = np.concatenate(
-        (ideal_preambule, ideal_pause, np.zeros(len(ideal_zero) * (len(bytes) * 8)))
-    )  # was -h on len(bits_array)#%500+300+100*strlen
-
-    bit_start_index = len(ideal_preambule) + len(ideal_pause)
-    for byte in bytes:
-        for i in range(0, 8):
-            if ((byte >> i) & 0x01) == 0:
-                ideal_adsb_signal[
-                    bit_start_index : bit_start_index + len(ideal_zero)
-                ] = (ideal_zero * amplitude)
-            else:
-                ideal_adsb_signal[
-                    bit_start_index : bit_start_index + len(ideal_zero)
-                ] = (ideal_one * amplitude)
-            bit_start_index += len(ideal_zero)
+        (full_preamble, np.zeros(len(IDEAL_ZERO) * (len(bytes) * 8)))
+    )
+    # Populate data bit fields with ideal ones/zeros
+    if generate_bits:
+        bit_start_index = len(full_preamble)
+        for byte in bytes:
+            for i in range(0, 8):
+                if ((byte >> i) & 0x01) == 0:
+                    ideal_adsb_signal[
+                        bit_start_index : bit_start_index + len(IDEAL_ZERO)
+                    ] = (IDEAL_ZERO * amplitude)
+                else:
+                    ideal_adsb_signal[
+                        bit_start_index : bit_start_index + len(IDEAL_ZERO)
+                    ] = (IDEAL_ONE * amplitude)
+                bit_start_index += len(IDEAL_ZERO)
 
     # Filter ideal signal with 2 MHz filter
     f_cutoff = 2e6
@@ -93,7 +107,7 @@ def generate_ADSB(amplitude: int, bytes: bytes, pause: int = signal_start_pause_
     # Clip signal so no negative values remain
     noisy_ideal_signal = np.clip(noisy_ideal_signal, 0, max(noisy_ideal_signal))
 
-    last_generated_signal_length = len(noisy_ideal_signal)
+    _last_generated_signal_length = len(noisy_ideal_signal)
 
     return ideal_adsb_signal, filtered_signal, noisy_ideal_signal
 
@@ -115,7 +129,7 @@ def generate_ADSB_multiple(amplitudes: np.ndarray, full_bits: bytes) -> np.ndarr
 def digitize_signal(
     signal: np.ndarray, fs_original: int, fs_target: int, max: int, quant_levels: int
 ) -> Tuple[np.ndarray, np.ndarray]:
-    global last_digitized_signal_length
+    global _last_digitized_signal_length
     # Create time vector for the original signal
     t_original = np.arange(0, len(signal) / fs_original, 1 / fs_original)
 
@@ -127,7 +141,7 @@ def digitize_signal(
 
     quantized_signal = np.clip(digitized_signal, 0, max)
     quantized_signal = np.round(quantized_signal / max * (quant_levels))
-    last_digitized_signal_length = len(quantized_signal)
+    _last_digitized_signal_length = len(quantized_signal)
     return quantized_signal, t_digitized
 
 
@@ -168,13 +182,13 @@ def normalize_signal(signal: np.ndarray) -> np.ndarray:
 
 
 def get_last_generated_signal_length() -> int:
-    global last_generated_signal_length
-    return last_generated_signal_length
+    global _last_generated_signal_length
+    return _last_generated_signal_length
 
 
 def get_last_digitized_signal_length() -> int:
-    global last_digitized_signal_length
-    return last_digitized_signal_length
+    global _last_digitized_signal_length
+    return _last_digitized_signal_length
 
 
 def generate_approx(energy: np.ndarray, coeff: np.ndarray) -> np.ndarray:

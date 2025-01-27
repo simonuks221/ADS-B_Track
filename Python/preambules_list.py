@@ -1,14 +1,14 @@
 import numpy as np
 from enum import Enum
 from Functions.preambule_variant import (
-    PreambuleVariant,
+    PreambleVariant,
     PreambuleVariantDifferentiated,
-    Correlation,
 )
 from Functions.signal_generator import td
 
 
-def normalize_coefficients(array):
+def normalize_coefficients(array_in: np.ndarray) -> np.ndarray:
+    array = array_in.copy()
     total_sum = np.sum(array)
     if total_sum < 0:
         negative_sum = np.sum(array[array < 0])
@@ -18,68 +18,55 @@ def normalize_coefficients(array):
         positive_sum = np.sum(array[array < 0])
         normalization_coef = (positive_sum - total_sum) / positive_sum
         array[array > 0] *= normalization_coef
+    return array
 
 
-this_prescaler = 1
-amplitude = 1
-fd_real = td * this_prescaler
+_PRESCALER = 1
+_AMPLITUDE = 1
+_FD_REAL = td * _PRESCALER
 
 # Assemble ideal signal
-ideal_one = amplitude * np.concatenate(
-    (np.ones(round(0.5e-6 / fd_real)), np.zeros(round(0.5e-6 / fd_real)))
+_IDEAL_ONE = _AMPLITUDE * np.concatenate(
+    (np.ones(round(0.5e-6 / _FD_REAL)), np.zeros(round(0.5e-6 / _FD_REAL)))
 )
-ideal_zero = amplitude * np.concatenate(
-    (np.zeros(round(0.5e-6 / fd_real)), np.ones(round(0.5e-6 / fd_real)))
+_IDEAL_ZERO = _AMPLITUDE * np.concatenate(
+    (np.zeros(round(0.5e-6 / _FD_REAL)), np.ones(round(0.5e-6 / _FD_REAL)))
 )
 
 # Regular
-ideal_preambule = amplitude * np.concatenate(
+_IDEAL_PREAMBLE = _AMPLITUDE * np.concatenate(
     (
-        np.ones(round(0.5e-6 / fd_real)),
-        np.zeros(round(0.5e-6 / fd_real)),
-        np.ones(round(0.5e-6 / fd_real)),
-        np.zeros(round(2e-6 / fd_real)),
-        np.ones(round(0.5e-6 / fd_real)),
-        np.zeros(round(0.5e-6 / fd_real)),
-        np.ones(round(0.5e-6 / fd_real)),
+        _IDEAL_ONE,
+        _IDEAL_ONE,
+        np.zeros(round(1.5e-6 / _FD_REAL)),
+        _IDEAL_ONE,
+        np.ones(round(0.5e-6 / _FD_REAL)),
     )
 )
 
 # Negative
-negative_preambule = amplitude * np.concatenate(
-    (
-        np.ones(round(0.5e-6 / fd_real)),
-        -1 * np.ones(round(0.5e-6 / fd_real)),
-        np.ones(round(0.5e-6 / fd_real)),
-        -1 * np.ones(round(2e-6 / fd_real)),
-        np.ones(round(0.5e-6 / fd_real)),
-        -1 * np.ones(round(0.5e-6 / fd_real)),
-        np.ones(round(0.5e-6 / fd_real)),
-    )
-)
-normalized_preambule = np.copy(negative_preambule)
-normalize_coefficients(normalized_preambule)
+_NEGATIVE_PREAMBLE = np.where(_IDEAL_PREAMBLE == 0, -1, _IDEAL_PREAMBLE)
+_NEGATIVE_NORMALIZED_PREAMBLE = normalize_coefficients(_NEGATIVE_PREAMBLE)
 
 # Regular extended
 extended_preambule = np.concatenate(
-    (np.copy(ideal_preambule), np.zeros(round(3e-6 / fd_real)))
+    (np.copy(_IDEAL_PREAMBLE), np.zeros(round(3e-6 / _FD_REAL)))
 )
 
 # Regular negative
-extended_negative_preambule = np.concatenate(
-    (np.copy(negative_preambule), -1 * np.ones(round(3e-6 / fd_real)))
+_EXTENDED_NEGATIVE_PREAMBLE = np.concatenate(
+    (np.copy(_NEGATIVE_PREAMBLE), -1 * np.ones(round(3e-6 / _FD_REAL)))
 )
-extended_normalized_preambule = np.copy(extended_negative_preambule)
-normalize_coefficients(extended_normalized_preambule)
+_EXTENDED_NORMALIZED_PREAMBLE = normalize_coefficients(_EXTENDED_NEGATIVE_PREAMBLE)
 
 # Differentiated
-diff_amount = 2
-differentiated_preambule = np.concatenate(
-    (ideal_preambule, np.zeros(diff_amount))
-) - np.concatenate((np.zeros(diff_amount), ideal_preambule))
+_DIFF_AMOUNT = 2
+_DIFFERENTIATED_PREAMBLE = np.concatenate(
+    (_IDEAL_PREAMBLE, np.zeros(_DIFF_AMOUNT))
+) - np.concatenate((np.zeros(_DIFF_AMOUNT), _IDEAL_PREAMBLE))
 
 # Ideal expanded
-ideal_expanded_preambule = np.concatenate((np.zeros(1), ideal_preambule, np.zeros(1)))
+_IDEAL_EXPANDED_PREAMBLE = np.concatenate((np.zeros(1), _IDEAL_PREAMBLE, np.zeros(1)))
 
 
 class Preambule(Enum):
@@ -95,14 +82,14 @@ class Preambule(Enum):
 
 
 preambule_list = [
-    PreambuleVariant("Ideal", ideal_preambule),
-    PreambuleVariant("Negative", negative_preambule),
-    PreambuleVariant("Negative normalized", normalized_preambule),
-    PreambuleVariant("Extended", extended_preambule),
-    PreambuleVariant("Extended negative", extended_negative_preambule),
-    PreambuleVariant("Extended normalized", extended_normalized_preambule),
+    PreambleVariant("Ideal", _IDEAL_PREAMBLE),
+    PreambleVariant("Negative", _NEGATIVE_PREAMBLE),
+    PreambleVariant("Negative normalized", _NEGATIVE_NORMALIZED_PREAMBLE),
+    PreambleVariant("Extended", extended_preambule),
+    PreambleVariant("Extended negative", _EXTENDED_NEGATIVE_PREAMBLE),
+    PreambleVariant("Extended normalized", _EXTENDED_NORMALIZED_PREAMBLE),
     PreambuleVariantDifferentiated(
-        "Differentiated", differentiated_preambule, diff_amount
+        "Differentiated", _DIFFERENTIATED_PREAMBLE, _DIFF_AMOUNT
     ),
-    PreambuleVariant("Ideal expanded", ideal_expanded_preambule),
+    PreambleVariant("Ideal expanded", _IDEAL_EXPANDED_PREAMBLE),
 ]

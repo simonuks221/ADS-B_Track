@@ -8,7 +8,7 @@ class Correlation(Enum):
     Khintchine = 1
 
 
-class PreambuleVariant:
+class PreambleVariant:
     def __init__(self, name, preambule):
         self.__name = name
         self.__coefficients = preambule
@@ -32,7 +32,7 @@ class PreambuleVariant:
         return len(self.__coefficients)
 
 
-class PreambuleVariantDifferentiated(PreambuleVariant):
+class PreambuleVariantDifferentiated(PreambleVariant):
     def __init__(self, name, preambule, diff_amount):
         super().__init__(name, preambule)
         self.__diff_amount = diff_amount
