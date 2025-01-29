@@ -11,7 +11,7 @@ from Functions.signal_generator import (
     get_signal_energy,
     signal_start_pause_length,
 )
-from Functions.crc import generate_adsb_crc
+from Functions.utils import SAMPLE_ADSB_BYTES
 from Functions.preambule_variant import Correlation
 from preambules_list import preambule_list
 
@@ -53,18 +53,12 @@ def adsb_values_generator_process(args):
 
 if __name__ == "__main__":
     print("Start")
-    # Configuration
-    data_bits = bytes(
-        [0x8D, 0x40, 0x6B, 0x90, 0x20, 0x15, 0xA6, 0x78, 0xD4, 0xD2, 0x20]
-    )
-    crc_bits = generate_adsb_crc(data_bits)
-    full_bits = data_bits + crc_bits
 
     pool_wrapper = PoolWrapper()
     for amplitude_i in range(len(all_amplitudes)):
         for step_i in range(step_generation_amount):
             pool_wrapper.register_process(
-                adsb_values_generator_process, (amplitude_i, step_i, full_bits)
+                adsb_values_generator_process, (amplitude_i, step_i, SAMPLE_ADSB_BYTES)
             )
     all_results = pool_wrapper.start_pool()
 

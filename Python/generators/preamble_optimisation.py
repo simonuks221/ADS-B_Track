@@ -14,7 +14,7 @@ from Functions.signal_generator import (
     correlate_signals,
     signal_start_pause_length,
 )
-from Functions.crc import generate_adsb_crc
+from Functions.utils import SAMPLE_ADSB_BYTES
 
 
 def create_target_corr_impulse(impulse_values: np.ndarray):
@@ -44,10 +44,9 @@ def create_target_corr_ideal(target_corr, offset_left: int, offset_right: int):
 
 # Configuration of single signal
 amplitude = 1
-data_bits = bytes([0x8D, 0x40, 0x6B, 0x90, 0x20, 0x15, 0xA6, 0x78, 0xD4, 0xD2, 0x20])
-crc_bits = generate_adsb_crc(data_bits)
-full_bits = data_bits + crc_bits
-ideal_signal, filtered_signal, noisy_signal = generate_ADSB(amplitude, full_bits)
+ideal_signal, filtered_signal, noisy_signal = generate_ADSB(
+    amplitude, SAMPLE_ADSB_BYTES
+)
 ideal_digitized_signal, _ = digitize_signal(ideal_signal, 100e6, 10e6, 1.4, 2**10)
 ideal_digitized_signal = normalize_signal(ideal_digitized_signal)
 digitized_signal, _ = digitize_signal(noisy_signal, 100e6, 10e6, 1.4, 2**10)
