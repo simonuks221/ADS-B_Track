@@ -68,6 +68,27 @@ _DIFFERENTIATED_PREAMBLE = np.concatenate(
 # Ideal expanded
 _IDEAL_EXPANDED_PREAMBLE = np.concatenate((np.zeros(1), _IDEAL_PREAMBLE, np.zeros(1)))
 
+# Optimised to reduce max error
+_IDEAL_ONE_2 = _AMPLITUDE * np.concatenate(
+    (
+        np.ones(round(0.2e-6 / _FD_REAL)),
+        np.zeros(round(0.1e-6 / _FD_REAL)),
+        np.ones(round(0.2e-6 / _FD_REAL)),
+        np.zeros(round(0.5e-6 / _FD_REAL)),
+    )
+)
+_OPTIMISED_MAX_ERROR_PREAMBLE = np.concatenate(
+    (
+        _IDEAL_ONE_2,
+        _IDEAL_ONE_2,
+        np.zeros(round(1.5e-6 / _FD_REAL)),
+        _IDEAL_ONE_2,
+        np.ones(round(0.2e-6 / _FD_REAL)),
+        np.zeros(round(0.1e-6 / _FD_REAL)),
+        np.ones(round(0.2e-6 / _FD_REAL)),
+    )
+)
+
 
 class Preambule(Enum):
     Ideal = 0
@@ -78,7 +99,8 @@ class Preambule(Enum):
     ExtendedNormalized = 5
     Differentiated = 6
     IdealExpanded = 7
-    Last = 8
+    OptimisedMaxError = 8
+    Last = 9
 
 
 preambule_list = [
@@ -92,4 +114,5 @@ preambule_list = [
         "Differentiated", _DIFFERENTIATED_PREAMBLE, _DIFF_AMOUNT
     ),
     PreambleVariant("Ideal expanded", _IDEAL_EXPANDED_PREAMBLE),
+    PreambleVariant("Optimised for max error", _OPTIMISED_MAX_ERROR_PREAMBLE),
 ]
