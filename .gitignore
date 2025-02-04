@@ -396,7 +396,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-*.dat
+# *.dat
 *.dbs
 *.kpt
 *.bpm
@@ -467,7 +467,7 @@ db/Uni_Projektas.quiproj.6292.rdr.flock
 *.tcl
 *.txt # Explicitly add any text files used
 *~
-*example*
+# *example*
 *sopc_*
 # *.sdc # I want those timing files
 
@@ -493,6 +493,8 @@ Matlab/Grafikai/*
 PCB/Project Outputs for FPGA_ADC_SHIELD_PCB2/*
 
 Python/ADS_B_ENV/*
+
+Python/example_signals/*.dat
 
 # Should add if repository gets too big - these are generated databases from scripts, can individually regenerate themselves
 # Python/generators/generated/*

@@ -49,8 +49,8 @@ ideal_signal, filtered_signal, noisy_signal = generate_ADSB(
 )
 ideal_digitized_signal, _ = digitize_signal(ideal_signal, 100e6, 10e6, 1.4, 2**10)
 ideal_digitized_signal = normalize_signal(ideal_digitized_signal)
-digitized_signal, _ = digitize_signal(noisy_signal, 100e6, 10e6, 1.4, 2**10)
-digitized_signal = normalize_signal(digitized_signal)
+# digitized_signal, _ = digitize_signal(noisy_signal, 100e6, 10e6, 1.4, 2**10)
+# digitized_signal = normalize_signal(digitized_signal)
 
 # Configuration of preamble
 mask_type = MaskType.MIDDLE_ZEROS
@@ -60,7 +60,7 @@ for optimization_class in optimization_classes:
         preamble = preambule_list[preamble_i.value]
         expected_maximum = preamble.get_expected_maximum() + signal_start_pause_length
         full_signal_max = expected_maximum + 30
-        digitized_signal = np.array(digitized_signal)[:full_signal_max]
+        # digitized_signal = np.array(digitized_signal)[:full_signal_max]
         ideal_digitized_signal = np.array(ideal_digitized_signal)[:full_signal_max]
 
         mask_length = 0
@@ -82,19 +82,17 @@ for optimization_class in optimization_classes:
         ideal_corr = correlate_signals(
             ideal_digitized_signal, preamble.get_coefficients()
         )
-        # initial_guess = normalize_signal(initial_guess)
         actual_initial_guess = make_mask_from_type(initial_guess, mask_type)
-        initial_corr = correlate_signals(digitized_signal, actual_initial_guess)
-        # initial_corr = normalize_signal(initial_corr)
+        initial_corr = correlate_signals(ideal_digitized_signal, actual_initial_guess)
         # TODO: Might need to compare to something else not target?
         target_corrs = [
             create_target_corr_impulse([7, 12, 18, 25, 18, 12, 7]),
             create_target_corr_impulse([25]),
-            create_target_corr_impulse([25, 25, 25]),
-            create_target_corr_ideal(ideal_corr, 20, 20),
-            create_target_corr_ideal(ideal_corr, 30, 30),
-            create_target_corr_ideal(ideal_corr, 5, 40),
-            ideal_corr.copy(),
+            # create_target_corr_impulse([25, 25, 25]),
+            create_target_corr_ideal(initial_corr, 20, 20),
+            # create_target_corr_ideal(initial_corr, 30, 30),
+            create_target_corr_ideal(initial_corr, 5, 40),
+            # initial_corr.copy(),
         ]
 
         for target_corr in target_corrs:
@@ -122,7 +120,9 @@ def objective_func_minimize(args):
         mask_type,
         description,
     ) = args
-    optimizer_minimize = optimization_class(target_corr, digitized_signal, mask_type)
+    optimizer_minimize = optimization_class(
+        target_corr, ideal_digitized_signal, mask_type
+    )
     optimizer_minimize.optimize(initial_guess, 50000)  # 30000 ~ optimal
     minimize_result = optimizer_minimize.get_result()
     return (
@@ -148,7 +148,7 @@ if __name__ == "__main__":
     np.savez(
         "generators/generated/optimisations_results.npz",
         all_results=all_results,
-        digitized_signal=digitized_signal,
+        digitized_signal=ideal_digitized_signal,
         allow_pickle=True,
     )
     print("Success")

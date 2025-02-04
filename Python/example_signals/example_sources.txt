@@ -1,0 +1,7 @@
+Get your own "adsb_3.2M.dat", "adsb_3.2M_3.dat" and "adsb_32.dat" from:
+https://www.n2wu.com/2020-03-30-ads-b-decoding-in-matlab/
+and
+https://web.stanford.edu/class/ee179/labs/Lab7.html
+Not included for copyright.
+
+The sample data is tahen at 3.2 MHz sample rate. In the lab it is resampled to 4 MHz.
