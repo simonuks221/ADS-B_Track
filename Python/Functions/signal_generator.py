@@ -154,8 +154,13 @@ def digitize_signal(
 def correlate_signals(base_signal: np.ndarray, mask: np.ndarray) -> np.ndarray:
     result = np.zeros(len(base_signal))
     # Leave first mask amount of values uncorrelated
-    for i in range(len(mask), len(base_signal)):
-        result[i] = np.sum(base_signal[i - len(mask) : i] * mask)
+    for i in range(1, len(base_signal)):
+        correlated_length = min([i, len(mask)])
+        correlated_index_from = max([0, i - len(mask)])
+        result[i] = np.sum(
+            base_signal[correlated_index_from:i]
+            * mask[(len(mask) - correlated_length) :]
+        )
     return result
 
 
@@ -185,6 +190,31 @@ def normalize_signal(signal: np.ndarray) -> np.ndarray:
     max = np.max(signal)
     signal /= max
     return signal
+
+
+def filter_with_window(
+    signal: np.ndarray, filter_width: int = 100, filter_center_point: int = 0
+) -> Tuple[np.ndarray, np.ndarray]:
+    # TODO: specify which mask, for now only hamming
+    window = np.hamming(filter_width)
+    window_min = min(window)
+    centered_window = np.concatenate(
+        (
+            np.repeat(window_min, filter_center_point - len(window) // 2),
+            window,
+        )
+    )
+    centered_window = np.concatenate(
+        (
+            centered_window,
+            np.repeat(
+                window_min,
+                len(signal) - len(centered_window),
+            ),
+        )
+    )
+    filtered_signal = signal.copy() * centered_window
+    return filtered_signal, centered_window
 
 
 def get_last_generated_signal_length() -> int:
