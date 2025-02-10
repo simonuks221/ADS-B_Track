@@ -16,6 +16,10 @@ from Functions.signal_generator import (
 )
 from Functions.utils import SAMPLE_ADSB_BYTES
 
+OPTIMIZER_MAX_CYCLE_COUNT = 50000  # 30000 also good
+# Leave 0 to use as much processes as there are cores
+MAX_PROCESSES_COUNT = 0
+
 
 def create_target_corr_impulse(impulse_values: np.ndarray):
     target_impulse_side_length = int((len(impulse_values) - 1) / 2)
@@ -123,7 +127,7 @@ def objective_func_minimize(args):
     optimizer_minimize = optimization_class(
         target_corr, ideal_digitized_signal, mask_type
     )
-    optimizer_minimize.optimize(initial_guess, 50000)  # 30000 ~ optimal
+    optimizer_minimize.optimize(initial_guess, OPTIMIZER_MAX_CYCLE_COUNT)
     minimize_result = optimizer_minimize.get_result()
     return (
         minimize_result.x,
@@ -137,7 +141,7 @@ def objective_func_minimize(args):
 
 
 if __name__ == "__main__":
-    pool_wrapper = PoolWrapper()
+    pool_wrapper = PoolWrapper(MAX_PROCESSES_COUNT if MAX_PROCESSES_COUNT > 0 else None)
     for optimisation_target in optimisation_targets:
         pool_wrapper.register_process(objective_func_minimize, optimisation_target)
     all_results = pool_wrapper.start_pool()

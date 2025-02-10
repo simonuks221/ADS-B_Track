@@ -70,11 +70,15 @@ class CorrelationOptimisationMinimize:
     # Used in children classes to compare the results
     def objective_function(self, mask) -> np.ndarray:
         actual_mask = make_mask_from_type(mask, self._mask_type)
+        # Limit the range of mask values as "Nelder-Mead" optimisation
+        # Method does not allow for bound setting
+        # actual_mask = np.clip(actual_mask, -2, 2)
 
         # noise_amplitude = 0.1
         # target_noise = np.random.normal(
         #     -noise_amplitude, noise_amplitude, len(self._target)
         # )
+
         target_noise = np.zeros(len(self._target))
         target_to_correlate = self._target + target_noise
         correlation = correlate_signals(target_to_correlate, actual_mask)

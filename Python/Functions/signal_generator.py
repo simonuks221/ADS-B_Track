@@ -198,21 +198,31 @@ def filter_with_window(
     # TODO: specify which mask, for now only hamming
     window = np.hamming(filter_width)
     window_min = min(window)
-    centered_window = np.concatenate(
-        (
-            np.repeat(window_min, filter_center_point - len(window) // 2),
-            window,
+    centered_window = []
+    window_pad_left_amount = filter_center_point - len(window) // 2
+    if window_pad_left_amount > 0:
+        # Padding to the left needed
+        centered_window = np.concatenate(
+            (
+                window_min * np.ones(window_pad_left_amount),
+                window,
+            )
         )
-    )
-    centered_window = np.concatenate(
-        (
-            centered_window,
-            np.repeat(
-                window_min,
-                len(signal) - len(centered_window),
-            ),
+    else:
+        # No padding needed, need to remove part of window from left as it overlaps with start
+        centered_window = window[abs(window_pad_left_amount) :]
+    # Padd to the right of window
+    window_pad_right_amount = len(signal) - len(centered_window)
+    if window_pad_right_amount > 0:
+        # Need right padding
+        centered_window = np.concatenate(
+            (centered_window, window_min * np.ones(window_pad_right_amount))
         )
-    )
+    else:
+        # No padding, remove from right
+        centered_window = centered_window[
+            : len(centered_window) - abs(window_pad_right_amount)
+        ]
     filtered_signal = signal.copy() * centered_window
     return filtered_signal, centered_window
 

@@ -30,7 +30,10 @@ def process_function_2(input):
 
 class PoolWrapper:
     def __init__(self, max_processes=multiprocessing.cpu_count()):
-        self._max_processes = max_processes
+        if max_processes is None:
+            self._max_processes = multiprocessing.cpu_count()
+        else:
+            self._max_processes = max_processes
         self._results = []
         self._registered_processes = []
 
